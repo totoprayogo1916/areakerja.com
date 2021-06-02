@@ -16,5 +16,10 @@ class LocationsTableSeeder extends Seeder
             'name' => 'Jogjakarta',
         ]);
         $location->save();
+
+        $location =  Location::create([
+            'name' => 'Madiun',
+        ]);
+        $location->save();
     }
 }
