@@ -15,7 +15,7 @@
                 <div class="titles">
                     <a href="#"><h4>{{ $job->title }}</h4></a>
                     @if($job->company)
-                        <h6>{{ $job->company->name }}</h6>		
+                        <h6><span class="lnr lnr-apartment"></span> {{ $job->company->name }}</h6>		
                     @endif			
                 </div>
             </div>
