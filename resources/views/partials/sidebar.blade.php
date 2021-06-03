@@ -1,5 +1,5 @@
 <div class="col-lg-4 sidebar">
-    <div class="single-slidebar">
+    <div data-aos="zoom-in-up" class="single-slidebar">
         <h4>Jobs by Location</h4>
         <ul class="cat-list">
             @foreach($sidebarLocations as $location)
@@ -8,7 +8,7 @@
         </ul>
     </div>
 
-    <div class="single-slidebar">
+    <div data-aos="zoom-in-up" class="single-slidebar">
         <h4>Top rated job posts</h4>
         <div class="active-relatedjob-carusel">
             @foreach($sidebarJobs as $job)
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div class="single-slidebar">
+    <div data-aos="zoom-in-up" class="single-slidebar">
         <h4>Jobs by Category</h4>
         <ul class="cat-list">
             @foreach($sidebarCategories as $category)
