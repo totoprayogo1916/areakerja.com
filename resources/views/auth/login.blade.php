@@ -121,14 +121,14 @@
 					<img src="{{ asset('img/img-01.png') }}" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" method="POST" action="{{ route('menuadmin') }}">
+				<form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
 					{{ csrf_field() }}
                     <span class="login100-form-title">
 						Member Login
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email" placeholder="Email">
+						<input class="input100{{ $errors->has('email') ? ' is-invalid' : '' }}" required autofocus placeholder="{{ trans('global.login_email') }}" value="{{ old('email', null) }}" type="text" name="email" placeholder="Email">
                         @if($errors->has('email'))
                             <div class="invalid-feedback">
                                 {{ $errors->first('email') }}
@@ -141,7 +141,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="password" placeholder="Password">
+						<input class="input100{{ $errors->has('password') ? ' is-invalid' : '' }}" required placeholder="{{ trans('global.login_password') }}" type="password" name="password" placeholder="Password">
 						@if($errors->has('password'))
                             <div class="invalid-feedback">
                                 {{ $errors->first('password') }}
