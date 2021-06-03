@@ -19,7 +19,7 @@ class JobsTableSeeder extends Seeder
             'title' => 'Kameramen',
             'short_description' => 'qwertyuiopasdfghjklzxcvbnm',
             'full_description' =>
-                'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwweeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr',
+                'qqqqqqqqqqqqqqqqqwwwwwwwwwweeeeeeeeeeeeeeeeeeeeeeeeeerrrrrrrrrrrrrrrrrrrrrrrrrrr',
             'requirements' => 'assssmkbdiaeeeenkjm,a s',
             'job_nature' => 'Full-time',
             'address' => 'Banguntapan jogja',
@@ -33,9 +33,9 @@ class JobsTableSeeder extends Seeder
         $job = Job::create([
             'title' => 'Customer Service',
             'short_description' =>
-                'Klinik Tongfang saat ini membuka lowongan kerja untuk posisi sebagai Customer Service.',
+                'membuka lowongan kerja untuk posisi sebagai Customer Service.',
             'full_description' =>
-                'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwweeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr',
+                'qqqqqqqqqqqqqqqqqqqqqwwwwwwwwwwweeeeeeeeeeeeeeeeeeerrrrrrrrrrrrrrrrrrrrrrrrrrrr',
             'requirements' => 'assssmkbdiaeeeenkjm,a s',
             'job_nature' => 'Full-time',
             'address' => 'Banguntapan jogja',
@@ -65,7 +65,7 @@ class JobsTableSeeder extends Seeder
         $job = Job::create([
             'title' => 'Admin',
             'short_description' =>
-                'Hope Decorations & Acessorice saat ini membuka lowongan kerja untuk posisi sebagai Admin.',
+                'membuka lowongan kerja untuk posisi sebagai Admin.',
             'full_description' =>
                 'qqqqqqqqqqqqqqqqqqwwwwwwwwwwwwwwwwwwwwwwweeeeeerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr',
             'requirements' => 'assssmkbdiaeeeenkjasdfghjkl',
@@ -81,9 +81,9 @@ class JobsTableSeeder extends Seeder
         $job = Job::create([
             'title' => 'Content Creator',
             'short_description' =>
-                'Kiddokiddi saat ini membuka lowongan kerja untuk posisi sebagai Content Creator.',
+                'membuka lowongan kerja untuk posisi sebagai Content Creator.',
             'full_description' =>
-                'qqqqqqqqqqqqqqqqqqwwwwwwwwwwwwwwwwwwwwwwweeeeeerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr',
+                'qqqqqqqqqqqqqqwwwwwwwwwwwwwwwweeeeeerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr',
             'requirements' => 'Tingkat Pendidikan : SMA/SMK, D3, S1',
             'job_nature' => 'Full-time',
             'address' => 'Bantul',
@@ -99,7 +99,7 @@ class JobsTableSeeder extends Seeder
             'short_description' =>
                 'Nimco adalah perusahaan yang bergerak di bidang fashion (DISTRO)',
             'full_description' =>
-                'Nimco adalah perusahaan yang bergerak di bidang fashion (DISTRO) yang berlokasi di Yogyakarta, membuka kesempatan berkarir bagi para profesional muda yang aktif untuk bergabung bersama kami di posisi Desainer.',
+                'Membuka kesempatan berkarir bagi para profesional muda yang aktif untuk bergabung bersama kami di posisi Desainer.',
             'requirements' => 'Tingkat Pendidikan : D3, S1',
             'job_nature' => 'Full-time',
             'address' => 'Sleman',
@@ -113,9 +113,9 @@ class JobsTableSeeder extends Seeder
         $job = Job::create([
             'title' => 'Barista - Waiters - Cashier',
             'short_description' =>
-                'Kancane Coffee & Tea Bar saat ini membuka lowongan kerja untuk posisi sebagai Barista, Waiters, Cashier.',
+                'membuka lowongan kerja untuk posisi sebagai Barista, Waiters, Cashier.',
             'full_description' =>
-                'Kancane Coffee & Tea Bar saat ini membuka lowongan kerja untuk posisi sebagai Barista, Waiters, Cashier.',
+                'membuka lowongan kerja untuk posisi sebagai Barista, Waiters, Cashier.',
             'requirements' => 'Tingkat Pendidikan : SMA/SMK',
             'job_nature' => 'Full-time',
             'address' => 'Bantul',
@@ -131,7 +131,7 @@ class JobsTableSeeder extends Seeder
             'short_description' =>
                 'PT. Kata Suhu Kita dengan brand SUHU Consulting and Training merupakah sebuah perusahaan yang bergerak di bidang jasa pelatihan dan konsultasi IT dan SDM.',
             'full_description' =>
-                'SUHU mengajak talenta-talenta muda yang mempunyai semangat tinggi, memiliki kemauan untuk belajar, dan mengembangkan diri untuk bergabung menjadi keluarga baru kami',
+                'SUHU mengajak talenta-talenta muda yang mempunyai semangat tinggi untuk bergabung menjadi keluarga baru kami',
             'requirements' => 'Tingkat Pendidikan : D3, S1',
             'job_nature' => 'Full-time',
             'address' => 'Sleman',
@@ -145,9 +145,9 @@ class JobsTableSeeder extends Seeder
         $job = Job::create([
             'title' => 'Food and Beverage Manager',
             'short_description' =>
-                'The Oxalis Regency Hotel berdiri pada tahun 2006, terletak di lereng bukit yang rindang. Hotel dengan nuansa santai dan tenang ini berjarak 2 KM dari Borobudur International Golf & Country Club, 4 KM dari Jalan Nasional rute 14, dan 20 KM dari kompleks Candi Borobudur yang indah.',
+                'The Oxalis Regency Hotel ini berjarak 2 KM dari Borobudur International Golf & Country Club',
             'full_description' =>
-                'The Oxalis Regency Hotel berdiri pada tahun 2006, terletak di lereng bukit yang rindang. Hotel dengan nuansa santai dan tenang ini berjarak 2 KM dari Borobudur International Golf & Country Club, 4 KM dari Jalan Nasional rute 14, dan 20 KM dari kompleks Candi Borobudur yang indah.',
+                'The Oxalis Regency Hotel ini berjarak 2 KM dari Borobudur International Golf & Country Club',
             'requirements' => 'Tingkat Pendidikan : D3, S1',
             'job_nature' => 'Full-time',
             'address' => 'DIY',
