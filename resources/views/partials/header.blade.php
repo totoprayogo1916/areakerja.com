@@ -3,7 +3,7 @@
 
         <div class="row align-items-center justify-content-between d-flex">
 
-            <div id="logo">
+            <div id="logo2" class="col form-pasang2">
               <a href="{{ route('home') }}"><img src="{{ asset('img/logo2.png') }}" alt="" title="" /></a>
             </div>
 
