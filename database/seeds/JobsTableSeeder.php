@@ -15,20 +15,22 @@ class JobsTableSeeder extends Seeder
      */
     public function run()
     {
+        
         $job = Job::create([
             'title' => 'Kameramen',
             'short_description' => 'qwertyuiopasdfghjklzxcvbnm',
             'full_description' =>
                 'qqqqqqqqqqqqqqqqqwwwwwwwwwweeeeeeeeeeeeeeeeeeeeeeeeeerrrrrrrrrrrrrrrrrrrrrrrrrrr',
-            'requirements' => 'assssmkbdiaeeeenkjm,a s',
+            'requirements' => 'assssmkbdiaeeeenkjmas',
             'job_nature' => 'Full-time',
-            'address' => 'Banguntapan jogja',
+            'address' => 'Banguntapan',
             'top_rated' => '0',
             'salary' => '10k - 20k',
             'location_id' => '3',
             'company_id' => '1',
         ]);
         $job->save();
+        $job->categories()->sync(3);
 
         $job = Job::create([
             'title' => 'Customer Service',
@@ -45,6 +47,7 @@ class JobsTableSeeder extends Seeder
             'company_id' => '1',
         ]);
         $job->save();
+        $job->categories()->sync(4);
 
         $job = Job::create([
             'title' => 'Pramusaji / Pelayan di Rumah Makan',
@@ -61,6 +64,7 @@ class JobsTableSeeder extends Seeder
             'company_id' => '1',
         ]);
         $job->save();
+        $job->categories()->sync(5);
 
         $job = Job::create([
             'title' => 'Admin',
@@ -77,6 +81,7 @@ class JobsTableSeeder extends Seeder
             'company_id' => '1',
         ]);
         $job->save();
+        $job->categories()->sync(4);
 
         $job = Job::create([
             'title' => 'Content Creator',
@@ -93,6 +98,7 @@ class JobsTableSeeder extends Seeder
             'company_id' => '1',
         ]);
         $job->save();
+        $job->categories()->sync(1);
 
         $job = Job::create([
             'title' => 'Desainer',
@@ -109,6 +115,7 @@ class JobsTableSeeder extends Seeder
             'company_id' => '1',
         ]);
         $job->save();
+        $job->categories()->sync(3);
 
         $job = Job::create([
             'title' => 'Barista - Waiters - Cashier',
@@ -125,6 +132,7 @@ class JobsTableSeeder extends Seeder
             'company_id' => '1',
         ]);
         $job->save();
+        $job->categories()->sync(5);
 
         $job = Job::create([
             'title' => 'Videographer',
@@ -141,6 +149,7 @@ class JobsTableSeeder extends Seeder
             'company_id' => '1',
         ]);
         $job->save();
+        $job->categories()->sync(3);
 
         $job = Job::create([
             'title' => 'Food and Beverage Manager',
@@ -157,6 +166,7 @@ class JobsTableSeeder extends Seeder
             'company_id' => '1',
         ]);
         $job->save();
+        $job->categories()->sync(4);
 
         $job = Job::create([
             'title' => 'Editor Video',
@@ -173,5 +183,6 @@ class JobsTableSeeder extends Seeder
             'company_id' => '1',
         ]);
         $job->save();
+        $job->categories()->sync(3);
     }
 }
