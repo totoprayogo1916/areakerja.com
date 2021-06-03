@@ -7,12 +7,10 @@
               <a href="{{ route('home') }}"><img src="{{ asset('img/logo2.png') }}" alt="" title="" /></a>
             </div>
 
-
-            
             <button type="submit" class="btn form-pasang">
               <span class="lnr lnr-file-add"></span> Pasang Lowongan
             </button>
-            
+
         </div>
 
     </div>
