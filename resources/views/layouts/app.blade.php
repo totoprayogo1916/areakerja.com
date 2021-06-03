@@ -22,10 +22,12 @@
 </head>
 <body>
     <div class="app flex-row align-items-center">
+
         <div class="container">
             @yield("content")
         </div>
     </div>
+
     @yield('scripts')
 </body>
 
