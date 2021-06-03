@@ -2309,6 +2309,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-size: cover;
 }
 
+.banner-login {
+    background: url(../img/bg-login.png) center;
+    background-size: cover;
+  }
+
 .banner-area .overlay-bg {
   opacity: .40;
 }
@@ -2421,6 +2426,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: 2px solid #fe7c54;
 }
 
+.form-pasang2{
+  color: #fff;
+  /* opacity: .40; */
+  background-color: #fe7c5400;
+  border: 2px solid #fe7c5400;
+  margin-top: 5px;
+}
 .form-pasang:hover {
   color: #fff;
   background-color: #fe7b54;
