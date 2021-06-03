@@ -58,7 +58,7 @@
 
   a:hover {
       text-decoration: none;
-    color: #57b846;
+    color: #ec9e37;
   }
 
   /*---------------------------------------------*/
@@ -168,15 +168,16 @@
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background: #9053c7;
-    background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
-    background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
-    background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
-    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    background: #f88d00;
+    background: -webkit-linear-gradient(-135deg, #ec9e37, #ecc087);
+    background: -o-linear-gradient(-135deg, #ec9e37, #ecc087);
+    background: -moz-linear-gradient(-135deg, #ec9e37, #ecc087);
+    background: linear-gradient(-135deg, #ec9e37, #ecc087);
   }
 
   .wrap-login100 {
-    width: 960px;
+    width: 1096px;
+    height: 500px;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -188,13 +189,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 177px 130px 33px 95px;
+    padding: 100px 130px 33px 95px;
   }
 
   /*------------------------------------------------------------------
   [  ]*/
   .login100-pic {
     width: 316px;
+    padding-bottom: 100px;
   }
 
   .login100-pic img {
@@ -217,7 +219,8 @@
 
     width: 100%;
     display: block;
-    padding-bottom: 54px;
+    padding-top: 1px;
+    padding-bottom: 20px;
   }
 
 
@@ -256,7 +259,7 @@
     width: 100%;
     height: 100%;
     box-shadow: 0px 0px 0px 0px;
-    color: rgba(87,184,70, 0.8);
+    color: rgba(236, 180, 58, 0.8);
   }
 
   .input100:focus + .focus-input100 {
@@ -304,7 +307,7 @@
   }
 
   .input100:focus + .focus-input100 + .symbol-input100 {
-    color: #57b846;
+    color: #ec9e37;
     padding-left: 28px;
   }
 
@@ -332,7 +335,7 @@
     width: 100%;
     height: 50px;
     border-radius: 25px;
-    background: #57b846;
+    background: #ec9e37;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -361,11 +364,12 @@
 
   @media (max-width: 992px) {
     .wrap-login100 {
-      padding: 177px 90px 33px 85px;
+      padding: 150px 120px 33px 85px;
     }
 
     .login100-pic {
-      width: 35%;
+      width: 30%;
+      
     }
 
     .login100-form {
