@@ -8,11 +8,11 @@
             </div>
 
 
-            <div class="col-lg-2 form-cols">
-                <button type="submit" class="btn btn-area">
-                  <span class="lnr lnr-file-add"></span> Pasang Lowongan
-                </button>
-            </div>
+            
+            <button type="submit" class="btn form-pasang">
+              <span class="lnr lnr-file-add"></span> Pasang Lowongan
+            </button>
+            
         </div>
 
     </div>
