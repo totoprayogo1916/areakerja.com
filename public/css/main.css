@@ -2365,8 +2365,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .form-wrap{
   border-radius: 20px;
-  background-color: #feb26c;
-  border: 3px solid #fe7b54;
+  background-color: #feb36ca1;
+  /* border: 3px solid #fe7b54; */
   padding: 20px 0;
   margin: 40px 0;
 }

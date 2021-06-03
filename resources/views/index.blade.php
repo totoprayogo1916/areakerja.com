@@ -12,11 +12,11 @@
                 <form action="#" class="serach-form-area">
                     <div class="row justify-content-center form-wrap">
                         <div class="col-lg-4 form-cols">
-                            <input type="text" class="form-control" name="search" placeholder="What are you looking for?">
+                            <input type="text" class="form-control" placeholder="What are you looking for?">
                         </div>
                         <div class="col-lg-3 form-cols">
                             <div class="default-select" id="default-selects">
-                                <select name="location">
+                                <select>
                                     <option value="0">All Areas</option>
                                     @foreach($searchLocations as $id=>$searchLocations)
                                         <option value="{{ $id }}">{{ $searchLocations }}</option>
@@ -26,7 +26,7 @@
                         </div>
                         <div class="col-lg-3 form-cols">
                             <div class="default-select" id="default-selects2">
-                                <select name="category">
+                                <select>
                                     <option value="0">All Categories</option>
                                     @foreach($searchCategories as $id=>$searchCategories)
                                         <option value="{{ $id }}">{{ $searchCategories }}</option>
