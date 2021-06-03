@@ -13,7 +13,7 @@
 }
 
 ::selection {
-  background-color: #49e4fa;
+  background-color: #feb26c;
   color: #fff;
 }
 
@@ -2772,11 +2772,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .post-list .loadmore-btn {
   text-align: center;
-  background-color: #49e4fa;
+  background-color: #fe7b26;
   color: #fff;
   padding: 8px 15px;
   margin-top: 60px;
   max-width: 200px;
+  box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
 }
 
 .sidebar .owl-carousel .owl-item img {
