@@ -21,13 +21,13 @@
     @yield('styles')
 </head>
 <body>
-    <div class="app flex-row align-items-center"  style="background-image: url('../img/bg-login.png');">
-        
+    <div class="app flex-row align-items-center">
+
         <div class="container">
             @yield("content")
         </div>
     </div>
-    
+
     @yield('scripts')
 </body>
 
