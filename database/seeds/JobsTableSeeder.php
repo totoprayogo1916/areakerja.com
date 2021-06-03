@@ -25,7 +25,7 @@ class JobsTableSeeder extends Seeder
             'address' => 'Banguntapan jogja',
             'top_rated' => '0',
             'salary' => '10k - 20k',
-            'location_id' => '1',
+            'location_id' => '3',
             'company_id' => '1',
         ]);
         $job->save();
@@ -41,7 +41,7 @@ class JobsTableSeeder extends Seeder
             'address' => 'Banguntapan jogja',
             'top_rated' => '0',
             'salary' => '10jt - 20jt',
-            'location_id' => '1',
+            'location_id' => '3',
             'company_id' => '1',
         ]);
         $job->save();
@@ -57,7 +57,7 @@ class JobsTableSeeder extends Seeder
             'address' => 'Banguntapan jogja',
             'top_rated' => '0',
             'salary' => '500k - 700k',
-            'location_id' => '1',
+            'location_id' => '3',
             'company_id' => '1',
         ]);
         $job->save();
@@ -89,7 +89,7 @@ class JobsTableSeeder extends Seeder
             'address' => 'Bantul',
             'top_rated' => '0',
             'salary' => '800k - 1jt',
-            'location_id' => '1',
+            'location_id' => '3',
             'company_id' => '1',
         ]);
         $job->save();
@@ -105,7 +105,7 @@ class JobsTableSeeder extends Seeder
             'address' => 'Sleman',
             'top_rated' => '0',
             'salary' => '1 jt - 1,2 jt',
-            'location_id' => '1',
+            'location_id' => '2',
             'company_id' => '1',
         ]);
         $job->save();
@@ -121,7 +121,7 @@ class JobsTableSeeder extends Seeder
             'address' => 'Bantul',
             'top_rated' => '0',
             'salary' => '500k',
-            'location_id' => '1',
+            'location_id' => '3',
             'company_id' => '1',
         ]);
         $job->save();
@@ -137,7 +137,7 @@ class JobsTableSeeder extends Seeder
             'address' => 'Sleman',
             'top_rated' => '0',
             'salary' => '900k',
-            'location_id' => '1',
+            'location_id' => '2',
             'company_id' => '1',
         ]);
         $job->save();
@@ -169,7 +169,7 @@ class JobsTableSeeder extends Seeder
             'address' => 'Sleman',
             'top_rated' => '0',
             'salary' => '2,5 - 4,5 Juta',
-            'location_id' => '1',
+            'location_id' => '2',
             'company_id' => '1',
         ]);
         $job->save();
