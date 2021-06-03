@@ -3,8 +3,9 @@
 Route::redirect('/home', '/admin');
 Auth::routes(['register' => false]);
 
-Route::get('/admin', 'HomeController@index')->name('login');
+// Route::resource('menuadmin', 'AdminController')->only(['index', 'show'])->name('menuadmin');
 
+Route::get('/menuadmin', 'AdminController@index')->name('menuadmin');
 Route::get('/', 'HomeController@index')->name('home');
 Route::resource('jobs', 'JobController')->only(['index', 'show']);
 
