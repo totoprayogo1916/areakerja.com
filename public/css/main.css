@@ -2800,7 +2800,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 10px;
   width: 10px;
   display: inline-block;
-  background: rgba(127, 127, 127, 0.5);
+  background: rgba(63, 12, 12, 0.5);
   margin-left: 5px;
   margin-right: 5px;
   -webkit-transition: all 0.3s ease 0s;
@@ -2814,13 +2814,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  background: #49e4fa;
+  background: #38a4b3;
 }
 
 .sidebar .single-slidebar {
-  background-color: #f9f9ff;
+  background-color: #ececff;
   padding: 30px 20px;
   margin-bottom: 30px;
+  border-radius: 20px;
 }
 
 .sidebar .single-slidebar h4 {
@@ -2829,15 +2830,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .sidebar .single-slidebar .cat-list li {
   padding: 0px 10px;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  border-radius: 15px;
 }
 
 .sidebar .single-slidebar .cat-list li:hover a {
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 
 .sidebar .single-slidebar .cat-list p {
