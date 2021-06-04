@@ -49,7 +49,7 @@
         <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="{{ route('home') }}"><img src="{{ asset('img/logo2.png') }}" alt="" title="" style="margin-top: 3px"/>
+        <a href="{{ route('home') }}"><img src="{{ asset('img/logo3.svg') }}" alt="" title="" style="margin-top: 3px"/>
         </a>
         <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
             <span class="navbar-toggler-icon"></span>
