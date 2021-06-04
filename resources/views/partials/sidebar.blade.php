@@ -10,29 +10,12 @@
 
     <div data-aos="zoom-in-up" class="single-slidebar">
         <h4>Top rated job posts</h4>
-        <div class="active-relatedjob-carusel">
+        <ul class="cat-list">
             @foreach($sidebarJobs as $job)
-                <div class="single-rated">
-                    @if($job->company && $job->company->logo)
-                        <img class="img-fluid" src="{{ $job->company->logo->getUrl() }}" alt="">
-                    @endif
-                    <a href="{{ route('jobs.show', $job->id) }}"><h4>{{ $job->title }}</h4></a>
-                    @if($job->company)
-                        <h6>{{ $job->company->name }}</h6>
-                    @endif
-                    <p>
-                        {{ $job->short_description }}
-                    </p>
-                    @if($job->job_nature)
-                        <h5>Job Nature: {{ $job->job_nature }}</h5>
-                    @endif
-                    @if($job->address)
-                        <p class="address"><span class="lnr lnr-map"></span> {{ $job->address }}</p>
-                    @endif
-                    <p class="address"><span class="lnr lnr-database"></span> {{ $job->salary }}</p>
-                </div>
+            <li> <a class="justify-content-between d-flex" href="{{ route('jobs.show', $job->id) }}"><p>{{ $job->title }}</p>
+                </a></li>
             @endforeach
-        </div>
+            </ul>
     </div>
 
     <div data-aos="zoom-in-up" class="single-slidebar">
