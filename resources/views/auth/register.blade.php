@@ -109,6 +109,15 @@
                                     {{ __('Register') }}
                                 </button>
                             </div>
+
+                            <div class="text-center p-t-12">
+                                <span class="txt1">
+                                    Have already an account?
+                                </span>
+                                <a class="txt2" href="{{ route('login') }}">
+                                    Login here
+                                </a>
+					        </div>
                     </form>
             </div>
         </div>
