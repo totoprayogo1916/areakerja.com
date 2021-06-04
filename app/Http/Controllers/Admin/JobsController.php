@@ -93,4 +93,16 @@ class JobsController extends Controller
 
         return response(null, Response::HTTP_NO_CONTENT);
     }
+
+    // public function edit(Request $request){
+
+    //     $barang = Barang::where('id', $request->id)->first();
+    //     $barang->nama_barang = $request->nama_barang;
+    //     $barang->harga = $request->harga;
+    //     $barang->stok = $request->stok;
+    // 	$barang->update();
+
+    //     FacadesAlert::success('Success', 'Data diri berhasil dirubah');
+    // 	return redirect('admin');
+    // }
 }

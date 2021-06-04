@@ -11,8 +11,10 @@ Route::get('location/{location}', 'LocationController@show')->name('locations.sh
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
+    Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
+    Route::resource('categories', 'CategoriesController');
 
     // Jobs
     Route::delete('jobs/destroy', 'JobsController@massDestroy')->name('jobs.massDestroy');
-    Route::resource('jobs', 'JobsController')->only(['index', 'show', 'edit', 'create', 'store', 'update', 'destroy', 'massDestroy']);
+    Route::resource('jobs', 'JobsController');
 });

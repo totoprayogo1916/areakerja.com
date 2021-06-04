@@ -11,7 +11,7 @@ class UpdateLocationRequest extends FormRequest
 {
     public function authorize()
     {
-        abort_if(Gate::denies('location_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        // abort_if(Gate::denies('location_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         return true;
     }
