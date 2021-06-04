@@ -3,7 +3,7 @@
         <h4>Jobs by Location</h4>
         <ul class="cat-list">
             @foreach($sidebarLocations as $location)
-                <li><a class="justify-content-between d-flex" href="#"><p>{{ $location->name }}</p><span>{{ $location->jobs_count }}</span></a></li>
+                <li><a class="justify-content-between d-flex" href="{{ route('locations.show', $location->id) }}"><p>{{ $location->name }}</p><span>{{ $location->jobs_count }}</span></a></li>
             @endforeach
         </ul>
     </div>
@@ -16,7 +16,7 @@
                     @if($job->company && $job->company->logo)
                         <img class="img-fluid" src="{{ $job->company->logo->getUrl() }}" alt="">
                     @endif
-                    <a href="#"><h4>{{ $job->title }}</h4></a>
+                    <a href="{{ route('jobs.show', $job->id) }}"><h4>{{ $job->title }}</h4></a>
                     @if($job->company)
                         <h6>{{ $job->company->name }}</h6>
                     @endif
@@ -39,7 +39,7 @@
         <h4>Jobs by Category</h4>
         <ul class="cat-list">
             @foreach($sidebarCategories as $category)
-                <li><a class="justify-content-between d-flex" href="#"><p>{{ $category->name }}</p><span>{{ $category->jobs_count }}</span></a></li>
+                <li><a class="justify-content-between d-flex" href="{{ route('categories.show', $category->id)}}"><p>{{ $category->name }}</p><span>{{ $category->jobs_count }}</span></a></li>
             @endforeach
         </ul>
     </div>
