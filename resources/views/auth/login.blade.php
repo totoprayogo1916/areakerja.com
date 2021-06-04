@@ -100,10 +100,12 @@
 					</div>
 
 					<div class="text-center p-t-75">
-						<a class="txt2" href="#">
+                    @if (Route::has('register'))
+						<a class="txt2" href="{{ route('register') }}">
 							Create your Account
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
+                    @endif
 					</div>
 				</form>
 			</div>
