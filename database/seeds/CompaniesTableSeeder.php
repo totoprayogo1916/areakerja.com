@@ -42,5 +42,10 @@ class CompaniesTableSeeder extends Seeder
         ]);
         $company->save();
 
+        $company =  Company::create([
+            'name' => 'Dynamic Space',
+        ]);
+        $company->save();
+
     }
 }
