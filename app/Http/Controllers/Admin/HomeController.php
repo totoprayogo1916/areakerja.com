@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Job;
+use Illuminate\Support\Facades\DB;
 
 class HomeController
 {
     public function index()
     {
-
-        $jobs = Job::with('company')
-            ->orderBy('id', 'desc')
-            ->take(5)
-            ->get();
-        return view('admin.home', compact('jobs'));
+        $jobs = DB::table('jobs')->count();
+        $companies = DB::table('companies')->count();
+        $categories = DB::table('categories')->count();
+        $locations = DB::table('locations')->count();
+        return view('admin.home', compact(['jobs', 'companies', 'categories', 'locations']));
     }
 }
