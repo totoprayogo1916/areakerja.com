@@ -45,7 +45,7 @@
 </head>
 
 <body class="app header-fixed sidebar-fixed aside-menu-fixed pace-done sidebar-lg-show">
-    <header class="app-header navbar" style="background-color: black">
+    <header class="app-header navbar" style="background-color: #272e41">
         <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
             <span class="navbar-toggler-icon"></span>
         </button>
