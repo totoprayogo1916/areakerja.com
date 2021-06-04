@@ -1,21 +1,19 @@
 @extends('layouts.admin')
 @section('content')
-<div style="margin-bottom: 10px;" class="row">
-    <div class="col-lg-12">
-        <a class="btn btn-success" href="{{ route("admin.jobs.create") }}">
-            {{ trans('global.add') }} {{ trans('cruds.job.title_singular') }}
-        </a>
-    </div>
-</div>
+
 <div class="card">
     <div class="card-header">
         {{ trans('cruds.job.title_singular') }} {{ trans('global.list') }}
+        <a class="btn btn-success ml-2" href="{{ route("admin.jobs.create") }}">
+            <i class="fa fa-plus mr-2" aria-hidden="true"></i>
+            {{ trans('global.add') }} {{ trans('cruds.job.title_singular') }}
+        </a>
     </div>
 
     <div class="card-body">
         <div class="table-responsive">
             <table class=" table table-bordered table-striped table-hover datatable datatable-Job">
-                <thead>
+                <thead class="bg-warning">
                     <tr>
                         <th width="10">
 
