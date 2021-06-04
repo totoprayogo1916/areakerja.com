@@ -2224,7 +2224,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-image: -moz-linear-gradient(0deg, #ffe2ac 0%, #000000 100%);
   background-image: -webkit-linear-gradient(0deg, #ffe2ac 0%, #ffffff 100%);
   background-image: -ms-linear-gradient(0deg, #ffe2ac 0%, #dad6ee 100%);
-} 
+}
 
 .p1-gradient-bg, .sidebar .single-slidebar .cat-list li:hover, .callto-action-area, .single-price:hover .price-bottom, .single-service:hover, .submit-right, .submit-left, .contact-btns, .form-area .primary-btn {
   background-image: -moz-linear-gradient(0deg, #ffe2ac 0%, #ffb273 100%);
@@ -2654,7 +2654,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 20px;
 }
 
-.post-list:hover .single-post:hover {
+.post-list:hover .single-post:hover{
   box-shadow: 0 10px 10px rgba(0.15,0.15,0.15,0.15);
   transition: box-shadow 0.3s ease-in-out;
 }
@@ -2777,8 +2777,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 8px 15px;
   margin-top: 60px;
   max-width: 200px;
-  box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.1);
+
   border-radius: 6px;
+}
+
+.loadmore-btn:hover {
+  box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .sidebar .owl-carousel .owl-item img {

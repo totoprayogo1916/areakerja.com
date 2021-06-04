@@ -15,7 +15,7 @@
                 <div class="title d-flex flex-row justify-content-between">
                     <div class="titles">
                         <a href="{{ route('jobs.show', $job->id) }}"><h4>{{ $job->title }}</h4></a>
-                        <h6><span class="lnr lnr-apartment"></span> {{ $job->company->name }}</h6>					
+                        <h6><span class="lnr lnr-apartment"></span> {{ $job->company->name }}</h6>
                     </div>
                 </div>
                 <p>
@@ -27,6 +27,5 @@
             </div>
         </div>
     @endforeach
-    {{ $jobs->appends(request()->query())->links() }}
-</div>	
+</div>
 @endsection
