@@ -60,21 +60,9 @@ table.dataTable thead .sorting_desc {
     background-image: none;
 }
 
-.sidebar .nav-item {
-    cursor: pointer;
-    background-color: darkgray;
-}
-
-.sidebar .nav-item:enabled{
-    background-color: #feb26c;
-}
-
-
 .sidebar {
-    background-color: #fe7b54;
+    background-color: black;
 }
-
-
 
 .btn-default {
     color: #23282c;

@@ -4,7 +4,7 @@
         <ul class="nav">
             <li class="nav-item">
                 <a href="{{ route("admin.home") }}" class="nav-link">
-                    <i class="nav-icon fas fa-fw fa-tachometer-alt">
+                    <i class="nav-icon fas fa-fw fa-tachometer-alt" style="hove">
 
                     </i>
                     {{ trans('global.dashboard') }}
