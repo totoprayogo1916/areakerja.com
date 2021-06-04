@@ -5,7 +5,7 @@
 @section('content')
 <div class="col-lg-8 post-list">
     @foreach($jobs as $job)
-        <div class="single-post d-flex flex-row">
+        <div data-aos="fade-up" class="single-post d-flex flex-row">
             <div class="thumb">
                 @if($job->company->logo)
                     <img src="{{ $job->company->logo->getUrl() }}" alt="">
