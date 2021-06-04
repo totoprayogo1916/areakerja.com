@@ -1,5 +1,5 @@
 <div class="sidebar">
-    <nav class="sidebar-nav">
+    <nav class="sidebar-nav" >
 
         <ul class="nav">
             <li class="nav-item">

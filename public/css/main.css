@@ -2847,7 +2847,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .sidebar .single-slidebar .cat-list a {
-  color: #777;
+  color: rgb(26, 3, 3);
   padding: 10px;
   margin-bottom: 10px;
 }
