@@ -18,7 +18,6 @@ class JobsController extends Controller
 {
     public function index()
     {
-        // abort_if(Gate::denies('job_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $jobs = Job::all();
 
@@ -27,7 +26,6 @@ class JobsController extends Controller
 
     public function create()
     {
-        // abort_if(Gate::denies('job_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $companies = Company::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
@@ -48,7 +46,6 @@ class JobsController extends Controller
 
     public function edit(Job $job)
     {
-        // abort_if(Gate::denies('job_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $companies = Company::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
@@ -71,7 +68,6 @@ class JobsController extends Controller
 
     public function show(Job $job)
     {
-        // abort_if(Gate::denies('job_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $job->load('company', 'location', 'categories');
 
@@ -80,7 +76,6 @@ class JobsController extends Controller
 
     public function destroy(Job $job)
     {
-        // abort_if(Gate::denies('job_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $job->delete();
 
@@ -94,15 +89,4 @@ class JobsController extends Controller
         return response(null, Response::HTTP_NO_CONTENT);
     }
 
-    // public function edit(Request $request){
-
-    //     $barang = Barang::where('id', $request->id)->first();
-    //     $barang->nama_barang = $request->nama_barang;
-    //     $barang->harga = $request->harga;
-    //     $barang->stok = $request->stok;
-    // 	$barang->update();
-
-    //     FacadesAlert::success('Success', 'Data diri berhasil dirubah');
-    // 	return redirect('admin');
-    // }
 }
