@@ -13,6 +13,8 @@ class CreateCompaniesTable extends Migration
 
             $table->string('name');
 
+            $table->string('gambar');
+
             $table->timestamps();
 
             $table->softDeletes();
