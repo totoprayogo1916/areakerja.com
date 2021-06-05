@@ -17,4 +17,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Jobs
     Route::delete('jobs/destroy', 'JobsController@massDestroy')->name('jobs.massDestroy');
     Route::resource('jobs', 'JobsController');
+
+    //Location
+    Route::delete('locations/destroy', 'LocationsController@massDestroy')->name('locations.massDestroy');
+    Route::resource('locations', 'LocationsController');
 });
