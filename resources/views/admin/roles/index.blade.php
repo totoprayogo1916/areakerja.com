@@ -4,11 +4,13 @@
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.role.title_singular') }} {{ trans('global.list') }}
-        <a class="btn btn-success ml-2" href="{{ route("admin.roles.create") }}">
-            <i class="fa fa-plus mr-2" aria-hidden="true"></i>
+        <div class="row align-items-center justify-content-between d-flex" style="margin-left: 2px; margin-right:2px">
+            {{ trans('cruds.role.title_singular') }} {{ trans('global.list') }}
+            <a class="btn btn-success ml-2" href="{{ route("admin.roles.create") }}">
+                <i class="fa fa-plus mr-2" aria-hidden="true"></i>
             {{ trans('global.add') }} {{ trans('cruds.role.title_singular') }}
-        </a>
+            </a>
+        </div>
     </div>
 
     <div class="card-body">
