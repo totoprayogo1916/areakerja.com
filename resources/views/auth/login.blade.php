@@ -5,11 +5,13 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Login</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://unpkg.com/@coreui/coreui@2.1.16/dist/css/coreui.min.css" rel="stylesheet" />
@@ -36,9 +38,12 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/util2.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/main2.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 <!--===============================================================================================-->
 </head>
 <body>
+
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
@@ -115,6 +120,8 @@
 
 
 <!--===============================================================================================-->
+    <!-- gsap -->
+    <script src="{{ asset('js/TweenMax.min.js') }}"></script>
 	<script src="{{ asset('vendor/jquery/jquery-3.2.1.min.js') }}"></script>
 <!--===============================================================================================-->
 	<script src="{{ asset('vendor/bootstrap/js/popper.js') }}"></script>
@@ -123,10 +130,29 @@
 	<script src="{{ asset('vendor/select2/select2.min.js') }}"></script>
 <!--===============================================================================================-->
 	<script src="{{ asset('vendor/tilt/tilt.jquery.min.js') }}"></script>
+
 	<script >
 		$('.js-tilt').tilt({
 			scale: 1.1
 		})
+
+        TweenMax.to(".first", 1.5, {
+            delay: .5,
+            top: "-100%",
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.to(".second", 1.5, {
+            delay: .7,
+            top: "-100%",
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.to(".third", 1.5, {
+            delay: .9,
+            top: "-100%",
+            ease: Expo.easeInOut
+        });
 	</script>
 <!--===============================================================================================-->
 	<script src="{{ asset('js/main2.js') }}"></script>

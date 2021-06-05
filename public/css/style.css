@@ -1,0 +1,23 @@
+/* OVERLAY
+=========================== */
+.overlaya {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    z-index: 99;
+  }
+
+  .firsta {
+    background: #74e7ef;
+  }
+
+  .seconda {
+    background: #74e7ef;
+    left: 33.3%;
+  }
+
+  .thirda {
+    background: #74e7ef;
+    left: 66.6%;
+  }
