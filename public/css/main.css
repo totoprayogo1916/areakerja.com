@@ -2648,7 +2648,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .post-list .single-post {
-  padding: 30px;
+  padding: 20px;
   background-color: #ececff;
   margin-bottom: 30px;
   border-radius: 20px;
@@ -2682,6 +2682,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 .post-list .single-post .address {
   color: #222;
   margin-bottom: 15px;
+}
+
+.post-list .single-post .address1 {
+  color: #222;
 }
 
 .post-list .single-post .btns li {
