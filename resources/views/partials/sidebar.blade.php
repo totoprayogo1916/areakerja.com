@@ -12,7 +12,7 @@
         <h4>Top rated job posts</h4>
         <ul class="cat-list">
             @foreach($sidebarJobs as $job)
-            <li> <a class="justify-content-between single-rated d-table-cell" href="{{ route('jobs.show', $job->id) }}"><h4>{{ $job->title }}</h4>
+            <li> <a class="justify-content-between single-rated d-table-cell" href="{{ route('jobs.show', $job->id) }}"><br/><h4>{{ $job->title }}</h4>
                 <p>
                 @if($job->company)
                         {{ $job->company->name }}
