@@ -11,6 +11,14 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="{{ route("admin.locations.index") }}" class="nav-link {{ request()->is('admin/locations') || request()->is('admin/locations/*') ? 'active' : '' }}">
+                    <i class="fa-fw fas fa-map-marker-alt nav-icon">
+
+                    </i>
+                    {{ trans('cruds.location.title') }}
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="{{ route("admin.categories.index") }}" class="nav-link {{ request()->is('admin/categories') || request()->is('admin/categories/*') ? 'active' : '' }}">
                     <i class="fa-fw fas fa-tags nav-icon">
 
