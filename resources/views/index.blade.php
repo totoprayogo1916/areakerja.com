@@ -6,10 +6,10 @@
     <div class="container">
         <div class="row fullscreen d-flex align-items-center justify-content-center">
             <div class="banner-content col-lg-12">
-                <h1 class="text-white">
+                <h1 style="color: rgb(116, 116, 116)">
                     Tempat Mencari Kerja
                 </h1>
-                <form action="#" class="serach-form-area">
+                <form action="#" class="serach-form-area mb-100" >
                     <div class="row justify-content-center form-wrap">
                         <div class="col-lg-4 form-cols">
                             <input type="text" class="form-control" placeholder="What are you looking for?">
@@ -41,9 +41,9 @@
                         </div>
                     </div>
                 </form>
-                <p class="text-white">Cari sesuai kategori:
+                <p  style="color: rgb(116, 116, 116)"   >Cari sesuai kategori:
                 @foreach($searchByCategory as $id=>$searchByCategory)
-                    <a href="#" class="text-white">{{ $searchByCategory }}</a>@if (!$loop->last),@endif
+                    <a href="#"  style="color: rgb(116, 116, 116)">{{ $searchByCategory }}</a>@if (!$loop->last),@endif
                 @endforeach
                 </p>
             </div>
@@ -80,5 +80,5 @@
     @endforeach
 
     <a class="text-uppercase loadmore-btn mx-auto d-block" href="{{ route('jobs.index') }}">Load More Job Posts</a>
-</div>	
+</div>
 @endsection
