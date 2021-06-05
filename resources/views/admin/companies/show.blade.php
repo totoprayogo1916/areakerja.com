@@ -31,10 +31,8 @@
                             {{ trans('cruds.company.fields.logo') }}
                         </th>
                         <td>
-                            @if($company->logo)
-                                <a href="{{ $company->logo->getUrl() }}" target="_blank">
-                                    <img src="{{ $company->logo->getUrl('thumb') }}" width="50px" height="50px">
-                                </a>
+                            @if($company->gambar)
+                                    <img src="{{ url('img/companylogo') }}/{{ $company->gambar }}" style="width: 400px; height: 280px;">
                             @endif
                         </td>
                     </tr>

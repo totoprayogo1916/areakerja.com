@@ -15,7 +15,7 @@
             <div class="icon">
               <i class="fas fa-briefcase"></i>
             </div>
-            <a href="#" class="small-box-footer">Details <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{ route("admin.jobs.index") }}" class="small-box-footer">Details <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -30,7 +30,7 @@
             <div class="icon">
               <i class="fas fa-list-alt"></i>
             </div>
-            <a href="#" class="small-box-footer">Details <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{ route("admin.categories.index") }}" class="small-box-footer">Details <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -45,7 +45,7 @@
             <div class="icon">
               <i class="fas fa-building"></i>
             </div>
-            <a href="#" class="small-box-footer">Details <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{ route("admin.companies.index") }}" class="small-box-footer">Details <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -60,7 +60,7 @@
             <div class="icon">
               <i class="fas fa-map-marker"></i>
             </div>
-            <a href="#" class="small-box-footer">Details <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{ route("admin.locations.index") }}" class="small-box-footer">Details <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

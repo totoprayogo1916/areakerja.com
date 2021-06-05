@@ -1,15 +1,17 @@
 @extends('layouts.admin')
 @section('content')
 <div style="margin-bottom: 10px;" class="row">
-    <div class="col-lg-12">
-        <a class="btn btn-success" href="{{ route("admin.locations.create") }}">
-            {{ trans('global.add') }} {{ trans('cruds.location.title_singular') }}
-        </a>
-    </div>
+    
 </div>
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.location.title_singular') }} {{ trans('global.list') }}
+        <div class="row align-items-center justify-content-between d-flex" style="margin-left: 2px; margin-right:2px">
+            {{ trans('cruds.location.title_singular') }} {{ trans('global.list') }}
+            <a class="btn btn-success ml-2" href="{{ route("admin.jobs.create") }}">
+                <i class="fa fa-plus mr-2" aria-hidden="true"></i>
+                {{ trans('global.add') }} {{ trans('cruds.location.title_singular') }} 
+            </a>
+        </div>
     </div>
 
     <div class="card-body">

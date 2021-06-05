@@ -2,16 +2,17 @@
 @section('content')
 
 <div style="margin-bottom: 10px;" class="row">
-<div class="col-lg-12">
-    <a class="btn btn-success ml-2" href="{{ route("admin.companies.create") }}">
-        <i class="fa fa-plus mr-2" aria-hidden="true"></i>
-        {{ trans('global.add') }} {{ trans('cruds.company.title_singular') }}
-    </a>
-</div>
+
 </div>
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.company.title_singular') }} {{ trans('global.list') }}
+        <div class="row align-items-center justify-content-between d-flex" style="margin-left: 2px; margin-right:2px">
+            {{ trans('cruds.company.title_singular') }} {{ trans('global.list') }}
+            <a class="btn btn-success ml-2" href="{{ route("admin.jobs.create") }}">
+                <i class="fa fa-plus mr-2" aria-hidden="true"></i>
+                {{ trans('global.add') }} {{ trans('cruds.company.title_singular') }}
+            </a>
+        </div>
     </div>
 
     <div class="card-body">
@@ -20,7 +21,6 @@
                 <thead>
                     <tr>
                         <th width="10">
-
                         </th>
                         <th>
                             {{ trans('cruds.company.fields.id') }}
@@ -39,20 +39,18 @@
                 <tbody>
                     @foreach($companies as $key => $company)
                         <tr data-entry-id="{{ $company->id }}">
-                            <td>
+                            <td style="vertical-align: middle; text-align: center;">
 
                             </td>
-                            <td>
+                            <td style="width: 50px; vertical-align: middle; text-align: center;">
                                 {{ $company->id ?? '' }}
                             </td>
                             <td>
                                 {{ $company->name ?? '' }}
                             </td>
-                            <td>
-                                @if($company->logo)
-                                    <a href="{{ $company->logo->getUrl() }}" target="_blank">
-                                        <img src="{{ $company->logo->getUrl('thumb') }}" width="50px" height="50px">
-                                    </a>
+                            <td style="width: 150px; vertical-align: middle; text-align: center;">
+                                @if($company->gambar)
+                                    <img src="{{ url('img/companylogo') }}/{{ $company->gambar }}" style="width: 100px; height: 70px;">
                                 @endif
                             </td>
                             <td>
