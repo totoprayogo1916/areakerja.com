@@ -1,18 +1,17 @@
 @extends('layouts.admin')
 @section('content')
 @can('user_create')
-    <div style="margin-bottom: 10px;" class="row">
-        <div class="col-lg-12">
+
+<div class="card">
+    <div class="card-header">
+        <div class="row align-items-center justify-content-between d-flex" style="margin-left: 2px; margin-right:2px">
+            {{ trans('cruds.user.title_singular') }} {{ trans('global.list') }}
             <a class="btn btn-success" href="{{ route("admin.users.create") }}">
                 {{ trans('global.add') }} {{ trans('cruds.user.title_singular') }}
             </a>
         </div>
     </div>
 @endcan
-<div class="card">
-    <div class="card-header">
-        {{ trans('cruds.user.title_singular') }} {{ trans('global.list') }}
-    </div>
 
     <div class="card-body">
         <div class="table-responsive">
@@ -65,7 +64,7 @@
                                     <span class="badge badge-info">{{ $item->title }}</span>
                                 @endforeach
                             </td>
-                            <td>
+                            <td align="center">
                                 <a class="btn btn-xs btn-primary" href="{{ route('admin.users.show', $user->id) }}">
                                     {{ trans('global.view') }}
                                 </a>
@@ -84,8 +83,6 @@
                 </tbody>
             </table>
         </div>
-
-
     </div>
 </div>
 @endsection
