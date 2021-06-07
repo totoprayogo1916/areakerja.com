@@ -30,13 +30,23 @@ class CompaniesController extends Controller
         return view('admin.companies.create');
     }
 
-    public function store(StoreCompanyRequest $request)
+    public function store(Request $request)
     {
-        $company = Company::create($request->all());
+        // $company = Company::create($request->all());
+        // $request->validate([
+        //     'gambar' => 'required|gambar|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        // ]);
+        $namaFile = time().'.'.$request->gambar->extension();
+        $request->gambar->move(public_path('img/companylogo'), $namaFile);
+        
+        Company::insert([
+            'name' => $request->name,
+            'gambar' => $namaFile
+        ]);
 
-        if ($request->input('logo', false)) {
-            $company->addMedia(storage_path('tmp/uploads/' . $request->input('logo')))->toMediaCollection('logo');
-        }
+        // if ($request->input('logo', false)) {
+        //     $company->addMedia(storage_path('tmp/uploads/' . $request->input('logo')))->toMediaCollection('logo');
+        // }
 
         return redirect()->route('admin.companies.index');
     }
@@ -47,18 +57,37 @@ class CompaniesController extends Controller
         return view('admin.companies.edit', compact('company'));
     }
 
-    public function update(UpdateCompanyRequest $request, Company $company)
+    public function update(Request $request, $id)
     {
-        $company->update($request->all());
+            
+        // $company->update($request->all());
 
-        if ($request->input('logo', false)) {
-            if (!$company->logo || $request->input('logo') !== $company->logo->file_name) {
-                $company->addMedia(storage_path('tmp/uploads/' . $request->input('logo')))->toMediaCollection('logo');
+        // if ($request->input('logo', false)) {
+        //     if (!$company->logo || $request->input('logo') !== $company->logo->file_name) {
+        //         $company->addMedia(storage_path('tmp/uploads/' . $request->input('logo')))->toMediaCollection('logo');
+        //     }
+        // } elseif ($company->logo) {
+        //     $company->logo->delete();
+        // }
+        $companies = Company::find($id);
+
+        if($request->gambar != ''){        
+            $path = public_path().'/img/companylogo/';
+
+            //code for remove old file
+            if($companies->gambar != ''  && $companies->gambar != null){
+                $file_old = $path.$companies->gambar;
+                unlink($file_old);
             }
-        } elseif ($company->logo) {
-            $company->logo->delete();
-        }
 
+            //upload new gambar
+            $file = $request->gambar;
+            $filename = $file->getClientOriginalName();
+            $file->move($path, $filename);
+
+            //for update in table
+            $companies->update(['gambar' => $filename]);
+        }
         return redirect()->route('admin.companies.index');
     }
 

@@ -22,7 +22,14 @@
                     {{ trans('cruds.company.fields.name_helper') }}
                 </p>
             </div>
-            <div class="form-group {{ $errors->has('logo') ? 'has-error' : '' }}">
+        
+            <div class="form-group">
+                <label>Gambar</label>
+                <br>
+                <input type="file" id="gambar" name="gambar">
+            </div>
+        
+            {{-- <div class="form-group {{ $errors->has('logo') ? 'has-error' : '' }}">
                 <label for="logo">{{ trans('cruds.company.fields.logo') }}</label>
                 <div class="needsclick dropzone" id="logo-dropzone">
 
@@ -35,7 +42,7 @@
                 <p class="helper-block">
                     {{ trans('cruds.company.fields.logo_helper') }}
                 </p>
-            </div>
+            </div> --}}
             <div>
                 <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
             </div>
