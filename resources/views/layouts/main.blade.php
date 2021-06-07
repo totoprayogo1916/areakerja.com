@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style2.css') }}">
     </head>
     <body>
     @include('partials.header')
@@ -53,9 +54,10 @@
         <script src="{{ asset('js/parallax.min.js') }}"></script>
         <script src="{{ asset('js/mail-script.js') }}"></script>
         <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/app2.js') }}"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>   
-            AOS.init(); 
+        <script>
+            AOS.init();
         </script>
     </body>
 </html>
