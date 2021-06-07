@@ -43,7 +43,7 @@
                             <td>
                                 {{ $category->name ?? '' }}
                             </td>
-                            <td>
+                            <td align="center">
 
                                 <a style="width: 60px" class="btn btn-xs btn-primary" href="{{ route('admin.categories.show', $category->id) }}">
                                     {{ trans('global.view') }}
@@ -60,14 +60,11 @@
                                 </form>
 
                             </td>
-
                         </tr>
                     @endforeach
                 </tbody>
             </table>
         </div>
-
-
     </div>
 </div>
 @endsection

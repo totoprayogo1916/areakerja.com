@@ -1,8 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-<div style="margin-bottom: 10px;" class="row">
-    
-</div>
+
 <div class="card">
     <div class="card-header">
         <div class="row align-items-center justify-content-between d-flex" style="margin-left: 2px; margin-right:2px">
@@ -45,7 +43,7 @@
                             <td>
                                 {{ $location->name ?? '' }}
                             </td>
-                            <td>
+                            <td align="center">
                                 <a class="btn btn-xs btn-primary" href="{{ route('admin.locations.show', $location->id) }}">
                                     {{ trans('global.view') }}
                                 </a>
@@ -57,16 +55,12 @@
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
                                 </form>
-
                             </td>
-
                         </tr>
                     @endforeach
                 </tbody>
             </table>
         </div>
-
-
     </div>
 </div>
 @endsection
