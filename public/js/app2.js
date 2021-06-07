@@ -11,6 +11,13 @@ const border = document.querySelector(".border");
 let header_height = header.offsetHeight;
 let section_height = section.offsetHeight;
 
+if ($(window).width() < 1070) {
+    document.getElementById("parallax1").style.display='none';
+    document.getElementById("parallax2").style.display='none';
+    document.getElementById("parallax3").style.display='none';
+    document.getElementById("parallax4").style.display='none';
+}
+
 window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
     let sectionY = section.getBoundingClientRect();

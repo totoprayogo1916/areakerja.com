@@ -5,12 +5,13 @@
 
 {{-- <div class="overlay overlay-bg"></div> --}}
 
-<img src="{{ asset('img/image/4.png') }}" class="sky translate" data-speed="0.3" alt="">
-<img src="{{ asset('img/image/3.png') }}" class="mountain3 translate" data-speed="0.3" alt="">
-<img src="{{ asset('img/image/2.png') }}" class="mountain2 translate" data-speed="0.5" alt="">
+<img id="parallax4" src="{{ asset('img/image/4.png') }}" class="sky translate" data-speed="0.3" alt="">
+<img id="parallax3" src="{{ asset('img/image/3.png') }}" class="mountain3 translate" data-speed="0.3" alt="">
+<img id="parallax2" src="{{ asset('img/image/2.png') }}" class="mountain2 translate" data-speed="0.5" alt="">
 {{-- <img src="{{ asset('img/image/5.png') }}" class="bola translate" data-speed="0.45" alt="">
 <img src="{{ asset('img/image/5.png') }}" class="bola2 translate" data-speed="0.1" alt=""> --}}
-    <div class="container">
+    <div class="container banner-area">
+
         <div class="row fullscreen d-flex align-items-center justify-content-center">
             <div class="banner-content col-lg-12">
                 <h1 style="color: rgb(116, 116, 116)">
@@ -58,7 +59,7 @@
     </div>
 
 
-<img src="{{ asset('img/image/1.png') }}" class="person translate" data-speed="-0.25" alt="">
+<img id="parallax1" src="{{ asset('img/image/1.png') }}" class="person translate" data-speed="-0.25" alt="">
 </section>
 @endsection
 
