@@ -16,7 +16,7 @@
 
 .person{
     position: absolute;
-    width: 1920px ;
+    width: fit-content ;
     /* bottom: -100px; */
     /* z-index: 20; */
 }
