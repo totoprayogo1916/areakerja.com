@@ -13,34 +13,38 @@
                 Temukan loker Jogja terbaru bulan Juni 2021 dengan mudah.
                 </h6>
                  <form action="#" class="serach-form-area flex-wrap" >
-                    <div class="row form-wrap">
-                        <div class="col-lg-4 form-cols">
-                            <input type="text" class="form-control" placeholder="What are you looking for?">
-                        </div>
-                        <div class="col-lg-3 form-cols">
-                            <div class="default-select" id="default-selects">
-                                <select>
-                                    <option value="0">All Areas</option>
-                                    @foreach($searchLocations as $id=>$searchLocations)
-                                        <option value="{{ $id }}">{{ $searchLocations }}</option>
-                                    @endforeach
-                                </select>
+                    <div class="col form-wrap-main">
+                        <div class="row form-wrap justify-content-center">
+                            <div class="col-lg-3 form-cols">
+                                <input type="text" class="form-control" placeholder="Cari Disini..">
+                            </div>
+                            <div class="col-lg-3 form-cols">
+                                <div class="default-select" id="default-selects">
+                                    <select>
+                                        <option value="0">All Areas</option>
+                                        @foreach($searchLocations as $id=>$searchLocations)
+                                            <option value="{{ $id }}">{{ $searchLocations }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 form-cols">
+                                <div class="default-select" id="default-selects2">
+                                    <select>
+                                        <option value="0">All Categories</option>
+                                        @foreach($searchCategories as $id=>$searchCategories)
+                                            <option value="{{ $id }}">{{ $searchCategories }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 form-cols">
-                            <div class="default-select" id="default-selects2">
-                                <select>
-                                    <option value="0">All Categories</option>
-                                    @foreach($searchCategories as $id=>$searchCategories)
-                                        <option value="{{ $id }}">{{ $searchCategories }}</option>
-                                    @endforeach
-                                </select>
+                        <div class="row form-wrap justify-content-around" style="margin-top: 2%">
+                            <div class="col-lg-3 form-cols">
+                                <button type="submit" class="btn btn-area ">
+                                <span class="lnr lnr-magnifier"></span> Search
+                                </button>
                             </div>
-                        </div>
-                        <div class="col-lg-2 form-cols">
-                            <button type="submit" class="btn btn-area">
-                              <span class="lnr lnr-magnifier"></span> Search
-                            </button>
                         </div>
                     </div>
                 </form>
@@ -56,7 +60,7 @@
 @endsection
 
 @section('content')
-<div class="col-lg-8 post-list">
+<div class="col-lg-8 post-list" style="margin-top: 5%">
     @foreach($jobs as $job)
     <a href="{{ route('jobs.show', $job->id) }}">
         <div data-aos="fade-up" class="single-post align-items-center d-flex flex-row">
