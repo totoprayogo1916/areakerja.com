@@ -2381,15 +2381,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-area {
-<<<<<<< HEAD
-  background-color: #ccdcef;
-  /* background: url(../img/header-bg.jpg) center; */
-=======
   background-color:#ccdcef ;
   height: 175px;
   /* margin-bottom: 1%; */
   background: url(../img/bg.png) center;
->>>>>>> e21848adb90f68a86a07da480151f983e9bc5a3b
   background-size: cover;
 }
 
