@@ -3329,7 +3329,7 @@ hr {
 
 .footer-area {
   padding: 30px 90px 20px;
-  background-color: #222222;
+  background: rgba(20, 40, 85, 0.8);
 }
 
 .footer-area .footer-nav li {
@@ -3343,7 +3343,7 @@ hr {
 }
 
 .footer-area .footer-nav li a:hover {
-  color: #3c4146;
+  color: #b1b3b5;
 }
 
 .footer-area .primary-btn {
@@ -3454,9 +3454,9 @@ hr {
   transition: all 0.3s ease 0s;
 }
 
-.footer-social a:hover {
+/* .footer-social a:hover {
   background-color: #49e4fa;
-}
+} */
 
 .footer-social a:hover i {
   color: #fff;
