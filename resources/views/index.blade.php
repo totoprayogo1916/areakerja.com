@@ -62,9 +62,11 @@
 @section('slick')
 <div class="for_slick_slider multiple-items">
     @foreach($sidbarJobs as $job)
-        <div class="items" style="background: #00ff4c">
+        <div class="items" style="background: #ffffff; border-radius: 20px; box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);">
+            <h5 style="color: #b19ea8; margin-left: 5%; margin-top: 5%">Dibutuhkan</h5>
+            <h4 style="color: #2b2b2b ; margin-left: 5%">{{ $job->title }}</h4>
             @if($job->company->gambar)
-                <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="width: 150px; height: 120px;">
+                <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="width: 150px; height: 120px; margin-left: auto; margin-right: auto">
             @endif
         </div>
     @endforeach
