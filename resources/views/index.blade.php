@@ -4,13 +4,16 @@
 <section class="relative" id="home">
     <div class="banner-area">
 
-        <div class="row d-flex align-items-center justify-content-center">
+        <div class="row align-items-center justify-content-center">
             <div class="banner-content col-lg-12">
-                <h1 style="color: #fe7b54">
+                <h1 style="color: #fe7b54; text-shadow: 2px 2px 3px #353535b0;">
                     Tempat Mencari Kerja
                 </h1>
-                 <form action="#" class="serach-form-area mb-100" >
-                    <div class="row justify-content-center form-wrap">
+                <h6 style="color: #fe7b54; text-shadow: 1px 1px 2px #353535b0;">
+                Temukan loker Jogja terbaru bulan Juni 2021 dengan mudah.
+                </h6>
+                 <form action="#" class="serach-form-area flex-wrap" >
+                    <div class="row form-wrap">
                         <div class="col-lg-4 form-cols">
                             <input type="text" class="form-control" placeholder="What are you looking for?">
                         </div>
@@ -41,9 +44,9 @@
                         </div>
                     </div>
                 </form>
-                <p  style="color: rgb(116, 116, 116)"   >Cari sesuai kategori:
+                <p  style="color: #fe7b54"   >Cari sesuai kategori:
                @foreach($searchByCategory as $id=>$searchByCategory)
-                    <a href="#"  style="color: rgb(116, 116, 116)">{{ $searchByCategory }}</a>@if (!$loop->last),@endif
+                    <a href="#"  style="color: #fe7b54">{{ $searchByCategory }}</a>@if (!$loop->last),@endif
                 @endforeach
                 </p>
             </div>
@@ -57,30 +60,30 @@
     @foreach($jobs as $job)
     <a href="{{ route('jobs.show', $job->id) }}">
         <div data-aos="fade-up" class="single-post align-items-center d-flex flex-row">
-            <div class="thumb" style="margin: auto">
+            <div class="thumb" style="margin-top: auto;margin-bottom: auto">
                 @if($job->company->gambar)
                     <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="width: 150px; height: 120px;">
                 @endif
             </div>
-            <div class="details">
+            <div class="details " style="width: 100%">
                 <div class="title d-flex flex-row justify-content-between"  >
                     <div class="titles">
                         <h3  style="font-size: 19px; color: #b19ea8">Dibutuhkan</h3>
                         <h3 style="margin-top: 10px">{{ $job->title }}</h3>
                         <div class="row" style="margin-top: 14px">
                             <div class="col-md-auto " >
-                                <h5 style="font-size: 16px" ><span class="lnr lnr-apartment"></span>  {{ $job->company->name }} 
+                                <h5 style="font-size: 16px" ><span class="lnr lnr-apartment"></span>  {{ $job->company->name }}
                             </div>
                             <div class="col-md-auto" >
                                 <h5 style="font-size: 16px"> <span class="lnr lnr-database"></span> {{ $job->salary }}</h5>
                             </div>
                         </div>
-                    </div>    
+                    </div>
                 </div>
-                <hr/>
+                <hr class="d-flex flex-row"/>
                 <div class="row" >
                     <div class="col-md-auto " >
-                        <h5 style="font-size: 16px" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }} 
+                        <h5 style="font-size: 16px" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }}
                     </div>
                     <div class="col-md-auto" >
                         <h5 style="font-size: 16px"> <span class="lnr lnr-map"></span> {{ $job->address }}</h5>

@@ -653,6 +653,7 @@ th {
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  display: flex;
 }
 
 .flex-left {
@@ -1933,7 +1934,7 @@ h6 {
 --------------------------------------------------------------*/
 #header {
   background: rgba(20, 40, 85, 0.8);
-  padding: 14spx 0;
+  padding: 10000spx 0;
   position: relative;
   left: 0;
   top: 0;
@@ -2380,8 +2381,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-area {
+<<<<<<< HEAD
   background-color: #ccdcef;
   /* background: url(../img/header-bg.jpg) center; */
+=======
+  background-color:#ccdcef ;
+  height: 175px;
+  /* margin-bottom: 1%; */
+  background: url(../img/bg.png) center;
+>>>>>>> e21848adb90f68a86a07da480151f983e9bc5a3b
   background-size: cover;
 }
 
@@ -2447,13 +2455,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .form-wrap {
   border-radius: 20px;
-  background-color: #feb36ca1;
+  background-color: #fff;
   /* border: 3px solid #fe7b54; */
   padding: 20px 0;
   margin: 40px 0;
   width: 70%;
+  /* margin- top: 13%; */
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 2px 2px 5px rgba(0.15, 0.15, 0.15, 0.15);
 }
 hr {
   display: block;
@@ -2462,7 +2473,11 @@ hr {
   border-top: 1px solid #ccc;
   padding: 0;
 
+<<<<<<< HEAD
   width: 500px;
+=======
+  /* width: 500px; */
+>>>>>>> e21848adb90f68a86a07da480151f983e9bc5a3b
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -2759,7 +2774,12 @@ hr {
   background-color: #ffffff;
   margin-bottom: 30px;
   border-radius: 20px;
+<<<<<<< HEAD
   box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
+=======
+  width: auto;
+  box-shadow: 3px 3px 3px 3px rgba(0.15,0.15,0.15,0.15);
+>>>>>>> e21848adb90f68a86a07da480151f983e9bc5a3b
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -2938,10 +2958,13 @@ hr {
 }
 
 .sidebar .single-slidebar {
-  background-color: #ececff;
+  background-color: #ffffff;
   padding: 30px 20px;
   margin-bottom: 30px;
   border-radius: 20px;
+  box-shadow: 3px 3px 3px 3px rgba(0.15,0.15,0.15,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+
 }
 
 .sidebar .single-slidebar h4 {
