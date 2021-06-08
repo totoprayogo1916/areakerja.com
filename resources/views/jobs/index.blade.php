@@ -7,7 +7,7 @@
     @foreach($jobs as $job)
         <a href="{{ route('jobs.show', $job->id) }}">
             <div data-aos="fade-up" class="single-post align-items-center d-flex flex-row">
-                <div class="thumb" style="margin: auto">
+                <div class="thumb" style="margin-top: auto;margin-bottom: auto">
                     @if($job->company->gambar)
                         <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="width: 150px; height: 120px;">
                     @endif
