@@ -2401,7 +2401,7 @@ hr {
   border: 0;
   border-top: 1px solid #ccc;
   padding: 0;
-  
+
   width: 500px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -2881,10 +2881,13 @@ hr {
 }
 
 .sidebar .single-slidebar {
-  background-color: #ececff;
+  background-color: #ffffff;
   padding: 30px 20px;
   margin-bottom: 30px;
   border-radius: 20px;
+  box-shadow: 3px 3px 3px 3px rgba(0.15,0.15,0.15,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+
 }
 
 .sidebar .single-slidebar h4 {
