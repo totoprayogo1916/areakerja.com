@@ -2458,10 +2458,11 @@ hr {
 
 
 .form-pasang{
-  color: #fff;
+  color: #d3ab60;
+  font-size: 14px;
   /* opacity: .40; */
-  background-color: #fe7c54b4;
-  border: 2px solid #fe7c54;
+  background-color: #fe7c5400;
+  border: 1px solid #fe7c54;
 }
 
 .form-pasang2{
@@ -2469,7 +2470,8 @@ hr {
   /* opacity: .40; */
   background-color: #fe7c5400;
   border: 2px solid #fe7c5400;
-  margin-top: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 .form-pasang:hover {
   color: #fff;

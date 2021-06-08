@@ -12,7 +12,7 @@
                         <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="width: 150px; height: 120px;">
                     @endif
                 </div>
-                <div class="details" style="width: 100%">
+                <div class="details " style="width: 100%">
                     <div class="title d-flex flex-row justify-content-between"  >
                         <div class="titles">
                             <h3  style="font-size: 19px; color: #b19ea8">Dibutuhkan</h3>
@@ -27,7 +27,7 @@
                             </div>
                         </div>    
                     </div>
-                    <hr/>
+                    <hr class="d-flex flex-row"/>
                     <div class="row" >
                         <div class="col-md-auto " >
                             <h5 style="font-size: 16px" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }} 
