@@ -2233,6 +2233,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-image: -ms-linear-gradient(0deg, #ffe2ac 0%, #ffb273 100%);
 }
 
+.cat-list-center li:hover {
+    background-image: -moz-linear-gradient(0deg, #ffe2ac 0%, #ffb273 100%);
+    background-image: -webkit-linear-gradient(0deg, #ffe2ac 0%, #ffb273 100%);
+    background-image: -ms-linear-gradient(0deg, #ffe2ac 0%, #ffb273 100%);
+    box-shadow: 0px 5px 5px rgba(0.15, 0.15, 0.15, 0.15);
+  }
+
 .p1-gradient-color, .feat-txt h1 {
   background: -moz-linear-gradient(0deg, #bfacff 0%, #795fff 100%);
   background: -webkit-linear-gradient(0deg, #bfacff 0%, #795fff 100%);
@@ -2384,10 +2391,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   /* border: 3px solid #fe7b54; */
   padding: 20px 0;
   margin: 40px 0;
-  width: 50%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
+
 
 
 /* .banner-content .form-wrap {
@@ -2617,6 +2625,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 20px;
 }
 
+.cat-list-center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
 .post-list .cat-list li {
   text-align: center;
   margin-right: 10px;
@@ -2631,6 +2645,21 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 5px 10px;
 }
 
+
+.cat-list-center li {
+    text-align: center;
+    width: 45%;
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #eee;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    padding: 5px 10px;
+    box-shadow: 0px 5px 5px rgba(0.15, 0.15, 0.15, 0.15);
+  }
+
 .post-list .cat-list li a {
   text-transform: uppercase;
   font-weight: 600;
@@ -2644,6 +2673,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 .post-list .cat-list li:hover a {
   color: #fff;
 }
+
+
+.cat-list-center li:hover a {
+    color: #fff;
+  }
 
 @media (max-width: 414px) {
   .post-list .cat-list {
@@ -2855,6 +2889,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 15px;
 }
 
+.cat-list-center li {
+    background-color: rgb(255, 255, 255);
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    border-radius: 15px;
+  }
+
 .sidebar .single-slidebar .cat-list li:hover a {
   color: rgb(255, 255, 255);
 }
@@ -2863,10 +2906,20 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 0;
 }
 
+.cat-list-center p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
 .sidebar .single-slidebar .cat-list a {
   color: rgb(26, 3, 3);
   padding: 10px;
   margin-bottom: 10px;
+}
+
+
+.cat-list-center a {
+  color: rgb(26, 3, 3);
 }
 
 .sidebar .single-rated img {

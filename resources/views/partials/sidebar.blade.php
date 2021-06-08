@@ -1,5 +1,14 @@
 <div class="col-lg-4 sidebar">
-    <div data-aos="zoom-in-up" class="single-slidebar">
+
+
+    <div data-aos="zoom-in-up" style="height: 5%">
+        <ul class="cat-list-center" style="margin-bottom: 15%">
+            <li><a class="justify-content-between" href="#"><p style="font-weight: bold">Riwayat</p></a></li>
+            <li><a class="justify-content-between" href="#"><p style="font-weight: bold">Tersimpan</p></a></li>
+        </ul>
+    </div>
+
+    <div data-aos="zoom-in-up">
         <h4>Jobs by Location</h4>
         <ul class="cat-list">
             @foreach($sidebarLocations as $location)
