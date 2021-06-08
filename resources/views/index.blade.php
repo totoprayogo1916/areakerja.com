@@ -59,6 +59,38 @@
 </section>
 @endsection
 
+@section('slick')
+<div class="for_slick_slider multiple-items">
+<div class="items">
+      <img src="http://placehold.it/350x300?text=1">
+    </div>
+    <div class="items">
+      <img src="http://placehold.it/350x300?text=2">
+    </div>
+    <div class="items">
+      <img src="http://placehold.it/350x300?text=3">
+    </div>
+    <div class="items">
+      <img src="http://placehold.it/350x300?text=4">
+    </div>
+    <div class="items">
+      <img src="http://placehold.it/350x300?text=5">
+    </div>
+    <div class="items">
+      <img src="http://placehold.it/350x300?text=6">
+    </div>
+    <div class="items">
+      <img src="http://placehold.it/350x300?text=7">
+    </div>
+    <div class="items">
+      <img src="http://placehold.it/350x300?text=8">
+    </div>
+    <div class="items">
+      <img src="http://placehold.it/350x300?text=9">
+    </div>
+    </div>
+@endsection
+
 @section('content')
 <div class="col-lg-8 post-list" style="margin-top: 5%">
     @foreach($jobs as $job)

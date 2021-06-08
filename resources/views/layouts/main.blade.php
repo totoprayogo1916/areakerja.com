@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style2.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
     <body>
     @include('partials.header')
@@ -25,11 +27,14 @@
         @include('partials.banner')
 
         @yield('home')
+        
 
         <!-- Start post Area -->
         <section class="post-area section-gap">
             <div class="container">
+            @yield('slick')
                 <div class="row justify-content-center d-flex">
+                    
                     @yield('content')
                     @include('partials.sidebar')
                 </div>
@@ -56,6 +61,8 @@
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('js/app2.js') }}"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="{{ asset('js/slick.min.js') }}"></script>
+        <script src="{{ asset('js/custom.js') }}"></script>
         <script>
             AOS.init();
         </script>
