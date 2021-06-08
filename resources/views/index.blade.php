@@ -4,13 +4,16 @@
 <section class="relative" id="home">
     <div class="banner-area">
 
-        <div class="row d-flex align-items-center justify-content-center">
+        <div class="row align-items-center justify-content-center">
             <div class="banner-content col-lg-12">
                 <h1 style="color: #fe7b54">
                     Tempat Mencari Kerja
                 </h1>
-                 <form action="#" class="serach-form-area mb-100" >
-                    <div class="row justify-content-center form-wrap">
+                <h6 style="color: #fe7b54">
+                Temukan loker Jogja terbaru bulan Juni 2021 dengan mudah. 
+                </h6>
+                 <form action="#" class="serach-form-area flex-wrap" >
+                    <div class="row form-wrap">
                         <div class="col-lg-4 form-cols">
                             <input type="text" class="form-control" placeholder="What are you looking for?">
                         </div>
@@ -41,9 +44,9 @@
                         </div>
                     </div>
                 </form>
-                <p  style="color: rgb(116, 116, 116)"   >Cari sesuai kategori:
+                <p  style="color: #fe7b54"   >Cari sesuai kategori:
                @foreach($searchByCategory as $id=>$searchByCategory)
-                    <a href="#"  style="color: rgb(116, 116, 116)">{{ $searchByCategory }}</a>@if (!$loop->last),@endif
+                    <a href="#"  style="color: #fe7b54">{{ $searchByCategory }}</a>@if (!$loop->last),@endif
                 @endforeach
                 </p>
             </div>

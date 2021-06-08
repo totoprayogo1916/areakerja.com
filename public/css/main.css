@@ -630,6 +630,7 @@ td, th {
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  display: flex;
 }
 
 .flex-left {
@@ -2314,7 +2315,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .banner-area {
   background-color:#ccdcef ;
-  /* background: url(../img/header-bg.jpg) center; */
+  height: 175px;
+  /* margin-bottom: 1%; */
+  /* background: url(../img/header-bg5.png) center; */
   background-size: cover;
 }
 
@@ -2384,7 +2387,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   /* border: 3px solid #fe7b54; */
   padding: 20px 0;
   margin: 40px 0;
-  width: 50%;
+  width: 70%;
+  /* margin-top: 13%; */
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
