@@ -6,7 +6,7 @@
 
         <div class="row d-flex align-items-center justify-content-center">
             <div class="banner-content col-lg-12">
-                <h1 style="color: rgb(116, 116, 116)">
+                <h1 style="color: #fe7b54">
                     Tempat Mencari Kerja
                 </h1>
                  <form action="#" class="serach-form-area mb-100" >
