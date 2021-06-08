@@ -61,34 +61,14 @@
 
 @section('slick')
 <div class="for_slick_slider multiple-items">
-<div class="items">
-      <img src="http://placehold.it/350x300?text=1">
-    </div>
-    <div class="items">
-      <img src="http://placehold.it/350x300?text=2">
-    </div>
-    <div class="items">
-      <img src="http://placehold.it/350x300?text=3">
-    </div>
-    <div class="items">
-      <img src="http://placehold.it/350x300?text=4">
-    </div>
-    <div class="items">
-      <img src="http://placehold.it/350x300?text=5">
-    </div>
-    <div class="items">
-      <img src="http://placehold.it/350x300?text=6">
-    </div>
-    <div class="items">
-      <img src="http://placehold.it/350x300?text=7">
-    </div>
-    <div class="items">
-      <img src="http://placehold.it/350x300?text=8">
-    </div>
-    <div class="items">
-      <img src="http://placehold.it/350x300?text=9">
-    </div>
-    </div>
+    @foreach($sidbarJobs as $job)
+        <div class="items" style="background: #00ff4c">
+            @if($job->company->gambar)
+                <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="width: 150px; height: 120px;">
+            @endif
+        </div>
+    @endforeach
+</div>
 @endsection
 
 @section('content')
