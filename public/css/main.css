@@ -2324,7 +2324,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color:#ccdcef ;
   height: 175px;
   /* margin-bottom: 1%; */
-  /* background: url(../img/header-bg5.png) center; */
+  background: url(../img/bg.png) center;
   background-size: cover;
 }
 
@@ -2390,7 +2390,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .form-wrap{
   border-radius: 20px;
-  background-color: #feb36ca1;
+  background-color: #fff;
   /* border: 3px solid #fe7b54; */
   padding: 20px 0;
   margin: 40px 0;
@@ -2399,6 +2399,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 2px 2px 5px rgba(0.15, 0.15, 0.15, 0.15);
 }
 hr {
   display: block;

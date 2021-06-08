@@ -6,11 +6,11 @@
 
         <div class="row align-items-center justify-content-center">
             <div class="banner-content col-lg-12">
-                <h1 style="color: #fe7b54">
+                <h1 style="color: #fe7b54; text-shadow: 2px 2px 3px #353535b0;">
                     Tempat Mencari Kerja
                 </h1>
-                <h6 style="color: #fe7b54">
-                Temukan loker Jogja terbaru bulan Juni 2021 dengan mudah. 
+                <h6 style="color: #fe7b54; text-shadow: 1px 1px 2px #353535b0;">
+                Temukan loker Jogja terbaru bulan Juni 2021 dengan mudah.
                 </h6>
                  <form action="#" class="serach-form-area flex-wrap" >
                     <div class="row form-wrap">
@@ -72,18 +72,18 @@
                         <h3 style="margin-top: 10px">{{ $job->title }}</h3>
                         <div class="row" style="margin-top: 14px">
                             <div class="col-md-auto " >
-                                <h5 style="font-size: 16px" ><span class="lnr lnr-apartment"></span>  {{ $job->company->name }} 
+                                <h5 style="font-size: 16px" ><span class="lnr lnr-apartment"></span>  {{ $job->company->name }}
                             </div>
                             <div class="col-md-auto" >
                                 <h5 style="font-size: 16px"> <span class="lnr lnr-database"></span> {{ $job->salary }}</h5>
                             </div>
                         </div>
-                    </div>    
+                    </div>
                 </div>
                 <hr/>
                 <div class="row" >
                     <div class="col-md-auto " >
-                        <h5 style="font-size: 16px" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }} 
+                        <h5 style="font-size: 16px" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }}
                     </div>
                     <div class="col-md-auto" >
                         <h5 style="font-size: 16px"> <span class="lnr lnr-map"></span> {{ $job->address }}</h5>
