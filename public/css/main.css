@@ -2779,12 +2779,12 @@ hr {
   margin-bottom: 30px;
   border-radius: 20px;
   box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
-  transition: box-shadow 0.3s ease-in-out;
+  
 }
 
 .post-list:hover .single-post:hover {
   box-shadow: 0 10px 10px rgba(0.15, 0.15, 0.15, 0.15);
-  transition: box-shadow 0.3s ease-in-out;
+  
 }
 
 .post-list .single-post h6 {
@@ -2917,7 +2917,7 @@ hr {
 
 .loadmore-btn:hover {
   box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
+  
 }
 
 .sidebar .owl-carousel .owl-item img {
@@ -2962,7 +2962,7 @@ hr {
   margin-bottom: 30px;
   border-radius: 20px;
   box-shadow: 3px 3px 3px 3px rgba(0.15,0.15,0.15,0.15);
-  transition: box-shadow 0.3s ease-in-out;
+  
 
 }
 
