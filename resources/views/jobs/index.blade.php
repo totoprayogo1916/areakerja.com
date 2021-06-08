@@ -7,23 +7,35 @@
     @foreach($jobs as $job)
         <a href="{{ route('jobs.show', $job->id) }}">
             <div data-aos="fade-up" class="single-post align-items-center d-flex flex-row">
-                <div class="thumb">
+                <div class="thumb" style="margin: auto">
                     @if($job->company->gambar)
-                        <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="width: 250px; height: 200px;">
+                        <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="width: 150px; height: 120px;">
                     @endif
                 </div>
                 <div class="details">
-                    <div class="title d-flex flex-row justify-content-between">
+                    <div class="title d-flex flex-row justify-content-between"  >
                         <div class="titles">
-                            <h4>{{ $job->title }}</h4>
-                            <h6 style="margin-top: 12px;" ><span class="lnr lnr-apartment"></span>  {{ $job->company->name }}</h6>	                    </div>
+                            <h3  style="font-size: 19px; color: #b19ea8">Dibutuhkan</h3>
+                            <h3 style="margin-top: 10px">{{ $job->title }}</h3>
+                            <div class="row" style="margin-top: 14px">
+                                <div class="col-md-auto " >
+                                    <h5 style="font-size: 16px" ><span class="lnr lnr-apartment"></span>  {{ $job->company->name }} 
+                                </div>
+                                <div class="col-md-auto" >
+                                    <h5 style="font-size: 16px"> <span class="lnr lnr-database"></span> {{ $job->salary }}</h5>
+                                </div>
+                            </div>
+                        </div>    
                     </div>
-                    <h6 style="margin-top: 0px; text-align: justify">
-                        {{ $job->short_description }}
-                    </h6>
-                    <h6>Job Nature: {{ $job->job_nature }}</h6>
-                    <p class="address"><span class="lnr lnr-map"></span> {{ $job->address }}</p>
-                    <p class="address" style="margin-bottom: 0px;" ><span class="lnr lnr-database"></span> {{ $job->salary }}</p>
+                    <hr/>
+                    <div class="row" >
+                        <div class="col-md-auto " >
+                            <h5 style="font-size: 16px" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }} 
+                        </div>
+                        <div class="col-md-auto" >
+                            <h5 style="font-size: 16px"> <span class="lnr lnr-map"></span> {{ $job->address }}</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </a>

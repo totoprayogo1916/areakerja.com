@@ -1885,7 +1885,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #header {
   background: rgba(20, 40, 85, 0.8);
-  padding: 14spx 0;
+  padding: 10000spx 0;
   position: relative;
   left: 0;
   top: 0;
@@ -2395,11 +2395,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 20px 0;
   margin: 40px 0;
   width: 70%;
-<<<<<<< HEAD
-  /* margin-top: 13%; */
+  /* margin- top: 13%; */
   text-align: center;
-=======
->>>>>>> 11e1208de43153d3f6e099723ef92f2601eef250
   margin-left: auto;
   margin-right: auto;
 }
