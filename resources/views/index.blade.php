@@ -100,7 +100,7 @@
                         </div>
                     </div>
                 </div>
-                <hr class="d-flex flex-row" style="width: 100%"/>
+                <hr class="d-flex flex-row" style="width: 100%; margin-left: -0.5%"/>
                 <div class="row" >
                     <div class="col-md-auto " >
                         <h5 style="font-size: 16px" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }}
