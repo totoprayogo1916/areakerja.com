@@ -1,15 +1,16 @@
-@extends('layouts.main')
+@extends('layouts.pasang')
 
-@section('jobss')
+@section('home')
 <section class="relative" id="home">
     <div class="banner-area">
+
         <div class="row align-items-center justify-content-center" style="margin-right: 15px; margin-left: 15px">
             <div class="banner-content col-lg-12">
                 <h1 style="color: #fe7b54; text-shadow: 2px 2px 3px #353535b0;">
-                    Tempat Mencari Kerja
+                    Form Order
                 </h1>
                 <h6 style="color: #fe7b54; text-shadow: 1px 1px 2px #353535b0;">
-                Temukan loker Jogja terbaru bulan Juni 2021 dengan mudah.
+                Tambah Lowongan Dari Perusahaan Anda Dengan Mudah
                 </h6>
                  <form action="#" class="serach-form-area flex-wrap" style="width: 100%">
                     <div class="col form-wrap-main" id="form-luar">
@@ -47,7 +48,6 @@
                         </div>
                     </div>
                 </form>
-                <h3>Rekomendasi Lowongan</h3>
             </div>
         </div>
     </div>
@@ -56,7 +56,7 @@
 
 @section('slick')
 <div class="for_slick_slider multiple-items" id="slick">
-    @foreach($sidbarJobs as $job)
+    @foreach($sidebarJobs as $job)
         <div class="items"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
         <a href="{{ route('jobs.show', $job->id) }}">
             <h5 style="color: #b19ea8; margin-left: 5%; margin-top: 5%;">Dibutuhkan</h5>
@@ -69,7 +69,7 @@
             <h5 style="font-size: 16px;margin-left: 5%" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }}</h5>
             <hr/>
             <h5 style="font-size: 16px;margin-left: 5%;margin-bottom: 5%;"> <span class="lnr lnr-map"></span> {{ $job->address }}</h5>
-</a>
+</a>    
         </div>
     @endforeach
 </div>
@@ -113,5 +113,7 @@
         </div>
     </a>
     @endforeach
+
+    <a class="text-uppercase loadmore-btn mx-auto d-block" href="{{ route('jobs.index') }}">Load More Job Posts</a>
 </div>
 @endsection

@@ -15,8 +15,8 @@
                 <div class="titles">
                     <a href="#"><h4>{{ $job->title }}</h4></a>
                     @if($job->company)
-                        <h6><span class="lnr lnr-apartment"></span> {{ $job->company->name }}</h6>		
-                    @endif			
+                        <h6><span class="lnr lnr-apartment"></span> {{ $job->company->name }}</h6>
+                    @endif
                 </div>
             </div>
             <p>
@@ -26,7 +26,7 @@
             <p class="address"><span class="lnr lnr-map"></span> {{ $job->address }}</p>
             <p class="address"><span class="lnr lnr-database"></span> {{ $job->salary }}</p>
         </div>
-    </div>	
+    </div>
     <div class="single-post job-details">
         <h4 class="single-title">Whom we are looking for</h4>
         <p>
@@ -38,6 +38,6 @@
         <p>
             {{ $job->requirements }}
         </p>
-    </div>													
+    </div>
 </div>
 @endsection
