@@ -28,13 +28,7 @@
 
 
         <!-- Start post Area -->
-        <section class="post-area section-gap wrapper">
-            <div class="container" style="height: 370px;">
-                @yield('slick')
-                <div class="row justify-content-center d-flex">
-                    {{-- @yield('content') --}}
-                </div>
-            </div>
+        <section class="section-gap" style="padding: 16%">
         </section>
         <!-- End post Area -->
 
