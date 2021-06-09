@@ -27,8 +27,10 @@ class JobController extends Controller
     public function show(Job $job)
     {
         $job->load('company');
+        $searchLocations = Location::pluck('name', 'id');
+        $searchCategories = Category::pluck('name', 'id');
 
-        return view('jobs.show', compact('job'));
+        return view('jobs.show', compact(['job', 'searchLocations', 'searchCategories']));
     }
 
     public function pasang()
