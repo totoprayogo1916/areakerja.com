@@ -13,9 +13,15 @@ class JobController extends Controller
         $jobs = Job::with('company')
             ->paginate(7);
 
+        $searchLocations = Location::pluck('name', 'id');
+        $searchCategories = Category::pluck('name', 'id');
+        $sidbarJobs = Job::whereTopRated(true)
+        ->orderBy('id', 'desc')
+        ->get();
+
         $banner = 'Jobs';
 
-        return view('jobs.index', compact(['jobs', 'banner']));
+        return view('jobs.index', compact(['jobs', 'banner', 'searchLocations', 'searchCategories', 'sidbarJobs']));
     }
 
     public function show(Job $job)
@@ -41,9 +47,9 @@ class JobController extends Controller
         ->orderBy('id', 'desc')
         ->take(5)
         ->get();
-        
+
         $sidebarLocations = Location::withCount('jobs')->whereHas('jobs')->orderBy('jobs_count', 'desc')->get();
-        
+
         $sidebarCategories= Category::withCount('jobs')->whereHas('jobs')->orderBy('jobs_count', 'desc')->get();
 
         return view('jobs.pasang', compact(['searchLocations', 'searchCategories', 'searchByCategory', 'jobs', 'sidebarJobs','sidebarLocations','sidebarCategories']));
