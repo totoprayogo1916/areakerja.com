@@ -2283,11 +2283,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .p1-gradient-bg,
-.banner-area .overlay-bg {
+/* .banner-area .overlay-bg {
   background-image: -moz-linear-gradient(0deg, #ffe2ac 0%, #000000 100%);
   background-image: -webkit-linear-gradient(0deg, #ffe2ac 0%, #ffffff 100%);
   background-image: -ms-linear-gradient(0deg, #ffe2ac 0%, #dad6ee 100%);
-}
+} */
 
 .p1-gradient-bg,
 .sidebar .single-slidebar .cat-list li:hover,
@@ -2544,6 +2544,14 @@ hr {
   /* opacity: .40; */
   background-color: #fe7c5400;
   border: 2px solid #eb5e0b;
+}
+
+.form-pasang3 {
+  background-color: #ffffff;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  width: 120px;
+  box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
 }
 
 .form-pasang2 {
