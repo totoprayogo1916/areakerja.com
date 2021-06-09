@@ -28,19 +28,25 @@
 
         @yield('home')
         
-
+        
         <!-- Start post Area -->
         <section class="post-area section-gap">
             
             <div class="container">
                 <div class="row justify-content-center d-flex">
                     <!-- @include('partials.sidebar') -->
+                    
                 </div>
             </div>
         </section>
         <!-- End post Area -->
 
+        <div style="margin-top: 300px;">
+
         @include('partials.footer')
+
+        </div>
+        
 
         <script src="{{ asset('js/vendor/jquery-2.2.4.min.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
