@@ -2478,9 +2478,11 @@ hr {
   border-top: 1px solid #ccc;
   padding: 0;
 
-  width: 500px;
+  /* width: 100%; */
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 /* .banner-content .form-wrap {

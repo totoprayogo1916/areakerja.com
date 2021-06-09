@@ -31,8 +31,9 @@
 
         <!-- Start post Area -->
         <section class="post-area section-gap">
+            
             <div class="container">
-            @yield('slick')
+                @yield('slick')
                 <div class="row justify-content-center d-flex">
                     
                     @yield('content')
