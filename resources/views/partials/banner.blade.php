@@ -1,13 +1,16 @@
 @hasSection ('banner')
-    <section class="banner-area relative" id="home">
-        <div class="overlay overlay-bg"></div>
-        <div class="container">
+    <section class="banner-area relative" id="home" >
+        <div class="overlay overlay-bg container" >
+            <h4 style="color: #000000; margin-top: 2.5% ">
+                Areakerja.com > {{ $job->address }} > Lowongan {{ $job->title }} di {{ $job->company->name }}
+                </h4>
+        </div>
+        <div class="container" >
             <div class="row d-flex align-items-center justify-content-center">
+                
                 <div class="about-content col-lg-12">
-                    <div class="banner-content col-lg-12">
-
-
-                        <form action="#" class="serach-form-area flex-wrap" style="width: 100%; margin-top: -8%; margin-left: auto; margin-right: auto">
+                    <div class="banner-content align-items-center col-lg-12">
+                        <form action="#" class="serach-form-area flex-wrap" style="width: auto; margin-top: -10%; margin-left: auto; margin-right: auto">
                            <div class="col form-wrap-main" id="form-luar">
                                <div class="row form-wrap justify-content-center" id="form-dalam">
                                    <div class="col-lg-3 form-cols">
