@@ -27,15 +27,17 @@
         @include('partials.banner')
 
         @yield('home')
-        
+
+        @yield('jobss')
+
 
         <!-- Start post Area -->
         <section class="post-area section-gap">
-            
+
             <div class="container">
                 @yield('slick')
                 <div class="row justify-content-center d-flex">
-                    
+
                     @yield('content')
                     @include('partials.sidebar')
                 </div>

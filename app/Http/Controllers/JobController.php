@@ -16,9 +16,13 @@ class JobController extends Controller
         $jobs = Job::with('company')
             ->paginate(7);
 
+        $sidbarJobs = Job::whereTopRated(true)
+        ->orderBy('id', 'desc')
+        ->get();
+
         $banner = 'Jobs';
 
-        return view('jobs.index', compact(['jobs', 'banner','searchLocations','searchCategories']));
+        return view('jobs.index', compact(['jobs', 'banner','searchLocations','searchCategories','sidbarJobs']));
     }
 
     public function show(Job $job)
