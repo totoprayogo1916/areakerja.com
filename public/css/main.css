@@ -2543,7 +2543,7 @@ hr {
   font-size: 14px;
   /* opacity: .40; */
   background-color: #fe7c5400;
-  border: 1px solid #fe7c54;
+  border: 2px solid #eb5e0b;
 }
 
 .form-pasang2 {
@@ -2556,8 +2556,8 @@ hr {
 }
 .form-pasang:hover {
   color: #fff;
-  background-color: #fe7b54;
-  border-color: #fe7b54;
+  background-color: #eb5e0b;
+  border-color: #eb5e0b;
 }
 
 .primary-btn {
