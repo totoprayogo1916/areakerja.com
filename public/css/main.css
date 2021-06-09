@@ -1933,7 +1933,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: rgba(20, 40, 85, 0.8);
+  background: #fe7b54;;
   padding: 10000spx 0;
   position: relative;
   left: 0;
@@ -1944,7 +1944,7 @@ h6 {
 }
 
 #header.header-scrolled {
-  background: rgba(20, 40, 85, 0.8);
+  background: #feb26c;
   transition: all 0.5s;
 }
 
@@ -2529,7 +2529,7 @@ hr {
 }
 
 .form-pasang {
-  color: #d3ab60;
+  color: #fee5ba;
   font-size: 14px;
   /* opacity: .40; */
   background-color: #fe7c5400;
@@ -2905,7 +2905,7 @@ hr {
 
 .post-list .loadmore-btn {
   text-align: center;
-  background-color: #fe7b26;
+  background-color: #fe7b54;
   color: #fff;
   padding: 8px 15px;
   margin-top: 60px;
@@ -3325,7 +3325,7 @@ hr {
 
 .footer-area {
   padding: 30px 90px 20px;
-  background: rgba(20, 40, 85, 0.8);
+  background: #fe7b54;
 }
 
 .footer-area .footer-nav li {
