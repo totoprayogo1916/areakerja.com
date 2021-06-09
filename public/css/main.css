@@ -597,6 +597,16 @@ th {
   color: #000;
 }
 
+.text-orange {
+  color: #fee5ba;
+}
+
+.text-orange:hover {
+  color: #fff;
+  background-color: #fe7b54;
+  border-color: #fe7b54;
+}
+
 .transition {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -1933,7 +1943,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #fe7b54;;
+  background: #fe7b54;
   padding: 10000spx 0;
   position: relative;
   left: 0;
