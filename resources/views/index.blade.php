@@ -48,11 +48,7 @@
                         </div>
                     </div>
                 </form>
-                <p  style="color: #fe7b54"   >Cari sesuai kategori:
-               @foreach($searchByCategory as $id=>$searchByCategory)
-                    <a href="#"  style="color: #fe7b54">{{ $searchByCategory }}</a>@if (!$loop->last),@endif
-                @endforeach
-                </p>
+                <h3>Rekomendasi Lowongan</h3>
             </div>
         </div>
     </div>
@@ -64,7 +60,7 @@
     @foreach($sidbarJobs as $job)
         <div class="items" style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
             <h5 style="color: #b19ea8; margin-left: 5%; margin-top: 5%;">Dibutuhkan</h5>
-            <h4 style="color: #2b2b2b ; margin-left: 5%; margin-right: 5%; overflow: hidden; white-space: nowrap;">{{ $job->title }}</h4>
+            <h4 style="color: #2b2b2b ; margin-left: 5%; margin-right: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));">{{ $job->title }}</h4>
             @if($job->company->gambar)
                 <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="width: 150px; height: 120px; margin-left: auto; margin-right: auto;margin-top: 10px">
             @endif
