@@ -9,8 +9,15 @@
             <div class="row d-flex align-items-center justify-content-center">
                 
                 <div class="about-content col-lg-12">
+<<<<<<< HEAD
                     <div class="banner-content align-items-center col-lg-12">
                         <form action="#" class="serach-form-area flex-wrap" style="width: auto; margin-top: -10%; margin-left: auto; margin-right: auto">
+=======
+                    <div class="banner-content col-lg-12">
+
+
+                        <form action="#" class="serach-form-area flex-wrap" style="width: 130%; margin-top: -8%; margin-left: %; margin-right: %">
+>>>>>>> 0b7b087f3dfa146cd39aeb98670df0a89aa536f8
                            <div class="col form-wrap-main" id="form-luar">
                                <div class="row form-wrap justify-content-center" id="form-dalam">
                                    <div class="col-lg-3 form-cols">

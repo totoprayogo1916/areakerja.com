@@ -39,4 +39,9 @@ class HomeController extends Controller
 
         return view('jobs.index', compact(['jobs', 'banner']));
     }
+
+    public function aboutus()
+    {
+        return view('user.aboutus');
+    }
 }

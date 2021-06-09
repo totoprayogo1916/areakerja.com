@@ -14,7 +14,7 @@
         <span class="fa fa-map-marker mr-1"></span> Kota Lainnya
       </a>
       
-      <a type="button" class="btn form-pasang" href="{{ route('login') }}">
+      <a type="button" class="btn form-pasang" href="{{ route('pasang') }}">
         <span class="lnr lnr-file-add"></span> Pasang Lowongan
       </a>
 
