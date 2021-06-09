@@ -12,9 +12,9 @@
                 <h6 style="color: #fe7b54; text-shadow: 1px 1px 2px #353535b0;">
                 Temukan loker Jogja terbaru bulan Juni 2021 dengan mudah.
                 </h6>
-                 <form action="#" class="serach-form-area flex-wrap" >
-                    <div class="col form-wrap-main">
-                        <div class="row form-wrap justify-content-center">
+                 <form action="#" class="serach-form-area flex-wrap" style="width: 100%">
+                    <div class="col form-wrap-main" id="form-luar">
+                        <div class="row form-wrap justify-content-center" id="form-dalam">
                             <div class="col-lg-3 form-cols">
                                 <input type="text" class="form-control" placeholder="Cari Disini..">
                             </div>
@@ -60,7 +60,7 @@
 @endsection
 
 @section('slick')
-<div class="for_slick_slider multiple-items">
+<div class="for_slick_slider multiple-items" id="slick">
     @foreach($sidbarJobs as $job)
         <div class="items" style="background: #ffffff; border-radius: 15px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
             <h5 style="color: #b19ea8; margin-left: 5%; margin-top: 5%;">Dibutuhkan</h5>
@@ -76,10 +76,10 @@
 @endsection
 
 @section('content')
-<div class="col-lg-8 post-list" style="margin-top: 5%">
+<div class="col-lg-8 post-list" style="margin-top: 5%" id="main-content">
     @foreach($jobs as $job)
     <a href="{{ route('jobs.show', $job->id) }}">
-        <div data-aos="fade-up" class="single-post align-items-center d-flex flex-row">
+        <div data-aos="fade-up" class="single-post align-items-center d-flex flex-row" style="width: 100%">
             <div class="thumb" style="margin-top: auto;margin-bottom: auto">
                 @if($job->company->gambar)
                     <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="width: 150px; height: 120px;">
@@ -100,7 +100,7 @@
                         </div>
                     </div>
                 </div>
-                <hr class="d-flex flex-row"/>
+                <hr class="d-flex flex-row" style="width: 100%; margin-left: -0.5%"/>
                 <div class="row" >
                     <div class="col-md-auto " >
                         <h5 style="font-size: 16px" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }}

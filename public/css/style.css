@@ -60,24 +60,26 @@
   margin-top: 150px;
 }
 
-.slick-prev:before, 
+.slick-prev:before,
 .slick-next:before {
     font-size: 40px;
-    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    /* text-shadow: 0 0 10px rgba(0,0,0,0.5); */
 }
 
 .prev{
   display: block;
   border: none;
   height: 50px;
-  width: 145px;
+  width: 210px;
+  cursor: pointer;
   background: url('../img/kiri.png') no-repeat;
 }
 
 .next{
   display: block;
   border: none;
+  cursor: pointer;
   height: 50px;
-  width: 170px;
+  width: 210px;
   background: url('../img/kanan.png') no-repeat;
 }
