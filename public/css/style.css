@@ -31,12 +31,16 @@
 
 .for_slick_slider .items {
   width: 350px;
-  height: 250px;
-  margin: 50px;
+  height: 280px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-left: 12px;
+  margin-right: 13px;
+  /* margin: 50px; */
 }
 
 .for_slick_slider .items img {
-  width: 350;
+  width: 350px;
   height: 250px;
 }
 
@@ -66,7 +70,7 @@
   display: block;
   border: none;
   height: 50px;
-  width: 175px;
+  width: 145px;
   background: url('../img/kiri.png') no-repeat;
 }
 
@@ -74,6 +78,6 @@
   display: block;
   border: none;
   height: 50px;
-  width: 175px;
+  width: 170px;
   background: url('../img/kanan.png') no-repeat;
 }
