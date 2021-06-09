@@ -8,11 +8,17 @@
                 <div action="#" class="serach-form-area flex-wrap" style="width: 100%">
                     <div class="col form-wrap-main" id="form-luar">
                         <h1>Tentang Kami</h1>
-                        <p style="font-size: 12pt; font-style: bold; margin: 5%; text-align: left; line-height: 120%">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id aliquet. Eu tincidunt tortor aliquam nulla. Orci phasellus egestas tellus rutrum tellus. Id aliquet risus feugiat in. Eleifend quam adipiscing vitae proin. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet non. Morbi non arcu risus quis varius quam quisque id diam. Iaculis eu non diam phasellus vestibulum lorem sed risus. Aliquet risus feugiat in ante metus dictum. Magna ac placerat vestibulum lectus mauris. Nunc sed augue lacus viverra vitae congue eu consequat ac. Etiam non quam lacus suspendisse. Ultrices eros in cursus turpis massa.
+                        <p style="font-size: 11pt; font-style: bold; margin: 5%; text-align: left; line-height: 120%">
+                            Areakerja adalah perusahaan berbasis teknologi informasi yang berpusat di Yogyakarta. Perusahaan ini berfokus pada platform untuk mencari lowongan kerja di Daerah Istimewa Yogyakarta (DIY).
                             <br>
                             <br>
-                            Nulla aliquet enim tortor at auctor urna. Commodo nulla facilisi nullam vehicula ipsum a arcu. Sagittis id consectetur purus ut.
+                            DIY sebagai salah satu wilayah prestisius di Indonesia yang menyandang sebagai kota budaya dan pelajar membuat arus ekonomi dan bisnis di wilayah ini cukup besar. Banyak sekali perusahaan besar, menengah, dan kecil yang berdiri di wilayah DIY dan terus mengembangkan bisnisnya. Hal ini menuntut banyak dibukanya lowongan pekerjaan di DIY.
+                            <br>
+                            <br>
+                            Banyaknya arus lowongan pekerjaan di Yogyakarta baik dari perusahaan besar, menengah, dan kecil menuntut diperlukannya sebuah media yang berfokus untuk menampung informasi lowongan pekerjaan yang ada di Yogyakarta.
+                            <br>
+                            <br>
+                            Untuk itu Areakerja hadir sebagai platform untuk membantu perusahaan mendapatkan kandidat terbaiknya, serta membantu para pencari kerja untuk menemukan pekerjaan yang diinginkan di DIY.
                         </p>
                     </div>
                 </div>
