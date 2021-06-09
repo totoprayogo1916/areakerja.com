@@ -3,7 +3,6 @@
 @section('home')
 <section class="relative" id="home">
     <div class="banner-area">
-
         <div class="row align-items-center justify-content-center" style="margin-right: 15px; margin-left: 15px">
             <div class="banner-content col-lg-12">
                 <h1 style="color: #fe7b54; text-shadow: 2px 2px 3px #353535b0;">
@@ -70,7 +69,7 @@
             <h5 style="font-size: 16px;margin-left: 5%" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }}</h5>
             <hr/>
             <h5 style="font-size: 16px;margin-left: 5%;margin-bottom: 5%;"> <span class="lnr lnr-map"></span> {{ $job->address }}</h5>
-</a>    
+</a>
         </div>
     @endforeach
 </div>

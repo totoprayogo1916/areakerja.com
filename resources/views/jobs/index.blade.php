@@ -19,18 +19,18 @@
                             <h3 style="margin-top: 10px">{{ $job->title }}</h3>
                             <div class="row" style="margin-top: 14px">
                                 <div class="col-md-auto " >
-                                    <h5 style="font-size: 16px" ><span class="lnr lnr-apartment"></span>  {{ $job->company->name }} 
+                                    <h5 style="font-size: 16px" ><span class="lnr lnr-apartment"></span>  {{ $job->company->name }}
                                 </div>
                                 <div class="col-md-auto" >
                                     <h5 style="font-size: 16px"> <span class="lnr lnr-database"></span> {{ $job->salary }}</h5>
                                 </div>
                             </div>
-                        </div>    
+                        </div>
                     </div>
                     <hr class="d-flex flex-row"/>
                     <div class="row" >
                         <div class="col-md-auto " >
-                            <h5 style="font-size: 16px" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }} 
+                            <h5 style="font-size: 16px" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }}
                         </div>
                         <div class="col-md-auto" >
                             <h5 style="font-size: 16px"> <span class="lnr lnr-map"></span> {{ $job->address }}</h5>

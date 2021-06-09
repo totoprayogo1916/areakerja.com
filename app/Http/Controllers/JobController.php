@@ -20,8 +20,10 @@ class JobController extends Controller
 
     public function show(Job $job)
     {
+        $searchLocations = Location::pluck('name', 'id');
+        $searchCategories = Category::pluck('name', 'id');
         $job->load('company');
 
-        return view('jobs.show', compact('job'));
+        return view('jobs.show', compact(['job','searchLocations','searchCategories']));
     }
 }
