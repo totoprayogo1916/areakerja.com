@@ -10,12 +10,15 @@ class JobController extends Controller
 {
     public function index()
     {
+
+        $searchLocations = Location::pluck('name', 'id');
+        $searchCategories = Category::pluck('name', 'id');
         $jobs = Job::with('company')
             ->paginate(7);
 
         $banner = 'Jobs';
 
-        return view('jobs.index', compact(['jobs', 'banner']));
+        return view('jobs.index', compact(['jobs', 'banner','searchLocations','searchCategories']));
     }
 
     public function show(Job $job)

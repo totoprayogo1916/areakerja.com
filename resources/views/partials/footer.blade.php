@@ -21,7 +21,7 @@
             </div>
 
             <div>
-                <p class="col-lg-8 footer-text m-0">
+                <p class="col-lg-8 footer-text m-0" style="color: white">
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Copyright &copy;<script>document.write(new Date().getFullYear());</script> Areakerja.com</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -35,7 +35,7 @@
             <div class="footer-social">
                 <h4 class="text-white">Temukan Kami di</h4>
                 <ul class="col row">
-                    
+
                     <li>
                         <a href="{{ route('home') }}"><i class="fa fa-instagram" style="font-size:36px"></i></a>
                     </li>
