@@ -3,6 +3,7 @@
 Route::redirect('/home', '/admin');
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/aboutus', 'HomeController@aboutus')->name('aboutus');
 Route::get('/pasang', 'JobController@pasang')->name('pasang');
 
 Route::get('search', 'HomeController@search')->name('search');

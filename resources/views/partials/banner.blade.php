@@ -7,7 +7,7 @@
                     <div class="banner-content col-lg-12">
 
 
-                        <form action="#" class="serach-form-area flex-wrap" style="width: 100%; margin-top: -8%; margin-left: auto; margin-right: auto">
+                        <form action="#" class="serach-form-area flex-wrap" style="width: 130%; margin-top: -8%; margin-left: %; margin-right: %">
                            <div class="col form-wrap-main" id="form-luar">
                                <div class="row form-wrap justify-content-center" id="form-dalam">
                                    <div class="col-lg-3 form-cols">
