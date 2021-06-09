@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-4">
                     <h4 style="margin-top: 10px; font-weight: normal"><span class="fa fa-graduation-cap"></span><span style="display:inline-block; width: 15px;"></span>Tingkat Pendidikan</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal"><span class="fa fa-american-sign-language-interpreting"></span><span style="display:inline-block; width: 15px;"></span>Gender</h4>
+                    <h4 style="margin-top: 10px; font-weight: normal"><span class="fa fa-venus-mars"></span><span style="display:inline-block; width: 15px;"></span>Gender</h4>
                     <h4 style="margin-top: 10px; font-weight: normal"><span class="fa fa-universal-access"></span><span style="display:inline-block; width: 15px;"></span>Umur</h4>
                     <h4 style="margin-top: 10px; font-weight: normal"><span class="fa fa-user-circle-o"></span><span style="display:inline-block; width: 15px;"></span>Status Kerja</h4>
                     <h4 style="margin-top: 10px; font-weight: normal"><span class="fa fa-money"></span><span style="display:inline-block; width: 15px;"></span>Besaran Gaji</h4>
@@ -61,15 +61,23 @@
                 <div class="col-4">
                     <h4 style="margin-top: 10px; font-weight: normal"><span class="fa fa-envelope-o"></span><span style="display:inline-block; width: 15px;"></span>Email</h4>
                 </div>
+                <div class="col-8">
+                    <h4 style="margin-top: 10px; font-weight: normal"> <span>:</span><span style="display:inline-block; width: 10px;"></span>admin@gmail.com</h4>
+                </div>
+            </div>
+            <div class="row" style="width: 100%; ">
                 <div class="col-4">
-                    <h4 style="margin-top: 10px; font-weight: normal"> <span>:</span><span style="display:inline-block; width: 10px;"></span>Tingkat Pendidikan</h4>
+                    <h4 style="margin-top: 10px; font-weight: normal"><span class="fa fa-phone"></span><span style="display:inline-block; width: 15px;"></span>Nomor Telepon</h4>
+                </div>
+                <div class="col-4">
+                    <h4 style="margin-top: 10px; font-weight: normal"> <span>:</span><span style="display:inline-block; width: 10px;"></span>081234567890</h4>
                 </div>
             </div>
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <div class="row" style="margin-top: 15px">
                 <div class="col-2">
                     <a type="button" class="btn form-pasang3" href="{{ route('login') }}">
-                        <h4 style="font-weight: normal"><span class="fa fa-paper-plane-o"></span><span style="display:inline-block; width: 10px;"></span>Email</h4>
+                        <h4 style="font-weight: normal"><span class="fa fa-paper-plane-o"></span><span style="display:inline-block; width: 10px;"></span>Lamar</h4>
                     </a>
                 </div>
                 <div class="col-2">
