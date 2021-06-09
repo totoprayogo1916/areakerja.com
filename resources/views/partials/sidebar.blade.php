@@ -18,7 +18,7 @@
         </ul>
     </div>
 
-    <div data-aos="zoom-in-up" class="single-slidebar">
+    <div data-aos="zoom-in-up" class="single-slidebar" id="top-rate-side" style="display: none">
         <h4>Top rated job posts</h4>
         <ul class="cat-list">
             @foreach($sidebarJobs as $job)
