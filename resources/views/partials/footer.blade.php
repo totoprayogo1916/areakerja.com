@@ -35,23 +35,21 @@
             <div class="footer-social">
                 <h4 class="text-white">Temukan Kami di</h4>
                 <ul class="col row">
+                    
                     <li>
-                        <a href="{{ route('home') }}"><img src="{{ asset('img/social/playstore.png') }}" alt="" title="" /></a>
+                        <a href="{{ route('home') }}"><i class="fa fa-instagram" style="font-size:36px"></i></a>
                     </li>
                     <li>
-                        <a href="{{ route('home') }}"><img src="{{ asset('img/social/instagram.png') }}" alt="" title="" /></a>
+                        <a href="{{ route('home') }}"><i class="fa fa-facebook-square" style="font-size:36px"></i></a>
                     </li>
                     <li>
-                        <a href="{{ route('home') }}"><img src="{{ asset('img/social/facebook.png') }}" alt="" title="" /></a>
+                        <a href="{{ route('home') }}"><i class="fa fa-twitter-square" style="font-size:36px"></i></a>
                     </li>
                     <li>
-                        <a href="{{ route('home') }}"><img src="{{ asset('img/social/twitter-sign.png') }}" alt="" title="" /></a>
+                        <a href="{{ route('home') }}"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
                     </li>
                     <li>
-                        <a href="{{ route('home') }}"><img src="{{ asset('img/social/linkedin.png') }}" alt="" title="" /></a>
-                    </li>
-                    <li>
-                        <a href="{{ route('home') }}"><img src="{{ asset('img/social/telegram.png') }}" alt="" title="" /></a>
+                        <a href="{{ route('home') }}"><i class="fa fa-telegram" style="font-size:36px"></i></a>
                     </li>
                 </ul>
             </div>
