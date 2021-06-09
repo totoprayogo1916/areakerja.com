@@ -2381,7 +2381,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-area {
-  background-color:#ccdcef ;
+  background-color: #ccdcef;
   height: 175px;
   /* margin-bottom: 1%; */
   background: url(../img/bg.png) center;
@@ -2459,7 +2459,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   /* box-shadow: 2px 2px 5px rgba(0.15, 0.15, 0.15, 0.15); */
 }
 
-.form-wrap-main{
+.form-wrap-main {
   border-radius: 20px;
   background-color: rgb(255, 255, 255);
   padding: 20px 0;
@@ -2526,8 +2526,7 @@ hr {
   }
 }
 
-
-.form-pasang{
+.form-pasang {
   color: #d3ab60;
   font-size: 14px;
   /* opacity: .40; */
@@ -2779,12 +2778,10 @@ hr {
   margin-bottom: 30px;
   border-radius: 20px;
   box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
-  
 }
 
 .post-list:hover .single-post:hover {
   box-shadow: 0 10px 10px rgba(0.15, 0.15, 0.15, 0.15);
-  
 }
 
 .post-list .single-post h6 {
@@ -2917,7 +2914,6 @@ hr {
 
 .loadmore-btn:hover {
   box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.1);
-  
 }
 
 .sidebar .owl-carousel .owl-item img {
@@ -2961,9 +2957,7 @@ hr {
   padding: 30px 20px;
   margin-bottom: 30px;
   border-radius: 20px;
-  box-shadow: 3px 3px 3px 3px rgba(0.15,0.15,0.15,0.15);
-  
-
+  box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
 }
 
 .sidebar .single-slidebar h4 {
@@ -3459,11 +3453,11 @@ hr {
 } */
 
 .footer-social a:hover i {
-  color: #fff;
+  color: #cccccc;
 }
 
 .footer-social i {
-  color: #cccccc;
+  color: #ffffff;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
