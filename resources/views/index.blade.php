@@ -62,7 +62,8 @@
 @section('slick')
 <div class="for_slick_slider multiple-items" id="slick">
     @foreach($sidbarJobs as $job)
-        <div class="items" style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
+        <div class="items"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
+        <a href="{{ route('jobs.show', $job->id) }}">
             <h5 style="color: #b19ea8; margin-left: 5%; margin-top: 5%;">Dibutuhkan</h5>
             <h4 style="color: #2b2b2b ; margin-left: 5%; margin-right: 5%; overflow: hidden; white-space: nowrap;">{{ $job->title }}</h4>
             @if($job->company->gambar)
@@ -73,7 +74,8 @@
             <h5 style="font-size: 16px;margin-left: 5%" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }}</h5>
             <hr/>
             <h5 style="font-size: 16px;margin-left: 5%;margin-bottom: 5%;"> <span class="lnr lnr-map"></span> {{ $job->address }}</h5>
-            </div>
+</a>    
+        </div>
     @endforeach
 </div>
 @endsection
@@ -104,7 +106,7 @@
                     </div>
                 </div>
                 <hr class="d-flex flex-row" style="width: 100%; margin-left: -0.5%"/>
-                <div class="row" >
+                 <div class="row" >
                     <div class="col-md-auto " >
                         <h5 style="font-size: 16px" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }}
                     </div>
