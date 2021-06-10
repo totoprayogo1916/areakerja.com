@@ -19,33 +19,60 @@
                             </h4>
                             <div >
                             <input required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
-                            </div> </div> </br>
+                        </div> </div> </br>
 
                         <div class="form-group">
-                            <h4>Deskripsi Perusahaan</h4>
+                            <h4>Status Pekerjaan <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span> </h4>
+                            <div >
+                            <select class="form-control2" required>
+                            <option value="1">Full Time</option>
+                            <option value="2">Part Time</option>
+                            <option value="3">Freelance</option>
+                            </select>
+                            <div class="invalid-feedback">Example invalid custom select feedback</div>
+                        </div> </div> </br>
+
+                        <div class="form-group">
+                            <h4>Kisaran Gaji</h4>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" class="form-control2" placeholder="Minimal Gaji">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control2" placeholder="Maksimal Gaji">
+                        </div> </div> </div> </br>
+
+                        <div class="form-group">
+                            <h4>Deskripsi Pekerjaan</h4>
                             <div >
                             <textarea required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
-                            </div> </div> </br>
+                        </div> </div> </br>
 
                         <div class="form-group">
-                            <h4>Alamat Perusahaan</h4>
+                            <h4>Syarat Pekerjaan</h4>
                             <div >
                             <textarea required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
-                            </div> </div> </br>
+                        </div> </div> </br>
 
                         <div class="form-group">
-                            <h4> Logo Perusahaan </h4> </br>
+                            <h4>Batas Lamaran
+                            </h4>
+                            <div >
+                            <input required="" type="date"  class="form-control2  " data-date-format="dd-mm-yyyy" value="" data-type="date" aria-required="true">
+                        </div> </div> </br>
+                        
+                        <div class="form-group">
+                            <h4> Banner Lowongan </h4> </br>
                             <div class="custom-file">
                             <input type="file" class="custom-file-input" id="validatedCustomFile" required>
                             <label class="custom-file-label " for="validatedCustomFile">Choose file...</label>
-                            </div>
-                         </div> </br>
+                            </div> </div> </br>
 
                         <div class="row form-wrap justify-content-around" style="margin-top: 2%">
                             <div class="col-lg-3 form-cols">
-                                <a type="submit" class="btn btn-area" href="{{route('pasang2')}}">
+                                <button type="submit" class="btn btn-area" href="{{route('pasang2')}}">
                                 <span ></span> Selanjutnya
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
