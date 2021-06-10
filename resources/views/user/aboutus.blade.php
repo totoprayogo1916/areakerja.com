@@ -5,8 +5,8 @@
     <div class="banner-area">
         <div class="row align-items-center justify-content-center" style="margin-right: 15px; margin-left: 15px">
             <div class="banner-content col-lg-12">
-                <div action="#" class="serach-form-area flex-wrap" style="width: 100%">
-                    <div class="col form-wrap-main" id="form-luar">
+                <div class="serach-form-area flex-wrap" style="width: 100%" id="contentuser">
+                    <div class="col form-wrap-main" id="form-luar" style="width: 100%">
                         <h1>Tentang Kami</h1>
                         <p style="font-size: 11pt; font-style: bold; margin: 5%; text-align: left; line-height: 120%">
                             Areakerja adalah perusahaan berbasis teknologi informasi yang berpusat di Yogyakarta. Perusahaan ini berfokus pada platform untuk mencari lowongan kerja di Daerah Istimewa Yogyakarta (DIY).
