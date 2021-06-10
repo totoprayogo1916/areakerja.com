@@ -2263,6 +2263,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 120px 0;
 }
 
+.section-gap1 {
+    background: #000;
+  margin-top: 31.8%;
+}
+
 .section-title {
   padding-bottom: 30px;
 }
@@ -3345,6 +3350,106 @@ hr {
   padding: 30px 90px 20px;
   background: #fe7b54;
 }
+
+.footer-area-fixed {
+  background-color: #fe7b54;
+  /* text-align: center; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  padding-top: 1%;
+}
+.footer-area-fixed .footer-nav li{
+  /* margin-top: 10px; */
+  margin-right: 20px;
+  /* margin-bottom: 20px; */
+}
+
+.footer-area-fixed .footer-nav li a {
+  color: #fff;
+}
+
+
+.footer-area-fixed .footer-nav li a:hover {
+  color: #b1b3b5;
+}
+
+.footer-area-fixed .primary-btn {
+background-color: #49e4fa;
+line-height: 42px;
+padding-left: 30px;
+padding-right: 60px;
+border-radius: 25px;
+border: none;
+color: #fff;
+display: inline-block;
+font-weight: 500;
+position: relative;
+-webkit-transition: all 0.3s ease 0s;
+-moz-transition: all 0.3s ease 0s;
+-o-transition: all 0.3s ease 0s;
+transition: all 0.3s ease 0s;
+cursor: pointer;
+text-transform: uppercase;
+position: relative;
+}
+
+  .footer-area-fixed .primary-btn:focus {
+    outline: none;
+  }
+
+  .footer-area-fixed .primary-btn span {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    right: 30px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .footer-area-fixed .primary-btn:hover {
+    background-color: #49e4fa;
+    box-shadow: none;
+    color: #fff;
+  }
+
+  .footer-area-fixed .primary-btn:hover span {
+    color: #fff;
+    right: 20px;
+  }
+
+  .footer-area-fixed .primary-btn.white {
+    border: 1px solid #fff;
+    color: #fff;
+  }
+
+  .footer-area-fixed .primary-btn.white span {
+    color: #fff;
+  }
+
+  .footer-area-fixed .primary-btn.white:hover {
+    background: #fff;
+    color: #49e4fa;
+  }
+
+  .footer-area-fixed .primary-btn.white:hover span {
+    color: #49e4fa;
+  }
+
+  .footer-area-fixed h6 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+
+
 
 .footer-area .footer-nav li {
   margin-top: 10px;
