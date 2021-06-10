@@ -1,4 +1,37 @@
-<header id="header" id="home">
+<nav class="navbar navbar-expand-lg navbar-light" id="home" >
+  <div class="container">
+    <div id="logo2" class="navbar-brand">
+      <a href="{{ route('home') }}"><img src="{{ asset('img/logo3.svg') }}" alt="" title="" /></a>
+    </div>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigaation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item">
+          <a type="button" class="nav-link" href="#" style="color: #fee5ba;font-size: 14px; background-color: #fe7c5400; border: 2px solid #fe7b54; font-weight:600" >
+            <span class="fa fa-map-marker mr-1"></span> Kota Lainnya
+          </a>
+        </li>
+        <li class="nav-item">
+          <a type="button" class="nav-link form-pasang5" href="#" style="color: #fee5ba;font-size: 14px; background-color: #fe7c5400; border: 2px solid #fe7b54; font-weight:600">
+            <span class="fa fa-newspaper-o mr-1"></span> Tips Kerja
+          </a>
+        </li>
+        <li class="nav-item">
+          <a type="button" class="nav-link form-pasang" href="{{ route('pasang') }}">
+            <span class="lnr lnr-file-add"></span> Pasang Lowongan
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+
+</nav>
+
+{{-- <header id="header" id="home">
   <div class="container">
     <div class="row align-items-center justify-content-between d-flex">
       
@@ -20,4 +53,4 @@
 
     </div>
   </div>
-</header>
+</header> --}}
