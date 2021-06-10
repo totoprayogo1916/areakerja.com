@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light" id="home" >
+<nav class="navbar navbar-expand-lg navbar-light" id="header" id="home" >
   <div class="container">
     <div id="logo2" class="navbar-brand">
       <a href="{{ route('home') }}"><img src="{{ asset('img/logo3.svg') }}" alt="" title="" /></a>
