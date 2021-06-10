@@ -12,23 +12,10 @@ const border = document.querySelector(".border");
 let section_height = section.offsetHeight;
 
 if ($(window).width() < 1070) {
-    document.getElementById("slick").style.display='none';
-    document.getElementById("top-rate-side").style.display='block';
-    var formluar = document.getElementById("form-luar");
-    var maincontent = document.getElementById("main-content");
-    var formdalam = document.getElementById("form-dalam");
-    formluar.style.width='100%';
-    formluar.style.marginLeft='5%';
-    formluar.style.marginRight='5%';
-    formdalam.style.width='100%';
-    formdalam.style.marginLeft='0%';
-    formdalam.style.marginRight='5%';
-    maincontent.style.marginTop='60%';
-}
-
-if ($(window).width() < 1070) {
     var contentuser = document.getElementById("contentuser");
-    contentuser.style.width='10%';
+    contentuser.style.marginLeft='0%';
+    contentuser.style.marginRight='-30%';
+    contentuser.style.marginBottom='40%';
 }
 
 window.addEventListener('scroll', () => {
