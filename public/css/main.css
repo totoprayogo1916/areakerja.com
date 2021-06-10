@@ -1953,6 +1953,10 @@ h6 {
   z-index: 997;
 }
 
+.navbar{
+  background: #fe7b54;
+}
+
 #header.header-scrolled {
   background: #feb26c;
   transition: all 0.5s;
@@ -2548,7 +2552,16 @@ hr {
   font-size: 14px;
   /* opacity: .40; */
   background-color: #fe7c5400;
+  border-radius: 8px;
   border: 2px solid #eb5e0b;
+}
+
+.nav-link .form-pasang5 {
+  color: #000000;
+  font-size: 14px;
+  /* opacity: .40; */
+  background-color: #fe7b54;
+  border: 2px solid #080200;
 }
 
 .form-pasang3 {

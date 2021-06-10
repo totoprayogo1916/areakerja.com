@@ -15,7 +15,7 @@
                         <a href= #>Kontak Kami</a>
                     </li>
                     <li>
-                        <a href="#">Pasang Lowongan</a>
+                        <a href="{{ route('pasang') }}">Pasang Lowongan</a>
                     </li>
                 </ul>
             </div>
@@ -37,7 +37,7 @@
                 <ul class="col row">
 
                     <li>
-                        <a href="{{ route('home') }}"><i class="fa fa-instagram" style="font-size:36px"></i></a>
+                        <a href="https://www.instagram.com/areakerjacom/"><i class="fa fa-instagram" style="font-size:36px"></i></a>
                     </li>
                     <li>
                         <a href="{{ route('home') }}"><i class="fa fa-facebook-square" style="font-size:36px"></i></a>
