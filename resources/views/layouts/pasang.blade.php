@@ -23,18 +23,20 @@
     </head>
     <body>
     @include('partials.header')
+        <div class="banner-area">
+        </div>
+        {{-- @include('partials.banner') --}}
 
-        @include('partials.banner')
-
-        @yield('home')
+        
 
 
         <!-- Start post Area -->
-        <section class="section-gap1">
+        <section class="section-gap2">
+            @yield('home')
         </section>
         <!-- End post Area -->
 
-        @include('user.footer')
+        @include('partials.footer')
 
         </div>
 
@@ -59,6 +61,7 @@
         <script src="{{ asset('js/app2user.js') }}"></script>
         <script src="{{ asset('js/slick.min.js') }}"></script>
         <script src="{{ asset('js/custom.js') }}"></script>
+        <script src="{{ asset('js/pasang.js') }}"></script>
         <script>
             AOS.init();
         </script>
