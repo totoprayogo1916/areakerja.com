@@ -31,7 +31,7 @@
                     <h4 style="margin-top: 10px; font-weight: normal" id="h46"><span class="fa fa-calendar"></span><span style="display:inline-block; width: 15px;"></span>Batas Lamaran</h4>
                     <h4 style="margin-top: 10px; font-weight: normal" id="h47"><span class="fa fa-map-marker"></span><span style="display:inline-block; width: 15px;"></span>Lokasi Kerja</h4>
                 </div>
-                <div class="col-1" id="ringkanan" style="background-color: aquamarine; width: -100px">
+                <div id="ringtengah">
                     <h4 style="margin-top: 10px; font-weight: normal;" id="h48"> <span>:</span></h4>
                     <h4 style="margin-top: 10px; font-weight: normal" id="h49"> <span>:</span></h4>
                     <h4 style="margin-top: 10px; font-weight: normal" id="h410"> <span>:</span></h4>
@@ -41,15 +41,15 @@
                     <h4 style="margin-top: 10px; font-weight: normal" id="h414"> <span>:</span></h4>
                 </div>
                 <div class="col-6" id="ringkanan">
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h48">{{ $job->pendidikan }}</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h49">{{ $job->gender }}</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h410">{{ $job->umur }}</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h411">{{ $job->job_nature }}</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h412">{{ $job->salary }}</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h413">{{ $job->bataslamaran }}</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h414">{{ $job->lokasikerja }}</h4>
+                    <h4 style="margin-top: 10px; font-weight: normal" id="h415">{{ $job->pendidikan }}</h4>
+                    <h4 style="margin-top: 10px; font-weight: normal" id="h416">{{ $job->gender }}</h4>
+                    <h4 style="margin-top: 10px; font-weight: normal" id="h417">{{ $job->umur }}</h4>
+                    <h4 style="margin-top: 10px; font-weight: normal" id="h418">{{ $job->job_nature }}</h4>
+                    <h4 style="margin-top: 10px; font-weight: normal" id="h419">{{ $job->salary }}</h4>
+                    <h4 style="margin-top: 10px; font-weight: normal" id="h420">{{ $job->bataslamaran }}</h4>
+                    <h4 style="margin-top: 10px; font-weight: normal" id="h421"><p style="line-height: 150%; margin-top: -1%">{{ $job->lokasikerja }}</p></h4>
                 </div>
-                
+
               </div>
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <h3 style="margin-top: 10px">Deskripsi Pekerjaan</h3>

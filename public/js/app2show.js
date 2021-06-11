@@ -1,7 +1,7 @@
 if ($(window).width() < 1070) {
     document.getElementById("contentshow").style.marginTop='50%';
     document.getElementById("ringkiri").className='col-6';
-    document.getElementById("ringkanan").className='col-6';
+    document.getElementById("ringkanan").className='col-5';
     document.getElementById("h41").style.fontSize='80%';
     document.getElementById("h42").style.fontSize='80%';
     document.getElementById("h43").style.fontSize='80%';
@@ -20,4 +20,7 @@ if ($(window).width() < 1070) {
     document.getElementById("h416").style.fontSize='80%';
     document.getElementById("h417").style.fontSize='80%';
     document.getElementById("h418").style.fontSize='80%';
+    document.getElementById("h419").style.fontSize='80%';
+    document.getElementById("h420").style.fontSize='80%';
+    document.getElementById("h421").style.fontSize='80%';
 }
