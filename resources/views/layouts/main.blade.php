@@ -38,7 +38,7 @@
                 <div class="row justify-content-center d-flex">
 
                     @yield('content')
-                    @include('partials.sidebarshow')
+                    @include('partials.sidebar')
                 </div>
             </div>
         </section>
