@@ -12,7 +12,7 @@
                         <a href= "{{ route('aboutus') }}">Tentang Kami</a>
                     </li>
                     <li>
-                        <a href= #>Kontak Kami</a>
+                        <a href= "{{ route('kontak') }}">Kontak Kami</a>
                     </li>
                     <li>
                         <a href="#">Pasang Lowongan</a>
