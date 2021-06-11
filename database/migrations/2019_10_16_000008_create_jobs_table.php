@@ -23,6 +23,16 @@ class CreateJobsTable extends Migration
 
             $table->string('address')->nullable();
 
+            $table->string('pendidikan')->nullable();
+
+            $table->string('gender')->nullable();
+
+            $table->string('umur')->nullable();
+
+            $table->string('lokasikerja')->nullable();
+
+            $table->string('bataslamaran')->nullable();
+
             $table->boolean('top_rated')->default(0)->nullable();
 
             $table->string('salary');

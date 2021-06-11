@@ -28,6 +28,11 @@ class JobsTableSeeder extends Seeder
             'salary' => '10k - 20k',
             'location_id' => '3',
             'company_id' => '2',
+            'pendidikan' => 'SMA/S1/S2',
+            'gender' => 'Pria/Wanita',
+            'bataslamaran' => '20 Januari 2021',
+            'umur' => 'Maks 20 Tahun',
+            'lokasikerja' => 'Jalan Kanoman No. 20 Banguntapan Yogyakarta'
         ]);
         $job->save();
         $job->categories()->sync(3);
