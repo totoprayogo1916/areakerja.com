@@ -31,13 +31,16 @@ class HomeController extends Controller
 
     public function search(Request $request)
     {
+
+        $searchLocations = Location::pluck('name', 'id');
+        $searchCategories = Category::pluck('name', 'id');
         $jobs = Job::with('company')
             ->searchResults()
             ->paginate(7);
 
         $banner = 'Search results';
 
-        return view('jobs.index', compact(['jobs', 'banner']));
+        return view('jobs.index', compact(['jobs', 'banner', 'searchLocations', 'searchCategories']));
     }
 
     public function aboutus()

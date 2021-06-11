@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Location;
 use App\Job;
+use App\Category;
 
 class LocationController extends Controller
 {
     public function show(Location $location)
     {
+        $searchLocations = Location::pluck('name', 'id');
+        $searchCategories = Category::pluck('name', 'id');
         $jobs = Job::with('company')
             ->whereHas('location', function($query) use($location) {
                 $query->whereId($location->id);
@@ -16,7 +19,7 @@ class LocationController extends Controller
             ->paginate(7);
 
         $banner = 'Location: '.$location->name;
-    
-        return view('jobs.index', compact(['jobs', 'banner']));
+
+        return view('jobs.index', compact(['jobs', 'banner', 'searchCategories', 'searchLocations']));
     }
 }

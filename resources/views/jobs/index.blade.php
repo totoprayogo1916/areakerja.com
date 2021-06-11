@@ -56,7 +56,7 @@
 
 @section('slick')
 <div class="for_slick_slider multiple-items" id="slick">
-    @foreach($sidbarJobs as $job)
+    @foreach($jobs as $job)
         <div class="items"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
         <a href="{{ route('jobs.show', $job->id) }}">
             <h5 style="color: #b19ea8; margin-left: 5%; margin-top: 5%;">Dibutuhkan</h5>
