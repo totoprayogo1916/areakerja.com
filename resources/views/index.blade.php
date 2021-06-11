@@ -59,7 +59,7 @@
     @foreach($sidbarJobs as $job)
         <div class="items"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
         <a href="{{ route('jobs.show', $job->id) }}">
-            <h5 style="color: #b19ea8; margin-left: 5%; margin-top: 5%;">Dibutuhkan</h5>
+            <h5 style="color: #7e7e7e; margin-left: 5%; margin-top: 5%;">Dibutuhkan</h5>
             <h4 style="color: #2b2b2b ; margin-left: 5%; margin-right: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));">{{ $job->title }}</h4>
             @if($job->company->gambar)
                 <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="width: 150px; height: 120px; margin-left: auto; margin-right: auto;margin-top: 10px">
@@ -88,7 +88,7 @@
             <div class="details " style="width: 100%">
                 <div class="title d-flex flex-row justify-content-between"  >
                     <div class="titles">
-                        <h3  style="font-size: 19px; color: #b19ea8">Dibutuhkan</h3>
+                        <h3  style="font-size: 19px; color: #7e7e7e">Dibutuhkan</h3>
                         <h3 style="margin-top: 10px">{{ $job->title }}</h3>
                         <div class="row" style="margin-top: 14px">
                             <div class="col-md-auto " >
