@@ -10,7 +10,7 @@
 
                 <div class="about-content col-lg-12" id="searchformbanner">
                     <div class="banner-content align-items-center col-lg-12">
-                        <form action="#" class="serach-form-area flex-wrap" style="width: auto; margin-top: -10%; margin-left: auto; margin-right: auto">
+                        <form action="#" class="serach-form-area flex-wrap" style="width: 150%; margin-top: -10%; margin-left: auto; margin-right: auto">
                            <div class="col form-wrap-main" id="form-luar">
                                <div class="row form-wrap justify-content-center" id="form-dalam">
                                    <div class="col-lg-3 form-cols">
