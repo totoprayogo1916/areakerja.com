@@ -23,11 +23,12 @@
     </head>
     <body>
     @include('partials.header')
+    <div class="banner-area" >
+    </div>
 
-       
-        {{-- @include('partials.banner') --}}
-        <section class="post-area section-gap" style="margin-top: -100px">
+        <section class="post-area section-gap" id="areaaboutus" style="margin-top: -12%">
             <div class="banner-content col-lg-12" style="width: 10">
+
                 <div class="container">
                     @yield('aboutus')
                 </div>
