@@ -21,8 +21,8 @@
                                 <div class="default-select" id="default-selects">
                                     <select>
                                         <option value="0">All Areas</option>
-                                        @foreach($searchLocations as $id=>$searchLocations)
-                                            <option value="{{ $id }}">{{ $searchLocations }}</option>
+                                        @foreach($searchLocations ?? '' as $id=>$searchLocations ?? '')
+                                            <option value="{{ $id }}">{{ $searchLocations ?? '' }}</option>
                                         @endforeach
                                     </select>
                                 </div>

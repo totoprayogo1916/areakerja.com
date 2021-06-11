@@ -12,8 +12,6 @@ const border = document.querySelector(".border");
 let section_height = section.offsetHeight;
 
 if ($(window).width() < 1070) {
-    document.getElementById("slick").style.display='none';
-    document.getElementById("top-rate-side").style.display='block';
     var formluar = document.getElementById("form-luar");
     var maincontent = document.getElementById("main-content");
     var formdalam = document.getElementById("form-dalam");
@@ -24,11 +22,8 @@ if ($(window).width() < 1070) {
     formdalam.style.marginLeft='0%';
     formdalam.style.marginRight='5%';
     maincontent.style.marginTop='60%';
-}
-
-if ($(window).width() < 1070) {
-    var contentuser = document.getElementById("contentuser");
-    contentuser.style.width='10%';
+    document.getElementById("slick").style.display='none';
+    document.getElementById("top-rate-side").style.display='block';
 }
 
 window.addEventListener('scroll', () => {
