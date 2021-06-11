@@ -32,7 +32,7 @@ class JobsTableSeeder extends Seeder
             'gender' => 'Pria/Wanita',
             'bataslamaran' => '20 Januari 2021',
             'umur' => 'Maks 20 Tahun',
-            'lokasikerja' => 'Jalan Kanoman No. 20 Banguntapan Yogyakarta'
+            'lokasikerja' => 'Jalan Kanoman No. 20 Banguntapan, Yogyakarta'
         ]);
         $job->save();
         $job->categories()->sync(3);
@@ -52,6 +52,11 @@ class JobsTableSeeder extends Seeder
             'salary' => '10jt - 20jt',
             'location_id' => '3',
             'company_id' => '6',
+            'pendidikan' => 'SMA/S1/S2',
+            'gender' => 'Pria/Wanita',
+            'bataslamaran' => '20 Jani 2021',
+            'umur' => 'Maks 25 Tahun',
+            'lokasikerja' => 'Jalan Bimo No. 20 Sleman, Yogyakarta'
         ]);
         $job->save();
         $job->categories()->sync(4);
@@ -69,6 +74,11 @@ class JobsTableSeeder extends Seeder
             'salary' => '500k - 700k',
             'location_id' => '3',
             'company_id' => '1',
+            'pendidikan' => 'SMA/SMK sederajat',
+            'gender' => 'Pria/Wanita',
+            'bataslamaran' => '28 Juni 2021',
+            'umur' => 'Maks 26 Tahun',
+            'lokasikerja' => 'Jalan Kawedanan No. 20 Kulon Progo, Yogyakarta'
         ]);
         $job->save();
         $job->categories()->sync(5);
@@ -87,6 +97,11 @@ class JobsTableSeeder extends Seeder
             'salary' => '800k - 1jt',
             'location_id' => '1',
             'company_id' => '6',
+            'pendidikan' => 'SMA/S1/S2',
+            'gender' => 'Wanita',
+            'bataslamaran' => '1 Juli 2021',
+            'umur' => 'Maks 24 Tahun',
+            'lokasikerja' => 'Jalan Affandi No. 20 Depok, Sleman, Yogyakarta'
         ]);
         $job->save();
         $job->categories()->sync(4);
@@ -106,6 +121,11 @@ class JobsTableSeeder extends Seeder
             'salary' => '800k - 1jt',
             'location_id' => '3',
             'company_id' => '2',
+            'pendidikan' => 'SMA/S1/S2',
+            'gender' => 'Pria/Wanita',
+            'bataslamaran' => '20 Juni 2021',
+            'umur' => 'Maks 20 Tahun',
+            'lokasikerja' => 'Jalan Kanoman No. 20 Banguntapan Yogyakarta'
         ]);
         $job->save();
         $job->categories()->sync(1);
@@ -123,6 +143,11 @@ class JobsTableSeeder extends Seeder
             'salary' => '1 jt - 1,2 jt',
             'location_id' => '2',
             'company_id' => '4',
+            'pendidikan' => 'SMA/S1/S2',
+            'gender' => 'Pria/Wanita',
+            'bataslamaran' => '20 Juni 2021',
+            'umur' => 'Maks 24 Tahun',
+            'lokasikerja' => 'Jalan Kenari No. 29 Yogyakarta'
         ]);
         $job->save();
         $job->categories()->sync(3);
@@ -140,6 +165,11 @@ class JobsTableSeeder extends Seeder
             'salary' => '500k',
             'location_id' => '3',
             'company_id' => '3',
+            'pendidikan' => 'SMA/S1/S2',
+            'gender' => 'Pria/Wanita',
+            'bataslamaran' => '20 Januari 2021',
+            'umur' => 'Maks 20 Tahun',
+            'lokasikerja' => 'Jalan Manunggal No. 20 Yogyakarta'
         ]);
         $job->save();
         $job->categories()->sync(5);
@@ -157,6 +187,11 @@ class JobsTableSeeder extends Seeder
             'salary' => '900k',
             'location_id' => '2',
             'company_id' => '2',
+            'pendidikan' => 'SMA/S1/S2',
+            'gender' => 'Pria/Wanita',
+            'bataslamaran' => '2 Juli 2021',
+            'umur' => 'Maks 22 Tahun',
+            'lokasikerja' => 'Jalan Laksda. Adi Sucipto No. 89 Yogyakarta'
         ]);
         $job->save();
         $job->categories()->sync(3);
@@ -174,6 +209,11 @@ class JobsTableSeeder extends Seeder
             'salary' => '4 - 5 Juta',
             'location_id' => '1',
             'company_id' => '5',
+            'pendidikan' => 'SMA/S1/S2',
+            'gender' => 'Pria/Wanita',
+            'bataslamaran' => '25 Juni 2021',
+            'umur' => 'Maks 25 Tahun',
+            'lokasikerja' => 'Jalan Kanoman No. 20 Banguntapan Yogyakarta'
         ]);
         $job->save();
         $job->categories()->sync(4);
@@ -191,6 +231,11 @@ class JobsTableSeeder extends Seeder
             'salary' => '2,5 - 4,5 Juta',
             'location_id' => '2',
             'company_id' => '2',
+            'pendidikan' => 'SMA/S1/S2',
+            'gender' => 'Pria/Wanita',
+            'bataslamaran' => '20 Juni 2021',
+            'umur' => 'Maks 20 Tahun',
+            'lokasikerja' => 'Jalan Kanoman No. 20 Banguntapan Yogyakarta'
         ]);
         $job->save();
         $job->categories()->sync(3);
@@ -208,6 +253,11 @@ class JobsTableSeeder extends Seeder
             'salary' => '2,5 - 4,5 Juta',
             'location_id' => '4',
             'company_id' => '7',
+            'pendidikan' => 'SMA/S1/S2',
+            'gender' => 'Pria/Wanita',
+            'bataslamaran' => '18 Juni 2021',
+            'umur' => 'Maks 22 Tahun',
+            'lokasikerja' => 'Jalan  Mangkubumi No. 11 Yogyakarta'
         ]);
         $job->save();
         $job->categories()->sync(3);
@@ -225,6 +275,11 @@ class JobsTableSeeder extends Seeder
             'salary' => '2,5 - 4,5 Juta',
             'location_id' => '3',
             'company_id' => '1',
+            'pendidikan' => 'S1/S2',
+            'gender' => 'Pria/Wanita',
+            'bataslamaran' => '20 Juli 2021',
+            'umur' => 'Maks 26 Tahun',
+            'lokasikerja' => 'Jalan Melati Sorowajan No. 2 Yogyakarta'
         ]);
         $job->save();
         $job->categories()->sync(3);
