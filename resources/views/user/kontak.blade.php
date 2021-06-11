@@ -8,12 +8,14 @@
             <div class="banner-content col-lg-12" style="width: 10">
                 <div class="serach-form-area flex-wrap">
                     <div class="col form-wrap-main" id="contentuser" style="width: 100%;">
-                        <h1>Kontak Kami</h1>
+                        <h1 style="color: #fe7b54; text-shadow: 2px 2px 3px #353535b0;">Kontak Kami</h1>
                         <p style="font-size: 11pt; font-style: bold; margin: 5%; text-align: left; line-height: 120%">
-                        Apabila ada pertanyaan ataupun saran untuk AreaKerja, silahkan mengisi form di bawah ini:
-                            <br>
-                            <br>
-                        Catatan: Kami tidak menerima pertanyaan terkait ketersediaan lowongan dan sebagainya. Untuk bertanya hal terkait, silahkan hubungi kontak perusahaan yang membuka lowongan kerja tersebut.
+                            Apabila ada pertanyaan ataupun saran untuk AreaKerja, silahkan mengisi form di bawah ini:
+                        </p>
+                        <p style="font-size: 11pt; font-style: bold; margin: 5%; text-align: left; line-height: 120%">
+                            Catatan: Kami tidak menerima pertanyaan terkait ketersediaan lowongan dan sebagainya. Untuk bertanya hal terkait, silahkan hubungi kontak perusahaan yang membuka lowongan kerja tersebut.
+                        </p>
+                        
                     <form action="#" class="serach-form-area flex-wrap" style="width: 100%" >
                         <div class="form-group">
                             <h4>Nama
