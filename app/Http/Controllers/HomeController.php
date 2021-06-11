@@ -44,4 +44,9 @@ class HomeController extends Controller
     {
         return view('user.aboutus');
     }
+
+    public function kontak()
+    {
+        return view('user.kontak');
+    }
 }

@@ -13,9 +13,11 @@ let section_height = section.offsetHeight;
 
 if ($(window).width() < 1070) {
     var contentuser = document.getElementById("contentuser");
+    var areaaboutus = document.getElementById("areaaboutus");
     contentuser.style.marginLeft='0%';
     contentuser.style.marginRight='-30%';
     contentuser.style.marginBottom='40%';
+    areaaboutus.style.marginTop='-70%';
 }
 
 window.addEventListener('scroll', () => {

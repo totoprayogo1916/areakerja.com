@@ -6,6 +6,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/aboutus', 'HomeController@aboutus')->name('aboutus');
 Route::get('/pasang', 'JobController@pasang')->name('pasang');
 Route::get('/pasang2', 'JobController@pasang2')->name('pasang2');
+Route::get('/kontak', 'HomeController@kontak')->name('kontak');
 
 Route::get('search', 'HomeController@search')->name('search');
 Route::resource('jobs', 'JobController')->only(['index', 'show']);

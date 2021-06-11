@@ -6,7 +6,6 @@
     <meta name="author" content="codepixer">
     <meta charset="UTF-8">
     <title>Area Kerja</title>
-
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/linearicons.css') }}">
@@ -61,6 +60,7 @@
         <script src="{{ asset('js/jquery.nice-select.min.js') }}"></script>
         <script src="{{ asset('js/parallax.min.js') }}"></script>
         <script src="{{ asset('js/mail-script.js') }}"></script>
+        <script src="{{ asset('js/app2show.js') }}"></script>
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('js/app2.js') }}"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -69,5 +69,6 @@
         <script>
             AOS.init();
         </script>
+
     </body>
 </html>
