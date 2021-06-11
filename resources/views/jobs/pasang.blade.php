@@ -126,6 +126,72 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="tab">
+                        <div class="form-group">
+                            <h2> Bagaimana Cara Mengirimkan Melamar? <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
+                            </h2>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check form-check-inline">
+                                <label for="defaultCheck1" >
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    Email</label>
+                                <label for="hp" >
+                                    
+                                    <input class="form-check-input" type="checkbox" value="" id="hp" onclick="myFunction()">
+                                    No. Telp/Whatsapp</label>
+                                <label for="defaultCheck3" >
+            
+                                    <input class="form-check-input" type="checkbox" value="" id="web" onclick="myFunction()">
+                                    Formulir Web</label>
+                            </div> 
+                        </div>
+
+                        <div class="form-group">
+                            <h4>Email
+                                <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
+                            </h4>
+                            <div >
+                                <input required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
+                                <label> Email wajib diisi untuk konfirmasi pembayaran, hanya ditampilkan publik jika merupakan cara untuk mengirimkan lamaran 
+                                </label>
+                            </div> 
+                        </div> 
+
+                       
+
+                        <div class="form-group" id="hpform" style="display:none">
+                            <h4>Deskripsi Pekerjaan</h4>
+                            <div >
+                                <textarea required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
+                            </div> 
+                        </div>
+
+                        <div class="form-group" id="webform" style="display:none">
+                            <h4>Formulir Web</h4>
+                            <div>
+                                <input required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"
+                                placeholder="Contoh: https://docs.google.com/forms/d/xxx">
+                            </div> 
+                        </div> 
+
+
+                        <div class="row form-wrap justify-content-around" style="margin-top: 2%">
+                            <div class="col-lg-3 form-cols">
+                                <button type="submit" class="btn btn-area" onclick="nextPrev(-1)" >
+                                <span ></span> Sebelumnya
+                                </button>
+                            </div>
+                            <div class="col-lg-3 form-cols">
+                                <button type="submit" class="btn btn-area"  >
+                                <span ></span> Selanjutnya
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
                     
                     {{-- <div style="overflow:auto;">
                       <div style="float:right;">

@@ -70,3 +70,25 @@ function fixStepIndicator(n) {
   //... and adds the "active" class to the current step:
   x[n].className += " active";
 }
+
+function myFunction() {
+  // Get the checkbox
+  var checkBox = document.getElementById("hp");
+  var checkBox2 = document.getElementById("web");
+  // Get the output text
+  var text = document.getElementById("hpform");
+  var text2 = document.getElementById("webform");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
+
+  if (checkBox2.checked == true){
+    text2.style.display = "block";
+  } else {
+    text2.style.display = "none";
+  }
+}

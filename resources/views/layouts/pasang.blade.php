@@ -25,17 +25,9 @@
     @include('partials.header')
         <div class="banner-area">
         </div>
-        {{-- @include('partials.banner') --}}
+        {{-- @include('partials.banner') --}}        
 
-<<<<<<< HEAD
         
-=======
-        <!-- @include('partials.banner') -->
-
-        @yield('home')
->>>>>>> afe314c5a5d677c7994cab94e83671b5f2358ee6
-
-
         <!-- Start post Area -->
         <section class="section-gap2">
             @yield('home')
