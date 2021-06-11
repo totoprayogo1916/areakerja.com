@@ -2,9 +2,8 @@
 
 @section('aboutus')
 <section class="relative wrapper" id="home">
-    <div class="banner-area">
         <div class="row align-items-center justify-content-center" style="margin-right: 15px; margin-left: 15px">
-            {{-- <div class="banner-content col-lg-12" style="width: 10"> --}}
+            <div class="banner-content col-lg-12" style="width: 10">
                 <div class="serach-form-area flex-wrap">
                     <div class="col form-wrap-main" id="contentuser" style="width: 100%;">
                         <h1>Tentang Kami</h1>
@@ -28,5 +27,3 @@
 </section>
 @endsection
 
-@section('content')
-@endsection

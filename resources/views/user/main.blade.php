@@ -24,15 +24,17 @@
     <body>
     @include('partials.header')
 
-        @yield('aboutus')
-
-
-        <!-- Start post Area -->
-        <section class="section-gap1">
+       
+        {{-- @include('partials.banner') --}}
+        <section class="post-area section-gap" style="margin-top: -100px">
+            <div class="banner-content col-lg-12" style="width: 10">
+                <div class="container">
+                    @yield('aboutus')
+                </div>
+            </div>
         </section>
-        <!-- End post Area -->
 
-        @include('user.footer')
+        @include('partials.footer')
 
         <script src="{{ asset('js/vendor/jquery-2.2.4.min.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
