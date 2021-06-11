@@ -30,11 +30,11 @@
 
 
         <!-- Start post Area -->
-        <section class="post-area section-gap" style="padding: 16%">
+        <section class="section-gap1">
         </section>
         <!-- End post Area -->
 
-        @include('partials.footer')
+        @include('user.footer')
 
         </div>
 
@@ -56,6 +56,7 @@
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('js/app2.js') }}"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="{{ asset('js/app2user.js') }}"></script>
         <script src="{{ asset('js/slick.min.js') }}"></script>
         <script src="{{ asset('js/custom.js') }}"></script>
         <script>
