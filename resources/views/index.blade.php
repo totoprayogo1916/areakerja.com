@@ -88,7 +88,7 @@
             <div class="details " style="width: 100%">
                 <div class="title d-flex flex-row justify-content-between"  >
                     <div class="titles">
-                        <h3  style="font-size: 19px; color: #b19ea8">Dibutuhkan</h3>
+                        <h3  style="font-size: 19px; color: #7e7e7e">Dibutuhkan</h3>
                         <h3 style="margin-top: 10px">{{ $job->title }}</h3>
                         <div class="row" style="margin-top: 14px">
                             <div class="col-md-auto " >
