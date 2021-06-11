@@ -7,8 +7,8 @@
         </div>
         <div class="container" >
             <div class="row d-flex align-items-center justify-content-center">
-                
-                <div class="about-content col-lg-12">
+
+                <div class="about-content col-lg-12" id="searchformbanner">
                     <div class="banner-content align-items-center col-lg-12">
                         <form action="#" class="serach-form-area flex-wrap" style="width: auto; margin-top: -10%; margin-left: auto; margin-right: auto">
                            <div class="col form-wrap-main" id="form-luar">
