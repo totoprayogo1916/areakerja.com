@@ -11,7 +11,7 @@ class JobController extends Controller
     public function index()
     {
         $jobs = Job::with('company')
-            ->paginate(7);
+            ->paginate(0);
 
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
