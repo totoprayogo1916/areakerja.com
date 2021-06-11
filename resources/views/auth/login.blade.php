@@ -53,8 +53,9 @@
                         {{ session()->get('message') }}
                     </p>
                 @endif
-				<div class="login100-pic js-tilt" data-tilt>
-					<img src="{{ asset('img/img-01.png') }}" alt="IMG">
+				<div class="login100-pic js-tilt"  data-tilt>
+				<a href="{{ route('home') }}">
+					<img src="{{ asset('img/img-01.png') }}" alt="IMG"  > </a>
 				</div>
 
 				<form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
