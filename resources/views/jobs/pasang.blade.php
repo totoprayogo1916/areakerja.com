@@ -38,8 +38,8 @@
                         <div class="form-group">
                             <h4> Logo Perusahaan </h4>
                             <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="logoperusahaan" name="logoperusahaan">
-                            <label class="custom-file-label " for="logoperusahaan">Choose file...</label>
+                            <input type="file" id="logoperusahaan" name="logoperusahaan">
+                            <label for="logoperusahaan">Choose file...</label>
                             </div>
                             </div>
 
@@ -120,7 +120,9 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="tab">
+                        <div class="form-group">
+                            <h2> Ba
                     <div class="tab">
                         <div class="form-group">
                             <h2> Bagaimana Cara Mengirimkan Melamar? <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
@@ -180,13 +182,8 @@
                             </div>
                         </div>
                     </div>
-                    
-
-                    {{-- <div style="overflow:auto;">
-                      <div style="float:right;">
-                        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
                       </div>
-                    </div> --}}
+                    </div>
 
                     <!-- Circles which indicates the steps of the form: -->
                     {{-- <div style="text-align:center;margin-top:40px;">

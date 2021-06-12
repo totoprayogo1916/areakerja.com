@@ -6,6 +6,8 @@ use App\Category;
 use App\Location;
 use App\Job;
 use Illuminate\Http\Request;
+use App\Mail\SendMail;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -63,5 +65,16 @@ class HomeController extends Controller
     {
         dd($request);
         // return view('user.kontak');
+    }
+
+    public function kirimmail(Request $request)
+    {
+        $nama = $request->nama;
+        $email = "ti.fadelirsyad04@gmail.com";
+        $kirim = Mail::to($email)->send(new SendMail($nama));
+
+        if($kirim){
+            echo "Email telah dikirim";
+        }
     }
 }
