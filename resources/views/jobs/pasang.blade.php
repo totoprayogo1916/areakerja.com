@@ -15,7 +15,7 @@
                 <form id="regForm" action="" style="width: 50%; ">
                     <div class="tab" >
                         <div class="form-group">
-                            <h4>Nama Pekerjaan
+                            <h4>Nama Perusahaan
                             <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
                             </h4>
                             <div >
@@ -105,13 +105,6 @@
                                 <input required="" type="date"  class="form-control2  " data-date-format="dd-mm-yyyy" value="" data-type="date" aria-required="true">
                             </div> 
                         </div> 
-                        
-                        <div class="form-group">
-                            <h4> Banner Lowongan </h4> 
-                            <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                            <label class="custom-file-label " for="validatedCustomFile">Choose file...</label>
-                            </div> </div> 
 
                         <div class="row form-wrap justify-content-around" style="margin-top: 2%">
                             <div class="col-lg-3 form-cols">
