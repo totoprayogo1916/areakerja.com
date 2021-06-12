@@ -121,6 +121,7 @@
                         </div>
                     </div>
 
+<<<<<<< HEAD
                     <div class="tab">
                         <div class="form-group">
                             <h2> Bagaimana Cara Mengirimkan Melamar? <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
@@ -184,6 +185,9 @@
                             </div>
                         </div>
                     </div>
+=======
+
+>>>>>>> 4408a41179f7d3b22cffae52b339f455e101ff52
 
 
 
