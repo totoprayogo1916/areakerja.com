@@ -9,7 +9,7 @@ Route::get('/pasang2', 'JobController@pasang2')->name('pasang2');
 Route::get('/kontak', 'HomeController@kontak')->name('kontak');
 Route::post('/kontakform', 'HomeController@kirimmail')->name('kontakform');
 Route::post('/formpasang', 'HomeController@formpasang')->name('formpasang');
-// Route::get('/kirim-email', 'HomeController@kirimmail');
+// Route::get('/backkontak', 'HomeController@backkontak')->name('backkontak');
 
 
 

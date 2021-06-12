@@ -70,14 +70,16 @@ class HomeController extends Controller
     public function kirimmail(Request $request)
     {
         $nama = $request->nama;
-        $email1 = $request->email;
-        $pesan = $request->pesan;
         $nomor = $request->nomor;
-        $email = "ti.ganisarya11@gmail.com";
-        $kirim = Mail::to($email)->send(new SendMail($nama));
+        $email1 = $request->email;
+        $saran = $request->saran;
+        $email = "ti.fadelirsyad04@gmail.com";
+        $kirim = Mail::to($email)->send(new SendMail($nama,$nomor,$email1,$saran));
 
         if($kirim){
             echo "Email telah dikirim";
         }
+
+        return view('user.kontak');
     }
 }
