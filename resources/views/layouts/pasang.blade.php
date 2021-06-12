@@ -62,7 +62,7 @@
         <script src="{{ asset('js/custom.js') }}"></script>
         <script src="{{ asset('js/pasang.js') }}"></script>
         <script>
-            AOS.init(once: true);
+            AOS.init();
         </script>
     </body>
 </html>
