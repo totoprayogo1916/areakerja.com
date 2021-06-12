@@ -117,9 +117,6 @@
                     </div>
                     <div class="tab">
                         <div class="form-group">
-                            <h2> Ba
-                    <div class="tab">
-                        <div class="form-group">
                             <h2> Bagaimana Cara Mengirimkan Melamar? <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
                             </h2>
                         </div>

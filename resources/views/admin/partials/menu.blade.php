@@ -79,6 +79,14 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="{{ route("admin.lowongan.index") }}" class="nav-link {{ request()->is('admin/jobs') || request()->is('admin/jobs/*') ? 'active' : '' }}">
+                    <i class="fa-fw fas fa-briefcase nav-icon">
+
+                    </i>
+                    Lowongan
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                     <i class="nav-icon fas fa-fw fa-sign-out-alt">
 
