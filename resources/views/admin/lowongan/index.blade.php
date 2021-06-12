@@ -4,7 +4,8 @@
 <div class="card">
     <div class="card-header">
         <div class="row align-items-center justify-content-between d-flex" style="margin-left: 2px; margin-right:2px">
-            {{ trans('cruds.job.title_singular') }} {{ trans('global.list') }}
+            List Lowongan
+            <!-- {{ trans('cruds.job.title_singular') }} {{ trans('global.list') }} -->
             <a class="btn btn-success ml-2" href="#">
                 <i class="fa fa-plus mr-2" aria-hidden="true"></i>
                 {{ trans('global.add') }} {{ trans('cruds.job.title_singular') }}
