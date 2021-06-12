@@ -2557,7 +2557,7 @@ hr {
   /* opacity: .40; */
   background-color: #fe7c5400;
   border-radius: 8px;
-  border: 2px solid #eb5e0b;
+  border: 2px solid #fee5ba;
 }
 
 .nav-link .form-pasang5 {
@@ -2587,7 +2587,7 @@ hr {
 .form-pasang:hover {
   color: #fff;
   background-color: #eb5e0b;
-  border-color: #eb5e0b;
+  border-color: #fee5ba;
 }
 
 .primary-btn {
