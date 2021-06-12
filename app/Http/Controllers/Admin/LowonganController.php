@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Lowongan;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\MassDestroyLowonganRequest;
 use Gate;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -21,6 +22,21 @@ class LowonganController extends Controller
     public function show(Lowongan $lowongan)
     {
         return view('admin.lowongan.show', compact('lowongan'));
+    }
+
+    public function destroy(Lowongan $lowongan)
+    {
+
+        $lowongan->delete();
+
+        return back();
+    }
+
+    public function massDestroy(MassDestroyLowonganRequest $request)
+    {
+        Lowongan::whereIn('id', request('ids'))->delete();
+
+        return response(null, Response::HTTP_NO_CONTENT);
     }
 
 }

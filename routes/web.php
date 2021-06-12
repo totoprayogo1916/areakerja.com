@@ -51,5 +51,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
      Route::resource('companies', 'CompaniesController');
 
      
+     Route::delete('lowongan/destroy', 'LowonganController@massDestroy')->name('lowongan.massDestroy');
      Route::resource('lowongan', 'LowonganController');
 });
