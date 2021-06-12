@@ -67,7 +67,7 @@
         <script src="{{ asset('js/slick.min.js') }}"></script>
         <script src="{{ asset('js/custom.js') }}"></script>
         <script>
-            AOS.init();
+            AOS.init(once: true);
         </script>
 
     </body>
