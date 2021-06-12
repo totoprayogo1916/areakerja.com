@@ -3,7 +3,7 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.low.title') }}
+        {{ trans('global.show') }} 
     </div>
 
     <div class="card-body">
@@ -15,7 +15,7 @@
                             ID
                         </th>
                         <td>
-                            {{ $low->id }}
+                            {{ $lowongan->id }}
                         </td>
                     </tr>
                     <tr>
@@ -23,7 +23,7 @@
                             Nama Perusahaan
                         </th>
                         <td>
-                            {{ $low->namaperusahaan }}
+                            {{ $lowongan->namaperusahaan }}
                         </td>
                     </tr>
                     <tr>
@@ -31,7 +31,7 @@
                             Deskripsi
                         </th>
                         <td>
-                            {{ $low->deskripsiperusahaan }}
+                            {{ $lowongan->deskripsiperusahaan }}
                         </td>
                     </tr>
                     <tr>
@@ -39,7 +39,7 @@
                             Alamat
                         </th>
                         <td>
-                            {{ $low->alamatperusahaan }}
+                            {{ $lowongan->alamatperusahaan }}
                         </td>
                     </tr>
                     
@@ -48,8 +48,8 @@
                             Logo Perusahaan
                         </th>
                         <td>
-                            @if($low->gambar)
-                                <img src="{{ url('img/tmpcompanylogo') }}/{{ $low->gambar }}" style="width: 400px; height: 280px;">
+                            @if($lowongan->gambar)
+                                <img src="{{ url('img/tmpcompanylogo') }}/{{ $lowongan->gambar }}" style="width: 400px; height: 280px;">
                             @endif
                         </td>
                     </tr>
@@ -58,7 +58,7 @@
                             Nama Pekerjaan
                         </th>
                         <td>
-                            {{ $low->title }}
+                            {{ $lowongan->title }}
                         </td>
                     </tr>
                     <tr>
@@ -66,7 +66,7 @@
                             Deskripsi Pekerjaan
                         </th>
                         <td>
-                            {{ $low->short_description }}
+                            {{ $lowongan->short_description }}
                         </td>
                     </tr>
                     <tr>
@@ -74,7 +74,7 @@
                             Syarat Pekerjaan
                         </th>
                         <td>
-                            {{ $low->full_description}}
+                            {{ $lowongan->full_description}}
                         </td>
                     </tr>
                     <tr>
@@ -82,7 +82,7 @@
                             Status Kerja
                         </th>
                         <td>
-                            {{ $low->job_nature }}
+                            {{ $lowongan->job_nature }}
                         </td>
                     </tr>
                     <tr>
@@ -90,7 +90,7 @@
                             Batas Lamaran
                         </th>
                         <td>
-                            {{ $low->bataslamaran }}
+                            {{ $lowongan->bataslamaran }}
                         </td>
                     </tr>
                     <tr>
@@ -98,7 +98,7 @@
                             Gaji
                         </th>
                         <td>
-                            {{ $low->salary }}
+                            {{ $lowongan->salary }}
                         </td>
                     </tr>
                     <tr>
@@ -106,7 +106,7 @@
                             Email
                         </th>
                         <td>
-                            <{{ $low->email }}
+                            <{{ $lowongan->email }}
                         </td>
                     </tr>
                     <tr>
@@ -114,7 +114,7 @@
                             No Telepon
                         </th>
                         <td>
-                            {{ $low->notelp }}
+                            {{ $lowongan->notelp }}
                         </td>
                     </tr>
                     <tr>
@@ -122,7 +122,7 @@
                             Website
                         </th>
                         <td>
-                            {{ $low->web }}
+                            {{ $lowongan->web }}
                         </td>
                     </tr>
                 </tbody>
