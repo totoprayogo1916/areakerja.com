@@ -12,12 +12,8 @@
                 <h6 style="color: #fe7b54; text-shadow: 1px 1px 2px #353535b0;">
                 Tambah Lowongan Dari Perusahaan Anda Dengan Mudah
                 </h6>
-<<<<<<< HEAD
                 <form method="POST" enctype="multipart/form-data" action="{{ url('formpasang') }}" id="regForm" style="width: 50%; ">
                     @csrf
-=======
-                <form id="regForm" action="" style="width: 50%; ">
->>>>>>> d24874d95af16076c18493c4c413f5b82f735bb4
                     <div class="tab" >
                         <div class="form-group">
                             <h4>Nama Perusahaan
@@ -124,9 +120,6 @@
                             </div>
                         </div>
                     </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <div class="tab">
                         <div class="form-group">
                             <h2> Bagaimana Cara Mengirimkan Melamar? <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
@@ -145,82 +138,32 @@
 
                                     <input class="form-check-input" type="checkbox" value="" id="web" onclick="myFunction()">
                                     Formulir Web</label>
-=======
-                    <div class="tab">
-                        <div class="form-group row">
-                            <h2> Bagaimana Cara Mengirimkan Melamar? <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
-                            </h2>
-                        </div>
-                        <div class="form-group row">
-                            <div class="form-check form-check-inline "> 
-                            <input class="form-check-input " type="checkbox" value="" id="email">
-                            <label class="form-check-label" for="email">Email</label>
-                            </div>
-
-                            <div class="form-check form-check-inline "> 
-                            <input class="form-check-input " type="checkbox" value="" id="hp" onclick="myFunction()">
-                            <label class="form-check-label" for="hp" >No. Telp/Whatsapp</label>
-                            </div>
-                            
-                            <div class="form-check form-check-inline "> 
-                            <input class="form-check-inpu " type="checkbox" value="" id="web" onclick="myFunction()">
-                            <label class="form-check-label" for="web" >Formulir Web</label>
->>>>>>> d24874d95af16076c18493c4c413f5b82f735bb4
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <h4>Email
-                                <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
-                            </h4>
-                            <div >
-<<<<<<< HEAD
-                                <input id="emailreq" name="emailreq"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
-                                <label> Email wajib diisi untuk konfirmasi pembayaran, hanya ditampilkan publik jika merupakan cara untuk mengirimkan lamaran
-                                </label>
-                            </div>
-                        </div>
-
-
 
                         <div class="form-group" id="hpform" style="display:none">
                             <h4>Deskripsi Pekerjaan</h4>
                             <div >
                                 <textarea  id="deskripsipkrjaan" name="deskripsipkrjaan" required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
                             </div>
-=======
                                 <input required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
-                                <label> Email wajib diisi untuk konfirmasi pembayaran, hanya ditampilkan publik jika merupakan cara untuk mengirimkan lamaran 
+                                <label> Email wajib diisi untuk konfirmasi pembayaran, hanya ditampilkan publik jika merupakan cara untuk mengirimkan lamaran
                                 </label>
-                            </div> 
-                        </div> 
-
-                       
+                            </div>
+                        </div>
 
                         <div class="form-group" id="hpform" style="display:none">
                             <h4>No. Telp/Whatsapp</h4>
                             <div >
                             <input required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
-                            </div> 
->>>>>>> d24874d95af16076c18493c4c413f5b82f735bb4
+                            </div>
                         </div>
 
                         <div class="form-group" id="webform" style="display:none">
                             <h4>Formulir Web</h4>
                             <div>
-<<<<<<< HEAD
                                 <input id="formwebb" name="formwebb"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"
                                 placeholder="Contoh: https://docs.google.com/forms/d/xxx">
                             </div>
                         </div>
-=======
-                                <input required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"
-                                placeholder="Contoh: https://docs.google.com/forms/d/xxx">
-                            </div> 
-                        </div> 
->>>>>>> d24874d95af16076c18493c4c413f5b82f735bb4
-
-
                         <div class="row form-wrap justify-content-around" style="margin-top: 2%">
                             <div class="col-lg-3 form-cols">
                                 <button type="submit" class="btn btn-area" onclick="nextPrev(-1)" >
@@ -229,26 +172,11 @@
                             </div>
                             <div class="col-lg-3 form-cols">
                                 <button type="submit" class="btn btn-area"  >
-<<<<<<< HEAD
                                     <span ></span> Selanjutnya
-=======
-                                <span ></span> Selanjutnya
->>>>>>> d24874d95af16076c18493c4c413f5b82f735bb4
                                 </button>
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 4408a41179f7d3b22cffae52b339f455e101ff52
-
-
-=======
-
-
-                    
->>>>>>> d24874d95af16076c18493c4c413f5b82f735bb4
 
                     {{-- <div style="overflow:auto;">
                       <div style="float:right;">
