@@ -50,7 +50,7 @@
                         </div>
                     </div>
 
-                    <div class="tab">
+                    <div class="tab" id="pasangform1">
                         <div class="form-group">
                             <h4>Nama Pekerjaan
                                 <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
@@ -104,18 +104,17 @@
 
                         <div class="row form-wrap justify-content-around" style="margin-top: 2%">
                             <div class="col-lg-3 form-cols">
-                                <button type="submit" class="btn btn-area" onclick="nextPrev(-1)" >
-                                <span ></span> Sebelumnya
+                                <button type="submit" class="btn btn-area" onclick="nextPrev(-1)">
+                                    <span>Sebelumnya</span>
                                 </button>
-                            </div>
-                            <div class="col-lg-3 form-cols">
+
                                 <button type="submit" class="btn btn-area" onclick="nextPrev(1)">
-                                <span ></span> Selanjutnya
+                                    <span>Selanjutnya</span>
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <div class="tab">
+                    <div class="tab" id="pasangform2">
                         <div class="form-group">
                             <h2> Bagaimana Cara Mengirimkan Melamar? <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
                             </h2>
@@ -126,14 +125,13 @@
                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                     Email</label>
                                 <label for="hp" >
-
                                     <input class="form-check-input" type="checkbox" value="" id="hp" onclick="myFunction()">
                                     No. Telp/Whatsapp</label>
                                 <label for="defaultCheck3" >
-
                                     <input class="form-check-input" type="checkbox" value="" id="web" onclick="myFunction()">
-                                    Formulir Web</label>
-                        </div>
+                                    Formulir Web
+                                </label>
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -164,12 +162,11 @@
                         <div class="row form-wrap justify-content-around" style="margin-top: 2%">
                             <div class="col-lg-3 form-cols">
                                 <button type="submit" class="btn btn-area" onclick="nextPrev(-1)" >
-                                <span ></span> Sebelumnya
+                                <span>Sebelumnya</span>
                                 </button>
-                            </div>
-                            <div class="col-lg-3 form-cols">
+
                                 <button type="submit" class="btn btn-area"  >
-                                    <span ></span> Selanjutnya
+                                    <span>Selanjutnya</span>
                                 </button>
                             </div>
                         </div>
