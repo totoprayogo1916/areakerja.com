@@ -16,13 +16,14 @@
                             Catatan: Kami tidak menerima pertanyaan terkait ketersediaan lowongan dan sebagainya. Untuk bertanya hal terkait, silahkan hubungi kontak perusahaan yang membuka lowongan kerja tersebut.
                         </p>
 
-                        <form action="#" class="serach-form-area flex-wrap">
+                        <form method="POST" enctype="multipart/form-data" action="{{ url('kontakform') }}" class="serach-form-area flex-wrap">
+                            @csrf
                             <div class="form-group col-5" style="margin-left: 4%; margin-right: 4%" id="kontaknama">
                                 <h4 style="margin-bottom: 2%">Nama
                                     <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
                                 </h4>
                                 <div>
-                                    <input required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
+                                    <input id="nama" name="nama" required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
                                 </div>
                             </div>
                             <div class="form-group col-5" style="margin-left: 5%" id="kontakemail">
@@ -30,7 +31,7 @@
                                     <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
                                 </h4>
                                 <div >
-                                    <input required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
+                                    <input id="email" name="email" required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
                                 </div>
                             </div>
                             <div class="form-group col-5" style="margin-left: 4%; margin-top: 5%" id="kontaknomor">
@@ -38,7 +39,7 @@
                                     <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
                                 </h4>
                                 <div >
-                                    <input required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
+                                    <input id="nomor" name="nomor" required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
                                 </div>
                             </div>
                             <div class="form-group col-11" style="margin-left: 4%; margin-top: 5%">
@@ -46,14 +47,14 @@
                                     <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
                                 </h4>
                                 <div >
-                                    <textarea required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
+                                    <textarea id="saran" name="saran"required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
                                 </div>
                             </div>
                             <div class="row form-wrap justify-content-around" style="margin-top: 2%; margin-left: auto">
                                 <div class="col-lg-3 form-cols">
-                                    <a type="submit" class="btn btn-area" href="{{route('pasang2')}}">
+                                    <button type="submit" class="btn btn-area">
                                         <span ></span> Kirim
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </form>
