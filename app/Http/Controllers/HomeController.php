@@ -70,7 +70,10 @@ class HomeController extends Controller
     public function kirimmail(Request $request)
     {
         $nama = $request->nama;
-        $email = "ti.fadelirsyad04@gmail.com";
+        $email1 = $request->email;
+        $pesan = $request->pesan;
+        $nomor = $request->nomor;
+        $email = "ti.ganisarya11@gmail.com";
         $kirim = Mail::to($email)->send(new SendMail($nama));
 
         if($kirim){

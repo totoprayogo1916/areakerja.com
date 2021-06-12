@@ -16,9 +16,10 @@ class SendMail extends Mailable
      *
      * @return void
      */
-    public function __construct($nama)
+    public function __construct($nama,$nomor)
     {
         $this->nama = $nama;
+        $this->nomor = $nomor;
     }
 
     /**
@@ -32,7 +33,8 @@ class SendMail extends Mailable
             ->view('email')
             ->with(
             [
-                'nama' => $this->nama
+                'nama' => $this->nama,
+                'nomor' => $this->nomor
             ]);
     }
 }
