@@ -30,15 +30,7 @@ class LowonganAdmin extends Migration
 
             $table->longText('full_description')->nullable();
 
-            $table->longText('requirements')->nullable();
-
             $table->string('job_nature')->nullable();
-
-            $table->string('pendidikan')->nullable();
-
-            $table->string('gender')->nullable();
-
-            $table->string('umur')->nullable();
 
             $table->string('bataslamaran')->nullable();
 
