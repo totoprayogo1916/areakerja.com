@@ -52,4 +52,16 @@ class HomeController extends Controller
     {
         return view('user.kontak');
     }
+
+    public function kontakform(Request $request)
+    {
+        dd($request);
+        // return view('user.kontak');
+    }
+
+    public function formpasang(Request $request)
+    {
+        dd($request);
+        // return view('user.kontak');
+    }
 }
