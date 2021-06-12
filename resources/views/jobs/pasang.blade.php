@@ -37,10 +37,8 @@
 
                         <div class="form-group">
                             <h4> Logo Perusahaan </h4>
-                            <div class="custom-file">
-                            <input type="file" id="logoperusahaan" name="logoperusahaan">
-                            <label for="logoperusahaan">Choose file...</label>
-                            </div>
+                            <input type="file"  id="gambar" name="gambar">
+
                             </div>
 
                         <div class="row form-wrap justify-content-around" style="margin-top: 2%">
@@ -58,14 +56,14 @@
                                 <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
                             </h4>
                             <div >
-                                <input id="namapekerjaan" name="namapekerjaan"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
+                                <input id="title" name="title"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <h4>Status Pekerjaan <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span> </h4>
                             <div >
-                                <select id="statusperusahaan" name="statusperusahaan"  class="form-control2" required>
+                                <select id="job_nature" name="job_nature"  class="form-control2" required>
                                     <option value="1">Full Time</option>
                                     <option value="2">Part Time</option>
                                     <option value="3">Freelance</option>
@@ -75,28 +73,25 @@
                         </div>
 
                         <div class="form-group">
-                            <h4>Kisaran Gaji</h4>
-                            <div class="form-row">
-                                <div class="col">
-                                    <input id="mingaji" name="mingaji"  type="text" class="form-control2" placeholder="Minimal Gaji">
-                                </div>
-                                <div class="col">
-                                    <input  id="maxgaji" name="maxgaji"  type="text" class="form-control2" placeholder="Maksimal Gaji">
-                                </div>
+                            <h4>Kisaran Gaji
+                                <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
+                            </h4>
+                            <div >
+                                <input id="salary" name="salary"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <h4>Deskripsi Pekerjaan</h4>
                             <div >
-                                <textarea  id="deskripsipekerjaan" name="deskripsipekerjaan" required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
+                                <textarea  id="short_description" name="short_description" required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <h4>Syarat Pekerjaan</h4>
                             <div >
-                                <textarea id="syaratpekerjaan" name="syaratpekerjaan"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
+                                <textarea id="full_description" name="full_description"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
                             </div>
                         </div>
 
@@ -149,7 +144,7 @@
                             <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
                             </h4>
                             <div >
-                                <input id="emaillamar" name="emaillamar" required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
+                                <input id="email" name="email" required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true" >
                                 <label> Email wajib diisi untuk konfirmasi pembayaran, hanya ditampilkan publik jika merupakan cara untuk mengirimkan lamaran
                                 </label>
                             </div>
@@ -158,14 +153,14 @@
                         <div class="form-group" id="hpform" style="display:none">
                             <h4>No. Telp/Whatsapp</h4>
                             <div >
-                            <input id="nomerhp" name="nomerhp" required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
+                            <input id="notelp" name="notelp" type="text"  class="form-control2 " value="" data-type="text" >
                             </div>
                         </div>
 
                         <div class="form-group" id="webform" style="display:none">
                             <h4>Formulir Web</h4>
                             <div>
-                                <input id="formwebb" name="formwebb"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"
+                                <input id="web" name="web"  type="text"  class="form-control2 " value="" data-type="text"
                                 placeholder="Contoh: https://docs.google.com/forms/d/xxx">
                             </div>
                         </div>
