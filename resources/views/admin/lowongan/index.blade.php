@@ -4,7 +4,8 @@
 <div class="card">
     <div class="card-header">
         <div class="row align-items-center justify-content-between d-flex" style="margin-left: 2px; margin-right:2px">
-            {{ trans('cruds.job.title_singular') }} {{ trans('global.list') }}
+            List Lowongan
+            <!-- {{ trans('cruds.job.title_singular') }} {{ trans('global.list') }} -->
             <a class="btn btn-success ml-2" href="#">
                 <i class="fa fa-plus mr-2" aria-hidden="true"></i>
                 {{ trans('global.add') }} {{ trans('cruds.job.title_singular') }}
@@ -122,6 +123,12 @@
                                     {{ trans('global.view') }}
                                 </a>
 
+                                <form action="{{ route('admin.lowongan.destroy', $low->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}" style="width: 60px">
+                                </form>
+
                             </td>
 
                         </tr>
@@ -143,7 +150,7 @@
   let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
   let deleteButton = {
     text: deleteButtonTrans,
-    url: "{{ route('admin.jobs.massDestroy') }}",
+    url: "{{ route('admin.lowongan.massDestroy') }}",
     className: 'btn-danger',
     action: function (e, dt, node, config) {
       var ids = $.map(dt.rows({ selected: true }).nodes(), function (entry) {
