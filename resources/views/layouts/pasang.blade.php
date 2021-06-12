@@ -25,9 +25,9 @@
     @include('partials.header')
         <div class="banner-area">
         </div>
-        {{-- @include('partials.banner') --}}        
+        {{-- @include('partials.banner') --}}
 
-        
+
         <!-- Start post Area -->
         <section class="section-gap2">
             @yield('home')
@@ -57,6 +57,7 @@
         <script src="{{ asset('js/app2.js') }}"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="{{ asset('js/app2user.js') }}"></script>
+        <script src="{{ asset('js/app2pasang.js') }}"></script>
         <script src="{{ asset('js/slick.min.js') }}"></script>
         <script src="{{ asset('js/custom.js') }}"></script>
         <script src="{{ asset('js/pasang.js') }}"></script>
