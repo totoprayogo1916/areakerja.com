@@ -120,6 +120,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="tab">
                         <div class="form-group">
                             <h2> Bagaimana Cara Mengirimkan Melamar? <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
@@ -138,13 +139,15 @@
 
                                     <input class="form-check-input" type="checkbox" value="" id="web" onclick="myFunction()">
                                     Formulir Web</label>
+                        </div>
+                        </div>
 
-                        <div class="form-group" id="hpform" style="display:none">
-                            <h4>Deskripsi Pekerjaan</h4>
+                        <div class="form-group">
+                        <h4>Email
+                            <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
+                            </h4>
                             <div >
-                                <textarea  id="deskripsipkrjaan" name="deskripsipkrjaan" required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
-                            </div>
-                                <input required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
+                                <input id="emaillamar" name="emaillamar" required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
                                 <label> Email wajib diisi untuk konfirmasi pembayaran, hanya ditampilkan publik jika merupakan cara untuk mengirimkan lamaran
                                 </label>
                             </div>
@@ -153,7 +156,7 @@
                         <div class="form-group" id="hpform" style="display:none">
                             <h4>No. Telp/Whatsapp</h4>
                             <div >
-                            <input required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
+                            <input id="nomerhp" name="nomerhp" required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
                             </div>
                         </div>
 
@@ -177,6 +180,7 @@
                             </div>
                         </div>
                     </div>
+                    
 
                     {{-- <div style="overflow:auto;">
                       <div style="float:right;">
