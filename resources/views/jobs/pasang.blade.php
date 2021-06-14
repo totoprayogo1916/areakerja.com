@@ -103,7 +103,7 @@
                         </div>
 
                         <div class="row form-wrap justify-content-around" style="margin-top: 2%">
-                            <div class="col-lg-3 form-cols">
+                            <div class="col-lg-9 form-cols">
                                 <button type="submit" class="btn btn-area" onclick="nextPrev(-1)">
                                     <span>Sebelumnya</span>
                                 </button>
