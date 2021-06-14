@@ -7,7 +7,7 @@
     </div>
 
     <div class="card-body">
-        <form action="{{ route("admin.jobs.store") }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route("admin.jobs.store") }}" method="POST" enctype="multipart/form-data" id="form-name">
             @csrf
             <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
                 <label for="title">{{ trans('cruds.job.fields.title') }}*</label>
@@ -60,15 +60,21 @@
             </div>
             <div class="form-group {{ $errors->has('requirements') ? 'has-error' : '' }}">
                 <label for="requirements">{{ trans('cruds.job.fields.requirements') }}</label>
-                <textarea id="requirements" name="requirements" class="form-control ">{{ old('requirements', isset($job) ? $job->requirements : '') }}</textarea>
-                @if($errors->has('requirements'))
-                    <em class="invalid-feedback">
-                        {{ $errors->first('requirements') }}
-                    </em>
-                @endif
-                <p class="helper-block">
-                    {{ trans('cruds.job.fields.requirements_helper') }}
-                </p>
+                <div class="alert alert-danger print-error-msg" style="display:none">
+                    <ul></ul>
+                    </div>
+        
+                    <div class="alert alert-success print-success-msg" style="display:none">
+                    <ul></ul>
+                    </div>
+                    <div class="table-responsive">  
+                        <table class="table table-bordered" id="dynamic_field">  
+                            <tr>  
+                                <td><input type="text" name="name[]" placeholder="Enter your Name" class="form-control name_list" /></td>  
+                                <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>  
+                            </tr>  
+                        </table>    
+                    </div>
             </div>
             <div class="form-group {{ $errors->has('job_nature') ? 'has-error' : '' }}">
                 <label for="job_nature">{{ trans('cruds.job.fields.job_nature') }}</label>

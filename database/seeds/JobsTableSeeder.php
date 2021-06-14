@@ -21,7 +21,7 @@ class JobsTableSeeder extends Seeder
             'short_description' => 'Membuka lowongan kerja untuk posisi sebagai kameramen',
             'full_description' =>
                 'Membuka lowongan kerja untuk posisi sebagai kameramen acara talkshow',
-            'requirements' => 'Handal shoot dan mengerti kamera',
+            'requirements' => ['Toni Abbah','Anastacia Mast','Soji Igbonna'],
             'job_nature' => 'Full-time',
             'address' => 'Banguntapan',
             'top_rated' => '1',
@@ -43,9 +43,7 @@ class JobsTableSeeder extends Seeder
                 'Membuka lowongan kerja untuk posisi sebagai Customer Service.',
             'full_description' =>
                 'JW Media Production saat ini membuka lowongan kerja untuk posisi sebagai Customer Service.',
-            'requirements' => 'Wanita menutup aurat, Usia minimal 20 tahun, Minima; lulusan SMA/ Sederajt, Memiliki komunikasi yang baik,
-                Terbiasa fast reson, Good Vibes, bersemangat dan good attitude, Bisa bekerja tim dan di bawah tekanan,
-                Mampu bekerja target, Mempunyai pengalaman sesuai bidang',
+            'requirements' => ['Toni Abbah','Anastacia Mast','Soji Igbonna'],
             'job_nature' => 'Full-time',
             'address' => 'Banguntapan jogja',
             'top_rated' => '1',
@@ -67,7 +65,7 @@ class JobsTableSeeder extends Seeder
                 'Pawon Resto adalah perusahaan yang bergerak dibidang kuliner.',
             'full_description' =>
                 'Pawon Resto adalah perusahaan yang bergerak dibidang kuliner.',
-            'requirements' => 'Menyiapkan pesanan customer, Menerima Pembayaran, Membuat laporan setiap harinya.',
+            'requirements' => ['Toni Abbah','Anastacia Mast','Soji Igbonna'],
             'job_nature' => 'Full-time',
             'address' => 'Banguntapan jogja',
             'top_rated' => '0',
@@ -90,7 +88,7 @@ class JobsTableSeeder extends Seeder
             'full_description' =>
                 'Panara Course adalah program pelatihan dan pendidikan untuk masuk TNI dan POLRI yang dipersiapkan secara Akademik, Psikologi, Fisik, dan Mental sebelum mengikuti pendaftaran resmi Taruna TNI dan POLRI.
                 Panara Course berdiri di bawah badan Hukum PT. Pendidikan Abdi Negara.',
-            'requirements' => 'Tingkat Pendidikan: SMA/SMK, D3, S1',
+            'requirements' => ['Toni Abbah','Anastacia Mast','Soji Igbonna'],
             'job_nature' => 'Full-time',
             'address' => 'DIY',
             'top_rated' => '1',
@@ -112,9 +110,7 @@ class JobsTableSeeder extends Seeder
                 'membuka lowongan kerja untuk posisi sebagai Content Creator.',
             'full_description' =>
                 'Saat ini membuka lowongan kerja untuk posisi sebagai Content Creator.',
-            'requirements' => 'Wanita usia 35 tahun, Good communication skill, Kreatif dalam membuat konten sosmed, Familiar menggunakan sosmed terutama FB & IG,
-                Menguasai software & aplikasi design dan editing foto (misal Adobe,Corel, Al, aplikasi Canva dll),
-                Jujur dan tanggung jawab',
+            'requirements' => ['Toni Abbah','Anastacia Mast','Soji Igbonna'],
             'job_nature' => 'Full-time',
             'address' => 'Bantul',
             'top_rated' => '0',
@@ -136,7 +132,7 @@ class JobsTableSeeder extends Seeder
                 'Jogja Tailor adalah perusahaan yang bergerak di bidang fashion',
             'full_description' =>
                 'Membuka kesempatan berkarir bagi para profesional muda yang aktif untuk bergabung bersama kami di posisi Desainer.',
-            'requirements' => 'Tingkat Pendidikan : D3, S1',
+            'requirements' => ['Toni Abbah','Anastacia Mast','Soji Igbonna'],
             'job_nature' => 'Full-time',
             'address' => 'Sleman',
             'top_rated' => '1',
@@ -158,7 +154,7 @@ class JobsTableSeeder extends Seeder
                 'membuka lowongan kerja untuk posisi sebagai Barista, Waiters, Cashier.',
             'full_description' =>
                 'membuka lowongan kerja untuk posisi sebagai Barista, Waiters, Cashier.',
-            'requirements' => 'Tingkat Pendidikan : SMA/SMK',
+            'requirements' => ['Toni Abbah','Anastacia Mast','Soji Igbonna'],
             'job_nature' => 'Full-time',
             'address' => 'Bantul',
             'top_rated' => '0',
@@ -180,7 +176,7 @@ class JobsTableSeeder extends Seeder
                 'PT. Kata Suhu Kita dengan brand SUHU Consulting and Training merupakah sebuah perusahaan yang bergerak di bidang jasa pelatihan dan konsultasi IT dan SDM.',
             'full_description' =>
                 'SUHU mengajak talenta-talenta muda yang mempunyai semangat tinggi untuk bergabung menjadi keluarga baru kami',
-            'requirements' => 'Tingkat Pendidikan : D3, S1',
+            'requirements' => ['Toni Abbah','Anastacia Mast','Soji Igbonna'],
             'job_nature' => 'Full-time',
             'address' => 'Sleman',
             'top_rated' => '0',
@@ -202,7 +198,7 @@ class JobsTableSeeder extends Seeder
                 'The Oxalis Regency Hotel ini berjarak 2 KM dari Borobudur International Golf & Country Club',
             'full_description' =>
                 'The Oxalis Regency Hotel ini berjarak 2 KM dari Borobudur International Golf & Country Club',
-            'requirements' => 'Tingkat Pendidikan : D3, S1',
+            'requirements' => ['Toni Abbah','Anastacia Mast','Soji Igbonna'],
             'job_nature' => 'Full-time',
             'address' => 'DIY',
             'top_rated' => '0',
@@ -224,7 +220,7 @@ class JobsTableSeeder extends Seeder
                 'JW Media Production adalah pengelola website dan beberapa channel Youtube yang berlokasi di Yogyakarta.',
             'full_description' =>
                 'Saat ini, kami membuka kesempatan bagi orang-orang dengan kreativitas tinggi untuk bergabung dan berkarir dengan tim kami.',
-            'requirements' => 'Tingkat Pendidikan : SMA/SMK, D3, S1',
+            'requirements' => ['Toni Abbah','Anastacia Mast','Soji Igbonna'],
             'job_nature' => 'Full-time',
             'address' => 'Sleman',
             'top_rated' => '0',
@@ -246,7 +242,7 @@ class JobsTableSeeder extends Seeder
                 'Membuka lowongan untuk talenta muda profesional ',
             'full_description' =>
                 'Dynamic Space adalah perusahaan digutal marketing yang sedang berkembang, membutuhkan talenta muda profesional yang siap berkembang untuk kemajuan digital marketing di Indonesia.',
-            'requirements' => 'Tingkat Pendidikan : SMA/SMK, D3, S1',
+            'requirements' => ['Toni Abbah','Anastacia Mast','Soji Igbonna'],
             'job_nature' => 'Full-time',
             'address' => 'Sleman',
             'top_rated' => '1',
@@ -268,7 +264,7 @@ class JobsTableSeeder extends Seeder
                 'Membuka lowongan untuk Human Resource Development',
             'full_description' =>
                 'Jubahakhwat saat ini membuka lowongan kerja untuk posisi sebagai Human Resource Development.',
-            'requirements' => 'Tingkat Pendidikan : SMA/SMK, D3, S1',
+            'requirements' => ['Toni Abbah','Anastacia Mast','Soji Igbonna'],
             'job_nature' => 'Full-time',
             'address' => 'Sleman',
             'top_rated' => '0',

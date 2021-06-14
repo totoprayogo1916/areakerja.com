@@ -33,6 +33,9 @@
                             {{ trans('cruds.job.fields.short_description') }}
                         </th>
                         <th>
+                            Requirements
+                        </th>
+                        <th>
                             {{ trans('cruds.job.fields.location') }}
                         </th>
                         <th>
@@ -69,6 +72,12 @@
                             </td>
                             <td>
                                 {{ $job->short_description ?? '' }}
+                            </td>
+                            <td>
+                                @foreach($job->requirements as $link)
+                                    <li>{{ $link }}</li>    
+                                
+                                @endforeach
                             </td>
                             <td>
                                 {{ $job->location->name ?? '' }}

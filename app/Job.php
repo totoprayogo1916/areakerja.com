@@ -28,9 +28,12 @@ class Job extends Model
         'updated_at',
         'deleted_at',
         'location_id',
-        'requirements',
         'full_description',
         'short_description',
+    ];
+
+    protected $casts = [
+        'requirements' => 'array'
     ];
 
     public function company()
