@@ -25,7 +25,6 @@ class HomeController extends Controller
             ->get();
         $sidbarJobs = Job::whereTopRated(true)
         ->orderBy('id', 'desc')
-        ->take(5)
         ->get();
 
         return view('index', compact(['searchLocations', 'searchCategories', 'searchByCategory', 'jobs', 'sidbarJobs']));

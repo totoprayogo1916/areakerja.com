@@ -19,8 +19,12 @@ class CategoryController extends Controller
             })
             ->paginate(7);
 
+        $sidbarJobs = Job::whereTopRated(true)
+            ->orderBy('id', 'desc')
+            ->get();
+
         $banner = 'Category: '.$category->name;
 
-        return view('jobs.index', compact(['jobs', 'banner', 'searchLocations', 'searchCategories']));
+        return view('jobs.index', compact(['jobs', 'banner', 'searchLocations', 'searchCategories', 'sidbarJobs']));
     }
 }

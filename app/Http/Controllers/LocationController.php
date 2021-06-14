@@ -17,9 +17,12 @@ class LocationController extends Controller
                 $query->whereId($location->id);
             })
             ->paginate(7);
+        $sidbarJobs = Job::whereTopRated(true)
+            ->orderBy('id', 'desc')
+            ->get();
 
         $banner = 'Location: '.$location->name;
 
-        return view('jobs.index', compact(['jobs', 'banner', 'searchCategories', 'searchLocations']));
+        return view('jobs.index', compact(['jobs', 'banner', 'searchCategories', 'searchLocations', 'sidbarJobs']));
     }
 }
