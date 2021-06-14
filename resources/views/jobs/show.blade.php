@@ -147,7 +147,7 @@
                     </a>
                 </div>
                 <div class="col-2">
-                    <a type="button" class="btn form-pasang3" href="{{ route('login') }}">
+                    <a type="button" class="btn form-pasang3" href="whatsapp://send?text={{ route('jobs.show', $job->id) }}">
                         <h4 style="font-weight: normal"><span class="fa fa-share-alt"></span><span style="display:inline-block; width: 10px;"></span>Bagikan</h4>
 
                     </a>
