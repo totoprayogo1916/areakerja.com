@@ -47,7 +47,7 @@ class JobController extends Controller
             ->get();
         $sidebarJobs = Job::whereTopRated(true)
         ->orderBy('id', 'desc')
-        ->take(5)
+        ->take(0)
         ->get();
 
         $sidebarLocations = Location::withCount('jobs')->whereHas('jobs')->orderBy('jobs_count', 'desc')->get();
