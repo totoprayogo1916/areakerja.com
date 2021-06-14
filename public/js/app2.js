@@ -22,7 +22,7 @@ if ($(window).width() < 1070) {
     formdalam.style.marginLeft='0%';
     formdalam.style.marginRight='5%';
     maincontent.style.marginTop='60%';
-    document.getElementById("slick").style.display='none';
+    // document.getElementById("slick").style.display='none';
     document.getElementById("top-rate-side").style.display='block';
 }
 
