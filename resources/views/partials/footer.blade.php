@@ -6,9 +6,9 @@
                 <div class="container footer-nav">
                     <a href="{{ route('home') }}"><img src="{{ asset('img/logo3.svg') }}" alt="" title="" /></a>
                     <ul class="col row">
-                        <li>
+                        {{-- <li>
                             <a href= #>Artikel</a>
-                        </li>
+                        </li> --}}
                         <li>
                             <a href= "{{ route('aboutus') }}">Tentang Kami</a>
                         </li>
@@ -20,7 +20,7 @@
                         </li>
                     </ul>
                 </div>
-    
+
                 <div>
                     <p class="col-lg-8 footer-text m-0" style="color: white">
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -28,15 +28,15 @@
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                 </div>
-    
+
             </div>
-    
-    
+
+
             <div class="col-lg-4">
                 <div class="footer-social">
                     <h4 class="text-white">Temukan Kami di</h4>
                     <ul class="col row">
-    
+
                         <li>
                             <a href="https://www.instagram.com/areakerjacom/"><i class="fa fa-instagram" style="font-size:36px"></i></a>
                         </li>
@@ -56,8 +56,8 @@
                 </div>
             </div>
     </div>
-    
-    
+
+
 
     </div>
 </footer>
