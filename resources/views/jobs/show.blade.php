@@ -11,15 +11,15 @@
         <div class="row align-items-center justify-content-center" style="margin-right: 15px; margin-left: 15px;">
             <div class="banner-content col-lg-12">
                 </h6>
-                 <form action="#" class="serach-form-area flex-wrap" style="width: 100%; margin-top: 5%">
+                 <form action="{{ route('search') }}" class="serach-form-area flex-wrap" style="width: 100%; margin-top: 5%">
                     <div class="col form-wrap-main" id="form-luar">
                         <div class="row form-wrap justify-content-center" id="form-dalam">
                             <div class="col-lg-3 form-cols">
-                                <input type="text" class="form-control" placeholder="Cari Disini..">
+                                <input type="text" class="form-control" name="search" placeholder="Cari Disini..">
                             </div>
                             <div class="col-lg-3 form-cols">
                                 <div class="default-select" id="default-selects">
-                                    <select>
+                                    <select name="location">
                                         <option value="0">All Areas</option>
                                         @foreach($searchLocations as $id=>$searchLocations)
                                             <option value="{{ $id }}">{{ $searchLocations }}</option>
@@ -29,7 +29,7 @@
                             </div>
                             <div class="col-lg-3 form-cols">
                                 <div class="default-select" id="default-selects2">
-                                    <select>
+                                    <select name="category">
                                         <option value="0">All Categories</option>
                                         @foreach($searchCategories as $id=>$searchCategories)
                                             <option value="{{ $id }}">{{ $searchCategories }}</option>

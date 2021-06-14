@@ -15,7 +15,7 @@
                     <div class="col form-wrap-main" id="form-luar">
                         <div class="row form-wrap justify-content-center" id="form-dalam">
                             <div class="col-lg-3 form-cols">
-                                <input type="text" class="form-control" name="search" placeholder="Cari Disini..">
+                                <input type="text" class="form-control"  name="search" placeholder="Cari Disini..">
                             </div>
                             <div class="col-lg-3 form-cols">
                                 <div class="default-select" id="default-selects">
