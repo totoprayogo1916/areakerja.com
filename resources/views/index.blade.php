@@ -64,11 +64,11 @@
             @if($job->company->gambar)
                 <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="width: 150px; height: 120px; margin-left: auto; margin-right: auto;margin-top: 10px">
             @endif
-            <h5 style="margin-left: 5%; margin-top: 5%;font-size: 16px" ><span class="lnr lnr-apartment"></span> {{ $job->company->name }}</h5>
+            <h5 style="margin-left: 5%; margin-top: 5%;font-size: 16px; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));" ><span class="lnr lnr-apartment"></span> {{ $job->company->name }}</h5>
             <hr/>
-            <h5 style="font-size: 16px;margin-left: 5%" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }}</h5>
+            <h5 style="font-size: 16px;margin-left: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }}</h5>
             <hr/>
-            <h5 style="font-size: 16px;margin-left: 5%;margin-bottom: 5%;"> <span class="lnr lnr-map"></span> {{ $job->address }}</h5>
+            <h5 style="font-size: 16px;margin-left: 5%;margin-bottom: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));"> <span class="lnr lnr-map"></span> {{ $job->address }}</h5>
 </a>
         </div>
     @endforeach

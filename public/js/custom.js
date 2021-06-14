@@ -23,9 +23,14 @@ $(function () {
       slidesToShow: 2,
       arrows: false,
       centerMode: false, /* set centerMode to false to show complete slide instead of 3 */
-      slidesToScroll: 1
+      slidesToScroll: 1,
       }
     }
    ]
     });
 });
+
+if ($(window).width() < 1070) {
+    var slick = document.getElementById("slick");
+    slick.style.marginTop='50%';
+}
