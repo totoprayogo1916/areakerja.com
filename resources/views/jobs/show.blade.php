@@ -157,16 +157,16 @@
                         <div class="row justify-content-center popuptext" id="myPopup" style="padding-right: 0px;margin-right: 0px">
                             <ul class="col row justify-content-center">
                                 <li>
-                                    <a href="https://www.instagram.com/areakerjacom/"><i class="fa fa-instagram" style="font-size:36px; color: antiquewhite""></i></a>
+                                    <a href="https://www.instagram.com/areakerjacom/"><i class="fa fa-instagram" style="font-size:36px; color: black""></i></a>
                                 </li>
                                 <li style="padding-left: 10px;">
-                                    <a href="{{ route('home') }}"><i class="fa fa-facebook-square" style="font-size:36px; color: antiquewhite"></i></a>
+                                    <a href="{{ route('home') }}"><i class="fa fa-facebook-square" style="font-size:36px; color: black"></i></a>
                                 </li>
                                 <li style="padding-left: 10px;">
-                                    <a href="{{ route('home') }}"><i class="fa fa-twitter-square" style="font-size:36px; color: antiquewhite""></i></a>
+                                    <a href="{{ route('home') }}"><i class="fa fa-twitter-square" style="font-size:36px; color: black""></i></a>
                                 </li>
                                 <li style="padding-left: 10px;">
-                                    <a href="{{ route('home') }}"><i class="fa fa-linkedin-square" style="font-size:36px; color: antiquewhite""></i></a>
+                                    <a href="https://wa.me/?text=Lowongan Kerja {{ $job->title }} di {{ $job->company->name }} - Areakerja.com - {{ route('jobs.show', $job->id) }}"><i class="fa fa-whatsapp" style="font-size:36px; color: black""></i></a>
                                 </li>
                             </ul>
                         </div>

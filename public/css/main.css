@@ -4250,7 +4250,8 @@ input.invalid {
 .popup .popuptext {
   visibility: hidden;
   width: 200%;
-  background-color: #555;
+  box-shadow: 5px 5px 10px rgba(0.15, 0.15, 0.15, 0.15);
+  background-color: rgb(255, 255, 255);
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -4285,7 +4286,7 @@ input.invalid {
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
+  from {opacity: 0;}
   to {opacity: 1;}
 }
 
