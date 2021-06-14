@@ -39,9 +39,13 @@ class HomeController extends Controller
             ->searchResults()
             ->paginate(7);
 
+        $sidbarJobs = Job::whereTopRated(true)
+            ->orderBy('id', 'desc')
+            ->get();
+
         $banner = 'Search results';
 
-        return view('jobs.index', compact(['jobs', 'banner', 'searchLocations', 'searchCategories']));
+        return view('jobs.index', compact(['jobs', 'banner', 'searchLocations','sidbarJobs', 'searchCategories']));
     }
 
     public function aboutus()
