@@ -8,4 +8,7 @@ if ($(window).width() < 1070) {
     pasangform1.style.marginLeft='-25%';
     pasangform2.style.width='150%';
     pasangform2.style.marginLeft='-25%';
+} else if ($(window).width() > 1900) {
+    var footer = document.getElementById("footer");
+    footer.style.marginTop='4%';
 }

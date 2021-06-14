@@ -4,7 +4,7 @@
 
 <section class="relative" id="home" >
 
-        <div class="row align-items-center justify-content-center" >
+        <div class="row align-items-center justify-content-center" style="margin-right: 1%">
             <div class="banner-content col-lg-12">
                 <h1 style="color: #fe7b54; text-shadow: 2px 2px 3px #353535b0;">
                     Form Order
@@ -12,7 +12,7 @@
                 <h6 style="color: #fe7b54; text-shadow: 1px 1px 2px #353535b0;">
                 Tambah Lowongan Dari Perusahaan Anda Dengan Mudah
                 </h6>
-                <form method="POST" enctype="multipart/form-data" action="{{ url('formpasang') }}" id="regForm" style="width: 50%; ">
+                <form method="POST" enctype="multipart/form-data" action="{{ url('formpasang') }}" id="regForm" style="width: 50%;">
                     @csrf
                     <div class="tab" id="pasangform">
                         <div class="form-group">
