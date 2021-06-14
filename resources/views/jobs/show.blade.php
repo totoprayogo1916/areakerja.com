@@ -146,11 +146,32 @@
                         <h4 style="font-weight: normal"><span class="fa fa-star-o"></span><span style="display:inline-block; width: 10px;"></span>Simpan</h4>
                     </a>
                 </div>
-                <div class="col-2">
+                {{-- <div class="col-2">
                     <a type="button" class="btn form-pasang3" href="whatsapp://send?text={{ route('jobs.show', $job->id) }}">
                         <h4 style="font-weight: normal"><span class="fa fa-share-alt"></span><span style="display:inline-block; width: 10px;"></span>Bagikan</h4>
 
                     </a>
+                </div> --}}
+                <div class="col-2" >
+                    <div class="btn popup form-pasang3" onclick="myFunction()"><h4 style="font-weight: normal"><span class="fa fa-share-alt"></span><span style="display:inline-block; width: 10px;"></span>Bagikan</h4>
+                        <div class="row justify-content-center popuptext" id="myPopup" style="padding-right: 0px;margin-right: 0px">
+                            <ul class="col row justify-content-center">
+                                <li>
+                                    <a href="https://www.instagram.com/areakerjacom/"><i class="fa fa-instagram" style="font-size:36px; color: antiquewhite""></i></a>
+                                </li>
+                                <li style="padding-left: 10px;">
+                                    <a href="{{ route('home') }}"><i class="fa fa-facebook-square" style="font-size:36px; color: antiquewhite"></i></a>
+                                </li>
+                                <li style="padding-left: 10px;">
+                                    <a href="{{ route('home') }}"><i class="fa fa-twitter-square" style="font-size:36px; color: antiquewhite""></i></a>
+                                </li>
+                                <li style="padding-left: 10px;">
+                                    <a href="{{ route('home') }}"><i class="fa fa-linkedin-square" style="font-size:36px; color: antiquewhite""></i></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                      </div>
                 </div>
             </div>
 

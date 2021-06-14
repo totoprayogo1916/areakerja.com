@@ -76,7 +76,7 @@
 @endsection
 
 @section('content')
-<div class="col-lg-8 post-list" id="main-content">
+<div class="col-lg-8 post-list border-right" id="main-content">
     @foreach($jobs as $job)
     <a href="{{ route('jobs.show', $job->id) }}">
         <div data-aos="fade-up" class="single-post align-items-center d-flex flex-row" style="width: 100%">
