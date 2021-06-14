@@ -157,13 +157,13 @@
                         <div class="row justify-content-center popuptext" id="myPopup" style="padding-right: 0px;margin-right: 0px">
                             <ul class="col row justify-content-center">
                                 <li>
-                                    <a href="https://www.instagram.com/areakerjacom/"><i class="fa fa-instagram" style="font-size:36px; color: black""></i></a>
+                                    <a href="https://www.instagram.com/?url=Lowongan Kerja {{ $job->title }} di {{ $job->company->name }} - Areakerja.com - {{ route('jobs.show', $job->id) }}"><i class="fa fa-instagram" style="font-size:36px; color: black"></i></a>
                                 </li>
                                 <li style="padding-left: 10px;">
-                                    <a href="{{ route('home') }}"><i class="fa fa-facebook-square" style="font-size:36px; color: black"></i></a>
+                                    <a href="http://www.facebook.com/sharer.php?u=Lowongan Kerja {{ $job->title }} di {{ $job->company->name }} - Areakerja.com - {{ route('jobs.show', $job->id) }}"><i class="fa fa-facebook-square" style="font-size:36px; color: black"></i></a>
                                 </li>
                                 <li style="padding-left: 10px;">
-                                    <a href="{{ route('home') }}"><i class="fa fa-twitter-square" style="font-size:36px; color: black""></i></a>
+                                    <a href="https://twitter.com/intent/tweet?text=Lowongan Kerja {{ $job->title }} di {{ $job->company->name }} - Areakerja.com - {{ route('jobs.show', $job->id) }}"><i class="fa fa-twitter-square" style="font-size:36px; color: black"></i></a>
                                 </li>
                                 <li style="padding-left: 10px;">
                                     <a href="https://wa.me/?text=Lowongan Kerja {{ $job->title }} di {{ $job->company->name }} - Areakerja.com - {{ route('jobs.show', $job->id) }}"><i class="fa fa-whatsapp" style="font-size:36px; color: black""></i></a>
