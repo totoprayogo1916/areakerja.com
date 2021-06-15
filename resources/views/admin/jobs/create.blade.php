@@ -58,17 +58,23 @@
                     {{ trans('cruds.job.fields.full_description_helper') }}
                 </p>
             </div>
-            <div class="form-group {{ $errors->has('full_description') ? 'has-error' : '' }}">
-                <label for="full_description">req</label>
-                <textarea id="requirements" name="requirements" class="form-control ">{{ old('full_description', isset($job) ? $job->full_description : '') }}</textarea>
-                @if($errors->has('full_description'))
-                    <em class="invalid-feedback">
-                        {{ $errors->first('full_description') }}
-                    </em>
-                @endif
-                <p class="helper-block">
-                    {{ trans('cruds.job.fields.full_description_helper') }}
-                </p>
+            <div class="form-group {{ $errors->has('requirements') ? 'has-error' : '' }}">
+                <label for="requirements">{{ trans('cruds.job.fields.requirements') }}</label>
+                <div class="alert alert-danger print-error-msg" style="display:none">
+                    <ul></ul>
+                    </div>
+        
+                    <div class="alert alert-success print-success-msg" style="display:none">
+                    <ul></ul>
+                    </div>
+                    <div class="table-responsive">  
+                        <table class="table table-bordered" id="dynamic_field">  
+                            <tr>  
+                                <td><input id="requirements" name="requirements[]" type="text" placeholder="Enter your Name" class="form-control name_list" /></td>  
+                                <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>  
+                            </tr>  
+                        </table>    
+                    </div>
             </div>
 
             <div class="form-group {{ $errors->has('job_nature') ? 'has-error' : '' }}">

@@ -37,8 +37,8 @@ class Job extends Model
         'short_description',
     ];
 
-    protected $casts = [
-        'requirements' => 'array'
+    public $casts = [
+        'requirements' => 'json'
     ];
 
     public function company()
