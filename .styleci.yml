@@ -11,3 +11,5 @@ js:
     not-name:
       - webpack.mix.js
 css: true
+- name: Laravel Deploy
+  uses: ngocquyhoang/laravel-deploy@laravel-custom-port

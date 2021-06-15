@@ -43,11 +43,11 @@
     width: 350px;
     height: auto;
     margin-bottom: 50px;
-    margin-top: 50px;
+    margin-top: -159px;
     margin-left: 6px;
     margin-right: 6px;
     /* margin: 50px; */
-    -webkit-animation: fadeIn 1s;
+    /* -webkit-animation: fadeIn 1s; */
     /* animation-duration: 5s; */
   }
 
