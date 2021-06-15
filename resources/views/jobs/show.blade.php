@@ -146,7 +146,7 @@
                                     </a>
                                 </li>
                                 <li style="padding-left: 10px;margin-bottom: 5%; margin-top: 5%">
-                                    <a type="button" class="btn form-pasang4" href="{{ route('login') }}">
+                                    <a type="button" class="btn form-pasang4" href="https://wa.me/?text=Halo {{ $job->company->name }}, Saya *..NAMA..* mendapatkan informasi lowongan kerja dari Areakerja.com. Saya berminat untuk melamar kerja sebagai {{ $job->title }}">
                                         <h6 style="font-weight: normal"><span class="fa fa-whatsapp"></span><span style="display:inline-block; width: 5px;"></span>Whatsapp</h6>
                                     </a>
                                 </li>
