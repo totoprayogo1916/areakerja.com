@@ -131,11 +131,18 @@
         $(document).ready(function(){      
           var postURL = "<?php echo url('addmore'); ?>";
           var i=1;  
+          
+          var i2=100; 
     
     
           $('#add').click(function(){  
               i++;  
               $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td><input type="text" name="requirements[]" placeholder="Enter your Name" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
+          });  
+
+          $('#add2').click(function(){  
+              i2++;  
+              $('#dynamic_field2').append('<tr id="row'+i2+'" class="dynamic-added"><td><input type="text" name="requirements[]" placeholder="Enter your Name" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i2+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
           });  
     
     
@@ -143,6 +150,11 @@
               var button_id = $(this).attr("id");   
               $('#row'+button_id+'').remove();  
           });  
+
+          $('#btnremove').click(function(){  
+              var button_id = $(this).attr("i2");   
+              $('#row'+button_id+'').remove();
+          });
     
     
           $.ajaxSetup({
@@ -186,6 +198,10 @@
           }
         });  
     </script>
+
+
+
+
     <script>
         $(function() {
   let copyButtonTrans = '{{ trans('global.datatables.copy') }}'

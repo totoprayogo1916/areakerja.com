@@ -33,6 +33,10 @@ class CreateJobsTable extends Migration
 
             $table->string('bataslamaran')->nullable();
 
+            $table->string('email')->nullable();
+
+            $table->string('notelp')->nullable();
+
             $table->boolean('top_rated')->default(0)->nullable();
 
             $table->string('salary');
