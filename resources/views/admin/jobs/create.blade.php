@@ -70,7 +70,7 @@
                     <div class="table-responsive">  
                         <table class="table table-bordered" id="dynamic_field">  
                             <tr>  
-                                <td><input type="text" name="name[]" placeholder="Enter your Name" class="form-control name_list" /></td>  
+                                <td><input id="requirements" name="requirements[]" type="text" placeholder="Enter your Name" class="form-control name_list" /></td>  
                                 <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>  
                             </tr>  
                         </table>    

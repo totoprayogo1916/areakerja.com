@@ -36,12 +36,35 @@ class JobsController extends Controller
         return view('admin.jobs.create', compact('companies', 'locations', 'categories'));
     }
 
-    public function store(StoreJobRequest $request)
+    public function store(Request $request)
     {
-        $job = Job::create($request->all());
+        // $job->categories()->sync($request->input('categories', []));
+        // $casts = ['jobs' => '    '] 
+        // $data = json_encode($request->requirements);
+        // $arr = $request->all();
+        // $arr = serialize($data);
+        // $create = Job::create(['session'=>$arr]);
+        $job = Job::create([
+            'title' => $request->title,
+            'salary' => $request->salary,
+            'address'=> $request->address,
+            'top_rated'=> $request->top_rated,
+            'company_id'=> $request->company_id,
+            'job_nature'=> $request->job_nature,
+            'pendidikan'=> $request->pendidikan,
+            'umur'=> $request->umur,
+            'gender'=> $request->gender,
+            'lokasikerja'=> $request->lokasikerja,
+            'requirements'=>$request->requirements,
+            'bataslamaran'=> $request->bataslamaran,
+            'location_id'=> $request->location_id,
+            'full_description'=> $request->full_description,
+            'short_description'=> $request->short_description,
+        
+        ]);
         $job->categories()->sync($request->input('categories', []));
-
-        return redirect()->route('admin.jobs.index');
+        return request('requirements');
+        // return redirect()->route('admin.jobs.index');
     }
 
     public function edit(Job $job)
