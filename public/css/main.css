@@ -2576,6 +2576,14 @@ hr {
   box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
 }
 
+.form-pasang4 {
+  background-color: #ffffff;
+  /* margin-bottom: 30px; */
+  border-radius: 5px;
+  width: auto;
+  box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
+}
+
 .form-pasang2 {
   color: #fff;
   /* opacity: .40; */
@@ -4249,7 +4257,7 @@ input.invalid {
 /* The actual popup */
 .popup .popuptext {
   visibility: hidden;
-  width: 200%;
+  width: 170%;
   box-shadow: 5px 5px 10px rgba(0.15, 0.15, 0.15, 0.15);
   background-color: rgb(255, 255, 255);
   color: #fff;
@@ -4279,6 +4287,52 @@ input.invalid {
 
 /* Toggle this class - hide and show the popup */
 .popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.popup2 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.popup2 .popuptext {
+  visibility: hidden;
+  width: 290%;
+  box-shadow: 5px 5px 10px rgba(0.15, 0.15, 0.15, 0.15);
+  background-color: rgb(255, 255, 255);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  flex: none;
+  bottom: 125%;
+  /* left: 100%; */
+  align-self: centers;
+  margin-left: -100%;
+}
+
+/* Popup arrow */
+.popup2 .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup2 */
+.popup2 .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
