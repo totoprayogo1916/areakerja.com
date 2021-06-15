@@ -28,6 +28,8 @@ class JobsTableSeeder extends Seeder
             'salary' => '10k - 20k',
             'location_id' => '3',
             'company_id' => '2',
+            'email' => 'hehe@gmail.com',
+            'notelp' => '0895329990656',
             'pendidikan' => 'SMA/S1/S2',
             'gender' => 'Pria/Wanita',
             'bataslamaran' => '20 Januari 2021',
