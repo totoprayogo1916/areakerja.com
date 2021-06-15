@@ -4292,6 +4292,67 @@ input.invalid {
   animation: fadeIn 1s;
 }
 
+
+
+.popup1 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: 300%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 150px;
+    z-index: 1;
+    flex: none;
+    box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
+    padding: 8px 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* The actual popup */
+  .popup1 .popuptext {
+    visibility: hidden;
+    width: 200%;
+    box-shadow: 5px 5px 10px rgba(0.15, 0.15, 0.15, 0.15);
+    background-color: rgb(255, 255, 255);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    flex: none;
+    bottom: 125%;
+    /* left: 100%; */
+    align-self: centers;
+    margin-left: -90%;
+  }
+
+  /* Popup arrow */
+  .popup1 .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+
+  /* Toggle this class - hide and show the popup */
+  .popup1 .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+
+
+
+
 .popup2 {
   position: relative;
   display: inline-block;
@@ -4337,6 +4398,63 @@ input.invalid {
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
 }
+
+
+.popup3 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: 300%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 150px;
+    z-index: 1;
+    flex: none;
+    box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
+    padding: 8px 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.popup3 .popuptext {
+    visibility: hidden;
+    width: 250%;
+    box-shadow: 5px 5px 10px rgba(0.15, 0.15, 0.15, 0.15);
+    background-color: rgb(255, 255, 255);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    flex: none;
+    bottom: 125%;
+    /* left: 100%; */
+    align-self: centers;
+    margin-left: 10%;
+}
+
+  /* Popup arrow */
+.popup3 .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+  /* Toggle this class - hide and show the popup3 */
+.popup3 .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
