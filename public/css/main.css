@@ -2572,7 +2572,7 @@ hr {
   background-color: #ffffff;
   margin-bottom: 30px;
   border-radius: 16px;
-  width: 120px;
+  width: 130%;
   box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
 }
 

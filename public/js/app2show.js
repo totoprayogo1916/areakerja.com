@@ -2,6 +2,11 @@ if ($(window).width() < 1070) {
     document.getElementById("contentshow").style.marginTop='50%';
     document.getElementById("ringkiri").className='col-6';
     document.getElementById("ringkanan").className='col-5';
+    document.getElementById("btn1").style.width='280%';
+    document.getElementById("btn2").style.width='300%';
+    document.getElementById("btn3").style.width='300%';
+    document.getElementById("col2").style.marginLeft='5%';
+    document.getElementById("col3").style.marginLeft='5%';
     document.getElementById("h41").style.fontSize='80%';
     document.getElementById("h42").style.fontSize='80%';
     document.getElementById("h43").style.fontSize='80%';

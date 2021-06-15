@@ -137,13 +137,13 @@
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <div class="row" style="margin-top: 15px">
                 <div class="col-2" style="margin-right: 10%;">
-                    <a type="button" class="btn form-pasang3" href="{{ route('login') }}">
-                        <h4 style="font-weight: normal"><span class="fa fa-paper-plane-o"></span><span style="display:inline-block; width: 10px;"></span>Lamar</h4>
+                    <a type="button" class="btn form-pasang3" href="{{ route('login') }}" id="btn1">
+                        <h4 style="font-weight: normal; font-size: 10pt"><span class="fa fa-paper-plane-o"></span><span style="display:inline-block; width: 10px;"></span>Lamar</h4>
                     </a>
                 </div>
-                <div class="col-2" style="margin-right: 10%;">
-                    <a type="button" class="btn form-pasang3" href="{{ route('login') }}">
-                        <h4 style="font-weight: normal"><span class="fa fa-star-o"></span><span style="display:inline-block; width: 10px;"></span>Simpan</h4>
+                <div class="col-2" style="margin-right: 10%" id="col2">
+                    <a type="button" class="btn form-pasang3" href="{{ route('login') }}" id="btn2">
+                        <h4 style="font-weight: normal; font-size: 10pt"><span class="fa fa-star-o"></span><span style="display:inline-block; width: 10px;"></span>Simpan</h4>
                     </a>
                 </div>
                 {{-- <div class="col-2">
@@ -152,8 +152,8 @@
 
                     </a>
                 </div> --}}
-                <div class="col-2" >
-                    <div class="btn popup form-pasang3" onclick="myFunction()"><h4 style="font-weight: normal"><span class="fa fa-share-alt"></span><span style="display:inline-block; width: 10px;"></span>Bagikan</h4>
+                <div class="col-2" id="col3">
+                    <div class="btn popup form-pasang3" onclick="myFunction()" id="btn3"><h4 style="font-weight: normal; font-size: 10pt"><span class="fa fa-share-alt"></span><span style="display:inline-block; width: 10px;"></span>Bagikan</h4>
                         <div class="row justify-content-center popuptext" id="myPopup" style="padding-right: 0px;margin-right: 0px">
                             <ul class="col row justify-content-center">
                                 <li>
