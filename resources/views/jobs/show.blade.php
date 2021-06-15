@@ -151,7 +151,7 @@
                                     </a>
                                 </li>
                                 <li style="padding-left: 10px; margin-bottom: 5%" id="liemail">
-                                    <a type="button" class="btn form-pasang4" href="{{ route('login') }}">
+                                    <a type="button" class="btn form-pasang4" href="{{ route('lamarmail',[$job->company->name, $job->umur] ) }}">
                                         <h6 style="font-weight: normal"><span class="fa fa-envelope-o"></span><span style="display:inline-block; width: 5px;"></span>Email</h6>
                                     </a>
                                 </li>
@@ -174,7 +174,7 @@
                     <div class="btn popup form-pasang3" onclick="myFunction()" id="btn3"><h4 style="font-weight: normal" id="btnh43"><span class="fa fa-share-alt"></span><span style="display:inline-block; width: 10px;"></span>Bagikan</h4>
                         <div class="row justify-content-center popuptext" id="myPopup" style="padding-right: 0px;margin-right: 0px">
                             <ul class="col row justify-content-center">
-                                
+
                                 <li>
                                     <a href="https://www.facebook.com/sharer.php?u={{ route('jobs.show', $job->id) }}"><i class="fa fa-facebook-square" style="font-size:36px; color: black"></i></a>
                                 </li>

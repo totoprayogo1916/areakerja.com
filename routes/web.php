@@ -8,6 +8,11 @@ Route::get('/pasang', 'JobController@pasang')->name('pasang');
 Route::get('/pasang2', 'JobController@pasang2')->name('pasang2');
 Route::get('/kontak', 'HomeController@kontak')->name('kontak');
 Route::post('/kontakform', 'HomeController@kirimmail')->name('kontakform');
+// Route::get('lamarmail/{parameter}', [
+//     'as'=> 'lamarmail',
+//     'uses'=>'HomeController@lamarmail'
+// ]);
+Route::get('/lamarmail/{name}/{umur}', 'HomeController@lamarmail')->name('lamarmail');
 Route::post('/formpasang', 'LowonganController@formpasang')->name('formpasang');
 // Route::get('/backkontak', 'HomeController@backkontak')->name('backkontak');
 
@@ -50,7 +55,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
      Route::post('companies/media', 'CompaniesController@storeMedia')->name('companies.storeMedia');
      Route::resource('companies', 'CompaniesController');
 
-     
+
      Route::delete('lowongan/destroy', 'LowonganController@massDestroy')->name('lowongan.massDestroy');
      Route::resource('lowongan', 'LowonganController');
 });

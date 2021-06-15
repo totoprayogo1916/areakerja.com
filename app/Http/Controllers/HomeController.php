@@ -7,6 +7,7 @@ use App\Location;
 use App\Job;
 use Illuminate\Http\Request;
 use App\Mail\SendMail;
+use App\Mail\SendMail2;
 use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
@@ -78,6 +79,24 @@ class HomeController extends Controller
         $saran = $request->saran;
         $email = "ti.fadelirsyad04@gmail.com";
         $kirim = Mail::to($email)->send(new SendMail($nama,$nomor,$email1,$saran));
+
+        if($kirim){
+            echo "Email telah dikirim";
+        }
+
+        return view('user.kontak');
+    }
+
+    public function lamarmail($name,$umur)
+    {
+        // $request = [$name,];
+        // dd($name,$umur);
+        // $nama = $request->nama;
+        // $nomor = $request->nomor;
+        // $email1 = $request->email;
+        // $saran = $request->saran;
+        $email = "ti.fadelirsyad04@gmail.com";
+        $kirim = Mail::to($email)->send(new SendMail2($umur));
 
         if($kirim){
             echo "Email telah dikirim";
