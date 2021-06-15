@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light" id="header" id="home" >
   <div class="container">
-    <div id="logo2" class="navbar-brand">
+    <div id="logo2" class="navbar-brand animate__animated animate__flipInX">
       <a href="{{ route('home') }}"><img src="{{ asset('img/logo3.svg') }}" alt="" title="" /></a>
     </div>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigaation">
