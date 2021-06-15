@@ -151,7 +151,7 @@
                                     </a>
                                 </li>
                                 <li style="padding-left: 10px; margin-bottom: 5%" id="liemail">
-                                    <a type="button" class="btn form-pasang4" href="{{ route('lamarmail',[$job->company->name, $job->umur] ) }}">
+                                    <a type="button" class="btn form-pasang4" href="mailto:{{ $job->umur}}?subject={{ $job->umur }}">
                                         <h6 style="font-weight: normal"><span class="fa fa-envelope-o"></span><span style="display:inline-block; width: 5px;"></span>Email</h6>
                                     </a>
                                 </li>
