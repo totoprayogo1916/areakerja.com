@@ -40,7 +40,7 @@ class JobsController extends Controller
     {
         // $job->categories()->sync($request->input('categories', []));
         // $casts = ['jobs' => '    '] 
-        $data = json_encode($request->requirements);
+        // $data = json_encode($request->requirements);
         // $arr = $request->all();
         // $arr = serialize($data);
         // $create = Job::create(['session'=>$arr]);
@@ -55,13 +55,15 @@ class JobsController extends Controller
             'umur'=> $request->umur,
             'gender'=> $request->gender,
             'lokasikerja'=> $request->lokasikerja,
-            'requirements'=>$data,
+            'requirements'=>$request->requirements,
             'bataslamaran'=> $request->bataslamaran,
             'location_id'=> $request->location_id,
             'full_description'=> $request->full_description,
             'short_description'=> $request->short_description,
+        
         ]);
         $job->categories()->sync($request->input('categories', []));
+        return request('requirements');
         // return redirect()->route('admin.jobs.index');
     }
 

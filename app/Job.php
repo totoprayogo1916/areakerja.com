@@ -17,6 +17,10 @@ class Job extends Model
         'deleted_at',
     ];
 
+    public $casts = [
+        'requirements' => 'array'
+    ];
+
     protected $fillable = [
         'title',
         'salary',
@@ -26,6 +30,7 @@ class Job extends Model
         'job_nature',
         'pendidikan',
         'umur',
+        'requirements',
         'gender',
         'lokasikerja',
         'bataslamaran',
@@ -37,9 +42,7 @@ class Job extends Model
         'short_description',
     ];
 
-    public $casts = [
-        'requirements' => 'json'
-    ];
+    
 
     public function company()
     {
