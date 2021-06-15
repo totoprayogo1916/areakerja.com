@@ -70,7 +70,7 @@
                         <div class="col-lg-12">
                             <div id="inputFormRow">
                                 <div class="input-group mb-3">
-                                    <input type="text" name="title[]" class="form-control m-input" placeholder="Enter title" autocomplete="off" value="{{ $hehe }}">
+                                    <input type="text" name="requirements[]" class="form-control m-input" placeholder="Enter title" autocomplete="off" value="{{ $hehe }}">
                                     <div class="input-group-append">                
                                         <button id="removeRow" type="button" class="btn btn-danger">Remove</button>
                                     </div>
