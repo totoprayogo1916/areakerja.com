@@ -34,6 +34,8 @@ class Job extends Model
         'gender',
         'lokasikerja',
         'bataslamaran',
+        'email',
+        'notelp',
         'created_at',
         'updated_at',
         'deleted_at',

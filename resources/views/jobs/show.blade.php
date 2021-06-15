@@ -111,11 +111,10 @@
             </ul>
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <h3 style="margin-top: 10px">Syarat Pekerjaan</h3>
-            <ul class="details" style="margin-left: auto" >
-            <h4 style="margin-top: 10px; font-weight: normal; margin-left: 5px">•   Coffee</h4>
-            <h4 style="margin-top: 10px; font-weight: normal; margin-left: 5px">•   Tea</h4>
-            <h4 style="margin-top: 10px; font-weight: normal; margin-left: 5px">•   Coca Cola</h4>
-            </ul>
+            @foreach($job->requirements as $hehe)
+                <h4 style="margin-top: 10px; font-weight: normal; margin-left: 5px">•   {{ $hehe }}</h4>
+            @endforeach
+            
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <h3 style="margin-top: 10px">Kirim Lamaran</h3>
             <div class="row" style="width: 100%; ">
@@ -123,7 +122,7 @@
                     <h4 style="margin-top: 10px; font-weight: normal" id="h415"><span class="fa fa-envelope-o"></span><span style="display:inline-block; width: 15px;"></span>Email</h4>
                 </div>
                 <div class="col-6">
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h416"> <span>:</span><span style="display:inline-block; width: 10px;"></span>admin@gmail.com</h4>
+                    <h4 style="margin-top: 10px; font-weight: normal" id="h416"> <span>:</span><span style="display:inline-block; width: 10px;"></span>{{ $job->email }}</h4>
                 </div>
             </div>
             <div class="row" style="width: 100%; ">
@@ -131,7 +130,7 @@
                     <h4 style="margin-top: 10px; font-weight: normal" id="h417"><span class="fa fa-phone"></span><span style="display:inline-block; width: 15px;"></span>Nomor Telepon</h4>
                 </div>
                 <div class="col-6">
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h418"> <span>:</span><span style="display:inline-block; width: 10px;"></span>081234567890</h4>
+                    <h4 style="margin-top: 10px; font-weight: normal" id="h418"> <span>:</span><span style="display:inline-block; width: 10px;"></span>{{ $job->notelp }}</h4>
                 </div>
             </div>
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
@@ -182,7 +181,7 @@
                                     <a href="https://twitter.com/intent/tweet?text=Lowongan Kerja {{ $job->title }} di {{ $job->company->name }} - Areakerja.com - {{ route('jobs.show', $job->id) }}"><i class="fa fa-twitter-square" style="font-size:36px; color: black"></i></a>
                                 </li>
                                 <li style="padding-left: 10px;">
-                                    <a href="https://mail.google.com/mail/?view=cm&su=Lowongan Kerja {{ $job->title }} di {{ $job->company->name }} - Areakerja.com - {{ route('jobs.show', $job->id) }}"><i class="fas fa-envelope-square" style="font-size:36px; color: black""></i></a>
+                                    <a href="https://mail.google.com/mail/?view=cm&su=Lowongan Kerja {{ $job->title }} di {{ $job->company->name }} - Areakerja.com - {{ route('jobs.show', $job->id) }}"><i class="fas fa-envelope-square" style="font-size:36px; color: black"></i></a>
                                 </li>
                                 <li style="padding-left: 10px;">
                                     <a href="https://wa.me/?text=Lowongan Kerja {{ $job->title }} di {{ $job->company->name }} - Areakerja.com - {{ route('jobs.show', $job->id) }}"><i class="fab fa-whatsapp-square" style="font-size:36px; color: black""></i></a>
