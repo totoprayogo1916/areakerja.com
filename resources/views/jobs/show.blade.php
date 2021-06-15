@@ -137,9 +137,27 @@
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <div class="row" style="margin-top: 15px">
                 <div class="col-2" style="margin-right: 10%;">
-                    <a type="button" class="btn form-pasang3" href="{{ route('login') }}">
-                        <h4 style="font-weight: normal"><span class="fa fa-paper-plane-o"></span><span style="display:inline-block; width: 10px;"></span>Lamar</h4>
-                    </a>
+                    <div class="btn popup2 form-pasang3" onclick="myFunction2()"><h4 style="font-weight: normal"><span class="fa fa-paper-plane-o"></span><span style="display:inline-block; width: 10px;"></span>Lamar</h4>
+                        <div class="row justify-content-center popuptext" id="myPopup2" style="padding-right: 0px;margin-right: 0px">
+                            <ul class="row justify-content-center">
+                                <li>
+                                    <a type="button" class="btn form-pasang4" href="{{ route('login') }}">
+                                        <h6 style="font-weight: normal"><span class="fa fa-folder-open-o"></span><span style="display:inline-block; width: 5px;"></span>Formulir</h6>
+                                    </a>
+                                </li>
+                                <li style="padding-left: 10px;">
+                                    <a type="button" class="btn form-pasang4" href="{{ route('login') }}">
+                                        <h6 style="font-weight: normal"><span class="fa fa-whatsapp"></span><span style="display:inline-block; width: 5px;"></span>Whatsapp</h6>
+                                    </a>
+                                </li>
+                                <li style="padding-left: 10px;">
+                                    <a type="button" class="btn form-pasang4" href="{{ route('login') }}">
+                                        <h6 style="font-weight: normal"><span class="fa fa-envelope-o"></span><span style="display:inline-block; width: 5px;"></span>Email</h6>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-2" style="margin-right: 10%;">
                     <a type="button" class="btn form-pasang3" href="{{ route('login') }}">

@@ -74,9 +74,8 @@
                                 {{ $job->short_description ?? '' }}
                             </td>
                             <td>
-                                @foreach($job->requirements as $link)
-                                    <li>{{ $link }}</li>    
-                                
+                                @foreach($job->requirements as $hehe)
+                                    <li>{{ $hehe }}</li>    
                                 @endforeach
                             </td>
                             <td>
