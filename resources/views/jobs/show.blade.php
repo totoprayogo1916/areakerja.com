@@ -145,12 +145,12 @@
                                     </a>
                                 </li>
                                 <li style="padding-left: 10px;margin-bottom: 5%; margin-top: 5%">
-                                    <a type="button" class="btn form-pasang4" href="https://wa.me/?text=Halo {{ $job->company->name }}, Saya *..NAMA..* mendapatkan informasi lowongan kerja dari Areakerja.com. Saya berminat untuk melamar kerja sebagai {{ $job->title }}">
+                                    <a type="button" class="btn form-pasang4" href="https://wa.me/{{ $job->notelp }}?text=Halo {{ $job->company->name }}, Saya *..NAMA..* mendapatkan informasi lowongan kerja dari Areakerja.com. Saya berminat untuk melamar kerja sebagai {{ $job->title }}">
                                         <h6 style="font-weight: normal"><span class="fa fa-whatsapp"></span><span style="display:inline-block; width: 5px;"></span>Whatsapp</h6>
                                     </a>
                                 </li>
                                 <li style="padding-left: 10px; margin-bottom: 5%" id="liemail">
-                                    <a type="button" class="btn form-pasang4" href="mailto:{{ $job->umur}}?subject={{ $job->umur }}">
+                                    <a type="button" class="btn form-pasang4" href="mailto:{{ $job->email }}?subject=Lamaran Pekerjaan di {{ $job->company->name }}">
                                         <h6 style="font-weight: normal"><span class="fa fa-envelope-o"></span><span style="display:inline-block; width: 5px;"></span>Email</h6>
                                     </a>
                                 </li>
