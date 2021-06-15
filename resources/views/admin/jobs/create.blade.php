@@ -76,9 +76,15 @@
                         </table>    
                     </div>
             </div>
+
             <div class="form-group {{ $errors->has('job_nature') ? 'has-error' : '' }}">
                 <label for="job_nature">{{ trans('cruds.job.fields.job_nature') }}</label>
-                <input type="text" id="job_nature" name="job_nature" class="form-control" value="{{ old('job_nature', isset($job) ? $job->job_nature : 'Full-time') }}">
+                <select id="job_nature" name="job_nature"  class="form-control" required>
+                    <option value="Full Time">Full Time</option>
+                    <option value="Part Time">Part Time</option>
+                    <option value="Freelance">Freelance</option>
+                </select>
+                {{-- <input type="text" id="job_nature" name="job_nature" class="form-control" value="{{ old('job_nature', isset($job) ? $job->job_nature : 'Full-time') }}"> --}}
                 @if($errors->has('job_nature'))
                     <em class="invalid-feedback">
                         {{ $errors->first('job_nature') }}
@@ -88,6 +94,7 @@
                     {{ trans('cruds.job.fields.job_nature_helper') }}
                 </p>
             </div>
+
             <div class="form-group {{ $errors->has('location_id') ? 'has-error' : '' }}">
                 <label for="location">{{ trans('cruds.job.fields.location') }}*</label>
                 <select name="location_id" id="location" class="form-control select2" required>
@@ -113,6 +120,77 @@
                     {{ trans('cruds.job.fields.address_helper') }}
                 </p>
             </div>
+
+            <div class="form-group {{ $errors->has('pendidikan') ? 'has-error' : '' }}">
+                <label for="pendidikan">Minimal Pendidikan</label>
+                <input type="text" id="pendidikan" name="pendidikan" class="form-control" value="{{ old('pendidikan', isset($job) ? $job->pendidikan : '') }}">
+                @if($errors->has('pendidikan'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('pendidikan') }}
+                    </em>
+                @endif
+                <p class="helper-block">
+                    {{-- {{ trans('cruds.job.fields.pendidikan_helper') }} --}}
+                </p>
+            </div>
+
+            <div class="form-group {{ $errors->has('gender') ? 'has-error' : '' }}">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender"  class="form-control" required>
+                    <option value="Pria/Wanita">Pria/Wanita</option>
+                    <option value="Pria">Pria</option>
+                    <option value="Wanita">Wanita</option>
+                </select>
+                {{-- <input type="text" id="gender" name="gender" class="form-control" value="{{ old('gender', isset($job) ? $job->gender : 'Full-time') }}"> --}}
+                @if($errors->has('gender'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('gender') }}
+                    </em>
+                @endif
+                <p class="helper-block">
+                    {{-- {{ trans('cruds.job.fields.gender_helper') }} --}}
+                </p>
+            </div>
+
+            <div class="form-group {{ $errors->has('umur') ? 'has-error' : '' }}">
+                <label for="umur">Minimal/Maksimal Umur</label>
+                <input type="text" id="umur" name="umur" class="form-control" value="{{ old('umur', isset($job) ? $job->umur : '') }}">
+                @if($errors->has('umur'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('umur') }}
+                    </em>
+                @endif
+                <p class="helper-block">
+                    {{-- {{ trans('cruds.job.fields.umur_helper') }} --}}
+                </p>
+            </div>
+
+            <div class="form-group {{ $errors->has('lokasikerja') ? 'has-error' : '' }}">
+                <label for="lokasikerja">Lokasi Kerja</label>
+                <input type="text" id="lokasikerja" name="lokasikerja" class="form-control" value="{{ old('lokasikerja', isset($job) ? $job->lokasikerja : '') }}">
+                @if($errors->has('lokasikerja'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('lokasikerja') }}
+                    </em>
+                @endif
+                <p class="helper-block">
+                    {{-- {{ trans('cruds.job.fields.lokasikerja_helper') }} --}}
+                </p>
+            </div>
+
+            <div class="form-group {{ $errors->has('bataslamaran') ? 'has-error' : '' }}">
+                <label for="bataslamaran">Batas Lamaran</label>
+                <input type="text" id="bataslamaran" name="bataslamaran" class="form-control" value="{{ old('bataslamaran', isset($job) ? $job->bataslamaran : '') }}">
+                @if($errors->has('bataslamaran'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('bataslamaran') }}
+                    </em>
+                @endif
+                <p class="helper-block">
+                    {{-- {{ trans('cruds.job.fields.bataslamaran_helper') }} --}}
+                </p>
+            </div>
+
             <div class="form-group {{ $errors->has('categories') ? 'has-error' : '' }}">
                 <label for="categories">{{ trans('cruds.job.fields.categories') }}
                     <span class="btn btn-info btn-xs select-all">{{ trans('global.select_all') }}</span>
