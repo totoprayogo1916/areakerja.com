@@ -28,6 +28,7 @@
             @yield("content")
         </div>
     </div>
+    @include('sweetalert::alert')
 
     @yield('scripts')
 </body>

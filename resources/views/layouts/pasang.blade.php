@@ -66,5 +66,7 @@
                 once: true,
             });
         </script>
+        @include('sweetalert::alert')
+
     </body>
 </html>
