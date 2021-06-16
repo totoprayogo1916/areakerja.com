@@ -114,7 +114,7 @@
             @foreach($job->requirements as $hehe)
                 <h4 style="margin-top: 10px; font-weight: normal; margin-left: 5px">•   {{ $hehe }}</h4>
             @endforeach
-            
+
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <h3 style="margin-top: 10px">Kirim Lamaran</h3>
             <div class="row" style="width: 100%; ">
@@ -159,7 +159,7 @@
                     </div>
                 </div>
                 <div class="col-2" style="margin-right: 10%" id="col2">
-                    <a type="button" class="btn form-pasang3" href="{{ route('login') }}" id="btn2">
+                    <a type="button" class="btn form-pasang3" href="{{ route('cache', $job->id) }}" id="btn2">
                         <h4 style="font-weight: normal" id="btnh42"><span class="fa fa-star-o"></span><span style="display:inline-block; width: 10px;"></span>Simpan</h4>
                     </a>
                 </div>
