@@ -47,17 +47,29 @@
                     {{ trans('cruds.job.fields.short_description_helper') }}
                 </p>
             </div>
-            <div class="form-group {{ $errors->has('full_description') ? 'has-error' : '' }}">
+            <div class="form-group ">
                 <label for="full_description">{{ trans('cruds.job.fields.full_description') }}</label>
-                <textarea id="full_description" name="full_description" class="form-control ">{{ old('full_description', isset($job) ? $job->full_description : '') }}</textarea>
-                @if($errors->has('full_description'))
-                    <em class="invalid-feedback">
-                        {{ $errors->first('full_description') }}
-                    </em>
-                @endif
-                <p class="helper-block">
-                    {{ trans('cruds.job.fields.full_description_helper') }}
-                </p>
+                <div class="alert alert-success print-success-msg" style="display:none">
+                    <ul></ul>
+                    </div>
+                @foreach($job->full_description as $hehe2)
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="inputFormRow2">
+                                <div class="input-group mb-3">
+                                    <input type="text" name="full_description[]" class="form-control m-input" placeholder="Masukkan Deskripsi Pekerjaan" autocomplete="off" value="{{ $hehe2 }}">
+                                    <div class="input-group-append">                
+                                        <button id="removeRow2" type="button" class="btn btn-danger">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div id="newRow2"></div>
+                            
+                        </div>
+                    </div>
+                @endforeach
+                <button id="addRow2" type="button" class="btn btn-success">Add More</button>
             </div>
             <div class="form-group">
                 <label for="requirements">{{ trans('cruds.job.fields.requirements') }}</label>

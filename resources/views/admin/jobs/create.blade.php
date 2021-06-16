@@ -48,12 +48,21 @@
             </div>
             <div class="form-group {{ $errors->has('full_description') ? 'has-error' : '' }}">
                 <label for="full_description">{{ trans('cruds.job.fields.full_description') }}</label>
-                <textarea id="full_description" name="full_description" class="form-control ">{{ old('full_description', isset($job) ? $job->full_description : '') }}</textarea>
-                @if($errors->has('full_description'))
-                    <em class="invalid-feedback">
-                        {{ $errors->first('full_description') }}
-                    </em>
-                @endif
+                <div class="alert alert-danger print-error-msg" style="display:none">
+                    <ul></ul>
+                    </div>
+        
+                    <div class="alert alert-success print-success-msg" style="display:none">
+                    <ul></ul>
+                    </div>
+                    <div class="table-responsive">  
+                        <table class="table table-bordered" id="dynamic_field2">  
+                            <tr>  
+                                <td><input id="full_description" name="full_description[]" type="text" placeholder="Masukkan Deskripsi Pekerjaan" class="form-control name_list" /></td>  
+                                <td><button type="button" name="add2" id="add2" class="btn btn-success">Add More</button></td>  
+                            </tr>  
+                        </table>    
+                    </div>
                 <p class="helper-block">
                     {{ trans('cruds.job.fields.full_description_helper') }}
                 </p>
@@ -70,7 +79,7 @@
                     <div class="table-responsive">  
                         <table class="table table-bordered" id="dynamic_field">  
                             <tr>  
-                                <td><input id="requirements" name="requirements[]" type="text" placeholder="Enter your Name" class="form-control name_list" /></td>  
+                                <td><input id="requirements" name="requirements[]" type="text" placeholder="Masukkan Syarat Pekerjaan" class="form-control name_list" /></td>  
                                 <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>  
                             </tr>  
                         </table>    

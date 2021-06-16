@@ -20,7 +20,7 @@ class JobsTableSeeder extends Seeder
             'title' => 'Kameramen',
             'short_description' => 'Membuka lowongan kerja untuk posisi sebagai kameramen',
             'full_description' =>
-                'Membuka lowongan kerja untuk posisi sebagai kameramen acara talkshow',
+                ['Membuka lowongan kerja untuk posisi sebagai kameramen acara talkshow'],
             'requirements' => ['Berpengalaman di bidangnya minimal 1 tahun','Adaptif dengan semua jenis kamera','Memahami Adobe Premiere (menguasai After Effect menjadi poin plus)'],
             'job_nature' => 'Full-time',
             'address' => 'Banguntapan',
@@ -44,7 +44,7 @@ class JobsTableSeeder extends Seeder
             'short_description' =>
                 'Membuka lowongan kerja untuk posisi sebagai Customer Service.',
             'full_description' =>
-                'JW Media Production saat ini membuka lowongan kerja untuk posisi sebagai Customer Service.',
+                ['JW Media Production saat ini membuka lowongan kerja untuk posisi sebagai Customer Service.'],
             'requirements' => ['Jujur, amanah, tanggung jawab, cekatan, Teliti dan sabar','Komunikatif & Mampu bekerja dalam team / individu','Dapat menggunakan komputer dan internet'],
             'job_nature' => 'Full-time',
             'address' => 'Banguntapan jogja',
@@ -68,7 +68,7 @@ class JobsTableSeeder extends Seeder
             'short_description' =>
                 'Pawon Resto adalah perusahaan yang bergerak dibidang kuliner.',
             'full_description' =>
-                'Pawon Resto adalah perusahaan yang bergerak dibidang kuliner.',
+                ['Pawon Resto adalah perusahaan yang bergerak dibidang kuliner.'],
             'requirements' => ['Jujur, amanah, tanggung jawab, cekatan, Teliti dan sabar','Mempunyai pengalaman di rumah makan minimal 1 tahun','Mengerti administrasi'],
             'job_nature' => 'Full-time',
             'address' => 'Banguntapan jogja',
@@ -92,8 +92,8 @@ class JobsTableSeeder extends Seeder
             'short_description' =>
                 'membuka lowongan kerja untuk posisi sebagai Admin.',
             'full_description' =>
-                'Panara Course adalah program pelatihan dan pendidikan untuk masuk TNI dan POLRI yang dipersiapkan secara Akademik, Psikologi, Fisik, dan Mental sebelum mengikuti pendaftaran resmi Taruna TNI dan POLRI.
-                Panara Course berdiri di bawah badan Hukum PT. Pendidikan Abdi Negara.',
+                ['Panara Course adalah program pelatihan dan pendidikan untuk masuk TNI dan POLRI yang dipersiapkan secara Akademik, Psikologi, Fisik, dan Mental sebelum mengikuti pendaftaran resmi Taruna TNI dan POLRI.
+                Panara Course berdiri di bawah badan Hukum PT. Pendidikan Abdi Negara.'],
             'requirements' => ['Dapat menggunakan komputer dan internet','Cekatan dan teliti','Sabar dalam merespon chat konsumen'],
             'job_nature' => 'Full-time',
             'address' => 'DIY',
@@ -117,7 +117,7 @@ class JobsTableSeeder extends Seeder
             'short_description' =>
                 'membuka lowongan kerja untuk posisi sebagai Content Creator.',
             'full_description' =>
-                'Saat ini membuka lowongan kerja untuk posisi sebagai Content Creator.',
+                ['Saat ini membuka lowongan kerja untuk posisi sebagai Content Creator.'],
             'requirements' => ['Minimal 2 tahun pengalaman sebagai content creator, video editor, vidiografi','Mampu bekerja cepat dan di target','Pengatahuan mengenai FB, IG, TikTok dan YOutube'],
             'job_nature' => 'Full-time',
             'address' => 'Bantul',
@@ -141,7 +141,7 @@ class JobsTableSeeder extends Seeder
             'short_description' =>
                 'Jogja Tailor adalah perusahaan yang bergerak di bidang fashion',
             'full_description' =>
-                'Membuka kesempatan berkarir bagi para profesional muda yang aktif untuk bergabung bersama kami di posisi Desainer.',
+                ['Membuka kesempatan berkarir bagi para profesional muda yang aktif untuk bergabung bersama kami di posisi Desainer.'],
             'requirements' => ['Pria/wanita Single','Familiar dengan software video editing (adobe premiere / after effects dll), Corel, Photoshop.','Memiliki kemampuan pengambilan video dengan kamera (DSLR/Mirrorless)menjadi nilai tambah'],
             'job_nature' => 'Full-time',
             'address' => 'Sleman',
@@ -165,7 +165,7 @@ class JobsTableSeeder extends Seeder
             'short_description' =>
                 'membuka lowongan kerja untuk posisi sebagai Barista, Waiters, Cashier.',
             'full_description' =>
-                'membuka lowongan kerja untuk posisi sebagai Barista, Waiters, Cashier.',
+                ['membuka lowongan kerja untuk posisi sebagai Barista, Waiters, Cashier.'],
             'requirements' => ['Berpenampilan menarik','Menguasai mesin kopi dan manual brewuntuk barista','Memiliki ketertarikan di dunia food & beverages'],
             'job_nature' => 'Full-time',
             'address' => 'Bantul',
@@ -189,7 +189,7 @@ class JobsTableSeeder extends Seeder
             'short_description' =>
                 'PT. Kata Suhu Kita dengan brand SUHU Consulting and Training merupakah sebuah perusahaan yang bergerak di bidang jasa pelatihan dan konsultasi IT dan SDM.',
             'full_description' =>
-                'SUHU mengajak talenta-talenta muda yang mempunyai semangat tinggi untuk bergabung menjadi keluarga baru kami',
+                ['SUHU mengajak talenta-talenta muda yang mempunyai semangat tinggi untuk bergabung menjadi keluarga baru kami'],
             'requirements' => ['Pria/wanita Single','Familiar dengan software video editing (adobe premiere / after effects dll), Corel, Photoshop.','Memiliki kemampuan pengambilan video dengan kamera (DSLR/Mirrorless)menjadi nilai tambaha'],
             'job_nature' => 'Full-time',
             'address' => 'Sleman',
@@ -213,7 +213,7 @@ class JobsTableSeeder extends Seeder
             'short_description' =>
                 'The Oxalis Regency Hotel ini berjarak 2 KM dari Borobudur International Golf & Country Club',
             'full_description' =>
-                'The Oxalis Regency Hotel ini berjarak 2 KM dari Borobudur International Golf & Country Club',
+                ['The Oxalis Regency Hotel ini berjarak 2 KM dari Borobudur International Golf & Country Club'],
             'requirements' => ['Selalu mempunyai ide untuk penjualan','Berpengalaman','Pria/wanita max 30th'],
             'job_nature' => 'Full-time',
             'address' => 'DIY',
@@ -237,7 +237,7 @@ class JobsTableSeeder extends Seeder
             'short_description' =>
                 'JW Media Production adalah pengelola website dan beberapa channel Youtube yang berlokasi di Yogyakarta.',
             'full_description' =>
-                'Saat ini, kami membuka kesempatan bagi orang-orang dengan kreativitas tinggi untuk bergabung dan berkarir dengan tim kami.',
+                ['Saat ini, kami membuka kesempatan bagi orang-orang dengan kreativitas tinggi untuk bergabung dan berkarir dengan tim kami.'],
             'requirements' => ['Pria/wanita Single','Familiar dengan software video editing (adobe premiere / after effects dll), Corel, Photoshop.','Memiliki kemampuan pengambilan video dengan kamera (DSLR/Mirrorless)menjadi nilai tambah'],
             'job_nature' => 'Full-time',
             'address' => 'Sleman',
@@ -261,7 +261,7 @@ class JobsTableSeeder extends Seeder
             'short_description' =>
                 'Membuka lowongan untuk talenta muda profesional ',
             'full_description' =>
-                'Dynamic Space adalah perusahaan digutal marketing yang sedang berkembang, membutuhkan talenta muda profesional yang siap berkembang untuk kemajuan digital marketing di Indonesia.',
+                ['Dynamic Space adalah perusahaan digutal marketing yang sedang berkembang, membutuhkan talenta muda profesional yang siap berkembang untuk kemajuan digital marketing di Indonesia.'],
             'requirements' => ['Update tentang trend terkini','Kreatif dan memiliki banyak ide','Menguasai software software editing (Desain Grafis / Videografi)'],
             'job_nature' => 'Full-time',
             'address' => 'Sleman',
@@ -285,7 +285,7 @@ class JobsTableSeeder extends Seeder
             'short_description' =>
                 'Membuka lowongan untuk Human Resource Development',
             'full_description' =>
-                'Jubahakhwat saat ini membuka lowongan kerja untuk posisi sebagai Human Resource Development.',
+                ['Jubahakhwat saat ini membuka lowongan kerja untuk posisi sebagai Human Resource Development.'],
             'requirements' => ['Pengalaman Kerja Minimal lth di Bidang HRD','Familiar Dengan Personnel Administration, Talent Development Program, Career Planing, Job Evaluation & Work Load Analysis','Berkepribadian Baik, Memiliki Skill Komunikasi, Pekerja Keras & Siap Bekerja di Bawah Tekanan'],
             'job_nature' => 'Full-time',
             'address' => 'Sleman',
