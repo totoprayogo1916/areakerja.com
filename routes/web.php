@@ -11,6 +11,7 @@ Route::get('/kontak', 'HomeController@kontak')->name('kontak');
 Route::get('/getuser', 'UserSystemInfoController@getusersysteminfo')->name('getuser');
 Route::post('/kontakform', 'HomeController@kirimmail')->name('kontakform');
 Route::get('/cache/{id}', 'CacheController@index')->name('cache');
+Route::get('/cacheget', 'CacheController@get')->name('cacheget');
 // Route::get('lamarmail/{parameter}', [
 //     'as'=> 'lamarmail',
 //     'uses'=>'HomeController@lamarmail'

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use App\Job;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CacheController extends Controller
 {
@@ -15,11 +16,32 @@ class CacheController extends Controller
         // dd($id);
 
         // echo Cache::set('item',"hello World");
-        Cache::put('title', $title, 30);
-        Cache::put('name', $name, 30);
+        Cache::add('title', $title,  now()->addMinutes(10));
+        Cache::add('name', $name,  now()->addMinutes(10));
+
+        alert()->warning($name,$title);
+
         // echo Cache::get('title');
         // echo ('<br>');
         // echo Cache::get('name');
-        return redirect('aboutus');
+        return redirect('pasang');
+    }
+
+    function get(){
+        // $job = Job::where('id', $id)->first();
+        // $title = $job->title;
+        // $name = $job->company->name;
+        // // dd($id);
+
+        // // echo Cache::set('item',"hello World");
+        // Cache::add('title', $title,  now()->addMinutes(10));
+        // Cache::add('name', $name,  now()->addMinutes(10));
+
+        // alert()->warning($name,$title);
+
+        echo Cache::get('title');
+        echo ('<br>');
+        echo Cache::get('name');
+        // return redirect('pasang');
     }
 }
