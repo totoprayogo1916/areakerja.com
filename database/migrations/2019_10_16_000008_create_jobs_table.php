@@ -15,7 +15,7 @@ class CreateJobsTable extends Migration
 
             $table->string('short_description')->nullable();
 
-            $table->longText('full_description')->nullable();
+            $table->json('full_description')->nullable();
 
             $table->json('requirements')->nullable();
 
