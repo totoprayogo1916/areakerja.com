@@ -11,6 +11,7 @@ use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use RealRashid\SweetAlert\Facades\Alert as FacadesAlert;
+Use Alert;
 
 class CategoriesController extends Controller
 {
@@ -62,7 +63,7 @@ class CategoriesController extends Controller
     {
         // abort_if(Gate::denies('category_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        FacadesAlert::confirm('Info', 'Produk Berhasil Dihapus');
+        Alert::success('Success Title', 'Success Message');
 
         $category->delete();
 
