@@ -332,6 +332,8 @@
 });
 
     </script>
+    @include('sweetalert::alert')
+
     @yield('scripts')
 </body>
 
