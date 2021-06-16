@@ -39,7 +39,7 @@ class JobController extends Controller
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
 
-        Alert::success('Sukses Membuka');
+        // Alert::success('Sukses Membuka');
 
         return view(
             'jobs.show',
