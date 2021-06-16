@@ -104,10 +104,10 @@
               </div>
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <h3 style="margin-top: 10px">Deskripsi Pekerjaan</h3>
-            <ul class="details" style="margin-left: auto" >
-            <h4 style="margin-top: 10px; font-weight: normal; margin-left: 5px">•   Coffee</h4>
-            <h4 style="margin-top: 10px; font-weight: normal; margin-left: 5px">•   Tea</h4>
-            <h4 style="margin-top: 10px; font-weight: normal; margin-left: 5px">•   Coca Cola</h4>
+            @foreach($job->full_description as $hehe)
+                <h4 style="margin-top: 10px; font-weight: normal; margin-left: 5px">•   {{ $hehe }}</h4>
+            @endforeach
+
             </ul>
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <h3 style="margin-top: 10px">Syarat Pekerjaan</h3>
