@@ -7,6 +7,7 @@ Route::get('/aboutus', 'HomeController@aboutus')->name('aboutus');
 Route::get('/pasang', 'JobController@pasang')->name('pasang');
 Route::get('/pasang2', 'JobController@pasang2')->name('pasang2');
 Route::get('/kontak', 'HomeController@kontak')->name('kontak');
+Route::get('/getuser', 'UserSystemInfoController@getusersysteminfo')->name('getuser');
 Route::post('/kontakform', 'HomeController@kirimmail')->name('kontakform');
 // Route::get('lamarmail/{parameter}', [
 //     'as'=> 'lamarmail',
