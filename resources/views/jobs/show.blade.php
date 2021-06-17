@@ -101,7 +101,7 @@
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><p style="line-height: 150%; margin-top: -1%">{{ $job->lokasikerja }}</p></h4></li>
                 </ul>
             </div>
-            
+
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <h3 class="head" style="margin-top: 10px">Deskripsi Pekerjaan</h3>
             @foreach($job->full_description as $hehe)
@@ -135,11 +135,11 @@
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal"> <span>:</span></h4></li>
                 </ul>
                 <ul class="col-6" style="overflow: unset; white-space: nowrap;">
-                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" >{{ $job->email }}</h4></li>
+                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" id="sample">{{ $job->email }}</h4><button onclick="CopyToClipboard('sample'); return false;" class="fas fa-copy ui-button-icons-only"></button></li>
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" >{{ $job->notelp }}</h4></li>
                 </ul>
             </div>
-            
+
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <div class="row" style="margin-top: 15px">
                 <div class="col-2" style="margin-right: 10%;">
