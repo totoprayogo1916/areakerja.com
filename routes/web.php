@@ -11,7 +11,7 @@ Route::get('/kontak', 'HomeController@kontak')->name('kontak');
 Route::get('/getuser', 'UserSystemInfoController@getusersysteminfo')->name('getuser');
 Route::post('/kontakform', 'HomeController@kirimmail')->name('kontakform');
 Route::get('/cache/{id}', 'CacheController@index')->name('cache');
-Route::get('/cacheget', 'CacheController@get')->name('cacheget');
+Route::get('/get_client_ip', 'CacheController@get_client_ip')->name('get_client_ip');
 // Route::get('lamarmail/{parameter}', [
 //     'as'=> 'lamarmail',
 //     'uses'=>'HomeController@lamarmail'
@@ -30,14 +30,14 @@ Route::get('location/{location}', 'LocationController@show')->name('locations.sh
 
 Route::get('/getmacshellexec',function()
     {
-        $shellexec = shell_exec('getmac'); 
-        echo $shellexec;
+        $shellexec = shell_exec('getmac');
+        dd  ($shellexec);
     }
 );
 
 Route::get('/getmacexec',function()
     {
-        $shellexec = exec('getmac'); 
+        $shellexec = exec('getmac');
         dd($shellexec);
     }
 );
