@@ -37,7 +37,7 @@
 
             <div class="container">
                 @yield('slick')
-                <div class="row justify-content-center d-flex">
+                <div class="row justify-content-center d-flex gg3" >
 
                     @yield('content')
                     @include('partials.sidebar')

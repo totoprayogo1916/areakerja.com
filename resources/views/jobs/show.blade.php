@@ -135,7 +135,7 @@
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal"> <span>:</span></h4></li>
                 </ul>
                 <ul class="col-6" style="overflow: unset; white-space: nowrap;">
-                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" id="sample">{{ $job->email }}</h4><button onclick="CopyToClipboard('sample'); return false;" class="fas fa-copy ui-button-icons-only"></button></li>
+                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" id="sample">{{ $job->email }}</h4><button onclick="CopyToClipboard('sample'); return false;" class="fas fa-copy ui-button-icons-only buttona"></button></li>
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" >{{ $job->notelp }}</h4></li>
                 </ul>
             </div>
