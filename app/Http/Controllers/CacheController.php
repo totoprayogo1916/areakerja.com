@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use App\Job;
+use App\Wish;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class CacheController extends Controller
@@ -45,7 +46,7 @@ class CacheController extends Controller
         // return redirect('pasang');
     }
 
-    function get_client_ip($id) {
+        function get_client_ip($id) {
         $job = Job::where('id', $id)->first();
         $ipaddress = '';
         if (isset($_SERVER['HTTP_CLIENT_IP']))
@@ -63,8 +64,11 @@ class CacheController extends Controller
         else
             $ipaddress = 'UNKNOWN';
 
-        $title = $job->title;
-        $name = $job->company->name;
+        Wish::insert([
+            'ip' => $ipaddress,
+            'idJob' => $id,
+
+        ]);
 
         echo ($ipaddress);
         echo ('<br>');
