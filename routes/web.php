@@ -10,8 +10,8 @@ Route::get('/kontak', 'HomeController@kontak')->name('kontak');
 // Route::get('/cache', 'CacheController@index')->name('cache');
 Route::get('/getuser', 'UserSystemInfoController@getusersysteminfo')->name('getuser');
 Route::post('/kontakform', 'HomeController@kirimmail')->name('kontakform');
-Route::get('/cache/{id}', 'CacheController@index')->name('cache');
-Route::get('/cacheget', 'CacheController@get')->name('cacheget');
+// Route::get('/cache/{id}', 'CacheController@index')->name('cache');
+Route::get('/cache/{id}', 'CacheController@get_client_ip')->name('cache');
 // Route::get('lamarmail/{parameter}', [
 //     'as'=> 'lamarmail',
 //     'uses'=>'HomeController@lamarmail'
@@ -26,7 +26,23 @@ Route::get('search', 'HomeController@search')->name('search');
 Route::resource('jobs', 'JobController')->only(['index', 'show']);
 Route::get('category/{category}', 'CategoryController@show')->name('categories.show');
 Route::get('location/{location}', 'LocationController@show')->name('locations.show');
+Route::get('/getid', 'HomeController@addcart')->name('addcart');
 
+Route::get('/get_client_ip', 'CacheController@get_client_ip')->name('get_client_ip');
+
+Route::get('/getmacshellexec',function()
+    {
+        $shellexec = shell_exec('getmac');
+        dd  ($shellexec);
+    }
+);
+
+Route::get('/getmacexec',function()
+    {
+        $shellexec = exec('getmac');
+        dd($shellexec);
+    }
+);
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
     Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
