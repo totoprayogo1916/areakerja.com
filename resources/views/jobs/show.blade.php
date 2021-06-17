@@ -101,7 +101,7 @@
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><p style="line-height: 150%; margin-top: -1%">{{ $job->lokasikerja }}</p></h4></li>
                 </ul>
             </div>
-            
+
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <h3 class="head" style="margin-top: 10px">Deskripsi Pekerjaan</h3>
             @foreach($job->full_description as $hehe)
@@ -135,11 +135,11 @@
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal"> <span>:</span></h4></li>
                 </ul>
                 <ul class="col-6" style="overflow: unset; white-space: nowrap;">
-                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" >{{ $job->email }}</h4></li>
+                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" id="sample">{{ $job->email }}</h4><button onclick="CopyToClipboard('sample'); return false;" class="fas fa-copy ui-button-icons-only"></button></li>
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" >{{ $job->notelp }}</h4></li>
                 </ul>
             </div>
-            
+
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <div class="row" style="margin-top: 15px">
                 <div class="col-2" style="margin-right: 10%;">
@@ -169,6 +169,31 @@
                     <a type="button" class="btn form-pasang3" href="{{ route('cache', $job->id) }}" id="btn2">
                         <h4  class="gg" style="font-weight: normal" id="btnh42"><span class="fa fa-star-o"></span><span style="display:inline-block; width: 10px;"></span>Simpan</h4>
                     </a>
+                </div>
+
+                {{ session()->get('message') }}
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Lowongan Tersimpan</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            @foreach ($wishlist as $wishlis)
+                            {{ $wishlis->job->title }}
+                            <br>
+                            @endforeach
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
                 </div>
                 {{-- <div class="col-2">
                     <a type="button" class="btn form-pasang3" href="whatsapp://send?text={{ route('jobs.show', $job->id) }}">

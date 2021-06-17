@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Job;
+use App\Wish;
 use App\Location;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -35,16 +36,36 @@ class JobController extends Controller
 
     public function show(Job $job)
     {
+
+        $ipaddress = '';
+        if (isset($_SERVER['HTTP_CLIENT_IP']))
+            $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+        else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        else if(isset($_SERVER['HTTP_X_FORWARDED']))
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+        else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+            $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+        else if(isset($_SERVER['HTTP_FORWARDED']))
+            $ipaddress = $_SERVER['HTTP_FORWARDED'];
+        else if(isset($_SERVER['REMOTE_ADDR']))
+            $ipaddress = $_SERVER['REMOTE_ADDR'];
+        else
+            $ipaddress = 'UNKNOWN';
+
         $job->load('company');
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
+        $wishlist=Wish::where('ip', $ipaddress)->get();
 
         // Alert::success('Sukses Membuka');
 
         return view(
             'jobs.show',
-            compact(['job', 'searchLocations', 'searchCategories'])
+            compact(['job', 'searchLocations', 'searchCategories','wishlist','ipaddress'])
         );
+
+
     }
 
     public function pasang()
