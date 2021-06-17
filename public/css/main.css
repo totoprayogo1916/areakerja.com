@@ -2572,7 +2572,7 @@ hr {
   background-color: #ffffff;
   margin-bottom: 30px;
   border-radius: 16px;
-  width: 130%;
+  width: auto;
   box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
 }
 
@@ -4467,4 +4467,35 @@ input.invalid {
 .animate__animated.animate__flipInX {
     --animate-duration: 2s;
     --animate-delay: 2s;
+}
+@media screen and (min-width: 601px) {
+  h4.gg {
+    font-size: 18px;
+  }
+
+  
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  h4.gg {
+    font-size: 13px;
+  }
+  h3.head {
+    font-size: 20px;
+  }
+
+  h1.ttl {
+    font-size: 25px;
+  }
+  h2.cmp {
+    font-size: 20px;
+  }
+  a.btn.form-pasang3{
+    margin-right: 10px;
+  }
+
+  div.col-lg-8.post-list{
+    margin-top: 80px;
+  }
 }
