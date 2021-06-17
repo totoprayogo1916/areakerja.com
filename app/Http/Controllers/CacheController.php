@@ -10,6 +10,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class CacheController extends Controller
 {
+
     function index($id){
         $job = Job::where('id', $id)->first();
         $title = $job->title;
@@ -64,15 +65,26 @@ class CacheController extends Controller
         else
             $ipaddress = 'UNKNOWN';
 
+        $wish=Wish::where([['idJob',$id],['ip',$ipaddress]])->first();
+        if(isset($wish))
+        {
+            return redirect()->back()->with('message','Lowongan Sudah Disimpan');
+        }
+        else
+        {
+
         Wish::insert([
             'ip' => $ipaddress,
             'idJob' => $id,
 
         ]);
+        
 
-        echo ($ipaddress);
-        echo ('<br>');
-        echo ($id);
-        echo ('<br>');
+        return redirect()->back()->with('message','Lowongan Telah Disimpan');
+        }
+        // echo ($ipaddress);
+        // echo ('<br>');
+        // echo ($id);
+        // echo ('<br>');
     }
 }
