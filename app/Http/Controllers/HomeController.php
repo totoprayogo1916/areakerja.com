@@ -104,4 +104,18 @@ class HomeController extends Controller
 
         return view('user.kontak');
     }
+
+    // function getMAcAddressExec()
+    // {
+    //     echo getMAcAddressExec();
+    //         return substr(exec('getmac'), 0, 17); 
+    // }   
+    
+    
+    // function getMAcAddressShellExec()
+    // {
+    //     echo getMAcAddressShellExec();
+    //     return substr(shell_exec('getmac'), 159,20); 
+    // }
+    
 }

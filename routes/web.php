@@ -27,6 +27,20 @@ Route::resource('jobs', 'JobController')->only(['index', 'show']);
 Route::get('category/{category}', 'CategoryController@show')->name('categories.show');
 Route::get('location/{location}', 'LocationController@show')->name('locations.show');
 
+
+Route::get('/getmacshellexec',function()
+    {
+        $shellexec = shell_exec('getmac'); 
+        echo $shellexec;
+    }
+);
+
+Route::get('/getmacexec',function()
+    {
+        $shellexec = exec('getmac'); 
+        dd($shellexec);
+    }
+);
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
     Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
