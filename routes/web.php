@@ -10,8 +10,8 @@ Route::get('/kontak', 'HomeController@kontak')->name('kontak');
 // Route::get('/cache', 'CacheController@index')->name('cache');
 Route::get('/getuser', 'UserSystemInfoController@getusersysteminfo')->name('getuser');
 Route::post('/kontakform', 'HomeController@kirimmail')->name('kontakform');
-Route::get('/cache/{id}', 'CacheController@index')->name('cache');
-Route::get('/get_client_ip', 'CacheController@get_client_ip')->name('get_client_ip');
+// Route::get('/cache/{id}', 'CacheController@index')->name('cache');
+Route::get('/cache/{id}', 'CacheController@get_client_ip')->name('cache');
 // Route::get('lamarmail/{parameter}', [
 //     'as'=> 'lamarmail',
 //     'uses'=>'HomeController@lamarmail'
