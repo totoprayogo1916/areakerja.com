@@ -184,10 +184,10 @@
                         </button>
                         </div>
                         <div class="modal-body">
-                            @foreach ($wishlist as $wishlis)
-                            {{ $wishlis->job->title }}
-                            <br>
-                            @endforeach
+                                @foreach($wishlist as $wishlis)
+                                    <a class="justify-content-center" href="{{ route('jobs.show', $job->id) }}">{{ $wishlis->job->title }} ---> {{ $wishlis->job->company->name }}</a>
+                                    <hr style="width: 90%"/>
+                                @endforeach
                         </div>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
