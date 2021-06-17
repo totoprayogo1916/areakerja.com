@@ -69,57 +69,65 @@
                 </div>
             </div>
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%; margin-top: 12px"/>
-            <h6 style="margin-top: 8px; font-weight: normal">{{$job->short_description}}</h6>
+            <h6 style="margin-top: 8px; font-weight: normal; text-align: justify;">{{$job->short_description}}</h6>
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;margin-top: 16px"/>
             <h3 style="margin-top: 10px">Ringkasan</h3>
             <div class="row ">
-                <div class="col-5" id="ringkiri">
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h41"><span class="fa fa-graduation-cap"></span><span style="display:inline-block; width: 15px;"></span>Tingkat Pendidikan</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h42"><span class="fa fa-venus-mars"></span><span style="display:inline-block; width: 15px;"></span>Gender</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h43"><span class="fa fa-universal-access"></span><span style="display:inline-block; width: 15px;"></span>Umur</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h44"><span class="fa fa-user-circle-o"></span><span style="display:inline-block; width: 15px;"></span>Status Kerja</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h45"><span class="fa fa-money"></span><span style="display:inline-block; width: 15px;"></span>Besaran Gaji</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h46"><span class="fa fa-calendar"></span><span style="display:inline-block; width: 15px;"></span>Batas Lamaran</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h47"><span class="fa fa-map-marker"></span><span style="display:inline-block; width: 15px;"></span>Lokasi Kerja</h4>
-                </div>
-                <div id="ringtengah">
-                    <h4 style="margin-top: 10px; font-weight: normal;" id="h48"> <span>:</span></h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h49"> <span>:</span></h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h410"> <span>:</span></h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h411"> <span>:</span></h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h412"> <span>:</span></h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h413"> <span>:</span></h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h414"> <span>:</span></h4>
-                </div>
-                <div class="col-6" id="ringkanan">
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h415">{{ $job->pendidikan }}</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h416">{{ $job->gender }}</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h417">{{ $job->umur }}</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h418">{{ $job->job_nature }}</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h419">{{ $job->salary }}</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h420">{{ $job->bataslamaran }}</h4>
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h421"><p style="line-height: 150%; margin-top: -1%">{{ $job->lokasikerja }}</p></h4>
-                </div>
-
-              </div>
+                <ul class="col-5" id="ringkiri">
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h41"><span style="display:inline-block; width: 15px;" class="fa fa-graduation-cap"></span><span style="display:inline-block; width: 15px;"></span>Tingkat Pendidikan</h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h42"><span style="display:inline-block; width: 15px;" class="fa fa-venus-mars"></span><span style="display:inline-block; width: 15px;"></span>Gender</h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h43"><span style="display:inline-block; width: 15px;" class="fa fa-universal-access"></span><span style="display:inline-block; width: 15px;"></span>Umur</h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h44"><span style="display:inline-block; width: 15px;" class="fa fa-user-circle-o"></span><span style="display:inline-block; width: 15px;"></span>Status Kerja</h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h45"><span style="display:inline-block; width: 15px;" class="fa fa-money"></span><span style="display:inline-block; width: 15px;"></span>Besaran Gaji</h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h46"><span style="display:inline-block; width: 15px;" class="fa fa-calendar"></span><span style="display:inline-block; width: 15px;"></span>Batas Lamaran</h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h47"><span style="display:inline-block; width: 15px;" class="fa fa-map-marker"></span><span style="display:inline-block; width: 15px;"></span>Lokasi Kerja</h4></li>
+                </ul>
+                <ul id="ringtengah">
+                    <li><h4 style="margin-top: 10px; font-weight: normal;" id="h48"> <span>:</span></h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h49"> <span>:</span></h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h410"> <span>:</span></h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h411"> <span>:</span></h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h412"> <span>:</span></h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h413"> <span>:</span></h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h414"> <span>:</span></h4></li>
+                </ul>
+                <ul class="col-6" id="ringkanan">
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h415">{{ $job->pendidikan }}</h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h416">{{ $job->gender }}</h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h417">{{ $job->umur }}</h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h418">{{ $job->job_nature }}</h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h419">{{ $job->salary }}</h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h420">{{ $job->bataslamaran }}</h4></li>
+                    <li><h4 style="margin-top: 10px; font-weight: normal" id="h421"><p style="line-height: 150%; margin-top: -1%">{{ $job->lokasikerja }}</p></h4></li>
+                </ul>
+            </div>
+            
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <h3 style="margin-top: 10px">Deskripsi Pekerjaan</h3>
             @foreach($job->full_description as $hehe)
-                <h4 style="margin-top: 10px; font-weight: normal; margin-left: 5px">•   {{ $hehe }}</h4>
+            <ul style="list-style-type: disc; margin-left: 20px; font-family: 'Poppins', sans-serif; color: #222222;">
+                <li>
+                    <h4 style="margin-top: 10px; font-weight: normal; margin-left: 5px; text-align: justify;">{{ $hehe }}</h4>
+                </li>
+            </ul>
             @endforeach
 
             </ul>
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <h3 style="margin-top: 10px">Syarat Pekerjaan</h3>
             @foreach($job->requirements as $hehe)
-                <h4 style="margin-top: 10px; font-weight: normal; margin-left: 5px">•   {{ $hehe }}</h4>
+            <ul style="list-style-type: disc; margin-left: 20px; font-family: 'Poppins', sans-serif; color: #222222;">
+                <li>
+                    <h4 style="margin-top: 10px; font-weight: normal; margin-left: 5px; text-align: justify;">{{ $hehe }}</h4>
+                </li>
+            </ul>
             @endforeach
 
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <h3 style="margin-top: 10px">Kirim Lamaran</h3>
             <div class="row" style="width: 100%; ">
                 <div class="col-6">
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h415"><span class="fa fa-envelope-o"></span><span style="display:inline-block; width: 15px;"></span>Email</h4>
+                    <h4 style="margin-top: 10px; font-weight: normal" id="h415"><span style="display:inline-block; width: 15px;" class="fa fa-envelope-o"></span><span style="display:inline-block; width: 15px;"></span>Email</h4>
                 </div>
                 <div class="col-6">
                     <h4 style="margin-top: 10px; font-weight: normal" id="h416"> <span>:</span><span style="display:inline-block; width: 10px;"></span>{{ $job->email }}</h4>
@@ -127,7 +135,7 @@
             </div>
             <div class="row" style="width: 100%; ">
                 <div class="col-6">
-                    <h4 style="margin-top: 10px; font-weight: normal" id="h417"><span class="fa fa-phone"></span><span style="display:inline-block; width: 15px;"></span>Nomor Telepon</h4>
+                    <h4 style="margin-top: 10px; font-weight: normal" id="h417"><span style="display:inline-block; width: 15px;" class="fa fa-phone"></span><span style="display:inline-block; width: 15px;"></span>Nomor Telepon</h4>
                 </div>
                 <div class="col-6">
                     <h4 style="margin-top: 10px; font-weight: normal" id="h418"> <span>:</span><span style="display:inline-block; width: 10px;"></span>{{ $job->notelp }}</h4>
