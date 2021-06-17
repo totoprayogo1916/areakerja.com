@@ -184,7 +184,10 @@
                         </button>
                         </div>
                         <div class="modal-body">
-                            cobaa
+                            @foreach ($wishlist as $wishlis)
+                            {{ $wishlis->job->title }}
+                            <br>
+                            @endforeach
                         </div>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

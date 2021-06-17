@@ -45,7 +45,7 @@ class Job extends Model
         'short_description',
     ];
 
-    
+
 
     public function company()
     {
@@ -60,6 +60,10 @@ class Job extends Model
     public function categories()
     {
         return $this->belongsToMany(Category::class);
+    }
+
+    public function Wish() {
+        return $this->belongsTo(Wish::class, 'id');
     }
 
     public function scopeSearchResults($query)

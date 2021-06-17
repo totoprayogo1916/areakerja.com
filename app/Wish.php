@@ -15,4 +15,9 @@ class Wish extends Model
     protected $fillable = [
         'ip'
     ];
+
+    public function Job()
+    {
+        return $this->belongsTo(Job::class, 'idJob', 'id');
+    }
 }

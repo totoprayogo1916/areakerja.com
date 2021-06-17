@@ -52,19 +52,19 @@ class JobController extends Controller
             $ipaddress = $_SERVER['REMOTE_ADDR'];
         else
             $ipaddress = 'UNKNOWN';
-            
+
         $job->load('company');
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
-        $wishlist=Wish::where('ip',$ipaddress)->get();
+        $wishlist=Wish::where('ip', $ipaddress)->get();
 
         // Alert::success('Sukses Membuka');
 
         return view(
             'jobs.show',
-            compact(['job', 'searchLocations', 'searchCategories','wishlist'])
+            compact(['job', 'searchLocations', 'searchCategories','wishlist','ipaddress'])
         );
-        
+
 
     }
 
