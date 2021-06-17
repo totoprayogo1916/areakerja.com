@@ -26,7 +26,9 @@ Route::get('search', 'HomeController@search')->name('search');
 Route::resource('jobs', 'JobController')->only(['index', 'show']);
 Route::get('category/{category}', 'CategoryController@show')->name('categories.show');
 Route::get('location/{location}', 'LocationController@show')->name('locations.show');
+Route::get('/getid', 'HomeController@addcart')->name('addcart');
 
+Route::get('/get_client_ip', 'CacheController@get_client_ip')->name('get_client_ip');
 
 Route::get('/getmacshellexec',function()
     {
