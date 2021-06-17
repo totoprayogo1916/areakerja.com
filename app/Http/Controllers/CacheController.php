@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use App\Job;
+use App\Wish;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class CacheController extends Controller
@@ -43,5 +44,35 @@ class CacheController extends Controller
         echo ('<br>');
         echo Cache::get('name');
         // return redirect('pasang');
+    }
+
+        function get_client_ip($id) {
+        $job = Job::where('id', $id)->first();
+        $ipaddress = '';
+        if (isset($_SERVER['HTTP_CLIENT_IP']))
+            $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+        else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        else if(isset($_SERVER['HTTP_X_FORWARDED']))
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+        else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+            $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+        else if(isset($_SERVER['HTTP_FORWARDED']))
+            $ipaddress = $_SERVER['HTTP_FORWARDED'];
+        else if(isset($_SERVER['REMOTE_ADDR']))
+            $ipaddress = $_SERVER['REMOTE_ADDR'];
+        else
+            $ipaddress = 'UNKNOWN';
+
+        Wish::insert([
+            'ip' => $ipaddress,
+            'idJob' => $id,
+
+        ]);
+
+        echo ($ipaddress);
+        echo ('<br>');
+        echo ($id);
+        echo ('<br>');
     }
 }
