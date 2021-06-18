@@ -136,14 +136,26 @@
                 </ul>
                 <ul class="col-auto" style="overflow: unset; white-space: nowrap;">
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal;"  id="sample">{{ $job->email }}</h4>
-                        
+
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal"  id="sample2">{{ $job->notelp }}</h4></li>
                 </ul>
                 <ul class="col-auto" style="overflow: unset; white-space: nowrap;">
-                    <h4 class="gg" style="margin-top: 5px; font-weight: normal;"> <button onclick="CopyToClipboard('sample'); return false;" class="fas fa-copy ui-button-icons-only buttona"></button></h4>
-                    <h4 class="gg" style="margin-top: 5px; font-weight: normal"> <button onclick="CopyToClipboard('sample2'); return false;" class="fas fa-copy ui-button-icons-only buttona"></button></h4>
+                    <h4 class="gg" style="margin-top: 5px; font-weight: normal">
+                        <button onclick="CopyToClipboard('sample'); myFunction3()" class="fas fa-copy ui-button-icons-only buttona">
+                            <div class="row justify-content-center popuptext" id="myPopup3" style="padding-right: 0px;margin-right: 0px; color: #000000; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+                                Disalin
+                            </div>
+                        </button>
+                    </h4>
+                    <h4 class="gg" style="margin-top: 5px; font-weight: normal">
+                        <button onclick="CopyToClipboard('sample2'); myFunction4()" class="fas fa-copy ui-button-icons-only buttonb">
+                            <div class="row justify-content-center popuptext" id="myPopup4" style="padding-right: 0px;margin-right: 0px; color: #000000; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+                                Disalin
+                            </div>
+                        </button>
+                    </h4>
                 </ul>
-                
+
                </div>
 
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
