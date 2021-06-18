@@ -84,7 +84,7 @@ aria-hidden="true">
               <td><a style=" color:#fff" class="btn btn-xs btn-danger">
                 remove
             </a></i></a>
-                <a style="color:#fff" class="btn btn-xs btn-info">
+                <a href="{{ route('jobs.show', $job->id) }}" style="color:#fff" class="btn btn-xs btn-info">
                     view
                 </a>
             </td>
