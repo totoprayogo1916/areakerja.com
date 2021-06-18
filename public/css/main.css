@@ -3296,7 +3296,7 @@ hr {
   margin-right: 20px;
   border: 1px solid #eee;
   -webkit-transition: all 0.3s ease 0s;
-  -moz-tranrgb(216, 116, 22)0.3s ease 0s;
+  -moz-tranrgb:(216, 116, 22)0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   background-color: #fff;

@@ -126,7 +126,7 @@
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <h3 class="head" style="margin-top: 10px">Kirim Lamaran</h3>
             <div class="row ">
-                <ul class="col-5" style="overflow: unset; white-space: nowrap;">
+                <ul class="col-4" style="overflow: unset; white-space: nowrap;">
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><span style="display:inline-block; width: 15px;" class="fa fa-graduation-cap"></span><span style="display:inline-block; width: 15px;"></span>Email</h4></li>
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><span style="display:inline-block; width: 15px;" class="fa fa-venus-mars"></span><span style="display:inline-block; width: 15px;"></span>Nomor Telepon</h4></li>
                 </ul>
@@ -134,11 +134,17 @@
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal;"> <span>:</span></h4></li>
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal"> <span>:</span></h4></li>
                 </ul>
-                <ul class="col-6" style="overflow: unset; white-space: nowrap;">
-                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" id="sample">{{ $job->email }}</h4><button onclick="CopyToClipboard('sample'); return false;" class="fas fa-copy ui-button-icons-only buttona"></button></li>
-                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" >{{ $job->notelp }}</h4></li>
+                <ul class="col-auto" style="overflow: unset; white-space: nowrap;">
+                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal;"  id="sample">{{ $job->email }}</h4>
+                        
+                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal"  id="sample2">{{ $job->notelp }}</h4></li>
                 </ul>
-            </div>
+                <ul class="col-auto" style="overflow: unset; white-space: nowrap;">
+                    <h4 class="gg" style="margin-top: 5px; font-weight: normal;"> <button onclick="CopyToClipboard('sample'); return false;" class="fas fa-copy ui-button-icons-only buttona"></button></h4>
+                    <h4 class="gg" style="margin-top: 5px; font-weight: normal"> <button onclick="CopyToClipboard('sample2'); return false;" class="fas fa-copy ui-button-icons-only buttona"></button></h4>
+                </ul>
+                
+               </div>
 
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <div class="row" style="margin-top: 15px">

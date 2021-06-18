@@ -52,12 +52,6 @@
     /* animation-duration: 5s; */
   }
 
-.for_slick_slider .items img {
-  width: 350px;
-  height: 285px;
-}
-
-
 .slick-prev, .slick-next {
   width: 50px;
   height: 50px;
