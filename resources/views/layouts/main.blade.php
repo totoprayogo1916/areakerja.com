@@ -97,7 +97,7 @@ aria-hidden="true">
 
     <!--Footer-->
     <div class="modal-footer">
-      <a type="button" class="btn btn-outline-warning waves-effect" data-dismiss="modal">Close</a>
+      <a type="button" class="btn btn-outline-warning2" data-dismiss="modal">Close</a>
     </div>
   </div>
   <!--/.Content-->
