@@ -4892,6 +4892,8 @@ tbody.collapse.show {
   color: #000;
   text-decoration: none;
   opacity: .75;
+  outline: 0;
+
 }
 
 .close:not(:disabled):not(.disabled) {

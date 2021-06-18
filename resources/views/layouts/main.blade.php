@@ -56,7 +56,6 @@ aria-hidden="true">
     <!--Header-->
     <div class="modal-header2 d-flex">
       <p class="heading">Lowongan Tersimpan</p>
-      <i class="fas fa-star fa-1x animated rotateIn"></i>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span style="color: rgb(255, 255, 255)"   aria-hidden="true">&times;</span>
     </button>
