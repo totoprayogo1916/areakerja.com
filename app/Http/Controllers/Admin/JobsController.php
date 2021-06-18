@@ -39,7 +39,7 @@ class JobsController extends Controller
     public function store(Request $request)
     {
         // $job->categories()->sync($request->input('categories', []));
-        // $casts = ['jobs' => '    '] 
+        // $casts = ['jobs' => '    ']
         // $data = json_encode($request->requirements);
         // $arr = $request->all();
         // $arr = serialize($data);
@@ -60,7 +60,6 @@ class JobsController extends Controller
             'location_id'=> $request->location_id,
             'full_description'=> $request->full_description,
             'short_description'=> $request->short_description,
-        
         ]);
         $job->categories()->sync($request->input('categories', []));
         return request('requirements');

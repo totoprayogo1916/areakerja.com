@@ -44,6 +44,8 @@ class CreateJobsTable extends Migration
             $table->timestamps();
 
             $table->softDeletes();
+
+            $table->boolean('status')->default(0)->nullable();
         });
     }
 }
