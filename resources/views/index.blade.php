@@ -86,11 +86,11 @@
             @if($job->company->gambar)
                 <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="width: 100px; height:80px; margin-left: auto; margin-right: auto;margin-top: 10px">
             @endif
-            <h5 class ="sng-dtl" style="margin-left: 5%; margin-top: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));" ><span class="lnr lnr-apartment"></span> {{ $job->company->name }}</h5>
+            <h5 class ="sng-dtl" style="margin-left: 5%; margin-top: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));" ><span class="fa fa-building-o" aria-hidden="true"></span> {{ $job->company->name }}</h5>
             <hr/>
-            <h5 class ="sng-dtl" style="margin-left: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }}</h5>
+            <h5 class ="sng-dtl" style="margin-left: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));" ><span class="fa fa-hourglass-half" aria-hidden="true"></span>  {{ $job->job_nature }}</h5>
             <hr/>
-            <h5 class ="sng-dtl" style="margin-left: 5%;margin-bottom: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));"> <span class="lnr lnr-map"></span> {{ $job->address }}</h5>
+            <h5 class ="sng-dtl" style="margin-left: 5%;margin-bottom: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));"> <span class="fa fa-map-marker" aria-hidden="true"></span> {{ $job->address }}</h5>
 </a>
         </div>
     @endforeach
@@ -115,10 +115,10 @@
                         <h3 class ="sng-ttl2" >{{ $job->title }}</h3>
                         <div class="row ttl3" style=" overflow: unset; white-space: nowrap;">
                             <div class="col-auto"  >
-                                <h5 class ="sng-dtl" ><span class="lnr lnr-apartment"></span>  {{ $job->company->name }}
+                                <h5 class ="sng-dtl" ><span class="fa fa-building-o" aria-hidden="true"></span>  {{ $job->company->name }}
                             </div>
                             <div class="col-auto" >
-                                <h5 class ="sng-dtl" > <span class="lnr lnr-database"></span> {{ $job->salary }}</h5>
+                                <h5 class ="sng-dtl" > <span class="fa fa-money" aria-hidden="true"></span> {{ $job->salary }}</h5>
                             </div>
                         </div>
                     </div>
@@ -128,18 +128,22 @@
                 <hr class="d-flex flex-row gg" style="width: 100%; margin-left: -0.5%"/>
                  <div class="row ttl3" >
                     <div class="col-auto " >
+<<<<<<< HEAD
+                        <h5 class ="sng-dtl" ><span class="fa fa-hourglass-half" aria-hidden="true"></span>  {{ $job->job_nature }}
+=======
                         <h5 class ="sng-dtl" ><span class="lnr fa-graduation-cap"></span>  {{ $job->pendidikan }}
                     </div>
                     <div class="col-auto " >
                         <h5 class ="sng-dtl" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }}
+>>>>>>> 12fa7b96318a970ff6dff31b17ec168646bb1b45
                     </div>
                     <div class="col-auto"  >
-                        <h5 class ="sng-dtl" > <span class="lnr lnr-map"></span> {{ $job->address }}</h5>
+                        <h5 class ="sng-dtl" > <span class="fa fa-map-marker" aria-hidden="true"></span> {{ $job->address }}</h5>
                     </div>
                 </div>
             </div>
         </div>
-    </a>
+    </a>x
     @endforeach
 
     <a class="text-uppercase loadmore-btn mx-auto d-block" href="{{ route('jobs.index') }}">Load More Job Posts</a>

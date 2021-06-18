@@ -128,6 +128,7 @@
             <div class="row ">
                 <ul class="col-4" style="overflow: unset; white-space: nowrap;">
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><span style="display:inline-block; width: 15px;" class="fa fa-graduation-cap"></span><span style="display:inline-block; width: 15px;"></span>Email</h4></li>
+                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><span style="display:inline-block; width: 15px;" class="fa fa-phone"></span><span style="display:inline-block; width: 15px;"></span>Nomor Telepon</h4></li>
                 </ul>
                 <ul style="overflow: unset; white-space: nowrap;">
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal;"> <span>:</span></h4></li>
