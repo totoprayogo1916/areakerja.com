@@ -128,7 +128,6 @@
             <div class="row ">
                 <ul class="col-4" style="overflow: unset; white-space: nowrap;">
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><span style="display:inline-block; width: 15px;" class="fa fa-graduation-cap"></span><span style="display:inline-block; width: 15px;"></span>Email</h4></li>
-                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><span style="display:inline-block; width: 15px;" class="fa fa-phone"></span><span style="display:inline-block; width: 15px;"></span>Nomor Telepon</h4></li>
                 </ul>
                 <ul style="overflow: unset; white-space: nowrap;">
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal;"> <span>:</span></h4></li>
@@ -142,7 +141,8 @@
             </div>
             <div class="row ">
                 <ul class="col-4" style="overflow: unset; white-space: nowrap;">
-                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><span style="display:inline-block; width: 15px;" class="fa fa-venus-mars"></span><span style="display:inline-block; width: 15px;"></span>Nomor Telepon</h4></li>
+                    <li id="telepon1"><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><span style="display:inline-block; width: 15px;" class="fa fa-phone"></span><span style="display:inline-block; width: 15px;"></span>Nomor Telepon</h4></li>
+                    <li style="display: none" id="telepon2"><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><span style="display:inline-block; width: 15px;" class="fa fa-phone"></span><span style="display:inline-block; width: 15px;"></span>Telepon</h4></li>
                 </ul>
                 <ul style="overflow: unset; white-space: nowrap;">
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal"> <span>:</span></h4></li>
@@ -210,7 +210,7 @@
                     </div>
                     </div>
                 </div> --}}
-                
+
                 {{-- <div class="col-2">
                     <a type="button" class="btn form-pasang3" href="whatsapp://send?text={{ route('jobs.show', $job->id) }}">
                         <h4 style="font-weight: normal"><span class="fa fa-share-alt"></span><span style="display:inline-block; width: 10px;"></span>Bagikan</h4>

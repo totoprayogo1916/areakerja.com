@@ -1,4 +1,6 @@
 if ($(window).width() < 1000) {
+    document.getElementById("telepon1").style.display='none';
+    document.getElementById("telepon2").style.display='';
     document.getElementById("contentshow").style.marginTop='50%';
     document.getElementById("ringkiri").className='col-6';
     document.getElementById("ringkanan").className='col-5';
