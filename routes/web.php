@@ -24,6 +24,7 @@ Route::post('/formpasang', 'LowonganController@formpasang')->name('formpasang');
 
 Route::get('search', 'HomeController@search')->name('search');
 Route::resource('jobs', 'JobController')->only(['index', 'show']);
+Route::delete('delete/{id}', 'JobController@delete')->name('jobs.delete');
 Route::get('category/{category}', 'CategoryController@show')->name('categories.show');
 Route::get('location/{location}', 'LocationController@show')->name('locations.show');
 Route::get('/getid', 'HomeController@addcart')->name('addcart');

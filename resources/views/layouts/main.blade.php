@@ -80,12 +80,14 @@ aria-hidden="true">
               <th scope="row">{{ $loop->iteration }}</th>
               <td>{{ $wishlis->job->title }}</td>
               <td>{{ $wishlis->job->company->name }}</td>
-              <td><a style=" color:#fff" class="btn btn-xs btn-danger">
-                remove
-            </a></i></a>
-                <a href="{{ route('jobs.show', $wishlis->job->id) }}" style="color:#fff" class="btn btn-xs btn-info">
-                    view
-                </a>
+              <td width='50%'>
+                {{-- <a href="{{ route('jobs.delete', $wishlis->job->id) }}" style="color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-danger">{{ method_field('DELETE') }}<i class="fas fa-trash"></i></a> --}}
+                <form action="{{ route('jobs.delete', $wishlis->job->id) }}" method="POST" class="justify-content-center flex-wrap" >
+                    @csrf
+                    {{ method_field('DELETE') }}
+                    <button type="submit" style="margin-right: 10px; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                <a href="{{ route('jobs.show', $wishlis->job->id) }}" style="; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-info"><i class="fas fa-eye"></i></a>
+            </form>
             </td>
             </tr>
             @endforeach
@@ -96,7 +98,7 @@ aria-hidden="true">
 
     <!--Footer-->
     <div class="modal-footer">
-      <a type="button" class="btn btn-outline-warning waves-effect" data-dismiss="modal">Close</a>
+      <a type="button" class="btn btn-outline-close" data-dismiss="modal"><span style="margin-left: -30%">Close</span></a>
     </div>
   </div>
   <!--/.Content-->
