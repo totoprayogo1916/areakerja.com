@@ -47,8 +47,66 @@
         <!-- End post Area -->
 
 
+               <!--Modal: modalPush-->
+<div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-notify modal-info" role="document">
+  <!--Content-->
+  <div class="modal-content text-center">
+    <!--Header-->
+    <div class="modal-header2 d-flex">
+      <p class="heading">Lowongan Tersimpan</p>
+      <i class="fas fa-star fa-1x animated rotateIn"></i>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span style="color: rgb(255, 255, 255)"   aria-hidden="true">&times;</span>
+    </button>
+    </div>
+
+    <!--Body-->
+    <!--Body-->
+    <div class="modal-body">
+
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nama Pekerjaan</th>
+              <th>Perusahaan</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach($wishlist as $wishlis)
+            <tr>
+              <th scope="row">{{ $loop->iteration }}</th>
+              <td>{{ $wishlis->job->title }}</td>
+              <td>{{ $wishlis->job->company->name }}</td>
+              <td><a style=" color:#fff" class="btn btn-xs btn-danger">
+                remove
+            </a></i></a>
+                <a style="color:#fff" class="btn btn-xs btn-info">
+                    view
+                </a>
+            </td>
+            </tr>
+            @endforeach
+          </tbody>
+        </table>
+
+      </div>
+
+    <!--Footer-->
+    <div class="modal-footer">
+      <a type="button" class="btn btn-outline-warning waves-effect" data-dismiss="modal">Close</a>
+    </div>
+  </div>
+  <!--/.Content-->
+</div>
+</div>
+<!--Modal: modalPush-->
+
          <!-- Modal -->
-         <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+         {{-- <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -68,7 +126,7 @@
                 </div>
             </div>
             </div>
-        </div>
+        </div> --}}
 
         @include('partials.footer')
 
