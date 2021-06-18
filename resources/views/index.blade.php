@@ -128,6 +128,9 @@
                 <hr class="d-flex flex-row gg" style="width: 100%; margin-left: -0.5%"/>
                  <div class="row ttl3" >
                     <div class="col-auto " >
+                        <h5 class ="sng-dtl" ><span class="lnr fa-graduation-cap"></span>  {{ $job->pendidikan }}
+                    </div>
+                    <div class="col-auto " >
                         <h5 class ="sng-dtl" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }}
                     </div>
                     <div class="col-auto"  >
