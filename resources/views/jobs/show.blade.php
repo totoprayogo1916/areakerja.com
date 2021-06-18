@@ -56,23 +56,23 @@
 @section('content')
 <div class="col-lg-8 post-list" >
     <div class="single-post2 d-flex flex-row" style="margin-bottom: 10px">
-        <div class="details" style="width: 100%">
-            <div class="row" style="width: 100%">
-                <div class="col-10">
+        <div class="details" style="width: 100%" >
+            <div class="row">
+                <div class="col-9" >
                     <a href="#"><h2 class="cmp" style="font-weight: normal">{{ $job->company->name }}</h2></a>
                     <h5 style="margin-top: 8px; font-weight: normal">Membuka Lowongan</h5>
 
                     <h1 class="ttl" style="margin-top: 8px"> {{ $job->title }}</h1>
                 </div>
-                <div class="col-2 text-center ">
-                    <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="height: inherit; width : inherit;margin: auto; " >
+                <div class="col-3 text-right" >
+                    <img class="gg5" src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style=" margin-right:auto " >
                 </div>
             </div>
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%; margin-top: 12px"/>
             <h4 class="gg" style="margin-top: 8px; font-weight: normal;">{{$job->short_description}}</h4>
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;margin-top: 16px"/>
             <h3 class="head" style="margin-top: 10px">Ringkasan</h3>
-            <div class="row">
+            <div class="row" >
                 <ul class="col-5" style="overflow: unset; white-space: nowrap;">
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><span style="display:inline-block; width: 15px;" class="fa fa-graduation-cap"></span><span style="display:inline-block; width: 15px;"></span>Pendidikan</h4></li>
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><span style="display:inline-block; width: 15px;" class="fa fa-venus-mars"></span><span style="display:inline-block; width: 15px;"></span>Gender</h4></li>
@@ -128,23 +128,31 @@
             <div class="row ">
                 <ul class="col-4" style="overflow: unset; white-space: nowrap;">
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><span style="display:inline-block; width: 15px;" class="fa fa-graduation-cap"></span><span style="display:inline-block; width: 15px;"></span>Email</h4></li>
-                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><span style="display:inline-block; width: 15px;" class="fa fa-venus-mars"></span><span style="display:inline-block; width: 15px;"></span>Nomor Telepon</h4></li>
                 </ul>
                 <ul style="overflow: unset; white-space: nowrap;">
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal;"> <span>:</span></h4></li>
-                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal"> <span>:</span></h4></li>
                 </ul>
                 <ul class="col-auto" style="overflow: unset; white-space: nowrap;">
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal;"  id="sample">{{ $job->email }}</h4>
-                        
-                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal"  id="sample2">{{ $job->notelp }}</h4></li>
                 </ul>
                 <ul class="col-auto" style="overflow: unset; white-space: nowrap;">
                     <h4 class="gg" style="margin-top: 5px; font-weight: normal;"> <button onclick="CopyToClipboard('sample'); return false;" class="fas fa-copy ui-button-icons-only buttona"></button></h4>
+                </ul>
+            </div>
+            <div class="row ">
+                <ul class="col-4" style="overflow: unset; white-space: nowrap;">
+                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><span style="display:inline-block; width: 15px;" class="fa fa-venus-mars"></span><span style="display:inline-block; width: 15px;"></span>Nomor Telepon</h4></li>
+                </ul>
+                <ul style="overflow: unset; white-space: nowrap;">
+                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal"> <span>:</span></h4></li>
+                </ul>
+                <ul class="col-auto" style="overflow: unset; white-space: nowrap;">
+                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal"  id="sample2">{{ $job->notelp }}</h4></li>
+                </ul>
+                <ul class="col-auto" style="overflow: unset; white-space: nowrap;">
                     <h4 class="gg" style="margin-top: 5px; font-weight: normal"> <button onclick="CopyToClipboard('sample2'); return false;" class="fas fa-copy ui-button-icons-only buttona"></button></h4>
                 </ul>
-                
-               </div>
+            </div>
 
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <div class="row" style="margin-top: 15px">

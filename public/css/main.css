@@ -4507,6 +4507,11 @@ input.invalid {
   div.row.ttl3{
     margin-top: 14px;
   }
+
+  img.gg5{
+    width: 120px;
+    height: 100px;
+  }
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
@@ -4556,9 +4561,10 @@ input.invalid {
     height: 64px;
   }
 
-  img.slick{
+  img.gg5{
     width: 80px;
     height: 64px;
+    padding-right: 5px;
   }
 
   hr.d-flex.flex-row.gg{
@@ -4568,4 +4574,5 @@ input.invalid {
   div.row.justify-content-center.d-flex.gg3{
     margin-top: -200px;
   }
+
 }
