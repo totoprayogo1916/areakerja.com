@@ -52,7 +52,7 @@
         </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    {{-- <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -62,17 +62,17 @@
             </button>
             </div>
             <div class="modal-body">
-                {{-- @foreach($wishlist as $wishlis)
+                @foreach($wishlist as $wishlis)
                 <a class="justify-content-center" href="{{ route('jobs.show', $job->id) }}">{{ $wishlis->job->title }} ---> {{ $wishlis->job->company->name }}</a>
                 <hr style="width: 90%"/>
-            @endforeach --}}
+            @endforeach
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
         </div>
-    </div>
+    </div> --}}
 </section>
 @endsection
 
@@ -127,6 +127,9 @@
                 
                 <hr class="d-flex flex-row gg" style="width: 100%; margin-left: -0.5%"/>
                  <div class="row ttl3" >
+                    <div class="col-auto " >
+                        <h5 class ="sng-dtl" ><span class="lnr fa-graduation-cap"></span>  {{ $job->pendidikan }}
+                    </div>
                     <div class="col-auto " >
                         <h5 class ="sng-dtl" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }}
                     </div>

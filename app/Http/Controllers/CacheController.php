@@ -68,7 +68,9 @@ class CacheController extends Controller
         $wish=Wish::where([['idJob',$id],['ip',$ipaddress]])->first();
         if(isset($wish))
         {
-            return redirect()->back()->with('message','Lowongan Sudah Disimpan');
+            // return redirect()->back()->with('message','Lowongan Sudah Disimpan');
+            Alert::warning('Lowongan Sudah Tersimpan');
+            return redirect()->back();
         }
         else
         {
@@ -80,7 +82,9 @@ class CacheController extends Controller
         ]);
         
 
-        return redirect()->back()->with('message','Lowongan Telah Disimpan');
+        // return redirect()->back()->with('message','Lowongan Telah Disimpan');
+        Alert::success('Lowongan Berhasil Disimpan');
+        return redirect()->back();
         }
         // echo ($ipaddress);
         // echo ('<br>');
