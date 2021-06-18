@@ -3270,7 +3270,7 @@ hr {
   }
 }
 
-.buttona {
+/* .buttona {
     background: rgb(199, 199, 199);
     display: flex;
     padding-top: 5px;
@@ -3283,11 +3283,120 @@ hr {
     background-color: rgb(199, 199, 199);
     color: rgb(255, 255, 255);
     border-radius: 100%;
+  }*/
+
+
+
+.buttona {
+    background: rgb(199, 199, 199);
+    display: flex;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 0px solid #eee;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background-color: rgb(236, 236, 236);
+    color: rgb(255, 255, 255);
+    border-radius: 100%;
+  }
+.buttona:focus {
+    color: rgb(255, 123, 0);
+    outline: 0;
+}
+.buttona .popuptext {
+    visibility: hidden;
+    width: 120%;
+    box-shadow: 5px 5px 10px rgba(0.15, 0.15, 0.15, 0.15);
+    background-color: rgb(255, 255, 255);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    flex: none;
+    bottom: 110%;
+/* left: 100%; */
+    align-self: centers;
+    margin-left: -45%;
+}
+
+  /* Popup arrow */
+  .buttona .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
   }
 
-.buttona:focus {
-    color: rgb(255, 162, 118);
+  /* Toggle this class - hide and show the buttona */
+  .buttona .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+
+
+.buttonb {
+    background: rgb(199, 199, 199);
+    display: flex;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 0px solid #eee;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background-color: rgb(236, 236, 236);
+    color: rgb(255, 255, 255);
+    border-radius: 100%;
+  }
+.buttonb:focus {
+    color: rgb(255, 123, 0);
+    outline: 0;
 }
+.buttonb .popuptext {
+    visibility: hidden;
+    width: 120%;
+    box-shadow: 5px 5px 10px rgba(0.15, 0.15, 0.15, 0.15);
+    background-color: rgb(255, 255, 255);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    flex: none;
+    bottom: 50%;
+    align-self: centers;
+    margin-left: -45%;
+}
+
+  .buttonb .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+
+  .buttonb .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+
 
 .buttons {
   background: #fff;
@@ -4507,6 +4616,11 @@ input.invalid {
   div.row.ttl3{
     margin-top: 14px;
   }
+
+  img.gg5{
+    width: 120px;
+    height: 100px;
+  }
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
@@ -4556,9 +4670,10 @@ input.invalid {
     height: 64px;
   }
 
-  img.slick{
+  img.gg5{
     width: 80px;
     height: 64px;
+    padding-right: 5px;
   }
 
   hr.d-flex.flex-row.gg{
@@ -4568,4 +4683,5 @@ input.invalid {
   div.row.justify-content-center.d-flex.gg3{
     margin-top: -200px;
   }
+
 }
