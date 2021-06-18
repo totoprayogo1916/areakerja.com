@@ -65,7 +65,7 @@
                     <h1 class="ttl" style="margin-top: 8px"> {{ $job->title }}</h1>
                 </div>
                 <div class="col-2 text-center ">
-                    <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="height: inherit; width : inherit;margin: auto; " >
+                    <img class= "gg5" src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="margin: auto; " >
                 </div>
             </div>
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%; margin-top: 12px"/>
