@@ -3344,6 +3344,8 @@ hr {
   }
 
 
+
+
 .buttonb {
     background: rgb(199, 199, 199);
     display: flex;
@@ -3375,7 +3377,7 @@ hr {
     position: absolute;
     z-index: 1;
     flex: none;
-    bottom: 50%;
+    bottom: 100%;
     align-self: centers;
     margin-left: -45%;
 }
