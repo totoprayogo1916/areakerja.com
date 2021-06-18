@@ -5,12 +5,29 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Job;
 use App\Location;
+use App\Wish;
 
 class CategoryController extends Controller
 {
     public function show(Category $category)
     {
+        $ipaddress = '';
+        if (isset($_SERVER['HTTP_CLIENT_IP']))
+            $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+        else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        else if(isset($_SERVER['HTTP_X_FORWARDED']))
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+        else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+            $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+        else if(isset($_SERVER['HTTP_FORWARDED']))
+            $ipaddress = $_SERVER['HTTP_FORWARDED'];
+        else if(isset($_SERVER['REMOTE_ADDR']))
+            $ipaddress = $_SERVER['REMOTE_ADDR'];
+        else
+            $ipaddress = 'UNKNOWN';
 
+        $wishlist=Wish::where('ip', $ipaddress)->get();
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $jobs = Job::with('company')
@@ -25,6 +42,6 @@ class CategoryController extends Controller
 
         $banner = 'Category: '.$category->name;
 
-        return view('jobs.index', compact(['jobs', 'banner', 'searchLocations', 'searchCategories', 'sidbarJobs']));
+        return view('jobs.index', compact(['ipaddress','wishlist','jobs', 'banner', 'searchLocations', 'searchCategories', 'sidbarJobs']));
     }
 }
