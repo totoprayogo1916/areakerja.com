@@ -170,11 +170,18 @@ aria-hidden="true">
             function myFunction3() {
               var popup = document.getElementById("myPopup3");
               popup.classList.toggle("show");
+              setTimeout(function () {
+                        popup.classList.toggle("show");
+                    }, 2000);
             }
 
             function myFunction4() {
               var popup = document.getElementById("myPopup4");
               popup.classList.toggle("show");
+              setTimeout(function () {
+                        popup.classList.toggle("show");
+                    }, 2000);
+
             }
         </script>
         <script>
