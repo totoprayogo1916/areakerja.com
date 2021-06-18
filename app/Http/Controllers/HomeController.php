@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Location;
 use App\Job;
+use App\Wish;
 use Illuminate\Http\Request;
 use App\Mail\SendMail;
 use App\Mail\SendMail2;
@@ -14,6 +15,24 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $ipaddress = '';
+        if (isset($_SERVER['HTTP_CLIENT_IP']))
+            $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+        else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        else if(isset($_SERVER['HTTP_X_FORWARDED']))
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+        else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+            $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+        else if(isset($_SERVER['HTTP_FORWARDED']))
+            $ipaddress = $_SERVER['HTTP_FORWARDED'];
+        else if(isset($_SERVER['REMOTE_ADDR']))
+            $ipaddress = $_SERVER['REMOTE_ADDR'];
+        else
+            $ipaddress = 'UNKNOWN';
+
+        $wishlist=Wish::where('ip', $ipaddress)->get();
+        
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $searchByCategory = Category::withCount('jobs')
@@ -28,7 +47,7 @@ class HomeController extends Controller
         ->orderBy('id', 'desc')
         ->get();
 
-        return view('index', compact(['searchLocations', 'searchCategories', 'searchByCategory', 'jobs', 'sidbarJobs']));
+        return view('index', compact(['wishlist','ipaddress','searchLocations', 'searchCategories', 'searchByCategory', 'jobs', 'sidbarJobs']));
     }
 
     public function search(Request $request)

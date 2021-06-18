@@ -177,10 +177,10 @@
                     </a>
                 </div>
 
-                {{ session()->get('message') }}
+                {{-- {{ session()->get('message') }} --}}
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                {{-- <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -200,7 +200,8 @@
                         </div>
                     </div>
                     </div>
-                </div>
+                </div> --}}
+                
                 {{-- <div class="col-2">
                     <a type="button" class="btn form-pasang3" href="whatsapp://send?text={{ route('jobs.show', $job->id) }}">
                         <h4 style="font-weight: normal"><span class="fa fa-share-alt"></span><span style="display:inline-block; width: 10px;"></span>Bagikan</h4>
