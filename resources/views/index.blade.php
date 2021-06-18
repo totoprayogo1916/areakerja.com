@@ -128,6 +128,12 @@
                 <hr class="d-flex flex-row gg" style="width: 100%; margin-left: -0.5%"/>
                  <div class="row ttl3" >
                     <div class="col-auto " >
+<<<<<<< HEAD
+=======
+                        <h5 class ="sng-dtl" ><span class="fa fa-graduation-cap" aria-hidden="true"></span>  {{ $job->pendidikan }}
+                    </div>
+                    <div class="col-auto " >
+>>>>>>> 0f4e439a1ef54cd5991427e57b03dd7ef00dd340
                         <h5 class ="sng-dtl" ><span class="fa fa-hourglass-half" aria-hidden="true"></span>  {{ $job->job_nature }}
                     </div>
                     <div class="col-auto"  >
@@ -136,7 +142,7 @@
                 </div>
             </div>
         </div>
-    </a>x
+    </a>
     @endforeach
 
     <a class="text-uppercase loadmore-btn mx-auto d-block" href="{{ route('jobs.index') }}">Load More Job Posts</a>
