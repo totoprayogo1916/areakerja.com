@@ -47,7 +47,6 @@
                         </div>
                     </div>
                 </form>
-                <h3>Rekomendasi Lowongan</h3>
             </div>
         </div>
     </div>

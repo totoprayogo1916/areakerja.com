@@ -56,7 +56,7 @@
 @section('content')
 <div class="col-lg-8 post-list" >
     <div class="single-post2 d-flex flex-row" style="margin-bottom: 10px">
-        <div class="details" style="width: 100%">
+        <div class="details" style="width: 100%" >
             <div class="row" style="width: 100%">
                 <div class="col-10">
                     <a href="#"><h2 class="cmp" style="font-weight: normal">{{ $job->company->name }}</h2></a>
@@ -72,7 +72,7 @@
             <h4 class="gg" style="margin-top: 8px; font-weight: normal;">{{$job->short_description}}</h4>
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;margin-top: 16px"/>
             <h3 class="head" style="margin-top: 10px">Ringkasan</h3>
-            <div class="row">
+            <div class="row" >
                 <ul class="col-5" style="overflow: unset; white-space: nowrap;">
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><span style="display:inline-block; width: 15px;" class="fa fa-graduation-cap"></span><span style="display:inline-block; width: 15px;"></span>Pendidikan</h4></li>
                     <li><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><span style="display:inline-block; width: 15px;" class="fa fa-venus-mars"></span><span style="display:inline-block; width: 15px;"></span>Gender</h4></li>
@@ -159,7 +159,7 @@
                 </ul>
                 <ul class="col-auto" style="overflow: unset; white-space: nowrap;">
                     <h4 class="gg" style="margin-top: 5px; font-weight: normal">
-                        <button onclick="CopyToClipboard('sample2'); myFunction4()" class="fas fa-copy ui-button-icons-only buttonb">
+                        <button onclick="CopyToClipboard('sample2'); myFunction4()" class="fas fa-copy ui-button-icons-only buttonb" >
                             <div class="row justify-content-center popuptext" id="myPopup4" style="padding-right: 0px;margin-right: 0px; color: #000000; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
                                 Disalin
                             </div>

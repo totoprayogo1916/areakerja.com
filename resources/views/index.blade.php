@@ -47,7 +47,7 @@
                         </div>
                     </div>
                 </form>
-                <h3>Rekomendasi Lowongan</h3>
+                <h3 class ="sng-ttl9">Rekomendasi Lowongan</h3>
             </div>
         </div>
     </div>
@@ -94,12 +94,18 @@
     </a>
         </div>
     @endforeach
+    
     {{-- <h3 style="margin-bottom: 15px; text-align: center">Lowongan wd</h3> --}}
 </div>
 @endsection
-
+@section('rekom')
+<div class="justify-content-center d-flex">
+    <a href="/rekomendasi" style="color: #000; font-size: 20px">Rekomendasi Loker Lainnya></a>
+</div>
+@endsection
 @section('content')
 <div class="col-lg-8 post-list border-right" id="main-content">
+    
     <h3 class ="sng-ttl9" style="margin-bottom: 15px; ">Lowongan Terbaru</h3>
     @foreach($jobs as $job)
     {{-- <a href="{{ route('jobs.show', $job->id) }}"> --}}

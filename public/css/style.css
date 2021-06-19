@@ -32,8 +32,8 @@
 .for_slick_slider .items {
   width: 350px;
   height: auto;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-top: 55px;
   margin-left: 6px;
   margin-right: 6px;
   transition: margin-top 0.5s;
@@ -43,7 +43,7 @@
 .for_slick_slider:hover .items:hover {
     width: 350px;
     height: auto;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     margin-top: 35px;
     margin-left: 6px;
     margin-right: 6px;

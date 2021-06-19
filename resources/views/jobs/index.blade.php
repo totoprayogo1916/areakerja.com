@@ -53,7 +53,11 @@
     </div>
 </section>
 @endsection
-
+@section('rekom')
+<div class="justify-content-center d-flex">
+    <a href="/rekomendasi" style="color: #000; font-size: 20px">Rekomendasi Loker Lainnya></a>
+</div>
+@endsection
 @section('slick')
 <div class="for_slick_slider multiple-items" id="slick">
     @foreach($sidbarJobs as $job)
@@ -77,6 +81,7 @@
 
 @section('content')
 <div class="col-lg-8 post-list"  id="main-content">
+    <h3 class ="sng-ttl9" style="margin-bottom: 15px; ">Semua Lowongan </h3>
     @foreach($jobs as $job)
     <a href="{{ route('jobs.show', $job->id) }}">
         <div data-aos="fade-up" class="single-post align-items-center d-flex" style="width: 100%">
