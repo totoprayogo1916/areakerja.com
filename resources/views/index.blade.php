@@ -91,14 +91,16 @@
             <h5 class ="sng-dtl" style="margin-left: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));" ><span class="fa fa-hourglass-half" aria-hidden="true"></span>  {{ $job->job_nature }}</h5>
             <hr/>
             <h5 class ="sng-dtl" style="margin-left: 5%;margin-bottom: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));"> <span class="fa fa-map-marker" aria-hidden="true"></span> {{ $job->address }}</h5>
-</a>
+    </a>
         </div>
     @endforeach
+    {{-- <h3 style="margin-bottom: 15px; text-align: center">Lowongan wd</h3> --}}
 </div>
 @endsection
 
 @section('content')
 <div class="col-lg-8 post-list border-right" id="main-content">
+    <h3 class ="sng-ttl9" style="margin-bottom: 15px; ">Lowongan Terbaru</h3>
     @foreach($jobs as $job)
     <a href="{{ route('jobs.show', $job->id) }}">
         <div data-aos="fade-up" class="single-post align-items-center d-flex" style="width: 100%">
