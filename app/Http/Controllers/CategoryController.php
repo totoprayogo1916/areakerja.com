@@ -6,6 +6,7 @@ use App\Category;
 use App\Job;
 use App\Location;
 use App\Wish;
+use App\Riwayat;
 
 class CategoryController extends Controller
 {
@@ -28,6 +29,7 @@ class CategoryController extends Controller
             $ipaddress = 'UNKNOWN';
 
         $wishlist=Wish::where('ip', $ipaddress)->get();
+        $riwayatlist=Riwayat::where('ip',$ipaddress)->get();
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $jobs = Job::with('company')
@@ -42,6 +44,6 @@ class CategoryController extends Controller
 
         $banner = 'Category: '.$category->name;
 
-        return view('jobs.index', compact(['ipaddress','wishlist','jobs', 'banner', 'searchLocations', 'searchCategories', 'sidbarJobs']));
+        return view('jobs.index', compact(['riwayatlist','ipaddress','wishlist','jobs', 'banner', 'searchLocations', 'searchCategories', 'sidbarJobs']));
     }
 }

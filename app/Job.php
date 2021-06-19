@@ -66,6 +66,10 @@ class Job extends Model
         return $this->belongsTo(Wish::class, 'id');
     }
 
+    public function Riwayat() {
+        return $this->belongsTo(Riwayat::class, 'id');
+    }
+
     public function scopeSearchResults($query)
     {
         return $query->when(!empty(request()->input('location', 0)), function($query) {

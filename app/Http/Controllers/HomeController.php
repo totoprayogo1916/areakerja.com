@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Mail\SendMail;
 use App\Mail\SendMail2;
 use Illuminate\Support\Facades\Mail;
+use App\Riwayat;
 
 class HomeController extends Controller
 {
@@ -32,7 +33,7 @@ class HomeController extends Controller
             $ipaddress = 'UNKNOWN';
 
         $wishlist=Wish::where('ip', $ipaddress)->get();
-        
+        $riwayatlist=Riwayat::where('ip',$ipaddress)->get();
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $searchByCategory = Category::withCount('jobs')
@@ -47,7 +48,7 @@ class HomeController extends Controller
         ->orderBy('id', 'desc')
         ->get();
 
-        return view('index', compact(['wishlist','ipaddress','searchLocations', 'searchCategories', 'searchByCategory', 'jobs', 'sidbarJobs']));
+        return view('index', compact(['riwayatlist','wishlist','ipaddress','searchLocations', 'searchCategories', 'searchByCategory', 'jobs', 'sidbarJobs']));
     }
 
     public function search(Request $request)
@@ -70,7 +71,7 @@ class HomeController extends Controller
             $ipaddress = 'UNKNOWN';
 
         $wishlist=Wish::where('ip', $ipaddress)->get();
-
+        $riwayatlist=Riwayat::where('ip',$ipaddress)->get();
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $jobs = Job::with('company')
@@ -83,7 +84,7 @@ class HomeController extends Controller
 
         $banner = 'Search results';
 
-        return view('jobs.index', compact(['wishlist','ipaddress','jobs', 'banner', 'searchLocations','sidbarJobs', 'searchCategories']));
+        return view('jobs.index', compact(['riwayatlist','wishlist','ipaddress','jobs', 'banner', 'searchLocations','sidbarJobs', 'searchCategories']));
     }
 
     public function aboutus()
@@ -143,8 +144,8 @@ class HomeController extends Controller
     }
 
     public function addcart(Request $request)
-    {   
-        $id=$request->id; $time=60*24*14; 
+    {
+        $id=$request->id; $time=60*24*14;
         echo $id;
         $value=0;
         if( Cookie::get('cart')!==null ){
@@ -165,14 +166,14 @@ class HomeController extends Controller
     // function getMAcAddressExec()
     // {
     //     echo getMAcAddressExec();
-    //         return substr(exec('getmac'), 0, 17); 
-    // }   
-    
-    
+    //         return substr(exec('getmac'), 0, 17);
+    // }
+
+
     // function getMAcAddressShellExec()
     // {
     //     echo getMAcAddressShellExec();
-    //     return substr(shell_exec('getmac'), 159,20); 
+    //     return substr(shell_exec('getmac'), 159,20);
     // }
-    
+
 }

@@ -71,7 +71,7 @@ aria-hidden="true">
               <th>#</th>
               <th>Nama Pekerjaan</th>
               <th>Perusahaan</th>
-              <th>Remove</th>
+              <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
@@ -87,6 +87,65 @@ aria-hidden="true">
                     {{ method_field('DELETE') }}
                     <button type="submit" style="margin-right: 10px; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-danger"><i class="fas fa-trash"></i></button>
                 <a href="{{ route('jobs.show', $wishlis->job->id) }}" style="; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-info"><i class="fas fa-eye"></i></a>
+            </form>
+            </td>
+            </tr>
+            @endforeach
+          </tbody>
+        </table>
+
+      </div>
+
+    <!--Footer-->
+    <div class="modal-footer">
+      <a type="button" class="btn btn-outline-close" data-dismiss="modal"><span style="margin-left: -30%">Close</span></a>
+    </div>
+  </div>
+  <!--/.Content-->
+</div>
+</div>
+<!--Modal: modalPush-->
+
+<!--Modal Riwayat-->
+<div class="modal fade" id="modalPushRiwayat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-notify modal-info" role="document">
+  <!--Content-->
+  <div class="modal-content text-center">
+    <!--Header-->
+    <div class="modal-header2 d-flex">
+      <p class="heading">Riwayat Penelusuran</p>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span style="color: rgb(255, 255, 255)"   aria-hidden="true">&times;</span>
+    </button>
+    </div>
+
+    <!--Body-->
+    <!--Body-->
+    <div class="modal-body">
+
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nama Pekerjaan</th>
+              <th>Perusahaan</th>
+              <th>View</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach($riwayatlist as $riwayatlis)
+            <tr>
+              <th scope="row">{{ $loop->iteration }}</th>
+              <td>{{ $riwayatlis->job->title }}</td>
+              <td>{{ $riwayatlis->job->company->name }}</td>
+              <td width='50%'>
+                {{-- <a href="{{ route('jobs.delete', $wishlis->job->id) }}" style="color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-danger">{{ method_field('DELETE') }}<i class="fas fa-trash"></i></a> --}}
+                {{-- <form action="{{ route('jobs.delete', $wishlis->job->id) }}" method="POST" class="justify-content-center flex-wrap" >
+                    @csrf
+                    {{ method_field('DELETE') }}
+                    <button type="submit" style="margin-right: 10px; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-danger"><i class="fas fa-trash"></i></button> --}}
+                <a href="{{ route('jobs.show', $riwayatlis->job->id) }}" style="; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-info"><i class="fas fa-eye"></i></a>
             </form>
             </td>
             </tr>
