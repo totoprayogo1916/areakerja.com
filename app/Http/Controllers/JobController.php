@@ -175,6 +175,7 @@ class JobController extends Controller
             $ipaddress = 'UNKNOWN';
 
         $wishlist=Wish::where('ip', $ipaddress)->get();
+        $riwayatlist=Riwayat::where('ip',$ipaddress)->get();
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $sidbarJobs = Job::whereTopRated(true)
@@ -185,7 +186,7 @@ class JobController extends Controller
 
         return view(
             'jobs.rekomendasi',
-            compact([
+            compact(['riwayatlist',
                 'banner',
                 'searchLocations',
                 'searchCategories',
