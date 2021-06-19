@@ -4637,14 +4637,12 @@ input.invalid {
     width: 120px;
     height: 100px;
   }
-}
-.gutter-2.row {
-  margin-right: -1px;
-  margin-left: -1px;
-}
-.gutter-2 > [class^="col-"], .gutter-2 > [class^=" col-"] {
-  padding-right: 1px;
-  padding-left: 1px;
+  h4.gg6 {
+    padding-left: 15px;
+  }
+  h4.gg8 {
+    padding-left: 15px;
+  }
 }
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
