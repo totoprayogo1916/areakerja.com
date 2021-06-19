@@ -2828,10 +2828,12 @@ hr {
   margin-bottom: 30px;
   border-radius: 20px;
   box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
+  transition: all 0.3s ease 0s;
 }
 
 .post-list:hover .single-post:hover {
   box-shadow: 0 10px 10px rgba(0.15, 0.15, 0.15, 0.15);
+  /* transition: all 0.3s ease 0s; */
 }
 
 .post-list .single-post h6 {
