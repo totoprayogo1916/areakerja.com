@@ -3,7 +3,7 @@
 
     <div data-aos="zoom-in-up" style="height: 5%">
         <ul class="cat-list-center" style="margin-bottom: 15%">
-            <li><a class="justify-content-between" href="#"><p style="font-weight: bold">Riwayat</p></a></li>
+            <li><a class="justify-content-between" data-toggle="modal" data-target="#modalPushRiwayat" href="#"><p style="font-weight: bold">Riwayat</p></a></li>
             <li><a type="button" data-toggle="modal" data-target="#modalPush" class="justify-content-between" href="#"><p style="font-weight: bold">Tersimpan</p></a></li>
         </ul>
     </div>

@@ -6,6 +6,7 @@ use App\Category;
 use App\Job;
 use App\Wish;
 use App\Location;
+use App\Riwayat;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class JobController extends Controller
@@ -29,9 +30,8 @@ class JobController extends Controller
             $ipaddress = 'UNKNOWN';
 
         $wishlist=Wish::where('ip', $ipaddress)->get();
-
+        $riwayatlist=Riwayat::where('ip',$ipaddress)->get();
         $jobs = Job::with('company')->paginate(0);
-
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $sidbarJobs = Job::whereTopRated(true)
@@ -47,7 +47,7 @@ class JobController extends Controller
                 'banner',
                 'searchLocations',
                 'searchCategories',
-                'sidbarJobs','wishlist','ipaddress'
+                'sidbarJobs','riwayatlist','wishlist','ipaddress'
             ])
         );
     }
@@ -75,12 +75,13 @@ class JobController extends Controller
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $wishlist=Wish::where('ip', $ipaddress)->get();
+        $riwayatlist=Riwayat::where('ip',$ipaddress)->get();
 
         // Alert::success('Sukses Membuka');
 
         return view(
             'jobs.show',
-            compact(['job', 'searchLocations', 'searchCategories','wishlist','ipaddress'])
+            compact(['job', 'riwayatlist','searchLocations', 'searchCategories','wishlist','ipaddress'])
         );
 
 
