@@ -57,18 +57,18 @@
 @section('slick')
 <div class="for_slick_slider multiple-items" id="slick">
     @foreach($sidbarJobs as $job)
-        <div class="items"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
+    <div class="items"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
         <a href="{{ route('jobs.show', $job->id) }}">
-            <h5 style="color: #b19ea8; margin-left: 5%; margin-top: 5%;">Dibutuhkan</h5>
-            <h4 style="color: #2b2b2b ; margin-left: 5%; margin-right: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));">{{ $job->title }}</h4>
+            <h3 class ="sng-ttl5" style="color: #7e7e7e; margin-left: 5%; margin-top: 5%;">Dibutuhkan</h3>
+            <h3 class ="sng-ttl5" style="color: #2b2b2b ; margin-left: 5%; margin-right: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));">{{ $job->title }}</h3>
             @if($job->company->gambar)
-                <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="width: 150px; height: 120px; margin-left: auto; margin-right: auto;margin-top: 10px">
+                <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="width: 100px; height:80px; margin-left: auto; margin-right: auto;margin-top: 10px">
             @endif
-            <h5 style="margin-left: 5%; margin-top: 5%;font-size: 16px" ><span class="lnr lnr-apartment"></span>  {{ $job->company->name }}</h5>
+            <h5 class ="sng-dtl" style="margin-left: 5%; margin-top: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));" ><span class="fa fa-building-o" aria-hidden="true"></span> {{ $job->company->name }}</h5>
             <hr/>
-            <h5 style="font-size: 16px;margin-left: 5%" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }}</h5>
+            <h5 class ="sng-dtl" style="margin-left: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));" ><span class="fa fa-hourglass-half" aria-hidden="true"></span>  {{ $job->job_nature }}</h5>
             <hr/>
-            <h5 style="font-size: 16px;margin-left: 5%;margin-bottom: 5%;"> <span class="lnr lnr-map"></span> {{ $job->address }}</h5>
+            <h5 class ="sng-dtl" style="margin-left: 5%;margin-bottom: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));"> <span class="fa fa-map-marker" aria-hidden="true"></span> {{ $job->address }}</h5>
 </a>
         </div>
     @endforeach
@@ -76,37 +76,43 @@
 @endsection
 
 @section('content')
-<div class="col-lg-8 post-list" style="margin-top: 5%" id="main-content">
+<div class="col-lg-8 post-list"  id="main-content">
     @foreach($jobs as $job)
     <a href="{{ route('jobs.show', $job->id) }}">
-        <div data-aos="fade-up" class="single-post align-items-center d-flex flex-row">
-            <div class="thumb" style="margin-top: auto;margin-bottom: auto">
+        <div data-aos="fade-up" class="single-post align-items-center d-flex" style="width: 100%">
+            <div class="row" style="margin: auto;margin-right:20px" >
                 @if($job->company->gambar)
-                    <img src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="width: 150px; height: 120px;">
+                    <img class="thumb2" src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" >
                 @endif
             </div>
-            <div class="details " style="width: 100%">
+
+            <div class="details " style="width: 100%" style="margin-top: 14px; overflow: unset; white-space: nowrap;">
                 <div class="title d-flex flex-row justify-content-between"  >
                     <div class="titles">
-                        <h3  style="font-size: 19px; color: #b19ea8">Dibutuhkan</h3>
-                        <h3 style="margin-top: 10px">{{ $job->title }}</h3>
-                        <div class="row" style="margin-top: 14px">
-                            <div class="col-md-auto " >
-                                <h5 style="font-size: 16px" ><span class="lnr lnr-apartment"></span>  {{ $job->company->name }}
+                        <h3 class ="sng-ttl" style="color: #7e7e7e">Dibutuhkan</h3>
+                        <h3 class ="sng-ttl2" >{{ $job->title }}</h3>
+                        <div class="row ttl3" style=" overflow: unset; white-space: nowrap;">
+                            <div class="col-auto"  >
+                                <h5 class ="sng-dtl" ><span class="fa fa-building-o" aria-hidden="true"></span>  {{ $job->company->name }}
                             </div>
-                            <div class="col-md-auto" >
-                                <h5 style="font-size: 16px"> <span class="lnr lnr-database"></span> {{ $job->salary }}</h5>
+                            <div class="col-auto" >
+                                <h5 class ="sng-dtl" > <span class="fa fa-money" aria-hidden="true"></span> {{ $job->salary }}</h5>
                             </div>
                         </div>
                     </div>
+
                 </div>
-                <hr class="d-flex flex-row" style="width: 100%; margin-left: -0.5%"/>
-                 <div class="row" >
-                    <div class="col-md-auto " >
-                        <h5 style="font-size: 16px" ><span class="lnr lnr-hourglass"></span>  {{ $job->job_nature }}
+
+                <hr class="d-flex flex-row gg" style="width: 100%; margin-left: -0.5%"/>
+                 <div class="row ttl3" >
+                    <div class="col-auto " >
+                        <h5 class ="sng-dtl" ><span class="fa fa-graduation-cap" aria-hidden="true"></span>  {{ $job->pendidikan }}
                     </div>
-                    <div class="col-md-auto" >
-                        <h5 style="font-size: 16px"> <span class="lnr lnr-map"></span> {{ $job->address }}</h5>
+                    <div class="col-auto " >
+                        <h5 class ="sng-dtl" ><span class="fa fa-hourglass-half" aria-hidden="true"></span>  {{ $job->job_nature }}
+                    </div>
+                    <div class="col-auto"  >
+                        <h5 class ="sng-dtl" > <span class="fa fa-map-marker" aria-hidden="true"></span> {{ $job->address }}</h5>
                     </div>
                 </div>
             </div>

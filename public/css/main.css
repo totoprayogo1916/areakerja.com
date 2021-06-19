@@ -4615,6 +4615,10 @@ input.invalid {
     font-size: 18px;
   }
 
+  h3.sng-ttl9{
+    font-size: 28px;
+  }
+
   h3.sng-ttl5{
     font-size: 18px;
   }
@@ -4624,6 +4628,10 @@ input.invalid {
   }
 
   img.gg5{
+    width: 120px;
+    height: 100px;
+  }
+  div.col.gg{
     width: 120px;
     height: 100px;
   }
@@ -4637,7 +4645,10 @@ input.invalid {
   h3.head {
     font-size: 20px;
   }
-
+  h3.sng-ttl9{
+    font-size: 18px;
+    text-align: center;
+  }
   h1.ttl {
     font-size: 25px;
   }
