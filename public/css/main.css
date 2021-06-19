@@ -3018,6 +3018,8 @@ hr {
 
 .sidebar .single-slidebar .cat-list li {
   padding: 0px 10px;
+  font-size: 12pt;
+  font-weight: normal;
   background-color: rgb(255, 255, 255);
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -3036,6 +3038,8 @@ hr {
 }
 
 .sidebar .single-slidebar .cat-list li:hover a {
+  font-size: 15pt;
+  font-weight: bolder;
   color: rgb(255, 255, 255);
 }
 
@@ -4651,7 +4655,7 @@ input.invalid {
 @media screen and (max-width: 600px) {
   h4.gg {
     font-size: 13px;
-    
+
   }
   h4.gg6 {
     font-size: 13px;
