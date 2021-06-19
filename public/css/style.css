@@ -92,14 +92,19 @@
   background: url('../img/kanan.png') no-repeat;
 }
 @media screen and (min-width: 601px) {
-  div.for_slick_slider.multiple_items{
+  /* div.for_slick_slider.multiple_items{
     margin-bottom: -2000px;
-  }
+  } */
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
   div.for_slick_slider{
-    margin-bottom: -250px;
+    
+    margin-bottom: -270px;
+    margin-top: 10px;
+  }
+  div.items.gg{
+    margin-top: 30px;
   }
 }
