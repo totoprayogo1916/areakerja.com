@@ -37,8 +37,10 @@
 
             <div class="container">
                 @yield('slick')
-                <div class="row justify-content-center d-flex"  >
-
+                <div class="justify-content-center d-flex">
+                  <a href="/login" style="color: #000; font-size: 20px">Rekomendasi Loker Lainnya></a>
+                </div>
+                <div class="row justify-content-center d-flex mt-4"  >
                     @yield('content')
                     @include('partials.sidebar')
                 </div>

@@ -114,7 +114,7 @@ class CacheController extends Controller
 
         if(isset($riwayat))
         {
-            return redirect()->back();
+            return redirect()->route('jobs.show', ['job' => $id]);
         }
         else
         {
