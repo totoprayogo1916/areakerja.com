@@ -80,13 +80,13 @@ aria-hidden="true">
               <th scope="row">{{ $loop->iteration }}</th>
               <td>{{ $wishlis->job->title }}</td>
               <td>{{ $wishlis->job->company->name }}</td>
-              <td width='50%'>
+              <td >
                 {{-- <a href="{{ route('jobs.delete', $wishlis->job->id) }}" style="color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-danger">{{ method_field('DELETE') }}<i class="fas fa-trash"></i></a> --}}
                 <form action="{{ route('jobs.delete', $wishlis->job->id) }}" method="POST" class="justify-content-center flex-wrap" >
                     @csrf
                     {{ method_field('DELETE') }}
-                    <button type="submit" style="margin-right: 10px; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                <a href="{{ route('jobs.show', $wishlis->job->id) }}" style="; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                    <button type="submit" style=" color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;width: 30px; margin-bottom: 5px" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                <a href="{{ route('jobs.show', $wishlis->job->id) }}" style="; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;width: 30px;" class="btn btn-info"><i class="fas fa-eye"></i></a>
             </form>
             </td>
             </tr>
