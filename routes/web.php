@@ -6,6 +6,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/aboutus', 'HomeController@aboutus')->name('aboutus');
 Route::get('/pasang', 'JobController@pasang')->name('pasang');
 Route::get('/pasang2', 'JobController@pasang2')->name('pasang2');
+Route::get('/rekomendasi', 'JobController@rekomendasi')->name('rekomendasi');
 Route::get('/kontak', 'HomeController@kontak')->name('kontak');
 // Route::get('/cache', 'CacheController@index')->name('cache');
 Route::get('/getuser', 'UserSystemInfoController@getusersysteminfo')->name('getuser');
