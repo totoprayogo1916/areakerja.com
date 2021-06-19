@@ -19,6 +19,7 @@ class Riwayat extends Migration
             $table->string('ip');
 
             $table->string('idJob');
+            $table->timestamps();
         });
     }
 
