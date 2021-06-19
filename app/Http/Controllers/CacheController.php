@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use App\Job;
 use App\Wish;
+use App\Riwayat;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class CacheController extends Controller
@@ -47,8 +48,7 @@ class CacheController extends Controller
         // return redirect('pasang');
     }
 
-        function get_client_ip($id) {
-        $job = Job::where('id', $id)->first();
+    function get_client_ip($id) {
         $ipaddress = '';
         if (isset($_SERVER['HTTP_CLIENT_IP']))
             $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
@@ -80,7 +80,7 @@ class CacheController extends Controller
             'idJob' => $id,
 
         ]);
-        
+
 
         // return redirect()->back()->with('message','Lowongan Telah Disimpan');
         Alert::success('Lowongan Berhasil Disimpan');
@@ -90,5 +90,40 @@ class CacheController extends Controller
         // echo ('<br>');
         // echo ($id);
         // echo ('<br>');
+    }
+
+    function riwayat($id) {
+        // $job = Job::where('id', $id)->first();
+        $ipaddress = '';
+        if (isset($_SERVER['HTTP_CLIENT_IP']))
+            $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+        else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        else if(isset($_SERVER['HTTP_X_FORWARDED']))
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+        else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+            $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+        else if(isset($_SERVER['HTTP_FORWARDED']))
+            $ipaddress = $_SERVER['HTTP_FORWARDED'];
+        else if(isset($_SERVER['REMOTE_ADDR']))
+            $ipaddress = $_SERVER['REMOTE_ADDR'];
+        else
+            $ipaddress = 'UNKNOWN';
+
+        $riwayat=Riwayat::where([['idJob',$id],['ip',$ipaddress]])->first();
+
+        if(isset($riwayat))
+        {
+            return redirect()->back();
+        }
+        else
+        {
+            Riwayat::insert([
+                'ip' => $ipaddress,
+                'idJob' => $id,
+            ]);
+            {{  }}
+        return redirect()->route('jobs.show', ['job' => $id]);
+        }
     }
 }
