@@ -8,6 +8,8 @@ use App\Job;
 use App\Wish;
 use App\Riwayat;
 use RealRashid\SweetAlert\Facades\Alert;
+use Carbon\Carbon;
+
 
 class CacheController extends Controller
 {
@@ -121,8 +123,8 @@ class CacheController extends Controller
             Riwayat::insert([
                 'ip' => $ipaddress,
                 'idJob' => $id,
+                'created_at' => Carbon::now(),
             ]);
-            {{  }}
         return redirect()->route('jobs.show', ['job' => $id]);
         }
     }

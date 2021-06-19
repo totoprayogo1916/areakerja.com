@@ -10,6 +10,7 @@ class Riwayat extends Model
     use HasFactory;
 
     public $table = 'Riwayat';
+    public $timestamps = true;
     protected $dates = [
         'created_at',
         'updated_at',

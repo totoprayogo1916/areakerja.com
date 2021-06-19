@@ -6,6 +6,7 @@ use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use App\Console\Commands\wishDelete;
 use App\Job;
+use App\Riwayat;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
@@ -32,7 +33,7 @@ class Kernel extends ConsoleKernel
                  ->everyMinute()
                  ->runInBackground();
         $schedule->call(function () {
-                    Job::where('updated_at', '<', Carbon::now()->subSeconds(10))->delete();
+                    Riwayat::where('created_at', '<', Carbon::now()->subHours(1))->delete();
                     // $update = Job::where('updated_at', '<', Carbon::now()->subSeconds(10));
                     // $update->status = 1;
                     // $update->update();
