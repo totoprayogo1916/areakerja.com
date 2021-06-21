@@ -7,11 +7,6 @@ use Illuminate\Database\Seeder;
 
 class ArtikelSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
         $artikel = Artikel::create([
