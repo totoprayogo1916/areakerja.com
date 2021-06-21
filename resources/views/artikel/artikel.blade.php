@@ -12,20 +12,33 @@
                 <h6 style="color: #fe7b54; text-shadow: 1px 1px 2px #353535b0;">
                 Pelajari Tips-Tips Kerja Yang Telah Kami Buat Untuk Anda
                 </h6>
-                <form method="POST" enctype="multipart/form-data" action="{{ url('formpasang') }}" id="regForm" style="width: 50%;">
-                    isdhfkjlf;skdjkdfdjdk
-
-                    <!-- Circles which indicates the steps of the form: -->
-                    {{-- <div style="text-align:center;margin-top:40px;">
-                      <span class="step"></span>
-                      <span class="step"></span>
-                    </div> --}}
-
-                    </form>
 
             </div>
         </div>
-    {{-- </div> --}}
 </section>
+@endsection
+
+@section('content')
+<div class="col-lg-8 post-list " id="main-content">
+
+<div class="mt-100">
+    <div data-aos="fade-up" class="single-post align-items-center d-flex" style="width: 75%;margin: auto">
+        <div class="row" style="margin: auto;margin-right:50px" >
+                <img class="thumb2" src="#" >
+        </div>
+
+        <div class="details " style="width: 100%" style="margin-top: 14px; overflow: unset; white-space: nowrap;">
+            <div class="title d-flex flex-row justify-content-between"  >
+                <div class="titles">
+                    <h3 class ="sng-ttl" style="color: #7e7e7e">Judul Artikel</h3>
+                    <h3 class ="sng-ttl2" >Isi artikel</h3>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a class="text-uppercase loadmore-btn mx-auto d-block" href="{{ route('jobs.index') }}">Load More Articel</a>
+</div>
 @endsection
 
