@@ -12,7 +12,8 @@
                 <h6 style="color: #fe7b54; text-shadow: 1px 1px 2px #353535b0;">
                 Pelajari Tips-Tips Kerja Yang Telah Kami Buat Untuk Anda
                 </h6>
-
+                <form method="POST" enctype="multipart/form-data" action="{{ url('formpasang') }}" id="regForm" style="width: 50%;">
+                    isdhfkjlf;skdjkdfdjdk
 
                     <!-- Circles which indicates the steps of the form: -->
                     {{-- <div style="text-align:center;margin-top:40px;">
