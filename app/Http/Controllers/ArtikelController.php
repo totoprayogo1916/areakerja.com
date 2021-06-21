@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Job;
 use App\Wish;
+use App\Artikel;
 use App\Location;
 use App\Riwayat;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -29,6 +30,8 @@ class ArtikelController extends Controller
             ->take(0)
             ->get();
 
+        $artikel = Artikel::all();
+
         $sidebarLocations = Location::withCount('jobs')
             ->whereHas('jobs')
             ->orderBy('jobs_count', 'desc')
@@ -49,6 +52,7 @@ class ArtikelController extends Controller
                 'sidebarJobs',
                 'sidebarLocations',
                 'sidebarCategories',
+                'artikel',
             ])
         );
     }
