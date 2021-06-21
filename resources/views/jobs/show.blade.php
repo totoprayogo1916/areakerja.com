@@ -64,8 +64,11 @@
 
                     <h1 class="ttl" style="margin-top: 8px"> {{ $job->title }}</h1>
                 </div>
-                <div class="col-4 text-right ">
-                    <img class= "gg5" src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="margin: auto; " >
+                <div class="col-4 text-right" style="width: 100px;height: 100px;">
+                    <a href="{{ route('compan', $job->company->id) }}">
+                    <img style="width: 25px;height: 25px;margin-bottom: 45%;margin-left: 45%" src="{{ url('img/link.png') }}" class="position-absolute">
+                    <img class= "gg5" src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="margin: auto;margin-top: 3%;margin-left: 5% " >
+                </a>
                 </div>
             </div>
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%; margin-top: 12px"/>
@@ -200,7 +203,7 @@
                     </a>
                 </div>
 
-                
+
                 <div class="col-2" >
                     <div class="btn popup form-pasang3" onclick="myFunction()" id="btn3">
                         <h4  class="gg" style="font-weight: normal" ><span class="fa fa-share-alt"></span><span style="display:inline-block; width: 10px;"></span>Bagikan</h4>
