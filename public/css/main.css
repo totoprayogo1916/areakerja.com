@@ -4637,6 +4637,11 @@ input.invalid {
     width: 120px;
     height: 100px;
   }
+
+  img.gg6{
+    width: 90px;
+    height: 75px;
+  }
   div.col.gg{
     width: 120px;
     height: 100px;
@@ -4715,6 +4720,15 @@ input.invalid {
     height: 64px;
     padding-right: 5px;
   }
+  img.gg6{
+    width: 80px;
+    height: 64px;
+  }
+
+  div.col-lg-4.sidebar.gg{
+    display: none;
+  }
+  
 
   hr.d-flex.flex-row.gg{
     margin-top: 5px;

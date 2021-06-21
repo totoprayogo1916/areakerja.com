@@ -1,4 +1,4 @@
-<div class="col-lg-4 sidebar" style="margin-top: 0%">
+<div class="col-lg-4 sidebar gg" style="margin-top: 0%">
 
 
     <div data-aos="zoom-in-up" style="height: 5%">
