@@ -22,6 +22,8 @@
 <div class="col-lg-8 post-list " id="main-content">
 
 <div class="mt-100">
+
+    @foreach($artikel as $article)
     <div data-aos="fade-up" class="single-post align-items-center d-flex" style="width: 75%;margin: auto">
         <div class="row" style="margin: auto;margin-right:50px" >
                 <img class="thumb2" src="#" >
@@ -30,13 +32,14 @@
         <div class="details " style="width: 100%" style="margin-top: 14px; overflow: unset; white-space: nowrap;">
             <div class="title d-flex flex-row justify-content-between"  >
                 <div class="titles">
-                    <h3 class ="sng-ttl" style="color: #7e7e7e">Judul Artikel</h3>
-                    <h3 class ="sng-ttl2" >Isi artikel</h3>
-
+                    <h3 style="color: #7e7e7e">{{ $article->title }}</h3>
+                    <br>
+                    <h5 >{{ $article->des_singkat }}</h5>
                 </div>
             </div>
         </div>
     </div>
+    @endforeach
 
     <a class="text-uppercase loadmore-btn mx-auto d-block" href="{{ route('jobs.index') }}">Load More Articel</a>
 </div>
