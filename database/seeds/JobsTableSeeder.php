@@ -1,9 +1,6 @@
 <?php
 
-use App\Category;
-use App\Company;
 use App\Job;
-use App\Location;
 use Illuminate\Database\Seeder;
 
 class JobsTableSeeder extends Seeder
@@ -15,7 +12,7 @@ class JobsTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
         $job = Job::create([
             'title' => 'Kameramen',
             'short_description' => 'Membuka lowongan kerja untuk posisi sebagai kameramen',
