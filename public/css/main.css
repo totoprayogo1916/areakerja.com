@@ -4666,6 +4666,9 @@ input.invalid {
   h4.gg8 {
     padding-left: 15px;
   }
+  div.container.rr{
+    display: none;
+  }
 }
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
@@ -4744,4 +4747,11 @@ input.invalid {
     margin-top: 150px;
   }
 
+  div.container.rr2{
+    display: none;
+  }
+  
+  a.rekom2{
+    font-size: 12px;
+  }
 }

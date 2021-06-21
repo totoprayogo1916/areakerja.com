@@ -54,8 +54,10 @@
 </section>
 @endsection
 @section('rekom')
-<div class="justify-content-center d-flex">
-    <a href="/rekomendasi" style="color: #000; font-size: 20px">Rekomendasi Loker Lainnya></a>
+<div class="container rr2" >
+    <div class="justify-content-center d-flex" >
+        <a  href="/rekomendasi" style="color: #000; font-size: 20px">Rekomendasi Loker Lainnya></a>
+    </div>
 </div>
 @endsection
 @section('slick')
@@ -81,6 +83,11 @@
 
 @section('content')
 <div class="col-lg-8 post-list"  id="main-content">
+    <div class="container rr">
+        <div class="justify-content-center d-flex" >
+            <a href="/rekomendasi" style="color: #000; font-size: 14px">Rekomendasi Loker Lainnya></a>
+        </div>
+    </div>
     <h3 class ="sng-ttl9" style="margin-bottom: 15px; ">Semua Lowongan </h3>
     @foreach($jobs as $job)
     <a href="{{ route('jobs.show', $job->id) }}">
