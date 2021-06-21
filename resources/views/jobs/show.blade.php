@@ -59,7 +59,7 @@
         <div class="details" style="width: 100%" >
             <div class="row no-gutters" style="width: 100%">
                 <div class="col-8">
-                    <a href="#"><h2 class="cmp" style="font-weight: normal">{{ $job->company->name }}</h2></a>
+                    <a href="{{ route('compan', $job->company->id) }}"><h2 class="cmp" style="font-weight: normal">{{ $job->company->name }}</h2></a>
                     <h5 style="margin-top: 8px; font-weight: normal">Membuka Lowongan</h5>
 
                     <h1 class="ttl" style="margin-top: 8px"> {{ $job->title }}</h1>

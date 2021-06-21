@@ -2960,11 +2960,13 @@ hr {
   padding: 8px 15px;
   margin-top: 60px;
   max-width: 200px;
-
   border-radius: 6px;
 }
 
 .loadmore-btn:hover {
+    font-weight: bold;
+    background-color: #fff;
+    color: #fe7b54;
   box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -4656,6 +4658,11 @@ input.invalid {
     width: 120px;
     height: 100px;
   }
+
+  img.gg6{
+    width: 90px;
+    height: 75px;
+  }
   div.col.gg{
     width: 120px;
     height: 100px;
@@ -4734,6 +4741,15 @@ input.invalid {
     height: 64px;
     padding-right: 5px;
   }
+  img.gg6{
+    width: 80px;
+    height: 64px;
+  }
+
+  div.col-lg-4.sidebar.gg{
+    display: none;
+  }
+  
 
   hr.d-flex.flex-row.gg{
     margin-top: 5px;
@@ -4750,7 +4766,7 @@ input.invalid {
   div.container.rr2{
     display: none;
   }
-  
+
   a.rekom2{
     font-size: 12px;
   }
