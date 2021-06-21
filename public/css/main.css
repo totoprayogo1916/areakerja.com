@@ -2960,11 +2960,13 @@ hr {
   padding: 8px 15px;
   margin-top: 60px;
   max-width: 200px;
-
   border-radius: 6px;
 }
 
 .loadmore-btn:hover {
+    font-weight: bold;
+    background-color: #fff;
+    color: #fe7b54;
   box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -4750,7 +4752,7 @@ input.invalid {
   div.container.rr2{
     display: none;
   }
-  
+
   a.rekom2{
     font-size: 12px;
   }
