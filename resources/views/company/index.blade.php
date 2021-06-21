@@ -55,11 +55,11 @@
 
 
 @section('content')
-<div class="col-lg-8 post-list"  id="main-content">
-    <div class="row no-gutters" style="width: 100%; margin-bottom: 25px">
-        <div class="col-8">
-            <h4  style="margin-top: 8px; font-weight: normal">Riwayat Lowongan</h4   >
-            <h2 class="cmp" style="font-weight: normal">{{ $job2->company->name }}</h2>
+<div class="col-lg-8 post-list gg12" >
+    <div class="row no-gutters" style="width: 100%">
+        <div class="col-8 " style="margin-bottom: 20px">
+            <h3 class ="sng-ttl2" style="margin-bottom: 10px; font-weight: normal">Riwayat Lowongan</h3>
+            <h2 class="cmp" >{{ $job2->company->name }}</h2>
 
         </div>
         <div class="col-4 text-right " style="width: 100%;">
@@ -75,9 +75,7 @@
                     <div class="titles">
                         <h3 class ="sng-ttl2" >{{ $job1->title }}</h3>
                     </div>
-
                 </div>
-
                 <hr class="d-flex flex-row gg" style="width: 100%; margin-left: -0.5%"/>
                  <div class="row ttl3" >
                     <div class="col-auto " >
@@ -97,10 +95,18 @@
 </div>
 @endsection
 @section('bottom')
-    <div class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-    </div>
+<nav class="navbar navbar-light navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom no-padding" style="background-color: white"> 
+    <ul class="navbar-nav nav-justified w-100">
+      <li class="nav-item border-right">
+        <a href="#" class="nav-link" style="color: black"> <span class="fa fa-filter" aria-hidden="true"></span>        Filter</a>
+      </li>
+      <li class="nav-item border-right">
+        <a href="#" class="nav-link" style="color: black"><span class="fa fa-refresh" aria-hidden="true"></span>    Riwayat</a>
+      </li>
+      <li class="nav-item border-right" >	
+        <a href="#" class="nav-link" style="color: black"><span class="fa fa-star-o" aria-hidden="true"></span>     Simpan</a>
+      </li>
+    </ul>
+  </nav>
 @endsection
 

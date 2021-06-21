@@ -4768,4 +4768,12 @@ input.invalid {
   a.rekom2{
     font-size: 12px;
   }
+
+  .footer-area{
+    display: none;
+  }
+
+  div.col-lg-8.post-list.gg12{
+    margin-top: 25px;
+  }
 }
