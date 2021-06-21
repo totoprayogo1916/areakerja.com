@@ -47,6 +47,7 @@
                 <div class="row justify-content-center d-flex mt-4"  >
                     @yield('content')
                     @include('partials.sidebar')
+                    @yield('bottom')
                 </div>
             </div>
         </section>
