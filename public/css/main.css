@@ -4588,6 +4588,25 @@ input.invalid {
     animation: fadeIn 1s;
 }
 
+.myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  width: 2.5%;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+.myBtn:hover {
+  opacity: 1.0;
+}
+
 
 
 /* Add animation (fade in the popup) */

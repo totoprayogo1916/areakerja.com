@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 <head>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="img/img-01.png">
     <meta name="author" content="codepixer">
@@ -24,6 +29,7 @@
     </head>
     <body>
     @include('partials.header')
+    <img src="{{ url('img/up.png') }}" onclick="topFunction()" id="myBtn" title="Go to top" class="myBtn"></img>
 
         @include('partials.banner')
 
@@ -253,6 +259,22 @@ aria-hidden="true">
                 window.getSelection().addRange(r);
                 document.execCommand('copy');
                 window.getSelection().removeAllRanges();
+            }
+
+            var mybutton = document.getElementById("myBtn");
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
             }
         </script>
 
