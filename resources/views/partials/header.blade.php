@@ -15,7 +15,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a type="button" class="nav-link form-pasang5" href="#" style="color: #fee5ba;font-size: 14px; background-color: #fe7c5400; border: 2px solid #fe7b54; font-weight:600">
+          <a type="button" class="nav-link form-pasang5" href="{{ route('artikel') }}" style="color: #fee5ba;font-size: 14px; background-color: #fe7c5400; border: 2px solid #fe7b54; font-weight:600">
             <span class="fa fa-newspaper-o mr-1"></span> Tips Kerja
           </a>
         </li>

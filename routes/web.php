@@ -1,5 +1,6 @@
 <?php
 
+
 Route::redirect('/home', '/admin');
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
@@ -15,6 +16,7 @@ Route::post('/kontakform', 'HomeController@kirimmail')->name('kontakform');
 Route::get('/cache/{id}', 'CacheController@get_client_ip')->name('cache');
 Route::get('/riwayat/{id}', 'CacheController@riwayat')->name('riwayat');
 Route::get('/company/{id}', 'CompaniesController@index')->name('compan');
+Route::get('/artikel', 'ArtikelController@artikel')->name('artikel');
 // Route::get('lamarmail/{parameter}', [
 //     'as'=> 'lamarmail',
 //     'uses'=>'HomeController@lamarmail'
