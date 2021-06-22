@@ -19,65 +19,45 @@
 @endsection
 
 @section('content')
-<form id="regForm" style="width: 50%;margin-bottom: 100px;">
-    @csrf
-<div class="post-list justify-content-center" >
-    <div class="mt-10">
-    <div class="single-post2 d-flex " style="margin-bottom: 10px">
-        <div class="details justify-content-center" style="width: 100%" >
-            <div class="row no-gutters" style="width: 100%">
-                <div class="justify-content-center">
-                    <h1 class="ttl" style="margin-top: 8px;margin-left: 275px;"> *Judul Article</h1>
+<div class="post-list2 " >
+    <div data-aos="fade-up" class="single-post2 align-items-center border-bottom" style="width: 750px; margin-left: auto;margin-right: auto">
+        <div class="form-group border-bottom text-center">
+            <h1>*Judul Artikel</h1>
+        </div>
+
+        <div class="details" >
+            <div class="title d-flex flex-row "  >
+                <div class="titles">
+                    <p style="font-weight: 400; font-size : 16px;line-height: 2; margin-bottom: 0px">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequuntur molestiae eveniet totam at possimus velit incidunt perspiciatis maxime. Eligendi doloribus ut est molestiae voluptate, sint nobis earum porro cumque?
+                    </p>
                 </div>
             </div>
-            <hr class="d-flex  justify-content-center" style="width: 75%; margin-left: 75px;margin-top: 16px"/>
-
-            <div class="hot-post-left" >
-                <br>
-                    <div class="" style="width: 90%; margin-left: 30px;">
-
-
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius animi esse, commodi beatae dolorem libero quasi. Adipisci sit, cumque et porro id quo magni aperiam repellendus quod, saepe labore illo?
-                    {{-- {!! $isi_post->content !!} --}}
-
-                    </div>
-
-                </div>
-
-            <div class="" style="margin-top: 15px;margin-left:325px;width: 100%;">
-
-            <hr class="" style="width: 100%; margin-left:-325px;margin-top: 16px"/>
-
-                <div >
-                    <div class="btn popup form-pasang3" onclick="myFunction()" id="btn3">
-                        <h4  class="gg" style="font-weight: normal" ><span class="fa fa-share-alt"></span><span style="display:inline-block; width: 10px;"></span>Bagikan</h4>
-                        <div class="row justify-content-center popuptext" id="myPopup" style="padding-right: 0px;margin-right: 0px">
-                            <ul class="col row justify-content-center">
-
-                                <li>
-                                    <a href="#"><i class="fa fa-facebook-square" style="font-size:36px; color: black"></i></a>
-                                </li>
-                                <li style="padding-left: 10px;">
-                                    <a href="#"><i class="fa fa-twitter-square" style="font-size:36px; color: black"></i></a>
-                                </li>
-                                <li style="padding-left: 10px;">
-                                    <a href="#"><i class="fas fa-envelope-square" style="font-size:36px; color: black"></i></a>
-                                </li>
-                                <li style="padding-left: 10px;">
-                                    <a href="#"><i class="fab fa-whatsapp-square" style="font-size:36px; color: black""></i></a>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                      </div>
-                </div>
-            </div>
-
         </div>
     </div>
+
+
+    <div class="footer-social2 text-center">
+        <h4 class="text-uppercase mx-auto d-block text-center">Bagikan</h4>
+        <ul class="col row " style="width: max-content;margin-left: auto;margin-right: auto">
+
+            <li>
+                <a href="https://www.instagram.com/areakerjacom/"><i class="fa fa-instagram" style="font-size:36px"></i></a>
+            </li>
+            <li>
+                <a href="{{ route('home') }}"><i class="fa fa-facebook-square" style="font-size:36px"></i></a>
+            </li>
+            <li>
+                <a href="{{ route('home') }}"><i class="fa fa-twitter-square" style="font-size:36px"></i></a>
+            </li>
+            <li>
+                <a href="{{ route('home') }}"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+            </li>
+            <li>
+                <a href="{{ route('home') }}"><i class="fa fa-telegram" style="font-size:36px"></i></a>
+            </li>
+        </ul>
     </div>
-</div>
-</form>
+
 @endsection
 
