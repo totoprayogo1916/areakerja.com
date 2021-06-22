@@ -4702,6 +4702,13 @@ input.invalid {
   div.container.rr{
     display: none;
   }
+  p.pg-1{
+    font-size: 1rem;
+  }
+
+  h2.pg-0{
+    font-size: 1.75rem;
+  }
 }
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
@@ -4804,4 +4811,17 @@ input.invalid {
   div.col-lg-8.post-list.gg12{
     margin-top: 25px;
   }
+
+  p.pg-1{
+    font-size: 0.75rem;
+  }
+
+  h2.pg-0{
+    font-size: 1rem;
+  }
+
+  div.col-3.no-gutters.no-padding.thumb3{
+    display: none;
+  }
+    
 }

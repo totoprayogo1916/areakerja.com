@@ -19,24 +19,25 @@
 @endsection
 
 @section('content')
-<div class="post-list2 " >
+<div class="col-sm-8 post-list2 " >
     @foreach($artikel as $article)
-    <div data-aos="fade-up" class="single-post2 align-items-center d-flex border-bottom" style="width: 750px; margin-left: auto;margin-right: auto">
-        <div class="row " style="margin: auto;margin-right:20px" >
+    <div data-aos="fade-up" class="single-post2 align-items-center d-flex border-bottom" style=" margin-left: auto;margin-right: auto">
+        <div class="col-3 no-gutters no-padding thumb3" style="margin: auto;" >
             @if($article->gambar)
-                <img class="thumb2" src="{{ url('img/artikel') }}/{{ $article->gambar }}" style="width: 250px;height: 150px;">
+                <img class="thumb3" src="{{ url('img/artikel') }}/{{ $article->gambar }}" style="width: inherit;height: auto;">
             @endif
         </div>
-
-        <div class="details" >
-            <div class="title d-flex flex-row "  >
-                <div class="titles">
-                    <h2 style="color: #7e7e7e; margin-bottom: 8px;font-weight: 500">{{ $article->judul }}</h3>
-                    
-                    <p style="font-weight: 400; font-size : 16px;line-height: 2; margin-bottom: 0px">{{ $article->ringkasan }}</p>
+        <div class="col-9 ">
+            <div class="details" >
+                <div class="title d-flex flex-row "  >
+                    <div class="titles">
+                        <h2 class ="pg-0" style="color: #7e7e7e; margin-bottom: 8px;font-weight: 500;">{{ $article->judul }}</h3>
+                        <p class="pg-1" style="font-weight: 400;line-height: 1.75; margin-bottom: 0px">{{ $article->ringkasan }}</p>
+                    </div>
                 </div>
             </div>
         </div>
+        
     </div>
     @endforeach
 
