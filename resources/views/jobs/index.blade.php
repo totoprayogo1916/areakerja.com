@@ -97,11 +97,19 @@
                     <img class="thumb2" src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" >
                 @endif
             </div>
-
+            
             <div class="details " style="width: 100%" style="margin-top: 14px; overflow: unset; white-space: nowrap;">
+                <div class="row no-gutters" style="width: 100%;margin-left: -0.5%">
+                    <div class="col-6 " >
+                        <h3 class ="sng-ttl" style="color: #7e7e7e">Dibutuhkan</h3>
+                    </div>
+                    <div class="col-6 text-right">
+                        <h5 class ="sng-dtl" ><span class="fa fa-clock-o" aria-hidden="true"></span>  {{ $job->created_at->diffForHumans() }}
+                    </div>
+                    
+                </div>
                 <div class="title d-flex flex-row justify-content-between"  >
                     <div class="titles">
-                        <h3 class ="sng-ttl" style="color: #7e7e7e">Dibutuhkan</h3>
                         <h3 class ="sng-ttl2" >{{ $job->title }}</h3>
                         <div class="row ttl3" style=" overflow: unset; white-space: nowrap;">
                             <div class="col-auto"  >

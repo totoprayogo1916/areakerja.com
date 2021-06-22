@@ -56,7 +56,8 @@ class ArtikelController extends Controller
             ])
         );
     }
-    public function artikel2()
+
+    public function showart()
     {
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
@@ -73,7 +74,7 @@ class ArtikelController extends Controller
             ->take(0)
             ->get();
 
-        $artikel = Article::all();
+        $artikel = Artikel::all();
 
         $sidebarLocations = Location::withCount('jobs')
             ->whereHas('jobs')
@@ -86,7 +87,7 @@ class ArtikelController extends Controller
             ->get();
 
         return view(
-            'artikel.artikel',
+            'artikel.show',
             compact([
                 'searchLocations',
                 'searchCategories',
