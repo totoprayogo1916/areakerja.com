@@ -22,7 +22,7 @@
 <div class="post-list2 " >
     <div data-aos="fade-up" class="single-post2 align-items-center border-bottom" style="width: 750px; margin-left: auto;margin-right: auto">
         <div class="form-group border-bottom text-center">
-            <h1>*Judul Artikel</h1>
+            <h1>>{{ $article->judul }}</h1>
         </div>
 
         <div class="details" >

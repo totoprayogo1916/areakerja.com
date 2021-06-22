@@ -20,24 +20,26 @@
 
 @section('content')
 <div class="post-list2 " >
-    @foreach($artikel as $article)
+    @foreach($article as $art)
+    <a href="{{ route('artikel.show', $art->id)}}">
     <div data-aos="fade-up" class="single-post2 align-items-center d-flex border-bottom" style="width: 750px; margin-left: auto;margin-right: auto">
         <div class="row " style="margin: auto;margin-right:20px" >
-            @if($article->gambar)
-                <img class="thumb2" src="{{ url('img/artikel') }}/{{ $article->gambar }}" style="width: 250px;height: 150px;">
+            @if($art->gambar)
+                <img class="thumb2" src="{{ url('img/artikel') }}/{{ $art->gambar }}" style="width: 250px;height: 150px;">
             @endif
         </div>
 
         <div class="details" >
             <div class="title d-flex flex-row "  >
                 <div class="titles">
-                    <h2 style="color: #7e7e7e; margin-bottom: 8px;font-weight: 500">{{ $article->judul }}</h3>
-                    
-                    <p style="font-weight: 400; font-size : 16px;line-height: 2; margin-bottom: 0px">{{ $article->ringkasan }}</p>
+                    <h2 style="color: #7e7e7e; margin-bottom: 8px;font-weight: 500">{{ $art->judul }}</h3>
+
+                    <p style="font-weight: 400; font-size : 16px;line-height: 2; margin-bottom: 0px">{{ $art->ringkasan }}</p>
                 </div>
             </div>
         </div>
     </div>
+    </a>
     @endforeach
 
     <a class="text-uppercase loadmore-btn mx-auto d-block" href="#">Load More Articel</a>

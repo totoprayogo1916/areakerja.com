@@ -16,8 +16,9 @@ Route::post('/kontakform', 'HomeController@kirimmail')->name('kontakform');
 Route::get('/cache/{id}', 'CacheController@get_client_ip')->name('cache');
 Route::get('/riwayat/{id}', 'CacheController@riwayat')->name('riwayat');
 Route::get('/company/{id}', 'CompaniesController@index')->name('compan');
+// Route::resource('artikel', 'ArtikelController')->only(['artikel', 'show']);
 Route::get('/artikel', 'ArtikelController@artikel')->name('artikel');
-Route::get('/showart', 'ArtikelController@showart')->name('showart');
+Route::get('/artikel/{artikel}', 'ArtikelController@show')->name('artikel.show');
 // Route::get('lamarmail/{parameter}', [
 //     'as'=> 'lamarmail',
 //     'uses'=>'HomeController@lamarmail'
