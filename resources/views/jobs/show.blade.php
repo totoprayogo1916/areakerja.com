@@ -236,3 +236,18 @@
 
 
 @endsection
+@section('bottom')
+<nav class="navbar navbar-light navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom no-padding" style="background-color: white"> 
+    <ul class="navbar-nav nav-justified w-100">
+      <li class="nav-item border-right">
+        <a href="#" class="nav-link" style="color: black" data-toggle="modal" data-target="#modalPushFilter"> <span class="fa fa-filter" aria-hidden="true"></span>        Filter</a>
+      </li>
+      <li class="nav-item border-right">
+        <a href="#" class="nav-link" style="color: black" data-toggle="modal" data-target="#modalPushRiwayat" ><span class="fa fa-refresh" aria-hidden="true"></span>    Riwayat</a>
+      </li>
+      <li class="nav-item border-right" >	
+        <a href="#" class="nav-link" style="color: black" data-target="#modalPush" class="justify-content-between" data-toggle="modal"><span class="fa fa-star-o" aria-hidden="true"></span>     Simpan</a>
+      </li>
+    </ul>
+  </nav>
+@endsection

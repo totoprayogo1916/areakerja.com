@@ -1,6 +1,6 @@
 <?php
 
-use Database\Seeders\ArtikelSeeder;
+use Database\Seeders\ArticleSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -8,7 +8,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            ArtikelSeeder::class,
+            ArticleSeeder::class,
             PermissionsTableSeeder::class,
             RolesTableSeeder::class,
             PermissionRoleTableSeeder::class,
