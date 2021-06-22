@@ -64,7 +64,7 @@
                                     {{ trans('global.view') }}
                                 </a>
 
-                                <a style="width: 60px" class="btn btn-xs btn-info" href="#">
+                                <a style="width: 60px" class="btn btn-xs btn-info" href="{{ route('admin.article.edit', $posts->id) }}">
                                     {{ trans('global.edit') }}
                                 </a>
 

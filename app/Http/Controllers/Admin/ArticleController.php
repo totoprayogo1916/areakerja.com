@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Job;
 use App\Wish;
 use App\Article;
+use App\Http\Requests\UpdateArticleRequest;
 use App\Location;
 use App\Riwayat;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -44,7 +45,7 @@ class ArticleController extends Controller
             'gambar' => $namaFile
         ]);
 
-        return redirect()->route('admin.article.index'); 
+        return redirect()->route('admin.article.index');
     }
 
     public function destroy(Article $posts)
@@ -53,6 +54,36 @@ class ArticleController extends Controller
         $posts->delete();
 
         return back();
+    }
+
+    public function edit(Article $article)
+    {
+        return view('admin.article.edit', compact('article'));
+    }
+
+    public function update(UpdateArticleRequest $request, $id)
+    {
+
+        // $namaFile = time().'.'.$request->gambar->extension();
+        // $request->gambar->move(public_path('img/artikel'), $namaFile);
+
+
+        // return redirect()->route('admin.article.index', compact('post'));
+
+        // $article->update($request->all());
+        // $post = Article::all();
+        $article = Article::find($id);
+
+        if($request->gambar != ''){
+            $path = public_path().'/img/artikel';
+            $namaFile = time().'.'.$request->gambar->extension();
+            $file = $request->gambar;
+            $filename = $namaFile;
+            $file->move($path, $filename);
+
+            $article->update(['gambar' => $filename]);
+        }
+        return redirect()->route('admin.article.index');
     }
 
 }
