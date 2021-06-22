@@ -121,7 +121,7 @@ aria-hidden="true">
   <div class="modal-content text-center">
     <!--Header-->
     <div class="modal-header2 d-flex">
-      <p class="heading">Riwayat Penelusuran</p>
+      <p class="heading">Filter</p>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span style="color: rgb(255, 255, 255)"   aria-hidden="true">&times;</span>
     </button>
