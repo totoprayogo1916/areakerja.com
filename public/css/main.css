@@ -2821,7 +2821,14 @@ hr {
     font-size: 10px;
   }
 }
-
+.artikel{
+  padding: 15px;
+  background-color: #ffffff;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
+  transition: all 0.3s ease 0s;
+}
 .post-list .single-post {
   padding: 15px;
   background-color: #ffffff;
@@ -2830,6 +2837,25 @@ hr {
   box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
   transition: all 0.3s ease 0s;
 }
+.post-list2 {
+  padding: 15px;
+  padding-top: 20px;
+  background-color: #ffffff;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
+  transition: all 0.3s ease 0s;
+}
+.post-list2 .single-post2 {
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  /* border-radius: 20px;
+  box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15); */
+  transition: all 0.3s ease 0s;
+}
+
+
 
 .post-list:hover .single-post:hover {
   box-shadow: 0 10px 10px rgba(0.15, 0.15, 0.15, 0.15);

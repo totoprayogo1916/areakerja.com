@@ -51,6 +51,15 @@
   .container {
     min-width: 992px !important;
   }
+  .container2{
+    min-width: 992px !important;
+    padding: 15px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
+    transition: all 0.3s ease 0s;
+  }
   .navbar {
     display: none;
   }

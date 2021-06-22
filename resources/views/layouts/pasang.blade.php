@@ -32,12 +32,15 @@
         <!-- Start post Area -->
         <section class="section-gap2">
             @yield('home')
-
+            <div class="container">
+                <div class="row justify-content-center d-flex mt-4"  >
+                    @yield('content')
+                </div>
+            </div>
         </section>
         <!-- End post Area -->
-        <div class="row justify-content-center d-flex mt-4"  >
-        @yield('content')
-        </div>
+        
+        
 
 
         </div>

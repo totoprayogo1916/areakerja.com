@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Job;
 use App\Wish;
-use App\Artikel;
+use App\Article;
 use App\Location;
 use App\Riwayat;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -15,6 +15,23 @@ class ArtikelController extends Controller
 {
     public function artikel()
     {
+        $ipaddress = '';
+        if (isset($_SERVER['HTTP_CLIENT_IP']))
+            $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+        else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        else if(isset($_SERVER['HTTP_X_FORWARDED']))
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+        else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+            $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+        else if(isset($_SERVER['HTTP_FORWARDED']))
+            $ipaddress = $_SERVER['HTTP_FORWARDED'];
+        else if(isset($_SERVER['REMOTE_ADDR']))
+            $ipaddress = $_SERVER['REMOTE_ADDR'];
+        else
+            $ipaddress = 'UNKNOWN';
+        $riwayatlist=Riwayat::where('ip',$ipaddress)->get();
+        $wishlist=Wish::where('ip', $ipaddress)->get();
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $searchByCategory = Category::withCount('jobs')
@@ -30,7 +47,7 @@ class ArtikelController extends Controller
             ->take(0)
             ->get();
 
-        $artikel = Artikel::all();
+        $artikel = Article::all();
 
         $sidebarLocations = Location::withCount('jobs')
             ->whereHas('jobs')
@@ -43,7 +60,7 @@ class ArtikelController extends Controller
             ->get();
 
         return view(
-            'artikel.artikel',
+            'artikel.index',
             compact([
                 'searchLocations',
                 'searchCategories',
@@ -53,6 +70,8 @@ class ArtikelController extends Controller
                 'sidebarLocations',
                 'sidebarCategories',
                 'artikel',
+                'wishlist',
+                'riwayatlist'
             ])
         );
     }

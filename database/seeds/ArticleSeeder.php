@@ -15,14 +15,9 @@ class ArticleSeeder extends Seeder
     public function run()
     {
         $article = Article::create([
-<<<<<<< HEAD
             'judul' => 'Cari Kerja Terasa Sulit? Mungkin, Kamu Perlu Tips Ini',
             'ringkasan' =>
                 'Belum punya pengalaman kerja, tentu akan menyulitkan seseorang untuk mendapatkan pekerjaan. Kamu bisa lakukan tips ini agar lebih berpotensi diterima kerja.',
-=======
-            'judul' => 'Tips Hadapi Rasa Malas saat Bekerja',
-            'ringkasan' => 'Hadapi rasa malas dalam bekerja dengan beberapa langkah sederhana agar bekerja menjadi lebih semangat',
->>>>>>> 0781a7ee253f193e46e367209dc34c934431a77f
             'content' => '<h1><strong>Tips&nbsp;Cari&nbsp;Kerja&nbsp;</strong></h1>
 
             <p>Sudah&nbsp;bukan&nbsp;lagi&nbsp;hal&nbsp;yang&nbsp;aneh&nbsp;bila&nbsp;mencari&nbsp;pekerjaan&nbsp;memang&nbsp;menjadi&nbsp;sebuah&nbsp;tantangan&nbsp;tersendiri&nbsp;bagi&nbsp;para&nbsp;pencarinya.Penolakan&nbsp;kerja&nbsp;berulang-ulang&nbsp;tentunya&nbsp;menjadi&nbsp;sebuah&nbsp;beban&nbsp;bagi&nbsp;para&nbsp;pencari&nbsp;kerja.&nbsp;Khususnya&nbsp;fresh&nbsp;graduate&nbsp;yang&nbsp;masih&nbsp;minim&nbsp;pengalaman&nbsp;kerja.Kondisi&nbsp;seperti&nbsp;ini&nbsp;sudah&nbsp;jelas&nbsp;akan&nbsp;membuat&nbsp;cari&nbsp;kerja&nbsp;terasa&nbsp;sulit&nbsp;dan&nbsp;terbebani.&nbsp;Apalagi,&nbsp;jika&nbsp;sudah&nbsp;berbulan-bulan&nbsp;tak&nbsp;dapat&nbsp;pekerjaan. Namun,&nbsp;semua&nbsp;itu&nbsp;bukan&nbsp;menjadi&nbsp;alasan.&nbsp;Karena,&nbsp;ada&nbsp;beberapa&nbsp;upaya&nbsp;atau&nbsp;tips&nbsp;yang&nbsp;bisa&nbsp;kamu&nbsp;lakukan&nbsp;untuk&nbsp;mempermudah&nbsp;kamu&nbsp;mencari&nbsp;kerja. Dimana,&nbsp;tips&nbsp;ini&nbsp;cukup&nbsp;efektif&nbsp;dalam&nbsp;mendapatkan&nbsp;lowongan&nbsp;kerja&nbsp;secara&nbsp;mudah,&nbsp;sesuai&nbsp;bidangnya,&nbsp;dan&nbsp;mudah&nbsp;dalam&nbsp;mengajukan&nbsp;pelamaran.&nbsp;Untuk&nbsp;lebih&nbsp;jelasnya,&nbsp;mari&nbsp;kita&nbsp;simak&nbsp;bersama&nbsp;bagaimana&nbsp;tips&nbsp;yang&nbsp;tepat&nbsp;untuk&nbsp;mencari&nbsp;kerja&nbsp;yang&nbsp;terasa&nbsp;sulit&nbsp;dan&nbsp;susah.</p>
