@@ -668,5 +668,105 @@ class ArticleSeeder extends Seeder
             'gambar' => 'pikir.jpg',
         ]);
         $article->save();
+
+        $article = Article::create([
+            'judul' =>
+                'Cara Untuk Menghadapi Bos yang Rumit, Jangan Langsung Resign!',
+            'ringkasan' =>
+                'Resign adalah keputusan yang paling terakhir yang bisa kamu ambil ketika tidak mampu menerima kondisi dikantor.',
+            'content' => '<p>Setiap atasan seharusnya bisa menjadi contoh yang baik dan teladan bagi para karyawannya. Tetapi bagaimana jika kita dihadapkan dengan atasan yang rumit dan berperilaku kurang menyenangkan kepada terhadap karyawannya. Ketika kamu memasukin dunia kerja, kamu tak hanya perlu mempersiapkan fisik saja tetapi harus mempersiapkan mental yang kuat. Salahsatunya dengan menghadapi berbagai macam karakter orang tak terkecuali dengan atasanmu.</p>
+
+            <h2>Cara Untuk Menghadapi Bos yang Rumit, Jangan Langsung Resign!</h2>
+            
+            <p>Tidak semua orang akan cocok dengan kepribadian kamu. Ada orang yang cuek, sombong, bawel atau ribet. Dari banyak karakter yang akan kamu ketemui sebagainya jangan langsung menjadikan kamu frustasi. Mau tidak mau, kamu harus menghadapi dan mencoba menerima kondisi tersebut. Ketika dihadapkan dalam kondisi tersebut kamu resign maka ada kemungkinan besar kamu juga akan mengalami hal yang sama di tempat kerjamu yang baru. Berikut ini adalah cara yang cerdas untuk bisa menghadapi Bos yang rumit.</p>
+            
+            <p><strong>1. Komunikasi</strong></p>
+            
+            <p>Ketika kamu dihadapkan dengan bos yang rumit dan bersikpa kurang menyenangkan tidak ada salahnya kamu berkomunikasi tentang apa yang kamu rasakan. Tidak semua bos bisa mengerti perasaan karyawannya. Bahkan ada bos yang bersikap semaunya sendiri. Dalam kondisi seperti ini komunikasi kamu lakukan. Cari moment yang tepat untuk bisa komunikasi dengan baik kepada bosmu.</p>
+            
+            <p><strong>2. Jangan dilawan, dengarkan saja</strong></p>
+            
+            <p>Bos yang rumit pasti mencari kesalahan dari setiap stafnya. Ketika hal tersebit terjadi maka sebaiknya kamu dengarkan saja dan jangan melawan. Ketika kamu benar boleh sesekali untuk memberikan alasan atas pekerjaan yang kamu lakukan. Dan dalam pengambilan keputusan berilah alternatif pilihan yang bisa memberikan solusi.</p>
+            
+            <p><strong>3. Jika ingin memberikan saran, carilah waktu yang tepat</strong></p>
+            
+            <p>Kita sebagai karyawan terkadang ingin memberikan saran dan kritis yang bertujuan untuk lebih membangun perusahaan menjadi lebih besar dan maju lagi. Namun berilah kritik pada waktu yang tepat. Kritik yang diberikan harus disertai dengan data atau informasi yang tepat agar lebih mudah diterima.</p>
+            
+            <p><strong>4. Tunjukan bahasa tubuh yang mengartikan kamu sibuk</strong></p>
+            
+            <p>Bos yang rumit terkadang membuat pekerjaan yang sederhana menjadi lebih tidak sederhana. Terkadang ada perubahan keputusan yang mendadak. Selain mendengarkan untuk menghindari kamu bisa menunjukan bahasa tubuh yang mengartiakan sedang banyak pekerjaan yang kamu jalani.</p>
+            
+            <p>Dalam dunia kerja pasti akan menemukan hal yang menyenangkan dan menyebalkan. Ketika kamu dihadapkan dengan hal yang menyebalkan jangan langsung ambil keputusan untuk resign. Tetapi mencoba untuk menghadapi dengan menerima kondisi yang ada.</p>',
+            'gambar' => 'resign.jpeg',
+        ]);
+        $article->save();
+
+        $article = Article::create([
+            'judul' => 'Tips Mengajukan Kenaikan Gaji Dengan Sopan',
+            'ringkasan' =>
+                'Setiap karyawan pasti menginginkan kenaikan gaji bukan pengurangan gaji!',
+            'content' => '<p>Kamu saat ini sudah bekerja di sebuah perusahaan cukup lama, dan merasa saat ini waktu yang tepat untuk mengajukan kenaikan gaji. Memiliki pendapatan yang lebih tinggi adalah hal yang diinginkan oleh semua karyawan. Belum lagi ketika biaya hidupmu semakin bertambah. Pastinya berharap untuk mendapatkan penghasilan yang lebih tinggi dari sebelumnya.</p>
+
+            <h2>Tips Mengajukan Kenaikan Gaji Dengan Sopan</h2>
+            
+            <p>Besarnya gaji setiap karyawan beragam tergantung dengan kemampuan kerja, tanggung jawab dan masa kerja. Bahkan setiap perusahaan meiliki kebijakan masing-masing terhadap pemberian gaji karyawannya. Selain diukur dari kemampuan perusahaan, gaji juga memiliki peraturan yang sudah ada dalam Undang &ndash; Undang. Setiap daerah juga memiliki standar minimum upahnya. Ketika kamu sudah merasa bahwa ini saat yang tepat untuk mengajukan kenaikan gaji atau tunjungan, kamu bisa lakukan beberapa hal berikut:</p>
+            
+            <p><strong>1. Tingkatkan Prestasi Kerja</strong></p>
+            
+            <p>Sebelum kamu mengajukan kenaikan gaji, pastikan kamu dalam beberapa bulan terakhir sudah memiliki prestasi kerja yang baik. Kamu mempunyai keinginan untuk belajar sehingga dengan kamu berprestasi dalam jangka waktu tertentu akan menjadi pertimbangan tersendiri untuk mengajukan kenaikan gaji.</p>
+            
+            <p><strong>2. Alasan kuat untuk naik gaji</strong></p>
+            
+            <p>Mengajukan kenaikan gaji harus berdasarkan alasan yang kuat. Selain kamu sudah berusaha untuk berprestasi kamu juga memperhatikan beberapa hal lainnya. Misalnya dengan rencana kedepanmu untuk memajukan perusahaan dan tujuan dalam kerjaanmu.</p>
+            
+            <p><strong>3. Pilih waktu yang tepat</strong></p>
+            
+            <p>Waktu menjadi salah satu kunci pengajuanmu diterima atau tidak. Ketika kamu menyampaikan pada saat waktu yang tepat maka keinginanmu lebih besar kemungkinan untuk di dengar. Sedangkan sebaliknya ketika kamu menyampaikan disaat waktu yang kurang tepat misalnya atasanmu banyak kerjaan atau kamu membahasnya ketika rapat dan lain-lain maka kemungkinan besar tidak didengarkan oleh atasanmu karena fokusnya bukan kepada kamu.</p>
+            
+            <p><strong>4. Gunakan bahasa yang tepat</strong></p>
+            
+            <p>Membicarakan gaji bukan kepada rekan kerjamu tetapi dengan atasanmu. Oleh sebab itu kamu perlu untuk merangkai kata menjadi bahasa komunikasi yang tepat. Selain pemilihan kata intonasi juga perlu diperhatikan</p>
+            
+            <p><strong>5. Cari informasi besar kenaikan gaji yang diinginkan dan layak</strong></p>
+            
+            <p>Riset tentang nominal kenaikan gaji yang layak kamu dapatkan juga sangat perlu. Ketika kamu mengajukan akan ada pertanyaan tentang nominal yang kamu inginkan. Kamu perlu siapkan hal itu.</p>
+            
+            <p>Mendapatkan kenaikan gaji merupakan hal yang diinginkan karyawan dan menjadi hak dari karyawan. Pastinya semua karyawan tidak ingin ketika sudah bekerja lama tapi gaji masih belum bertambah atau malah berkurang.</p>',
+            'gambar' => 'duit.jpeg',
+        ]);
+        $article->save();
+
+        $article = Article::create([
+            'judul' => 'Faktor yang mempengaruhi kualitas kerja',
+            'ringkasan' =>
+                'Dalam dunia kerja hal yang sangat diperlukan adalah kualitas kerja dalam menyelesaikan pekerjaan.',
+            'content' => '<p>Selama kerja kita akan dihadapkan dengan beberapa pekerjaan yang harus kamu selesaikan. Pastinya kamu ingin selalu bisa menyelesaikan semua pekerjaanmu dengan maksimal. Untuk bisa menyelesaikan pekerjaan secara tepat waktu dan maksimal kamu memerlukan semangat bekerja setiap harinya. Namun semangat tersebut kadang sering kendor. Lalu bagaimana jika semangatmu kendor dan harus maksimal menyelesaikan pekerjaan. Sedangkan meningkatkan semangatpun tidak mudah. Terlebih kamu mempunyai masalah diluar kantor.</p>
+
+            <p>Faktor yang mempengaruhi kualitas kerja</p>
+            
+            <p>Kualitas kerja sangat dibutuhkan dalam menyelesaikan setiap pekerjaan. Dampak dari kamu memiliki kualitas kerja yang baik adalah promosi jabatan, kenaikan gaji dan masih banyak lagi. Bekerja secara berkualitas pun tidak hanya datang dari faktor dari diri sendiri saja. Tapi banyak faktor yang mempengaruhi diantaranya:</p>
+            
+            <p>1. Lingkungan Kerja</p>
+            
+            <p>Perusahaan harus memastikan bahwa memiliki lingkungan kerja yang sehat baik dari sirkulasi udara, suasana kerja, rekan kerjan dan maasih banyak fasilitas yang harus diperhatikan. Kunci dari karyawan memiliki kualitas kerja yang baik adalah dari lingkungan kerja yang sehat.</p>
+            
+            <p>2. Bonus dan insentif</p>
+            
+            <p><img alt="" src="https://blog-media.lifepal.co.id/wp-content/uploads/2019/12/Bonus-akhir-tahun.jpg" style="height:301px; width:450px" /></p>
+            
+            <p>Gaji, bonus dan insentif adalah faktor yang paling dapat dilihat ketika seseorang mempunyai kualitas kerja yang baik atau tidak. Upah adalah salah satu faktor yang paling krusial karena mempengaruhi pengingkatan motivasi kerja karyawan.</p>
+            
+            <p>3. Pelatihan dan pengembangan diri</p>
+            
+            <p>Untuk bisa mengembangkan diri, tidak hanya dilakukan oleh diri sendiri tapi dukungan dari perusahaan juga perlu. Seperti mengadakan pelatihan kerja disamping karyawan semakin handal dalam pekerjaanya, pelatihan kerja ini dapat menambah wawasan. Banyak hal yang bisa dilakukan oleh perusahaan dan diri sendiri untuk pengembangan diri.</p>
+            
+            <p>4. Gaya kepimpinan</p>
+            
+            <p>Atasan yang menyenangkan dan komunikatif dapat berpengaruh juga dalam kualitas kerja. Pekerjaan datang dari atasan kita, cara komunikasi yang bagus maka kita akan senang hati melakukan pekerjaan tersebut. Gaya kepemimpinan pastinya akan mempengaruhi kinerja dari setiap karyawannya. Dengan karater karyawan yang berbeda-beda, sudah sewajarnya pimpinan mempunyai gaya kepemimpinan yang dapat membangkitkan semangat kerja karyawan sehingga dapat meningkatkan kualitas kerja karyawan tersebut.</p>
+            
+            <p>Banyak faktor yang bisa meningkatkan kualitas kerja. Kamu bisa terus kembangkan diri kamu sesuai dengan potensi yang ada. Sudah banyak sumber pengetahuan yang bisa mengingkatkan wawasan dan potensimu.</p>',
+            'gambar' => 'kualitas.jpg',
+        ]);
+        $article->save();
     }
 }
