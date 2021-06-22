@@ -39,7 +39,10 @@ class CompaniesController extends Controller
         // $name = $job->title;
         // dd($name);
 
-        return view('company.index', compact('job','job2', 'wishlist', 'riwayatlist'));
+        return view('company.index', compact('job','job2','riwayatlist',
+        'searchLocations',
+        'searchCategories',
+        'wishlist','ipaddress'));
 
     }
 
