@@ -124,10 +124,10 @@ class ArticleSeeder extends Seeder
         ]);
         $article->save();
 
-
         $article = Article::create([
             'judul' => 'Cari Kerja Terasa Sulit? Mungkin, Kamu Perlu Tips Ini',
-            'ringkasan' => 'Belum punya pengalaman kerja, tentu akan menyulitkan seseorang untuk mendapatkan pekerjaan. Kamu bisa lakukan tips ini agar lebih berpotensi diterima kerja.',
+            'ringkasan' =>
+                'Belum punya pengalaman kerja, tentu akan menyulitkan seseorang untuk mendapatkan pekerjaan. Kamu bisa lakukan tips ini agar lebih berpotensi diterima kerja.',
             'content' => '<p><img alt="" src="https://lh3.googleusercontent.com/proxy/5TyTzQ3D6sbn1tlHPMghjzRm_4IqeRtff43OAlL07_Zk_tplSmuYPAN8DvoxGFJ2vpZRSakGv5N0VBIFK1_w7kgEozZhj-3UkbP20xnxjNax58aqYVnJ_BoO6MvQIeyuLn4-FIbmpiPanJQDuDL2BQY" style="height:300px; width:450px" /></p>
 
             <p><a href="http://www.lokerjogja.id/tips-hadapi-rasa-malas-saat-bekerja/">Hadapi Rasa Malas saat Kerja</a>&nbsp;&ndash; Tak bisa dipungkiri bahwa hampir setiap karyawan tentu pernah mengalami rasa malas yang sangat ketika sedang bekerja.</p>
@@ -193,13 +193,15 @@ class ArticleSeeder extends Seeder
             <p>Dengan begitu maka rasa malas lambat laun akan menghilang melalui seduhan minuman avorit kamu.</p>
             
             <p>&nbsp;</p>',
-            'gambar' => 'malas.jpg'
+            'gambar' => 'malas.jpg',
         ]);
         $article->save();
 
         $article = Article::create([
-            'judul' => 'Catat! Hindari Beberapa Hal Ini agar Kamu Lolos Tes Kerja',
-            'ringkasan' => 'Hal-hal penting yang perlu dihindari supaya bisa diterima kerja oleh perusahaan',
+            'judul' =>
+                'Catat! Hindari Beberapa Hal Ini agar Kamu Lolos Tes Kerja',
+            'ringkasan' =>
+                'Hal-hal penting yang perlu dihindari supaya bisa diterima kerja oleh perusahaan',
             'content' => '<p><img alt="" src="https://www.approachpeople.com/wp-content/uploads/2019/10/questions-job-interview-featured-image.jpg" style="height:300px; width:450px" /></p>
 
             <p>Dalam langkah persiapan tes masuk kerja, sudah barang tentu kamu harus mempersiapkan diri agar bisa menghadapinya.</p>
@@ -253,13 +255,14 @@ class ArticleSeeder extends Seeder
             <p>Bahkan, cara ini bisa digunakan untuk memaksimalkan potensi kamu dalam mendapatkan pekerjaan karena kamu akan lebih mudah dalam mengajukan lamaran tanpa perlu mendatangi kantor langsung.</p>
             
             <p>Oleh sebab itu, sangat disarankan untuk menyeleksi, kira-kira mana saja info loker yang sesuai dengan kebutuhan maupun kemampuan kamu agar nantinya peluang kamu diterima kerja lebih besar.</p>',
-            'gambar' => 'lolos.jpg'
+            'gambar' => 'lolos.jpg',
         ]);
         $article->save();
 
         $article = Article::create([
             'judul' => 'Catat! Ini Skill Penting dalam Dunia Kerja',
-            'ringkasan' => 'Tak hanya nilai akademis saja, skill personal pun juga menjadi pertimbangan penting di dalam dunia kerja. Apa saja itu?',
+            'ringkasan' =>
+                'Tak hanya nilai akademis saja, skill personal pun juga menjadi pertimbangan penting di dalam dunia kerja. Apa saja itu?',
             'content' => '<p><img alt="" src="https://image.cermati.com/q_70,w_1200,h_800,c_fit/urabfx7xlcrqdfqlsfcz" style="height:271px; width:450px" /></p>
 
             <p>Di dalam dunia kerja, seorang karyawan tentu dituntut untuk mampu beradaptasi dan cerdas dalam mencari solusi atas setiap masalah.</p>
@@ -311,13 +314,14 @@ class ArticleSeeder extends Seeder
             <p>Nah, buat kamu yang punya kemampuan dasar analisa kuat maka sangat disarankan untuk mengasahnya lebih dalam karena akan sangat dibutuhkan dalam dunia kerja.</p>
             
             <p>&nbsp;</p>',
-            'gambar' => 'tim.jpg'
+            'gambar' => 'tim.jpg',
         ]);
         $article->save();
 
         $article = Article::create([
             'judul' => 'Bisnis untuk Karyawan Gaji Kecil',
-            'ringkasan' => 'Usaha sampingan yang menjanjikan bagi kamu yang bergaji kecil',
+            'ringkasan' =>
+                'Usaha sampingan yang menjanjikan bagi kamu yang bergaji kecil',
             'content' => '<p>Ingin cari kerja sampingan buat menambah pemasukan? Tentu saja, kerja sampingan memang bisa menjadi sumber pemasukan bagi karyawan.</p>
 
             <p>Namun, sebenarnya ada cara lain yang justru lebih efektif tanpa mengganggu waktu dari pekerjaan utama kamu sebagai seorang karyawan.</p>
@@ -381,13 +385,15 @@ class ArticleSeeder extends Seeder
             <p>Jika melihat berbagai jenis bisnis sampingan di atas, agaknya memang sangat cocok untuk dilakukan oleh para karyawan yang mungkin gajinya kecil atau hanya cukup untuk memenuhi kebutuhan primer saja.</p>
             
             <p>Karena, beberapa kategori bisnis di atas memang dinilai sangat menguntungkan dan mudah dilakukan tanpa menyita waktu.</p>',
-            'gambar' => 'bisnis.jpg'
+            'gambar' => 'bisnis.jpg',
         ]);
         $article->save();
 
         $article = Article::create([
-            'judul' => '4 Kerja Freelance Terbaik dan Menguntungkan yang Patut Kamu Coba',
-            'ringkasan' => 'Pilihan jenis pekerjaan freelance dengan prospek menjanjikan untuk kamu para karyawan maupun yang ingin mencari tambahan penghasilan.',
+            'judul' =>
+                '4 Kerja Freelance Terbaik dan Menguntungkan yang Patut Kamu Coba',
+            'ringkasan' =>
+                'Pilihan jenis pekerjaan freelance dengan prospek menjanjikan untuk kamu para karyawan maupun yang ingin mencari tambahan penghasilan.',
             'content' => '<p>Mau mendapatkan penghasilan tambahan? Ingin dapat pengalaman dari luar pekerjaan utama?</p>
 
             <p>Tentu saja, kamu bisa mencari pekerjaan freelance atau pekerja lepas sebagai salah satu solusi untuk mendapatkan pemasukan di luar pendapatan utama kamu.</p>
@@ -449,9 +455,318 @@ class ArticleSeeder extends Seeder
             <p>Maka dari itu, bila kamu punya kemampuan dalam pengembangan web, tentu kamu bisa mencoba untuk menawarkan keahlianmu tersebut di beberapa situs. Seperti Fiverr dan Upwork.</p>
             
             <p>Nah, dari sekian banyak pilihan jenis kerja freelance terbaik dan menjanjikan di atas, mana yang siap untuk kamu pilih?</p>',
-            'gambar' => 'komp.jpg'
+            'gambar' => 'komp.jpg',
         ]);
         $article->save();
 
+        $article = Article::create([
+            'judul' => 'Bisnis Unik untuk Ibu Rumah Tangga Lulusan SMA/SMK',
+            'ringkasan' =>
+                'Anda seorang ibu rumah tangga yang ingin mendapat tambahan pemasukan? Mau tahu caranya biar dapat uang tambahan?',
+            'content' => '<p>Seorang ibu rumah tangga tentu tak melulu mengisi aktivitasnya di rumah saja.</p>
+
+            <p>Ada berbagai kegiatan positif yang bisa dilakukan oleh para ibu rumah tangga. Sehingga, bisa dijadikan aktivitas untuk mengisi waktu luang di samping kewajibannya mengurus keluarga.</p>
+            
+            <p>Namun, akan jauh lebih baik lagi bilamana aktivitas tersebut tidak hanya sekedar untuk mengisi kegiatan saja. Melainkan bisa dijadikan tambahan pemasukan uang.</p>
+            
+            <p>Sehingga, waktu Anda pun tak akan banyak yang terbuang sia-sia dan percuma. Bahkan, hitung-hitung bisa membantu keuangan keluarga.</p>
+            
+            <p>Salah satunya dengan membuka peluang usaha yang benar-benar cocok dan bisa dilakukan oleh para ibu rumah tangga di tengah kesibukan mereka.</p>
+            
+            <p>Nah, untuk memperjelasnya, berikut ada beberapa bisnis yang bisa dilakukan dan cocok bagi para ibu-ibu sebagai usaha untuk menambah pundi-pundi pemasukan.</p>
+            
+            <h2>Bisnis untuk Ibu Rumah Tangga</h2>
+            
+            <p>Banyak usaha yang cocok bagi ibu rumah tangga. Namun, ada beberapa yang memiliki prospek menjanjikan sebagai bisnis keluarga di masa depan.</p>
+            
+            <p><strong>1 . Bisnis Sayuran Hidroponik</strong></p>
+            
+            <p><strong><img alt="" src="https://tanahkaya.com/wp-content/uploads/2017/12/Tanaman-Hidroponik-Selada.jpg" style="height:297px; width:450px" /></strong></p>
+            
+            <p>Kenapa sayur hidroponik? Tentu saja karena memiliki peluang menjanjikan sebagai usaha di masa depan. Sehingga, cocok dijadikan usaha bagi ibu rumah tangga.</p>
+            
+            <p>Bukan tanpa alasan, harga dari sayuran hidroponik sendiri memang terbilang lebih mahal ketimbang sayur yang ditanam secara konvensional.</p>
+            
+            <p>Bahkan, untuk proses penanamannya pun terkadang tak banyak membutuhkan lahan besar. Mulai dari semai, pindah tanam, dan proses perawatan hingga panen.</p>
+            
+            <p>Selain itu, untuk proses penanamannya pun cukup menggunakan modul pipa maupun talang khusus hidroponik dengan media air mengalir yang telah dicampur dengan air nutrisi.</p>
+            
+            <p>Pemasarannya pun cukup mudah karena sayuran tentu dibutuhkan banyak orang sebagai bahan makanan. Sehingga, sangat disarankan untuk mencoba usaha ini.</p>
+            
+            <p><strong>2. Bisnis Jahit Jilbab</strong></p>
+            
+            <p>Punya kemampuan dalam bidang jahit menjahit? Anda bisa mencoba untuk membuka usaha jasa jahit jilbab sebagai bisnis menjanjikan yang cocok untuk ibu rumah tangga.</p>
+            
+            <p>Bisnis jahit jilbab cukup memiliki prospek bagus ke depannya sehingga sangat ideal dan mudah dikerjakan tanpa mengganggu tugas sebagai ibu rumah tangga.</p>
+            
+            <p>Bahkan, Anda bisa menawarkan jasa maupun produk jilbab hasil buatan Anda ke media sosial maupun marketplace dengan target pasar yang kini sangat luas sekali.</p>
+            
+            <p>Jadi, tak heran bila bisnis jahit jilbab menjadi usaha yang disarankan untuk dilakukan oleh para ibu rumah tangga.</p>
+            
+            <p><strong>3. Usaha Jasa Laundry dan Setrika</strong></p>
+            
+            <p>Kemudian, jenis usaha bisnis yang memiliki keuntungan menjanjikan lain yang cocok untuk ibu rumah tangga adalah bisnis laundry dan setrika.</p>
+            
+            <p>Tak bisa dipungkiri, laundry dan setrika merupakan bisnis yang tak lepas dari kegiatan rutin sehari-hari para ibu rumah tangga. Sehingga, bisa berpeluang dijadikan bisnis sampingan untuk menambah keuangan keluarga.</p>
+            
+            <p>Dengan demikian, jika Anda masih bingung bisnis apa, cobalah memulai usaha laundry dan setrika ini. Tentu dipastikan akan mampu memberikan kemudahan Anda untuk mendapatkan tambahan pemasukan.</p>
+            
+            <p>Tidak bisa dipungkiri bahwa dalam setiap prosesnya, setiap bisnis yang dilakukan oleh para ibu rumah tangga ini memang bisa dimulai dari nol dengan mudah.</p>
+            
+            <p>Bahkan, dari pilihan bisnis di atas, tentu Anda bisa memilih salah satu saja yang sekiranya memungkinkan untuk Anda lakukan di rumah tanpa mengganggu aktivitas rutin Anda sebagai ibu rumah tangga dengan segala kewajibannya.</p>',
+            'gambar' => 'irt.jpg',
+        ]);
+        $article->save();
+
+        $article = Article::create([
+            'judul' =>
+                'Cara Temukan Bakat Diri agar Dapat Pekerjaan yang Sesuai',
+            'ringkasan' =>
+                'Cara efektif buat kamu seorang fresh graduate untuk temukan bakat kemampuanmu supaya bisa sesuai dengan bidang pekerjaan yang diminati.',
+            'content' => '<p>Sebagai seorang fresh graduate, tentu saja ada banyak keinginan yang ingin dicapai. Seperti bekerja di perusahaan ternama, atau menjadi abdi negara. Ada juga yang ingin membuka usaha sendiri.</p>
+
+            <p>Namun, terkhusus buat kamu dengan status fresh graduate yang ingin bekerja, tentu saja satu hal yang harus dipahami adalah soal kemampuanmu dalam menjalani di bidang tersebut.</p>
+            
+            <p>Karena, tidak bisa dipungkiri bahwa pekerjaan yang tidak sesuai dengan bidang kemampuan, tentu akan membuat kamu merasa terbebani. Maka dari itu, sebelum menemukan atau mencari lowongan kerja, tentu saja ada baiknya untuk mengenali kemampuanmu terlebih dahulu.</p>
+            
+            <p>Dimana, dengan memetakkan kemampuan, pekerjaan yang dipilih bisa disesuaikan dengan bakat yang kamu miliki sendiri. Dengan begitu, dalam melakukan pekerjaan, kamu tak akan merasa terbebani.</p>
+            
+            <p>Nah, untuk itu, berikut ini adalah beberapa tips atau&nbsp;<strong>cara temukan bakat diri</strong>&nbsp;atau potensi keahlian dalam diri kamu supaya bisa dijadikan sebagai modal untuk mendapatkan pekerjaan yang sesuai.</p>
+            
+            <h2>Tips Menemukan Bakat dalam Diri</h2>
+            
+            <p>Dalam beberapa kasus, memang menemukan bakat dalam diri menjadi salah satu tips efektif untuk dijadikan modal kemampuan dalam dunia pekerjaan. Berikut tips yang bisa kamu lakukan.</p>
+            
+            <p><strong>1 . Cari Potensi Dirimu dari Hal yang Disukai</strong></p>
+            
+            <p>Pertama, jelas bahwa untuk menemukan atau mengenal apa minat dan kemampuan yang kamu miliki, bisa ditelusuri dari hal-hal yang kamu gemari.</p>
+            
+            <p>Hal ini tentu saja akan memancing kamu untuk mengenal dimana aktivitas yang kamu lakukan dan kamu merasa nyaman untuk melakukannya.</p>
+            
+            <p>Dengan begitu maka kamu bisa menjadikan sesuatu yang kamu sukai sebagai modal keahlian di dunia kerja.</p>
+            
+            <p><strong>2. Terus Asah Hobi</strong></p>
+            
+            <p>Jika kamu punya hobi menulis, teruslah rajin menulis, apapun itu. Bila kamu punya hobi mendesain, lakukan imajinasi desainmu dalam bentuk grafis.</p>
+            
+            <p>Semua itu perlu kamu lakukan untuk mengenal dan mengasah kemampuan atau keahlian dari bakat yang kamu miliki melalui hobi.</p>
+            
+            <p>Tentu saja, cara ini sangat efektif untuk menemukan potensi kemampuan atau keahlian sejati yang ada dalam dirimu sendiri.</p>
+            
+            <p>Jika sudah ditemukan maka hobi yang telah terasah tersebut tentu bisa dijadikan sebagai bekal kemampuan atau pengalaman yang cukup bernilai saat memilih bidang pekerjaan.</p>
+            
+            <p>Tetapi, selain itu kamu juga bisa menawarkan jasa dari bakat kamu secara mandiri. Misalnya melalui situs penyedia lowongan freelance dan lain-lain.</p>
+            
+            <p><strong>3. Tanyakan kepada Orang Lain Terkait Minat Kamu</strong></p>
+            
+            <p>Untuk mencari tahu atau mengenal lebih dalam apa potensi yang tersembunyi dalam dirimu, bisa dilakukan dengan menanyakan ke orang lain. Bisa orang tua, pasangan maupun sahabat dan saudara dekat.</p>
+            
+            <p>Kenapa demikian? Tentu saja langkah ini terbilang sangat efektif guna mengenal kemampuan atau bakat diri dari pendapat orang lain yang melihat kamu.</p>
+            
+            <p>Dengan begitu, setidaknya kamu akan lebih mudah mengenali potensi apa yang kamu miliki dan bisa kamu kuasai dengan mudah tanpa merasa terbebani.</p>
+            
+            <p>So, gunakan cara ini jika kamu masih belum menemukan potensi dalam dirimu sebagai langkah untuk mendapatkan pekerjaan di bidang yang sesuai dengan kemampuan atau keahlian yang kamu miliki sendiri.</p>
+            
+            <p>Selain ketiga langkah di atas, untuk menemukan apa potensi kemampuan profesi yang ada pada diri kamu, bisa juga dengan melakukan berbagai pekerjaan.</p>
+            
+            <p>Setidaknya, hal ini dilakukan untuk mengetahui seberapa nyaman dan bagaimana kemampuanmu dalam menghadapi tanggung jawab dari pekerjaan itu. Sehingga, secara otomatis, akan ditemukan langsung mana bidang pekerjaan yang cocok dan memuat kamu lebih nyaman dalam bekerja.</p>
+            
+            <p>So, itulah tadi beberapa tips atau cara menemukan potensi atau bakat dalam diri sebagai modal untuk mendapatkan pekerjaan di bidang yang sesuai.</p>',
+            'gambar' => 'save.jpg',
+        ]);
+        $article->save();
+
+        $article = Article::create([
+            'judul' => 'Good Relationship Dengan Teman Kerja',
+            'ringkasan' =>
+                'Tidak ada salahnya kamu membangun hubungan pertemanan dengan teman kerjamu loh.',
+            'content' => '<p>Menjalin hubungan yang baik tidak hanya dengan keluarga saja loh. Teman kerja bisa dijadikan sahabat yang baik bahkan merasa seperti keluarga sendiri, di satu sisi lebih banyak menghabiskan waktu di kantor daripada di rumah, apalagi jadwal lembur yang padat dan pekerjaan &ndash; pekerjaan yang mengharuskan kerja sama tim. Good Relationship juga dapat mengatasi rasa jenuh di kantor karena pekerjaan yang menumpuk dan target yang belum tercapai. Banyak keuntungan yang bisa kamu dapatkan ketika kamu menjalin hubungan baik dengan teman kerjamu. Keuntungan tersebut tidak menutup kemungkinan hanya di tempat kerja saja, bahkan bisa mendapatkan keuntungan yang lainnya dan lebih besar. Jadi jangan menyia-nyiakan waktumu untuk membangun hubungan baik dengan teman kerjamu ya.</p>
+
+            <h2>Berikut cara membangun Good Relationship dengan Teman Kerja:</h2>
+            
+            <p><strong>1. Say Hallo</strong></p>
+            
+            <p><strong><img alt="" src="https://teamjapanese.com/wp-content/uploads/2018/12/how-to-say-hello-in-japanese-coworker-750x500.jpg" style="height:300px; width:450px" /></strong></p>
+            
+            <p>Menyapa teman &ndash; teman di tempat kerja awal yang baik untuk berkomunikasi. Meskipun terkesan basa basi tapi hal ini dapat mencairkan suasana daripada hanya saling diam.</p>
+            
+            <p><strong>2. Berikan tawaran dan Ajakan</strong></p>
+            
+            <p>Memberikan tawaran bekal sarapan atau mengajaknya sarapan Ketika kita membawqa bekal sarapan. Dengan hal ini dapat menujukan kepedulian dan setidaknya kita punya teman untuk menyantap sarapan agar tidak membosankan.</p>
+            
+            <p><strong>3. Jaga Sikap dan Terbuka Pada Semua Orang</strong></p>
+            
+            <p>Sikap yang baik dan terbuka, mudah diajak berbicara serta pandai bergaul&nbsp; dapat membangun kepercayaan dan memberikan nilai positif&nbsp; untuk diri kita.</p>
+            
+            <p><strong>4. Jujur</strong></p>
+            
+            <p>Jangan sungkan untuk mengakui hal yang tidak bisa atau sukar untuk kamu kerjakan. Hal ini akan menolong dan membantu kamu dalam menyelesaikan pekerjaan sesuai target yang akan dicapai.</p>
+            
+            <p><strong>5. Mengerti Job Desc Masing &ndash; masing</strong></p>
+            
+            <p>Saat bekerja tentunya sudah mengerti dan paham apa yang semestinya dikerjakan. Sehingga tidak ada bentrokan pekerjaan yang dikerjakan karena tau dan mengerti Batasan &ndash; Batasan dari setiap pekerjaan, tanggung jawab serta fokusnterhdap pekerjaan yang diberikan.</p>
+            
+            <p><strong>6. Membantu Job Desc rekan kerja apabila memungkinan</strong></p>
+            
+            <p>Membantu pekerjaan orang lain untuk meringankan pekerjaannya atau bahkan menyelesaikan permasalahan &ndash; permasalahan dapat membuka peluang, kesempatan dan pengalam baru yang kamu dapatkan.</p>
+            
+            <p><strong>7. Menjaga komunikasi Secara Intens</strong></p>
+            
+            <p>Menanyakan kabar keluarga, membesuk keluarganya apabila ada yang sakit dan kepedulian kpedulian sosial lainnya kan mempererat kekeluargaan dan tali persaudaraan.</p>
+            
+            <p><strong>8. Kenali Setiap Karakter Rekan Kerja</strong></p>
+            
+            <p>Mengenali setiap karakter rekan kerja akan mengurangi masalah karena lebih bisa mengambil Tindakan yang tepat untuk mengatasi apabila terjadi suatu masalah dengan salah satu rekan kerja. Selain itu terhindar dari salah paham karena dalam dunia kerja membawa budaya masing &ndash; masing. Misalnya salah satu rekan kerja biasa dengan suara nyaring akan terdengar biasa saja apabila kita mengerti karakter dari masing &ndash; masing rekan kerja itu sendiri.</p>
+            
+            <p>Dari cara &ndash; cara berikut terlihat bahwa Good Relationship sangat berpengaruh terhdap produktivitas kerja dan sangat bermanfaat untuk pekerjaan yang membutuhkan teamwork agar mencapai tujuan dan sasaran perusahaan . Sehingga penting sekali menumbuhkan Good Relationship dengan rekan kerja.</p>',
+            'gambar' => 'good.jpg',
+        ]);
+        $article->save();
+
+        $article = Article::create([
+            'judul' =>
+                'Ternyata Memiliki Kemampuan Berfikir Kritis Di Dunia Kerja Penting, Kenapa?',
+            'ringkasan' =>
+                'Berbanggalah ketika kamu memiliki pemikiran kritis, karena itu banyak diincar perusahaan.',
+            'content' => '<p>Berfikir kritis adalah kemampuan untuk menganalisis informasi secara objektif dan membuat penilaian yang rasional. Memiliki kemampuan itu sangat penting dalam dunia kerja, kerena analisa atau keputusan yang dihasilkan akan memberikan dampak yang baik. Selain ini kemampuan ini tidak semua orang memiliki pemikiran kritis dan tajam. Dampak positifnya adalah dapat menyikapi masalah dan tantangan kerja yang dihadapai. Misalnya dihadapkan dengan evaluasi yang harus dilakukan maka perlu adanya pemikiran kritis dan point point yang detail.</p>
+
+            <h2>Ternyata Memiliki Kemampuan Berfikir Kritis Di Dunia Kerja Penting, Kenapa?</h2>
+            
+            <p>Kemampuan ini dianggap penting karena memberikan banyak manfaat tidak hanya bagi karyawan dan manager tetapi juga untuk perusahaan secara keseluruhan. Berfikir kritis juga dapat diasah dengan sering dihadapkan dengan permasalahan yang menuntut untuk memberikan ide-ide baru. Punya pemikiran yang kritis juga dapat membantu kamu menjadi pribadi yang lebih terorganisasi. Selain itu juga bermanfaat saat ingin mengidentifikasi sebuah permasalahan yang sedang dihadapi begitupun dalam mencari solusinya. Berikut ini manfaatan berfikir kritis pada tempat kerja ini:</p>
+            
+            <p><strong>1. Menciptakan banyak ide baru</strong></p>
+            
+            <p>Dengan menerapkan cara berfikir kritis, maka karyawan dan perusahaan tidak akan menanggapi masalah dengan hanya membuat asumsi. Dalam menyikapi masalah yang ada perlu adanya pemikiran dengan data atau pendapat dari sudut padat yang lebih luas.</p>
+            
+            <p><strong>2. Memperkuat kuat tim</strong></p>
+            
+            <p>Ketika pada sebuah tim berisi dengan orang yang memiliki pemikiran kritis maka semakin banyak alternatif jawaban dengan rasional, bukan pemikiran yang praktis. Tentunya akan banyak pendapat yang ada namun dengan adanya pemikiran kritis antara anggota satu sama lain akan lebih menghargai. Selain itu juga meminimalisir salah persepsi.</p>
+            
+            <p><strong>3. Meningkat kualitas kepemimpinan</strong></p>
+            
+            <p>Kualitas kepemimpinan akan semakin meningkat dengan diimbangin pemikiran kritis. Berfikir secara kritis dapat diasah dengan cara berdebat disertai dengan data dan bukti yang valid, diskusi, persuasi dan propaganda. Dibutuhkan seorang pemimpin yang memiliki skill ini karena dapat berfikir secara jernih dan rasional dalam pengambilan keputusan atau tindakan lainnya.</p>
+            
+            <p><strong>4. Meningkatkan komunikasi</strong></p>
+            
+            <p><strong><img alt="" src="https://images.squarespace-cdn.com/content/v1/51e3ae56e4b0ebae3ad28b2b/1456194877581-OEKJJBC3LDH0RHEKY0P1/ke17ZwdGBToddI8pDm48kKG6OoQUcDwE6Xrn0CktdYIUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKc7wdBxA2FfWIL_oInLxCuGYBExGLaY8v4Pn7yFeMELUKe4DQXRx1Bu1AnCO9mIfj2/image-asset.jpeg?format=1000w" style="height:253px; width:450px" /></strong></p>
+            
+            <p>Tak jarang kita menjumpai seseorang yang tidak nyambung ketika diajak untuk berkomunikasi. Hal tersebut membuat lawan bicaranya menjadi tidak nyaman. Dengan sering mengasah kemampuan ini dapat meningkatkan komunikasi kamu termasuk dengan wawasan kamu akan semakin bertambah. Dapat berkomunikasi dengan baik adalah salah satu penting ketika seleksi pekerjaan atau naik jawaban.</p>
+            
+            <p><strong>5. Mendorong jadi pribadi yang lebih kreatif</strong></p>
+            
+            <p>Membiasakan diri berfikir kritis juga akan membuat kamu memiliki pemikiran yang kreatif, rasional, serta jernih dalam pengambilan keputusan. Selain itu juga dapat mudah untuk menemukan ide-ide yang cemerlang tentunya bisa mendongkrak karir kamu di tempat kerja.</p>
+            
+            <p><strong>6. Menganalisis peluang baru</strong></p>
+            
+            <p>Dalam sebuah bisnis, mempunyai pemikiran kritis dapat menghasilkan peluang baru. Kemampuan ini disertai dengan tajamnya analisis ketika dihadapkan dengan sesuai keadaan.</p>
+            
+            <p><strong>7. Menghasilkan produk berkualitas</strong></p>
+            
+            <p>Salah satu manfaat dari pemikiran kritis adalah dapat memaksimalkan kualitas produk yang dihasilkan. Misalnya dengan memastikan hasil akhir dari sebuah produk yang akan dihasilkan sebelum diperjualbelikan dipasar.</p>
+            
+            <p>Tidak salah dengan pemikiran kritis jika ditempatkan dengan tepat. Banyak perusahaan yang ingin maju mencari karyawan dengan pemikiran semacam ini karena dirasa akan membantu untuk tujuan perusahaan.</p>',
+            'gambar' => 'pikir.jpg',
+        ]);
+        $article->save();
+
+        $article = Article::create([
+            'judul' =>
+                'Cara Untuk Menghadapi Bos yang Rumit, Jangan Langsung Resign!',
+            'ringkasan' =>
+                'Resign adalah keputusan yang paling terakhir yang bisa kamu ambil ketika tidak mampu menerima kondisi dikantor.',
+            'content' => '<p>Setiap atasan seharusnya bisa menjadi contoh yang baik dan teladan bagi para karyawannya. Tetapi bagaimana jika kita dihadapkan dengan atasan yang rumit dan berperilaku kurang menyenangkan kepada terhadap karyawannya. Ketika kamu memasukin dunia kerja, kamu tak hanya perlu mempersiapkan fisik saja tetapi harus mempersiapkan mental yang kuat. Salahsatunya dengan menghadapi berbagai macam karakter orang tak terkecuali dengan atasanmu.</p>
+
+            <h2>Cara Untuk Menghadapi Bos yang Rumit, Jangan Langsung Resign!</h2>
+            
+            <p>Tidak semua orang akan cocok dengan kepribadian kamu. Ada orang yang cuek, sombong, bawel atau ribet. Dari banyak karakter yang akan kamu ketemui sebagainya jangan langsung menjadikan kamu frustasi. Mau tidak mau, kamu harus menghadapi dan mencoba menerima kondisi tersebut. Ketika dihadapkan dalam kondisi tersebut kamu resign maka ada kemungkinan besar kamu juga akan mengalami hal yang sama di tempat kerjamu yang baru. Berikut ini adalah cara yang cerdas untuk bisa menghadapi Bos yang rumit.</p>
+            
+            <p><strong>1. Komunikasi</strong></p>
+            
+            <p>Ketika kamu dihadapkan dengan bos yang rumit dan bersikpa kurang menyenangkan tidak ada salahnya kamu berkomunikasi tentang apa yang kamu rasakan. Tidak semua bos bisa mengerti perasaan karyawannya. Bahkan ada bos yang bersikap semaunya sendiri. Dalam kondisi seperti ini komunikasi kamu lakukan. Cari moment yang tepat untuk bisa komunikasi dengan baik kepada bosmu.</p>
+            
+            <p><strong>2. Jangan dilawan, dengarkan saja</strong></p>
+            
+            <p>Bos yang rumit pasti mencari kesalahan dari setiap stafnya. Ketika hal tersebit terjadi maka sebaiknya kamu dengarkan saja dan jangan melawan. Ketika kamu benar boleh sesekali untuk memberikan alasan atas pekerjaan yang kamu lakukan. Dan dalam pengambilan keputusan berilah alternatif pilihan yang bisa memberikan solusi.</p>
+            
+            <p><strong>3. Jika ingin memberikan saran, carilah waktu yang tepat</strong></p>
+            
+            <p>Kita sebagai karyawan terkadang ingin memberikan saran dan kritis yang bertujuan untuk lebih membangun perusahaan menjadi lebih besar dan maju lagi. Namun berilah kritik pada waktu yang tepat. Kritik yang diberikan harus disertai dengan data atau informasi yang tepat agar lebih mudah diterima.</p>
+            
+            <p><strong>4. Tunjukan bahasa tubuh yang mengartikan kamu sibuk</strong></p>
+            
+            <p>Bos yang rumit terkadang membuat pekerjaan yang sederhana menjadi lebih tidak sederhana. Terkadang ada perubahan keputusan yang mendadak. Selain mendengarkan untuk menghindari kamu bisa menunjukan bahasa tubuh yang mengartiakan sedang banyak pekerjaan yang kamu jalani.</p>
+            
+            <p>Dalam dunia kerja pasti akan menemukan hal yang menyenangkan dan menyebalkan. Ketika kamu dihadapkan dengan hal yang menyebalkan jangan langsung ambil keputusan untuk resign. Tetapi mencoba untuk menghadapi dengan menerima kondisi yang ada.</p>',
+            'gambar' => 'resign.jpeg',
+        ]);
+        $article->save();
+
+        $article = Article::create([
+            'judul' => 'Tips Mengajukan Kenaikan Gaji Dengan Sopan',
+            'ringkasan' =>
+                'Setiap karyawan pasti menginginkan kenaikan gaji bukan pengurangan gaji!',
+            'content' => '<p>Kamu saat ini sudah bekerja di sebuah perusahaan cukup lama, dan merasa saat ini waktu yang tepat untuk mengajukan kenaikan gaji. Memiliki pendapatan yang lebih tinggi adalah hal yang diinginkan oleh semua karyawan. Belum lagi ketika biaya hidupmu semakin bertambah. Pastinya berharap untuk mendapatkan penghasilan yang lebih tinggi dari sebelumnya.</p>
+
+            <h2>Tips Mengajukan Kenaikan Gaji Dengan Sopan</h2>
+            
+            <p>Besarnya gaji setiap karyawan beragam tergantung dengan kemampuan kerja, tanggung jawab dan masa kerja. Bahkan setiap perusahaan meiliki kebijakan masing-masing terhadap pemberian gaji karyawannya. Selain diukur dari kemampuan perusahaan, gaji juga memiliki peraturan yang sudah ada dalam Undang &ndash; Undang. Setiap daerah juga memiliki standar minimum upahnya. Ketika kamu sudah merasa bahwa ini saat yang tepat untuk mengajukan kenaikan gaji atau tunjungan, kamu bisa lakukan beberapa hal berikut:</p>
+            
+            <p><strong>1. Tingkatkan Prestasi Kerja</strong></p>
+            
+            <p>Sebelum kamu mengajukan kenaikan gaji, pastikan kamu dalam beberapa bulan terakhir sudah memiliki prestasi kerja yang baik. Kamu mempunyai keinginan untuk belajar sehingga dengan kamu berprestasi dalam jangka waktu tertentu akan menjadi pertimbangan tersendiri untuk mengajukan kenaikan gaji.</p>
+            
+            <p><strong>2. Alasan kuat untuk naik gaji</strong></p>
+            
+            <p>Mengajukan kenaikan gaji harus berdasarkan alasan yang kuat. Selain kamu sudah berusaha untuk berprestasi kamu juga memperhatikan beberapa hal lainnya. Misalnya dengan rencana kedepanmu untuk memajukan perusahaan dan tujuan dalam kerjaanmu.</p>
+            
+            <p><strong>3. Pilih waktu yang tepat</strong></p>
+            
+            <p>Waktu menjadi salah satu kunci pengajuanmu diterima atau tidak. Ketika kamu menyampaikan pada saat waktu yang tepat maka keinginanmu lebih besar kemungkinan untuk di dengar. Sedangkan sebaliknya ketika kamu menyampaikan disaat waktu yang kurang tepat misalnya atasanmu banyak kerjaan atau kamu membahasnya ketika rapat dan lain-lain maka kemungkinan besar tidak didengarkan oleh atasanmu karena fokusnya bukan kepada kamu.</p>
+            
+            <p><strong>4. Gunakan bahasa yang tepat</strong></p>
+            
+            <p>Membicarakan gaji bukan kepada rekan kerjamu tetapi dengan atasanmu. Oleh sebab itu kamu perlu untuk merangkai kata menjadi bahasa komunikasi yang tepat. Selain pemilihan kata intonasi juga perlu diperhatikan</p>
+            
+            <p><strong>5. Cari informasi besar kenaikan gaji yang diinginkan dan layak</strong></p>
+            
+            <p>Riset tentang nominal kenaikan gaji yang layak kamu dapatkan juga sangat perlu. Ketika kamu mengajukan akan ada pertanyaan tentang nominal yang kamu inginkan. Kamu perlu siapkan hal itu.</p>
+            
+            <p>Mendapatkan kenaikan gaji merupakan hal yang diinginkan karyawan dan menjadi hak dari karyawan. Pastinya semua karyawan tidak ingin ketika sudah bekerja lama tapi gaji masih belum bertambah atau malah berkurang.</p>',
+            'gambar' => 'duit.jpeg',
+        ]);
+        $article->save();
+
+        $article = Article::create([
+            'judul' => 'Faktor yang mempengaruhi kualitas kerja',
+            'ringkasan' =>
+                'Dalam dunia kerja hal yang sangat diperlukan adalah kualitas kerja dalam menyelesaikan pekerjaan.',
+            'content' => '<p>Selama kerja kita akan dihadapkan dengan beberapa pekerjaan yang harus kamu selesaikan. Pastinya kamu ingin selalu bisa menyelesaikan semua pekerjaanmu dengan maksimal. Untuk bisa menyelesaikan pekerjaan secara tepat waktu dan maksimal kamu memerlukan semangat bekerja setiap harinya. Namun semangat tersebut kadang sering kendor. Lalu bagaimana jika semangatmu kendor dan harus maksimal menyelesaikan pekerjaan. Sedangkan meningkatkan semangatpun tidak mudah. Terlebih kamu mempunyai masalah diluar kantor.</p>
+
+            <p>Faktor yang mempengaruhi kualitas kerja</p>
+            
+            <p>Kualitas kerja sangat dibutuhkan dalam menyelesaikan setiap pekerjaan. Dampak dari kamu memiliki kualitas kerja yang baik adalah promosi jabatan, kenaikan gaji dan masih banyak lagi. Bekerja secara berkualitas pun tidak hanya datang dari faktor dari diri sendiri saja. Tapi banyak faktor yang mempengaruhi diantaranya:</p>
+            
+            <p>1. Lingkungan Kerja</p>
+            
+            <p>Perusahaan harus memastikan bahwa memiliki lingkungan kerja yang sehat baik dari sirkulasi udara, suasana kerja, rekan kerjan dan maasih banyak fasilitas yang harus diperhatikan. Kunci dari karyawan memiliki kualitas kerja yang baik adalah dari lingkungan kerja yang sehat.</p>
+            
+            <p>2. Bonus dan insentif</p>
+            
+            <p><img alt="" src="https://blog-media.lifepal.co.id/wp-content/uploads/2019/12/Bonus-akhir-tahun.jpg" style="height:301px; width:450px" /></p>
+            
+            <p>Gaji, bonus dan insentif adalah faktor yang paling dapat dilihat ketika seseorang mempunyai kualitas kerja yang baik atau tidak. Upah adalah salah satu faktor yang paling krusial karena mempengaruhi pengingkatan motivasi kerja karyawan.</p>
+            
+            <p>3. Pelatihan dan pengembangan diri</p>
+            
+            <p>Untuk bisa mengembangkan diri, tidak hanya dilakukan oleh diri sendiri tapi dukungan dari perusahaan juga perlu. Seperti mengadakan pelatihan kerja disamping karyawan semakin handal dalam pekerjaanya, pelatihan kerja ini dapat menambah wawasan. Banyak hal yang bisa dilakukan oleh perusahaan dan diri sendiri untuk pengembangan diri.</p>
+            
+            <p>4. Gaya kepimpinan</p>
+            
+            <p>Atasan yang menyenangkan dan komunikatif dapat berpengaruh juga dalam kualitas kerja. Pekerjaan datang dari atasan kita, cara komunikasi yang bagus maka kita akan senang hati melakukan pekerjaan tersebut. Gaya kepemimpinan pastinya akan mempengaruhi kinerja dari setiap karyawannya. Dengan karater karyawan yang berbeda-beda, sudah sewajarnya pimpinan mempunyai gaya kepemimpinan yang dapat membangkitkan semangat kerja karyawan sehingga dapat meningkatkan kualitas kerja karyawan tersebut.</p>
+            
+            <p>Banyak faktor yang bisa meningkatkan kualitas kerja. Kamu bisa terus kembangkan diri kamu sesuai dengan potensi yang ada. Sudah banyak sumber pengetahuan yang bisa mengingkatkan wawasan dan potensimu.</p>',
+            'gambar' => 'kualitas.jpg',
+        ]);
+        $article->save();
     }
 }

@@ -20,6 +20,7 @@
 
 @section('content')
 <div class="col-sm-8 post-list2 " >
+    <a href="{{ route('artikel.show', $art->id)}}">
     @foreach($artikel as $article)
     <div data-aos="fade-up" class="single-post2 align-items-center d-flex border-bottom" style=" margin-left: auto;margin-right: auto">
         <div class="col-3 no-gutters no-padding thumb3" style="margin: auto;" >
@@ -39,6 +40,7 @@
         </div>
         
     </div>
+    </a>
     @endforeach
 
     <a class="text-uppercase loadmore-btn mx-auto d-block" href="#">Load More Articel</a>

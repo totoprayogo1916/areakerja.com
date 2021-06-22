@@ -9,6 +9,7 @@ use App\Wish;
 use App\Article;
 use App\Location;
 use App\Riwayat;
+use Artikel;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class ArtikelController extends Controller
@@ -47,7 +48,7 @@ class ArtikelController extends Controller
             ->take(0)
             ->get();
 
-        $artikel = Article::all();
+        $article = Article::all();
 
         $sidebarLocations = Location::withCount('jobs')
             ->whereHas('jobs')
@@ -69,14 +70,14 @@ class ArtikelController extends Controller
                 'sidebarJobs',
                 'sidebarLocations',
                 'sidebarCategories',
-                'artikel',
+                'article',
                 'wishlist',
                 'riwayatlist'
             ])
         );
     }
 
-    public function showart()
+    public function show(Article $article )
     {
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
@@ -93,7 +94,7 @@ class ArtikelController extends Controller
             ->take(0)
             ->get();
 
-        $artikel = Artikel::all();
+        $article = Article::all();
 
         $sidebarLocations = Location::withCount('jobs')
             ->whereHas('jobs')
@@ -115,7 +116,7 @@ class ArtikelController extends Controller
                 'sidebarJobs',
                 'sidebarLocations',
                 'sidebarCategories',
-                'artikel',
+                'article',
             ])
         );
     }
