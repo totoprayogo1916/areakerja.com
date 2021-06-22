@@ -93,7 +93,7 @@ class ArtikelController extends Controller
             ->take(0)
             ->get();
 
-        $artikel = Artikel::all();
+        // $artikel = Artikel::all();
 
         $sidebarLocations = Location::withCount('jobs')
             ->whereHas('jobs')
@@ -115,7 +115,6 @@ class ArtikelController extends Controller
                 'sidebarJobs',
                 'sidebarLocations',
                 'sidebarCategories',
-                'artikel',
             ])
         );
     }
