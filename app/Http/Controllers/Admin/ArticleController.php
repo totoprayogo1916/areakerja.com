@@ -48,10 +48,11 @@ class ArticleController extends Controller
         return redirect()->route('admin.article.index');
     }
 
-    public function destroy(Article $posts)
+    public function destroy(Article $posts, $id)
     {
 
-        $posts->delete();
+        $article = Article::find($id);
+        $article->delete();
 
         return back();
     }
