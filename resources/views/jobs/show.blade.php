@@ -203,8 +203,8 @@
                 <div class="col-2 gg2" style="margin-right: 12%">
                     {{-- onclick="return setColor('btn2','btnh42');" --}}
 
-                    <a type="button" class="btn form-pasang3" href="{{ route('cache', $job->id) }}" id="btn2" data-toggle="0">
-                        <h4  class="gg" style="font-weight: normal" id="btnh42"><span class="fa fa-star-o"></span><span style="display:inline-block; width: 10px;"></span> {{$wishh}} </h4>
+                    <a type="button" class="btn form-pasang3" href="{{ route('cache', $job->id) }}" id="btnfix1" data-toggle="0">
+                        <h4  class="gg" style="font-weight: normal" id="btnfix2"><span class="fa fa-star-o"></span><span style="display:inline-block; width: 10px;"></span> Simpan </h4>
                     </a>
                 </div>
 

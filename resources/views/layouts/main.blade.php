@@ -326,9 +326,10 @@ aria-hidden="true">
         <script>
             var r = {!! $wishh !!};
             if (r != '') {
+                document.getElementById("btnfix1").style.background = "#00000";
                 document.getElementById("check").checked = true;
             } else {
-                document.getElementById("check").checked = false;
+                // document.getElementById("check").checked = false;
             }
         </script>
 
