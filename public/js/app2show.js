@@ -1,16 +1,17 @@
-var count = 1;
 function setColor(a, h4) {
     var btn2 = document.getElementById(a);
+    a =  btn2.getAttribute('data-toggle');
     var btnh42 = document.getElementById(h4);
-    if (count == 0) {
+    if (a == 0) {
         btn2.style.background = "#000000";
         btnh42.style.color = "#ffffff";
-        count = 1;
+        btn2.setAttribute('data-toggle','1');
+        // a = 1;
     }
     else {
         btn2.style.background = "#ffffff";
         btnh42.style.color = "#000000";
-        count = 0;
+        btn2.setAttribute('data-toggle','0');
     }
 }
 

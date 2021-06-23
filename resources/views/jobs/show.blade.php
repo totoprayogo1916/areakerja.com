@@ -197,10 +197,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-2 gg2" style="margin-right: 12%" >
+                <div class="col-2 gg2" style="margin-right: 12%">
                     {{-- href="{{ route('cache', $job->id) }}" --}}
-                    <a type="button" class="btn form-pasang3" id="btn2{{ $job->id }}" onclick="return setColor('btn2{{ $job->id }}','btnh42{{ $job->id }}');">
-                        <h4  class="gg" style="font-weight: normal" id="btnh42{{ $job->id }}"><span class="fa fa-star-o"></span><span style="display:inline-block; width: 10px;"></span>Simpan</h4>
+                    <a type="button" class="btn form-pasang3" id="btn2" data-toggle="0" onclick="return setColor('btn2','btnh42');">
+                        <h4  class="gg" style="font-weight: normal" id="btnh42"><span class="fa fa-star-o"></span><span style="display:inline-block; width: 10px;"></span>Simpan</h4>
                     </a>
                 </div>
 
