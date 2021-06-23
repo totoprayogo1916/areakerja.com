@@ -326,10 +326,12 @@ aria-hidden="true">
         <script>
             var r = {!! $wishh !!};
             if (r != '') {
-                document.getElementById("btnfix1").style.background = "#00000";
-                document.getElementById("check").checked = true;
+                document.getElementById("btnfix1").style.background = "#000000";
+                document.getElementById("btnfix2").style.color = "#fff";
             } else {
-                // document.getElementById("check").checked = false;
+                // document.getElementById("check").
+                document.getElementById("btnfix1").style.background = "#fff";
+                document.getElementById("btnfix2").style.color = "#000000";
             }
         </script>
 

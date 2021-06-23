@@ -198,9 +198,6 @@
                     </div>
                 </div>
                 <div class="col-2 gg2" style="margin-right: 12%">
-                    <input type="checkbox" id="check">zsxdcfgvhbjnkml
-                </div>
-                <div class="col-2 gg2" style="margin-right: 12%">
                     {{-- onclick="return setColor('btn2','btnh42');" --}}
 
                     <a type="button" class="btn form-pasang3" href="{{ route('cache', $job->id) }}" id="btnfix1" data-toggle="0">
