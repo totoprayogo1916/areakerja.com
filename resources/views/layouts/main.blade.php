@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="{{ asset('css/style2.css') }}">
     <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+
     </head>
     <body>
     @include('partials.header')
@@ -319,6 +321,14 @@ aria-hidden="true">
             function topFunction() {
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <script>
+            var r = {!! $wishh !!};
+            if (r != '') {
+                document.getElementById("check").checked = true;
+            } else {
+                document.getElementById("check").checked = false;
             }
         </script>
 

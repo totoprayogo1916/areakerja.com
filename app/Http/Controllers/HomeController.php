@@ -36,6 +36,8 @@ class HomeController extends Controller
         $wishlist=Wish::where('ip', $ipaddress)->get();
         $riwayatlist=Riwayat::where('ip',$ipaddress)->get();
         $searchLocations = Location::pluck('name', 'id');
+        $job = Job::all();
+        $wishh=Wish::where([['ip', '=', $ipaddress]])->get();
         $searchCategories = Category::pluck('name', 'id');
         $searchByCategory = Category::withCount('jobs')
             ->orderBy('jobs_count', 'desc')
@@ -49,7 +51,7 @@ class HomeController extends Controller
         ->orderBy('id', 'desc')
         ->get();
 
-        return view('index', compact(['riwayatlist','wishlist','ipaddress','searchLocations', 'searchCategories', 'searchByCategory', 'jobs', 'sidbarJobs']));
+        return view('index', compact(['riwayatlist','wishlist','ipaddress','searchLocations', 'searchCategories', 'searchByCategory', 'jobs', 'sidbarJobs', 'wishh']));
     }
 
     public function search(Request $request)

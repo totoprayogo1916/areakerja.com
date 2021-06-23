@@ -35,6 +35,7 @@ class JobController extends Controller
         $jobs = Job::with('company')->paginate(0);
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
+        $wishh=Wish::where([['ip', '=', $ipaddress],['idJob', '=', $jobs->id]])->get();
         $sidbarJobs = Job::whereTopRated(true)
             ->orderBy('id', 'desc')
             ->get();
@@ -48,7 +49,7 @@ class JobController extends Controller
                 'banner',
                 'searchLocations',
                 'searchCategories',
-                'sidbarJobs','riwayatlist','wishlist','ipaddress'
+                'sidbarJobs','riwayatlist','wishlist','ipaddress','wishh'
             ])
         );
     }
@@ -76,13 +77,14 @@ class JobController extends Controller
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $wishlist=Wish::where('ip', $ipaddress)->get();
+        $wishh=Wish::where([['ip', '=', $ipaddress],['idJob', '=', $job->id]])->get();
         $riwayatlist=Riwayat::where('ip',$ipaddress)->get();
 
         // Alert::success('Sukses Membuka');
 
         return view(
             'jobs.show',
-            compact(['job', 'riwayatlist','searchLocations', 'searchCategories','wishlist','ipaddress'])
+            compact(['job', 'riwayatlist','searchLocations', 'searchCategories','wishlist','ipaddress', 'wishh'])
         );
 
 
@@ -156,7 +158,7 @@ class JobController extends Controller
 
     }
 
-    
+
     public function rekomendasi()
     {
         $ipaddress = '';
