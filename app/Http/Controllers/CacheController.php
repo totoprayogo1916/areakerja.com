@@ -70,8 +70,8 @@ class CacheController extends Controller
         $wish=Wish::where([['idJob',$id],['ip',$ipaddress]])->first();
         if(isset($wish))
         {
-            // return redirect()->back()->with('message','Lowongan Sudah Disimpan');
-            Alert::warning('Lowongan Sudah Tersimpan');
+
+            $wish->delete();
             return redirect()->back();
         }
         else
