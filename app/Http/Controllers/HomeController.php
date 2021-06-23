@@ -6,6 +6,7 @@ use App\Category;
 use App\Location;
 use App\Job;
 use App\Wish;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Mail\SendMail;
 use App\Mail\SendMail2;
@@ -31,7 +32,7 @@ class HomeController extends Controller
             $ipaddress = $_SERVER['REMOTE_ADDR'];
         else
             $ipaddress = 'UNKNOWN';
-
+        Carbon::setLocale('id');
         $wishlist=Wish::where('ip', $ipaddress)->get();
         $riwayatlist=Riwayat::where('ip',$ipaddress)->get();
         $searchLocations = Location::pluck('name', 'id');
@@ -69,7 +70,7 @@ class HomeController extends Controller
             $ipaddress = $_SERVER['REMOTE_ADDR'];
         else
             $ipaddress = 'UNKNOWN';
-
+        Carbon::setLocale('id');
         $wishlist=Wish::where('ip', $ipaddress)->get();
         $riwayatlist=Riwayat::where('ip',$ipaddress)->get();
         $searchLocations = Location::pluck('name', 'id');
@@ -89,6 +90,8 @@ class HomeController extends Controller
 
     public function aboutus()
     {
+        // Carbon::setLocale('id');
+        // echo Carbon::now()->diffForHumans();
         return view('user.aboutus');
     }
 

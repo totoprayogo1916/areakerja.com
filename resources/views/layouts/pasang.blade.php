@@ -2,7 +2,7 @@
 <html lang="zxx" class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="img/img-01.png">
+    <link rel="shortcut icon" href="{{ asset('img/img-01.png') }}">
     <meta name="author" content="codepixer">
     <meta charset="UTF-8">
     <title>Area Kerja</title>

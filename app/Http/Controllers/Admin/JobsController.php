@@ -36,7 +36,7 @@ class JobsController extends Controller
         return view('admin.jobs.create', compact('companies', 'locations', 'categories'));
     }
 
-    public function store(Request $request)
+    public function store(StoreJobRequest $request)
     {
         // $job->categories()->sync($request->input('categories', []));
         // $casts = ['jobs' => '    ']
@@ -62,8 +62,8 @@ class JobsController extends Controller
             'short_description'=> $request->short_description,
         ]);
         $job->categories()->sync($request->input('categories', []));
-        return request('requirements');
-        // return redirect()->route('admin.jobs.index');
+        // return request('requirements');
+        return redirect()->route('admin.jobs.index');
     }
 
     public function edit(Job $job)

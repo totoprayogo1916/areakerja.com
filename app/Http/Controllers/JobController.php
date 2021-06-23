@@ -6,6 +6,7 @@ use App\Category;
 use App\Job;
 use App\Wish;
 use App\Location;
+use Carbon\Carbon;
 use App\Riwayat;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -28,7 +29,7 @@ class JobController extends Controller
             $ipaddress = $_SERVER['REMOTE_ADDR'];
         else
             $ipaddress = 'UNKNOWN';
-
+        Carbon::setLocale('id');
         $wishlist=Wish::where('ip', $ipaddress)->get();
         $riwayatlist=Riwayat::where('ip',$ipaddress)->get();
         $jobs = Job::with('company')->paginate(0);
