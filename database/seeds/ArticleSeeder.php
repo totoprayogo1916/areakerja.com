@@ -774,5 +774,112 @@ class ArticleSeeder extends Seeder
             'gambar' => 'kualitas.jpg',
         ]);
         $article->save();
+
+        $article = Article::create([
+            'judul' => 'Tips agar Bisa Mudah Diterima Kerja',
+            'ringkasan' =>
+                'Kamu ingin segera mendapat pekerjaan yang layak? Tentu, tak hanya nilai akademik yang bagus saja, melainkan ada tips supaya kamu bisa dengan mudah diterima kerja di perusahaan tertentu.',
+            'content' => '<p><img alt="" src="https://www.lokerjogja.id/wp-content/uploads/2021/02/tips-agar-mudah-diterima-kerja.jpg" style="height:576px; width:650px" /></p>
+
+            <p>Memiliki pekerjaan tetap yang mapan dan dibayar dengan gaji tinggi, sudah barang tentu jadi impian banyak orang.</p>
+            
+            <p>Sayangnya, untuk mendapatkan hal tersebut, sudah barang tentu menjadi suatu hal yang sulit. Bahkan, mungkin juga mustahil jika melihat kondisi banyaknya pengangguran sekarang.</p>
+            
+            <p>Namun, bila kamu seorang fresh graduate yang masih susah payah tidak dapat-dapat pekerjaan maka salah satu solusinya bukan dengan secara terus menerus random atau acak mengajukan lamaran ke berbagai perusahaan.</p>
+            
+            <p>Akan lebih baik jika kamu lebih memilih menggunakan tips jitu berupa langkah sederhana yang bisa kamu coba agar bisa diterima di pekerjaan yang hendak kamu lamar.</p>
+            
+            <p>Dimana, trik ini lebih kepada bagaimana kamu menempatkan dirimu pada tempatnya agar keahlian apa yang kamu kehendaki sesuai dengan bidang pekerjaan yang kamu lamar.</p>
+            
+            <p>Mau tahu? Yuk, kita simak bersama tips agar mudah diterima kerja dengan langkah sederhana yang dengan mudah bisa kamu coba sendiri.</p>
+            
+            <h2>Tips Jitu Agar Mudah Diterima Kerja</h2>
+            
+            <p>Dalam beberapa kasus, tak bisa dipungkiri bahwa setiap pelamar kerja tentunya menginginkan agar bisa diterima di sebuah perusahaan yang mereka lamar. Hanya saja, terkadang tak serta merta langsung bisa diterima. Nah, mungkin tips ini bisa menjadi jawaban bagi kamu semua.</p>
+            
+            <p><strong>1 . Utamakan Keahlianmu, Bukan Akademismu</strong></p>
+            
+            <p>Di dunia pekerjaan, tentu berbeda dengan dunia akademis. Bila dunia akademis lebih kepada teori, berbeda hal yang di dunia kerja yang lebih cenderung mengedepankan keahlian.</p>
+            
+            <p>Hal ini wajar saja mengingat perusahaan lebih cenderung memilih orang yang ahli dalam bidang pekerjaanya, bukan orang yang punya nilai mata kuliah tinggi.</p>
+            
+            <p>Maka dari itu, dalam CV ataupun saat wawancara, tonjolkan keahlianmu dengan mengkomunikasikannya dengan si pewawancara.</p>
+            
+            <h3>2. Latih Komunikasimu dengan Mengandalkan Bahasa yang Sesuai</h3>
+            
+            <p>Biasanya, kebanyakan para pelamar yang melamar pekerjaan akan jatuh saat memasuki tahapan wawancara, baik dengan pihak HRD maupun manajer.</p>
+            
+            <p>Itu memang wajar mengingat tidak ada yang menarik dari apa yang Anda sampaikan saat tes wawancara. Sehingga, tak sedikit pihak HRD kurang tertarik untuk mengenal lebih dalam.</p>
+            
+            <p>Nah, jika Anda seorang fresh graduate yang tengah mencari kerja, ada baiknya untuk berlatih berkomunikasi yang komunikatif dan handal sehingga apapun yang kamu sampaikan lebih terdengar menarik meski topik yang disampaikan bersifat standar.</p>
+            
+            <p>Ini tentu saja menjadi tips yang terbilang efektif untuk setidaknya membuat pewawancara merasa tertarik kepada bagaimana kamu berkomunikasi.</p>
+            
+            <p><strong>3. Buat CV Sesederhana Namun Lebih Menarik dan Informatif</strong></p>
+            
+            <p>Perlu kamu ketahui pula bahwa perusahaan sebenarnya lebih memilih cenderung pada kualifikasi kualitas pelamar ketimbang melihat CV.</p>
+            
+            <p>Namun, satu yang mesti kamu ketahui juga bahwa dengan informasi melalui CV yang kamu ajukan saat lamaran, tentu bisa mempengaruhi si pewawancara sebelum mengajukan pertanyaan.</p>
+            
+            <p>Jika informasi yang diberikan melalui CV mudah dipahami dan terlihat informatif, tentu saja akan jauh lebih memikat rasa penasaran pewawancara.</p>
+            
+            <p>Nah, itulah tadi beberapa langkah yang menjadi tips agar bisa diterima kerja dengan peluang yang besar. Sehingga, kemungkinan diterima bisa lebih berpotensi.</p>
+            
+            <p>Hanya saja, dari beberapa langkah di atas, tentunya satu aspek yang paling penting adalah menjaga kualitas komunikasi saat sedang dalam tahap seleksi wawancara. Karena, hal ini yang paling banyak berpengaruh pada penentuan si pihak pewawancara untuk diterima kerja atau tidak.</p>',
+            'gambar' => 'tips.jpg',
+        ]);
+        $article->save();
+
+        $article = Article::create([
+            'judul' =>
+                'Jangan Tertipu! Kenali Ciri-Ciri Penipuan Lowongan Kerja',
+            'ringkasan' =>
+                'Saat ini mulai banyak penipuan lowongan kerja yang kian marak dan menipu banyak orang. Kenali ciri-ciri penipuan loker seperti ini sebagai langkah pencegahan agar kamu tak tertipu.',
+            'content' => '<p>Maraknya info loker di berbagai daerah, tentu saja menjadi salah satu peluang baik bagi pelamar kerja yang membutuhkan lowongan.</p>
+
+            <p>Namun, bersamaan dengan banyaknya informasi lowongan pekerjaan, banyak juga beberapa oknum yang melakukan penipuan lowongan kerja.</p>
+            
+            <p>Bahkan, penipuan seperti ini sudah banyak terjadi dan mengecoh banyak korban. Tentu saja, Anda yang mungkin saja sebagai fresh graduate, harus berhati-hati saat tengah mencari lowongan kerja agar tidak tertipu.</p>
+            
+            <p>Karena, penipuan model seperti ini sudah marak terjadi di berbagai daerah. Sehingga, bagi yang belum berpengalaman dalam mencari info loker, tentu akan dengan mudah tertipu oleh oknum yang membuka lowongan tersebut.</p>
+            
+            <p>Mengenai hal ini, sebaiknya Anda kenali dulu beberapa ciri atau tanda penipuan lowongan kerja sebagai langkah pencegahan atau preventif untuk berjaga-jaga agar tidak tertipu.</p>
+            
+            <h2>Ciri-Ciri Penipuan Lowongan Kerja</h2>
+            
+            <p>Dalam beberapa kasus yang ada, tentu saja ada beberapa tanda jika lowongan kerja yang muncul tersebut adalah penipuan yang dilakukan beberapa oknum. Di antaranya adalah sebagai berikut.</p>
+            
+            <h3>1 . Persyaratan Terlalu Mudah</h3>
+            
+            <p>Satu hal yang mencurigakan dan memiliki potensi bahwa lowongan tersebut adalah penipuan berkedok info loker, bisa dilihat dari persyaratan yang ditampilkan.</p>
+            
+            <p>Biasanya, lowongan asli akan mencantumkan secara lengkap syarat apa saja yang diperlukan. Namun, jika ini penipuan, umumnya syarat yang diajukan justru terkesan dipermudah.</p>
+            
+            <p>Apalagi, jika tertulis lowongan sebagai admin atau staff yang membutuhkan syarat umum sebagaimana karyawan di toko atau restoran. Tentu ini tak masuk akal karena syarat menjadi admin, setidaknya harus memiliki pengalaman atau pun memiliki track record bidang akademis mini D3.</p>
+            
+            <p>Jika ada informasi seperti ini, Anda sebaiknya mengabaikannya saja daripada nanti Anda tertipu.</p>
+            
+            <h3>2. Tawaran Gaji yang Tidak Masuk Akal</h3>
+            
+            <p>Di sisi lain, ciri atau tanda penipuan lowongan kerja juga bisa dideteksi dari penawaran gaji itu sendiri yang mana memang tidak masuk akal.</p>
+            
+            <p>Misalnya saja, tertulis lowongan sebagai admin dan staff dengan gaji Rp 5 jutaan. Tentu saja, informasi ini sangat ambigu dan menyesatkan.</p>
+            
+            <p>Karena, gaji sebesar itu biasanya hanya diberikan untuk manajer atau bagian direksi perusahaan. Sedangkan, admin dan staff pastinya berada di bawah nominal tersebut.</p>
+            
+            <p>Maka dari itu, jika sudah sampai begitu, Anda sepatutnya untuk curiga bahwa kemungkinan besar itu merupakan penipuan berkedok lowongan kerja.</p>
+            
+            <h3>3. Alamat Kantor Tidak Jelas</h3>
+            
+            <p>Jika Anda melamar suatu pekerjaan, tentu saja ada alamat kantor yang jelas sebagai lokasi wawancara. Namun, bila dalam lowongan tersebut alamat kantor yang tertera tidak jelas maka Anda patut untuk mencurigainya.</p>
+            
+            <p>Karena, bisa jadi alamat yang dimaksud di atas belum tentu merupakan alamat kantor sebenarnya melainkan hanya sekedar rumah yang dijadikan sebagai kantor kecil.</p>
+            
+            <p>Bila ada informasi seperti ini, sebaiknya Anda jangan mengajukan lamaran meskipun tampak menjanjikan di mata Anda. Sebab, dengan informasi alamat kantor yang tak jelas, tentu saja memberikan gambaran bahwa lowongan pekerjaan itu pun juga tak jelas arahnya.</p>
+            
+            <p>Nah, bagaimana kawan? Apakah sudah memahami beberapa penjelasan mengenai penipuan lowongan kerja di atas? Tentu saja, beberapa ciri penipuan yang berkedok loker di atas bisa dijadikan informasi penting bagi Anda agar tak mudah tertipu oleh info iklan lowongan pekerjaan semacam itu.</p>',
+            'gambar' => 'lamarr.jpg',
+        ]);
+        $article->save();
     }
 }
