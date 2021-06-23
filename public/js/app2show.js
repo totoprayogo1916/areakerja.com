@@ -1,3 +1,20 @@
+var count = 1;
+function setColor(a, h4) {
+    var btn2 = document.getElementById(a);
+    var btnh42 = document.getElementById(h4);
+    if (count == 0) {
+        btn2.style.background = "#000000";
+        btnh42.style.color = "#ffffff";
+        count = 1;
+    }
+    else {
+        btn2.style.background = "#ffffff";
+        btnh42.style.color = "#000000";
+        count = 0;
+    }
+}
+
+
 if ($(window).width() < 1000) {
     document.getElementById("telepon1").style.display='none';
     document.getElementById("telepon2").style.display='';
@@ -39,3 +56,5 @@ if ($(window).width() < 1000) {
 if ($(window).width() > 1000) {
     document.getElementById("liemail").style.marginTop='5%';
 }
+
+

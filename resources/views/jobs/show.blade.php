@@ -190,7 +190,7 @@
                                 </li>
                                 <li style="padding-left: 10px; margin-bottom: 5%" id="liemail">
                                     <a type="button" class="btn form-pasang4" href="mailto:{{ $job->email }}?subject=Lamaran Pekerjaan di {{ $job->company->name }}">
-                                        <h6 style="font-weight: normal"><span class="fa fa-envelope-o"></span><span style="display:inline-block; width: 5px;"></span>Email</h6>
+                                        <h6 style="font-weight: normal"><span class="fa fa-envelope-o"></span><span style="display:inline-block; width: 5px;"></span>{{ $job->company->name }}</h6>
                                     </a>
                                 </li>
                             </ul>
@@ -198,8 +198,9 @@
                     </div>
                 </div>
                 <div class="col-2 gg2" style="margin-right: 12%" >
-                    <a type="button" class="btn form-pasang3" href="{{ route('cache', $job->id) }}" id="btn2">
-                        <h4  class="gg" style="font-weight: normal" id="btnh42"><span class="fa fa-star-o"></span><span style="display:inline-block; width: 10px;"></span>Simpan</h4>
+                    {{-- href="{{ route('cache', $job->id) }}" --}}
+                    <a type="button" class="btn form-pasang3" id="btn2{{ $job->id }}" onclick="return setColor('btn2{{ $job->id }}','btnh42{{ $job->id }}');">
+                        <h4  class="gg" style="font-weight: normal" id="btnh42{{ $job->id }}"><span class="fa fa-star-o"></span><span style="display:inline-block; width: 10px;"></span>Simpan</h4>
                     </a>
                 </div>
 
@@ -237,7 +238,7 @@
 
 @endsection
 @section('bottom')
-<nav class="navbar navbar-light navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom no-padding" style="background-color: white"> 
+<nav class="navbar navbar-light navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom no-padding" style="background-color: white">
     <ul class="navbar-nav nav-justified w-100">
       <li class="nav-item border-right">
         <a href="#" class="nav-link" style="color: black" data-toggle="modal" data-target="#modalPushFilter"> <span class="fa fa-filter" aria-hidden="true"></span>        Filter</a>
@@ -245,7 +246,7 @@
       <li class="nav-item border-right">
         <a href="#" class="nav-link" style="color: black" data-toggle="modal" data-target="#modalPushRiwayat" ><span class="fa fa-refresh" aria-hidden="true"></span>    Riwayat</a>
       </li>
-      <li class="nav-item border-right" >	
+      <li class="nav-item border-right" >
         <a href="#" class="nav-link" style="color: black" data-target="#modalPush" class="justify-content-between" data-toggle="modal"><span class="fa fa-star-o" aria-hidden="true"></span>     Simpan</a>
       </li>
     </ul>
