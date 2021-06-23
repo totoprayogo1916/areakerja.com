@@ -75,6 +75,7 @@ class HomeController extends Controller
         Carbon::setLocale('id');
         $wishlist=Wish::where('ip', $ipaddress)->get();
         $riwayatlist=Riwayat::where('ip',$ipaddress)->get();
+        $wishh=Wish::where([['ip', '=', $ipaddress]])->get();
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $jobs = Job::with('company')
@@ -87,7 +88,7 @@ class HomeController extends Controller
 
         $banner = 'Search results';
 
-        return view('jobs.index', compact(['riwayatlist','wishlist','ipaddress','jobs', 'banner', 'searchLocations','sidbarJobs', 'searchCategories']));
+        return view('jobs.index', compact(['wishh','riwayatlist','wishlist','ipaddress','jobs', 'banner', 'searchLocations','sidbarJobs', 'searchCategories']));
     }
 
     public function aboutus()
