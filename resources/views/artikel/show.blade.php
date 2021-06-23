@@ -22,15 +22,15 @@
 <div class="post-list2 " >
     <div data-aos="fade-up" class="single-post2 align-items-center border-bottom" style="width: 750px; margin-left: auto;margin-right: auto">
         <div class="form-group border-bottom text-center">
-            <h1>>{{ $article->judul }}</h1>
+            <h1 style="margin-bottom: 20px">{{ $art->judul }}</h1>
         </div>
 
         <div class="details" >
             <div class="title d-flex flex-row "  >
                 <div class="titles">
-                    <p style="font-weight: 400; font-size : 16px;line-height: 2; margin-bottom: 0px">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequuntur molestiae eveniet totam at possimus velit incidunt perspiciatis maxime. Eligendi doloribus ut est molestiae voluptate, sint nobis earum porro cumque?
-                    </p>
+                    <div class="section-row">
+                        {!! $art->content !!}
+                    </div>
                 </div>
             </div>
         </div>

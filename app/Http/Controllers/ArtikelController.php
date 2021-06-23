@@ -77,7 +77,7 @@ class ArtikelController extends Controller
         );
     }
 
-    public function show(Article $article )
+    public function show($id)
     {
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
@@ -94,7 +94,7 @@ class ArtikelController extends Controller
             ->take(0)
             ->get();
 
-        $article = Article::all();
+        $art = Article::where('id', $id)->first();
 
         $sidebarLocations = Location::withCount('jobs')
             ->whereHas('jobs')
@@ -116,7 +116,7 @@ class ArtikelController extends Controller
                 'sidebarJobs',
                 'sidebarLocations',
                 'sidebarCategories',
-                'article',
+                'art',
             ])
         );
     }

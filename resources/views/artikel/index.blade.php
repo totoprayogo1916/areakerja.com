@@ -20,20 +20,21 @@
 
 @section('content')
 <div class="col-sm-8 post-list2 " >
+    
+    @foreach($article as $art)
     <a href="{{ route('artikel.show', $art->id)}}">
-    @foreach($artikel as $article)
     <div data-aos="fade-up" class="single-post2 align-items-center d-flex border-bottom" style=" margin-left: auto;margin-right: auto">
         <div class="col-3 no-gutters no-padding thumb3" style="margin: auto;" >
-            @if($article->gambar)
-                <img class="thumb3" src="{{ url('img/artikel') }}/{{ $article->gambar }}" style="width: inherit;height: auto;">
+            @if($art->gambar)
+                <img class="thumb3" src="{{ url('img/artikel') }}/{{ $art->gambar }}" style="width: inherit;height: auto;">
             @endif
         </div>
         <div class="col-9 ">
             <div class="details" >
                 <div class="title d-flex flex-row "  >
                     <div class="titles">
-                        <h2 class ="pg-0" style="color: #7e7e7e; margin-bottom: 8px;font-weight: 500;">{{ $article->judul }}</h3>
-                        <p class="pg-1" style="font-weight: 400;line-height: 1.75; margin-bottom: 0px">{{ $article->ringkasan }}</p>
+                        <h2 class ="pg-0" style="color: #7e7e7e; margin-bottom: 8px;font-weight: 500;">{{ $art->judul }}</h3>
+                        <p class="pg-1" style="font-weight: 400;line-height: 1.75; margin-bottom: 0px">{{ $art->ringkasan }}</p>
                     </div>
                 </div>
             </div>
