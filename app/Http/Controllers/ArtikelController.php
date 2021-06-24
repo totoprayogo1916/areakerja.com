@@ -8,6 +8,7 @@ use App\Job;
 use App\Location;
 use App\Riwayat;
 use App\Wish;
+use Illuminate\Support\Str;
 use Artikel;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;

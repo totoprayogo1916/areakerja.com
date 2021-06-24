@@ -18,7 +18,7 @@ Route::get('/riwayat/{id}', 'CacheController@riwayat')->name('riwayat');
 Route::get('/company/{id}', 'CompaniesController@index')->name('compan');
 // Route::resource('artikel', 'ArtikelController')->only(['artikel', 'show']);
 Route::get('/artikel', 'ArtikelController@artikel')->name('artikel');
-Route::get('/artikel/{id}', 'ArtikelController@show')->name('artikel.show');
+Route::get('/artikel/{slug}', 'ArtikelController@show')->name('artikel.show');
 // Route::get('lamarmail/{parameter}', [
 //     'as'=> 'lamarmail',
 //     'uses'=>'HomeController@lamarmail'
