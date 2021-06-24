@@ -20,6 +20,7 @@ class ArtikelField extends Migration
             $table->text('content');
             $table->string('gambar');
             $table->timestamps();
+            $table->string('slug')->nullable();
         });
     }
 

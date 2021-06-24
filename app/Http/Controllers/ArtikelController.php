@@ -101,11 +101,6 @@ class ArtikelController extends Controller
         // dd($a);
         $art = Article::where($a, $slug)->first();
 
-        $sidebarLocations = Location::withCount('jobs')
-            ->whereHas('jobs')
-            ->orderBy('jobs_count', 'desc')
-            ->get();
-
         $sidebarCategories = Category::withCount('jobs')
             ->whereHas('jobs')
             ->orderBy('jobs_count', 'desc')
@@ -113,7 +108,7 @@ class ArtikelController extends Controller
 
         return view(
             'artikel.show',
-            compact([
+            with([
                 'searchLocations',
                 'searchCategories',
                 'searchByCategory',
