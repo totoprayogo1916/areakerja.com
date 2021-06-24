@@ -35,7 +35,7 @@ class JobController extends Controller
         $jobs = Job::with('company')->paginate(0);
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
-        $wishh=Wish::where([['ip', '=', $ipaddress],['idJob', '=', $jobs->id]])->get();
+        $wishh=Wish::all();
         $sidbarJobs = Job::whereTopRated(true)
             ->orderBy('id', 'desc')
             ->get();
