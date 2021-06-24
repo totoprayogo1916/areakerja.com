@@ -9,9 +9,9 @@ class Riwayat extends Model
 {
     use HasFactory;
 
-    public $table = 'Riwayat';
+    public $table      = 'Riwayat';
     public $timestamps = true;
-    protected $dates = [
+    protected $dates   = [
         'created_at',
         'updated_at',
         'deleted_at',
@@ -20,7 +20,7 @@ class Riwayat extends Model
         'ip',
         'created_at',
         'updated_at',
-        'deleted_at'
+        'deleted_at',
     ];
 
     public function Job()

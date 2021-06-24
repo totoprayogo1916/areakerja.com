@@ -30,8 +30,6 @@ class Lowongan extends Model
         'short_description',
         'email',
         'notelp',
-        'web'
+        'web',
     ];
-
-    
 }

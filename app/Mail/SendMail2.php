@@ -9,7 +9,8 @@ use Illuminate\Queue\SerializesModels;
 
 class SendMail2 extends Mailable
 {
-    use Queueable, SerializesModels;
+    use Queueable;
+    use SerializesModels;
 
     /**
      * Create a new message instance.
@@ -31,8 +32,9 @@ class SendMail2 extends Mailable
         return $this->from('hhahahah@gmail.com')
             ->view('email2')
             ->with(
-            [
-                'umur' => $this->umur
-            ]);
+                [
+                    'umur' => $this->umur,
+                ]
+            );
     }
 }

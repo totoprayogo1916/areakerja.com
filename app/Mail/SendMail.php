@@ -9,19 +9,20 @@ use Illuminate\Queue\SerializesModels;
 
 class SendMail extends Mailable
 {
-    use Queueable, SerializesModels;
+    use Queueable;
+    use SerializesModels;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($nama,$nomor,$email1,$saran)
+    public function __construct($nama, $nomor, $email1, $saran)
     {
-        $this->nama = $nama;
-        $this->nomor = $nomor;
+        $this->nama   = $nama;
+        $this->nomor  = $nomor;
         $this->email1 = $email1;
-        $this->saran = $saran;
+        $this->saran  = $saran;
     }
 
     /**
@@ -34,11 +35,12 @@ class SendMail extends Mailable
         return $this->from('hhahahah@gmail.com')
             ->view('email')
             ->with(
-            [
-                'nama' => $this->nama,
-                'nomor' => $this->nomor,
-                'email1' => $this->email1,
-                'saran' => $this->saran
-            ]);
+                [
+                    'nama'   => $this->nama,
+                    'nomor'  => $this->nomor,
+                    'email1' => $this->email1,
+                    'saran'  => $this->saran,
+                ]
+            );
     }
 }

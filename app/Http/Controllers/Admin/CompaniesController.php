@@ -18,7 +18,6 @@ class CompaniesController extends Controller
 
     public function index()
     {
-
         $companies = Company::all();
 
         return view('admin.companies.index', compact('companies'));
@@ -26,7 +25,6 @@ class CompaniesController extends Controller
 
     public function create()
     {
-
         return view('admin.companies.create');
     }
 
@@ -36,12 +34,12 @@ class CompaniesController extends Controller
         // $request->validate([
         //     'gambar' => 'required|gambar|mimes:jpeg,png,jpg,gif,svg|max:2048',
         // ]);
-        $namaFile = time().'.'.$request->gambar->extension();
+        $namaFile = time() . '.' . $request->gambar->extension();
         $request->gambar->move(public_path('img/companylogo'), $namaFile);
-        
+
         Company::insert([
-            'name' => $request->name,
-            'gambar' => $namaFile
+            'name'   => $request->name,
+            'gambar' => $namaFile,
         ]);
 
         // if ($request->input('logo', false)) {
@@ -53,13 +51,12 @@ class CompaniesController extends Controller
 
     public function edit(Company $company)
     {
-
         return view('admin.companies.edit', compact('company'));
     }
 
     public function update(Request $request, $id)
     {
-            
+
         // $company->update($request->all());
 
         // if ($request->input('logo', false)) {
@@ -71,35 +68,34 @@ class CompaniesController extends Controller
         // }
         $companies = Company::find($id);
 
-        if($request->gambar != ''){        
-            $path = public_path().'/img/companylogo/';
+        if ($request->gambar != '') {
+            $path = public_path() . '/img/companylogo/';
 
             //code for remove old file
-            if($companies->gambar != ''  && $companies->gambar != null){
-                $file_old = $path.$companies->gambar;
+            if ($companies->gambar != '' && $companies->gambar != null) {
+                $file_old = $path . $companies->gambar;
                 unlink($file_old);
             }
 
             //upload new gambar
-            $file = $request->gambar;
+            $file     = $request->gambar;
             $filename = $file->getClientOriginalName();
             $file->move($path, $filename);
 
             //for update in table
             $companies->update(['gambar' => $filename]);
         }
+
         return redirect()->route('admin.companies.index');
     }
 
     public function show(Company $company)
     {
-
         return view('admin.companies.show', compact('company'));
     }
 
     public function destroy(Company $company)
     {
-
         $company->delete();
 
         return back();

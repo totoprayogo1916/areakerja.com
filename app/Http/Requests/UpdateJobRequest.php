@@ -19,24 +19,24 @@ class UpdateJobRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'        => [
+            'title' => [
                 'required',
             ],
-            'company_id'   => [
+            'company_id' => [
                 'required',
                 'integer',
             ],
-            'location_id'  => [
+            'location_id' => [
                 'required',
                 'integer',
             ],
             'categories.*' => [
                 'integer',
             ],
-            'categories'   => [
+            'categories' => [
                 'array',
             ],
-            'salary'       => [
+            'salary' => [
                 'required',
             ],
         ];

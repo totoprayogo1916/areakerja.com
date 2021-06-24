@@ -13,7 +13,7 @@ class Artikel extends Migration
      */
     public function up()
     {
-        Schema::create('artikel', function (Blueprint $table) {
+        Schema::create('artikel', static function (Blueprint $table) {
             $table->increments('id');
 
             $table->string('title');
@@ -113,7 +113,6 @@ class Artikel extends Migration
             $table->timestamps();
 
             $table->softDeletes();
-
         });
     }
 

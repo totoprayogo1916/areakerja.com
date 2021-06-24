@@ -13,7 +13,7 @@ class Wish extends Model
     public $table = 'wish';
 
     protected $fillable = [
-        'ip'
+        'ip',
     ];
 
     public function Job()

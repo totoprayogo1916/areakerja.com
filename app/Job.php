@@ -18,8 +18,8 @@ class Job extends Model
     ];
 
     public $casts = [
-        'requirements' => 'array',
-        'full_description'=> 'array'
+        'requirements'     => 'array',
+        'full_description' => 'array',
     ];
 
     protected $fillable = [
@@ -45,8 +45,6 @@ class Job extends Model
         'short_description',
     ];
 
-
-
     public function company()
     {
         return $this->belongsTo(Company::class, 'company_id');
@@ -62,28 +60,30 @@ class Job extends Model
         return $this->belongsToMany(Category::class);
     }
 
-    public function Wish() {
+    public function Wish()
+    {
         return $this->belongsTo(Wish::class, 'id');
     }
 
-    public function Riwayat() {
+    public function Riwayat()
+    {
         return $this->belongsTo(Riwayat::class, 'id');
     }
 
     public function scopeSearchResults($query)
     {
-        return $query->when(!empty(request()->input('location', 0)), function($query) {
-            $query->whereHas('location', function($query) {
+        return $query->when(! empty(request()->input('location', 0)), static function ($query) {
+            $query->whereHas('location', static function ($query) {
                 $query->whereId(request()->input('location'));
             });
         })
-        ->when(!empty(request()->input('category', 0)), function($query) {
-            $query->whereHas('categories', function($query) {
+            ->when(! empty(request()->input('category', 0)), static function ($query) {
+            $query->whereHas('categories', static function ($query) {
                 $query->whereId(request()->input('category'));
             });
         })
-        ->when(!empty(request()->input('search', '')), function($query) {
-            $query->where(function($query) {
+            ->when(! empty(request()->input('search', '')), static function ($query) {
+            $query->where(static function ($query) {
                 $search = request()->input('search');
                 $query->where('title', 'LIKE', "%$search%")
                     ->orWhere('short_description', 'LIKE', "%$search%")
@@ -91,7 +91,7 @@ class Job extends Model
                     ->orWhere('job_nature', 'LIKE', "%$search%")
                     ->orWhere('requirements', 'LIKE', "%$search%")
                     ->orWhere('address', 'LIKE', "%$search%")
-                    ->orWhereHas('company', function($query) use($search) {
+                    ->orWhereHas('company', static function ($query) use ($search) {
                         $query->where('name', 'LIKE', "%$search%");
                     });
             });

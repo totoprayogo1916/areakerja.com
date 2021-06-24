@@ -13,7 +13,7 @@ class Wish extends Migration
      */
     public function up()
     {
-        Schema::create('wish', function (Blueprint $table) {
+        Schema::create('wish', static function (Blueprint $table) {
             $table->increments('id');
 
             $table->string('ip');
@@ -21,5 +21,4 @@ class Wish extends Migration
             $table->string('idJob');
         });
     }
-
 }

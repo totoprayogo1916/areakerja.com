@@ -3,41 +3,42 @@
 namespace App\Http\Controllers;
 
 use App\Category;
-use App\Location;
 use App\Job;
+use App\Location;
+use App\Mail\SendMail;
+use App\Mail\SendMail2;
+use App\Riwayat;
 use App\Wish;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use App\Mail\SendMail;
-use App\Mail\SendMail2;
 use Illuminate\Support\Facades\Mail;
-use App\Riwayat;
 
 class HomeController extends Controller
 {
     public function index()
     {
         $ipaddress = '';
-        if (isset($_SERVER['HTTP_CLIENT_IP']))
+        if (isset($_SERVER['HTTP_CLIENT_IP'])) {
             $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
-        else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+        } elseif (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
             $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
-        else if(isset($_SERVER['HTTP_X_FORWARDED']))
+        } elseif (isset($_SERVER['HTTP_X_FORWARDED'])) {
             $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
-        else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+        } elseif (isset($_SERVER['HTTP_FORWARDED_FOR'])) {
             $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
-        else if(isset($_SERVER['HTTP_FORWARDED']))
+        } elseif (isset($_SERVER['HTTP_FORWARDED'])) {
             $ipaddress = $_SERVER['HTTP_FORWARDED'];
-        else if(isset($_SERVER['REMOTE_ADDR']))
+        } elseif (isset($_SERVER['REMOTE_ADDR'])) {
             $ipaddress = $_SERVER['REMOTE_ADDR'];
-        else
+        } else {
             $ipaddress = 'UNKNOWN';
+        }
         Carbon::setLocale('id');
-        $wishlist=Wish::where('ip', $ipaddress)->get();
-        $riwayatlist=Riwayat::where('ip',$ipaddress)->get();
-        $searchLocations = Location::pluck('name', 'id');
-        $job = Job::all();
-        $wishh=Wish::where([['ip', '=', $ipaddress]])->get();
+        $wishlist         = Wish::where('ip', $ipaddress)->get();
+        $riwayatlist      = Riwayat::where('ip', $ipaddress)->get();
+        $searchLocations  = Location::pluck('name', 'id');
+        $job              = Job::all();
+        $wishh            = Wish::where([['ip', '=', $ipaddress]])->get();
         $searchCategories = Category::pluck('name', 'id');
         $searchByCategory = Category::withCount('jobs')
             ->orderBy('jobs_count', 'desc')
@@ -48,37 +49,37 @@ class HomeController extends Controller
             ->take(5)
             ->get();
         $sidbarJobs = Job::whereTopRated(true)
-        ->orderBy('id', 'desc')
-        ->get();
+            ->orderBy('id', 'desc')
+            ->get();
 
-        return view('index', compact(['riwayatlist','wishlist','ipaddress','searchLocations', 'searchCategories', 'searchByCategory', 'jobs', 'sidbarJobs', 'wishh']));
+        return view('index', compact(['riwayatlist', 'wishlist', 'ipaddress', 'searchLocations', 'searchCategories', 'searchByCategory', 'jobs', 'sidbarJobs', 'wishh']));
     }
 
     public function search(Request $request)
     {
-
         $ipaddress = '';
-        if (isset($_SERVER['HTTP_CLIENT_IP']))
+        if (isset($_SERVER['HTTP_CLIENT_IP'])) {
             $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
-        else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+        } elseif (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
             $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
-        else if(isset($_SERVER['HTTP_X_FORWARDED']))
+        } elseif (isset($_SERVER['HTTP_X_FORWARDED'])) {
             $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
-        else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+        } elseif (isset($_SERVER['HTTP_FORWARDED_FOR'])) {
             $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
-        else if(isset($_SERVER['HTTP_FORWARDED']))
+        } elseif (isset($_SERVER['HTTP_FORWARDED'])) {
             $ipaddress = $_SERVER['HTTP_FORWARDED'];
-        else if(isset($_SERVER['REMOTE_ADDR']))
+        } elseif (isset($_SERVER['REMOTE_ADDR'])) {
             $ipaddress = $_SERVER['REMOTE_ADDR'];
-        else
+        } else {
             $ipaddress = 'UNKNOWN';
+        }
         Carbon::setLocale('id');
-        $wishlist=Wish::where('ip', $ipaddress)->get();
-        $riwayatlist=Riwayat::where('ip',$ipaddress)->get();
-        $wishh=Wish::where([['ip', '=', $ipaddress]])->get();
-        $searchLocations = Location::pluck('name', 'id');
+        $wishlist         = Wish::where('ip', $ipaddress)->get();
+        $riwayatlist      = Riwayat::where('ip', $ipaddress)->get();
+        $wishh            = Wish::where([['ip', '=', $ipaddress]])->get();
+        $searchLocations  = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
-        $jobs = Job::with('company')
+        $jobs             = Job::with('company')
             ->searchResults()
             ->paginate(7);
 
@@ -88,7 +89,7 @@ class HomeController extends Controller
 
         $banner = 'Search results';
 
-        return view('jobs.index', compact(['wishh','riwayatlist','wishlist','ipaddress','jobs', 'banner', 'searchLocations','sidbarJobs', 'searchCategories']));
+        return view('jobs.index', compact(['wishh', 'riwayatlist', 'wishlist', 'ipaddress', 'jobs', 'banner', 'searchLocations', 'sidbarJobs', 'searchCategories']));
     }
 
     public function aboutus()
@@ -117,21 +118,21 @@ class HomeController extends Controller
 
     public function kirimmail(Request $request)
     {
-        $nama = $request->nama;
-        $nomor = $request->nomor;
+        $nama   = $request->nama;
+        $nomor  = $request->nomor;
         $email1 = $request->email;
-        $saran = $request->saran;
-        $email = "ti.fadelirsyad04@gmail.com";
-        $kirim = Mail::to($email)->send(new SendMail($nama,$nomor,$email1,$saran));
+        $saran  = $request->saran;
+        $email  = "ti.fadelirsyad04@gmail.com";
+        $kirim  = Mail::to($email)->send(new SendMail($nama, $nomor, $email1, $saran));
 
-        if($kirim){
+        if ($kirim) {
             echo "Email telah dikirim";
         }
 
         return view('user.kontak');
     }
 
-    public function lamarmail($name,$umur)
+    public function lamarmail($name, $umur)
     {
         // $request = [$name,];
         // dd($name,$umur);
@@ -142,7 +143,7 @@ class HomeController extends Controller
         $email = "ti.fadelirsyad04@gmail.com";
         $kirim = Mail::to($email)->send(new SendMail2($umur));
 
-        if($kirim){
+        if ($kirim) {
             echo "Email telah dikirim";
         }
 
@@ -151,24 +152,27 @@ class HomeController extends Controller
 
     public function addcart(Request $request)
     {
-        $id=$request->id; $time=60*24*14;
+        $id   = $request->id;
+        $time = 60 * 24 * 14;
         echo $id;
-        $value=0;
-        if( Cookie::get('cart')!==null ){
-            $anonim=Cookie::get('cart');
-            DB::table("cart")->insert(["anonim"=>$anonim,"product_id"=>$id]);
+        $value = 0;
+        if (Cookie::get('cart') !== null) {
+            $anonim = Cookie::get('cart');
+            DB::table("cart")->insert(["anonim" => $anonim, "product_id" => $id]);
+
             return 0;
-        }else{
-            $value=DB::table("cart")->max("anonim")+1;
-            if(empty($value)){
-                $value=0;
+        } else {
+            $value = DB::table("cart")->max("anonim") + 1;
+            if (empty($value)) {
+                $value = 0;
             }
-            DB::table("cart")->insert(["anonim"=>$value,"product_id"=>$id]);
+            DB::table("cart")->insert(["anonim" => $value, "product_id" => $id]);
             $cookie = cookie('cart', $value, $time);
+
             return response()->cookie($cookie);
         }
-
     }
+
     // function getMAcAddressExec()
     // {
     //     echo getMAcAddressExec();
@@ -181,5 +185,4 @@ class HomeController extends Controller
     //     echo getMAcAddressShellExec();
     //     return substr(shell_exec('getmac'), 159,20);
     // }
-
 }

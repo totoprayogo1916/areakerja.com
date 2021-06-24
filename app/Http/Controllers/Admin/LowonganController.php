@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Lowongan;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyLowonganRequest;
+use App\Lowongan;
 use Gate;
+use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class LowonganController extends Controller
 {
-
-    public function index(){
-
+    public function index()
+    {
         $lowongan = Lowongan::all();
 
         return view('admin.lowongan.index', compact('lowongan'));
@@ -26,7 +25,6 @@ class LowonganController extends Controller
 
     public function destroy(Lowongan $lowongan)
     {
-
         $lowongan->delete();
 
         return back();
@@ -38,5 +36,4 @@ class LowonganController extends Controller
 
         return response(null, Response::HTTP_NO_CONTENT);
     }
-
 }

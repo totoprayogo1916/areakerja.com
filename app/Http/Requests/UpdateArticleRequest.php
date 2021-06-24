@@ -17,16 +17,16 @@ class UpdateArticleRequest extends FormRequest
     public function rules()
     {
         return [
-            'judul'        => [
+            'judul' => [
                 'required',
             ],
-            'ringkasan'   => [
+            'ringkasan' => [
                 'required',
             ],
-            'content'  => [
+            'content' => [
                 'required',
             ],
-            'gambar'       => [
+            'gambar' => [
                 'required',
             ],
         ];

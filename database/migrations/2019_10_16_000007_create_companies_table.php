@@ -8,7 +8,7 @@ class CreateCompaniesTable extends Migration
 {
     public function up()
     {
-        Schema::create('companies', function (Blueprint $table) {
+        Schema::create('companies', static function (Blueprint $table) {
             $table->increments('id');
 
             $table->string('name');

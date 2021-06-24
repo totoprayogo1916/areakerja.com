@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Alert;
 use App\Category;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyCategoryRequest;
@@ -9,9 +10,8 @@ use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 use Gate;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
 use RealRashid\SweetAlert\Facades\Alert as FacadesAlert;
-Use Alert;
+use Symfony\Component\HttpFoundation\Response;
 
 class CategoriesController extends Controller
 {

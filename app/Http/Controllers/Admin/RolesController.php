@@ -16,7 +16,6 @@ class RolesController extends Controller
 {
     public function index()
     {
-
         $roles = Role::all();
 
         return view('admin.roles.index', compact('roles'));
@@ -24,7 +23,6 @@ class RolesController extends Controller
 
     public function create()
     {
-
         $permissions = Permission::all()->pluck('title', 'id');
 
         return view('admin.roles.create', compact('permissions'));
@@ -40,7 +38,6 @@ class RolesController extends Controller
 
     public function edit(Role $role)
     {
-
         $permissions = Permission::all()->pluck('title', 'id');
 
         $role->load('permissions');
@@ -58,7 +55,6 @@ class RolesController extends Controller
 
     public function show(Role $role)
     {
-
         $role->load('permissions');
 
         return view('admin.roles.show', compact('role'));
@@ -66,7 +62,6 @@ class RolesController extends Controller
 
     public function destroy(Role $role)
     {
-
         $role->delete();
 
         return back();

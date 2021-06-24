@@ -18,7 +18,6 @@ class JobsController extends Controller
 {
     public function index()
     {
-
         $jobs = Job::all();
 
         return view('admin.jobs.index', compact('jobs'));
@@ -26,7 +25,6 @@ class JobsController extends Controller
 
     public function create()
     {
-
         $companies = Company::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $locations = Location::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
@@ -45,21 +43,21 @@ class JobsController extends Controller
         // $arr = serialize($data);
         // $create = Job::create(['session'=>$arr]);
         $job = Job::create([
-            'title' => $request->title,
-            'salary' => $request->salary,
-            'address'=> $request->address,
-            'top_rated'=> $request->top_rated,
-            'company_id'=> $request->company_id,
-            'job_nature'=> $request->job_nature,
-            'pendidikan'=> $request->pendidikan,
-            'umur'=> $request->umur,
-            'gender'=> $request->gender,
-            'lokasikerja'=> $request->lokasikerja,
-            'requirements'=>$request->requirements,
-            'bataslamaran'=> $request->bataslamaran,
-            'location_id'=> $request->location_id,
-            'full_description'=> $request->full_description,
-            'short_description'=> $request->short_description,
+            'title'             => $request->title,
+            'salary'            => $request->salary,
+            'address'           => $request->address,
+            'top_rated'         => $request->top_rated,
+            'company_id'        => $request->company_id,
+            'job_nature'        => $request->job_nature,
+            'pendidikan'        => $request->pendidikan,
+            'umur'              => $request->umur,
+            'gender'            => $request->gender,
+            'lokasikerja'       => $request->lokasikerja,
+            'requirements'      => $request->requirements,
+            'bataslamaran'      => $request->bataslamaran,
+            'location_id'       => $request->location_id,
+            'full_description'  => $request->full_description,
+            'short_description' => $request->short_description,
         ]);
         $job->categories()->sync($request->input('categories', []));
         // return request('requirements');
@@ -68,7 +66,6 @@ class JobsController extends Controller
 
     public function edit(Job $job)
     {
-
         $companies = Company::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $locations = Location::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
@@ -90,7 +87,6 @@ class JobsController extends Controller
 
     public function show(Job $job)
     {
-
         $job->load('company', 'location', 'categories');
 
         return view('admin.jobs.show', compact('job'));
@@ -98,7 +94,6 @@ class JobsController extends Controller
 
     public function destroy(Job $job)
     {
-
         $job->delete();
 
         return back();
@@ -110,5 +105,4 @@ class JobsController extends Controller
 
         return response(null, Response::HTTP_NO_CONTENT);
     }
-
 }
