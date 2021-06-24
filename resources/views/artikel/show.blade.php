@@ -3,35 +3,29 @@
 @section('home')
 
 <section class="relative" id="home" >
-
-        <div class="row align-items-center justify-content-center" style="margin-right: 1%">
-            <div class="banner-content col-lg-12">
-                <h1 style="color: #fe7b54; text-shadow: 2px 2px 3px #353535b0;">
-                    SHOW ARTICLE
-                </h1>
-                <h6 style="color: #fe7b54; text-shadow: 1px 1px 2px #353535b0;">
-                    (*engko diganti)
-                </h6>
-
-            </div>
+    <div class="container">
+        <div class="banner-content text-right">
+            <h5 style="color: #00000062; ">
+                Areakerja.com >
+                    <a style="color: #00000062; " href="{{ route('artikel') }}">Artikel</a>  
+                    > {{ $art->judul}}
+            </h5>   
         </div>
+    </div>
 </section>
 @endsection
 
 @section('content')
-<div class="post-list2 " >
-    <div data-aos="fade-up" class="single-post2 align-items-center border-bottom" style="width: 750px; margin-left: auto;margin-right: auto">
-        <div class="form-group border-bottom text-center">
+<div class="col-sm-8 post-list2 " >
+    <div data-aos="fade-up" class="single-post2 align-items-center border-bottom" style="margin-left: auto;margin-right: auto">
+        <div class="col-12 border-bottom text-center">
             <h1 style="margin-bottom: 20px">{{ $art->judul }}</h1>
         </div>
 
-        <div class="details" >
-            <div class="title d-flex flex-row "  >
-                <div class="titles">
-                    <div class="section-row">
-                        {!! $art->content !!}
-                    </div>
-                </div>
+        <div >
+            
+            <div class="section-row">
+                {!! $art->content !!}
             </div>
         </div>
     </div>
@@ -58,6 +52,6 @@
             </li>
         </ul>
     </div>
-
+</div>
 @endsection
 
