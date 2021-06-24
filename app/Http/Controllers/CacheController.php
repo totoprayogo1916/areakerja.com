@@ -72,7 +72,7 @@ class CacheController extends Controller
         {
 
             $wish->delete();
-            return redirect()->back();
+            return back();
         }
         else
         {
@@ -82,11 +82,9 @@ class CacheController extends Controller
             'idJob' => $id,
 
         ]);
-
-
         // return redirect()->back()->with('message','Lowongan Telah Disimpan');
-        Alert::success('Lowongan Berhasil Disimpan');
-        return redirect()->back();
+        // Alert::success('Lowongan Berhasil Disimpan');
+        return back();
         }
         // echo ($ipaddress);
         // echo ('<br>');

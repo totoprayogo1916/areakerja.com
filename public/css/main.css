@@ -2576,6 +2576,15 @@ hr {
   box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
 }
 
+.form-pasang3:focus {
+  outline: none;
+  background-color: #ffffff;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  width: auto;
+  box-shadow: 3px 3px 3px 3px rgba(0.15, 0.15, 0.15, 0.15);
+}
+
 .form-pasang4 {
   background-color: #ffffff;
   /* margin-bottom: 30px; */
@@ -4775,6 +4784,11 @@ input.invalid {
     margin-right: 10px;
   }
 
+  a.btn.form-pasang3:focus{
+    margin-right: 10px;
+    outline: none;
+  }
+
   div.col-lg-8.post-list{
     margin-top: 80px;
   }
@@ -4857,5 +4871,5 @@ input.invalid {
   div.col-3.no-gutters.no-padding.thumb3{
     display: none;
   }
-    
+
 }
