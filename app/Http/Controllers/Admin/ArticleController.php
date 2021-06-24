@@ -81,12 +81,12 @@ class ArticleController extends Controller
             $file     = $request->gambar;
             $filename = $namaFile;
             $file->move($path, $filename);
-        
+
             $post_data = [
-                'judul' => $request->judul,
-                'ringkasan' =>  $request->ringkasan,
-                'content' =>  $request->content,
-                'gambar' =>  $filename
+                'judul'     => $request->judul,
+                'ringkasan' => $request->ringkasan,
+                'content'   => $request->content,
+                'gambar'    => $filename,
             ];
 
             $article->update($post_data);

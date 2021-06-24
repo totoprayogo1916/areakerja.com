@@ -41,17 +41,17 @@ Route::get('/get_client_ip', 'CacheController@get_client_ip')->name('get_client_
 Route::get(
     '/getmacshellexec',
     static function () {
-    $shellexec = shell_exec('getmac');
-    dd($shellexec);
-}
+        $shellexec = shell_exec('getmac');
+        dd($shellexec);
+    }
 );
 
 Route::get(
     '/getmacexec',
     static function () {
-    $shellexec = exec('getmac');
-    dd($shellexec);
-}
+        $shellexec = exec('getmac');
+        dd($shellexec);
+    }
 );
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], static function () {
     Route::get('/', 'HomeController@index')->name('home');

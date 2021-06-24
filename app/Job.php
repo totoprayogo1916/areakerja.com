@@ -78,23 +78,23 @@ class Job extends Model
             });
         })
             ->when(! empty(request()->input('category', 0)), static function ($query) {
-            $query->whereHas('categories', static function ($query) {
-                $query->whereId(request()->input('category'));
-            });
-        })
+                $query->whereHas('categories', static function ($query) {
+                    $query->whereId(request()->input('category'));
+                });
+            })
             ->when(! empty(request()->input('search', '')), static function ($query) {
-            $query->where(static function ($query) {
-                $search = request()->input('search');
-                $query->where('title', 'LIKE', "%$search%")
-                    ->orWhere('short_description', 'LIKE', "%$search%")
-                    ->orWhere('full_description', 'LIKE', "%$search%")
-                    ->orWhere('job_nature', 'LIKE', "%$search%")
-                    ->orWhere('requirements', 'LIKE', "%$search%")
-                    ->orWhere('address', 'LIKE', "%$search%")
-                    ->orWhereHas('company', static function ($query) use ($search) {
-                        $query->where('name', 'LIKE', "%$search%");
-                    });
+                $query->where(static function ($query) {
+                    $search = request()->input('search');
+                    $query->where('title', 'LIKE', "%$search%")
+                        ->orWhere('short_description', 'LIKE', "%$search%")
+                        ->orWhere('full_description', 'LIKE', "%$search%")
+                        ->orWhere('job_nature', 'LIKE', "%$search%")
+                        ->orWhere('requirements', 'LIKE', "%$search%")
+                        ->orWhere('address', 'LIKE', "%$search%")
+                        ->orWhereHas('company', static function ($query) use ($search) {
+                            $query->where('name', 'LIKE', "%$search%");
+                        });
+                });
             });
-        });
     }
 }
