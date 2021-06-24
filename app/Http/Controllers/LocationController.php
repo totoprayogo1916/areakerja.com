@@ -29,6 +29,7 @@ class LocationController extends Controller
             $ipaddress = 'UNKNOWN';
 
         $wishlist=Wish::where('ip', $ipaddress)->get();
+        $wishh=Wish::where([['ip', '=', $ipaddress]])->get();
         $riwayatlist=Riwayat::where('ip',$ipaddress)->get();
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
@@ -43,6 +44,6 @@ class LocationController extends Controller
 
         $banner = 'Location: '.$location->name;
 
-        return view('jobs.index', compact(['riwayatlist','ipaddress','wishlist','jobs', 'banner', 'searchCategories', 'searchLocations', 'sidbarJobs']));
+        return view('jobs.index', compact(['wishh','riwayatlist','ipaddress','wishlist','jobs', 'banner', 'searchCategories', 'searchLocations', 'sidbarJobs']));
     }
 }

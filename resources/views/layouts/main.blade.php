@@ -327,7 +327,8 @@ aria-hidden="true">
             var r = {!! $wishh !!};
             if (r != '') {
                 document.getElementById("btnfix1").style.background = "#000000";
-                document.getElementById("btnfix2").style.color = "#fff";
+                // document.getElementById("btnfix2").style.color = "#fff";
+                $("#btnfix2").html("<h4  class='gg' style='font-weight: normal;color: #ffffff' id='btnfix2'><span class='fa fa-star-o'></span><span style='display:inline-block; width: 10px;''></span> Hapus </h4>");
             } else {
                 // document.getElementById("check").
                 document.getElementById("btnfix1").style.background = "#fff";

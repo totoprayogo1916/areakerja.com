@@ -30,6 +30,8 @@ class CompaniesController extends Controller
             $ipaddress = $_SERVER['REMOTE_ADDR'];
         else
             $ipaddress = 'UNKNOWN';
+
+        $wishh=Wish::where([['ip', '=', $ipaddress]])->get();
         $job = Job::where('company_id', $id)->get();
         $job2 = Job::where('company_id', $id)->first();
         $searchLocations = Location::pluck('name', 'id');
@@ -39,7 +41,7 @@ class CompaniesController extends Controller
         // $name = $job->title;
         // dd($name);
 
-        return view('company.index', compact('job','job2','riwayatlist',
+        return view('company.index', compact('wishh','job','job2','riwayatlist',
         'searchLocations',
         'searchCategories',
         'wishlist','ipaddress'));
