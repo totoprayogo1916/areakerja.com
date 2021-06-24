@@ -4747,9 +4747,11 @@ input.invalid {
   }
   p.pg-1{
     font-size: 1rem;
+    color: #7e7e7e;
   }
 
   h2.pg-0{
+    color: #232323;
     font-size: 1.75rem;
   }
 }
@@ -4862,9 +4864,11 @@ input.invalid {
 
   p.pg-1{
     font-size: 0.75rem;
+    color: #7e7e7e;
   }
 
   h2.pg-0{
+      color: #232323;
     font-size: 1rem;
   }
 

@@ -20,7 +20,7 @@
 
 @section('content')
 <div class="col-sm-8 post-list2 " >
-    
+
     @foreach($article as $art)
     <a href="{{ route('artikel.show', $art->id)}}">
     <div data-aos="fade-up" class="single-post2 align-items-center d-flex border-bottom" style=" margin-left: auto;margin-right: auto">
@@ -33,13 +33,13 @@
             <div class="details" >
                 <div class="title d-flex flex-row "  >
                     <div class="titles">
-                        <h2 class ="pg-0" style="color: #7e7e7e; margin-bottom: 8px;font-weight: 500;">{{ $art->judul }}</h3>
+                        <h3 class ="pg-0" style="margin-bottom: 8px;font-weight: 500; ">{{ $art->judul }}</h3>
                         <p class="pg-1" style="font-weight: 400;line-height: 1.75; margin-bottom: 0px">{{ $art->ringkasan }}</p>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </div>
     </a>
     @endforeach
