@@ -8,6 +8,7 @@ use App\Job;
 use App\Location;
 use App\Riwayat;
 use App\Wish;
+use Illuminate\Support\Str;
 use Artikel;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -78,7 +79,7 @@ class ArtikelController extends Controller
         );
     }
 
-    public function show($id)
+    public function show($slug)
     {
         $searchLocations  = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
@@ -94,8 +95,11 @@ class ArtikelController extends Controller
             ->orderBy('id', 'desc')
             ->take(0)
             ->get();
-
-        $art = Article::where('id', $id)->first();
+        $article1=Article::all('judul')->first();
+        // $a=[Str::slug($article1->judul)];
+        $a=Str::slug($article1->judul);
+        // dd($a);
+        $art = Article::where($a, $slug)->first();
 
         $sidebarLocations = Location::withCount('jobs')
             ->whereHas('jobs')
