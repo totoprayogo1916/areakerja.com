@@ -8,9 +8,9 @@ use App\Job;
 use App\Location;
 use App\Riwayat;
 use App\Wish;
-use Illuminate\Support\Str;
 use Artikel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class ArtikelController extends Controller
@@ -33,9 +33,9 @@ class ArtikelController extends Controller
         } else {
             $ipaddress = 'UNKNOWN';
         }
-        $riwayatlist      = Riwayat::where('ip', $ipaddress)->get();
-        $wishlist         = Wish::where('ip', $ipaddress)->get();
-        $searchLocations  = Location::pluck('name', 'id');
+        $riwayatlist = Riwayat::where('ip', $ipaddress)->get();
+        $wishlist = Wish::where('ip', $ipaddress)->get();
+        $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $searchByCategory = Category::withCount('jobs')
             ->orderBy('jobs_count', 'desc')
@@ -81,7 +81,8 @@ class ArtikelController extends Controller
 
     public function show($slug)
     {
-        $searchLocations  = Location::pluck('name', 'id');
+        // dd($slug);
+        $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $searchByCategory = Category::withCount('jobs')
             ->orderBy('jobs_count', 'desc')
@@ -95,9 +96,9 @@ class ArtikelController extends Controller
             ->orderBy('id', 'desc')
             ->take(0)
             ->get();
-        $article1=Article::all('judul')->first();
+        $article1 = Article::all('judul')->first();
         // $a=[Str::slug($article1->judul)];
-        $a=Str::slug($article1->judul);
+        $a = Str::slug($article1->judul);
         // dd($a);
         $art = Article::where($a, $slug)->first();
 
@@ -108,7 +109,7 @@ class ArtikelController extends Controller
 
         return view(
             'artikel.show',
-            with([
+            compact([
                 'searchLocations',
                 'searchCategories',
                 'searchByCategory',
