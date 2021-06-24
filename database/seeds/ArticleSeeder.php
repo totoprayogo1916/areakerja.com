@@ -473,7 +473,7 @@ class ArticleSeeder extends Seeder
 
         $article = Article::create([
             'judul' => 'Bisnis Unik untuk Ibu Rumah Tangga Lulusan SMA/SMK',
-            'slug' => 'Bisnis-Unik-untuk-Ibu-Rumah-Tangga-Lulusan-SMA/SMK',
+            'slug' => 'Bisnis-Unik-untuk-Ibu-Rumah-Tangga-Lulusan-SMA-SMK',
             'ringkasan' =>
                 'Anda seorang ibu rumah tangga yang ingin mendapat tambahan pemasukan? Mau tahu caranya biar dapat uang tambahan?',
             'content' => '<p>Seorang ibu rumah tangga tentu tak melulu mengisi aktivitasnya di rumah saja.</p>
@@ -643,7 +643,7 @@ class ArticleSeeder extends Seeder
             'judul' =>
                 'Ternyata Memiliki Kemampuan Berfikir Kritis Di Dunia Kerja Penting, Kenapa?',
             'slug' =>
-                'Ternyata-Memiliki-Kemampuan-Berfikir-Kritis-Di-Dunia-Kerja-Penting,-Kenapa',
+                'Ternyata-Memiliki-Kemampuan-Berfikir-Kritis-Di-Dunia-Kerja-Penting-Kenapa',
             'ringkasan' =>
                 'Berbanggalah ketika kamu memiliki pemikiran kritis, karena itu banyak diincar perusahaan.',
             'content' => '<p>Berfikir kritis adalah kemampuan untuk menganalisis informasi secara objektif dan membuat penilaian yang rasional. Memiliki kemampuan itu sangat penting dalam dunia kerja, kerena analisa atau keputusan yang dihasilkan akan memberikan dampak yang baik. Selain ini kemampuan ini tidak semua orang memiliki pemikiran kritis dan tajam. Dampak positifnya adalah dapat menyikapi masalah dan tantangan kerja yang dihadapai. Misalnya dihadapkan dengan evaluasi yang harus dilakukan maka perlu adanya pemikiran kritis dan point point yang detail.</p>
@@ -691,7 +691,7 @@ class ArticleSeeder extends Seeder
             'judul' =>
                 'Cara Untuk Menghadapi Bos yang Rumit, Jangan Langsung Resign!',
             'slug' =>
-                'Cara-Untuk-Menghadapi-Bos-yang-Rumit,-Jangan-Langsung-Resign',
+                'Cara-Untuk-Menghadapi-Bos-yang-Rumit-Jangan-Langsung-Resign',
             'ringkasan' =>
                 'Resign adalah keputusan yang paling terakhir yang bisa kamu ambil ketika tidak mampu menerima kondisi dikantor.',
             'content' => '<p>Setiap atasan seharusnya bisa menjadi contoh yang baik dan teladan bagi para karyawannya. Tetapi bagaimana jika kita dihadapkan dengan atasan yang rumit dan berperilaku kurang menyenangkan kepada terhadap karyawannya. Ketika kamu memasukin dunia kerja, kamu tak hanya perlu mempersiapkan fisik saja tetapi harus mempersiapkan mental yang kuat. Salahsatunya dengan menghadapi berbagai macam karakter orang tak terkecuali dengan atasanmu.</p>
@@ -935,6 +935,100 @@ class ArticleSeeder extends Seeder
             
             <p>Semua orang pasti akan mengalami perasaan lelah dan stres yang datang dari mana saja dan akan berdampak pada fokus bekerjamu. Tentunya kamu tidak ingin dengan satu masalah bisa berimbas kepada semua faktor dalam hidupmu, bukan?</p>',
             'gambar' => 'fokus.jpg',
+        ]);
+        $article->save();
+
+        $article = Article::create([
+            'judul' => 'Bijak Mengatur Keuangan Saat Pandemic, Ikuti Cara ini!',
+            'slug' => 'Bijak-Mengatur-Keuangan-Saat-Pandemic-Ikuti-Cara-ini!',
+            'ringkasan' =>
+                'Covid-19 ini sudah memberikan banyak imbas kepada kita semua, tak terkecuali dengan kesejahteraan finansialmu!',
+            'content' => '<p><img alt="" src="https://www.lokerjogja.id/wp-content/uploads/2020/04/Tips-Mengatur-keuangan-pada-masa-pandemic-scaled.jpeg" style="height:49%; width:65%" /></p>
+
+            <p>Tahun 2020, dunia termasuk Indonesia dihebohkan dengan wabah penyakit yaitu Covid-19. Adanya pendemic Covid-19 ini berimbas pada kondisi keuangan kita. Hampir lumpuhnya perekonomian yang dikarenakan banyak Perusahaan berskala besar hingga kecil yang kehilangan penghasilannya. Hal tersebut mengakibatkan Banyak pekerja yang harus dipotong penghasilannya bahkan kehilangan pekerjaan.</p>
+            
+            <h2>Bijak Dalam Mengatur Keuangan pada Masa Pendemic</h2>
+            
+            <p>Sebab hal ini tidak bisa diprediksi kapan akan berakhir dan pastinya mengancam kesejahteraan financialmu. Dengan himbauan pemerintah untuk membatasi kegiatan diluar rumah pastinya pemasukan kamu akan berkurang. Kondisi ini membuat kemu berfikir untuk bisa mengatur keuangan, supaya tetap dalam keadaan stabih ditengah pandemic ini. Berikut cara yang bisa kamu ikuti untuk mengatur keuangan dengan bijak, yakni:</p>
+            
+            <p><strong>1. Menerima Keadaan</strong></p>
+            
+            <p>Menyadari bahwa keadaan ini dirasakan oleh banyak orang di belahan dunia sekalipun. Kamu harus tetap menjaga kesehatan dan kebersihan. Berfikir positif bahwa kondisi saat ini akan segera berlalu itu sangat dibutuhkan dalam situasi ini. Kurang konsumsi berita hoax yang membuat kamu semakin panik. Berusaha mengikuti himbauan pemerintah agar pandemic ini segera berakhir dan selama kamu banyak menghabiskan waktu untuk dirumah aja kamu bisa memanfaatkannya dengan melakukan hal positif atau mencari hobi baru.</p>
+            
+            <p><strong>2. Jangan panic buying</strong></p>
+            
+            <p>Panic buying adalah kepanikan seseorang yang diakibatkan ketakutan yang luar biasa dari wabah covid-19. Masyarakat akan memborong kebutuhan sehari-hari, masker, cairan pembersih tangan, sabun dan masih banyak lagi. Tak heran barang-barang pada pusat perbelanjaan kehabisan stok. Justru itu akan memberikan kerugian baik untuk kondisi keuanganmu atau orang lain karena banyak orang yang lebih membutuhkan tapi tidak mendapatkan barangnya. Kamu juga akan belanja berlebihan tanpa memperhitungkan kondisi keuanganmu. Jika kamu harus menyetok barang, cukup untuk stok barang selama 1 Minggu saja.</p>
+            
+            <p><strong>3. Evaluasi pendapatan</strong></p>
+            
+            <p>Kondisi pastinya akan berubah, dimana pemasukan akan mengalami penurunan. Kamu harus mengevaluasi lagi berapa mendapatan yang bisa kamu terima saat kondisi seperti ini. Bagaimana cash Flow bulanan kamu? Apakah ada perubahan atau tidak.</p>
+            
+            <p><strong>4. Hitung ulang anggaran belanja</strong></p>
+            
+            <p>Ketika kamu sudah melakukan evaluasi pendapatan maka kamu membuat anggaran ulang pengeluaranmu. Dengan kamu banyak waktu dirumah maka tak heran jika banyak pengeluaran yang tak terduga.</p>
+            
+            <p><strong>5. Tetap berinvestasi</strong></p>
+            
+            <p><strong><img alt="" src="https://risetcdn.jatimtimes.com/images/2020/05/22/Ilustrasi-Istimewa.7187fc50ab3f1b29.jpg" style="height:40%; width:65%" /></strong></p>
+            
+            <p>Walaupun dimasa yang sulit seperti ini, kamu sempatkan berapa persen untuk berinvestasi dan tetap mengalokasikan dana darutan. Meskipun nominalnya akan berbeda dengan biasanya, setidaknya akan tetap membuat finansialmu sehat dan terjaga.</p>
+            
+            <p>Jangan menunda untuk mengatur keuanganmu dengan bijak dalam kondisi pandemic ini. Karena kita tidak tahu sampaikan ini akan berakhir. Jika masih menunda maka bisa membuat kesulitan dikemudian hari.</p>',
+            'gambar' => 'shpg.jpeg',
+        ]);
+        $article->save();
+
+        $article = Article::create([
+            'judul' => '6 Pekerjaan Paling Menjanjikan untuk Masa Depan',
+            'slug' => '6-Pekerjaan-Paling-Menjanjikan-untuk-Masa-Depan',
+            'ringkasan' =>
+                'Prediksi pekerjaan yang paling dibutuhkan di masa depan berkaitan erat dengan teknologi, yuk kita lihat apa saja!',
+            'content' => '<p><img alt="" src="https://www.lokerjogja.id/wp-content/uploads/2019/05/Pekerjaan-paling-menjanjikan-di-masa-depan.jpeg" style="height:43%; width:65%" /></p>
+
+            <p>Tujuan bekerja adalah mendapatkan penghasilan. Untuk bertahan hidup, untuk membiayai kebutuhan hidup dan alasan lainnya. Siapa yang tak ingin pekerjaan yang nyaman dan menjanjikan? Apalagi jika anda bisa menemukan pekerjaan impian dengan gaji yang tak main-main. Seperti melakukan hobby yang dibayar. Ada beberapa pekerjaan paling menjanjikan untuk masa depan. Apakah termasuk pekerjaan yang anda miliki saat ini?</p>
+            
+            <p>Kesuksesan dalam bekerja memang macam-macam. Ada yang merasa sukses karena gaji besar. Ada juga yang merasa pekerjaannya sukses karena kepuasan pelanggan dan lain sebagainya. Berikut ini beberapa&nbsp;<a href="https://www.lokerjogja.id/pekerjaan-paling-menjanjikan/">pekerjaan paling menjanjikan di masa depan</a>.</p>
+            
+            <h2>Pekerjaan Paling Menjanjikan untuk Masa Depan</h2>
+            
+            <h3>1. Ahli Data</h3>
+            
+            <p><img alt="" src="https://akcdn.detik.net.id/visual/2018/11/01/0d59d2ff-29cc-43f6-ba1e-a5652429a1e1_169.jpeg?w=650" style="height:365%; width:65%" /></p>
+            
+            <p>Salah satu pekerjaan paling menjanjikan untuk masa depan adalah ahli data. Sekarang ini sudah banyak perusahaan yang merekrut ahli data agar bisa mengumpulkan, mengolah dan juga menganalisa data yang diperoleh perusahaan. Cara ini digunakan utnuk pengambilan keputusan perusahaan. Uniknya, agar bisa menjadi seorang data sicentist ini bukan berarti anda perlu berlatar belakang IPA misalnya. Tetapi pekerjaan ini bisa dikuasi oleh mereka yang memiliki pengetahuan di bidang komputer dan elektronik, ekonomi, statistik, matematika hingga manajemen.</p>
+            
+            <h3>2. Ahli Teknik dan Konstruksi</h3>
+            
+            <p><img alt="" src="https://blog.klikmro.com/wp-content/uploads/2019/09/architect-foreman-engineering-construction-worker-in-different-characte-vector.jpg" style="height:43%; width:65%" /></p>
+            
+            <p>Berikutnya, lapangan pekerjaan di bidang teknik diperkirakan masih terus meningkat. Seiring dengan berkembangnya teknologi, kehalian ini seperti nanoteknologi, robotik, material juga semakin dibutuhkan di masa depan. Selain itu, banyaknya pembangunan gedung dan juga proyek pemerintahan ini menjadikan profesi ahli konstruksi yang semakin dibutuhkan di beberapa waktu ke depan nanti.</p>
+            
+            <h3>3. Praktisi Kesehatan</h3>
+            
+            <p><img alt="" src="https://lh3.googleusercontent.com/proxy/71c3UVDJQX3yU0w-MpPD7dU4q7pEvkujGDC8GJy_PbJEVGzx-HV2AftuVLFk36Lz-ei9AgqIG6nc7Lgw_O5PBMjGpexjRU9Xd10P4Z3mxN2-_supXmr_7JUFPNJXyQEJlo_ozBW_wMQA6k4" style="height:38%; width:65%" /></p>
+            
+            <p>Pekerjaan paling menjanjikan untuk masa depan berikutnya adalah praktisi kesehatan. Apalagi profesi ini memang dirasa vital. Setiap masyarakat di tiap daerah tentu membutuhkan adanya praktisi kesehatan. Semakin bertambahnya penduduk otomatis juga menyebabkan kebutuhan masyarakat di bidang kesehatan yang dirasa terus meningkat. Hal ini tidak diimbangi dengna jumlah peminat yang ingin menggeluti profesi terutama yang ada di bidang kesehatan.</p>
+            
+            <h3>4. Digital Marketing</h3>
+            
+            <p><img alt="" src="https://duyngaodu.com/wp-content/uploads/2020/12/tu-hoc-digital-marketing.jpg" style="height:53%; width:65%" /></p>
+            
+            <p>Semakin meningkatnya pengguna internet tentu anda merasa bahwa paltform ini semakin dibutuhkan di tengah masyarakat. Kehadirannya seperti sebuah kebutuhan wajib. Di kanal digital ini perusahaan juga bisa melakukan promosi secara spesifik berdasarkan target maret yang ingin diincar. Misalnya saja seperti dari umur, lokasi, minat dan lain sebagainya. tak heran jika profesi digital marketer ini memang merupakan salah satu pekerjaan paling menjanjikan untuk masa depan.</p>
+            
+            <h3>5. SEO Specialist</h3>
+            
+            <p><img alt="" src="https://seo365.lt/en/wp-content/uploads/2020/06/what-is-an-seo-specialist.jpg" style="height:43%; width:65%" /></p>
+            
+            <p>Percaya atau tidak, lowongan untuk SEO Specialist ternyata diprediksi akan terus meningkat. SEO Specialist ini merupakan orang yang ahli dalam mengoptimalkan SEO. Sehingga halaman website suatu perusahaan menjadi yang paling terdepan dan utama ketika seseorang melakukan pencarian terhadap kata kunci tertentu. Dengan begitu, seorang SEO Specialist ini menjadi sangat penting dalam strategi pemasaran dari suatu perusahaan.</p>
+            
+            <h3>6. Software Developer</h3>
+            
+            <p><img alt="" src="https://glints.com/id/lowongan/wp-content/uploads/2017/10/Programmer-atau-Software-Engineer-lowongan-pekerjaan.jpg" style="height:43%; width:65%" /></p>
+            
+            <p>Era digital seperti sekarang memang hampir semua perusahaan baik yang kecil ataupun besar membutuhkan sistem komputerisasi untuk memajukan tiap unit bisnis yang mereka miliki. Teknologi komputer juga diprediksi akan semakin berkembang sehingga lowongan di bidang IT tentu saja meningkat. Apalagi khusus untuk profesi programmer dan juga software developer yang bisa terus meningkat.</p>
+            
+            <p>Beberapa pekerjaan ini disebut sebagai pekerjaan paling menjanjikan untuk masa depan. Anda bisa mulai untuk membekali diri dengan wawasan dan mengasah skill untuk menjawab tantangan ke depan. Meski memang tiap pekerjaan memiliki peluang dan tempatnya masing-masing. Namun beberapa pekerjaan ini disebut yang akan bertahan menghadapi perkembangan zaman khususnya adanya pengaruh besar dari teknologi.</p>',
+            'gambar' => 'krja.jpeg',
         ]);
         $article->save();
     }
