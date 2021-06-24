@@ -7,9 +7,9 @@
         <div class="banner-content text-right">
             <h5 style="color: #00000062; ">
                 Areakerja.com >
-                    <a style="color: #00000062; " href="{{ route('artikel') }}">Artikel</a>  
+                    <a style="color: #00000062; " href="{{ route('artikel') }}">Artikel</a>
                     > {{ $art->judul}}
-            </h5>   
+            </h5>
         </div>
     </div>
 </section>
@@ -23,7 +23,7 @@
         </div>
 
         <div >
-            
+
             <div class="section-row">
                 {!! $art->content !!}
             </div>
