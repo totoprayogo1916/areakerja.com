@@ -9,7 +9,7 @@ class Artikel extends Model
 {
     use HasFactory;
 
-    public $table = 'Artikel';
+    public $table    = 'Artikel';
     protected $dates = [
         'created_at',
         'updated_at',

@@ -8,7 +8,7 @@ class AddRelationshipFieldsToJobsTable extends Migration
 {
     public function up()
     {
-        Schema::table('jobs', function (Blueprint $table) {
+        Schema::table('jobs', static function (Blueprint $table) {
             $table->unsignedInteger('location_id');
 
             $table->foreign('location_id', 'location_fk_476211')->references('id')->on('locations');

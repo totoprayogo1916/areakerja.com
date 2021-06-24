@@ -15,7 +15,6 @@ class PermissionsController extends Controller
 {
     public function index()
     {
-
         $permissions = Permission::all();
 
         return view('admin.permissions.index', compact('permissions'));
@@ -23,7 +22,6 @@ class PermissionsController extends Controller
 
     public function create()
     {
-
         return view('admin.permissions.create');
     }
 
@@ -36,7 +34,6 @@ class PermissionsController extends Controller
 
     public function edit(Permission $permission)
     {
-
         return view('admin.permissions.edit', compact('permission'));
     }
 
@@ -51,13 +48,11 @@ class PermissionsController extends Controller
 
     public function show(Permission $permission)
     {
-
         return view('admin.permissions.show', compact('permission'));
     }
 
     public function destroy(Permission $permission)
     {
-
         $permission->delete();
 
         return back();

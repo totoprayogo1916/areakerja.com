@@ -11,7 +11,7 @@ class CompaniesTest extends DuskTestCase
     public function testIndex()
     {
         $admin = \App\User::find(1);
-        $this->browse(function (Browser $browser) use ($admin) {
+        $this->browse(static function (Browser $browser) use ($admin) {
             $browser->loginAs($admin);
             $browser->visit(route('admin.companies.index'));
             $browser->assertRouteIs('admin.companies.index');

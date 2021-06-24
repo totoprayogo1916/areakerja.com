@@ -23,7 +23,6 @@ class UsersController extends Controller
 
     public function create()
     {
-
         $roles = Role::all()->pluck('title', 'id');
 
         return view('admin.users.create', compact('roles'));
@@ -63,7 +62,6 @@ class UsersController extends Controller
 
     public function destroy(User $user)
     {
-
         $user->delete();
 
         return back();

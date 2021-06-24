@@ -13,7 +13,7 @@ class LowonganAdmin extends Migration
      */
     public function up()
     {
-        Schema::create('lowongan', function (Blueprint $table) {
+        Schema::create('lowongan', static function (Blueprint $table) {
             $table->increments('id');
 
             $table->string('namaperusahaan');

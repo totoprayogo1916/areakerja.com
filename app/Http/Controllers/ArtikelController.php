@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Article;
 use App\Category;
 use App\Job;
-use App\Wish;
-use App\Article;
 use App\Location;
 use App\Riwayat;
+use App\Wish;
 use Artikel;
+use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class ArtikelController extends Controller
@@ -17,23 +17,24 @@ class ArtikelController extends Controller
     public function artikel()
     {
         $ipaddress = '';
-        if (isset($_SERVER['HTTP_CLIENT_IP']))
+        if (isset($_SERVER['HTTP_CLIENT_IP'])) {
             $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
-        else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+        } elseif (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
             $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
-        else if(isset($_SERVER['HTTP_X_FORWARDED']))
+        } elseif (isset($_SERVER['HTTP_X_FORWARDED'])) {
             $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
-        else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+        } elseif (isset($_SERVER['HTTP_FORWARDED_FOR'])) {
             $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
-        else if(isset($_SERVER['HTTP_FORWARDED']))
+        } elseif (isset($_SERVER['HTTP_FORWARDED'])) {
             $ipaddress = $_SERVER['HTTP_FORWARDED'];
-        else if(isset($_SERVER['REMOTE_ADDR']))
+        } elseif (isset($_SERVER['REMOTE_ADDR'])) {
             $ipaddress = $_SERVER['REMOTE_ADDR'];
-        else
+        } else {
             $ipaddress = 'UNKNOWN';
-        $riwayatlist=Riwayat::where('ip',$ipaddress)->get();
-        $wishlist=Wish::where('ip', $ipaddress)->get();
-        $searchLocations = Location::pluck('name', 'id');
+        }
+        $riwayatlist      = Riwayat::where('ip', $ipaddress)->get();
+        $wishlist         = Wish::where('ip', $ipaddress)->get();
+        $searchLocations  = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $searchByCategory = Category::withCount('jobs')
             ->orderBy('jobs_count', 'desc')
@@ -72,14 +73,14 @@ class ArtikelController extends Controller
                 'sidebarCategories',
                 'article',
                 'wishlist',
-                'riwayatlist'
+                'riwayatlist',
             ])
         );
     }
 
     public function show($id)
     {
-        $searchLocations = Location::pluck('name', 'id');
+        $searchLocations  = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $searchByCategory = Category::withCount('jobs')
             ->orderBy('jobs_count', 'desc')
