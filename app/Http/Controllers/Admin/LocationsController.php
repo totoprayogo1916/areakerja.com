@@ -15,7 +15,6 @@ class LocationsController extends Controller
 {
     public function index()
     {
-
         $locations = Location::all();
 
         return view('admin.locations.index', compact('locations'));
@@ -23,7 +22,6 @@ class LocationsController extends Controller
 
     public function create()
     {
-
         return view('admin.locations.create');
     }
 
@@ -36,7 +34,6 @@ class LocationsController extends Controller
 
     public function edit(Location $location)
     {
-
         return view('admin.locations.edit', compact('location'));
     }
 
@@ -49,13 +46,11 @@ class LocationsController extends Controller
 
     public function show(Location $location)
     {
-
         return view('admin.locations.show', compact('location'));
     }
 
     public function destroy(Location $location)
     {
-
         $location->delete();
 
         return back();

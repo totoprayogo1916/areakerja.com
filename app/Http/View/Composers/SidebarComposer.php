@@ -2,17 +2,18 @@
 
 namespace App\Http\View\Composers;
 
-use Illuminate\View\View;
 use App\Category;
 use App\Job;
 use App\Location;
+use Illuminate\View\View;
 
 class SidebarComposer
 {
     /**
      * Bind data to the view.
      *
-     * @param  View  $view
+     * @param View $view
+     *
      * @return void
      */
     public function compose(View $view)

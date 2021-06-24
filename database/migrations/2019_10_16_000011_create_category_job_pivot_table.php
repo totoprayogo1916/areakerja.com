@@ -8,7 +8,7 @@ class CreateCategoryJobPivotTable extends Migration
 {
     public function up()
     {
-        Schema::create('category_job', function (Blueprint $table) {
+        Schema::create('category_job', static function (Blueprint $table) {
             $table->unsignedInteger('job_id');
 
             $table->foreign('job_id', 'job_id_fk_476513')->references('id')->on('jobs')->onDelete('cascade');

@@ -12,31 +12,29 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        $category =  Category::create([
+        $category = Category::create([
             'name' => 'Teknologi',
         ]);
         $category->save();
 
-        $category =  Category::create([
+        $category = Category::create([
             'name' => 'Kesehatan',
         ]);
         $category->save();
 
-        $category =  Category::create([
+        $category = Category::create([
             'name' => 'Multimedia',
         ]);
         $category->save();
 
-        $category =  Category::create([
+        $category = Category::create([
             'name' => 'Adminitrasi',
         ]);
         $category->save();
 
-        $category =  Category::create([
+        $category = Category::create([
             'name' => 'Pemasaran',
         ]);
         $category->save();
-
-
     }
 }
