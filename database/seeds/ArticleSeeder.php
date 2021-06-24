@@ -15,11 +15,10 @@ class ArticleSeeder extends Seeder
     public function run()
     {
         $article = Article::create([
-            'judul' => 'Cari Kerja Terasa Sulit? Mungkin, Kamu Perlu Tips Ini',
-            'slug' => 'Cari-Kerja-Terasa-Sulit-Mungkin-Kamu-Perlu-Tips-Ini',
-            'ringkasan' =>
-                'Belum punya pengalaman kerja, tentu akan menyulitkan seseorang untuk mendapatkan pekerjaan. Kamu bisa lakukan tips ini agar lebih berpotensi diterima kerja.',
-            'content' => '<h1><strong>Tips&nbsp;Cari&nbsp;Kerja&nbsp;</strong></h1>
+            'judul'     => 'Cari Kerja Terasa Sulit? Mungkin, Kamu Perlu Tips Ini',
+            'slug'      => 'Cari-Kerja-Terasa-Sulit-Mungkin-Kamu-Perlu-Tips-Ini',
+            'ringkasan' => 'Belum punya pengalaman kerja, tentu akan menyulitkan seseorang untuk mendapatkan pekerjaan. Kamu bisa lakukan tips ini agar lebih berpotensi diterima kerja.',
+            'content'   => '<h1><strong>Tips&nbsp;Cari&nbsp;Kerja&nbsp;</strong></h1>
 
             <p>Sudah bukan lagi hal yang aneh bila mencari pekerjaan memang menjadi sebuah tantangan tersendiri bagi para pencarinya.Penolakan kerja berulang-ulang tentunya menjadi sebuah beban bagi para pencari kerja. Khususnya fresh graduate yang masih minim pengalaman kerja.Kondisi seperti ini sudah jelas akan membuat cari kerja terasa sulit dan terbebani. Apalagi, jika sudah berbulan-bulan tak dapat pekerjaan. Namun, semua itu bukan menjadi alasan. Karena, ada beberapa upaya atau tips yang bisa kamu lakukan untuk mempermudah kamu mencari kerja. Dimana, tips ini cukup efektif dalam mendapatkan lowongan kerja secara mudah, sesuai bidangnya, dan mudah dalam mengajukan pelamaran. Untuk lebih jelasnya, mari kita simak bersama bagaimana tips yang tepat untuk mencari kerja yang terasa sulit dan susah.</p>
 
@@ -41,13 +40,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' =>
-                'Tips Mengasah Komunikasi agar Bisa Hadapi Wawancara Kerja',
-            'slug' =>
-                'Tips-Mengasah-Komunikasi-agar-Bisa-Hadapi-Wawancara-Kerja',
-            'ringkasan' =>
-                'Cara jitu yang perlu kamu pelajari untuk pertajam komunikasimu agar siap ketika wawancara kerja',
-            'content' => '<p>Biasanya, para pelamar kerja akan mengalami kegagalan atau tidak diterima kerja ketika memasuki tahap wawancara kerja.</p>
+            'judul'     => 'Tips Mengasah Komunikasi agar Bisa Hadapi Wawancara Kerja',
+            'slug'      => 'Tips-Mengasah-Komunikasi-agar-Bisa-Hadapi-Wawancara-Kerja',
+            'ringkasan' => 'Cara jitu yang perlu kamu pelajari untuk pertajam komunikasimu agar siap ketika wawancara kerja',
+            'content'   => '<p>Biasanya, para pelamar kerja akan mengalami kegagalan atau tidak diterima kerja ketika memasuki tahap wawancara kerja.</p>
 
             <p>Wajar saja mengingat banyak sekali yang terjebak oleh beberapa pertanyaan dari pewawancara yang tentu dijawab dengan jawaban yang kurang sesuai dengan kriteria perusahaan.</p>
             
@@ -98,13 +94,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' =>
-                'Tips Bersikap Bijak Ketika Mendapatkan Kritis di Lingkungan Kerja',
-            'slug' =>
-                'Tips-Bersikap-Bijak-Ketika-Mendapatkan-Kritis-di-Lingkungan-Kerja',
-            'ringkasan' =>
-                'Bijaklah dalam menyikapi kritik karena itu dapat membawa perubahan kearah lebih baik.',
-            'content' => '<p>Manusia sebagai makluk sosial yang sering berjumpa dan berkomunikasi dengan orang lain pasti tidak lepas dari penilaian, pujian, bahkan kritikan. Tidak semua orang dapat menanggapi kritis dengan bijak. Respon dari setiap orang akan berbeda dengan orang lain. Tak kecuali di lingkungan kerja, kamu pasti akan dihadapkan dengan kritik. Terkadang sulit untuk kita berlapang dada ketika mendapatkan kritik. Sebagian orang menanggap kritis adalah hal yang menyakitkan dan menjauhkan apalagi ketika kritik tersebut dilakukan pada waktu yang tidak tepat dan intonasi yang kurang pas seperti dnegan cara membentak, nada tinggi dan dilakukan dibanyak orang.</p>
+            'judul'     => 'Tips Bersikap Bijak Ketika Mendapatkan Kritis di Lingkungan Kerja',
+            'slug'      => 'Tips-Bersikap-Bijak-Ketika-Mendapatkan-Kritis-di-Lingkungan-Kerja',
+            'ringkasan' => 'Bijaklah dalam menyikapi kritik karena itu dapat membawa perubahan kearah lebih baik.',
+            'content'   => '<p>Manusia sebagai makluk sosial yang sering berjumpa dan berkomunikasi dengan orang lain pasti tidak lepas dari penilaian, pujian, bahkan kritikan. Tidak semua orang dapat menanggapi kritis dengan bijak. Respon dari setiap orang akan berbeda dengan orang lain. Tak kecuali di lingkungan kerja, kamu pasti akan dihadapkan dengan kritik. Terkadang sulit untuk kita berlapang dada ketika mendapatkan kritik. Sebagian orang menanggap kritis adalah hal yang menyakitkan dan menjauhkan apalagi ketika kritik tersebut dilakukan pada waktu yang tidak tepat dan intonasi yang kurang pas seperti dnegan cara membentak, nada tinggi dan dilakukan dibanyak orang.</p>
 
             <h2>Tips Bersikap Bijak Ketika Mendapatkan Kritis di Lingkungan Kerja</h2>
 
@@ -136,11 +129,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' => 'Cari Kerja Terasa Sulit? Mungkin, Kamu Perlu Tips Ini',
-            'slug' => 'Cari-Kerja-Terasa-Sulit-Mungkin-Kamu-Perlu-Tips-Ini',
-            'ringkasan' =>
-                'Belum punya pengalaman kerja, tentu akan menyulitkan seseorang untuk mendapatkan pekerjaan. Kamu bisa lakukan tips ini agar lebih berpotensi diterima kerja.',
-            'content' => '<p>Tak bisa dipungkiri bahwa hampir setiap karyawan tentu pernah mengalami rasa malas yang sangat ketika sedang bekerja.</p>
+            'judul'     => 'Cari Kerja Terasa Sulit? Mungkin, Kamu Perlu Tips Ini',
+            'slug'      => 'Cari-Kerja-Terasa-Sulit-Mungkin-Kamu-Perlu-Tips-Ini',
+            'ringkasan' => 'Belum punya pengalaman kerja, tentu akan menyulitkan seseorang untuk mendapatkan pekerjaan. Kamu bisa lakukan tips ini agar lebih berpotensi diterima kerja.',
+            'content'   => '<p>Tak bisa dipungkiri bahwa hampir setiap karyawan tentu pernah mengalami rasa malas yang sangat ketika sedang bekerja.</p>
 
             <p>Perasaan seperti ini memang wajar terjadi yang biasanya dikarenakan faktor lingkungan monoton ataupun karena sebab eksternal.</p>
             
@@ -208,13 +200,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' =>
-                'Catat! Hindari Beberapa Hal Ini agar Kamu Lolos Tes Kerja',
-            'slug' =>
-                'Catat-Hindari-Beberapa-Hal-Ini-agar-Kamu-Lolos-Tes-Kerja',
-            'ringkasan' =>
-                'Hal-hal penting yang perlu dihindari supaya bisa diterima kerja oleh perusahaan',
-            'content' => '<p>Dalam langkah persiapan tes masuk kerja, sudah barang tentu kamu harus mempersiapkan diri agar bisa menghadapinya.</p>
+            'judul'     => 'Catat! Hindari Beberapa Hal Ini agar Kamu Lolos Tes Kerja',
+            'slug'      => 'Catat-Hindari-Beberapa-Hal-Ini-agar-Kamu-Lolos-Tes-Kerja',
+            'ringkasan' => 'Hal-hal penting yang perlu dihindari supaya bisa diterima kerja oleh perusahaan',
+            'content'   => '<p>Dalam langkah persiapan tes masuk kerja, sudah barang tentu kamu harus mempersiapkan diri agar bisa menghadapinya.</p>
 
             <p>Namun, tak jarang dari beberapa orang yang kurang bisa memahami apa saja persiapan paling penting dan pokok sebelum menghadapi tes kerja.</p>
             
@@ -270,11 +259,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' => 'Catat! Ini Skill Penting dalam Dunia Kerja',
-            'slug' => 'Catat-Ini-Skill-Penting-dalam-Dunia-Kerja',
-            'ringkasan' =>
-                'Tak hanya nilai akademis saja, skill personal pun juga menjadi pertimbangan penting di dalam dunia kerja. Apa saja itu?',
-            'content' => '<p>Di dalam dunia kerja, seorang karyawan tentu dituntut untuk mampu beradaptasi dan cerdas dalam mencari solusi atas setiap masalah.</p>
+            'judul'     => 'Catat! Ini Skill Penting dalam Dunia Kerja',
+            'slug'      => 'Catat-Ini-Skill-Penting-dalam-Dunia-Kerja',
+            'ringkasan' => 'Tak hanya nilai akademis saja, skill personal pun juga menjadi pertimbangan penting di dalam dunia kerja. Apa saja itu?',
+            'content'   => '<p>Di dalam dunia kerja, seorang karyawan tentu dituntut untuk mampu beradaptasi dan cerdas dalam mencari solusi atas setiap masalah.</p>
 
             <p>Seluruh aspek tersebut tentunya menjadi sebuah nilai tersendiri selain dari kemampuan akademis yang didapat dari bangku sekolah maupun perkuliahan.</p>
             
@@ -328,11 +316,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' => 'Bisnis untuk Karyawan Gaji Kecil',
-            'slug' => 'Bisnis-untuk-Karyawan-Gaji-Kecil',
-            'ringkasan' =>
-                'Usaha sampingan yang menjanjikan bagi kamu yang bergaji kecil',
-            'content' => '<p>Ingin cari kerja sampingan buat menambah pemasukan? Tentu saja, kerja sampingan memang bisa menjadi sumber pemasukan bagi karyawan.</p>
+            'judul'     => 'Bisnis untuk Karyawan Gaji Kecil',
+            'slug'      => 'Bisnis-untuk-Karyawan-Gaji-Kecil',
+            'ringkasan' => 'Usaha sampingan yang menjanjikan bagi kamu yang bergaji kecil',
+            'content'   => '<p>Ingin cari kerja sampingan buat menambah pemasukan? Tentu saja, kerja sampingan memang bisa menjadi sumber pemasukan bagi karyawan.</p>
 
             <p>Namun, sebenarnya ada cara lain yang justru lebih efektif tanpa mengganggu waktu dari pekerjaan utama kamu sebagai seorang karyawan.</p>
             
@@ -400,13 +387,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' =>
-                '4 Kerja Freelance Terbaik dan Menguntungkan yang Patut Kamu Coba',
-            'slug' =>
-                '4-Kerja-Freelance-Terbaik-dan-Menguntungkan-yang-Patut-Kamu-Coba',
-            'ringkasan' =>
-                'Pilihan jenis pekerjaan freelance dengan prospek menjanjikan untuk kamu para karyawan maupun yang ingin mencari tambahan penghasilan.',
-            'content' => '<p>Mau mendapatkan penghasilan tambahan? Ingin dapat pengalaman dari luar pekerjaan utama?</p>
+            'judul'     => '4 Kerja Freelance Terbaik dan Menguntungkan yang Patut Kamu Coba',
+            'slug'      => '4-Kerja-Freelance-Terbaik-dan-Menguntungkan-yang-Patut-Kamu-Coba',
+            'ringkasan' => 'Pilihan jenis pekerjaan freelance dengan prospek menjanjikan untuk kamu para karyawan maupun yang ingin mencari tambahan penghasilan.',
+            'content'   => '<p>Mau mendapatkan penghasilan tambahan? Ingin dapat pengalaman dari luar pekerjaan utama?</p>
 
             <p>Tentu saja, kamu bisa mencari pekerjaan freelance atau pekerja lepas sebagai salah satu solusi untuk mendapatkan pemasukan di luar pendapatan utama kamu.</p>
             
@@ -472,11 +456,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' => 'Bisnis Unik untuk Ibu Rumah Tangga Lulusan SMA/SMK',
-            'slug' => 'Bisnis-Unik-untuk-Ibu-Rumah-Tangga-Lulusan-SMA-SMK',
-            'ringkasan' =>
-                'Anda seorang ibu rumah tangga yang ingin mendapat tambahan pemasukan? Mau tahu caranya biar dapat uang tambahan?',
-            'content' => '<p>Seorang ibu rumah tangga tentu tak melulu mengisi aktivitasnya di rumah saja.</p>
+            'judul'     => 'Bisnis Unik untuk Ibu Rumah Tangga Lulusan SMA/SMK',
+            'slug'      => 'Bisnis-Unik-untuk-Ibu-Rumah-Tangga-Lulusan-SMA-SMK',
+            'ringkasan' => 'Anda seorang ibu rumah tangga yang ingin mendapat tambahan pemasukan? Mau tahu caranya biar dapat uang tambahan?',
+            'content'   => '<p>Seorang ibu rumah tangga tentu tak melulu mengisi aktivitasnya di rumah saja.</p>
 
             <p>Ada berbagai kegiatan positif yang bisa dilakukan oleh para ibu rumah tangga. Sehingga, bisa dijadikan aktivitas untuk mengisi waktu luang di samping kewajibannya mengurus keluarga.</p>
             
@@ -532,13 +515,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' =>
-                'Cara Temukan Bakat Diri agar Dapat Pekerjaan yang Sesuai',
-            'slug' =>
-                'Cara-Temukan-Bakat-Diri-agar-Dapat-Pekerjaan-yang-Sesuai',
-            'ringkasan' =>
-                'Cara efektif buat kamu seorang fresh graduate untuk temukan bakat kemampuanmu supaya bisa sesuai dengan bidang pekerjaan yang diminati.',
-            'content' => '<p>Sebagai seorang fresh graduate, tentu saja ada banyak keinginan yang ingin dicapai. Seperti bekerja di perusahaan ternama, atau menjadi abdi negara. Ada juga yang ingin membuka usaha sendiri.</p>
+            'judul'     => 'Cara Temukan Bakat Diri agar Dapat Pekerjaan yang Sesuai',
+            'slug'      => 'Cara-Temukan-Bakat-Diri-agar-Dapat-Pekerjaan-yang-Sesuai',
+            'ringkasan' => 'Cara efektif buat kamu seorang fresh graduate untuk temukan bakat kemampuanmu supaya bisa sesuai dengan bidang pekerjaan yang diminati.',
+            'content'   => '<p>Sebagai seorang fresh graduate, tentu saja ada banyak keinginan yang ingin dicapai. Seperti bekerja di perusahaan ternama, atau menjadi abdi negara. Ada juga yang ingin membuka usaha sendiri.</p>
 
             <p>Namun, terkhusus buat kamu dengan status fresh graduate yang ingin bekerja, tentu saja satu hal yang harus dipahami adalah soal kemampuanmu dalam menjalani di bidang tersebut.</p>
 
@@ -592,11 +572,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' => 'Good Relationship Dengan Teman Kerja',
-            'slug' => 'Good-Relationship-Dengan-Teman-Kerja',
-            'ringkasan' =>
-                'Tidak ada salahnya kamu membangun hubungan pertemanan dengan teman kerjamu loh.',
-            'content' => '<p>Menjalin hubungan yang baik tidak hanya dengan keluarga saja loh. Teman kerja bisa dijadikan sahabat yang baik bahkan merasa seperti keluarga sendiri, di satu sisi lebih banyak menghabiskan waktu di kantor daripada di rumah, apalagi jadwal lembur yang padat dan pekerjaan &ndash; pekerjaan yang mengharuskan kerja sama tim. Good Relationship juga dapat mengatasi rasa jenuh di kantor karena pekerjaan yang menumpuk dan target yang belum tercapai. Banyak keuntungan yang bisa kamu dapatkan ketika kamu menjalin hubungan baik dengan teman kerjamu. Keuntungan tersebut tidak menutup kemungkinan hanya di tempat kerja saja, bahkan bisa mendapatkan keuntungan yang lainnya dan lebih besar. Jadi jangan menyia-nyiakan waktumu untuk membangun hubungan baik dengan teman kerjamu ya.</p>
+            'judul'     => 'Good Relationship Dengan Teman Kerja',
+            'slug'      => 'Good-Relationship-Dengan-Teman-Kerja',
+            'ringkasan' => 'Tidak ada salahnya kamu membangun hubungan pertemanan dengan teman kerjamu loh.',
+            'content'   => '<p>Menjalin hubungan yang baik tidak hanya dengan keluarga saja loh. Teman kerja bisa dijadikan sahabat yang baik bahkan merasa seperti keluarga sendiri, di satu sisi lebih banyak menghabiskan waktu di kantor daripada di rumah, apalagi jadwal lembur yang padat dan pekerjaan &ndash; pekerjaan yang mengharuskan kerja sama tim. Good Relationship juga dapat mengatasi rasa jenuh di kantor karena pekerjaan yang menumpuk dan target yang belum tercapai. Banyak keuntungan yang bisa kamu dapatkan ketika kamu menjalin hubungan baik dengan teman kerjamu. Keuntungan tersebut tidak menutup kemungkinan hanya di tempat kerja saja, bahkan bisa mendapatkan keuntungan yang lainnya dan lebih besar. Jadi jangan menyia-nyiakan waktumu untuk membangun hubungan baik dengan teman kerjamu ya.</p>
 
             <h2>Berikut cara membangun Good Relationship dengan Teman Kerja:</h2>
             
@@ -640,13 +619,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' =>
-                'Ternyata Memiliki Kemampuan Berfikir Kritis Di Dunia Kerja Penting, Kenapa?',
-            'slug' =>
-                'Ternyata-Memiliki-Kemampuan-Berfikir-Kritis-Di-Dunia-Kerja-Penting-Kenapa',
-            'ringkasan' =>
-                'Berbanggalah ketika kamu memiliki pemikiran kritis, karena itu banyak diincar perusahaan.',
-            'content' => '<p>Berfikir kritis adalah kemampuan untuk menganalisis informasi secara objektif dan membuat penilaian yang rasional. Memiliki kemampuan itu sangat penting dalam dunia kerja, kerena analisa atau keputusan yang dihasilkan akan memberikan dampak yang baik. Selain ini kemampuan ini tidak semua orang memiliki pemikiran kritis dan tajam. Dampak positifnya adalah dapat menyikapi masalah dan tantangan kerja yang dihadapai. Misalnya dihadapkan dengan evaluasi yang harus dilakukan maka perlu adanya pemikiran kritis dan point point yang detail.</p>
+            'judul'     => 'Ternyata Memiliki Kemampuan Berfikir Kritis Di Dunia Kerja Penting, Kenapa?',
+            'slug'      => 'Ternyata-Memiliki-Kemampuan-Berfikir-Kritis-Di-Dunia-Kerja-Penting-Kenapa',
+            'ringkasan' => 'Berbanggalah ketika kamu memiliki pemikiran kritis, karena itu banyak diincar perusahaan.',
+            'content'   => '<p>Berfikir kritis adalah kemampuan untuk menganalisis informasi secara objektif dan membuat penilaian yang rasional. Memiliki kemampuan itu sangat penting dalam dunia kerja, kerena analisa atau keputusan yang dihasilkan akan memberikan dampak yang baik. Selain ini kemampuan ini tidak semua orang memiliki pemikiran kritis dan tajam. Dampak positifnya adalah dapat menyikapi masalah dan tantangan kerja yang dihadapai. Misalnya dihadapkan dengan evaluasi yang harus dilakukan maka perlu adanya pemikiran kritis dan point point yang detail.</p>
 
             <h2>Ternyata Memiliki Kemampuan Berfikir Kritis Di Dunia Kerja Penting, Kenapa?</h2>
             
@@ -688,13 +664,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' =>
-                'Cara Untuk Menghadapi Bos yang Rumit, Jangan Langsung Resign!',
-            'slug' =>
-                'Cara-Untuk-Menghadapi-Bos-yang-Rumit-Jangan-Langsung-Resign',
-            'ringkasan' =>
-                'Resign adalah keputusan yang paling terakhir yang bisa kamu ambil ketika tidak mampu menerima kondisi dikantor.',
-            'content' => '<p>Setiap atasan seharusnya bisa menjadi contoh yang baik dan teladan bagi para karyawannya. Tetapi bagaimana jika kita dihadapkan dengan atasan yang rumit dan berperilaku kurang menyenangkan kepada terhadap karyawannya. Ketika kamu memasukin dunia kerja, kamu tak hanya perlu mempersiapkan fisik saja tetapi harus mempersiapkan mental yang kuat. Salahsatunya dengan menghadapi berbagai macam karakter orang tak terkecuali dengan atasanmu.</p>
+            'judul'     => 'Cara Untuk Menghadapi Bos yang Rumit, Jangan Langsung Resign!',
+            'slug'      => 'Cara-Untuk-Menghadapi-Bos-yang-Rumit-Jangan-Langsung-Resign',
+            'ringkasan' => 'Resign adalah keputusan yang paling terakhir yang bisa kamu ambil ketika tidak mampu menerima kondisi dikantor.',
+            'content'   => '<p>Setiap atasan seharusnya bisa menjadi contoh yang baik dan teladan bagi para karyawannya. Tetapi bagaimana jika kita dihadapkan dengan atasan yang rumit dan berperilaku kurang menyenangkan kepada terhadap karyawannya. Ketika kamu memasukin dunia kerja, kamu tak hanya perlu mempersiapkan fisik saja tetapi harus mempersiapkan mental yang kuat. Salahsatunya dengan menghadapi berbagai macam karakter orang tak terkecuali dengan atasanmu.</p>
 
             <h2>Cara Untuk Menghadapi Bos yang Rumit, Jangan Langsung Resign!</h2>
 
@@ -722,11 +695,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' => 'Tips Mengajukan Kenaikan Gaji Dengan Sopan',
-            'slug' => 'Tips-Mengajukan-Kenaikan-Gaji-Dengan-Sopan',
-            'ringkasan' =>
-                'Setiap karyawan pasti menginginkan kenaikan gaji bukan pengurangan gaji!',
-            'content' => '<p>Kamu saat ini sudah bekerja di sebuah perusahaan cukup lama, dan merasa saat ini waktu yang tepat untuk mengajukan kenaikan gaji. Memiliki pendapatan yang lebih tinggi adalah hal yang diinginkan oleh semua karyawan. Belum lagi ketika biaya hidupmu semakin bertambah. Pastinya berharap untuk mendapatkan penghasilan yang lebih tinggi dari sebelumnya.</p>
+            'judul'     => 'Tips Mengajukan Kenaikan Gaji Dengan Sopan',
+            'slug'      => 'Tips-Mengajukan-Kenaikan-Gaji-Dengan-Sopan',
+            'ringkasan' => 'Setiap karyawan pasti menginginkan kenaikan gaji bukan pengurangan gaji!',
+            'content'   => '<p>Kamu saat ini sudah bekerja di sebuah perusahaan cukup lama, dan merasa saat ini waktu yang tepat untuk mengajukan kenaikan gaji. Memiliki pendapatan yang lebih tinggi adalah hal yang diinginkan oleh semua karyawan. Belum lagi ketika biaya hidupmu semakin bertambah. Pastinya berharap untuk mendapatkan penghasilan yang lebih tinggi dari sebelumnya.</p>
 
             <h2>Tips Mengajukan Kenaikan Gaji Dengan Sopan</h2>
 
@@ -758,11 +730,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' => 'Faktor yang mempengaruhi kualitas kerja',
-            'slug' => 'Faktor-yang-mempengaruhi-kualitas-kerja',
-            'ringkasan' =>
-                'Dalam dunia kerja hal yang sangat diperlukan adalah kualitas kerja dalam menyelesaikan pekerjaan.',
-            'content' => '<p>Selama kerja kita akan dihadapkan dengan beberapa pekerjaan yang harus kamu selesaikan. Pastinya kamu ingin selalu bisa menyelesaikan semua pekerjaanmu dengan maksimal. Untuk bisa menyelesaikan pekerjaan secara tepat waktu dan maksimal kamu memerlukan semangat bekerja setiap harinya. Namun semangat tersebut kadang sering kendor. Lalu bagaimana jika semangatmu kendor dan harus maksimal menyelesaikan pekerjaan. Sedangkan meningkatkan semangatpun tidak mudah. Terlebih kamu mempunyai masalah diluar kantor.</p>
+            'judul'     => 'Faktor yang mempengaruhi kualitas kerja',
+            'slug'      => 'Faktor-yang-mempengaruhi-kualitas-kerja',
+            'ringkasan' => 'Dalam dunia kerja hal yang sangat diperlukan adalah kualitas kerja dalam menyelesaikan pekerjaan.',
+            'content'   => '<p>Selama kerja kita akan dihadapkan dengan beberapa pekerjaan yang harus kamu selesaikan. Pastinya kamu ingin selalu bisa menyelesaikan semua pekerjaanmu dengan maksimal. Untuk bisa menyelesaikan pekerjaan secara tepat waktu dan maksimal kamu memerlukan semangat bekerja setiap harinya. Namun semangat tersebut kadang sering kendor. Lalu bagaimana jika semangatmu kendor dan harus maksimal menyelesaikan pekerjaan. Sedangkan meningkatkan semangatpun tidak mudah. Terlebih kamu mempunyai masalah diluar kantor.</p>
 
             <p>Faktor yang mempengaruhi kualitas kerja</p>
             
@@ -792,11 +763,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' => 'Tips agar Bisa Mudah Diterima Kerja',
-            'slug' => 'Tips-agar-Bisa-Mudah-Diterima-Kerja',
-            'ringkasan' =>
-                'Kamu ingin segera mendapat pekerjaan yang layak? Tentu, tak hanya nilai akademik yang bagus saja, melainkan ada tips supaya kamu bisa dengan mudah diterima kerja di perusahaan tertentu.',
-            'content' => '<p>Memiliki pekerjaan tetap yang mapan dan dibayar dengan gaji tinggi, sudah barang tentu jadi impian banyak orang.</p>
+            'judul'     => 'Tips agar Bisa Mudah Diterima Kerja',
+            'slug'      => 'Tips-agar-Bisa-Mudah-Diterima-Kerja',
+            'ringkasan' => 'Kamu ingin segera mendapat pekerjaan yang layak? Tentu, tak hanya nilai akademik yang bagus saja, melainkan ada tips supaya kamu bisa dengan mudah diterima kerja di perusahaan tertentu.',
+            'content'   => '<p>Memiliki pekerjaan tetap yang mapan dan dibayar dengan gaji tinggi, sudah barang tentu jadi impian banyak orang.</p>
 
             <p>Sayangnya, untuk mendapatkan hal tersebut, sudah barang tentu menjadi suatu hal yang sulit. Bahkan, mungkin juga mustahil jika melihat kondisi banyaknya pengangguran sekarang.</p>
             
@@ -846,12 +816,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' =>
-                'Jangan Tertipu! Kenali Ciri-Ciri Penipuan Lowongan Kerja',
-            'slug' => 'Jangan-Tertipu-Kenali-Ciri-Ciri-Penipuan-Lowongan-Kerja',
-            'ringkasan' =>
-                'Saat ini mulai banyak penipuan lowongan kerja yang kian marak dan menipu banyak orang. Kenali ciri-ciri penipuan loker seperti ini sebagai langkah pencegahan agar kamu tak tertipu.',
-            'content' => '<p>Maraknya info loker di berbagai daerah, tentu saja menjadi salah satu peluang baik bagi pelamar kerja yang membutuhkan lowongan.</p>
+            'judul'     => 'Jangan Tertipu! Kenali Ciri-Ciri Penipuan Lowongan Kerja',
+            'slug'      => 'Jangan-Tertipu-Kenali-Ciri-Ciri-Penipuan-Lowongan-Kerja',
+            'ringkasan' => 'Saat ini mulai banyak penipuan lowongan kerja yang kian marak dan menipu banyak orang. Kenali ciri-ciri penipuan loker seperti ini sebagai langkah pencegahan agar kamu tak tertipu.',
+            'content'   => '<p>Maraknya info loker di berbagai daerah, tentu saja menjadi salah satu peluang baik bagi pelamar kerja yang membutuhkan lowongan.</p>
 
             <p>Namun, bersamaan dengan banyaknya informasi lowongan pekerjaan, banyak juga beberapa oknum yang melakukan penipuan lowongan kerja.</p>
             
@@ -899,13 +867,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' =>
-                'Kamu Sedang Banyak Fikiran? Berikut ini Tips Untuk Tetap Tokus Bekerja',
-            'slug' =>
-                'Kamu-Sedang-Banyak-Fikiran-Berikut-ini-Tips-Untuk-Tetap-Tokus-Bekerja',
-            'ringkasan' =>
-                'Biasakan untuk tidak membawa masalah ke dalam pekerjaanmu',
-            'content' => '<p><img alt="" src="https://www.lokerjogja.id/wp-content/uploads/2020/07/Tips-untuk-tetap-fokus-kerja.jpg" style="height:43%; width:65%" /></p>
+            'judul'     => 'Kamu Sedang Banyak Fikiran? Berikut ini Tips Untuk Tetap Tokus Bekerja',
+            'slug'      => 'Kamu-Sedang-Banyak-Fikiran-Berikut-ini-Tips-Untuk-Tetap-Tokus-Bekerja',
+            'ringkasan' => 'Biasakan untuk tidak membawa masalah ke dalam pekerjaanmu',
+            'content'   => '<p><img alt="" src="https://www.lokerjogja.id/wp-content/uploads/2020/07/Tips-untuk-tetap-fokus-kerja.jpg" style="height:43%; width:65%" /></p>
 
             <p>Dalam hidup ini yang sering kali kita dihadapkan dengan berbagai permasalah. Masalah bisa muncul dari mana saja salah satunya pekerjaan, keluarga, pertemanan dan masih banyak lagi. Masalah yang timbul terkadang membuat kita terbebani dan secara tidak sadar tidak terus menerus untuk memikirannya. Dampak dari kita berlalu dengan beban pikiran yang membuat kita terbatas adalah berkurangnya fokus kita. Fatal jika kita menjadi tidak fokus dalam pekerjaan. Dalam dunia kerja kita dituntut untuk profesional dan berusaha untuk meninggalkan sejenak permasalah diluar pekerjaan.</p>
             
@@ -939,11 +904,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' => 'Bijak Mengatur Keuangan Saat Pandemic, Ikuti Cara ini!',
-            'slug' => 'Bijak-Mengatur-Keuangan-Saat-Pandemic-Ikuti-Cara-ini!',
-            'ringkasan' =>
-                'Covid-19 ini sudah memberikan banyak imbas kepada kita semua, tak terkecuali dengan kesejahteraan finansialmu!',
-            'content' => '<p><img alt="" src="https://www.lokerjogja.id/wp-content/uploads/2020/04/Tips-Mengatur-keuangan-pada-masa-pandemic-scaled.jpeg" style="height:49%; width:65%" /></p>
+            'judul'     => 'Bijak Mengatur Keuangan Saat Pandemic, Ikuti Cara ini!',
+            'slug'      => 'Bijak-Mengatur-Keuangan-Saat-Pandemic-Ikuti-Cara-ini!',
+            'ringkasan' => 'Covid-19 ini sudah memberikan banyak imbas kepada kita semua, tak terkecuali dengan kesejahteraan finansialmu!',
+            'content'   => '<p><img alt="" src="https://www.lokerjogja.id/wp-content/uploads/2020/04/Tips-Mengatur-keuangan-pada-masa-pandemic-scaled.jpeg" style="height:49%; width:65%" /></p>
 
             <p>Tahun 2020, dunia termasuk Indonesia dihebohkan dengan wabah penyakit yaitu Covid-19. Adanya pendemic Covid-19 ini berimbas pada kondisi keuangan kita. Hampir lumpuhnya perekonomian yang dikarenakan banyak Perusahaan berskala besar hingga kecil yang kehilangan penghasilannya. Hal tersebut mengakibatkan Banyak pekerja yang harus dipotong penghasilannya bahkan kehilangan pekerjaan.</p>
             
@@ -979,11 +943,10 @@ class ArticleSeeder extends Seeder
         $article->save();
 
         $article = Article::create([
-            'judul' => '6 Pekerjaan Paling Menjanjikan untuk Masa Depan',
-            'slug' => '6-Pekerjaan-Paling-Menjanjikan-untuk-Masa-Depan',
-            'ringkasan' =>
-                'Prediksi pekerjaan yang paling dibutuhkan di masa depan berkaitan erat dengan teknologi, yuk kita lihat apa saja!',
-            'content' => '<p><img alt="" src="https://www.lokerjogja.id/wp-content/uploads/2019/05/Pekerjaan-paling-menjanjikan-di-masa-depan.jpeg" style="height:43%; width:65%" /></p>
+            'judul'     => '6 Pekerjaan Paling Menjanjikan untuk Masa Depan',
+            'slug'      => '6-Pekerjaan-Paling-Menjanjikan-untuk-Masa-Depan',
+            'ringkasan' => 'Prediksi pekerjaan yang paling dibutuhkan di masa depan berkaitan erat dengan teknologi, yuk kita lihat apa saja!',
+            'content'   => '<p><img alt="" src="https://www.lokerjogja.id/wp-content/uploads/2019/05/Pekerjaan-paling-menjanjikan-di-masa-depan.jpeg" style="height:43%; width:65%" /></p>
 
             <p>Tujuan bekerja adalah mendapatkan penghasilan. Untuk bertahan hidup, untuk membiayai kebutuhan hidup dan alasan lainnya. Siapa yang tak ingin pekerjaan yang nyaman dan menjanjikan? Apalagi jika anda bisa menemukan pekerjaan impian dengan gaji yang tak main-main. Seperti melakukan hobby yang dibayar. Ada beberapa pekerjaan paling menjanjikan untuk masa depan. Apakah termasuk pekerjaan yang anda miliki saat ini?</p>
             

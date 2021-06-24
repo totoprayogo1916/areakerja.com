@@ -8,10 +8,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdateArticleRequest;
 use App\Job;
 use App\Location;
-use Illuminate\Support\Str;
 use App\Riwayat;
 use App\Wish;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class ArticleController extends Controller
@@ -39,14 +39,14 @@ class ArticleController extends Controller
 
         $namaFile = time() . '.' . $request->gambar->extension();
         $request->gambar->move(public_path('img/artikel'), $namaFile);
-        $post = Article::all();
+        $post       = Article::all();
         $slug_judul = Str::slug($request->get('judul'));
-        $post = Article::create([
+        $post       = Article::create([
             'judul'     => $request->judul,
             'ringkasan' => $request->ringkasan,
             'content'   => $request->content,
             'gambar'    => $namaFile,
-            'slug' => $slug_judul
+            'slug'      => $slug_judul,
         ]);
 
         return redirect()->route('admin.article.index');
