@@ -8,9 +8,9 @@ use App\Job;
 use App\Location;
 use App\Riwayat;
 use App\Wish;
-use Illuminate\Support\Str;
 use Artikel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class ArtikelController extends Controller
@@ -81,6 +81,7 @@ class ArtikelController extends Controller
 
     public function show($slug)
     {
+        // dd($slug);
         $searchLocations  = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $searchByCategory = Category::withCount('jobs')
@@ -95,12 +96,23 @@ class ArtikelController extends Controller
             ->orderBy('id', 'desc')
             ->take(0)
             ->get();
+<<<<<<< HEAD
         $article1=Article::all('judul')->first();
         // $a=[Str::slug($article1->judul)];
         $a=Str::slug($article1->judul);
         // dd($a);
         $art = Article::where($a, $slug)->first();
 
+=======
+
+        $art = Article::where('slug', $slug)->first();
+        // $tampilkan = Crud::where('slug_judul', $slug)->first();
+        $sidebarLocations = Location::withCount('jobs')
+            ->whereHas('jobs')
+            ->orderBy('jobs_count', 'desc')
+            ->get();
+
+>>>>>>> 7f3b6d206ea2eb58a328aafbf8d93d02cd98684b
         $sidebarCategories = Category::withCount('jobs')
             ->whereHas('jobs')
             ->orderBy('jobs_count', 'desc')
@@ -108,7 +120,11 @@ class ArtikelController extends Controller
 
         return view(
             'artikel.show',
+<<<<<<< HEAD
             with([
+=======
+            compact([
+>>>>>>> 7f3b6d206ea2eb58a328aafbf8d93d02cd98684b
                 'searchLocations',
                 'searchCategories',
                 'searchByCategory',
