@@ -27,10 +27,11 @@ class Company extends Model implements HasMedia
     protected $fillable = [
         'name',
         'gambar',
-        'slug',
+        
         'created_at',
         'updated_at',
         'deleted_at',
+        'slug'
     ];
 
     public function registerMediaConversions(Media $media = null): void

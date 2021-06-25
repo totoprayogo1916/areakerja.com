@@ -9,6 +9,7 @@ use App\Http\Requests\MassDestroyCompanyRequest;
 use App\Http\Requests\StoreCompanyRequest;
 use App\Http\Requests\UpdateCompanyRequest;
 use Gate;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -36,10 +37,11 @@ class CompaniesController extends Controller
         // ]);
         $namaFile = time() . '.' . $request->gambar->extension();
         $request->gambar->move(public_path('img/companylogo'), $namaFile);
-
+        $slug_judul = Str::slug($request->get('name'));
         Company::insert([
             'name'   => $request->name,
             'gambar' => $namaFile,
+            'slug'   => $slug_judul
         ]);
 
         // if ($request->input('logo', false)) {
