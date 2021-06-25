@@ -10,8 +10,9 @@ use App\Wish;
 
 class CategoryController extends Controller
 {
-    public function show(Category $category)
+    public function show($slug)
     {
+        // dd($slug);
         $ipaddress = '';
         if (isset($_SERVER['HTTP_CLIENT_IP'])) {
             $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
@@ -32,6 +33,7 @@ class CategoryController extends Controller
         $wishlist         = Wish::where('ip', $ipaddress)->get();
         $wishh            = Wish::where([['ip', '=', $ipaddress]])->get();
         $riwayatlist      = Riwayat::where('ip', $ipaddress)->get();
+        $category         = Category::where('slug', $slug)->first();
         $searchLocations  = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $jobs             = Job::with('company')

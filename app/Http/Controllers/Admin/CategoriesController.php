@@ -10,6 +10,7 @@ use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 use Gate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert as FacadesAlert;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -33,7 +34,14 @@ class CategoriesController extends Controller
 
     public function store(StoreCategoryRequest $request)
     {
-        $category = Category::create($request->all());
+
+        $slug     = Str::slug($request->get('name'));
+        // dd($slug);
+        // $category = Category::create($request->all());
+        $category              = Category::create([
+            'name'             => $request->name,
+            'slug'            => $slug,
+        ]);
 
         return redirect()->route('admin.categories.index');
     }

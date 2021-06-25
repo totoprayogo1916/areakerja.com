@@ -33,7 +33,7 @@ Route::get('search', 'HomeController@search')->name('search');
 Route::resource('jobs', 'JobController')->only(['index']);
 Route::get('jobs/{slug}', 'JobController@show')->name('jobs.show');
 Route::delete('delete/{id}', 'JobController@delete')->name('jobs.delete');
-Route::get('category/{category}', 'CategoryController@show')->name('categories.show');
+Route::get('category/{slug}', 'CategoryController@show')->name('categories.show');
 Route::get('location/{location}', 'LocationController@show')->name('locations.show');
 Route::get('/getid', 'HomeController@addcart')->name('addcart');
 

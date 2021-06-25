@@ -41,7 +41,7 @@
         <h4>Jobs by Category</h4>
         <ul class="cat-list">
             @foreach($sidebarCategories as $category)
-                <li><a class="justify-content-between d-flex" href="{{ route('categories.show', $category->id)}}"><p>{{ $category->name }}</p><span>{{ $category->jobs_count }}</span></a></li>
+                <li><a class="justify-content-between d-flex" href="{{ route('categories.show', $category->slug)}}"><p>{{ $category->name }}</p><span>{{ $category->jobs_count }}</span></a></li>
                 <hr style="width: 90%"/>
             @endforeach
         </ul>
