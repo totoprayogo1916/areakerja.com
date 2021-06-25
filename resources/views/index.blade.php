@@ -5,7 +5,7 @@
     <div class="banner-area">
         <div class="row align-items-center justify-content-center" style="margin-right: 15px; margin-left: 15px">
             <div class="banner-content col-lg-12">
-                <h1 style="color: #fe7b54; text-shadow: 2px 2px 3px #353535b0;">
+                <h1 style="color: #fe7b54; margin-bottom:5px; text-shadow: 2px 2px 3px #353535b0;">
                     Tempat Mencari Kerja
                 </h1>
                 <h6 style="color: #fe7b54; text-shadow: 1px 1px 2px #353535b0;">
