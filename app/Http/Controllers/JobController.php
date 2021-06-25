@@ -181,6 +181,7 @@ class JobController extends Controller
             $ipaddress = 'UNKNOWN';
         }
 
+        $wishh            = Wish::all();
         $wishlist         = Wish::where('ip', $ipaddress)->get();
         $riwayatlist      = Riwayat::where('ip', $ipaddress)->get();
         $searchLocations  = Location::pluck('name', 'id');
@@ -197,7 +198,7 @@ class JobController extends Controller
                 'banner',
                 'searchLocations',
                 'searchCategories',
-                'sidbarJobs', 'wishlist', 'ipaddress',
+                'sidbarJobs', 'wishlist', 'ipaddress', 'wishh',
             ])
         );
     }
