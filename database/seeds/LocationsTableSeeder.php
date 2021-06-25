@@ -14,37 +14,37 @@ class LocationsTableSeeder extends Seeder
     {
         $location = Location::create([
             'name' => 'Kota Yogyakarta',
-            'slug' => 'kota-yogyakarta'
+            'slug' => 'kota-yogyakarta',
         ]);
         $location->save();
 
         $location = Location::create([
             'name' => 'Sleman',
-            'slug' => 'sleman'
+            'slug' => 'sleman',
         ]);
         $location->save();
 
         $location = Location::create([
             'name' => 'Bantul',
-            'slug' => 'bantul'
+            'slug' => 'bantul',
         ]);
         $location->save();
 
         $location = Location::create([
             'name' => 'Kulon Progo',
-            'slug' => 'kulon-progo'
+            'slug' => 'kulon-progo',
         ]);
         $location->save();
 
         $location = Location::create([
             'name' => 'Gunungkidul',
-            'slug' => 'gunungkidul'
+            'slug' => 'gunungkidul',
         ]);
         $location->save();
 
         $location = Location::create([
             'name' => 'Luar Yogyakarta',
-            'slug' => 'luar-yogyakarta'
+            'slug' => 'luar-yogyakarta',
         ]);
         $location->save();
     }

@@ -31,12 +31,12 @@ class CompaniesController extends Controller
             $ipaddress = 'UNKNOWN';
         }
 
-        $wishh            = Wish::where([['ip', '=', $ipaddress]])->get();
-        $job              = Company::where('slug', $slug)->get();
-        $job3             = $job->pluck('id'); 
-        $job4             = $job->pluck('name', 'gambar');
+        $wishh = Wish::where([['ip', '=', $ipaddress]])->get();
+        $job   = Company::where('slug', $slug)->get();
+        $job3  = $job->pluck('id');
+        $job4  = $job->pluck('name', 'gambar');
         // dd($job3);
-        $job2             = Job::where('company_id', $job3)->get();
+        $job2 = Job::where('company_id', $job3)->get();
         // dd($job2);
         $searchLocations  = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');

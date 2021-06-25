@@ -12,6 +12,7 @@ use App\Job;
 use App\Location;
 use Gate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\Response;
 
 class JobsController extends Controller
@@ -36,13 +37,18 @@ class JobsController extends Controller
 
     public function store(StoreJobRequest $request)
     {
+        // dd($request);
         // $job->categories()->sync($request->input('categories', []));
         // $casts = ['jobs' => '    ']
         // $data = json_encode($request->requirements);
         // $arr = $request->all();
         // $arr = serialize($data);
         // $create = Job::create(['session'=>$arr]);
-        $job = Job::create([
+        $companyName      = Company::where('id', $request->company_id)->first('name');
+        $slug_deskripsi   = Str::slug($request->get('short_description'));
+        $slug_companyname = Str::slug($companyName->name);
+        $slug             = $slug_companyname . '-' . $slug_deskripsi;
+        $job              = Job::create([
             'title'             => $request->title,
             'salary'            => $request->salary,
             'address'           => $request->address,
@@ -58,6 +64,7 @@ class JobsController extends Controller
             'location_id'       => $request->location_id,
             'full_description'  => $request->full_description,
             'short_description' => $request->short_description,
+            'slug'              => $slug,
         ]);
         $job->categories()->sync($request->input('categories', []));
         // return request('requirements');

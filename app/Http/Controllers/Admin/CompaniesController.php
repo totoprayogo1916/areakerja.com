@@ -9,8 +9,8 @@ use App\Http\Requests\MassDestroyCompanyRequest;
 use App\Http\Requests\StoreCompanyRequest;
 use App\Http\Requests\UpdateCompanyRequest;
 use Gate;
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\Response;
 
 class CompaniesController extends Controller
@@ -41,7 +41,7 @@ class CompaniesController extends Controller
         Company::insert([
             'name'   => $request->name,
             'gambar' => $namaFile,
-            'slug'   => $slug_judul
+            'slug'   => $slug_judul,
         ]);
 
         // if ($request->input('logo', false)) {

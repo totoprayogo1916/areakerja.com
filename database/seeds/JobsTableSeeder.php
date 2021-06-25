@@ -30,6 +30,7 @@ class JobsTableSeeder extends Seeder
             'bataslamaran'      => '20 Januari 2021',
             'umur'              => 'Maks 20 Tahun',
             'lokasikerja'       => 'Jalan Kanoman No. 20 Banguntapan, Yogyakarta',
+            'slug'              => 'seven-inc-membuka-lowongan-kerja-untuk-posisi-sebagai-kameramen',
         ]);
         $job->save();
         $job->categories()->sync(3);

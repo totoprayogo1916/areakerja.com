@@ -79,7 +79,7 @@ class JobController extends Controller
         $searchLocations  = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $wishlist         = Wish::where('ip', $ipaddress)->get();
-        $wishh       = Wish::where([['ip', '=', $ipaddress], ['idJob', '=', $job->id]])->get();
+        $wishh            = Wish::where([['ip', '=', $ipaddress], ['idJob', '=', $job->id]])->get();
 
         $riwayatlist = Riwayat::where('ip', $ipaddress)->get();
 
