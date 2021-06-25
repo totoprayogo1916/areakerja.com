@@ -113,11 +113,11 @@
             <a href="/rekomendasi" style="color: #000; font-size: 14px">Rekomendasi Loker Lainnya></a>
         </div>
     </div>
-    
+
     <h3 class ="sng-ttl9" style="margin-bottom: 15px; ">Lowongan Terbaru</h3>
     @foreach($jobs as $job)
     {{-- <a href="{{ route('jobs.show', $job->id) }}"> --}}
-    <a href="{{ route('riwayat', $job->id) }}">
+    <a href="{{ route('riwayat', $job->slug) }}">
         <div data-aos="fade-up" class="single-post align-items-center d-flex" style="width: 100%">
             <div class="row " style="margin: auto;margin-right:20px" >
                 @if($job->company->gambar)
@@ -133,7 +133,7 @@
                     <div class="col-6 text-right">
                         <h5 class ="sng-dtl" ><span class="fa fa-clock-o" aria-hidden="true"></span>  {{ $job->created_at->diffForHumans() }}
                     </div>
-                    
+
                 </div>
                 <div class="title d-flex flex-row justify-content-between"  >
                     <div class="titles">

@@ -42,6 +42,7 @@ class Job extends Model
         'deleted_at',
         'location_id',
         'full_description',
+        'slug',
         'short_description',
     ];
 
