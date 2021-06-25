@@ -12,7 +12,7 @@ use App\Wish;
 
 class CompaniesController extends Controller
 {
-    public function index($id)
+    public function index($slug)
     {
         $ipaddress = '';
         if (isset($_SERVER['HTTP_CLIENT_IP'])) {
@@ -32,14 +32,16 @@ class CompaniesController extends Controller
         }
 
         $wishh            = Wish::where([['ip', '=', $ipaddress]])->get();
-        $job              = Job::where('company_id', $id)->get();
-        $job2             = Job::where('company_id', $id)->first();
+        $job              = Company::where('slug', $slug)->get();
+        $job3             = $job->pluck('id'); 
+        $job4             = $job->pluck('name', 'gambar');
+        // dd($job3);
+        $job2             = Job::where('company_id', $job3)->get();
+        // dd($job2);
         $searchLocations  = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $wishlist         = Wish::where('ip', $ipaddress)->get();
         $riwayatlist      = Riwayat::where('ip', $ipaddress)->get();
-        // $name = $job->title;
-        // dd($name);
 
         return view('company.index', compact(
             'wishh',

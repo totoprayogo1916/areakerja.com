@@ -5,7 +5,7 @@
     <div class="banner-area">
         <div class="overlay overlay-bg container" >
             <h4 class="gg" style="color: #000000; margin-top: 2.5% ">
-                Areakerja.com > {{ $job2->company->name }}
+                Areakerja.com > {{ $job[0]->name }}
                 </h4>
         </div>
         <div class="row align-items-center justify-content-center" style="margin-right: 15px; margin-left: 15px;">
@@ -59,14 +59,14 @@
     <div class="row no-gutters" style="width: 100%">
         <div class="col-8 " style="margin-bottom: 20px">
             <h3 class ="sng-ttl2" style="margin-bottom: 10px; font-weight: normal">Riwayat Lowongan</h3>
-            <h2 class="cmp" >{{ $job2->company->name }}</h2>
+            <h2 class="cmp" >{{ $job[0]->name }}</h2>
 
         </div>
         <div class="col-4 text-right " style="width: 100%;">
-            <img class= "gg6" src="{{ url('img/companylogo') }}/{{ $job2->company->gambar }}" style="margin: auto; " >
+            <img class= "gg6" src="{{ url('img/companylogo') }}/{{ $job[0]->gambar }}" style="margin: auto; " >
         </div>
     </div>
-    @foreach($job as $job1)
+    @foreach($job2 as $job1)
     <a href="{{ route('riwayat', $job1->id) }}">
         <div data-aos="fade-up" class="single-post align-items-center d-flex" style="width: 100%">
             

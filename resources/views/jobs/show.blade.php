@@ -65,7 +65,7 @@
                     <h1 class="ttl" style="margin-top: 8px"> {{ $job->title }}</h1>
                 </div>
                 <div class="col-4 text-right" style="width: 100px;height: 100px;">
-                    <a href="{{ route('compan', $job->company->id) }}">
+                    <a href="{{ route('compan', $job->company->slug) }}">
                     <img style="width: 25px;height: 25px;margin-bottom: 45%;margin-left: 45%" src="{{ url('img/link.png') }}" class="position-absolute">
                     <img class= "gg5" src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" style="margin: auto;margin-top: 3%;margin-left: 5% " >
                 </a>
