@@ -34,7 +34,7 @@ Route::resource('jobs', 'JobController')->only(['index']);
 Route::get('jobs/{slug}', 'JobController@show')->name('jobs.show');
 Route::delete('delete/{id}', 'JobController@delete')->name('jobs.delete');
 Route::get('category/{slug}', 'CategoryController@show')->name('categories.show');
-Route::get('location/{location}', 'LocationController@show')->name('locations.show');
+Route::get('location/{slug}', 'LocationController@show')->name('locations.show');
 Route::get('/getid', 'HomeController@addcart')->name('addcart');
 
 Route::get('/get_client_ip', 'CacheController@get_client_ip')->name('get_client_ip');

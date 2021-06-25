@@ -10,7 +10,7 @@ use App\Wish;
 
 class LocationController extends Controller
 {
-    public function show(Location $location)
+    public function show($slug)
     {
         $ipaddress = '';
         if (isset($_SERVER['HTTP_CLIENT_IP'])) {
@@ -29,6 +29,7 @@ class LocationController extends Controller
             $ipaddress = 'UNKNOWN';
         }
 
+        $location         = Location::where('slug', $slug)->first();
         $wishlist         = Wish::where('ip', $ipaddress)->get();
         $wishh            = Wish::where([['ip', '=', $ipaddress]])->get();
         $riwayatlist      = Riwayat::where('ip', $ipaddress)->get();

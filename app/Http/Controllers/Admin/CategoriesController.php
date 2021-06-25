@@ -34,13 +34,12 @@ class CategoriesController extends Controller
 
     public function store(StoreCategoryRequest $request)
     {
-
-        $slug     = Str::slug($request->get('name'));
+        $slug = Str::slug($request->get('name'));
         // dd($slug);
         // $category = Category::create($request->all());
-        $category              = Category::create([
-            'name'             => $request->name,
-            'slug'            => $slug,
+        $category = Category::create([
+            'name' => $request->name,
+            'slug' => $slug,
         ]);
 
         return redirect()->route('admin.categories.index');

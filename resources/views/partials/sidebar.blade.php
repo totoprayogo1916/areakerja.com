@@ -12,7 +12,7 @@
         <h4>Jobs by Location</h4>
         <ul class="cat-list">
             @foreach($sidebarLocations as $location)
-                <li><a class="justify-content-between d-flex" href="{{ route('locations.show', $location->id) }}"><p>{{ $location->name }}</p><span>{{ $location->jobs_count }}</span></a></li>
+                <li><a class="justify-content-between d-flex" href="{{ route('locations.show', $location->slug) }}"><p>{{ $location->name }}</p><span>{{ $location->jobs_count }}</span></a></li>
                 <hr style="width: 90%"/>
             @endforeach
         </ul>
