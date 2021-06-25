@@ -194,7 +194,7 @@ class JobController extends Controller
                 'banner',
                 'searchLocations',
                 'searchCategories',
-                'sidbarJobs', 'wishlist', 'ipaddress','wishh'
+                'sidbarJobs', 'wishlist', 'ipaddress', 'wishh',
             ])
         );
     }
