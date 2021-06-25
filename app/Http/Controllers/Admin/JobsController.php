@@ -37,7 +37,6 @@ class JobsController extends Controller
 
     public function store(StoreJobRequest $request)
     {
-        // dd($request);
         // $job->categories()->sync($request->input('categories', []));
         // $casts = ['jobs' => '    ']
         // $data = json_encode($request->requirements);
@@ -45,10 +44,11 @@ class JobsController extends Controller
         // $arr = serialize($data);
         // $create = Job::create(['session'=>$arr]);
         $companyName      = Company::where('id', $request->company_id)->first('name');
-        $slug_deskripsi   = Str::slug($request->get('short_description'));
+        $slug_title       = Str::slug($request->get('title'));
         $slug_companyname = Str::slug($companyName->name);
-        $slug             = $slug_companyname . '-' . $slug_deskripsi;
-        $job              = Job::create([
+        $slug             = $slug_title . '-di-' . $slug_companyname;
+        // dd($slug);
+        $job = Job::create([
             'title'             => $request->title,
             'salary'            => $request->salary,
             'address'           => $request->address,

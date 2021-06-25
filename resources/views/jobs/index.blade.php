@@ -90,14 +90,14 @@
     </div>
     <h3 class ="sng-ttl9" style="margin-bottom: 15px; ">Semua Lowongan </h3>
     @foreach($jobs as $job)
-    <a href="{{ route('jobs.show', $job->id) }}">
+    <a href="{{ route('jobs.show', $job->slug) }}">
         <div data-aos="fade-up" class="single-post align-items-center d-flex" style="width: 100%">
             <div class="row" style="margin: auto;margin-right:20px" >
                 @if($job->company->gambar)
                     <img class="thumb2" src="{{ url('img/companylogo') }}/{{ $job->company->gambar }}" >
                 @endif
             </div>
-            
+
             <div class="details " style="width: 100%" style="margin-top: 14px; overflow: unset; white-space: nowrap;">
                 <div class="row no-gutters" style="width: 100%;margin-left: -0.5%">
                     <div class="col-6 " >
@@ -106,7 +106,7 @@
                     <div class="col-6 text-right">
                         <h5 class ="sng-dtl" ><span class="fa fa-clock-o" aria-hidden="true"></span>  {{ $job->created_at->diffForHumans() }}
                     </div>
-                    
+
                 </div>
                 <div class="title d-flex flex-row justify-content-between"  >
                     <div class="titles">
