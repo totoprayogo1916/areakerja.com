@@ -90,8 +90,9 @@ class CacheController extends Controller
         // echo ('<br>');
     }
 
-    public function riwayat($id)
+    public function riwayat($slug)
     {
+
         // $job = Job::where('id', $id)->first();
         $ipaddress = '';
         if (isset($_SERVER['HTTP_CLIENT_IP'])) {
@@ -109,19 +110,21 @@ class CacheController extends Controller
         } else {
             $ipaddress = 'UNKNOWN';
         }
-
-        $riwayat = Riwayat::where([['idJob', $id], ['ip', $ipaddress]])->first();
+        $idJob = Job::where('slug', $slug)->first();
+        // dd($idJob->slug);
+        $riwayat = Riwayat::where([['idJob', $idJob->id], ['ip', $ipaddress]])->first();
 
         if (isset($riwayat)) {
-            return redirect()->route('jobs.show', ['job' => $id]);
+            // return redirect()->route('jobs.show', ['job' => $idJob->id]);
+            return redirect()->route('jobs.show', ['slug' => $slug]);
         } else {
-            Riwayat::insert([
-                'ip'         => $ipaddress,
-                'idJob'      => $id,
-                'created_at' => Carbon::now(),
-            ]);
+            // Riwayat::insert([
+            //     'ip'         => $ipaddress,
+            //     // 'idJob'      => $id,
+            //     'created_at' => Carbon::now(),
+            // ]);
 
-            return redirect()->route('jobs.show', ['job' => $id]);
+            return redirect()->route('jobs.show', ['slug' => $slug]);
         }
     }
 }

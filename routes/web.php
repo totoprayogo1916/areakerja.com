@@ -14,7 +14,7 @@ Route::get('/getuser', 'UserSystemInfoController@getusersysteminfo')->name('getu
 Route::post('/kontakform', 'HomeController@kirimmail')->name('kontakform');
 // Route::get('/cache/{id}', 'CacheController@index')->name('cache');
 Route::get('/cache/{id}', 'CacheController@get_client_ip')->name('cache');
-Route::get('/riwayat/{id}', 'CacheController@riwayat')->name('riwayat');
+Route::get('/riwayat/{slug}', 'CacheController@riwayat')->name('riwayat');
 Route::get('/company/{id}', 'CompaniesController@index')->name('compan');
 // Route::resource('artikel', 'ArtikelController')->only(['artikel', 'show']);
 Route::get('/artikel', 'ArtikelController@artikel')->name('artikel');
@@ -30,7 +30,8 @@ Route::post('/formpasang', 'LowonganController@formpasang')->name('formpasang');
 
 
 Route::get('search', 'HomeController@search')->name('search');
-Route::resource('jobs', 'JobController')->only(['index', 'show']);
+Route::resource('jobs', 'JobController')->only(['index']);
+Route::get('jobs/{slug}', 'JobController@show')->name('jobs.show');
 Route::delete('delete/{id}', 'JobController@delete')->name('jobs.delete');
 Route::get('category/{category}', 'CategoryController@show')->name('categories.show');
 Route::get('location/{location}', 'LocationController@show')->name('locations.show');

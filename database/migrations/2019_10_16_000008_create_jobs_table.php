@@ -41,6 +41,8 @@ class CreateJobsTable extends Migration
 
             $table->string('salary');
 
+            $table->string('slug')->nullable();
+
             $table->timestamps();
 
             $table->softDeletes();
