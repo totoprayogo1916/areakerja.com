@@ -43,6 +43,8 @@ class JobController extends Controller
 
         $banner = 'Jobs';
 
+        $title = 'Hack By 5h1ro-Fadelmi-Cimss-Ipaa-anis';
+
         return view(
             'jobs.index',
             compact([
@@ -51,6 +53,7 @@ class JobController extends Controller
                 'searchLocations',
                 'searchCategories',
                 'sidbarJobs', 'riwayatlist', 'wishlist', 'ipaddress', 'wishh',
+                'title',
             ])
         );
     }
@@ -83,11 +86,12 @@ class JobController extends Controller
 
         $riwayatlist = Riwayat::where('ip', $ipaddress)->get();
 
+        $title = 'Lowongan Kerja' . ' ' . $job->title;
         // Alert::success('Sukses Membuka');
 
         return view(
             'jobs.show',
-            compact(['job', 'riwayatlist', 'searchLocations', 'searchCategories', 'wishlist', 'ipaddress', 'wishh'])
+            compact(['title', 'job', 'riwayatlist', 'searchLocations', 'searchCategories', 'wishlist', 'ipaddress', 'wishh'])
         );
     }
 
@@ -177,6 +181,7 @@ class JobController extends Controller
             $ipaddress = 'UNKNOWN';
         }
 
+        $wishh            = Wish::all();
         $wishlist         = Wish::where('ip', $ipaddress)->get();
         $riwayatlist      = Riwayat::where('ip', $ipaddress)->get();
         $searchLocations  = Location::pluck('name', 'id');
@@ -193,7 +198,7 @@ class JobController extends Controller
                 'banner',
                 'searchLocations',
                 'searchCategories',
-                'sidbarJobs', 'wishlist', 'ipaddress',
+                'sidbarJobs', 'wishlist', 'ipaddress', 'wishh',
             ])
         );
     }

@@ -52,7 +52,10 @@ class HomeController extends Controller
             ->orderBy('id', 'desc')
             ->get();
 
-        return view('index', compact(['riwayatlist', 'wishlist', 'ipaddress', 'searchLocations', 'searchCategories', 'searchByCategory', 'jobs', 'sidbarJobs', 'wishh']));
+
+        $title = 'Hack By 5h1ro-Fadelmi-Cimss-Ipaa-anis';
+
+        return view('index', compact(['title', 'riwayatlist', 'wishlist', 'ipaddress', 'searchLocations', 'searchCategories', 'searchByCategory', 'jobs', 'sidbarJobs', 'wishh']));
     }
 
     public function search(Request $request)
