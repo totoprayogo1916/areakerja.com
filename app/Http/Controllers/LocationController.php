@@ -46,6 +46,8 @@ class LocationController extends Controller
 
         $banner = 'Location: ' . $location->name;
 
-        return view('jobs.index', compact(['wishh', 'riwayatlist', 'ipaddress', 'wishlist', 'jobs', 'banner', 'searchCategories', 'searchLocations', 'sidbarJobs']));
+        $title = 'Lokasi Kerja' . ' ' . $location->name;
+
+        return view('jobs.index', compact(['title', 'wishh', 'riwayatlist', 'ipaddress', 'wishlist', 'jobs', 'banner', 'searchCategories', 'searchLocations', 'sidbarJobs']));
     }
 }

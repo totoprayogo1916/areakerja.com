@@ -62,9 +62,12 @@ class ArtikelController extends Controller
             ->orderBy('jobs_count', 'desc')
             ->get();
 
+        $title = 'Area Kerja - Artikel';
+
         return view(
             'artikel.index',
             compact([
+                'title',
                 'searchLocations',
                 'searchCategories',
                 'searchByCategory',
@@ -109,9 +112,12 @@ class ArtikelController extends Controller
             ->orderBy('jobs_count', 'desc')
             ->get();
 
+        $title = 'Artikel' . ' ' . $art->judul;
+
         return view(
             'artikel.show',
             compact([
+                'title',
                 'searchLocations',
                 'searchCategories',
                 'searchByCategory',
