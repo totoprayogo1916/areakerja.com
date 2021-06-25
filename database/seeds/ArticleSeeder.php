@@ -905,7 +905,7 @@ class ArticleSeeder extends Seeder
 
         $article = Article::create([
             'judul'     => 'Bijak Mengatur Keuangan Saat Pandemic, Ikuti Cara ini!',
-            'slug'      => 'Bijak-Mengatur-Keuangan-Saat-Pandemic-Ikuti-Cara-ini!',
+            'slug'      => 'Bijak-Mengatur-Keuangan-Saat-Pandemic-Ikuti-Cara-ini',
             'ringkasan' => 'Covid-19 ini sudah memberikan banyak imbas kepada kita semua, tak terkecuali dengan kesejahteraan finansialmu!',
             'content'   => '<p><img alt="" src="https://www.lokerjogja.id/wp-content/uploads/2020/04/Tips-Mengatur-keuangan-pada-masa-pandemic-scaled.jpeg" style="height:49%; width:65%" /></p>
 
