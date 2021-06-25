@@ -53,6 +53,7 @@ class JobsTableSeeder extends Seeder
             'bataslamaran'      => '20 Jani 2021',
             'umur'              => 'Maks 25 Tahun',
             'lokasikerja'       => 'Jalan Bimo No. 20 Sleman, Yogyakarta',
+            'slug'              => 'jw-media-production-membuka-lowongan-kerja-untuk-posisi-sebagai-customer-service',
         ]);
         $job->save();
         $job->categories()->sync(4);
@@ -75,6 +76,7 @@ class JobsTableSeeder extends Seeder
             'bataslamaran'      => '28 Juni 2021',
             'umur'              => 'Maks 26 Tahun',
             'lokasikerja'       => 'Jalan Kawedanan No. 20 Kulon Progo, Yogyakarta',
+            'slug'              => 'areakerja-pawon-resto-adalah-perusahaan-yang-bergerak-dibidang-kuliner',
         ]);
         $job->save();
         $job->categories()->sync(5);
@@ -97,6 +99,7 @@ class JobsTableSeeder extends Seeder
             'bataslamaran'      => '1 Juli 2021',
             'umur'              => 'Maks 24 Tahun',
             'lokasikerja'       => 'Jalan Affandi No. 20 Depok, Sleman, Yogyakarta',
+            'slug'              => 'jw-media-production-membuka-lowongan-kerja-untuk-posisi-sebagai-admin',
         ]);
         $job->save();
         $job->categories()->sync(4);
@@ -119,6 +122,7 @@ class JobsTableSeeder extends Seeder
             'bataslamaran'      => '20 Juni 2021',
             'umur'              => 'Maks 20 Tahun',
             'lokasikerja'       => 'Jalan Kanoman No. 20 Banguntapan Yogyakarta',
+            'slug'              => 'seven-inc-membuka-lowongan-kerja-untuk-posisi-sebagai-content-creator',
         ]);
         $job->save();
         $job->categories()->sync(1);
@@ -141,6 +145,7 @@ class JobsTableSeeder extends Seeder
             'bataslamaran'      => '20 Juni 2021',
             'umur'              => 'Maks 24 Tahun',
             'lokasikerja'       => 'Jalan Kenari No. 29 Yogyakarta',
+            'slug'              => 'jogja-tailor-jogja-tailor-adalah-perusahaan-yang-bergerak-di-bidang-fashion',
         ]);
         $job->save();
         $job->categories()->sync(3);
@@ -163,6 +168,7 @@ class JobsTableSeeder extends Seeder
             'bataslamaran'      => '20 Januari 2021',
             'umur'              => 'Maks 20 Tahun',
             'lokasikerja'       => 'Jalan Manunggal No. 20 Yogyakarta',
+            'slug'              => 'kopisoe-membuka-lowongan-kerja-untuk-posisi-sebagai-barista-waiters-cashier',
         ]);
         $job->save();
         $job->categories()->sync(5);
@@ -185,6 +191,7 @@ class JobsTableSeeder extends Seeder
             'bataslamaran'      => '2 Juli 2021',
             'umur'              => 'Maks 22 Tahun',
             'lokasikerja'       => 'Jalan Laksda. Adi Sucipto No. 89 Yogyakarta',
+            'slug'              => 'seven-inc-pt-kata-suhu-kita-dengan-brand-suhu-consulting-and-training-merupakah-sebuah-perusahaan-yang-bergerak-di-bidang-jasa-pelatihan-dan-konsultasi-it-dan-sdm',
         ]);
         $job->save();
         $job->categories()->sync(3);
@@ -207,6 +214,7 @@ class JobsTableSeeder extends Seeder
             'bataslamaran'      => '25 Juni 2021',
             'umur'              => 'Maks 25 Tahun',
             'lokasikerja'       => 'Jalan Kanoman No. 20 Banguntapan Yogyakarta',
+            'slug'              => 'the-oxalis-regency-hotel-the-oxalis-regency-hotel-ini-berjarak-2-km-dari-borobudur-international-golf-&-country-club',
         ]);
         $job->save();
         $job->categories()->sync(4);
@@ -229,13 +237,15 @@ class JobsTableSeeder extends Seeder
             'bataslamaran'      => '20 Juni 2021',
             'umur'              => 'Maks 20 Tahun',
             'lokasikerja'       => 'Jalan Kanoman No. 20 Banguntapan Yogyakarta',
+            'slug'              => 'seven-inc-jw-media-production-adalah-pengelola-website-dan-beberapa-channel-youtube-yang-berlokasi-di-yogyakarta.',
+
         ]);
         $job->save();
         $job->categories()->sync(3);
 
         $job = Job::create([
             'title'             => 'TikTok Creator',
-            'short_description' => 'Membuka lowongan untuk talenta muda profesional ',
+            'short_description' => 'Membuka lowongan untuk talenta muda profesional',
             'full_description'  => ['Membuat konten bermanfaat yang sedang menjadi trend', 'Membuat timeline pekerjaan terhadap tema harian maupun bulanan', 'Melakukan kegiatan suting dari hasil tema yang dibuat, serta dapat berkoordinasi dengan keseluruh team yang berkaitan.'],
             'requirements'      => ['Update tentang trend terkini', 'Kreatif dan memiliki banyak ide', 'Menguasai software software editing (Desain Grafis / Videografi)'],
             'job_nature'        => 'Full-time',
@@ -251,6 +261,7 @@ class JobsTableSeeder extends Seeder
             'bataslamaran'      => '18 Juni 2021',
             'umur'              => 'Maks 22 Tahun',
             'lokasikerja'       => 'Jalan  Mangkubumi No. 11 Yogyakarta',
+            'slug'              => 'dynamic-space-membuka-lowongan-untuk-talenta-muda-profesional',
         ]);
         $job->save();
         $job->categories()->sync(3);
@@ -273,6 +284,7 @@ class JobsTableSeeder extends Seeder
             'bataslamaran'      => '20 Juli 2021',
             'umur'              => 'Maks 26 Tahun',
             'lokasikerja'       => 'Jalan Melati Sorowajan No. 2 Yogyakarta',
+            'slug'              => 'areakerja-membuka-lowongan-untuk-human-resource-development',
         ]);
         $job->save();
         $job->categories()->sync(3);
