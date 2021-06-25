@@ -53,7 +53,7 @@ class JobController extends Controller
                 'searchLocations',
                 'searchCategories',
                 'sidbarJobs', 'riwayatlist', 'wishlist', 'ipaddress', 'wishh',
-                'title'
+                'title',
             ])
         );
     }
@@ -86,7 +86,7 @@ class JobController extends Controller
 
         $riwayatlist = Riwayat::where('ip', $ipaddress)->get();
 
-        $title = 'Lowongan Kerja'.' '.$job->title;
+        $title = 'Lowongan Kerja' . ' ' . $job->title;
         // Alert::success('Sukses Membuka');
 
         return view(
