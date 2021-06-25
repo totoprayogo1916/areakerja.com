@@ -74,14 +74,13 @@ class JobController extends Controller
             $ipaddress = 'UNKNOWN';
         }
 
-        $job = Job::where('slug', $slug)->get();
-        // dd($job);
+        $job = Job::where('slug', $slug)->first();
         $job->load('company');
         $searchLocations  = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $wishlist         = Wish::where('ip', $ipaddress)->get();
-        // dd($job);
         $wishh       = Wish::where([['ip', '=', $ipaddress], ['idJob', '=', $job->id]])->get();
+
         $riwayatlist = Riwayat::where('ip', $ipaddress)->get();
 
         // Alert::success('Sukses Membuka');

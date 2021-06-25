@@ -111,18 +111,18 @@ class CacheController extends Controller
             $ipaddress = 'UNKNOWN';
         }
         $idJob = Job::where('slug', $slug)->first();
-        // dd($idJob->slug);
+        // dd($idJob->id);
         $riwayat = Riwayat::where([['idJob', $idJob->id], ['ip', $ipaddress]])->first();
 
         if (isset($riwayat)) {
             // return redirect()->route('jobs.show', ['job' => $idJob->id]);
             return redirect()->route('jobs.show', ['slug' => $slug]);
         } else {
-            // Riwayat::insert([
-            //     'ip'         => $ipaddress,
-            //     // 'idJob'      => $id,
-            //     'created_at' => Carbon::now(),
-            // ]);
+            Riwayat::insert([
+                'ip'         => $ipaddress,
+                'idJob'      => $idJob->id,
+                'created_at' => Carbon::now(),
+            ]);
 
             return redirect()->route('jobs.show', ['slug' => $slug]);
         }
