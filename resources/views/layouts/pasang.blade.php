@@ -5,7 +5,7 @@
     <link rel="shortcut icon" href="{{ asset('img/img-01.png') }}">
     <meta name="author" content="codepixer">
     <meta charset="UTF-8">
-    <title>Area Kerja - {{ $title }}</title>
+    <title>{{ $title }} - Area Kerja</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">

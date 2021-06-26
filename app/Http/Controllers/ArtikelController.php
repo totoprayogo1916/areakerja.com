@@ -62,7 +62,7 @@ class ArtikelController extends Controller
             ->orderBy('jobs_count', 'desc')
             ->get();
 
-        $title = 'Area Kerja - Artikel';
+        $title = 'Artikel';
 
         return view(
             'artikel.index',
@@ -112,7 +112,7 @@ class ArtikelController extends Controller
             ->orderBy('jobs_count', 'desc')
             ->get();
 
-        $title = 'Artikel' . ' ' . $art->judul;
+        $title = $art->judul;
 
         return view(
             'artikel.show',

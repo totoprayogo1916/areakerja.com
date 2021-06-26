@@ -43,8 +43,6 @@ class JobController extends Controller
 
         $banner = 'Jobs';
 
-        $title = 'Hack By 5h1ro-Fadelmi-Cimss-Ipaa-anis';
-
         return view(
             'jobs.index',
             compact([
@@ -53,7 +51,6 @@ class JobController extends Controller
                 'searchLocations',
                 'searchCategories',
                 'sidbarJobs', 'riwayatlist', 'wishlist', 'ipaddress', 'wishh',
-                'title',
             ])
         );
     }
@@ -86,7 +83,7 @@ class JobController extends Controller
 
         $riwayatlist = Riwayat::where('ip', $ipaddress)->get();
 
-        $title = 'Lowongan Kerja' . ' ' . $job->title;
+        $title = 'Lowongan Kerja ' .$job->title. ' di '.$job->company->name;
         // Alert::success('Sukses Membuka');
 
         return view(
@@ -122,9 +119,12 @@ class JobController extends Controller
             ->orderBy('jobs_count', 'desc')
             ->get();
 
+        $title = 'Pasang Lowongan Kerja';
+
         return view(
             'jobs.pasang',
             compact([
+                'title',
                 'searchLocations',
                 'searchCategories',
                 'searchByCategory',

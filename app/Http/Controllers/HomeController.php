@@ -53,7 +53,7 @@ class HomeController extends Controller
             ->get();
 
 
-        $title = 'Hack By 5h1ro-Fadelmi-Cimss-Ipaa-anis';
+        $title = 'Lowongan Kerja di Yogyakarta';
 
         return view('index', compact(['title', 'riwayatlist', 'wishlist', 'ipaddress', 'searchLocations', 'searchCategories', 'searchByCategory', 'jobs', 'sidbarJobs', 'wishh']));
     }
@@ -99,12 +99,16 @@ class HomeController extends Controller
     {
         // Carbon::setLocale('id');
         // echo Carbon::now()->diffForHumans();
-        return view('user.aboutus');
+
+        $title = 'Tentang Kami';
+        return view('user.aboutus', compact(['title']));
     }
 
     public function kontak()
     {
-        return view('user.kontak');
+        $title = 'Kontak Kami';
+
+        return view('user.kontak', compact(['title']));
     }
 
     public function kontakform(Request $request)
