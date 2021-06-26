@@ -20,19 +20,19 @@
                             <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
                             </h4>
                             <div >
-                            <input id="namaperusahaan" name="namaperusahaan" type="text"  class="form-control2 " oninput="this.className = ''" >
+                            <input id="namaperusahaan" name="namaperusahaan" type="text"  class="form-control2 " oninput="this.className = ''" placeholder="Areakerja.com">
                             </div> </div>
 
                         <div class="form-group">
                             <h4>Deskripsi Perusahaan</h4>
                             <div >
-                            <textarea id="deskripsiperusahaan" name="deskripsiperusahaan" style="width: 100%" oninput="this.className = ''" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
+                            <textarea id="deskripsiperusahaan" name="deskripsiperusahaan" style="width: 100%" oninput="this.className = ''" type="text"  class="form-control2 " value="" data-type="text" aria-required="true" placeholder="Areakerja merupakan ..."></textarea>
                             </div> </div>
 
                         <div class="form-group">
                             <h4>Alamat Perusahaan</h4>
                             <div >
-                            <textarea id="alamatperusahaan" name="alamatperusahaan" style="width: 100%" oninput="this.className = ''"  type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
+                            <textarea id="alamatperusahaan" name="alamatperusahaan" style="width: 100%" oninput="this.className = ''"  type="text"  class="form-control2 " value="" data-type="text" aria-required="true" placeholder="Jl. X"></textarea>
                             </div> </div>
 
                         <div class="form-group">
@@ -56,7 +56,7 @@
                                 <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
                             </h4>
                             <div >
-                                <input id="title" name="title"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
+                                <input id="title" name="title"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true" placeholder="Kameramen">
                             </div>
                         </div>
 
@@ -77,35 +77,37 @@
                                 <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
                             </h4>
                             <div >
-                                <input id="salary" name="salary"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
+                                <input id="salary" name="salary"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true" placeholder="1,2 Jt - 2 Jt">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <h4>Alamat Kantor</h4>
+                            <h4>Lokasi Pekerjaan</h4>
                             <div >
-                                <textarea id="alamat_kantor" name="alamat_kantor"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
+                                <textarea id="alamat_kantor" name="alamat_kantor"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true" placeholder="Jl. A, Kota B"></textarea>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <h4>Deskripsi Pekerjaan</h4>
                             <div >
-                                <textarea  id="short_description" name="short_description" required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
+                                <textarea  id="short_description" name="short_description" required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true" placeholder="1. Lorem Ipsum
+2. Lorem Ipsum"></textarea>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <h4>Syarat Pekerjaan</h4>
                             <div >
-                                <textarea id="full_description" name="full_description"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
+                                <textarea id="full_description" name="full_description"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true" placeholder="1. Lorem Ipsum
+2. Lorem Ipsum"></textarea>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <h4>Minimal Pendidikan</h4>
                             <div >
-                                <textarea id="min_pendidikan" name="min_pendidikan"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
+                                <textarea id="min_pendidikan" name="min_pendidikan"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true" placeholder="SMA/SMK"></textarea>
                             </div>
                         </div>
 
@@ -125,7 +127,7 @@
                                 <span aria-hidden="true" role="presentation" style="color:#ee0000;"></span>
                             </h4>
                             <div >
-                                <input id="age" name="age"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
+                                <input id="age" name="age"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true" placeholder="min: 20 Tahun">
                             </div>
                         </div>
 
