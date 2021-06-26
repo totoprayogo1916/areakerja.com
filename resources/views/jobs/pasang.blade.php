@@ -82,6 +82,13 @@
                         </div>
 
                         <div class="form-group">
+                            <h4>Alamat Kantor</h4>
+                            <div >
+                                <textarea id="alamat_kantor" name="alamat_kantor"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <h4>Deskripsi Pekerjaan</h4>
                             <div >
                                 <textarea  id="short_description" name="short_description" required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
@@ -92,6 +99,33 @@
                             <h4>Syarat Pekerjaan</h4>
                             <div >
                                 <textarea id="full_description" name="full_description"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h4>Minimal Pendidikan</h4>
+                            <div >
+                                <textarea id="min_pendidikan" name="min_pendidikan"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h4>Gender <span aria-hidden="true" role="presentation" style="color:#ee0000;"></span> </h4>
+                            <div >
+                                <select id="gender" name="gender"  class="form-control2" required>
+                                    <option value="1">Pria</option>
+                                    <option value="2">Wanita</option>
+                                </select>
+                                <div class="invalid-feedback">Example invalid custom select feedback</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h4>Minimal/Maximal Umur
+                                <span aria-hidden="true" role="presentation" style="color:#ee0000;"></span>
+                            </h4>
+                            <div >
+                                <input id="age" name="age"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true">
                             </div>
                         </div>
 
