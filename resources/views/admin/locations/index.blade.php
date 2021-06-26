@@ -7,7 +7,7 @@
             {{ trans('cruds.location.title_singular') }} {{ trans('global.list') }}
             <a class="btn btn-success ml-2" href="{{ route("admin.locations.create") }}">
                 <i class="fa fa-plus mr-2" aria-hidden="true"></i>
-                {{ trans('global.add') }} {{ trans('cruds.location.title_singular') }} 
+                {{ trans('global.add') }} {{ trans('cruds.location.title_singular') }}
             </a>
         </div>
     </div>

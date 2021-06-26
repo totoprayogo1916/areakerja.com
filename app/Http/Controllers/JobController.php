@@ -42,10 +42,12 @@ class JobController extends Controller
             ->get();
 
         $banner = 'Jobs';
+        $title  = 'Lowongan Kerja di Yogyakarta';
 
         return view(
             'jobs.index',
             compact([
+                'title',
                 'jobs',
                 'banner',
                 'searchLocations',
@@ -83,7 +85,7 @@ class JobController extends Controller
 
         $riwayatlist = Riwayat::where('ip', $ipaddress)->get();
 
-        $title = 'Lowongan Kerja ' .$job->title. ' di '.$job->company->name;
+        $title = 'Lowongan Kerja ' . $job->title . ' di ' . $job->company->name;
         // Alert::success('Sukses Membuka');
 
         return view(
@@ -191,10 +193,13 @@ class JobController extends Controller
             ->get();
 
         $banner = 'Jobs';
+        $title  = 'Rekomendasi Lowongan Kerja';
 
         return view(
             'jobs.rekomendasi',
-            compact(['riwayatlist',
+            compact([
+                'title',
+                'riwayatlist',
                 'banner',
                 'searchLocations',
                 'searchCategories',
