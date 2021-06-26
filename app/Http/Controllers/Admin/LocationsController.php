@@ -9,8 +9,8 @@ use App\Http\Requests\UpdateLocationRequest;
 use App\Location;
 use Gate;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Str;
+use Symfony\Component\HttpFoundation\Response;
 
 class LocationsController extends Controller
 {
@@ -30,12 +30,12 @@ class LocationsController extends Controller
     {
         // $location = Location::create($request->all());
 
-        $slug     = Str::slug($request->get('name'));
+        $slug = Str::slug($request->get('name'));
         // dd($slug);
         // $category = Category::create($request->all());
-        $location              = Location::create([
-            'name'             => $request->name,
-            'slug'            => $slug,
+        $location = Location::create([
+            'name' => $request->name,
+            'slug' => $slug,
         ]);
 
         return redirect()->route('admin.locations.index');

@@ -43,7 +43,7 @@ class CompaniesController extends Controller
         $wishlist         = Wish::where('ip', $ipaddress)->get();
         $riwayatlist      = Riwayat::where('ip', $ipaddress)->get();
 
-        $title = 'Riwayat Lowongan Kerja di '.$job[0]->name;
+        $title = 'Riwayat Lowongan Kerja di ' . $job[0]->name;
 
         return view('company.index', compact(
             'title',

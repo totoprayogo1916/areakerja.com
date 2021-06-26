@@ -32,6 +32,7 @@ class LowonganController extends Controller
         ]);
 
         $title = 'Pasang Lowongan Kerja';
+
         return view('jobs.pasang', compact(['title']));
     }
 }
