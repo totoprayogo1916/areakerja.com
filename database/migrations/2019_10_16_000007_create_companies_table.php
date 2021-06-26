@@ -13,6 +13,10 @@ class CreateCompaniesTable extends Migration
 
             $table->string('name');
 
+            $table->string('deskripsi')->nullable();
+
+            $table->string('alamat')->nullable();
+
             $table->string('gambar');
 
             $table->timestamps();

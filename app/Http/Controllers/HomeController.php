@@ -102,6 +102,7 @@ class HomeController extends Controller
         // echo Carbon::now()->diffForHumans();
 
         $title = 'Tentang Kami';
+
         return view('user.aboutus', compact(['title']));
     }
 

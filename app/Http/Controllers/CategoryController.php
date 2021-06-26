@@ -47,8 +47,8 @@ class CategoryController extends Controller
             ->get();
 
         $banner = 'Category: ' . $category->name;
-        $title = 'Kategori Pekerjaan' . ' ' . $category->name;
+        $title  = 'Kategori Pekerjaan' . ' ' . $category->name;
 
-        return view('jobs.index', compact(['title','wishh', 'riwayatlist', 'ipaddress', 'wishlist', 'jobs', 'banner', 'searchLocations', 'searchCategories', 'sidbarJobs']));
+        return view('jobs.index', compact(['title', 'wishh', 'riwayatlist', 'ipaddress', 'wishlist', 'jobs', 'banner', 'searchLocations', 'searchCategories', 'sidbarJobs']));
     }
 }
