@@ -42,10 +42,12 @@ class JobController extends Controller
             ->get();
 
         $banner = 'Jobs';
+        $title = 'Lowongan Kerja di Yogyakarta';
 
         return view(
             'jobs.index',
             compact([
+                'title',
                 'jobs',
                 'banner',
                 'searchLocations',
@@ -191,10 +193,13 @@ class JobController extends Controller
             ->get();
 
         $banner = 'Jobs';
+        $title = 'Rekomendasi Lowongan Kerja';
 
         return view(
             'jobs.rekomendasi',
-            compact(['riwayatlist',
+            compact([
+                'title',
+                'riwayatlist',
                 'banner',
                 'searchLocations',
                 'searchCategories',

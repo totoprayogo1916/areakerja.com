@@ -31,6 +31,7 @@ class LowonganController extends Controller
             'web'                 => $request->web,
         ]);
 
-        return view('jobs.pasang');
+        $title = 'Pasang Lowongan Kerja';
+        return view('jobs.pasang', compact(['title']));
     }
 }
