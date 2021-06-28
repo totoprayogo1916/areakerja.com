@@ -37,7 +37,6 @@ class LowonganController extends Controller
         ]);
 
         $title = 'Pasang Lowongan Kerja';
-        Alert::success('Berhasil Kirim Lowongan', 'Lowongan Anda sedang diproses oleh admin');
 
         return view('jobs.pasang', compact(['title']));
     }
