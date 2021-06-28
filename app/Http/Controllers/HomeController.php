@@ -137,8 +137,10 @@ class HomeController extends Controller
         if ($kirim) {
             echo "Email telah dikirim";
         }
+        
+        $title  = 'AreaKerja.com';
 
-        return view('user.kontak');
+        return view('user.kontak', compact(['title']));
     }
 
     public function lamarmail($name, $umur)

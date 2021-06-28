@@ -22,20 +22,17 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
     <body>
-    @include('partials.header')
-    <div class="banner-area" >
-    </div>
-
-        <section class="post-area section-gap" id="areaaboutus" style="margin-top: -12%">
-            <div class="banner-content col-lg-12" style="width: 10">
-
-                <div class="container">
+        @include('partials.header')
+        @yield('home')
+        <section class="post-area section-gap">
+            
+            <div class="container">
+                <div class="row justify-content-center d-flex "  >
                     @yield('aboutus')
                 </div>
             </div>
         </section>
-
-        @include('partials.footer')
+        @include('user.footer')
 
         <script src="{{ asset('js/vendor/jquery-2.2.4.min.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
