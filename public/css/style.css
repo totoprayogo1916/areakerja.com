@@ -33,7 +33,7 @@
   width: 350px;
   height: auto;
   margin-bottom: 30px;
-  margin-top: 55px;
+  margin-top: 25px;
   margin-left: 6px;
   margin-right: 6px;
   transition: margin-top 0.5s;
@@ -44,7 +44,7 @@
     width: 350px;
     height: auto;
     margin-bottom: 30px;
-    margin-top: 35px;
+    margin-top: 15px;
     margin-left: 6px;
     margin-right: 6px;
     /* margin: 50px; */
@@ -99,12 +99,13 @@
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
-  div.for_slick_slider{
+  /* div.for_slick_slider{
     
-    margin-bottom: -270px;
+    
     margin-top: 10px;
-  }
+  } */
   div.items.gg{
-    margin-top: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 }

@@ -33,26 +33,28 @@
     @include('partials.header')
     <img src="{{ url('img/up.png') }}" onclick="topFunction()" id="myBtn" title="Go to top" class="myBtn"></img>
 
-        @include('partials.banner')
+        {{-- @include('partials.banner') --}}
+        <div>
+          @yield('home')
 
-        @yield('home')
-
-        @yield('jobss')
+          @yield('jobss')
 
 
-        <!-- Start post Area -->
-        <section class="post-area section-gap">
-
-            <div class="container">
-                @yield('slick')
-                @yield('rekom')
-                <div class="row justify-content-center d-flex mt-4"  >
-                    @yield('content')
-                    @include('partials.sidebar')
-                    @yield('bottom')
-                </div>
-            </div>
-        </section>
+          <!-- Start post Area -->
+          <section class="post-area section-gap">
+          
+              <div class="container">
+                @yield('slick') 
+                  @yield('rekom')
+                  <div class="row justify-content-center d-flex "  >
+                      @yield('content')
+                      @include('partials.sidebar')
+                      @yield('bottom')
+                  </div>
+              </div>
+          </section>
+        </div>
+        
         <!-- End post Area -->
 
 

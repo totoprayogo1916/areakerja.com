@@ -2,57 +2,62 @@
 
 @section('jobss')
 <section class="relative" id="home">
-    <div class="banner-area">
+    <div class="banner-area"  >
         <div class="row align-items-center justify-content-center" style="margin-right: 15px; margin-left: 15px">
             <div class="banner-content col-lg-12">
-                <h1 style="color: #fe7b54; text-shadow: 2px 2px 3px #353535b0;">
+                <h1 style="color: #fe7b54; margin-bottom:5px; text-shadow: 2px 2px 3px #353535b0;">
                     Tempat Mencari Kerja
                 </h1>
                 <h6 style="color: #fe7b54; text-shadow: 1px 1px 2px #353535b0;">
                 Temukan loker Jogja terbaru bulan Juni 2021 dengan mudah.
                 </h6>
-                 <form action="{{ route('search') }}" class="serach-form-area flex-wrap" style="width: 100%">
-                    <div class="col form-wrap-main" id="form-luar">
-                        <div class="row form-wrap justify-content-center" id="form-dalam">
-                            <div class="col-lg-3 form-cols">
-                                <input type="text" class="form-control" name="search" placeholder="Cari Disini..">
-                            </div>
-                            <div class="col-lg-3 form-cols">
-                                <div class="default-select" id="default-selects">
-                                    <select name="location">
-                                        <option value="0">All Areas</option>
-                                        @foreach($searchLocations as $id=>$searchLocations )
-                                            <option value="{{ $id }}">{{ $searchLocations }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 form-cols">
-                                <div class="default-select" id="default-selects2">
-                                    <select name="category">
-                                        <option value="0">All Categories</option>
-                                        @foreach($searchCategories as $id=>$searchCategories)
-                                            <option value="{{ $id }}">{{ $searchCategories }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row form-wrap justify-content-around" style="margin-top: 2%">
-                            <div class="col-lg-3 form-cols">
-                                <button type="submit" class="btn btn-area ">
-                                <span class="lnr lnr-magnifier"></span> Search
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <h3>Rekomendasi Lowongan</h3>
             </div>
         </div>
     </div>
+    <div class="container text-center" >
+        <form action="{{ route('search')}}">
+            <div class="col-10 col-sm-8 form-wrap-main" >
+            <div class="col-12 search" >
+                <div class="row">
+                <div class="col-12 col-sm-4 " >
+                    <input type="text" class="form-control" style="margin: 10px 0;" name="search" placeholder="Cari Disini">
+                </div>
+                <div class="clearfix visible-xs"></div>
+                <div class="col-6 col-sm-4" >
+                    <select class="default-select3" name="location">
+                        <option value="0">All Areas</option>
+                        @foreach($searchLocations as $id=>$searchLocations)
+                            <option value="{{ $id }}">{{ $searchLocations }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <!-- Add clearfix for only the required viewport -->
+                <div class="col-6 col-sm-4">
+                    <div >
+                    <select class="default-select3" name="location">
+                        <option value="0">All Categories</option>
+                        @foreach($searchCategories as $id=>$searchCategories)
+                            <option value="{{ $id }}">{{ $searchCategories }}</option>
+                        @endforeach
+                    </select>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 text-center "  >
+                    <div class="col-12 col-sm-3 form-cols" style="margin:auto; padding: 0;"> 
+                    <button type="submit" class="btn btn-area " style="margin: 10px 0; width: 100%;">
+                    <span class="lnr lnr-magnifier"></span> Search
+                    </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </form>
+      </div>
 </section>
 @endsection
+
+
 @section('rekom')
 <div class="container rr2" >
     <div class="justify-content-center d-flex" >

@@ -17,20 +17,37 @@ $(function () {
     //autoplay: true,
     // autoplaySpeed: 6000,
     responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-      slidesToShow: 2,
-      arrows: false,
-      centerMode: false, /* set centerMode to false to show complete slide instead of 3 */
-      slidesToScroll: 1,
-      }
-    }
+        {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 3,
+              arrows: false,
+              // prevArrow:"<a type='button' class='slick-prev prev' aria-hidden='true'></a>",
+              // nextArrow:"<a type='button' class='slick-next next' aria-hidden='true'></a>",
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              arrows: false
+            }
+        }
    ]
     });
 });
 
-if ($(window).width() < 1070) {
-    var slick = document.getElementById("slick");
-    slick.style.marginTop='50%';
-}
+// if ($(window).width() < 1070) {
+//     var slick = document.getElementById("slick");
+//     slick.style.marginTop='50%';
+// }
