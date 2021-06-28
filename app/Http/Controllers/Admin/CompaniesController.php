@@ -39,11 +39,11 @@ class CompaniesController extends Controller
         $request->gambar->move(public_path('img/companylogo'), $namaFile);
         $slug_judul = Str::slug($request->get('name'));
         Company::insert([
-            'name'   => $request->name,
-            'gambar' => $namaFile,
-            'deskripsi'   => $request->deskripsi,
-            'alamat'   => $request->alamat,
-            'slug'   => $slug_judul,
+            'name'      => $request->name,
+            'gambar'    => $namaFile,
+            'deskripsi' => $request->deskripsi,
+            'alamat'    => $request->alamat,
+            'slug'      => $slug_judul,
         ]);
 
         // if ($request->input('logo', false)) {
@@ -88,9 +88,9 @@ class CompaniesController extends Controller
 
             //for update in table
             $post_data = [
-                'name'     => $request->name,
+                'name'      => $request->name,
                 'deskripsi' => $request->deskripsi,
-                'alamat'   => $request->alamat,
+                'alamat'    => $request->alamat,
                 'gambar'    => $filename,
             ];
 
