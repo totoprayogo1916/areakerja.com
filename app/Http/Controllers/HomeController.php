@@ -91,7 +91,7 @@ class HomeController extends Controller
             ->get();
 
         $banner = 'Search results';
-        $title = 'Lowongan Kerja di Yogyakarta';
+        $title  = 'Lowongan Kerja di Yogyakarta';
 
         return view('jobs.index', compact(['title', 'wishh', 'riwayatlist', 'wishlist', 'ipaddress', 'jobs', 'banner', 'searchLocations', 'sidbarJobs', 'searchCategories']));
     }

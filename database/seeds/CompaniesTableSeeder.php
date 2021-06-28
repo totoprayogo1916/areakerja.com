@@ -13,9 +13,11 @@ class CompaniesTableSeeder extends Seeder
     public function run()
     {
         $company = Company::create([
-            'name'   => 'Areakerja',
-            'gambar' => 'Areakerja.jpeg',
-            'slug'   => 'areakerja',
+            'name'      => 'Areakerja',
+            'deskripsi' => 'Areakerja merupakan perusahaan untuk mencari kerja',
+            'alamat'    => 'Jl. Kampar',
+            'gambar'    => 'Areakerja.jpeg',
+            'slug'      => 'areakerja',
         ]);
         $company->save();
 
