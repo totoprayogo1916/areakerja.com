@@ -28,6 +28,22 @@
                     </tr>
                     <tr>
                         <th>
+                            Deskripsi
+                        </th>
+                        <td>
+                            {{ $company->deskripsi }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Alamat
+                        </th>
+                        <td>
+                            {{ $company->alamat }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.company.fields.logo') }}
                         </th>
                         <td>
@@ -54,3 +70,4 @@
     </div>
 </div>
 @endsection
+

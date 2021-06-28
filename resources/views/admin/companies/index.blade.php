@@ -28,6 +28,12 @@
                         <th>
                             {{ trans('cruds.company.fields.name') }}
                         </th>
+                        <th width="50%">
+                            Deskripsi
+                        </th>
+                        <th width="20%">
+                            Alamat
+                        </th>
                         <th>
                             {{ trans('cruds.company.fields.logo') }}
                         </th>
@@ -47,6 +53,12 @@
                             </td>
                             <td>
                                 {{ $company->name ?? '' }}
+                            </td>
+                            <td>
+                                {{ $company->deskripsi ?? '' }}
+                            </td>
+                            <td>
+                                {{ $company->alamat ?? '' }}
                             </td>
                             <td style="width: 150px; vertical-align: middle; text-align: center;">
                                 @if($company->gambar)

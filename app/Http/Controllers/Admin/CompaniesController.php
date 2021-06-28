@@ -41,6 +41,8 @@ class CompaniesController extends Controller
         Company::insert([
             'name'   => $request->name,
             'gambar' => $namaFile,
+            'deskripsi'   => $request->deskripsi,
+            'alamat'   => $request->alamat,
             'slug'   => $slug_judul,
         ]);
 
@@ -85,7 +87,14 @@ class CompaniesController extends Controller
             $file->move($path, $filename);
 
             //for update in table
-            $companies->update(['gambar' => $filename]);
+            $post_data = [
+                'name'     => $request->name,
+                'deskripsi' => $request->deskripsi,
+                'alamat'   => $request->alamat,
+                'gambar'    => $filename,
+            ];
+
+            $companies->update($post_data);
         }
 
         return redirect()->route('admin.companies.index');
