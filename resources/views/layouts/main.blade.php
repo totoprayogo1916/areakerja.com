@@ -42,9 +42,9 @@
 
           <!-- Start post Area -->
           <section class="post-area section-gap">
-          
+
               <div class="container">
-                @yield('slick') 
+                @yield('slick')
                   @yield('rekom')
                   <div class="row justify-content-center d-flex "  >
                       @yield('content')
@@ -54,7 +54,7 @@
               </div>
           </section>
         </div>
-        
+
         <!-- End post Area -->
 
 
@@ -136,18 +136,18 @@ aria-hidden="true">
     <div class="modal-body">
       <div data-aos="zoom-in-up" class="single-slidebar " >
         <h4>Lokasi</h4>
-        <ul class="cat-list">
+        <ul class="cat-list-mobile">
             @foreach($sidebarLocations as $location)
-                <li><a class="justify-content-between d-flex" href="{{ route('locations.show', $location->id) }}"><p>{{ $location->name }}</p></a></li>
+                <li><a class="justify-content-between d-flex" href="{{ route('locations.show', $location->slug) }}"><p>{{ $location->name }}</p></a></li>
             @endforeach
         </ul>
     </div>
 
     <div data-aos="zoom-in-up" class="single-slidebar">
         <h4>Kategori</h4>
-        <ul class="cat-list">
+        <ul class="cat-list-mobile">
             @foreach($sidebarCategories as $category)
-                <li><a class="justify-content-between d-flex" href="{{ route('categories.show', $category->id)}}"><p>{{ $category->name }}</p></a></li>
+                <li><a class="justify-content-between d-flex" href="{{ route('categories.show', $category->slug)}}"><p>{{ $category->name }}</p></a></li>
             @endforeach
         </ul>
     </div>
