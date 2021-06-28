@@ -64,9 +64,9 @@
                             <h4>Status Pekerjaan <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span> </h4>
                             <div >
                                 <select id="job_nature" name="job_nature"  class="form-control2" required>
-                                    <option value="1">Full Time</option>
-                                    <option value="2">Part Time</option>
-                                    <option value="3">Freelance</option>
+                                    <option value="Full Time">Full Time</option>
+                                    <option value="Part Time">Part Time</option>
+                                    <option value="Freelance">Freelance</option>
                                 </select>
                                 <div class="invalid-feedback">Example invalid custom select feedback</div>
                             </div>
@@ -115,9 +115,9 @@
                             <h4>Gender <span aria-hidden="true" role="presentation" style="color:#ee0000;"></span> </h4>
                             <div >
                                 <select id="gender" name="gender"  class="form-control2" required>
-                                    <option value="1">Pria</option>
-                                    <option value="2">Wanita</option>
-                                    <option value="3">Pria/Wanita</option>
+                                    <option value="Pria">Pria</option>
+                                    <option value="Wanita">Wanita</option>
+                                    <option value="Pria/Wanita">Pria/Wanita</option>
                                 </select>
                                 <div class="invalid-feedback">Example invalid custom select feedback</div>
                             </div>
@@ -128,7 +128,7 @@
                                 <span aria-hidden="true" role="presentation" style="color:#ee0000;"></span>
                             </h4>
                             <div >
-                                <input id="age" name="age"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true" placeholder="min: 20 Tahun">
+                                <input id="min_umur" name="min_umur"  required="" type="text"  class="form-control2 " value="" data-type="text" aria-required="true" placeholder="min: 20 Tahun">
                             </div>
                         </div>
 
