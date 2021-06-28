@@ -3,7 +3,7 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} 
+        {{ trans('global.show') }}
     </div>
 
     <div class="card-body">
@@ -42,7 +42,7 @@
                             {{ $lowongan->alamatperusahaan }}
                         </td>
                     </tr>
-                    
+
                     <tr>
                         <th>
                             Logo Perusahaan
@@ -63,6 +63,14 @@
                     </tr>
                     <tr>
                         <th>
+                            Alamat Kantor
+                        </th>
+                        <td>
+                            {{ $lowongan->alamat_kantor }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             Deskripsi Pekerjaan
                         </th>
                         <td>
@@ -75,6 +83,30 @@
                         </th>
                         <td>
                             {{ $lowongan->full_description}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Gender
+                        </th>
+                        <td>
+                            {{ $lowongan->gender}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Minimal Umur
+                        </th>
+                        <td>
+                            {{ $lowongan->min_umur}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Minimal Pendidikan
+                        </th>
+                        <td>
+                            {{ $lowongan->min_pendidikan}}
                         </td>
                     </tr>
                     <tr>
@@ -106,7 +138,7 @@
                             Email
                         </th>
                         <td>
-                            <{{ $lowongan->email }}
+                            {{ $lowongan->email }}
                         </td>
                     </tr>
                     <tr>

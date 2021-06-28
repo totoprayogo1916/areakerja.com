@@ -40,10 +40,22 @@
                             Nama Pekerjaan
                         </th>
                         <th>
+                            Alamat Kantor
+                        </th>
+                        <th>
                             Deskripsi Pekerjaan
                         </th>
                         <th>
                             Syarat Pekerjaan
+                        </th>
+                        <th>
+                            Gender
+                        </th>
+                        <th>
+                            Minimal Umur
+                        </th>
+                        <th>
+                            Minimal Pendidikan
                         </th>
                         <th>
                             Status Kerja
@@ -95,10 +107,22 @@
                                 {{ $low->title ?? '' }}
                             </td>
                             <td>
+                                {{ $low->alamat_kantor ?? '' }}
+                            </td>
+                            <td>
                                 {{ $low->short_description ?? '' }}
                             </td>
                             <td>
                                 {{ $low->full_description ?? '' }}
+                            </td>
+                            <td>
+                                {{ $low->gender ?? '' }}
+                            </td>
+                            <td>
+                                {{ $low->min_umur ?? '' }}
+                            </td>
+                            <td>
+                                {{ $low->min_pendidikan ?? '' }}
                             </td>
                             <td>
                                 {{ $low->job_nature ?? '' }}
