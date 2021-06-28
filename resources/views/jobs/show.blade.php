@@ -72,7 +72,7 @@
                 </div>
             </div>
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%; margin-top: 12px"/>
-            <h4 class="gg" style="margin-top: 8px; font-weight: normal;">{{$job->short_description}}</h4>
+            <h4 class="gg" style="margin-top: 8px; font-weight: normal;">{{$job->company->deskripsi}}</h4>
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;margin-top: 16px"/>
             <h3 class="head" style="margin-top: 10px">Ringkasan</h3>
             <div class=" row" >
