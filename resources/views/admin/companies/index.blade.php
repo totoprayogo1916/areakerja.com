@@ -66,19 +66,17 @@
                                 @endif
                             </td>
                             <td align="center">
-                                <a class="btn btn-xs btn-rounded btn-outline-primary" href="{{ route('admin.companies.show', $company->id) }}">
-                                    <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                <a class="btn btn-xs btn-primary" href="{{ route('admin.companies.show', $company->id) }}">
+                                    {{ trans('global.view') }}
                                 </a>
 
-                                <a class="btn btn-xs btn-outline-warning" href="{{ route('admin.companies.edit', $company->id) }}">
-                                    <i class="fa fa-pen" aria-hidden="true"></i>
+                                <a class="btn btn-xs btn-info" href="{{ route('admin.companies.edit', $company->id) }}">
+                                    {{ trans('global.edit') }}
                                 </a>
                                 <form action="{{ route('admin.companies.destroy', $company->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
                                     <input type="hidden" name="_method" value="DELETE">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    <a class="btn btn-xs btn-outline-danger">
-                                        <i class="fa fa-trash" aria-hidden="true"></i>
-                                    <a>
+                                    <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
                                 </form>
 
                             </td>
