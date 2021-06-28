@@ -2411,6 +2411,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-size: cover;
 }
 
+.banner-area2 {
+  background-color: #ccdcef;
+  height: 200px;
+  /* margin-bottom: 1%; */
+  background: url(../img/bg.png) center;
+  background-size: cover;
+}
+
 .banner-login {
   background: url(../img/bg-login.png) center;
   background-size: cover;
@@ -4704,6 +4712,9 @@ input.invalid {
   width: 100%;
   background: #f9f9ff;
   border:none;
+  width:100%;
+  margin: 10px 0;
+  padding-left:10px
 }
 
 
@@ -4955,19 +4966,28 @@ input.invalid {
 
 @media (max-width: 576px) {
   div.banner-area{
-    margin-bottom:-95;
+    margin-bottom:-95px;
     height:250px;
+  }
+  div.banner-area2{
+    margin-bottom:-95px;
+    height:150px;
   }
 }
 @media (min-width: 577px){
   div.banner-area{
-    margin-bottom:-95;
+    margin-bottom:-95px;
     height:250px;
+  }
+
+  div.banner-area2{
+    margin-bottom:-75px;
+    height:150px;
   }
 }
 @media (min-width: 768px) {
   div.banner-area{
-    margin-bottom:-75;
+    margin-bottom:-75px;
     height:200px;
   }
 }

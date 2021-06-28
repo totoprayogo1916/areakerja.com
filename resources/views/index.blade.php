@@ -26,7 +26,7 @@
                 </div>
                 <div class="clearfix visible-xs"></div>
                 <div class="col-6 col-sm-4" >
-                    <select class="default-select3" name="location" style="width:100%;margin: 10px 0;padding-left:10px">
+                    <select class="default-select3" name="location">
                         <option value="0">All Areas</option>
                         @foreach($searchLocations as $id=>$searchLocations)
                             <option value="{{ $id }}">{{ $searchLocations }}</option>
@@ -36,14 +36,13 @@
                 <!-- Add clearfix for only the required viewport -->
                 <div class="col-6 col-sm-4">
                     <div >
-                    <select class="default-select3" name="location" style="width:100%;margin: 10px 0;">
+                    <select class="default-select3" name="location">
                         <option value="0">All Categories</option>
                         @foreach($searchCategories as $id=>$searchCategories)
                             <option value="{{ $id }}">{{ $searchCategories }}</option>
                         @endforeach
                     </select>
                     </div>
-                    
                 </div>
                 <div class="col-12 col-sm-12 text-center "  >
                     <div class="col-12 col-sm-3 form-cols" style="margin:auto; padding: 0;"> 
@@ -52,7 +51,6 @@
                     </button>
                     </div>
                 </div>
-                
                 </div>
             </div>
             </div>
@@ -87,7 +85,7 @@
 @section('rekom')
 <div class="container rr2" >
     <div class="justify-content-center d-flex" >
-        <a  href="/rekomendasi" style="color: #000; font-size: 20px">Rekomendasi Loker Lainnya></a>
+        <a  href="/rekomendasi" style="color: #000; font-size: 20px;margin-bottom: 25px">Rekomendasi Loker Lainnya></a>
     </div>
 </div>
 
@@ -153,6 +151,6 @@
     </a>
     @endforeach
 
-    <a class="text-uppercase loadmore-btn mx-auto d-block" href="{{ route('jobs.index') }}">Load More Job Posts</a>
+    <a class="text-uppercase loadmore-btn mx-auto d-block" href="{{ route('jobs.index') }}" style="margin: 50px 0;">Load More Job Posts</a>
 </div>
 @endsection
