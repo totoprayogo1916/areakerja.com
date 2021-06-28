@@ -22,13 +22,30 @@
                     {{ trans('cruds.company.fields.name_helper') }}
                 </p>
             </div>
-        
+
+            <div class="form-group {{ $errors->has('deskripsi') ? 'has-error' : '' }}">
+                <label for="deskripsi">Deskripsi*</label>
+                <input type="text" id="deskripsi" name="deskripsi" class="form-control" value="{{ old('deskripsi', isset($company) ? $company->deskripsi : '') }}" required>
+                <p class="helper-block">
+                    {{ trans('cruds.company.fields.name_helper') }}
+                </p>
+            </div>
+
+
+            <div class="form-group {{ $errors->has('alamat') ? 'has-error' : '' }}">
+                <label for="alamat">Alamat*</label>
+                <input type="text" id="alamat" name="alamat" class="form-control" value="{{ old('alamat', isset($company) ? $company->alamat : '') }}" required>
+                <p class="helper-block">
+                    {{ trans('cruds.company.fields.name_helper') }}
+                </p>
+            </div>
+
             <div class="form-group">
                 <label>Gambar</label>
                 <br>
                 <input type="file" id="gambar" name="gambar">
             </div>
-        
+
             {{-- <div class="form-group {{ $errors->has('logo') ? 'has-error' : '' }}">
                 <label for="logo">{{ trans('cruds.company.fields.logo') }}</label>
                 <div class="needsclick dropzone" id="logo-dropzone">

@@ -97,7 +97,7 @@ aria-hidden="true">
                     @csrf
                     {{ method_field('DELETE') }}
                     <button type="submit" style=" color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;width: 30px; margin-bottom: 5px" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                <a href="{{ route('jobs.show', $wishlis->job->id) }}" style="; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;width: 30px;" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                <a href="{{ route('jobs.show', $wishlis->job->slug) }}" style="; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;width: 30px;" class="btn btn-info"><i class="fas fa-eye"></i></a>
             </form>
             </td>
             </tr>
@@ -199,7 +199,7 @@ aria-hidden="true">
                     @csrf
                     {{ method_field('DELETE') }}
                     <button type="submit" style="margin-right: 10px; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-danger"><i class="fas fa-trash"></i></button> --}}
-                <a href="{{ route('jobs.show', $riwayatlis->job->id) }}" style="; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                <a href="{{ route('jobs.show', $riwayatlis->job->slug) }}" style="; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-info"><i class="fas fa-eye"></i></a>
             </form>
             </td>
             </tr>

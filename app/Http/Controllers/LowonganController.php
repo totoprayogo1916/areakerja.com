@@ -7,6 +7,7 @@ use App\Job;
 use App\Location;
 use App\Lowongan;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class LowonganController extends Controller
 {
@@ -23,6 +24,10 @@ class LowonganController extends Controller
             'title'               => $request->title,
             'salary'              => $request->salary,
             'job_nature'          => $request->job_nature,
+            'alamat_kantor'       => $request->alamat_kantor,
+            'min_pendidikan'      => $request->min_pendidikan,
+            'gender'              => $request->gender,
+            'min_umur'            => $request->min_umur,
             'bataslamaran'        => $request->bataslamaran,
             'full_description'    => $request->full_description,
             'short_description'   => $request->short_description,
@@ -32,7 +37,8 @@ class LowonganController extends Controller
         ]);
 
         $title = 'Pasang Lowongan Kerja';
+        Alert::success('Berhasil Mengirim Lowongan', 'Admin sedang memproses lowongan anda');
 
-        return view('jobs.pasang', compact(['title']));
+        return redirect()->route('home');
     }
 }

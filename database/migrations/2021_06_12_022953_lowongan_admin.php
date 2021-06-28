@@ -32,6 +32,14 @@ class LowonganAdmin extends Migration
 
             $table->string('job_nature')->nullable();
 
+            $table->string('alamat_kantor')->nullable();
+
+            $table->string('min_pendidikan')->nullable();
+
+            $table->string('gender')->nullable();
+
+            $table->string('min_umur')->nullable();
+
             $table->string('bataslamaran')->nullable();
 
             $table->string('salary');
