@@ -37,6 +37,7 @@ class LowonganController extends Controller
         ]);
 
         $title = 'Pasang Lowongan Kerja';
+        Alert::success('Berhasil Mengirim Lowongan', 'Admin sedang memproses lowongan anda');
 
         return redirect()->route('home');
     }
