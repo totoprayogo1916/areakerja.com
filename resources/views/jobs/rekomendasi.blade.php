@@ -57,7 +57,7 @@
 @section('content')
 <div class="col-lg-8 post-list"  id="main-content">
     @foreach($sidbarJobs as $job)
-    <a href="{{ route('riwayat', $job->id) }}">
+    <a href="{{ route('riwayat', $job->slug) }}">
         <div data-aos="fade-up" class="single-post align-items-center d-flex" style="width: 100%">
             <div class="row" style="margin: auto;margin-right:20px" >
                 @if($job->company->gambar)
