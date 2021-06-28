@@ -30,9 +30,6 @@
                             {{ trans('cruds.job.fields.company') }}
                         </th>
                         <th>
-                            {{ trans('cruds.job.fields.short_description') }}
-                        </th>
-                        <th>
                             {{ trans('cruds.job.fields.full_description') }}
                         </th>
                         <th>
@@ -73,18 +70,14 @@
                             <td>
                                 {{ $job->company->name ?? '' }}
                             </td>
-                            
-                            <td>
-                                {{ $job->short_description ?? '' }}
-                            </td>
                             <td>
                                 @foreach($job->full_description as $hehe2)
-                                    <li>{{ $hehe2 }}</li>    
+                                    <li>{{ $hehe2 }}</li>
                                 @endforeach
                             </td>
                             <td>
                                 @foreach($job->requirements as $hehe)
-                                    <li>{{ $hehe }}</li>    
+                                    <li>{{ $hehe }}</li>
                                 @endforeach
                             </td>
                             <td>

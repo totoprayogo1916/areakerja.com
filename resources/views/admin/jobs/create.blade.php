@@ -34,34 +34,23 @@
                     </em>
                 @endif
             </div>
-            <div class="form-group {{ $errors->has('short_description') ? 'has-error' : '' }}">
-                <label for="short_description">Deskripsi Perusahaan</label>
-                <input type="text" id="short_description" name="short_description" class="form-control" value="{{ old('short_description', isset($job) ? $job->short_description : '') }}">
-                @if($errors->has('short_description'))
-                    <em class="invalid-feedback">
-                        {{ $errors->first('short_description') }}
-                    </em>
-                @endif
-                <p class="helper-block">
-                    {{ trans('cruds.job.fields.short_description_helper') }}
-                </p>
-            </div>
+
             <div class="form-group {{ $errors->has('full_description') ? 'has-error' : '' }}">
                 <label for="full_description">Deskripsi Pekerjaan</label>
                 <div class="alert alert-danger print-error-msg" style="display:none">
                     <ul></ul>
                     </div>
-        
+
                     <div class="alert alert-success print-success-msg" style="display:none">
                     <ul></ul>
                     </div>
-                    <div class="table-responsive">  
-                        <table class="table table-bordered" id="dynamic_field2">  
-                            <tr>  
-                                <td><input id="full_description" name="full_description[]" type="text" placeholder="Masukkan Deskripsi Pekerjaan" class="form-control name_list" /></td>  
-                                <td><button type="button" name="add2" id="add2" class="btn btn-success">Add More</button></td>  
-                            </tr>  
-                        </table>    
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dynamic_field2">
+                            <tr>
+                                <td><input id="full_description" name="full_description[]" type="text" placeholder="Masukkan Deskripsi Pekerjaan" class="form-control name_list" /></td>
+                                <td><button type="button" name="add2" id="add2" class="btn btn-success">Add More</button></td>
+                            </tr>
+                        </table>
                     </div>
                 <p class="helper-block">
                     {{ trans('cruds.job.fields.full_description_helper') }}
@@ -72,17 +61,17 @@
                 <div class="alert alert-danger print-error-msg" style="display:none">
                     <ul></ul>
                     </div>
-        
+
                     <div class="alert alert-success print-success-msg" style="display:none">
                     <ul></ul>
                     </div>
-                    <div class="table-responsive">  
-                        <table class="table table-bordered" id="dynamic_field">  
-                            <tr>  
-                                <td><input id="requirements" name="requirements[]" type="text" placeholder="Masukkan Syarat Pekerjaan" class="form-control name_list" /></td>  
-                                <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>  
-                            </tr>  
-                        </table>    
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dynamic_field">
+                            <tr>
+                                <td><input id="requirements" name="requirements[]" type="text" placeholder="Masukkan Syarat Pekerjaan" class="form-control name_list" /></td>
+                                <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
+                            </tr>
+                        </table>
                     </div>
             </div>
 
@@ -174,16 +163,16 @@
                 </p>
             </div>
 
-            <div class="form-group {{ $errors->has('alamatkantor') ? 'has-error' : '' }}">
-                <label for="alamatkantor">Alamat Kantor</label>
-                <input type="text" id="alamatkantor" name="alamatkantor" class="form-control" value="{{ old('alamatkantor', isset($job) ? $job->alamatkantor : '') }}">
-                @if($errors->has('alamatkantor'))
+            <div class="form-group {{ $errors->has('lokasikerja') ? 'has-error' : '' }}">
+                <label for="lokasikerja">Alamat Kantor</label>
+                <input type="text" id="lokasikerja" name="lokasikerja" class="form-control" value="{{ old('lokasikerja', isset($job) ? $job->lokasikerja : '') }}">
+                @if($errors->has('lokasikerja'))
                     <em class="invalid-feedback">
-                        {{ $errors->first('alamatkantor') }}
+                        {{ $errors->first('lokasikerja') }}
                     </em>
                 @endif
                 <p class="helper-block">
-                    {{-- {{ trans('cruds.job.fields.alamatkantor_helper') }} --}}
+                    {{-- {{ trans('cruds.job.fields.lokasikerja_helper') }} --}}
                 </p>
             </div>
 
@@ -244,16 +233,16 @@
                 </p>
             </div>
 
-            <div class="form-group {{ $errors->has('nohp') ? 'has-error' : '' }}">
-                <label for="nohp">Nomor Handphone*</label>
-                <input type="text" id="nohp" name="nohp" class="form-control" value="{{ old('nohp', isset($job) ? $job->nohp : '') }}" required>
-                @if($errors->has('nohp'))
+            <div class="form-group {{ $errors->has('notelp') ? 'has-error' : '' }}">
+                <label for="notelp">Nomor Handphone*</label>
+                <input type="text" id="notelp" name="notelp" class="form-control" value="{{ old('notelp', isset($job) ? $job->notelp : '') }}" required>
+                @if($errors->has('notelp'))
                     <em class="invalid-feedback">
-                        {{ $errors->first('nohp') }}
+                        {{ $errors->first('notelp') }}
                     </em>
                 @endif
                 <p class="helper-block">
-                    {{ trans('cruds.job.fields.nohp_helper') }}
+                    {{ trans('cruds.job.fields.notelp_helper') }}
                 </p>
             </div>
 

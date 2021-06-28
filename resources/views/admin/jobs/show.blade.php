@@ -36,14 +36,6 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.job.fields.short_description') }}
-                        </th>
-                        <td>
-                            {{ $job->short_description }}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
                             {{ trans('cruds.job.fields.full_description') }}
                         </th>
                         <td>

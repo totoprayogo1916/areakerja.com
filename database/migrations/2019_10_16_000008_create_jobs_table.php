@@ -13,8 +13,6 @@ class CreateJobsTable extends Migration
 
             $table->string('title');
 
-            $table->string('short_description')->nullable();
-
             $table->json('full_description')->nullable();
 
             $table->json('requirements')->nullable();
@@ -36,6 +34,8 @@ class CreateJobsTable extends Migration
             $table->string('email')->nullable();
 
             $table->string('notelp')->nullable();
+
+            $table->string('website')->nullable();
 
             $table->boolean('top_rated')->default(0)->nullable();
 

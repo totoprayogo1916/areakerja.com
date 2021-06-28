@@ -35,18 +35,6 @@
                     </em>
                 @endif
             </div>
-            <div class="form-group {{ $errors->has('short_description') ? 'has-error' : '' }}">
-                <label for="short_description">{{ trans('cruds.job.fields.short_description') }}</label>
-                <input type="text" id="short_description" name="short_description" class="form-control" value="{{ old('short_description', isset($job) ? $job->short_description : '') }}">
-                @if($errors->has('short_description'))
-                    <em class="invalid-feedback">
-                        {{ $errors->first('short_description') }}
-                    </em>
-                @endif
-                <p class="helper-block">
-                    {{ trans('cruds.job.fields.short_description_helper') }}
-                </p>
-            </div>
             <div class="form-group ">
                 <label for="full_description">{{ trans('cruds.job.fields.full_description') }}</label>
                 <div class="alert alert-success print-success-msg" style="display:none">
@@ -58,14 +46,14 @@
                             <div id="inputFormRow2">
                                 <div class="input-group mb-3">
                                     <input type="text" name="full_description[]" class="form-control m-input" placeholder="Masukkan Deskripsi Pekerjaan" autocomplete="off" value="{{ $hehe2 }}">
-                                    <div class="input-group-append">                
+                                    <div class="input-group-append">
                                         <button id="removeRow2" type="button" class="btn btn-danger">Remove</button>
                                     </div>
                                 </div>
                             </div>
-                
+
                             <div id="newRow2"></div>
-                            
+
                         </div>
                     </div>
                 @endforeach
@@ -76,26 +64,26 @@
                 <div class="alert alert-success print-success-msg" style="display:none">
                     <ul></ul>
                     </div>
-                    
+
                 @foreach($job->requirements as $hehe)
                     <div class="row">
                         <div class="col-lg-12">
                             <div id="inputFormRow">
                                 <div class="input-group mb-3">
                                     <input type="text" name="requirements[]" class="form-control m-input" placeholder="Enter title" autocomplete="off" value="{{ $hehe }}">
-                                    <div class="input-group-append">                
+                                    <div class="input-group-append">
                                         <button id="removeRow" type="button" class="btn btn-danger">Remove</button>
                                     </div>
                                 </div>
                             </div>
-                
+
                             <div id="newRow"></div>
-                            
+
                         </div>
                     </div>
                 @endforeach
                 <button id="addRow" type="button" class="btn btn-success">Add More</button>
-                
+
                 @if($errors->has('requirements'))
                     <em class="invalid-feedback">
                         {{ $errors->first('requirements') }}
