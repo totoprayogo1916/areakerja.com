@@ -67,9 +67,9 @@
         </div>
     </div>
     @foreach($job2 as $job1)
-    <a href="{{ route('riwayat', $job1->id) }}">
+    <a href="{{ route('riwayat', $job1->slug) }}">
         <div data-aos="fade-up" class="single-post align-items-center d-flex" style="width: 100%">
-            
+
             <div class="details " style="width: 100%" style="margin-top: 14px; overflow: unset; white-space: nowrap;">
                 <div class="title d-flex flex-row justify-content-between"  >
                     <div class="titles">
@@ -95,7 +95,7 @@
 </div>
 @endsection
 @section('bottom')
-<nav class="navbar navbar-light navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom no-padding" style="background-color: white"> 
+<nav class="navbar navbar-light navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom no-padding" style="background-color: white">
     <ul class="navbar-nav nav-justified w-100">
       <li class="nav-item border-right">
         <a href="#" class="nav-link" style="color: black" > <span class="fa fa-filter" aria-hidden="true"></span>        Filter</a>
@@ -103,7 +103,7 @@
       <li class="nav-item border-right">
         <a href="#" class="nav-link" style="color: black" data-toggle="modal" data-target="#modalPushRiwayat" ><span class="fa fa-refresh" aria-hidden="true"></span>    Riwayat</a>
       </li>
-      <li class="nav-item border-right" >	
+      <li class="nav-item border-right" >
         <a href="#" class="nav-link" style="color: black" data-target="#modalPush" class="justify-content-between" data-toggle="modal"><span class="fa fa-star-o" aria-hidden="true"></span>     Simpan</a>
       </li>
     </ul>
