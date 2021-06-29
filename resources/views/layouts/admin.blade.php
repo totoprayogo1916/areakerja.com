@@ -74,7 +74,7 @@
         </ul>
     </header>
 
-    <div class="app-body">
+    <div id="admin">
         @include('admin.partials.menu')
         <main class="main">
 
@@ -127,49 +127,50 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/app2admin.js') }}"></script>
     <script type="text/javascript">
-        $(document).ready(function(){      
+        $(document).ready(function(){
           var postURL = "<?php echo url('addmore'); ?>";
-          var i=1;  
-          
-          var i2=1; 
-    
-    
-          $('#add').click(function(){  
-              i++;  
-              $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td><input type="text" name="requirements[]" placeholder="Masukkan Syarat Pekerjaan" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
-          });  
+          var i=1;
 
-          $('#add2').click(function(){  
-              i2++;  
-              $('#dynamic_field2').append('<tr id="row'+i2+'" class="dynamic-added"><td><input type="text" name="full_description[]" placeholder="Masukkan Deskripsi Pekerjaan" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i2+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
-          }); 
-    
-    
-          $(document).on('click', '.btn_remove', function(){  
-              var button_id = $(this).attr("id");   
-              $('#row'+button_id+'').remove();  
-          }); 
-          
-          $(document).on('click', '.btn_remove', function(){  
-              var button_id = $(this).attr("id");   
-              $('#row'+button_id+'').remove();  
-          }); 
-    
+          var i2=1;
+
+
+          $('#add').click(function(){
+              i++;
+              $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td><input type="text" name="requirements[]" placeholder="Masukkan Syarat Pekerjaan" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+          });
+
+          $('#add2').click(function(){
+              i2++;
+              $('#dynamic_field2').append('<tr id="row'+i2+'" class="dynamic-added"><td><input type="text" name="full_description[]" placeholder="Masukkan Deskripsi Pekerjaan" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i2+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+          });
+
+
+          $(document).on('click', '.btn_remove', function(){
+              var button_id = $(this).attr("id");
+              $('#row'+button_id+'').remove();
+          });
+
+          $(document).on('click', '.btn_remove', function(){
+              var button_id = $(this).attr("id");
+              $('#row'+button_id+'').remove();
+          });
+
           $.ajaxSetup({
               headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
               }
           });
-    
-    
-          $('#submit').click(function(){            
-              $.ajax({  
-                    url:postURL,  
-                    method:"POST",  
+
+
+          $('#submit').click(function(){
+              $.ajax({
+                    url:postURL,
+                    method:"POST",
                     data:$('#add_name').serialize(),
                     type:'json',
-                    success:function(data)  
+                    success:function(data)
                     {
                         if(data.error){
                             printErrorMsg(data.error);
@@ -182,11 +183,11 @@
                             $(".print-error-msg").css('display','none');
                             $(".print-success-msg").find("ul").append('<li>Record Inserted Successfully.</li>');
                         }
-                    }  
-              });  
-          });  
-    
-    
+                    }
+              });
+          });
+
+
           function printErrorMsg (msg) {
             $(".print-error-msg").find("ul").html('');
             $(".print-error-msg").css('display','block');
@@ -195,7 +196,7 @@
                 $(".print-error-msg").find("ul").append('<li>'+value+'</li>');
             });
           }
-        });  
+        });
     </script>
     <script type="text/javascript">
       // add row
@@ -208,10 +209,10 @@
           html += '<button id="removeRow" type="button" class="btn btn-danger">Remove</button>';
           html += '</div>';
           html += '</div>';
-  
+
           $('#newRow').append(html);
       });
-  
+
       // remove row
       $(document).on('click', '#removeRow', function () {
           $(this).closest('#inputFormRow').remove();
