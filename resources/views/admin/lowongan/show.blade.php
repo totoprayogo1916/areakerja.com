@@ -87,18 +87,18 @@
                     </tr>
                     <tr>
                         <th>
-                            Gender
+                            Status Kerja
                         </th>
                         <td>
-                            {{ $lowongan->gender}}
+                            {{ $lowongan->job_nature }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Minimal Umur
+                            Gender
                         </th>
                         <td>
-                            {{ $lowongan->min_umur}}
+                            {{ $lowongan->gender}}
                         </td>
                     </tr>
                     <tr>
@@ -111,10 +111,10 @@
                     </tr>
                     <tr>
                         <th>
-                            Status Kerja
+                            Minimal Umur
                         </th>
                         <td>
-                            {{ $lowongan->job_nature }}
+                            {{ $lowongan->min_umur}}
                         </td>
                     </tr>
                     <tr>
