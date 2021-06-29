@@ -40,7 +40,6 @@
           @yield('jobss')
 
 
-          <!-- Start post Area -->
           <section class="post-area section-gap">
 
               <div class="container">
@@ -54,195 +53,136 @@
               </div>
           </section>
         </div>
-
-        <!-- End post Area -->
-
-
-               <!--Modal: modalPush-->
-<div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-aria-hidden="true">
-<div class="modal-dialog modal-notify modal-info" role="document">
-  <!--Content-->
-  <div class="modal-content text-center">
-    <!--Header-->
-    <div class="modal-header2 d-flex">
-      <p class="heading">Lowongan Tersimpan</p>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span style="color: rgb(255, 255, 255)"   aria-hidden="true">&times;</span>
-    </button>
-    </div>
-
-    <!--Body-->
-    <!--Body-->
-    <div class="modal-body">
-
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Nama Pekerjaan</th>
-              <th>Perusahaan</th>
-              <th>Aksi</th>
-            </tr>
-          </thead>
-          <tbody>
-            @foreach($wishlist as $wishlis)
-            <tr>
-              <th scope="row">{{ $loop->iteration }}</th>
-              <td>{{ $wishlis->job->title }}</td>
-              <td>{{ $wishlis->job->company->name }}</td>
-              <td >
-                {{-- <a href="{{ route('jobs.delete', $wishlis->job->id) }}" style="color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-danger">{{ method_field('DELETE') }}<i class="fas fa-trash"></i></a> --}}
-                <form action="{{ route('jobs.delete', $wishlis->job->id) }}" method="POST" class="justify-content-center flex-wrap" >
-                    @csrf
-                    {{ method_field('DELETE') }}
-                    <button type="submit" style=" color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;width: 30px; margin-bottom: 5px" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                <a href="{{ route('jobs.show', $wishlis->job->slug) }}" style="; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;width: 30px;" class="btn btn-info"><i class="fas fa-eye"></i></a>
-            </form>
-            </td>
-            </tr>
-            @endforeach
-          </tbody>
-        </table>
-
-      </div>
-
-    <!--Footer-->
-    <div class="modal-footer">
-      <a type="button" class="btn btn-outline-close" data-dismiss="modal"><span style="margin-left: -30%">Close</span></a>
-    </div>
-  </div>
-  <!--/.Content-->
-</div>
-</div>
-<!--Modal: modalPush-->
-
-<!--Modal Riwayat-->
-<div class="modal fade" id="modalPushFilter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-aria-hidden="true">
-<div class="modal-dialog modal-notify modal-info" role="document">
-  <!--Content-->
-  <div class="modal-content text-center">
-    <!--Header-->
-    <div class="modal-header2 d-flex">
-      <p class="heading">Filter</p>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span style="color: rgb(255, 255, 255)"   aria-hidden="true">&times;</span>
-    </button>
-    </div>
-
-    <!--Body-->
-    <!--Body-->
-    <div class="modal-body">
-      <div data-aos="zoom-in-up" class="single-slidebar " >
-        <h4>Lokasi</h4>
-        <ul class="cat-list-mobile">
-            @foreach($sidebarLocations as $location)
-                <li><a class="justify-content-between d-flex" href="{{ route('locations.show', $location->slug) }}"><p>{{ $location->name }}</p></a></li>
-            @endforeach
-        </ul>
-    </div>
-
-    <div data-aos="zoom-in-up" class="single-slidebar">
-        <h4>Kategori</h4>
-        <ul class="cat-list-mobile">
-            @foreach($sidebarCategories as $category)
-                <li><a class="justify-content-between d-flex" href="{{ route('categories.show', $category->slug)}}"><p>{{ $category->name }}</p></a></li>
-            @endforeach
-        </ul>
-    </div>
-    </div>
-
-    <!--Footer-->
-    <div class="modal-footer">
-      <a type="button" class="btn btn-outline-close" data-dismiss="modal"><span style="margin-left: -30%">Close</span></a>
-    </div>
-  </div>
-  <!--/.Content-->
-</div>
-</div>
-<div class="modal fade" id="modalPushRiwayat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-aria-hidden="true">
-<div class="modal-dialog modal-notify modal-info" role="document">
-  <!--Content-->
-  <div class="modal-content text-center">
-    <!--Header-->
-    <div class="modal-header2 d-flex">
-      <p class="heading">Riwayat Penelusuran</p>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span style="color: rgb(255, 255, 255)"   aria-hidden="true">&times;</span>
-    </button>
-    </div>
-
-    <!--Body-->
-    <!--Body-->
-    <div class="modal-body">
-
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Nama Pekerjaan</th>
-              <th>Perusahaan</th>
-              <th>View</th>
-            </tr>
-          </thead>
-          <tbody>
-            @foreach($riwayatlist as $riwayatlis)
-            <tr>
-              <th scope="row">{{ $loop->iteration }}</th>
-              <td>{{ $riwayatlis->job->title }}</td>
-              <td>{{ $riwayatlis->job->company->name }}</td>
-              <td width='50%'>
-                {{-- <a href="{{ route('jobs.delete', $wishlis->job->id) }}" style="color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-danger">{{ method_field('DELETE') }}<i class="fas fa-trash"></i></a> --}}
-                {{-- <form action="{{ route('jobs.delete', $wishlis->job->id) }}" method="POST" class="justify-content-center flex-wrap" >
-                    @csrf
-                    {{ method_field('DELETE') }}
-                    <button type="submit" style="margin-right: 10px; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-danger"><i class="fas fa-trash"></i></button> --}}
-                <a href="{{ route('jobs.show', $riwayatlis->job->slug) }}" style="; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-info"><i class="fas fa-eye"></i></a>
-            </form>
-            </td>
-            </tr>
-            @endforeach
-          </tbody>
-        </table>
-
-      </div>
-
-    <!--Footer-->
-    <div class="modal-footer">
-      <a type="button" class="btn btn-outline-close" data-dismiss="modal"><span style="margin-left: -30%">Close</span></a>
-    </div>
-  </div>
-  <!--/.Content-->
-</div>
-</div>
-<!--Modal: modalPush-->
-
-         <!-- Modal -->
-         {{-- <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Lowongan Tersimpan</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                        @foreach($wishlist as $wishlis)
-                            <a class="justify-content-center" href="{{ route('jobs.show', $job->id) }}">{{ $wishlis->job->title }} ---> {{ $wishlis->job->company->name }}</a>
-                            <hr style="width: 90%"/>
-                        @endforeach
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-            </div>
-        </div> --}}
-
         @include('partials.footer')
+        <div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info" role="document">
+          <div class="modal-content text-center">
+            <div class="modal-header2 d-flex">
+              <p class="heading">Lowongan Tersimpan</p>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span style="color: rgb(255, 255, 255)"   aria-hidden="true">&times;</span>
+            </button>
+            </div>
+
+            <div class="modal-body">
+
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Nama Pekerjaan</th>
+                      <th>Perusahaan</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @foreach($wishlist as $wishlis)
+                    <tr>
+                      <th scope="row">{{ $loop->iteration }}</th>
+                      <td>{{ $wishlis->job->title }}</td>
+                      <td>{{ $wishlis->job->company->name }}</td>
+                      <td >
+                        <form action="{{ route('jobs.delete', $wishlis->job->id) }}" method="POST" class="justify-content-center flex-wrap" >
+                            @csrf
+                            {{ method_field('DELETE') }}
+                            <button type="submit" style=" color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;width: 30px; margin-bottom: 5px" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                        <a href="{{ route('jobs.show', $wishlis->job->slug) }}" style="; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;width: 30px;" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                    </form>
+                    </td>
+                    </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+
+              </div>
+
+            <div class="modal-footer">
+              <a type="button" class="btn btn-outline-close" data-dismiss="modal"><span style="margin-left: -30%">Close</span></a>
+            </div>
+        </div>
+        </div>
+        <div class="modal fade" id="modalPushFilter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info" role="document">
+          <div class="modal-content text-center">
+            <div class="modal-header2 d-flex">
+              <p class="heading">Filter</p>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span style="color: rgb(255, 255, 255)"   aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+              <div data-aos="zoom-in-up" class="single-slidebar " >
+                <h4>Lokasi</h4>
+                <ul class="cat-list-mobile">
+                    @foreach($sidebarLocations as $location)
+                        <li><a class="justify-content-between d-flex" href="{{ route('locations.show', $location->slug) }}"><p>{{ $location->name }}</p></a></li>
+                    @endforeach
+                </ul>
+            </div>
+
+            <div data-aos="zoom-in-up" class="single-slidebar">
+                <h4>Kategori</h4>
+                <ul class="cat-list-mobile">
+                    @foreach($sidebarCategories as $category)
+                        <li><a class="justify-content-between d-flex" href="{{ route('categories.show', $category->slug)}}"><p>{{ $category->name }}</p></a></li>
+                    @endforeach
+                </ul>
+            </div>
+            </div>
+            <div class="modal-footer">
+              <a type="button" class="btn btn-outline-close" data-dismiss="modal"><span style="margin-left: -30%">Close</span></a>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="modal fade" id="modalPushRiwayat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info" role="document">
+          <div class="modal-content text-center">
+            <div class="modal-header2 d-flex">
+              <p class="heading">Riwayat Penelusuran</p>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span style="color: rgb(255, 255, 255)"   aria-hidden="true">&times;</span>
+            </button>
+            </div>
+
+            <div class="modal-body">
+
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Nama Pekerjaan</th>
+                      <th>Perusahaan</th>
+                      <th>View</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @foreach($riwayatlist as $riwayatlis)
+                    <tr>
+                      <th scope="row">{{ $loop->iteration }}</th>
+                      <td>{{ $riwayatlis->job->title }}</td>
+                      <td>{{ $riwayatlis->job->company->name }}</td>
+                      <td width='50%'>
+                        <a href="{{ route('jobs.show', $riwayatlis->job->slug) }}" style="; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                    </form>
+                    </td>
+                    </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+
+              </div>
+            <div class="modal-footer">
+              <a type="button" class="btn btn-outline-close" data-dismiss="modal"><span style="margin-left: -30%">Close</span></a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        
 
         <script src="{{ asset('js/vendor/jquery-2.2.4.min.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -340,8 +280,5 @@ aria-hidden="true">
 
 
         @include('sweetalert::alert')
-
-
-
     </body>
 </html>
