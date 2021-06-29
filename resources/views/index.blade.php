@@ -60,7 +60,7 @@
 @endsection
 
 @section('slick')
-<h3 class ="sng-ttl9 text-center    ">Rekomendasi Lowongan</h3>
+<h3 class ="sng-ttl9 text-center ">Rekomendasi Lowongan</h3>
 <div class="for_slick_slider multiple-items" >
     @foreach($sidbarJobs as $job)
         <div class="items gg"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
