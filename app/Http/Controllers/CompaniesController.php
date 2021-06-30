@@ -42,7 +42,14 @@ class CompaniesController extends Controller
         $searchCategories = Category::pluck('name', 'id');
         $wishlist         = Wish::where('ip', $ipaddress)->get();
         $riwayatlist      = Riwayat::where('ip', $ipaddress)->get();
-
+        $sidebarLocations = Location::withCount('jobs')
+            ->whereHas('jobs')
+            ->orderBy('jobs_count', 'desc')
+            ->get();
+        $sidebarCategories = Category::withCount('jobs')
+            ->whereHas('jobs')
+            ->orderBy('jobs_count', 'desc')
+            ->get();
         $title = 'Riwayat Lowongan Kerja di ' . $job[0]->name;
 
         return view('company.index', compact(
@@ -53,8 +60,10 @@ class CompaniesController extends Controller
             'riwayatlist',
             'searchLocations',
             'searchCategories',
+            'sidebarLocations',
             'wishlist',
-            'ipaddress'
+            'ipaddress',
+            'sidebarCategories'
         ));
     }
 }

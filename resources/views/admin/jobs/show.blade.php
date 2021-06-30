@@ -20,7 +20,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.job.fields.title') }}
+                            Nama Pekerjaan
                         </th>
                         <td>
                             {{ $job->title }}
@@ -28,7 +28,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.job.fields.company') }}
+                            Nama Perusahaan
                         </th>
                         <td>
                             {{ $job->company->name ?? '' }}
@@ -36,31 +36,15 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.job.fields.full_description') }}
+                            Alamat Kantor
                         </th>
                         <td>
-                            {!! $job->full_description !!}
+                            {{ $job->lokasikerja ?? '' }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.job.fields.requirements') }}
-                        </th>
-                        <td>
-                            {!! $job->requirements !!}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            {{ trans('cruds.job.fields.job_nature') }}
-                        </th>
-                        <td>
-                            {{ $job->job_nature }}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            {{ trans('cruds.job.fields.location') }}
+                            Lokasi/Kota
                         </th>
                         <td>
                             {{ $job->location->name ?? '' }}
@@ -68,15 +52,75 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.job.fields.address') }}
+                            Kecamatan
                         </th>
                         <td>
-                            {{ $job->address }}
+                            {{ $job->address ?? '' }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Categories
+                            Deskripsi Pekerjaan
+                        </th>
+                        <td>
+                            @foreach($job->full_description as $hehe2)
+                            <li>{{ $hehe2 }}</li>
+                            @endforeach
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Syarat Pekerjaan
+                        </th>
+                        <td>
+                            @foreach($job->requirements as $hehe)
+                                    <li>{{ $hehe }}</li>
+                                @endforeach
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Status Pekerjaan
+                        </th>
+                        <td>
+                            {{ $job->job_nature }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Gender
+                        </th>
+                        <td>
+                            {{ $job->gender }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Minimal Pendidikan
+                        </th>
+                        <td>
+                            {{ $job->pendidikan }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Minimal/Maksimal Umur
+                        </th>
+                        <td>
+                            {{ $job->umur }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Batas Lamaran
+                        </th>
+                        <td>
+                            {{ $job->bataslamaran }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Kategori
                         </th>
                         <td>
                             @foreach($job->categories as $id => $categories)
@@ -90,6 +134,30 @@
                         </th>
                         <td>
                             {{ $job->salary }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Email
+                        </th>
+                        <td>
+                            {{ $job->email }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Nomor Handphone
+                        </th>
+                        <td>
+                            {{ $job->notelp }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Website
+                        </th>
+                        <td>
+                            {{ $job->website }}
                         </td>
                     </tr>
                     <tr>
