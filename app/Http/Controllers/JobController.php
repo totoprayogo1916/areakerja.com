@@ -137,8 +137,8 @@ class JobController extends Controller
             ->whereHas('jobs')
             ->orderBy('jobs_count', 'desc')
             ->get();
-        $riwayatlist      = Riwayat::where('ip', $ipaddress)->get();
-        $title = 'Pasang Lowongan Kerja';
+        $riwayatlist = Riwayat::where('ip', $ipaddress)->get();
+        $title       = 'Pasang Lowongan Kerja';
 
         return view(
             'jobs.pasang',
