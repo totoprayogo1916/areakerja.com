@@ -18,7 +18,9 @@ class Riwayat extends Migration
 
             $table->string('ip');
 
-            $table->string('idJob');
+            $table->unsignedInteger('idJob');
+
+            $table->foreign('idJob', 'job_id_fk_476515')->references('id')->on('jobs')->onDelete('cascade');
             $table->timestamps();
         });
     }

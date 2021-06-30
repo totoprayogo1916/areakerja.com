@@ -87,7 +87,6 @@ class Job extends Model
                 $query->where(static function ($query) {
                     $search = request()->input('search');
                     $query->where('title', 'LIKE', "%$search%")
-                        ->orWhere('short_description', 'LIKE', "%$search%")
                         ->orWhere('full_description', 'LIKE', "%$search%")
                         ->orWhere('job_nature', 'LIKE', "%$search%")
                         ->orWhere('requirements', 'LIKE', "%$search%")

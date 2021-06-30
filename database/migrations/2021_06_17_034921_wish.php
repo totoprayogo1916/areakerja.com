@@ -18,7 +18,9 @@ class Wish extends Migration
 
             $table->string('ip');
 
-            $table->string('idJob');
+            $table->unsignedInteger('idJob');
+
+            $table->foreign('idJob', 'job_id_fk_476517')->references('id')->on('jobs')->onDelete('cascade');
         });
     }
 }
