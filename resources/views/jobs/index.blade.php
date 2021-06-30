@@ -61,7 +61,7 @@
 @section('rekom')
 <div class="container rr2" >
     <div class="justify-content-center d-flex" >
-        <a  href="/rekomendasi" style="color: #000; font-size: 20px">Rekomendasi Loker Lainnya></a>
+        <a  href="{{ route('rekomendasi') }}" style="color: #000; font-size: 20px">Rekomendasi Loker Lainnya></a>
     </div>
 </div>
 @endsection

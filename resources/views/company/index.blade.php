@@ -127,44 +127,96 @@
                           </div>
                     </div>
                 </section>
-                <div class="col-lg-8 post-list gg12 h-full" >
-                    <div class="row no-gutters" style="width: 100%">
-                        <div class="col-8 " style="margin-bottom: 20px">
-                            <h3 class ="sng-ttl2" style="margin-bottom: 10px; font-weight: normal">Riwayat Lowongan</h3>
-                            <h2 class="cmp" >{{ $job[0]->name }}</h2>
-                
-                        </div>
-                        <div class="col-4 text-right " style="width: 100%;">
-                            <img class= "gg6" src="{{ url('img/companylogo') }}/{{ $job[0]->gambar }}" style="margin: auto; " >
-                        </div>
-                    </div>
-                    @foreach($job2 as $job1)
-                    <a href="{{ route('riwayat', $job1->slug) }}">
-                        <div data-aos="fade-up" class="single-post align-items-center d-flex" style="width: 100%">
-                
-                            <div class="details " style="width: 100%" style="margin-top: 14px; overflow: unset; white-space: nowrap;">
-                                <div class="title d-flex flex-row justify-content-between"  >
-                                    <div class="titles">
-                                        <h3 class ="sng-ttl2" >{{ $job1->title }}</h3>
-                                    </div>
+                <div class="container">
+                    <div class="row justify-content-center d-flex " >
+                        <div class="col-lg-8 post-list gg12 h-full" >
+                            <div class="row no-gutters" style="width: 100%">
+                                <div class="col-8 " style="margin-bottom: 20px">
+                                    <h3 class ="sng-ttl2" style="margin-bottom: 10px; font-weight: normal">Riwayat Lowongan</h3>
+                                    <h2 class="cmp" >{{ $job[0]->name }}</h2>
+                        
                                 </div>
-                                <hr class="d-flex flex-row gg" style="width: 100%; margin-left: -0.5%"/>
-                                 <div class="row ttl3" >
-                                    <div class="col-auto " >
-                                        <h5 class ="sng-dtl" ><span class="fa fa-graduation-cap" aria-hidden="true"></span>  {{ $job1->pendidikan }}
-                                    </div>
-                                    <div class="col-auto " >
-                                        <h5 class ="sng-dtl" ><span class="fa fa-hourglass-half" aria-hidden="true"></span>  {{ $job1->job_nature }}
-                                    </div>
-                                    <div class="col-auto"  >
-                                        <h5 class ="sng-dtl" > <span class="fa fa-map-marker" aria-hidden="true"></span> {{ $job1->address }}</h5>
-                                    </div>
+                                <div class="col-4 text-right " style="width: 100%;">
+                                    <img class= "gg6" src="{{ url('img/companylogo') }}/{{ $job[0]->gambar }}" style="margin: auto; " >
                                 </div>
                             </div>
+                            @foreach($job2 as $job1)
+                            <a href="{{ route('riwayat', $job1->slug) }}">
+                                <div data-aos="fade-up" class="single-post align-items-center d-flex" style="width: 100%">
+                        
+                                    <div class="details " style="width: 100%" style="margin-top: 14px; overflow: unset; white-space: nowrap;">
+                                        <div class="title d-flex flex-row justify-content-between"  >
+                                            <div class="titles">
+                                                <h3 class ="sng-ttl2" >{{ $job1->title }}</h3>
+                                            </div>
+                                        </div>
+                                        <hr class="d-flex flex-row gg" style="width: 100%; margin-left: -0.5%"/>
+                                         <div class="row ttl3" >
+                                            <div class="col-auto " >
+                                                <h5 class ="sng-dtl" ><span class="fa fa-graduation-cap" aria-hidden="true"></span>  {{ $job1->pendidikan }}
+                                            </div>
+                                            <div class="col-auto " >
+                                                <h5 class ="sng-dtl" ><span class="fa fa-hourglass-half" aria-hidden="true"></span>  {{ $job1->job_nature }}
+                                            </div>
+                                            <div class="col-auto"  >
+                                                <h5 class ="sng-dtl" > <span class="fa fa-map-marker" aria-hidden="true"></span> {{ $job1->address }}</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            @endforeach
                         </div>
-                    </a>
-                    @endforeach
+                        @include('partials.sidebar')
+                        <div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-notify modal-info" role="document">
+                            <div class="modal-content text-center">
+                                <div class="modal-header2 d-flex">
+                                <p class="heading">Lowongan Tersimpan</p>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span style="color: rgb(255, 255, 255)"   aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                        <th>#</th>
+                                        <th>Nama Pekerjaan</th>
+                                        <th>Perusahaan</th>
+                                        <th>Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($wishlist as $wishlis)
+                                        <tr>
+                                        <th scope="row">{{ $loop->iteration }}</th>
+                                        <td>{{ $wishlis->job->title }}</td>
+                                        <td>{{ $wishlis->job->company->name }}</td>
+                                        <td >
+                                            <form action="{{ route('jobs.delete', $wishlis->job->id) }}" method="POST" class="justify-content-center flex-wrap" >
+                                                @csrf
+                                                {{ method_field('DELETE') }}
+                                                <button type="submit" style=" color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;width: 30px; margin-bottom: 5px" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                            <a href="{{ route('jobs.show', $wishlis->job->slug) }}" style="; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;width: 30px;" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                                        </form>
+                                        </td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="modal-footer">
+                                <a type="button" class="btn btn-outline-close" data-dismiss="modal"><span style="margin-left: -30%">Close</span></a>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
                 </div>
+                
             </main>
             <footer class="footer-area" id="footer">
                 <div class="container">
@@ -287,52 +339,7 @@
 
 
 
-        <div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-notify modal-info" role="document">
-          <div class="modal-content text-center">
-            <div class="modal-header2 d-flex">
-              <p class="heading">Lowongan Tersimpan</p>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span style="color: rgb(255, 255, 255)"   aria-hidden="true">&times;</span>
-            </button>
-            </div>
-
-            <div class="modal-body">
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>Nama Pekerjaan</th>
-                      <th>Perusahaan</th>
-                      <th>Aksi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    @foreach($wishlist as $wishlis)
-                    <tr>
-                      <th scope="row">{{ $loop->iteration }}</th>
-                      <td>{{ $wishlis->job->title }}</td>
-                      <td>{{ $wishlis->job->company->name }}</td>
-                      <td >
-                        <form action="{{ route('jobs.delete', $wishlis->job->id) }}" method="POST" class="justify-content-center flex-wrap" >
-                            @csrf
-                            {{ method_field('DELETE') }}
-                            <button type="submit" style=" color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;width: 30px; margin-bottom: 5px" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                        <a href="{{ route('jobs.show', $wishlis->job->slug) }}" style="; color:#fff; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;width: 30px;" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                    </form>
-                    </td>
-                    </tr>
-                    @endforeach
-                  </tbody>
-                </table>
-              </div>
-
-            <div class="modal-footer">
-              <a type="button" class="btn btn-outline-close" data-dismiss="modal"><span style="margin-left: -30%">Close</span></a>
-            </div>
-        </div>
-        </div>
+        
         <div class="modal fade" id="modalPushFilter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-notify modal-info" role="document">

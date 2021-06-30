@@ -29,16 +29,6 @@
             </p>
         </div>
     </div>
-    {{-- <div class="banner-area"> --}}
-  {{-- <div class="row align-items-center justify-content-center" style="margin-right: 15px; margin-left: 15px">
-            <div class="banner-content col-lg-12" style="width: 10">
-                    <div class="col form-wrap-main" style="width: 100%;">
-                        
-                    
-                </div>
-            </div>
-        </div> --}}
-    {{-- </div> --}}
     
 </section>
 @endsection

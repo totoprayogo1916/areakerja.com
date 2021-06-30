@@ -63,7 +63,7 @@ class ArtikelController extends Controller
             ->get();
 
         $title = 'Artikel';
-
+        $riwayatlist      = Riwayat::where('ip', $ipaddress)->get();
         return view(
             'artikel.index',
             compact([
@@ -85,6 +85,7 @@ class ArtikelController extends Controller
     public function show($slug)
     {
         // dd($slug);
+        $ipaddress = '';
         $searchLocations  = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $searchByCategory = Category::withCount('jobs')
@@ -113,7 +114,7 @@ class ArtikelController extends Controller
             ->get();
 
         $title = $art->judul;
-
+        $riwayatlist      = Riwayat::where('ip', $ipaddress)->get();
         return view(
             'artikel.show',
             compact([
@@ -126,6 +127,7 @@ class ArtikelController extends Controller
                 'sidebarLocations',
                 'sidebarCategories',
                 'art',
+                'riwayatlist'
             ])
         );
     }

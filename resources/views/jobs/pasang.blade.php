@@ -1,17 +1,25 @@
 @extends('layouts.pasang')
-
 @section('home')
+<section class="relative" id="home" style="margin-bottom: 50px">
+    <div class="banner-area2 "  >
+        <div class="row align-items-center justify-content-center" style="margin-right: 15px; margin-left: 15px">
+            <div class="banner-content col-lg-12">
+                <div class="overlay overlay-bg container" >
+                    <h1 style="color: #fe7b54; margin-bottom:5px; text-shadow: 2px 2px 3px #353535b0;">
+                        Tips Kerja
+                    </h1>
+                    <h6 style="color: #fe7b54; text-shadow: 1px 1px 2px #353535b0;">
+                    Pelajari Tips-Tips Kerja Yang Telah Kami Buat Untuk Anda
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>   
+</section>
+@endsection
+@section('content')
 
 <section class="relative" id="home" >
-
-        <div class="row align-items-center justify-content-center" style="margin-right: 1%">
-            <div class="banner-content col-lg-12">
-                <h1 style="color: #fe7b54; text-shadow: 2px 2px 3px #353535b0;">
-                    Form Order
-                </h1>
-                <h6 style="color: #fe7b54; text-shadow: 1px 1px 2px #353535b0;">
-                Tambah Lowongan Dari Perusahaan Anda Dengan Mudah
-                </h6>
                 <form method="POST" enctype="multipart/form-data" action="{{ url('formpasang') }}" id="regForm" style="width: 50%;">
                     @csrf
                     <div class="tab" id="pasangform">
@@ -196,12 +204,13 @@
                                 placeholder="Contoh: https://docs.google.com/forms/d/xxx">
                             </div>
                         </div>
-                        <div class="row form-wrap justify-content-around" style="margin-top: 2%">
-                            <div class="col-lg-3 form-cols">
+                        <div class="row justify-content-center" style="margin-top: 2%; background-color: aqua" >
+                            <div class="col-6 col-sm-3 " >
                                 <button type="submit" class="btn btn-area" onclick="nextPrev(-1)" >
                                 <span>Sebelumnya</span>
                                 </button>
-
+                            </div>
+                            <div class="col-6 col-sm-3" >  
                                 <button type="submit" class="btn btn-area"  >
                                     <span>Selanjutnya</span>
                                 </button>
@@ -219,8 +228,6 @@
 
                     </form>
 
-            </div>
-        </div>
     {{-- </div> --}}
 </section>
 @endsection

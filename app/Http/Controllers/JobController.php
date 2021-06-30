@@ -96,6 +96,23 @@ class JobController extends Controller
 
     public function pasang()
     {
+        $ipaddress = '';
+        if (isset($_SERVER['HTTP_CLIENT_IP'])) {
+            $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+        } elseif (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        } elseif (isset($_SERVER['HTTP_X_FORWARDED'])) {
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+        } elseif (isset($_SERVER['HTTP_FORWARDED_FOR'])) {
+            $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+        } elseif (isset($_SERVER['HTTP_FORWARDED'])) {
+            $ipaddress = $_SERVER['HTTP_FORWARDED'];
+        } elseif (isset($_SERVER['REMOTE_ADDR'])) {
+            $ipaddress = $_SERVER['REMOTE_ADDR'];
+        } else {
+            $ipaddress = 'UNKNOWN';
+        }
+
         $searchLocations  = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $searchByCategory = Category::withCount('jobs')
@@ -120,7 +137,7 @@ class JobController extends Controller
             ->whereHas('jobs')
             ->orderBy('jobs_count', 'desc')
             ->get();
-
+        $riwayatlist      = Riwayat::where('ip', $ipaddress)->get();
         $title = 'Pasang Lowongan Kerja';
 
         return view(
@@ -134,6 +151,7 @@ class JobController extends Controller
                 'sidebarJobs',
                 'sidebarLocations',
                 'sidebarCategories',
+                'riwayatlist',
             ])
         );
     }

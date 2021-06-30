@@ -3,20 +3,25 @@
 @section('home')
 
 <section class="relative" id="home" >
-    <div class="container">
-        <div class="banner-content text-right">
-            <h5 style="color: #00000062; ">
-                Areakerja.com >
-                    <a style="color: #00000062; " href="{{ route('artikel') }}">Artikel</a>  
-                    > {{ $art->judul}}
-            </h5>   
+    <div class="banner-area2"  >
+        <div class="container">
+            <div class="banner-content text-right">
+                <div class="overlay overlay-bg container" >
+                    <h5 class="mt-3" style="color: #00000062; ">
+                        Areakerja.com >
+                            <a style="color: #00000062; " href="{{ route('artikel') }}">Artikel</a>  
+                            > {{ $art->judul}}
+                    </h5>       
+                </div>
+                
+            </div>
         </div>
     </div>
 </section>
 @endsection
 
 @section('content')
-<div class="col-sm-8 post-list2 " >
+<div class="col-sm-8 post-list2 ml-auto mr-auto" >
     <div data-aos="fade-up" class="single-post2 align-items-center border-bottom" style="margin-left: auto;margin-right: auto">
         <div class="col-12 border-bottom text-center">
             <h1 style="margin-bottom: 20px">{{ $art->judul }}</h1>

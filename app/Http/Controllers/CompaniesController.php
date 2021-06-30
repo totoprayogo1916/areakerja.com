@@ -51,7 +51,10 @@ class CompaniesController extends Controller
             ->orderBy('jobs_count', 'desc')
             ->get();
         $title = 'Riwayat Lowongan Kerja di ' . $job[0]->name;
-
+        $sidebarJobs = Job::whereTopRated(true)
+            ->orderBy('id', 'desc')
+            ->take(0)
+            ->get();
         return view('company.index', compact(
             'title',
             'wishh',
@@ -62,6 +65,7 @@ class CompaniesController extends Controller
             'searchCategories',
             'sidebarLocations',
             'wishlist',
+            'sidebarJobs',
             'ipaddress',
             'sidebarCategories'
         ));

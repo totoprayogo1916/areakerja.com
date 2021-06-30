@@ -21,23 +21,40 @@
     <link rel="stylesheet" href="{{ asset('css/style2.css') }}">
     <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <style type="text/css">
+        body, wrapper {
+        min-height:100vh;
+        }
+    
+    .flex-fill {
+        flex:1 1 auto;
+    }
+    </style>
     </head>
     <body>
-    @include('partials.header')
-        <div class="banner-area">
-        </div>
+        <wrapper class="d-flex flex-column">
+            <nav>
+                @include('partials.header')
+            </nav>
+            <main class="flex-fill">
+                @yield('home')
+                <section class="post-area section-gap">
+                    <div class="container ">
+                        @yield('content')
+                    </div>
+                </section>
+            </main>
+            @include('user.footer')
+        </wrapper>
+    
+        {{-- <div class="banner-area">
+        </div> --}}
         {{-- @include('partials.banner') --}}
 
 
         <!-- Start post Area -->
-        <section class="section-gap2">
-            @yield('home')
-            <div class="container">
-                <div class="row justify-content-center d-flex mt-4"  >
-                    @yield('content')
-                </div>
-            </div>
-        </section>
+        
+        
         <!-- End post Area -->
 
 
@@ -45,7 +62,7 @@
 
         </div>
 
-        @include('partials.footer')
+        
         <script src="{{ asset('js/vendor/jquery-2.2.4.min.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
