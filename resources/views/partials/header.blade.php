@@ -20,7 +20,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a type="button" class="nav-link form-pasang" href="{{ route('pasang') }}" style="color: #fee5ba">
+          <a type="button" class="nav-link form-pasang" href="{{ route('pilihpaket') }}" style="color: #fee5ba">
             <span class="lnr lnr-file-add"></span> Pasang Lowongan
           </a>
         </li>

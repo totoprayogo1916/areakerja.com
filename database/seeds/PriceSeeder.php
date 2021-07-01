@@ -13,7 +13,7 @@ class PriceSeeder extends Seeder
             'nama'              => 'Gold',
             'deskripsi_singkat' => 'Paket Super Efektif',
             'deskripsi_full'    => '5 Kali Publikasi di semua jaringan AreaKerja.id',
-            'list'              => ['Website & Aplikasi', 'Instagram Post & Story', 'Highlight Story Favorit', 'Google Jobs & Bisnis', 'Facebook Post & Story', 'Twitter', 'Linkedin', 'Telegram'],
+            'list'              => ['Website & Aplikasi', 'Instagram Post & Story', 'Highlight Story Favorit', 'Google Jobs & Bisnis', 'Facebook Post & Story', 'Twitter', '<span class="fa fa-linkedin-square"></span> Linkedin', 'Telegram'],
             'harga'             => 'Rp 10.000.000',
             'warna'             => '#ffa70e',
         ]);
