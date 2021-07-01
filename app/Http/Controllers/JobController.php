@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Job;
 use App\Location;
+use App\Price;
 use App\Riwayat;
 use App\Wish;
-use App\Price;
 use Carbon\Carbon;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -175,7 +175,7 @@ class JobController extends Controller
         } else {
             $ipaddress = 'UNKNOWN';
         }
-        $paket = Price::all();
+        $paket            = Price::all();
         $searchLocations  = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $searchByCategory = Category::withCount('jobs')
