@@ -93,7 +93,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('lowongan', 'LowonganController');
 
     //Price
-    Route::delete('lowongan/price', 'PriceController@massDestroy')->name('price.massDestroy');
+    Route::delete('price/destroy', 'PriceController@massDestroy')->name('price.massDestroy');
     Route::resource('price', 'PriceController');
 
     Route::delete('article/destroy', 'ArticleController@massDestroy')->name('article.massDestroy');

@@ -41,25 +41,13 @@
                 <section class="post-area section-gap">
                     <div class="container ">
                         @yield('content')
+                        @yield('slick')
                     </div>
                 </section>
             </main>
             @include('user.footer')
         </wrapper>
     
-        {{-- <div class="banner-area">
-        </div> --}}
-        {{-- @include('partials.banner') --}}
-
-
-        <!-- Start post Area -->
-        
-        
-        <!-- End post Area -->
-
-
-
-
         </div>
 
         

@@ -6,6 +6,7 @@ use App\Category;
 use App\Company;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyJobRequest;
+use App\Http\Requests\MassDestroyPriceRequest;
 use App\Http\Requests\StoreJobRequest;
 use App\Http\Requests\UpdateJobRequest;
 use App\Http\Requests\UpdatePriceRequest;
@@ -88,23 +89,21 @@ class PriceController extends Controller
         return redirect()->route('admin.price.index');
     }
 
-    public function show(Job $job)
+    public function show(Price $price)
     {
-        $job->load('company', 'location', 'categories');
-
-        return view('admin.jobs.show', compact('job'));
+        return view('admin.price.show', compact('price'));
     }
 
-    public function destroy(Job $job)
+    public function destroy(Price $price)
     {
-        $job->delete();
+        $price->delete();
 
         return back();
     }
 
-    public function massDestroy(MassDestroyJobRequest $request)
+    public function massDestroy(MassDestroyPriceRequest $request)
     {
-        Job::whereIn('id', request('ids'))->delete();
+        Price::whereIn('id', request('ids'))->delete();
 
         return response(null, Response::HTTP_NO_CONTENT);
     }
