@@ -6,6 +6,7 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/aboutus', 'HomeController@aboutus')->name('aboutus');
 Route::get('/pasang', 'JobController@pasang')->name('pasang');
+Route::get('/pilihpaket', 'JobController@pilihpaket')->name('pilihpaket');
 Route::get('/pasang2', 'JobController@pasang2')->name('pasang2');
 Route::get('/rekomendasi', 'JobController@rekomendasi')->name('rekomendasi');
 Route::get('/kontak', 'HomeController@kontak')->name('kontak');
@@ -89,6 +90,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::delete('lowongan/destroy', 'LowonganController@massDestroy')->name('lowongan.massDestroy');
     Route::resource('lowongan', 'LowonganController');
+
+    //Price
+    Route::resource('price', 'PriceController');
 
     Route::delete('article/destroy', 'ArticleController@massDestroy')->name('article.massDestroy');
     Route::resource('article', 'ArticleController');
