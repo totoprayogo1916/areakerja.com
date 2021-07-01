@@ -15,16 +15,16 @@
     <div class="container text-center">
         <div class="col-12 col-sm-8 mb-5 ml-auto mr-auto form-wrap-main" >
             <h1 class="mb-3 mt-3">Tentang Kami</h1>
-            <p class="mb-3" style="font-size: 13pt; font-style: bold; margin: auto 20px; text-align: left;">
+            <p class="mb-3" style="font-size: 13pt; font-style: bold; margin: auto 20px; text-align: justify; text-indent: 7%;">
                 Areakerja adalah perusahaan berbasis teknologi informasi yang berpusat di Yogyakarta. Perusahaan ini berfokus pada platform untuk mencari lowongan kerja di Daerah Istimewa Yogyakarta (DIY).
             </p>
-            <p class="mb-3" style="font-size: 13pt; font-style: bold; margin: auto 20px; text-align: left;" >
+            <p class="mb-3" style="font-size: 13pt; font-style: bold; margin: auto 20px; text-align: justify; text-indent: 7%;" >
                 DIY sebagai salah satu wilayah prestisius di Indonesia yang menyandang sebagai kota budaya dan pelajar membuat arus ekonomi dan bisnis di wilayah ini cukup besar. Banyak sekali perusahaan besar, menengah, dan kecil yang berdiri di wilayah DIY dan terus mengembangkan bisnisnya. Hal ini menuntut banyak dibukanya lowongan pekerjaan di DIY.
             </p>
-            <p class="mb-3" style="font-size: 13pt; font-style: bold; margin: auto 20px; text-align: left; ">
+            <p class="mb-3" style="font-size: 13pt; font-style: bold; margin: auto 20px; text-align:  justify; text-indent: 7%; ">
                 Banyaknya arus lowongan pekerjaan di Yogyakarta baik dari perusahaan besar, menengah, dan kecil menuntut diperlukannya sebuah media yang berfokus untuk menampung informasi lowongan pekerjaan yang ada di Yogyakarta.
             </p>
-            <p class="mb-3" style="font-size: 13pt; font-style: bold; margin: auto 20px; text-align: left; ">
+            <p class="mb-3" style="font-size: 13pt; font-style: bold; margin: auto 20px; text-align:  justify; text-indent: 7%; ">
                 Untuk itu Areakerja hadir sebagai platform untuk membantu perusahaan mendapatkan kandidat terbaiknya, serta membantu para pencari kerja untuk menemukan pekerjaan yang diinginkan di DIY.
             </p>
         </div>

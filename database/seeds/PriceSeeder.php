@@ -45,6 +45,5 @@ class PriceSeeder extends Seeder
             'warna'             => '#605349',
         ]);
         $price->save();
-        
     }
 }

@@ -96,6 +96,14 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="{{ route("admin.price.index") }}" class="nav-link {{ request()->is('admin/price') || request()->is('admin/price/*') ? 'active' : '' }}">
+                    <i class="fa fa-tags nav-icon">
+
+                    </i>
+                    Price
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                     <i class="nav-icon fas fa-fw fa-sign-out-alt">
 
