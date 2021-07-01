@@ -14,15 +14,17 @@
                 </div>
             </div>
         </div>
-    </div>   
+    </div>
 </section>
 @endsection
 @section('content')
 
 <section class="relative" id="home" >
-    <div class="row mb-3 justify-content-around text-center " > 
+    <div class="row mb-3 justify-content-around text-center " >
         @foreach($paket as $pak)
         <div class="col-12 col-sm-6 col-md-4 px-4 " >
+          
+          <a href="{{ route('pasang',$pak->nama) }}">
           <div class="card mb-4 form-wrap-main" style="border-radius: 25px;">
             <div class="card-header pt-3 pb-4" style="border-radius:  25px 25px 65px 65px/25px 25px 40px 40px; height: auto;background-color: {{$pak->warna}}">
               <h1 class="my-0 fw-normal mb-1 text-white text-bold">{{$pak->nama}}</h1>
@@ -36,17 +38,19 @@
                                 <li class="mb-3  " style="font-weight: normal;" >{!!$fitur!!}</li>
                             @endforeach
                           </ul>
+                        </div>
+                        <hr/>
                     </div>
-                <hr/>
+                    <div class="card-footer pt-4 pb-3" style="border-radius:  65px 65px 25px 25px/40px 40px 25px 25px; height: auto;background-color: {{$pak->warna}}">
+                        <h3 class="my-0 fw-normal mb-1 text-white">{{$pak->harga}}</h3>
+                    <p class="my-0 fw-normal text-white">Pasang Lowongan Sekarang</h6>
+                    </div>
+                    </div>
+                </a>
             </div>
-            <div class="card-footer pt-4 pb-3" style="border-radius:  65px 65px 25px 25px/40px 40px 25px 25px; height: auto;background-color: {{$pak->warna}}">
-                <h3 class="my-0 fw-normal mb-1 text-white">{{$pak->harga}}</h3>
-              <p class="my-0 fw-normal text-white">Pasang Lowongan Sekarang</h6>
-            </div>  
-          </div>
-        </div>
+
         @endforeach
-    
+
 </section>
 @endsection
 

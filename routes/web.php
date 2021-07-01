@@ -5,7 +5,7 @@ Route::redirect('/home', '/admin');
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/aboutus', 'HomeController@aboutus')->name('aboutus');
-Route::get('/pasang', 'JobController@pasang')->name('pasang');
+Route::get('/pasang/{nama}', 'JobController@pasang')->name('pasang');
 Route::get('/pilihpaket', 'JobController@pilihpaket')->name('pilihpaket');
 Route::get('/pasang2', 'JobController@pasang2')->name('pasang2');
 Route::get('/rekomendasi', 'JobController@rekomendasi')->name('rekomendasi');
@@ -92,7 +92,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('lowongan', 'LowonganController');
 
     //Price
-    Route::delete('lowongan/price', 'PriceController@massDestroy')->name('price.massDestroy');
+    Route::delete('price/destroy', 'PriceController@massDestroy')->name('price.massDestroy');
     Route::resource('price', 'PriceController');
 
     Route::delete('article/destroy', 'ArticleController@massDestroy')->name('article.massDestroy');
