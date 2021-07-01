@@ -1,6 +1,7 @@
 <?php
 
 use Database\Seeders\ArticleSeeder;
+use Database\Seeders\PriceSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,6 +19,7 @@ class DatabaseSeeder extends Seeder
             LocationsTableSeeder::class,
             CompaniesTableSeeder::class,
             JobsTableSeeder::class,
+            PriceSeeder::class,
         ]);
     }
 }
