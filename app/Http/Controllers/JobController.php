@@ -186,9 +186,8 @@ class JobController extends Controller
             ->orderBy('id', 'desc')
             ->take(5)
             ->get();
-        $sidebarJobs = Job::whereTopRated(true)
+        $sidbarJobs = Job::whereTopRated(true)
             ->orderBy('id', 'desc')
-            ->take(0)
             ->get();
 
         $sidebarLocations = Location::withCount('jobs')
@@ -212,7 +211,7 @@ class JobController extends Controller
                 'searchCategories',
                 'searchByCategory',
                 'jobs',
-                'sidebarJobs',
+                'sidbarJobs',
                 'sidebarLocations',
                 'sidebarCategories',
                 'riwayatlist',

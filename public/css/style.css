@@ -52,6 +52,21 @@
     /* animation-duration: 5s; */
   }
 
+
+.for_slick_slider2 {
+  display: flex;
+}
+
+.for_slick_slider2 .items {
+  width: auto;
+  height: auto;
+  margin: 20px 30px;
+  
+  transition: margin-top 0.5s;
+  /* margin: 50px; */
+}
+
+
 .slick-prev, .slick-next {
   width: 50px;
   height: 50px;
@@ -104,6 +119,15 @@
     
     margin-top: 10px;
   } */
+
+  div.items.card.mb-4.form-wrap-main {
+    width: auto;
+    height: auto;
+    margin: 20px 15px;
+    
+    transition: margin-top 0.5s;
+    /* margin: 50px; */
+  }
   div.items.gg{
     margin-top: 15px;
     margin-bottom: 15px;
