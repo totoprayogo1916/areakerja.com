@@ -12,8 +12,15 @@ class PriceSeeder extends Seeder
         $price = Price::create([
             'nama'              => 'Gold',
             'deskripsi_singkat' => 'Paket Super Efektif',
-            'deskripsi_full'    => '5 Kali Publikasi di semua jaringan AreaKerja.id',
-            'list'              => ['Website & Aplikasi', 'Instagram Post & Story', 'Highlight Story Favorit', 'Google Jobs & Bisnis', 'Facebook Post & Story', 'Twitter', '<span class="fa fa-linkedin-square"></span> Linkedin', 'Telegram'],
+            'deskripsi_full'    => '<p><strong>5 Kali Publikasi </strong>di semua jaringan AreaKerja.id</p>',
+            'list'              => ['<img alt="" src="https://g-store.id/data/images/icon-official/ig-icon.png" style="height:10%; width:10%" /> Website & Aplikasi', 
+                                    '<img alt="" src="https://g-store.id/data/images/icon-official/ig-icon.png" style="height:10%; width:10%" />   Instagram Post & Story', 
+                                    '<img alt="" src="https://g-store.id/data/images/icon-official/ig-icon.png" style="height:10%; width:10%" />  Highlight Story Favorit', 
+                                    '<img alt="" src="https://g-store.id/data/images/icon-official/ig-icon.png" style="height:10%; width:10%" />  Google Jobs & Bisnis', 
+                                    '<img alt="" src="https://g-store.id/data/images/icon-official/ig-icon.png" style="height:10%; width:10%" />  Facebook Post & Story',
+                                    '<img alt="" src="https://g-store.id/data/images/icon-official/ig-icon.png" style="height:10%; width:10%" />  Twitter', 
+                                    '<img alt="" src="https://g-store.id/data/images/icon-official/ig-icon.png" style="height:10%; width:10%" />  Linkedin', 
+                                    '<img alt="" src="https://g-store.id/data/images/icon-official/ig-icon.png" style="height:10%; width:10%" />  Telegram'],
             'harga'             => 'Rp 10.000.000',
             'warna'             => '#ffa70e',
         ]);
