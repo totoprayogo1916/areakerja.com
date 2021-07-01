@@ -4,10 +4,10 @@
 <div class="card">
     <div class="card-header">
         <div class="row align-items-center justify-content-between d-flex" style="margin-left: 2px; margin-right:2px">
-            {{ trans('cruds.job.title_singular') }} {{ trans('global.list') }}
-            <a class="btn btn-success ml-2" href="{{ route("admin.jobs.create") }}">
+            Price List
+            <a class="btn btn-success ml-2" href="{{ route("admin.price.create") }}">
                 <i class="fa fa-plus mr-2" aria-hidden="true"></i>
-                {{ trans('global.add') }} {{ trans('cruds.job.title_singular') }}
+                Add Price
             </a>
         </div>
     </div>
@@ -111,7 +111,7 @@
   let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
   let deleteButton = {
     text: deleteButtonTrans,
-    url: "{{ route('admin.jobs.massDestroy') }}",
+    url: "{{ route('admin.price.massDestroy') }}",
     className: 'btn-danger',
     action: function (e, dt, node, config) {
       var ids = $.map(dt.rows({ selected: true }).nodes(), function (entry) {

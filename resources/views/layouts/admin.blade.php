@@ -240,6 +240,25 @@
     });
   </script>
 
+    <script type="text/javascript">
+        // add row
+        $("#addRow3").click(function () {
+            var html = '';
+            html += '<div id="inputFormRow3">';
+            html += '<div class="input-group mb-3">';
+            html += '<input type="text" name="list[]" class="form-control m-input" placeholder="" autocomplete="off">';
+            html += '<div class="input-group-append">';
+            html += '<button id="removeRow3" type="button" class="btn btn-danger">Remove</button>';
+            html += '</div>';
+            html += '</div>';
+            $('#newRow3').append(html);
+        });
+        // remove row
+        $(document).on('click', '#removeRow3', function () {
+            $(this).closest('#inputFormRow3').remove();
+        });
+    </script>
+
 
 
     <script>

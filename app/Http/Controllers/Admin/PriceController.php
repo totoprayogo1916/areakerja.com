@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyJobRequest;
 use App\Http\Requests\StoreJobRequest;
 use App\Http\Requests\UpdateJobRequest;
+use App\Http\Requests\UpdatePriceRequest;
 use App\Job;
 use App\Location;
 use App\Price;
@@ -75,25 +76,16 @@ class PriceController extends Controller
         return redirect()->route('admin.jobs.index');
     }
 
-    public function edit(Job $job)
+    public function edit(Price $price)
     {
-        $companies = Company::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
-
-        $locations = Location::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
-
-        $categories = Category::all()->pluck('name', 'id');
-
-        $job->load('company', 'location', 'categories');
-
-        return view('admin.jobs.edit', compact('companies', 'locations', 'categories', 'job'));
+        return view('admin.price.edit', compact('price'));
     }
 
-    public function update(UpdateJobRequest $request, Job $job)
+    public function update(UpdatePriceRequest $request, Price $price)
     {
-        $job->update($request->all());
-        $job->categories()->sync($request->input('categories', []));
+        $price->update($request->all());
 
-        return redirect()->route('admin.jobs.index');
+        return redirect()->route('admin.price.index');
     }
 
     public function show(Job $job)
