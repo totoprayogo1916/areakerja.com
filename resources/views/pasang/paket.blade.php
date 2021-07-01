@@ -14,39 +14,42 @@
                 </div>
             </div>
         </div>
-    </div>   
+    </div>
 </section>
 @endsection
 @section('content')
 
 <section class="relative" id="home" >
-    <div class="row mb-3 justify-content-around text-center " > 
+    <div class="row mb-3 justify-content-around text-center " >
         @foreach($paket as $pak)
-        <div class="col-12 col-sm-6 col-md-4 px-4 " >
-          <div class="card mb-4 form-wrap-main" style="border-radius: 25px;">
-            <div class="card-header pt-3 pb-4" style="border-radius:  25px 25px 65px 65px/25px 25px 40px 40px; height: auto;background-color: {{$pak->warna}}">
-              <h1 class="my-0 fw-normal mb-1 text-white text-bold">{{$pak->nama}}</h1>
-              <h4 class="my-0 fw-normal text-white">{{$pak->deskripsi_singkat}}</h4>
-            </div>
-            <div class="card-body ">
-                <h5 style="font-weight: normal; ">{!!$pak->deskripsi_full!!}</h5>
-                    <div class="col-11 col-sm-8 mx-auto no-padding" style="overflow: unset; white-space: nowrap; ">
-                        <ul class="text-left mb-4">
-                            @foreach($pak->list as $fitur)
-                                <h6 class="mb-2  " style="font-weight: normal;" >{!!$fitur!!}</h6>
-                            @endforeach
-                          </ul>
+            <div class="col-12 col-sm-6 col-md-4 px-4 " >
+                <a href="{{ route('pasang',$pak->nama) }}">
+                    <div class="card mb-4 form-wrap-main" style="border-radius: 25px;">
+                        <div class="card-header pt-3 pb-4" style="border-radius:  25px 25px 65px 65px/25px 25px 40px 40px; height: auto;background-color: {{$pak->warna}}">
+                            <h1 class="my-0 fw-normal mb-1 text-white text-bold">{{$pak->nama}}</h1>
+                            <h4 class="my-0 fw-normal text-white">{{$pak->deskripsi_singkat}}</h4>
+                        </div>
+                        <div class="card-body ">
+                            <h5 style="font-weight: normal; ">{!!$pak->deskripsi_full!!}</h5>
+                                <div class="col-11 col-sm-8 mx-auto no-padding" style="overflow: unset; white-space: nowrap; ">
+                                    <ul class="text-left mb-4">
+                                        @foreach($pak->list as $fitur)
+                                            <h6 class="mb-3  " style="font-weight: normal;" >{!!$fitur!!}</h6>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            <hr/>
+                        </div>
+                        <div class="card-footer pt-4 pb-3" style="border-radius:  65px 65px 25px 25px/40px 40px 25px 25px; height: auto;background-color: {{$pak->warna}}">
+                            <h3 class="my-0 fw-normal mb-1 text-white">{{$pak->harga}}</h3>
+                        <p class="my-0 fw-normal text-white">Pasang Lowongan Sekarang</h6>
+                        </div>
                     </div>
-                <hr/>
+                </a>
             </div>
-            <div class="card-footer pt-4 pb-3" style="border-radius:  65px 65px 25px 25px/40px 40px 25px 25px; height: auto;background-color: {{$pak->warna}}">
-                <h3 class="my-0 fw-normal mb-1 text-white">{{$pak->harga}}</h3>
-              <p class="my-0 fw-normal text-white">Pasang Lowongan Sekarang</h6>
-            </div>  
-          </div>
-        </div>
+
         @endforeach
-    
+
 </section>
 @endsection
 

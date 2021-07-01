@@ -16,7 +16,7 @@
                             <a href= "{{ route('kontak') }}">Kontak Kami</a>
                         </li>
                         <li>
-                            <a href="{{ route('pasang') }}">Pasang Lowongan</a>
+                            <a href="#">Pasang Lowongan</a>
                         </li>
                     </ul>
                 </div>
@@ -67,7 +67,7 @@
             <a href="{{ route('home') }}"><img src="{{ asset('img/logo3.svg') }}" alt="" title="" /></a>
         </div>
     </div>
-    
+
       <!-- Social buttons -->
       <ul class="row" style="width: max-content;margin-left: auto;margin-right: auto">
         <li class="mr-2  " style="font-size:13px; color: aliceblue">
@@ -84,14 +84,14 @@
         </li>
     </ul>
       <!-- Social buttons -->
-      
+
     </div>
     <!-- Footer Elements -->
-    
+
     <div class="container">
         <div class="footer-copyright text-center py-3" style="font-size:14px; color: aliceblue">© 2020 Copyright:
             <a href="https://mdbootstrap.com/" style="font-size:14px; color: aliceblue"> Areakerja.com</a>
     </div>
     <!-- Copyright -->
-    
+
   </footer>
