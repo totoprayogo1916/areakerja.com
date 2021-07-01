@@ -14,12 +14,13 @@
                 </div>
             </div>
         </div>
-    </div>   
+    </div>
 </section>
 @endsection
 @section('content')
 
 <section class="relative" id="home" >
+    {{-- action="{{ url('formpasang') }}" --}}
                 <form method="POST" enctype="multipart/form-data" action="{{ url('formpasang') }}" id="regForm" style="width: 50%;">
                     @csrf
                     <div class="tab" id="pasangform">
@@ -204,13 +205,21 @@
                                 placeholder="Contoh: https://docs.google.com/forms/d/xxx">
                             </div>
                         </div>
-                        <div class="row justify-content-center" style="margin-top: 2%; background-color: aqua" >
+
+                        <div class="form-group" id="paketform" style="display:none">
+                            <h4>Formulir Web</h4>
+                            <div>
+                                <input id="paket" name="paket"  type="text"  class="form-control2 " value="{{ $jenis }}" data-type="text"
+                                placeholder="Contoh: https://docs.google.com/forms/d/xxx">
+                            </div>
+                        </div>
+                        <div class="row justify-content-center" style="margin-top: 2%" >
                             <div class="col-6 col-sm-3 " >
                                 <button type="submit" class="btn btn-area" onclick="nextPrev(-1)" >
                                 <span>Sebelumnya</span>
                                 </button>
                             </div>
-                            <div class="col-6 col-sm-3" >  
+                            <div class="col-6 col-sm-3" >
                                 <button type="submit" class="btn btn-area"  >
                                     <span>Selanjutnya</span>
                                 </button>

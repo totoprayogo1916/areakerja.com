@@ -26,6 +26,7 @@ Route::get('/artikel/{slug}', 'ArtikelController@show')->name('artikel.show');
 // ]);
 Route::get('/lamarmail/{name}/{umur}', 'HomeController@lamarmail')->name('lamarmail');
 Route::post('/formpasang', 'LowonganController@formpasang')->name('formpasang');
+Route::post('/pembayaran/{id}', 'LowonganController@pembayaran')->name('pembayaran');
 // Route::get('/backkontak', 'HomeController@backkontak')->name('backkontak');
 
 
