@@ -24,7 +24,7 @@ class Price extends Migration
 
             $table->json('list')->nullable();
 
-            $table->string('harga')->nullable();
+            $table->integer('harga')->nullable();
 
             $table->string('warna')->nullable();
 

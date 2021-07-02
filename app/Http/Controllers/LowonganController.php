@@ -16,7 +16,8 @@ class LowonganController extends Controller
     {
         // dd($request);
         $paket = Price::where('nama',$request->paket)->get()->first();
-        // dd($paket->harga);
+        $number = mt_rand(000, 999);
+        $total = number_format($paket->harga+$number, 0, '.', '.');
         $gambar = time() . '.' . $request->gambar->extension();
         $request->gambar->move(public_path('img/tmpcompanylogo'), $gambar);
         Lowongan::create([
@@ -44,7 +45,7 @@ class LowonganController extends Controller
         $title = 'Pasang Lowongan Kerja';
         Alert::success('Berhasil Mengirim Lowongan', 'Admin sedang memproses lowongan anda');
 
-        return view('pasang.pembayaran', compact(['title','nama','paket']));
+        return view('pasang.pembayaran', compact(['title','nama','total']));
     }
 
     public function pembayaran()

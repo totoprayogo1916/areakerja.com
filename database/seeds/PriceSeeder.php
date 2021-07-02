@@ -21,7 +21,7 @@ class PriceSeeder extends Seeder
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" style="height:10%; width:10%" />  Twitter',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" style="height:10%; width:10%" />  Linkedin',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" style="height:10%; width:10%" />  Telegram', ],
-            'harga' => 'Rp 10.000.000',
+            'harga' => '10000000',
             'warna' => '#ffa70e',
         ]);
         $price->save();
@@ -38,7 +38,7 @@ class PriceSeeder extends Seeder
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" style="height:10%; width:10%" />  Twitter',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" style="height:10%; width:10%" />  Linkedin',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" style="height:10%; width:10%" />  Telegram', ],
-            'harga' => 'Rp 5.000.000',
+            'harga' => '5000000',
             'warna' => '#858990',
         ]);
         $price->save();
@@ -55,7 +55,7 @@ class PriceSeeder extends Seeder
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" style="height:10%; width:10%" />  Twitter',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" style="height:10%; width:10%" />  Linkedin',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" style="height:10%; width:10%" />  Telegram', ],
-            'harga' => 'Rp 2.500.000',
+            'harga' => '2500000',
             'warna' => '#605349',
         ]);
         $price->save();

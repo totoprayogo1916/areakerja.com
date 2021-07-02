@@ -28,7 +28,7 @@
             <p style="margin-top: 1vh; font-size: 14pt;">Tanggal Order : 2456789</p>
             <p style="margin-top: 1vh; font-size: 14pt;">Terimakasih, materi lowongan sudah masuk dalam sistem kami.</p>
             <p style="margin-top: -1vh; font-size: 14pt;">Silahkan lakukan pembayaran beserta kode unik dibawah ini:</p>
-            <div class="col-10 col-sm-4 mx-auto" style="border-color: #000; border: 4px; border-style: solid; border-radius: 15px; padding: 8px"><h2 style="font-size: 22pt">{{$paket->harga}}</h2></div>
+            <div class="col-10 col-sm-4 mx-auto" style="border-color: #000; border: 4px; border-style: solid; border-radius: 15px; padding: 8px"><h2 style="font-size: 22pt">Rp. {{$total}}</h2></div>
         </div>
 </section>
 @endsection
