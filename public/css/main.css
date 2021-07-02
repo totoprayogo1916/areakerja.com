@@ -2509,6 +2509,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   box-shadow: 2px 2px 5px rgba(0.15, 0.15, 0.15, 0.15);
 }
 
+
 hr {
   display: block;
   height: 2px;
@@ -4754,9 +4755,21 @@ input.invalid {
   background-color: rgb(255, 255, 255);
   padding: 10px;
   margin: auto;
+  margin-top: 0px;
+  transition: margin-top 0.5s;
   text-align: center;
   box-shadow: 2px 2px 5px rgba(0.15, 0.15, 0.15, 0.15);
 }
+
+.form-wrap-main:hover {
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: auto;
+    margin-top: -15px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0.15, 0.15, 0.15, 0.15);
+  }
 
 .default-select3 {
   border-radius: 6px;
@@ -5052,5 +5065,5 @@ input.invalid {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 12.45;
-  
+
 }

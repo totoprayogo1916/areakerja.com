@@ -23,7 +23,7 @@
     <div class="row mb-3 justify-content-around text-center " >
         @foreach($paket as $pak)
         <div class="col-12 col-sm-6 col-md-4 px-4 " >
-          
+
           <a href="{{ route('pasang',$pak->nama) }}">
           <div class="card mb-4 form-wrap-main" style="border-radius: 25px;">
             <div class="card-header pt-3 pb-4" style="border-radius:  25px 25px 65px 65px/25px 25px 40px 40px; height: auto;background-color: {{$pak->warna}}">
@@ -58,14 +58,14 @@
 <h3 class ="sng-ttl9 text-center mb-3">Cara Memasang Lowongan</h3>
 <div class="col-12 col-sm-10 no-gutters no-padding no-margin mx-auto">
   <div class="for_slick_slider2 multiple-items2 mx-auto" >
-      
+
     <div class="items card mb-4 form-wrap-main"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
       <div class="header text-left">
         <h1 style="margin-top: -35px; ">1</h1>
         <img class="mx-auto mb-3" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-gambar-1.png" style="width: 100px; height:80px; margin-top: -10px">
       </div>
-     
-    
+
+
       <h5 class ="sng-dtl">Pilih paket pemasangan lowongan sesuai yang anda inginkan</h5>
     </div>
     <div class="items card mb-4 form-wrap-main"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
@@ -89,10 +89,10 @@
       </div>
       <h5 class ="sng-dtl"  >Apabila pembayaran sudah dilakukan, lowongan akan dipublikasikan</h5>
     </div>
-    
-    
+
+
 </div>
-    
+
 
     {{-- <h3 style="margin-bottom: 15px; text-align: center">Lowongan wd</h3> --}}
 </div>
