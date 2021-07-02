@@ -44,7 +44,7 @@ class PriceController extends Controller
             'harga'             => $request->harga,
             'warna'             => $request->warna,
         ]);
-        // return request('requirements');
+
         return redirect()->route('admin.price.index');
     }
 
