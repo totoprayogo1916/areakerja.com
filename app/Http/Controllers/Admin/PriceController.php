@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyJobRequest;
 use App\Http\Requests\MassDestroyPriceRequest;
 use App\Http\Requests\StoreJobRequest;
+use App\Http\Requests\StorePriceRequest;
 use App\Http\Requests\UpdateJobRequest;
 use App\Http\Requests\UpdatePriceRequest;
 use App\Job;
@@ -30,51 +31,21 @@ class PriceController extends Controller
 
     public function create()
     {
-        $companies = Company::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
-
-        $locations = Location::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
-
-        $categories = Category::all()->pluck('name', 'id');
-
-        return view('admin.jobs.create', compact('companies', 'locations', 'categories'));
+        return view('admin.price.create');
     }
 
-    public function store(StoreJobRequest $request)
+    public function store(StorePriceRequest $request)
     {
-        // $job->categories()->sync($request->input('categories', []));
-        // $casts = ['jobs' => '    ']
-        // $data = json_encode($request->requirements);
-        // $arr = $request->all();
-        // $arr = serialize($data);
-        // $create = Job::create(['session'=>$arr]);
-        $companyName      = Company::where('id', $request->company_id)->first('name');
-        $slug_title       = Str::slug($request->get('title'));
-        $slug_companyname = Str::slug($companyName->name);
-        $slug             = $slug_title . '-di-' . $slug_companyname;
-        // dd($slug);
-        $job = Job::create([
-            'title'            => $request->title,
-            'salary'           => $request->salary,
-            'address'          => $request->address,
-            'top_rated'        => $request->top_rated,
-            'company_id'       => $request->company_id,
-            'job_nature'       => $request->job_nature,
-            'pendidikan'       => $request->pendidikan,
-            'umur'             => $request->umur,
-            'gender'           => $request->gender,
-            'lokasikerja'      => $request->lokasikerja,
-            'requirements'     => $request->requirements,
-            'bataslamaran'     => $request->bataslamaran,
-            'location_id'      => $request->location_id,
-            'email'            => $request->email,
-            'notelp'           => $request->notelp,
-            'website'          => $request->website,
-            'full_description' => $request->full_description,
-            'slug'             => $slug,
+        $price = Price::create([
+            'nama'              => $request->nama,
+            'deskripsi_singkat' => $request->deskripsi_singkat,
+            'deskripsi_full'    => $request->deskripsi_full,
+            'list'              => $request->list,
+            'harga'             => $request->harga,
+            'warna'             => $request->warna,
         ]);
-        $job->categories()->sync($request->input('categories', []));
         // return request('requirements');
-        return redirect()->route('admin.jobs.index');
+        return redirect()->route('admin.price.index');
     }
 
     public function edit(Price $price)

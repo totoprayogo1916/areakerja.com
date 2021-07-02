@@ -23,7 +23,7 @@ class Price extends Model
     ];
 
     protected $fillable = [
-        'name',
+        'nama',
         'deskripsi_singkat',
         'deskripsi_full',
         'list',
