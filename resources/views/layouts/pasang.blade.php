@@ -28,29 +28,30 @@
         body, wrapper {
         min-height:100vh;
         }
-    
+
     .flex-fill {
         flex:1 1 auto;
     }
 
     .slider > div {
-        display:block; 
-        width:100%; 
-        padding: 50px 0;
+        display:block;
+        width:100%;
+        /* padding: 50px 0; */
         border-radius: 20px;
-        background: rgb(233, 106, 21);
-        text-align: center; font-size: 2em;
+        background: rgb(255,255,255);
+        box-shadow: 0px 2px 5px 0px rgb(0 0 0 / 20%);
+        font-size: 2em;
       }
 
       /* Navigation */
       .slider-nav { text-align: center; }
       .slider-nav > div {
         display:inline-block;
-        width:auto; height: auto; margin: 0 5px; 
+        width:auto; height: auto; margin: 0 2px;
         padding:  10px 10px 8px 10px;
         text-align: center; font-size:2em;
-        border-radius: 20px 20px 0 0 ;
-        background: rgb(252, 159, 82); cursor: pointer;
+        border-radius: 10px 10px 0 0 ;
+        background: rgb(254,244, 227); cursor: pointer;
       }
     </style>
     </head>
@@ -70,10 +71,10 @@
             </main>
             @include('user.footer')
         </wrapper>
-    
+
         </div>
 
-        
+
         <script src="{{ asset('js/vendor/jquery-2.2.4.min.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
@@ -103,7 +104,7 @@
         </script>
         <script>
             $('.slider').slick({
-            arrows:false, dots: false, infinite:true, speed:500,
+            arrows:false, dots: false, infinite:false, speed:500,
             autoplay:false, autoplaySpeed: 3000, slidesToShow:1, slidesToScroll:1
           });
           //On click of slider-nav childern,
