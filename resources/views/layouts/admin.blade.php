@@ -135,6 +135,8 @@
 
           var i2=1;
 
+          var i3=1;
+
 
           $('#add').click(function(){
               i++;
@@ -146,6 +148,16 @@
               $('#dynamic_field2').append('<tr id="row'+i2+'" class="dynamic-added"><td><input type="text" name="full_description[]" placeholder="Masukkan Deskripsi Pekerjaan" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i2+'" class="btn btn-danger btn_remove">X</button></td></tr>');
           });
 
+          $('#add3').click(function(){
+              i3++;
+              $('#dynamic_field3').append('<tr id="row'+i3+'" class="dynamic-added"><td><input type="text" name="list[]" placeholder="Masukkan list" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i3+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+          });
+
+
+          $(document).on('click', '.btn_remove', function(){
+              var button_id = $(this).attr("id");
+              $('#row'+button_id+'').remove();
+          });
 
           $(document).on('click', '.btn_remove', function(){
               var button_id = $(this).attr("id");

@@ -13,7 +13,7 @@ class PriceSeeder extends Seeder
             'nama'              => 'Gold',
             'deskripsi_singkat' => 'Paket Super Efektif',
             'deskripsi_full'    => '<p><strong>5 Kali Publikasi </strong>di semua jaringan AreaKerja.id</p>',
-            'list'              => ['<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/lokerjogjaid.png" style="height:10%; width:10%" /> Website & Aplikasi',
+            'list'              => ['<img alt="" src="img/img-01.png" style="height:10%; width:10%" /> Website & Aplikasi',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/instagram.png" style="height:10%; width:10%" />   Instagram Post & Story',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/instagram.png" style="height:10%; width:10%" />  Highlight Story Favorit',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/google.png" style="height:10%; width:10%" />  Google Jobs & Bisnis',
@@ -21,7 +21,7 @@ class PriceSeeder extends Seeder
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" style="height:10%; width:10%" />  Twitter',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" style="height:10%; width:10%" />  Linkedin',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" style="height:10%; width:10%" />  Telegram', ],
-            'harga' => 'Rp 10.000.000',
+            'harga' => '10000000',
             'warna' => '#ffa70e',
         ]);
         $price->save();
@@ -30,7 +30,7 @@ class PriceSeeder extends Seeder
             'nama'              => 'Silver',
             'deskripsi_singkat' => 'Jangkauan Cukup Luas',
             'deskripsi_full'    => '<p><strong>3 Kali Publikasi </strong> di semua jaringan AreaKerja.id</p>',
-            'list'              => ['<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/lokerjogjaid.png" style="height:10%; width:10%" /> Website & Aplikasi',
+            'list'              => ['<img alt="" src="img/img-01.png" style="height:10%; width:10%" /> Website & Aplikasi',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/instagram.png" style="height:10%; width:10%" />   Instagram Post & Story',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/instagram.png" style="height:10%; width:10%" />  Highlight Story Favorit',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/google.png" style="height:10%; width:10%" />  Google Jobs & Bisnis',
@@ -38,7 +38,7 @@ class PriceSeeder extends Seeder
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" style="height:10%; width:10%" />  Twitter',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" style="height:10%; width:10%" />  Linkedin',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" style="height:10%; width:10%" />  Telegram', ],
-            'harga' => 'Rp 5.000.000',
+            'harga' => '5000000',
             'warna' => '#858990',
         ]);
         $price->save();
@@ -47,7 +47,7 @@ class PriceSeeder extends Seeder
             'nama'              => 'Bronze',
             'deskripsi_singkat' => 'Rekrut dengan Hemat',
             'deskripsi_full'    => '<p><strong>1 Kali Publikasi </strong> di semua jaringan AreaKerja.id</p>',
-            'list'              => ['<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/lokerjogjaid.png" style="height:10%; width:10%" /> Website & Aplikasi',
+            'list'              => ['<img alt="" src="img/img-01.png" style="height:10%; width:10%" /> Website & Aplikasi',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/instagram.png" style="height:10%; width:10%" />   Instagram Post & Story',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/instagram.png" style="height:10%; width:10%" />  Highlight Story Favorit',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/google.png" style="height:10%; width:10%" />  Google Jobs & Bisnis',
@@ -55,7 +55,7 @@ class PriceSeeder extends Seeder
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" style="height:10%; width:10%" />  Twitter',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" style="height:10%; width:10%" />  Linkedin',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" style="height:10%; width:10%" />  Telegram', ],
-            'harga' => 'Rp 2.500.000',
+            'harga' => '2500000',
             'warna' => '#605349',
         ]);
         $price->save();
