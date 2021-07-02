@@ -65,7 +65,7 @@
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a type="button" class="nav-link form-pasang" href="{{ route('pasang') }}" style="color: #fee5ba">
+                            <a type="button" class="nav-link form-pasang" href="{{ route('pilihpaket') }}" style="color: #fee5ba">
                               <span class="lnr lnr-file-add"></span> Pasang Lowongan
                             </a>
                           </li>
@@ -236,7 +236,7 @@
                                         <a href= "{{ route('kontak') }}">Kontak Kami</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('pasang') }}">Pasang Lowongan</a>
+                                        <a href="{{ route('pilihpaket') }}">Pasang Lowongan</a>
                                     </li>
                                 </ul>
                             </div>
