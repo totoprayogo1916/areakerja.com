@@ -97,7 +97,7 @@ class JobController extends Controller
 
     public function pasang($nama)
     {
-        $jenis = $nama;
+        $jenis     = $nama;
         $ipaddress = '';
         if (isset($_SERVER['HTTP_CLIENT_IP'])) {
             $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
