@@ -60,8 +60,8 @@
 .for_slick_slider2 .items {
   width: auto;
   height: auto;
-  margin: 20px 30px;
-  
+  margin: 20px 20px;
+
   transition: margin-top 0.5s;
   /* margin: 50px; */
 }
@@ -115,8 +115,8 @@
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
   /* div.for_slick_slider{
-    
-    
+
+
     margin-top: 10px;
   } */
 
@@ -124,7 +124,7 @@
     width: auto;
     height: auto;
     margin: 20px 15px;
-    
+
     transition: margin-top 0.5s;
     /* margin: 50px; */
   }
