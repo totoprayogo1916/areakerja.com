@@ -53,6 +53,7 @@ $(function () {
       slidesToShow: 4,
       slidesToScroll: 1,
       arrows: false,
+      infinite: false,
       // rtl: true,
       responsive: [
           {
@@ -60,7 +61,7 @@ $(function () {
               settings: {
                 slidesToShow: 2.3,
                 slidesToScroll: 3,
-                infinite: true
+                infinite: false
               }
             },
             {

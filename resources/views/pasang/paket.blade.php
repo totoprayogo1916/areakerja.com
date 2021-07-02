@@ -17,12 +17,33 @@
     </div>
 </section>
 @endsection
+
 @section('content')
 
 <section class="relative" id="home" >
-    <div class="row mb-3 justify-content-around text-center " >
+      <div class='slider-nav'>
+        <div><img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/google.png" style="height:30px; " /></div>
+        <div><img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/instagram.png" style="height:30px; " /></div>
+        <div><img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/facebook.png" style="height:30px; " /></div>
+        <div><img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" style="height:30px; " /></div>
+        <div><img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" style="height:30px; " /></div>
+        <div><img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" style="height:30px; " /></div>
+      </div>
+    <div class="container">
+      <div class="col-12 col-sm-10 col-md-8 mx-auto">
+        <div class='slider'>
+          <div>Slide 1</div>
+          <div>Slide 2</div>
+          <div>Slide 3</div>
+          <div>Slide 4</div>
+          <div>Slide 5</div>
+          <div>Slide 6</div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3 justify-content-around text-center mt-5" >
         @foreach($paket as $pak)
-        <div class="col-12 col-sm-6 col-md-4 px-4 " >
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 px-4 " >
           
           <a href="{{ route('pasang',$pak->nama) }}">
           <div class="card mb-4 form-wrap-main" style="border-radius: 25px;">
@@ -56,7 +77,7 @@
 
 @section('slick')
 <h3 class ="sng-ttl9 text-center mb-3">Cara Memasang Lowongan</h3>
-<div class="col-12 col-sm-10 no-gutters no-padding no-margin mx-auto">
+<div class="col-12 col-sm-10 no-gutters no-padding mt-5 mx-auto">
   <div class="for_slick_slider2 multiple-items2 mx-auto" >
       
     <div class="items card mb-4 form-wrap-main"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
