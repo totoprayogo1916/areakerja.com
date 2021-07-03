@@ -368,6 +368,19 @@
 });
 
     </script>
+
+    <script type="text/javascript">
+        const input = document.getElementById("colorPicker");
+        const input2 = document.getElementById("colorCode");
+
+        setColor();
+        input.addEventListener("input", setColor);
+
+        function setColor() {
+            input2.value = input.value;
+        }
+    </script>
+
     @include('sweetalert::alert')
 
     @yield('scripts')

@@ -85,7 +85,8 @@
 
             <div class="form-group {{ $errors->has('warna') ? 'has-error' : '' }}">
                 <label for="warna">Warna</label>
-                <input type="text" id="warna" name="warna" class="form-control" value="{{ old('warna', isset($price) ? $price->warna : '') }}" required>
+                <input type="color" id="colorPicker" value="{{ old('warna', isset($price) ? $price->warna : '') }}">
+                <input type="text" id="colorCode" name="warna"  class="form-control" value="{{ old('warna', isset($price) ? $price->warna : '') }}" required>
                 @if($errors->has('warna'))
                     <em class="invalid-feedback">
                         {{ $errors->first('warna') }}
