@@ -78,13 +78,10 @@
                 </p>
             </div>
 
-            <div class="form-group colorpicker olorpicker-component  {{ $errors->has('warna') ? 'has-error' : '' }}">
+            <div class="form-group colorpicker colorpicker-component  {{ $errors->has('warna') ? 'has-error' : '' }}">
                 <label for="warna">Warna</label>
-
-                <input type="text" id="warna" value="#00AABB" name="warna"  class="form-control" value="{{ old('warna', isset($price) ? $price->warna : '') }}" required>
-                <span class="input-group-addon"><i></i></span>
-                {{-- <div id="cp2" class="input-group colorpicker colorpicker-component"> --}}
-                    {{-- <input type="text" value="#00AABB" class="form-control" /> --}}
+                <input type="color" id="colorPicker" value="#ffffff">
+                <input type="text" id="colorCode" name="warna"  class="form-control" value="{{ old('warna', isset($price) ? $price->warna : '') }}" required>
 
                   </div>
                 @if($errors->has('warna'))

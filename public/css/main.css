@@ -106,6 +106,38 @@ a:hover {
   padding: 60px;
 }
 
+.wa-button-inner{
+    width:auto;
+    height:auto;
+    border-radius:20px;
+    -webkit-box-shadow:0px 0px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow:0px 0px 5px 0px rgba(0,0,0,0.2);
+    box-shadow:0px 0px 5px 0px rgba(0,0,0,0.2);
+    box-sizing:border-box;
+    padding:14px;
+    background:url(/wp-content/themes/lokerjogjav1/img/whatsapp-2.png) no-repeat #fff;
+    background-size:45px;
+    background-position:14px center;
+    padding-left:75px
+}
+.wa-button a{
+    display:block;
+    text-decoration:none
+}
+.wa-button .wa-head{
+    font-family:"Bubbleboddy Neue Trial";
+    font-weight:400;
+    font-size:20.62px;
+    color:#304259;
+    display:block;
+    padding-bottom:2px
+}
+.wa-button .wa-paragraf{
+    font-size:14.27px;
+    color:#767e87;
+    display:block
+}
+
 /**
  *  Typography
  *
@@ -4737,6 +4769,26 @@ input.invalid {
 .myBtn:hover {
   opacity: 1.0;
 }
+
+.myBtn2 {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 15%;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+    opacity: 1.0;
+    transition: opacity 0.5s;
+  }
+
+  .myBtn2:hover {
+    opacity: 1.0;
+  }
+
 
 .banner {
   /* background-color: #fe7b54; */
