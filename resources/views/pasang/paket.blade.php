@@ -22,107 +22,115 @@
 
 <section class="relative" id="home" >
       <div class='slider-nav'>
-        <div><img alt="" src="img/img-01.png" style="height:25px; " /></div>
-        <div><img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/google.png" style="height:25px; " /></div>
-        <div><img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/instagram.png" style="height:25px; " /></div>
-        <div><img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/facebook.png" style="height:25px; " /></div>
-        <div><img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" style="height:25px; " /></div>
-        <div><img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" style="height:25px; " /></div>
-        <div><img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" style="height:25px; " /></div>
+        <div><img alt="" class="img-social" src="img/img-01.png"  /></div>
+        <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/google.png"  /></div>
+        <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/instagram.png"  /></div>
+        <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/facebook.png" /></div>
+        <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" /></div>
+        <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" /></div>
+        <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" /></div>
       </div>
-    <div class="container">
+    
       <div class="col-12 col-sm-10 col-md-8 mx-auto">
         <div class='slider'>
-            <div class="container mx-4 my-4">
-                <div class="row">
-                  <div class="col-2" style="overflow: unset; white-space: nowrap;">
-                    <img style="height:inherit; width:inherit"  src="img/img-01.png" alt="">
+            <div class="container">
+                <div class="row align-items-center ">
+                  <div class="col-4 col-sm-3 align-self-center">
+                    <img class="mx-auto img-r" src="img/img-01.png" alt="">
                   </div>
-                  <div class="col-10">
-                    <h3>Website & Aplikasi Area Kerja</h3>
-                    <p><h5>Ribuan pencari kerja mengunjungi
+                  <div class="col-8 col-sm-9 no-padding my-3">
+                    <h3 class="mb-2 paket">Website Area Kerja</h3>
+                    <h5 class ="paket2" style="line-height: 1.6!important;font-weight: normal;">Ribuan pencari kerja mengunjungi
                         <a href="{{ route('home') }}">website</a>
                         & aplikasi kami setiap hari untuk melihat lowongan terbaru di Yogyakarta</h5>
-                    </p>
+                    
                   </div>
                 </div>
             </div>
 
-            <div class="container mx-4 my-4">
-                <div class="row">
-                  <div class="col-2" style="overflow: unset; white-space: nowrap;">
-                    <img style="height:inherit; width:inherit"  src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/google.png" alt="">
+            <div class="container">
+                <div class="row align-items-center ">
+                  <div class="col-4 col-sm-3 pr-0">
+                    <img class="mx-auto img-r " src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/google.png" alt="">
                   </div>
-                  <div class="col-10">
-                    <h3>Listing Google Jobs & Google Bisnis</h3>
-                    <p><h5>Listing di Google Jobs & Google Bisnis (klik untuk contoh) membuat lowongan anda semakin banyak dilihat</h5></p>
-                  </div>
+                  <div class="col-8 col-sm-9 no-padding my-3">
+                    <div class="container">
+                      <h3 class="mb-2 paket">Google Jobs & Bisnis</h3>
+                      <h5 class ="paket2 " style="line-height: 1.6!important;font-weight: normal;">Listing di Google Jobs & Bisnis <a>(klik untuk contoh)</a> membuat lowongan anda semakin banyak dilihat dan lebih efektif</h5>
+                    </div>
+                    </div>
                 </div>
+            </div>
+            
+            <div class="container">
+              <div class="row align-items-center " >
+                <div class="col-4 col-sm-3 pr-0" >
+                  <img class="mx-auto img-r" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/instagram.png" alt="">
+                </div>
+                <div class="col-8 col-sm-9 no-padding my-3">
+                  <div class="container">
+                    <h3 class="mb-2 paket">Instagram</h3>
+                    <h5 class ="paket2 " style="line-height: 1.6!important;font-weight: normal;">Kami mempunyai ratusan ribu pengikut di akun instagram kami yang terus tumbuh, sehingga efektif</h5>
+                  </div>
+                  </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row align-items-center " >
+                <div class="col-4 col-sm-3 pr-0" >
+                  <img class="mx-auto img-r" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/facebook.png" alt="">
+                </div>
+                <div class="col-8 col-sm-9 no-padding my-3">
+                  <div class="container">
+                    <h3 class="mb-2 paket">Facebook</h3>
+                    <h5 class ="paket2 " style="line-height: 1.6!important;font-weight: normal;">Kami mempunyai ratusan ribu pengikut di akun instagram kami yang terus tumbuh, sehingga efektif</h5>
+                  </div>
+                  </div>
+              </div>
             </div>
 
-            <div class="container mx-4 my-4">
-                <div class="row">
-                  <div class="col-2">
-                    <img class="m-auto"  style="height:inherit; width:inherit" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/instagram.png" alt="">
-                  </div>
-                  <div class="col-10">
-                    <h3>Instagram</h3>
-                    <p><h5>Kami mempunyai ratusan ribu pengikut di akun instagram kami yang terus tumbuh, sehingga efektif</h5></p>
-                  </div>
+          <div class="container">
+            <div class="row align-items-center " >
+              <div class="col-4 col-sm-3 pr-0" >
+                <img  class="mx-auto img-r" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" alt="">
+              </div>
+              <div class="col-8 col-sm-9 no-padding my-3">
+                <div class="container">
+                  <h3 class="mb-2 paket">Twitter</h3>
+                  <h5 class ="paket2 " style="line-height: 1.6!important;font-weight: normal;">Kami mempunyai ratusan ribu pengikut di akun instagram kami yang terus tumbuh, sehingga efektif</h5>
+                </div>
                 </div>
             </div>
-
-            <div class="container mx-4 my-4">
-                <div class="row">
-                  <div class="col-2" style="overflow: unset; white-space: nowrap;">
-                    <img style="height:inherit; width:inherit"  src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/facebook.png" alt="">
-                  </div>
-                  <div class="col-10">
-                    <h3>Facebook</h3>
-                    <p><h5>Kami mempunyai ratusan ribu pengikut di akun instagram kami yang terus tumbuh, sehingga efektif</h5></p>
-                  </div>
+        </div>
+          <div class="container">
+            <div class="row align-items-center " >
+              <div class="col-4 col-sm-3 pr-0" >
+                <img class="mx-auto img-r" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" alt="">
+              </div>
+              <div class="col-8 col-sm-9 no-padding my-3">
+                <div class="container">
+                  <h3 class="mb-2 paket">Linkedin</h3>
+                  <h5 class ="paket2 " style="line-height: 1.6!important;font-weight: normal;">Kami mempunyai ratusan ribu pengikut di akun instagram kami yang terus tumbuh, sehingga efektif</h5>
+                </div>
                 </div>
             </div>
-
-            <div class="container mx-4 my-4">
-                <div class="row">
-                  <div class="col-2" style="overflow: unset; white-space: nowrap;">
-                    <img style="height:inherit; width:inherit"  src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" alt="">
-                  </div>
-                  <div class="col-10">
-                    <h3>Twitter</h3>
-                    <p><h5>Kami mempunyai ratusan ribu pengikut di akun instagram kami yang terus tumbuh, sehingga efektif</h5></p>
-                  </div>
+        </div>
+          <div class="container">
+            <div class="row align-items-center " >
+              <div class="col-4 col-sm-3 pr-0" >
+                <img class="mx-auto img-r" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" alt="">
+              </div>
+              <div class="col-8 col-sm-9 no-padding my-3">
+                <div class="container">
+                  <h3 class="mb-2 paket">Telegram</h3>
+                  <h5 class ="paket2 " style="line-height: 1.6!important;font-weight: normal;">Kami mempunyai ratusan ribu pengikut di akun instagram kami yang terus tumbuh, sehingga efektif</h5>
+                </div>
                 </div>
             </div>
-
-            <div class="container mx-4 my-4">
-                <div class="row">
-                  <div class="col-2" style="overflow: unset; white-space: nowrap;">
-                    <img style="height:inherit; width:inherit"  src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" alt="">
-                  </div>
-                  <div class="col-10">
-                    <h3>Linkedin</h3>
-                    <p><h5>Kami mempunyai ratusan ribu pengikut di akun instagram kami yang terus tumbuh, sehingga efektif</h5></p>
-                  </div>
-                </div>
-            </div>
-
-            <div class="container mx-4 my-4">
-                <div class="row">
-                  <div class="col-2" style="overflow: unset; white-space: nowrap;">
-                    <img class="m-auto" style="height:inherit; width:inherit"  src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" alt="">
-                  </div>
-                  <div class="col-10">
-                    <h3>Telegram</h3>
-                    <p><h5>Kami mempunyai ratusan ribu pengikut di akun instagram kami yang terus tumbuh, sehingga efektif</h5></p>
-                  </div>
-                </div>
-            </div>
+        </div>
 
         </div>
       </div>
-    </div>
     <div class="row mb-3 justify-content-around text-center mt-5" >
         @foreach($paket as $pak)
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 px-4 " >

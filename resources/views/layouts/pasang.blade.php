@@ -29,30 +29,30 @@
         min-height:100vh;
         }
 
-    .flex-fill {
-        flex:1 1 auto;
-    }
+        .flex-fill {
+            flex:1 1 auto;
+        }
 
-    .slider > div {
-        display:block;
-        width:100%;
-        /* padding: 50px 0; */
-        border-radius: 20px;
-        background: rgb(255,255,255);
-        box-shadow: 0px 2px 5px 0px rgb(0 0 0 / 20%);
-        font-size: 2em;
-      }
+        .slider > div {
+            display:block;
+            width:100%;
+            border-radius: 20px;
+            background: rgb(255,255,255);
+            box-shadow: 0px 2px 5px 0px rgb(0 0 0 / 20%);
+        }
 
       /* Navigation */
-      .slider-nav { text-align: center; }
-      .slider-nav > div {
-        display:inline-block;
-        width:auto; height: auto; margin: 0 2px;
-        padding:  10px 10px 8px 10px;
-        text-align: center; font-size:2em;
-        border-radius: 10px 10px 0 0 ;
-        background: rgb(254,244, 227); cursor: pointer;
-      }
+        .slider-nav { text-align: center; }
+        .slider-nav > div {
+            display:inline-block;
+            width:auto; height: auto; margin: 0 2px;
+            padding:  10px 10px 8px 10px;
+            text-align: center; 
+            border-radius: 10px 10px 0 0 ;
+            background: rgb(254,244, 227); cursor: pointer;
+        }
+
+        
     </style>
     </head>
     <body>
