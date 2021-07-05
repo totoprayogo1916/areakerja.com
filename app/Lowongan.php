@@ -19,6 +19,7 @@ class Lowongan extends Model
 
     protected $fillable = [
         'namaperusahaan',
+        'idPembayaran',
         'deskripsiperusahaan',
         'alamatperusahaan',
         'gambar',
@@ -36,4 +37,10 @@ class Lowongan extends Model
         'notelp',
         'web',
     ];
+
+    public function Pembayaran()
+    {
+        return $this->belongsTo(Pembayaran::class, 'idPembayaran');
+    }
+
 }

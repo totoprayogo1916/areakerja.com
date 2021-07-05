@@ -47,7 +47,7 @@ class JobsController extends Controller
         $slug_title       = Str::slug($request->get('title'));
         $slug_companyname = Str::slug($companyName->name);
         $slug             = $slug_title . '-di-' . $slug_companyname;
-        // dd($slug);
+        // dd($request);
         $job = Job::create([
             'title'            => $request->title,
             'salary'           => $request->salary,

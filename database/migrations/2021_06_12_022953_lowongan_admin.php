@@ -16,6 +16,9 @@ class LowonganAdmin extends Migration
         Schema::create('lowongan', static function (Blueprint $table) {
             $table->increments('id');
 
+            $table->unsignedInteger('idPembayaran');
+
+
             $table->string('namaperusahaan');
 
             $table->string('deskripsiperusahaan');
@@ -53,6 +56,7 @@ class LowonganAdmin extends Migration
             $table->timestamps();
 
             $table->softDeletes();
+            $table->foreign('idPembayaran', 'pembayaran_id_fk_476540')->references('id')->on('pembayaran')->onDelete('cascade');
         });
     }
 
