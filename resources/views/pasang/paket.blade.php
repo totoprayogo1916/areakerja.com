@@ -39,7 +39,7 @@
         <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" /></div>
         <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" /></div>
       </div>
-    
+
       <div class="col-12 col-sm-10 col-md-8 mx-auto">
         <div class='slider'>
             <div class="container">
@@ -52,7 +52,7 @@
                     <h5 class ="paket2" style="line-height: 1.6!important;font-weight: 200;">Ribuan pencari kerja mengunjungi
                         <a href="{{ route('home') }}">website</a>
                         & aplikasi kami setiap hari untuk melihat lowongan terbaru di Yogyakarta</h5>
-                    
+
                   </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="container">
               <div class="row align-items-center " >
                 <div class="col-4 col-sm-3 pr-0" >

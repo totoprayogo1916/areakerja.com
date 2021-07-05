@@ -6,10 +6,10 @@
             <div class="banner-content col-lg-12">
                 <div class="overlay overlay-bg container" >
                     <h1 style="color: #fe7b54; margin-bottom:5px; text-shadow: 2px 2px 3px #353535b0;">
-                        Tips Kerja
+                        Form Pasang Lowongan
                     </h1>
                     <h6 style="color: #fe7b54; text-shadow: 1px 1px 2px #353535b0;">
-                    Pelajari Tips-Tips Kerja Yang Telah Kami Buat Untuk Anda
+                    {{-- Pelajari Tips-Tips Kerja Yang Telah Kami Buat Untuk Anda --}}
                     </h6>
                 </div>
             </div>
@@ -24,6 +24,13 @@
                 <form method="POST" enctype="multipart/form-data" action="{{ url('formpasang') }}" id="regForm" style="width: 50%;">
                     @csrf
                     <div class="tab" id="pasangform">
+                        <div class="form-group" >
+                        <h1>
+                            <span> Form Order : Paket </span>
+                            <span style="color: {{ $warna }}"> {{ $jenis }} </span>
+                        </h1>
+                        <hr>
+                        </div>
                         <div class="form-group">
                             <h4>Nama Perusahaan
                             <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
@@ -60,6 +67,13 @@
                     </div>
 
                     <div class="tab" id="pasangform1">
+                        <div class="form-group" >
+                            <h1>
+                                <span> Form Order : Paket </span>
+                                <span style="color: {{ $warna }}"> {{ $jenis }} </span>
+                            </h1>
+                            <hr>
+                        </div>
                         <div class="form-group">
                             <h4>Nama Pekerjaan
                                 <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
@@ -161,6 +175,13 @@
                         </div>
                     </div>
                     <div class="tab" id="pasangform2">
+                        <div class="form-group" >
+                            <h1>
+                                <span> Form Order : Paket </span>
+                                <span style="color: {{ $warna }}"> {{ $jenis }} </span>
+                            </h1>
+                            <hr>
+                        </div>
                         <div class="form-group">
                             <h2> Bagaimana Cara Mengirimkan Melamar? <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
                             </h2>
