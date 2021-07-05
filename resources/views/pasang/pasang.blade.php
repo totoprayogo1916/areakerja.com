@@ -24,6 +24,13 @@
                 <form method="POST" enctype="multipart/form-data" action="{{ url('formpasang') }}" id="regForm" style="width: 50%;">
                     @csrf
                     <div class="tab" id="pasangform">
+                        <div class="form-group" >
+                        <h1>
+                            <span> Form Order : Paket </span>
+                            <span style="color: {{ $warna }}"> {{ $jenis }} </span>
+                        </h1>
+                        <hr>
+                        </div>
                         <div class="form-group">
                             <h4>Nama Perusahaan
                             <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>

@@ -115,6 +115,8 @@ class JobController extends Controller
             $ipaddress = 'UNKNOWN';
         }
 
+        $paket            = Price::where('nama', $jenis)->first();
+        $warna            = $paket->warna;
         $searchLocations  = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $searchByCategory = Category::withCount('jobs')
@@ -155,6 +157,7 @@ class JobController extends Controller
                 'sidebarCategories',
                 'riwayatlist',
                 'jenis',
+                'warna',
             ])
         );
     }
