@@ -58,6 +58,24 @@ body {
   position: relative;
 }
 
+
+.awan{
+  height:auto;
+  margin-top: -30px;  
+  background: linear-gradient( #fff 20%, #fee5ba 0%);
+}
+.awandalam{
+  height:100px;
+  background: url(../img/gelombang_atas.png) center;
+  background-size: cover;
+}
+.awan2{
+  height:100px;
+  background: url(../img/gelombang_bawah.png)  center;
+  background-size: cover;
+  background-color:#fee5ba
+}
+
 ol,
 ul {
   margin: 0;
@@ -2455,6 +2473,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: #ccdcef;
   height: 200px;
   /* margin-bottom: 1%; */
+  background: url(../img/bg.png) center;
+  background-size: cover;
+}
+
+.banner-area3 {
+  background-color: #ccdcef;
+  height: 310px;
+  margin-bottom: -120px;
   background: url(../img/bg.png) center;
   background-size: cover;
 }
@@ -5109,6 +5135,22 @@ input.invalid {
   img.img-r{
     width:80px;
     height:80px;
+  }
+
+  .banner-area3 {
+    background-color: #ccdcef;
+    height: 340px;
+    margin-bottom: -90px;
+    background: url(../img/bg.png) center;
+    background-size: cover;
+  }
+  h2.pasang{
+    font-size: 1.55rem;
+    line-height: 1.7!important;
+  }
+  h4.pasang{
+    font-size: 1rem;
+    
   }
 }
 @media (min-width: 577px){

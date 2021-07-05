@@ -1,20 +1,29 @@
 @extends('layouts.pasang')
 @section('home')
-<section class="relative" id="home" style="margin-bottom: 50px">
-    <div class="banner-area2 "  >
+<section class="relative" >
+    <div class="banner-area3">
         <div class="row align-items-center justify-content-center" style="margin-right: 15px; margin-left: 15px">
             <div class="banner-content col-lg-12">
                 <div class="overlay overlay-bg container" >
-                    <h1 style="color: #fe7b54; margin-bottom:5px; text-shadow: 2px 2px 3px #353535b0;">
-                        Tips Kerja
-                    </h1>
-                    <h6 style="color: #fe7b54; text-shadow: 1px 1px 2px #353535b0;">
-                    Pelajari Tips-Tips Kerja Yang Telah Kami Buat Untuk Anda
-                    </h6>
+                    <h5 class="mt-3 text-right" style="color: #00000062; ">
+                      Areakerja.com >
+                          <a style="color: #00000062; " href="{{ route('artikel') }}">Pasang Lowongan</a>  
+                    </h5>
+                    <h2 class="mt-3 mb-2 pasang" style="color: #fe7b54;  font-weight: 400; ">
+                      Pasang <strong>Lowongan</strong> di <strong>Areakerja.com</strong> 
+                    </h2>
+                    <h4 class="pasang" style="color: #fe7b54;line-height: 2!important;font-weight: 500 ">
+                      Platform lowongan kerja no. 1 <br />di Yogyakarta untuk mendapatkan talenta terbaik bagi perusahaan anda
+                    </h4>
+                    
                 </div>
+                
             </div>
+            
         </div>
     </div>
+   
+    
 </section>
 @endsection
 
@@ -39,8 +48,8 @@
                     <img class="mx-auto img-r" src="img/img-01.png" alt="">
                   </div>
                   <div class="col-8 col-sm-9 no-padding my-3">
-                    <h3 class="mb-2 paket">Website Area Kerja</h3>
-                    <h5 class ="paket2" style="line-height: 1.6!important;font-weight: normal;">Ribuan pencari kerja mengunjungi
+                    <h3 class="mb-2 paket" style="font-weight: 400">Website Area Kerja</h3>
+                    <h5 class ="paket2" style="line-height: 1.6!important;font-weight: 200;">Ribuan pencari kerja mengunjungi
                         <a href="{{ route('home') }}">website</a>
                         & aplikasi kami setiap hari untuk melihat lowongan terbaru di Yogyakarta</h5>
                     
@@ -164,45 +173,55 @@
 
 </section>
 @endsection
-
-@section('slick')
-<h3 class ="sng-ttl9 text-center mb-3">Cara Memasang Lowongan</h3>
-<div class="col-12 col-sm-10 no-gutters no-padding mt-5 mx-auto">
-  <div class="for_slick_slider2 multiple-items2 mx-auto" >
-    <div class="items card py-3 form-wrap-main"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
-      <div class="header text-left">
-        <img src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-1.png" style="margin-top: -37px; margin-bottom:20px">
-        <img class="mx-auto mb-4" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-gambar-1.png" style="width: 100px; height:80px; margin-top: -10px">
-      </div>
-      <h5 class ="sng-dtl">Pilih paket pemasangan lowongan sesuai yang anda inginkan</h5>
-    </div>
-    <div class="items card py-3 form-wrap-main"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
-      <div class="header text-left">
-        <img src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-2.png" style="margin-top: -37px;margin-bottom:20px">
-        <img class="mx-auto mb-4" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-gambar-2.png" style="width: 100px; height:80px; margin-top: -10px">
-      </div>
-      <h5 class ="sng-dtl"  >Kirim materi lowongan via formulir website atau whatsapp kami</h5>
-    </div>
-    <div class="items card py-3 form-wrap-main"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
-      <div class="header text-left">
-        <img src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-3.png" style="margin-top: -37px;margin-bottom:20px">
-        <img class="mx-auto mb-4" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-gambar-3.png" style="width: 100px; height:80px; margin-top: -10px">
-      </div>
-        <h5 class ="sng-dtl"  >Setelah materi dikirim, anda akan diberikan intruksi pembayaran  </h5>
-    </div>
-    <div class="items card py-3 form-wrap-main"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
-      <div class="header text-left">
-        <img src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-4.png" style="margin-top: -37px;margin-bottom:20px ">
-        <img class="mx-auto mb-4" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-gambar-4.png" style="width: 100px; height:80px;margin-top: -10px ">
-      </div>
-      <h5 class ="sng-dtl"  >Apabila pembayaran sudah dilakukan, lowongan akan dipublikasikan</h5>
-    </div>
-
-
+@section('awanatas')
+<div class="awan">
+  <div class="awandalam"></div>
 </div>
+@endsection
+@section('slick')
+<div class="container">
+  <h3 class ="sng-ttl9 text-center mb-3">Cara Memasang Lowongan</h3>
+  <div class="col-12 col-sm-10 no-gutters no-padding mt-4 mx-auto">
+    <div class="for_slick_slider2 multiple-items2 mx-auto" >
+      <div class="items card py-3 form-wrap-main"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
+        <div class="header text-left">
+          <img src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-1.png" style="margin-top: -37px; margin-bottom:20px">
+          <img class="mx-auto mb-4" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-gambar-1.png" style="width: 100px; height:80px; margin-top: -10px">
+        </div>
+        <h5 class ="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Pilih paket pemasangan lowongan sesuai yang anda inginkan</h5>
+      </div>
+      <div class="items card py-3 form-wrap-main"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
+        <div class="header text-left">
+          <img src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-2.png" style="margin-top: -37px;margin-bottom:20px">
+          <img class="mx-auto mb-4" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-gambar-2.png" style="width: 100px; height:80px; margin-top: -10px">
+        </div>
+        <h5 class ="sng-dtl"  style="font-weight: normal;line-height: 1.65!important">Kirim materi lowongan via formulir website atau whatsapp kami</h5>
+      </div>
+      <div class="items card py-3 form-wrap-main"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
+        <div class="header text-left">
+          <img src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-3.png" style="margin-top: -37px;margin-bottom:20px">
+          <img class="mx-auto mb-4" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-gambar-3.png" style="width: 100px; height:80px; margin-top: -10px">
+        </div>
+          <h5 class ="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Setelah materi dikirim, anda akan diberikan intruksi pembayaran  </h5>
+      </div>
+      <div class="items card py-3 form-wrap-main"  style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
+        <div class="header text-left">
+          <img src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-4.png" style="margin-top: -37px;margin-bottom:20px ">
+          <img class="mx-auto mb-4" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-gambar-4.png" style="width: 100px; height:80px;margin-top: -10px ">
+        </div>
+        <h5 class ="sng-dtl"  style="font-weight: normal;line-height: 1.65!important">Apabila sudah membayar sudah dilakukan, lowongan akan dipublikasikan</h5>
+      </div>
+  
+  
+  </div>
+</div>
+
 
 
     {{-- <h3 style="margin-bottom: 15px; text-align: center">Lowongan wd</h3> --}}
 </div>
+@endsection
+@section('awanbawah')
+<div class="awan2 mb-5"></div>
 @endsection
 
