@@ -26,7 +26,7 @@ class PriceController extends Controller
         $prices = Price::all();
         $jobs   = Job::all();
 
-        return view('admin.price.index', compact('prices', 'jobs'));
+        return view('admin.price.index', compact('prices', 'jobs', ));
     }
 
     public function create()

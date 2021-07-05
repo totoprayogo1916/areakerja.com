@@ -35,7 +35,7 @@
                         <th>
                             List
                         </th>
-                        <th>
+                        <th width="100">
                             Harga
                         </th>
                         <th>
@@ -70,7 +70,7 @@
                                 @endforeach
                             </td>
                             <td>
-                                {{ $price->harga ?? '' }}
+                               Rp. {{ number_format( $price->harga ?? '' , 0, '.', '.'); }}
                             </td>
                             <td>
                                 {{ $price->warna ?? '' }}

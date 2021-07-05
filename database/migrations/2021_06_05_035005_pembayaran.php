@@ -23,5 +23,4 @@ class Pembayaran extends Migration
             $table->string('status')->nullable();
         });
     }
-
 }

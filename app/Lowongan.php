@@ -42,5 +42,4 @@ class Lowongan extends Model
     {
         return $this->belongsTo(Pembayaran::class, 'idPembayaran');
     }
-
 }

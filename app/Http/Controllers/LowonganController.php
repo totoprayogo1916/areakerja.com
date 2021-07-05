@@ -6,8 +6,8 @@ use App\Category;
 use App\Job;
 use App\Location;
 use App\Lowongan;
-use App\Price;
 use App\Pembayaran;
+use App\Price;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -16,21 +16,21 @@ class LowonganController extends Controller
     public function formpasang(Request $request)
     {
         // dd($request);
-        $paket  = Price::where('nama', $request->paket)->get()->first();
-        $number = mt_rand(000, 999);
-        $total_pembayaran  =$paket->harga + $number;
-        $total  = number_format($total_pembayaran, 0, '.', '.');
+        $paket            = Price::where('nama', $request->paket)->get()->first();
+        $number           = mt_rand(000, 999);
+        $total_pembayaran = $paket->harga + $number;
+        $total            = number_format($total_pembayaran, 0, '.', '.');
         Pembayaran::create([
-            'paket'      => $paket->nama,
-            'harga'      => $total_pembayaran,
-            'status'      => 'NDANGDIBAYAR',
+            'paket'  => $paket->nama,
+            'harga'  => $total_pembayaran,
+            'status' => 'NDANGDIBAYAR',
         ]);
-        $search      = Pembayaran::where('harga', $total_pembayaran)->first();
+        $search = Pembayaran::where('harga', $total_pembayaran)->first();
         $gambar = time() . '.' . $request->gambar->extension();
         // dd("".$search->id."");
         $request->gambar->move(public_path('img/tmpcompanylogo'), $gambar);
         Lowongan::create([
-            'idPembayaran'          => "".$search->id."",
+            'idPembayaran'        => "" . $search->id . "",
             'namaperusahaan'      => $request->namaperusahaan,
             'deskripsiperusahaan' => $request->deskripsiperusahaan,
             'alamatperusahaan'    => $request->alamatperusahaan,
