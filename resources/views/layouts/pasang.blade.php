@@ -52,7 +52,33 @@
             background: rgb(254,244, 227); cursor: pointer;
         }
 
-        
+        #container3 {
+        float:left; /* added */
+        width:100%; /* added */
+        background:green; /* added */
+        }
+        #container2 {
+            float:left; /* added */
+            width:100%; /* added */
+            background:yellow; /* added */
+        }
+        #container1 {
+            float:left;
+            width:100%;
+            background:red;
+        }
+        #col1 {
+            float:left;
+            width:30%;
+        }
+        #col2 {
+            float:left;
+            width:40%;
+        }
+        #col3 {
+            float:left;
+            width:30%;
+        }
     </style>
     </head>
     <body>
@@ -73,6 +99,9 @@
                     @yield('slick')
                 </div>
                 @yield('awanbawah')
+                    
+                    @yield('slick2')
+
                     
                 
             </main>

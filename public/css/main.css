@@ -70,10 +70,14 @@ body {
   background-size: cover;
 }
 .awan2{
+  height:auto;
+  background: linear-gradient( #fee5ba 80%, #fff 0%);
+}
+
+.awandalam2{
   height:100px;
-  background: url(../img/gelombang_bawah.png)  center;
+  background: url(../img/gelombang_bawah.png) center;
   background-size: cover;
-  background-color:#fee5ba
 }
 
 ol,
@@ -5152,6 +5156,10 @@ input.invalid {
     font-size: 1rem;
     
   }
+
+  div.kelebihan{
+    height:auto
+  }
 }
 @media (min-width: 577px){
   div.banner-area{
@@ -5175,7 +5183,9 @@ input.invalid {
     width:10000px;
     height:50px;
   }
-  
+  div.kelebihan{
+    height:180px
+  }
 }
 @media (min-width: 768px) {
   div.banner-area{
@@ -5203,6 +5213,8 @@ input.invalid {
     width:80px;
     height:80px;
   }
+
+  
 }
 @media (min-width: 992px) {
   h3.paket{
@@ -5218,6 +5230,7 @@ input.invalid {
     width:100px;
     height:100px;
   }
+  
 }
 @media (min-width: 1200px) {
 }
