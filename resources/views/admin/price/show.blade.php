@@ -57,7 +57,7 @@
                             Harga
                         </th>
                         <td>
-                            {{ $price->harga ?? '' }}
+                            Rp. {{ number_format( $price->harga ?? '' , 0, '.', '.'); }}
                         </td>
                     </tr>
                     <tr>
