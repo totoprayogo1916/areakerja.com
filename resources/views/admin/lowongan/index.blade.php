@@ -96,7 +96,7 @@
                             </td>
                             <td style="width: 150px; vertical-align: middle; text-align: center;">
                                 @if($low->gambar)
-                                    <img src="{{ url('img/tmpcompanylogo') }}/{{ $low->gambar }}" style="width: 100px; height: 70px;">
+                                    <img src="{{ url('storage/tmpcompanylogo') }}/{{ $low->gambar }}" style="width: 100px; height: 70px;">
                                 @endif
                                 <a download="{{ $low->namaperusahan }}" href="{{ Storage::url('tmpcompanylogo') }}/{{ $low->gambar }}" title="{{ $low->namaperusahaan }}">
                                     <button type="button" class="btn btn-primary mt-2">Download</button>
