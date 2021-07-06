@@ -21,7 +21,7 @@ class PriceSeeder extends Seeder
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" style="height:10%; width:10%;margin-right: 10px;" />  Twitter',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" style="height:10%; width:10%;margin-right: 10px;" />  Linkedin',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" style="height:10%; width:10%;margin-right: 10px;" />  Telegram', ],
-            'harga' => '10000000',
+            'harga' => '100',
             'warna' => '#ffa70e',
         ]);
         $price->save();

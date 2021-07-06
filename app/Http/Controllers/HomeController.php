@@ -161,28 +161,28 @@ class HomeController extends Controller
         return view('user.kontak');
     }
 
-    public function addcart(Request $request)
-    {
-        $id   = $request->id;
-        $time = 60 * 24 * 14;
-        echo $id;
-        $value = 0;
-        if (Cookie::get('cart') !== null) {
-            $anonim = Cookie::get('cart');
-            DB::table("cart")->insert(["anonim" => $anonim, "product_id" => $id]);
+    // public function addcart(Request $request)
+    // {
+    //     $id   = $request->id;
+    //     $time = 60 * 24 * 14;
+    //     echo $id;
+    //     $value = 0;
+    //     if (Cookie::get('cart') !== null) {
+    //         $anonim = Cookie::get('cart');
+    //         DB::table("cart")->insert(["anonim" => $anonim, "product_id" => $id]);
 
-            return 0;
-        } else {
-            $value = DB::table("cart")->max("anonim") + 1;
-            if (empty($value)) {
-                $value = 0;
-            }
-            DB::table("cart")->insert(["anonim" => $value, "product_id" => $id]);
-            $cookie = cookie('cart', $value, $time);
+    //         return 0;
+    //     } else {
+    //         $value = DB::table("cart")->max("anonim") + 1;
+    //         if (empty($value)) {
+    //             $value = 0;
+    //         }
+    //         DB::table("cart")->insert(["anonim" => $value, "product_id" => $id]);
+    //         $cookie = cookie('cart', $value, $time);
 
-            return response()->cookie($cookie);
-        }
-    }
+    //         return response()->cookie($cookie);
+    //     }
+    // }
 
     // function getMAcAddressExec()
     // {

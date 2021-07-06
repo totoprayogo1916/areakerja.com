@@ -30,6 +30,11 @@ Route::post('/pembayaran/{id}', 'LowonganController@pembayaran')->name('pembayar
 // Route::get('/backkontak', 'HomeController@backkontak')->name('backkontak');
 
 
+Route::post('payments/notification', 'PaymentController@notification');
+Route::get('payments/completed', 'PaymentController@completed');
+Route::get('payments/failed', 'PaymentController@failed');
+Route::get('payments/unfinish', 'PaymentController@unfinish');
+
 
 Route::get('search', 'HomeController@search')->name('search');
 Route::resource('jobs', 'JobController')->only(['index']);
