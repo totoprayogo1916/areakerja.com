@@ -1,29 +1,30 @@
 @extends('layouts.pasang')
 @section('home')
 <section class="relative" >
+  <img src="{{ url('img/chat_me.png') }}" onclick="topFunction()" id="myBtn2" title="Go to top" class="myBtn2">
     <div class="banner-area3">
         <div class="row align-items-center justify-content-center" style="margin-right: 15px; margin-left: 15px">
             <div class="banner-content col-lg-12">
                 <div class="overlay overlay-bg container" >
                     <h5 class="mt-3 text-right" style="color: #00000062; ">
                       Areakerja.com >
-                          <a style="color: #00000062; " href="{{ route('artikel') }}">Pasang Lowongan</a>  
+                          <a style="color: #00000062; " href="{{ route('artikel') }}">Pasang Lowongan</a>
                     </h5>
                     <h2 class="mt-3 mb-2 pasang" style="color: #fe7b54;  font-weight: 400; ">
-                      Pasang <strong>Lowongan</strong> di <strong>Areakerja.com</strong> 
+                      Pasang <strong>Lowongan</strong> di <strong>Areakerja.com</strong>
                     </h2>
                     <h4 class="pasang" style="color: #fe7b54;line-height: 2!important;font-weight: 500 ">
                       Platform lowongan kerja no. 1 <br />di Yogyakarta untuk mendapatkan talenta terbaik bagi perusahaan anda
                     </h4>
-                    
+
                 </div>
-                
+
             </div>
-            
+
         </div>
     </div>
-   
-    
+
+
 </section>
 @endsection
 
@@ -34,7 +35,7 @@
         <div><img alt="" class="img-social" src="img/img-01.png"  /></div>
         <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/google.png"  /></div>
         <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/instagram.png"  /></div>
-        <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/facebook.png" /></div>
+        <div><img alt="" class="img-social"  src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/facebook.png" /></div>
         <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" /></div>
         <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" /></div>
         <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" /></div>
@@ -47,7 +48,7 @@
                   <div class="col-4 col-sm-3 align-self-center">
                     <img class="mx-auto img-r" src="img/img-01.png" alt="">
                   </div>
-                  <div class="col-8 col-sm-9 no-padding my-3">
+                  <div class="col-8 col-sm-9 no-padding my-3 pr-1">
                     <h3 class="mb-2 paket" style="font-weight: 400">Website Area Kerja</h3>
                     <h5 class ="paket2" style="line-height: 1.6!important;font-weight: normal;">Ribuan pencari kerja mengunjungi
                         <a href="{{ route('home') }}">website</a>
@@ -79,7 +80,7 @@
                 <div class="col-8 col-sm-9 no-padding my-3">
                   <div class="container">
                     <h3 class="mb-2 paket">Instagram</h3>
-                    <h5 class ="paket2 " style="line-height: 1.6!important;font-weight: normal;">Kami mempunyai ratusan ribu pengikut di akun instagram kami yang terus tumbuh, sehingga efektif</h5>
+                    <h5 class ="paket2 " style="line-height: 1.6!important;font-weight: normal;">Kami mempunyai ratusan ribu pengikut di akun instagram kami <a href="#">@instagrammm</a> yang terus tumbuh, sehingga efektif</h5>
                   </div>
                   </div>
               </div>
@@ -92,7 +93,7 @@
                 <div class="col-8 col-sm-9 no-padding my-3">
                   <div class="container">
                     <h3 class="mb-2 paket">Facebook</h3>
-                    <h5 class ="paket2 " style="line-height: 1.6!important;font-weight: normal;">Kami mempunyai ratusan ribu pengikut di akun instagram kami yang terus tumbuh, sehingga efektif</h5>
+                    <h5 class ="paket2 " style="line-height: 1.6!important;font-weight: normal;">Kami juga mempunyai ribuan pengikut setia di FP Facebook kami <a href="#">@facebookkkk</a>yang terus mengabarkan loker terbaru</h5>
                   </div>
                   </div>
               </div>
@@ -106,7 +107,7 @@
               <div class="col-8 col-sm-9 no-padding my-3">
                 <div class="container">
                   <h3 class="mb-2 paket">Twitter</h3>
-                  <h5 class ="paket2 " style="line-height: 1.6!important;font-weight: normal;">Kami mempunyai ratusan ribu pengikut di akun instagram kami yang terus tumbuh, sehingga efektif</h5>
+                  <h5 class ="paket2 " style="line-height: 1.6!important;font-weight: normal;">Melalui Twitter <a href="#">@twitteerrr</a> kami siap mengabarkan loker anda ke ribuan pengikut dan jaringan luas Twitter</h5>
                 </div>
                 </div>
             </div>
@@ -119,7 +120,7 @@
               <div class="col-8 col-sm-9 no-padding my-3">
                 <div class="container">
                   <h3 class="mb-2 paket">Linkedin</h3>
-                  <h5 class ="paket2 " style="line-height: 1.6!important;font-weight: normal;">Kami mempunyai ratusan ribu pengikut di akun instagram kami yang terus tumbuh, sehingga efektif</h5>
+                  <h5 class ="paket2 " style="line-height: 1.6!important;font-weight: normal;">Linkedin <a href="#">@linkedinnn</a> juga menjadi sarana tepat menjaring para pencari kerja profesional di Yogyakarta</h5>
                 </div>
                 </div>
             </div>
@@ -132,7 +133,7 @@
               <div class="col-8 col-sm-9 no-padding my-3">
                 <div class="container">
                   <h3 class="mb-2 paket">Telegram</h3>
-                  <h5 class ="paket2 " style="line-height: 1.6!important;font-weight: normal;">Kami mempunyai ratusan ribu pengikut di akun instagram kami yang terus tumbuh, sehingga efektif</h5>
+                  <h5 class ="paket2 " style="line-height: 1.6!important;font-weight: normal;">Dapatkan kandidat terbaik melalui official Telegram channel <a href="#">@telegrammm</a> yang telah diikuti ribuan member</h5>
                 </div>
                 </div>
             </div>
@@ -152,17 +153,18 @@
             </div>
             <div class="card-body ">
                 <h4 style="font-weight: normal;display: block; line-height: 1.6 !important; ">{!!$pak->deskripsi_full!!}</h4>
-                    <div class="col-11 col-sm-8 mx-auto no-padding" style="overflow: unset; white-space: nowrap; ">
+                    <div class="col-11 col-sm-10 mx-auto no-padding" >
                         <ul class="text-left mb-4">
                             @foreach($pak->list as $fitur)
-                                <h6  class="mb-3" style="font-weight: normal;" >{!!$fitur!!}</h6 >
+                                <h5  class="mb-3" style="font-weight: normal;" >{!!$fitur!!}</h5 >
                             @endforeach
                           </ul>
                         </div>
                         <hr/>
                     </div>
                     <div class="card-footer pt-4 pb-3" style="border-radius:  200px 200px 25px 25px/45px 45px 25px 25px; height: auto;background-color: {{$pak->warna}}">
-                        <h3 class="my-0 fw-normal mb-1 text-white">{{$pak->harga}}</h3>
+
+                      <h3 class="my-0 fw-normal mb-1 text-white">Rp {{number_format($pak->harga,0,'.','.')}}</h3>
                     <p class="my-0 fw-normal text-white">Pasang Lowongan Sekarang</h6>
                     </div>
                     </div>
@@ -211,8 +213,8 @@
         </div>
         <h5 class ="sng-dtl"  style="font-weight: normal;line-height: 1.65!important">Apabila sudah membayar , lowongan akan dipublikasikan</h5>
       </div>
-  
-  
+
+
   </div>
 </div>
 
@@ -224,7 +226,7 @@
 </div>
 @endsection
 @section('slick2')
-<div class="container px-0">
+<div class="container px-0 mb-5">
   <h3 style="font-weight: normal" class =" text-center mb-3" ><strong>Kelebihan</strong>   Areakerja.com</h3>
   <div class="col-12 col-sm-11 no-gutters no-padding mt-4 mx-auto ">
     <div class="for_slick_slider3 multiple-items3 mx-auto" >
@@ -235,7 +237,7 @@
           <div style="float:none; text-align:left;">
             <h5  style="font-weight: normal;line-height: 1.65!important">Website dan aplikasi Loker Jogja dikunjungi ribuan pencari kerja setiap harinya dengan posisi tinggi untuk kata kunci lokal di mesin pencari seperti Google</h5></div>
         </div>
-        
+
       </div>
       <div class="items card py-2 px-3 form-wrap-main kelebihan" >
         <div class="kelebihan">
@@ -251,10 +253,10 @@
             <img src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1-m/img/pasang/kelebihan-3-2.png" ></div>
           <div style="float:none; text-align:left;">
             <h5  style="font-weight: normal;line-height: 1.65!important">Harga murah dengan fitur maksimal, integrasi Google Jobs, free desain poster standar, layanan bantuan perusahaan yang ramah dan suportif</h5></div>
-       
+
       </div>
-  
-  
+
+
   </div>
 </div>
 

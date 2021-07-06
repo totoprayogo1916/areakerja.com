@@ -39,7 +39,7 @@ class LowonganController extends Controller
 
         $gambar = time() . '.' . $request->gambar->extension();
         // dd("".$search->id."");
-        $request->gambar->move(public_path('img/tmpcompanylogo'), $gambar);
+        $request->gambar->move(public_path('storage/tmpcompanylogo'), $gambar);
         Lowongan::create([
             'idPembayaran'        => "" . $search->id . "",
             'namaperusahaan'      => $request->namaperusahaan,

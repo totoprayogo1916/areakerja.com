@@ -94,8 +94,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('companies', 'CompaniesController');
 
 
-    Route::delete('lowongan/destroy', 'LowonganController@massDestroy')->name('lowongan.massDestroy');
-    Route::resource('lowongan', 'LowonganController');
+    Route::delete('lowongan/destroy', 'LowongannController@massDestroy')->name('lowongan.massDestroy');
+    // Route::get('/pembayaran/{id}', 'LowongannController@pembayaran')->name('pembayaran');
+    Route::resource('lowongan', 'LowongannController');
 
     //Price
     Route::delete('price/destroy', 'PriceController@massDestroy')->name('price.massDestroy');
