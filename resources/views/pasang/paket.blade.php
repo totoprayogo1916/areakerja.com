@@ -1,6 +1,7 @@
 @extends('layouts.pasang')
 @section('home')
 <section class="relative" >
+  <img src="{{ url('img/chat_me.png') }}" onclick="topFunction()" id="myBtn2" title="Go to top" class="myBtn2">
     <div class="banner-area3">
         <div class="row align-items-center justify-content-center" style="margin-right: 15px; margin-left: 15px">
             <div class="banner-content col-lg-12">
@@ -34,7 +35,7 @@
         <div><img alt="" class="img-social" src="img/img-01.png"  /></div>
         <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/google.png"  /></div>
         <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/instagram.png"  /></div>
-        <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/facebook.png" /></div>
+        <div><img alt="" class="img-social"  src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/facebook.png" /></div>
         <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" /></div>
         <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" /></div>
         <div><img alt="" class="img-social" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" /></div>
