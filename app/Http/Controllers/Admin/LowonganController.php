@@ -23,6 +23,11 @@ class LowonganController extends Controller
         return view('admin.lowongan.show', compact('lowongan'));
     }
 
+    public function pembayaran(Lowongan $lowongan)
+    {
+        return view('admin.lowongan.pembayaran', compact('lowongan'));
+    }
+
     public function destroy(Lowongan $lowongan)
     {
         $lowongan->delete();
