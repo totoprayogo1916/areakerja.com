@@ -24,11 +24,11 @@
                 <form method="POST" enctype="multipart/form-data" action="{{ url('formpasang') }}" id="regForm" style="width: 50%;">
                     @csrf
                     <div class="tab" id="pasangform">
-                        <div class="form-group" >
-                        <h1>
-                            <span> Form Order : Paket </span>
+                        <div class="form-group">
+                        <h2 class="text-left">
+                            <span> Form Order : Paket</span>
                             <span style="color: {{ $warna }}"> {{ $jenis }} </span>
-                        </h1>
+                        </h2>
                         <hr>
                         </div>
                         <div class="form-group">
@@ -67,13 +67,13 @@
                     </div>
 
                     <div class="tab" id="pasangform1">
-                        <div class="form-group" >
-                            <h1>
-                                <span> Form Order : Paket </span>
+                        <div class="form-group">
+                            <h2 class="text-left">
+                                <span> Form Order : Paket</span>
                                 <span style="color: {{ $warna }}"> {{ $jenis }} </span>
-                            </h1>
+                            </h2>
                             <hr>
-                        </div>
+                            </div>
                         <div class="form-group">
                             <h4>Nama Pekerjaan
                                 <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
@@ -175,13 +175,13 @@
                         </div>
                     </div>
                     <div class="tab" id="pasangform2">
-                        <div class="form-group" >
-                            <h1>
-                                <span> Form Order : Paket </span>
+                        <div class="form-group">
+                            <h2 class="text-left">
+                                <span> Form Order : Paket</span>
                                 <span style="color: {{ $warna }}"> {{ $jenis }} </span>
-                            </h1>
+                            </h2>
                             <hr>
-                        </div>
+                            </div>
                         <div class="form-group">
                             <h2> Bagaimana Cara Mengirimkan Melamar? <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
                             </h2>
