@@ -157,6 +157,30 @@
                             {{ $lowongan->web }}
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            Paket
+                        </th>
+                        <td>
+                            {{ $lowongan->web }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Harga Paket
+                        </th>
+                        <td>
+                            {{ $lowongan->web }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Status
+                        </th>
+                        <td>
+                            {{ $lowongan->web }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <a style="margin-top:20px;" class="btn btn-default" href="{{ url()->previous() }}">
