@@ -47,7 +47,7 @@
                   <div class="col-4 col-sm-3 align-self-center">
                     <img class="mx-auto img-r" src="img/img-01.png" alt="">
                   </div>
-                  <div class="col-8 col-sm-9 no-padding my-3">
+                  <div class="col-8 col-sm-9 no-padding my-3 pr-1">
                     <h3 class="mb-2 paket" style="font-weight: 400">Website Area Kerja</h3>
                     <h5 class ="paket2" style="line-height: 1.6!important;font-weight: normal;">Ribuan pencari kerja mengunjungi
                         <a href="{{ route('home') }}">website</a>
@@ -152,17 +152,18 @@
             </div>
             <div class="card-body ">
                 <h4 style="font-weight: normal;display: block; line-height: 1.6 !important; ">{!!$pak->deskripsi_full!!}</h4>
-                    <div class="col-11 col-sm-8 mx-auto no-padding" style="overflow: unset; white-space: nowrap; ">
+                    <div class="col-11 col-sm-10 mx-auto no-padding" >
                         <ul class="text-left mb-4">
                             @foreach($pak->list as $fitur)
-                                <h6  class="mb-3" style="font-weight: normal;" >{!!$fitur!!}</h6 >
+                                <h5  class="mb-3" style="font-weight: normal;" >{!!$fitur!!}</h5 >
                             @endforeach
                           </ul>
                         </div>
                         <hr/>
                     </div>
                     <div class="card-footer pt-4 pb-3" style="border-radius:  200px 200px 25px 25px/45px 45px 25px 25px; height: auto;background-color: {{$pak->warna}}">
-                        <h3 class="my-0 fw-normal mb-1 text-white">{{$pak->harga}}</h3>
+                     
+                      <h3 class="my-0 fw-normal mb-1 text-white">Rp {{number_format($pak->harga,0,'.','.')}}</h3>
                     <p class="my-0 fw-normal text-white">Pasang Lowongan Sekarang</h6>
                     </div>
                     </div>
@@ -224,7 +225,7 @@
 </div>
 @endsection
 @section('slick2')
-<div class="container px-0">
+<div class="container px-0 mb-5">
   <h3 style="font-weight: normal" class =" text-center mb-3" ><strong>Kelebihan</strong>   Areakerja.com</h3>
   <div class="col-12 col-sm-11 no-gutters no-padding mt-4 mx-auto ">
     <div class="for_slick_slider3 multiple-items3 mx-auto" >

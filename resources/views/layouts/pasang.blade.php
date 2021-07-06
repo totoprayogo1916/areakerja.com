@@ -82,6 +82,7 @@
     </style>
     </head>
     <body>
+        <img src="{{ url('img/chat_me.png') }}" onclick="topFunction()" id="myBtn2" title="Go to top" class="myBtn2">
         <wrapper class="d-flex flex-column">
             <nav>
                 @include('partials.header')
@@ -137,6 +138,24 @@
             AOS.init({
                 once: true,
             });
+        </script>
+        <script>
+            var mybutton = document.getElementById("myBtn2");
+            window.onscroll = function() {scrollFunction()};
+            mybutton.style.display = "block";
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+                    mybutton.style.display = "none";
+                } else {
+                    mybutton.style.display = "block";
+                }
+            }
+
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
         </script>
         <script>
             $('.slider').slick({

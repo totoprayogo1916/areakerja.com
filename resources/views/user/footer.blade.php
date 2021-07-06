@@ -70,9 +70,6 @@
 
       <!-- Social buttons -->
       <ul class="row" style="width: max-content;margin-left: auto;margin-right: auto">
-        <li class="mr-2  " style="font-size:13px; color: aliceblue">
-            Artikel
-        </li>
         <li class="mr-2" style="font-size:13px; color: aliceblue">
             Tentang Kami
         </li>
