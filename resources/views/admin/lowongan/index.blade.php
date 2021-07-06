@@ -98,6 +98,9 @@
                                 @if($low->gambar)
                                     <img src="{{ url('img/tmpcompanylogo') }}/{{ $low->gambar }}" style="width: 100px; height: 70px;">
                                 @endif
+                                <a download="{{ $low->namaperusahan }}" href="{{ Storage::url('tmpcompanylogo') }}/{{ $low->gambar }}" title="{{ $low->namaperusahaan }}">
+                                    <button type="button" class="btn btn-primary mt-2">Download</button>
+                                </a>
                             </td>
                             <td>
                                 {{ $low->title ?? '' }}
@@ -149,7 +152,7 @@
                                     <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}" style="width: 60px">
                                 </form>
 
-                                <a class="btn btn-xs btn-success" href="{{ route('admin.lowongan.pembayaran', $low->id) }}" style="width: 100px">
+                                <a class="btn btn-xs btn-success" href="{{ route('admin.lowongan.edit', $low->id)}}" style="width: auto">
                                     Detail Pembayaran
                                 </a>
 
