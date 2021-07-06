@@ -76,7 +76,7 @@
                         </th>
                     </tr>
                 </thead>
-                <tbody style="background-color: #158f30">
+                <tbody>
                     @foreach($lowongan as $key => $low)
                         <tr data-entry-id="{{ $low->id }}">
                             <td>

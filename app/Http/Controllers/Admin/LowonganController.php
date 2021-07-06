@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyLowonganRequest;
 use App\Lowongan;
+use App\Pembayaran;
 use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -23,8 +24,9 @@ class LowonganController extends Controller
         return view('admin.lowongan.show', compact('lowongan'));
     }
 
-    public function pembayaran(Lowongan $lowongan)
+    public function edit(Lowongan $lowongan)
     {
+
         return view('admin.lowongan.pembayaran', compact('lowongan'));
     }
 
