@@ -162,7 +162,7 @@
                             Paket
                         </th>
                         <td>
-                            {{ $lowongan->web }}
+                            {{ $lowongan->pembayaran->paket ?? '' }}
                         </td>
                     </tr>
                     <tr>
@@ -170,7 +170,7 @@
                             Harga Paket
                         </th>
                         <td>
-                            {{ $lowongan->web }}
+                            Rp. {{ number_format( $lowongan->pembayaran->harga ?? '' , 0, '.', '.'); }}
                         </td>
                     </tr>
                     <tr>
@@ -178,7 +178,7 @@
                             Status
                         </th>
                         <td>
-                            {{ $lowongan->web }}
+                            {{ $lowongan->pembayaran->status ?? '' }}
                         </td>
                     </tr>
                 </tbody>

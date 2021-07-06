@@ -26,6 +26,8 @@ class LowongannController extends Controller
 
     public function edit(Lowongan $lowongan)
     {
+        $lowongan->load('pembayaran');
+
         return view('admin.lowongan.pembayaran', compact('lowongan'));
     }
 
