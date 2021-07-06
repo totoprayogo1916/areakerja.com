@@ -10,7 +10,7 @@ use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class LowonganController extends Controller
+class LowongannController extends Controller
 {
     public function index()
     {
@@ -26,7 +26,6 @@ class LowonganController extends Controller
 
     public function edit(Lowongan $lowongan)
     {
-
         return view('admin.lowongan.pembayaran', compact('lowongan'));
     }
 

@@ -82,7 +82,7 @@
     </style>
     </head>
     <body>
-        <img src="{{ url('img/chat_me.png') }}" onclick="topFunction()" id="myBtn2" title="Go to top" class="myBtn2">
+        
         <wrapper class="d-flex flex-column">
             <nav>
                 @include('partials.header')
