@@ -29,7 +29,11 @@
         <h4 >Alamat Perusahan</h4>
         <p><input placeholder="" oninput="this.className = ''" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;"></p>
         <h4 >Logo Perusahan</h4>
-        <p><input placeholder="" oninput="this.className = ''" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;  "></p>
+        <div > 
+            <input type="file"  id="gambar" name="gambar" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;">
+        </div>
+        {{-- <p><input placeholder="" oninput="this.className = ''" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;  "></p> --}}
+        
         <div class="mt-4 mb-0">
             <div class="row justify-content-center">
                 <div class="col-6 col-sm-3" >
