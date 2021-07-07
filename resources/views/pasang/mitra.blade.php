@@ -19,68 +19,67 @@
 @endsection
 @section('content')
 <div class="col-12 col-sm-10 col-md-7 mx-auto">
-    <form id="regForm" action="">  
-  <!-- One "tab" for each step in the form: -->
-    <div class="tab">
-        <h4 >Nama Perusahan</h4>
-        <p><input placeholder="" oninput="this.className = ''" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;"></p>
-        <h4 >Deskripsi Perusahan</h4>
-        <p><input placeholder="" oninput="this.className = ''" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;"></p>
-        <h4 >Alamat Perusahan</h4>
-        <p><input placeholder="" oninput="this.className = ''" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;"></p>
-        <h4 >Logo Perusahan</h4>
-        <div > 
-            <input type="file"  id="gambar" name="gambar" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;">
-        </div>
-        {{-- <p><input placeholder="" oninput="this.className = ''" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;  "></p> --}}
-        
-        <div class="mt-4 mb-0">
-            <div class="row justify-content-center">
-                <div class="col-6 col-sm-3" >
-                    <button type="submit" class="btn btn-area"  onclick="nextPrev(1)" >
-                        <span>Selanjutnya</span>
-                    </button>
+    <form id="regForm" enctype="multipart/form-data" action="{{ url('formMitra') }}" method="POST">
+        @csrf
+        <div class="tab">
+            <h4 >Nama Perusahan</h4>
+            <p><input id="nama" name="nama" placeholder="" oninput="this.className = ''" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;"></p>
+            <h4 >Deskripsi Perusahan</h4>
+            <p><input id="deskripsi" name="deskripsi" placeholder="" oninput="this.className = ''" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;"></p>
+            <h4 >Alamat Perusahan</h4>
+            <p><input id="alamat" name="alamat" placeholder="" oninput="this.className = ''" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;"></p>
+            <h4 >Logo Perusahan</h4>
+            <div >
+                <input type="file"  id="gambar" name="gambar" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;">
+            </div>
+            {{-- <p><input placeholder="" oninput="this.className = ''" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;  "></p> --}}
+
+            <div class="mt-4 mb-0">
+                <div class="row justify-content-center">
+                    <div class="col-6 col-sm-3" >
+                        <button type="submit" class="btn btn-area"  onclick="nextPrev(1)" >
+                            <span>Selanjutnya</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-          </div>
-    
-    </div>
-    
-    <div class="tab">
-        <h4 >Info Kontak Perusahaan</h4>
-        <div class="form-group text-center m-0">
-            <div class="form-check form-check-inline">
-                <label for="defaultCheck1" >
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked='true' disabled="disabled">
-                    Email</label>
-                <label for="hp" >
-                    <input class="form-check-input" type="checkbox" value="" id="hp" onclick="myFunction()">
-                    No. Telp</label>
-            </div>
         </div>
 
-        <div class="form-group">
-        <h4>Email
-            <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
-            </h4>
-            <div >
-                <input class = "mb-2" id="email" name="email" required="" type="text" value="" data-type="text" aria-required="true" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;">
-                <label> Email wajib diisi untuk konfirmasi pembayaran, hanya ditampilkan publik jika merupakan cara untuk mengirimkan lamaran
-                </label>
+        <div class="tab">
+            <h4 >Info Kontak Perusahaan</h4>
+            <div class="form-group text-center m-0">
+                <div class="form-check form-check-inline">
+                    <label for="defaultCheck1" >
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked='true' disabled="disabled">
+                        Email</label>
+                    <label for="hp" >
+                        <input class="form-check-input" type="checkbox" value="" id="hp" onclick="myFunction()">
+                        No. Telp</label>
+                </div>
             </div>
-        </div>
 
-        <div class="form-group" id="hpform" style="display:none">
-            <h4>No. Telp/Whatsapp</h4>
-            <div >
-            <input id="notelp" name="notelp" type="text" value="" data-type="text" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;" >
+            <div class="form-group">
+                <h4>Email
+                    <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
+                </h4>
+                <div>
+                    <input class = "mb-2" id="email" name="email" required="" type="text" value="" data-type="text" aria-required="true" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;">
+                    <label> Email wajib diisi untuk konfirmasi pembayaran, hanya ditampilkan publik jika merupakan cara untuk mengirimkan lamaran
+                    </label>
+                </div>
             </div>
-        </div>
+
+            <div class="form-group" id="hpform" style="display:none">
+                <h4>No. Telp/Whatsapp</h4>
+                <div >
+                    <input id="notelp" name="notelp" type="text" value="" data-type="text" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;" >
+                </div>
+            </div>
             <div class="mt-2 mb-1">
                 <div class="row justify-content-center">
                     <div class="col-6 col-sm-3 " >
                         <button type="submit" class="btn btn-area" onclick="nextPrev(-1)" >
-                        <span>Sebelumnya</span>
+                            <span>Sebelumnya</span>
                         </button>
                     </div>
                     <div class="col-6 col-sm-3" >
@@ -90,11 +89,8 @@
                     </div>
                 </div>
             </div>
-    </div>
-  
-  
-  
-</form>
+        </div>
+    </form>
 </div>
 
 @endsection
