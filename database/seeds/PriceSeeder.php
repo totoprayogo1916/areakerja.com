@@ -21,8 +21,9 @@ class PriceSeeder extends Seeder
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" style="height:10%; width:10%;margin-right: 10px;" />  Twitter',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" style="height:10%; width:10%;margin-right: 10px;" />  Linkedin',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" style="height:10%; width:10%;margin-right: 10px;" />  Telegram', ],
-            'harga' => '100',
-            'warna' => '#ffa70e',
+            'harga'      => '100',
+            'warna'      => '#ffa70e',
+            'keterangan' => 'mitra',
         ]);
         $price->save();
 
@@ -38,8 +39,9 @@ class PriceSeeder extends Seeder
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" style="height:10%; width:10%;margin-right: 10px;" />  Twitter',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" style="height:10%; width:10%;margin-right: 10px;" />  Linkedin',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" style="height:10%; width:10%;margin-right: 10px;" />  Telegram', ],
-            'harga' => '5000000',
-            'warna' => '#858990',
+            'harga'      => '5000000',
+            'warna'      => '#858990',
+            'keterangan' => 'biasa',
         ]);
         $price->save();
 
@@ -55,8 +57,9 @@ class PriceSeeder extends Seeder
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" style="height:10%; width:10%;margin-right: 10px;" />  Twitter',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" style="height:10%; width:10%;margin-right: 10px;" />  Linkedin',
                 '<img alt="" src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" style="height:10%; width:10%;margin-right: 10px;" />  Telegram', ],
-            'harga' => '2500000',
-            'warna' => '#605349',
+            'harga'      => '2500000',
+            'warna'      => '#605349',
+            'keterangan' => 'biasa',
         ]);
         $price->save();
     }

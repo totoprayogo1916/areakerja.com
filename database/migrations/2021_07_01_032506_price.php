@@ -28,6 +28,8 @@ class Price extends Migration
 
             $table->string('warna')->nullable();
 
+            $table->string('keterangan')->nullable();
+
             $table->timestamps();
 
             $table->softDeletes();

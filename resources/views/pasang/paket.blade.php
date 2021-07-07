@@ -142,6 +142,36 @@
         </div>
       </div>
     <div class="row mb-3 justify-content-around text-center mt-5" >
+      @foreach($paket2 as $pak)
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4 px-4 " >
+
+        <a href="{{ route('daftarmitra') }}">
+        <div class="card mb-4 form-wrap-main2" style="border-radius: 25px; border:5px solid {{$pak->warna}} ">
+          <div class="card-header pt-3 pb-4" style="border-radius:  25px 25px 200px 200px/25px 25px 45px 45px; height: auto;background-color: {{$pak->warna}}">
+            <h1 class="my-0 fw-normal mb-1 text-white text-bold">{{$pak->nama}}</h1>
+            <h4 class="my-0 fw-normal text-white">{{$pak->deskripsi_singkat}}</h4>
+          </div>
+          <div class="card-body ">
+              <h4 style="font-weight: normal;display: block; line-height: 1.6 !important; ">{!!$pak->deskripsi_full!!}</h4>
+                  <div class="col-11 col-sm-10 mx-auto no-padding" >
+                      <ul class="text-left mb-4">
+                          @foreach($pak->list as $fitur)
+                              <h5  class="mb-3" style="font-weight: normal;" >{!!$fitur!!}</h5 >
+                          @endforeach
+                        </ul>
+                      </div>
+                      <hr/>
+                  </div>
+                  <div class="card-footer pt-4 pb-3" style="border-radius:  200px 200px 25px 25px/45px 45px 25px 25px; height: auto;background-color: {{$pak->warna}}">
+
+                    <h3 class="my-0 fw-normal mb-1 text-white">Rp {{number_format($pak->harga,0,'.','.')}}</h3>
+                  <p class="my-0 fw-normal text-white">Gabung Mitra Sekarang</h6>
+                  </div>
+                  </div>
+              </a>
+          </div>
+
+      @endforeach
         @foreach($paket as $pak)
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 px-4 " >
 
@@ -263,4 +293,3 @@
 </div>
 
 @endsection
-

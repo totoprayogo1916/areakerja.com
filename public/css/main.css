@@ -1942,6 +1942,7 @@ h6 {
   width: 100%;
 }
 
+
 .form-select .nice-select {
   border: none;
   border-radius: 0px;
@@ -2571,6 +2572,19 @@ body.mobile-nav-active #mobile-nav-toggle {
   box-shadow: 2px 2px 5px rgba(0.15, 0.15, 0.15, 0.15);
 }
 
+.form-wrap-main2 {
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  margin: auto;
+  margin-top: 0px;
+  transition: margin-top 0.5s;
+  text-align: center;
+  
+}
+
+
+
 
 hr {
   display: block;
@@ -2618,6 +2632,15 @@ hr {
 .banner-content .form-wrap .btn-info {
   font-size: 14px;
   border-radius: 20;
+}
+.form-control2{
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.form-control2:focus{
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 960px) {
@@ -4513,10 +4536,7 @@ position: relative;
   margin: 0px auto;
   border-radius: 20px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 2px 2px 5px rgba(0.15, 0.15, 0.15, 0.15);
-  /* padding: 40px;
-  width: 70%;
-  min-width: 300px;  */
+  /* box-shadow: 2px 2px 5px rgba(0.15, 0.15, 0.15, 0.15); */
 }
 
 /* Style the input fields */

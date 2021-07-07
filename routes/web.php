@@ -6,6 +6,7 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/aboutus', 'HomeController@aboutus')->name('aboutus');
 Route::get('/pasang/{nama}', 'JobController@pasang')->name('pasang');
+Route::get('/daftarmitra', 'JobController@daftarmitra')->name('daftarmitra');
 Route::get('/pilihpaket', 'JobController@pilihpaket')->name('pilihpaket');
 Route::get('/pasang2', 'JobController@pasang2')->name('pasang2');
 Route::get('/rekomendasi', 'JobController@rekomendasi')->name('rekomendasi');
