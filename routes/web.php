@@ -2,7 +2,7 @@
 
 
 Route::redirect('/home', '/mitra');
-Route::redirect('/cok', '/admin');
+Route::redirect('/homeadmin', '/admin');
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/aboutus', 'HomeController@aboutus')->name('aboutus');
