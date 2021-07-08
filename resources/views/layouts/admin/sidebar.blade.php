@@ -1,23 +1,23 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
       <div class="sidebar-brand">
-        <a href="/dashboard"> <img alt="image" src="{{url('otika/assets/img/logo.png')}}" class="header-logo" /> <span
-            class="logo-name">Admin</span>
+        <a href="{{ route('mitra.dashboard') }}"> <img alt="image" src="{{url('otika/assets/img/logo.png')}}" class="header-logo" /> <span
+            class="logo-name">Mitra</span>
         </a>
       </div>
       <ul class="sidebar-menu">
         <li class="menu-header">Main</li>
         <li class="dropdown active">
-          <a href="/dashboard" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
+          <a href="{{ route('mitra.dashboard') }}" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
         </li>
         <li class="dropdown">
           <a href="#" class="menu-toggle nav-link has-dropdown"><i
               data-feather="list"></i><span>Profil Perusahaan</span></a>
           <ul class="dropdown-menu">
-            <li><a class="nav-link" href="#"><i data-feather="file"></i><span>Profil</span></a></li>
+            <li><a class="nav-link" href="{{ route('mitra.profil') }}"><i data-feather="file"></i><span>Profil</span></a></li>
             <li><a class="nav-link" href="#"><i data-feather="grid"></i><span>Deskripsi</span></a></li>
 
-            
+
         </ul>
         </li>
         <li class="dropdown">
@@ -128,4 +128,4 @@
                 </div>
               </div>
             </div>
-    </div> 
+    </div>

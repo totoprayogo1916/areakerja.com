@@ -36,9 +36,9 @@ Route::get('payments/completed', 'PaymentController@completed');
 Route::get('payments/failed', 'PaymentController@failed');
 Route::get('payments/unfinish', 'PaymentController@unfinish');
 
-Route::get('/mitra/dashboard', 'AdminCompanyController@index')->name('dashboard');
-Route::get('/mitra/profil', 'AdminCompanyController@profil')->name('profil');
-
+Route::get('/mitra/dashboard', 'AdminCompanyController@index')->name('mitra.dashboard');
+Route::get('/mitra/profil', 'AdminCompanyController@profil')->name('mitra.profil');
+Route::get('/mitra/login', 'AdminCompanyController@login')->name('mitra.login');
 
 Route::post('/formMitra', 'MitraController@index')->name('formMitra');
 
