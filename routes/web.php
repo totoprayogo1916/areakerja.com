@@ -2,7 +2,8 @@
 
 
 Route::redirect('/home', '/mitra');
-Route::redirect('/homeadmin', '/admin');
+// Route::redirect('/homeadmin', '/admin');
+Route::redirect('/cok', '/admin');
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/aboutus', 'HomeController@aboutus')->name('aboutus');
@@ -119,46 +120,46 @@ Route::group(['prefix' => 'mitra', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], static function () {
-    Route::get('/', 'HomeController@index')->name('cok');
-    // Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
-    // Route::resource('categories', 'CategoriesController');
-    // // Permissions
-    // Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
-    // Route::resource('permissions', 'PermissionsController');
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
+    Route::resource('categories', 'CategoriesController');
+    // Permissions
+    Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
+    Route::resource('permissions', 'PermissionsController');
 
-    // // Roles
-    // Route::delete('roles/destroy', 'RolesController@massDestroy')->name('roles.massDestroy');
-    // Route::resource('roles', 'RolesController');
+    // Roles
+    Route::delete('roles/destroy', 'RolesController@massDestroy')->name('roles.massDestroy');
+    Route::resource('roles', 'RolesController');
 
-    // // Users
-    // Route::delete('users/destroy', 'UsersController@massDestroy')->name('users.massDestroy');
-    // Route::resource('users', 'UsersController');
+    // Users
+    Route::delete('users/destroy', 'UsersController@massDestroy')->name('users.massDestroy');
+    Route::resource('users', 'UsersController');
 
-    // // Categories
-    // Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
-    // Route::resource('categories', 'CategoriesController');
-    // // Jobs
-    // Route::delete('jobs/destroy', 'JobsController@massDestroy')->name('jobs.massDestroy');
-    // Route::resource('jobs', 'JobsController');
+    // Categories
+    Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
+    Route::resource('categories', 'CategoriesController');
+    // Jobs
+    Route::delete('jobs/destroy', 'JobsController@massDestroy')->name('jobs.massDestroy');
+    Route::resource('jobs', 'JobsController');
 
-    // //Location
-    // Route::delete('locations/destroy', 'LocationsController@massDestroy')->name('locations.massDestroy');
-    // Route::resource('locations', 'LocationsController');
+    //Location
+    Route::delete('locations/destroy', 'LocationsController@massDestroy')->name('locations.massDestroy');
+    Route::resource('locations', 'LocationsController');
 
-    // // Companies
-    // Route::delete('companies/destroy', 'CompaniesController@massDestroy')->name('companies.massDestroy');
-    // Route::post('companies/media', 'CompaniesController@storeMedia')->name('companies.storeMedia');
-    // Route::resource('companies', 'CompaniesController');
+    // Companies
+    Route::delete('companies/destroy', 'CompaniesController@massDestroy')->name('companies.massDestroy');
+    Route::post('companies/media', 'CompaniesController@storeMedia')->name('companies.storeMedia');
+    Route::resource('companies', 'CompaniesController');
 
 
-    // Route::delete('lowongan/destroy', 'LowongannController@massDestroy')->name('lowongan.massDestroy');
-    // // Route::get('/pembayaran/{id}', 'LowongannController@pembayaran')->name('pembayaran');
-    // Route::resource('lowongan', 'LowongannController');
+    Route::delete('lowongan/destroy', 'LowongannController@massDestroy')->name('lowongan.massDestroy');
+    // Route::get('/pembayaran/{id}', 'LowongannController@pembayaran')->name('pembayaran');
+    Route::resource('lowongan', 'LowongannController');
 
-    // //Price
-    // Route::delete('price/destroy', 'PriceController@massDestroy')->name('price.massDestroy');
-    // Route::resource('price', 'PriceController');
+    //Price
+    Route::delete('price/destroy', 'PriceController@massDestroy')->name('price.massDestroy');
+    Route::resource('price', 'PriceController');
 
-    // Route::delete('article/destroy', 'ArticleController@massDestroy')->name('article.massDestroy');
-    // Route::resource('article', 'ArticleController');
+    Route::delete('article/destroy', 'ArticleController@massDestroy')->name('article.massDestroy');
+    Route::resource('article', 'ArticleController');
 });

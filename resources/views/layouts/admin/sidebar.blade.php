@@ -7,14 +7,14 @@
       </div>
       <ul class="sidebar-menu">
         <li class="menu-header">Main</li>
-        <li class="dropdown active">
+        <li class="dropdown {{ request()->is('mitra/dashboard') || request()->is('mitra/dashboard/*') ? 'active' : '' }}">
           <a href="{{ route('mitra.dashboard') }}" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
         </li>
-        <li class="dropdown">
+        <li class="dropdown {{ request()->is('mitra/profil') || request()->is('mitra/profil/*') ? 'active' : '' }}">
           <a href="#" class="menu-toggle nav-link has-dropdown"><i
               data-feather="list"></i><span>Profil Perusahaan</span></a>
           <ul class="dropdown-menu">
-            <li><a class="nav-link" href="{{ route('mitra.profil') }}"><i data-feather="file"></i><span>Profil</span></a></li>
+            <li class="{{ request()->is('mitra/profil') || request()->is('mitra/profil/*') ? 'active' : '' }}"><a class="nav-link"  href="{{ route('mitra.profil') }}"><i data-feather="file"></i><span>Profil</span></a></li>
             <li><a class="nav-link" href="#"><i data-feather="grid"></i><span>Deskripsi</span></a></li>
 
 
