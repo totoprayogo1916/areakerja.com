@@ -16,10 +16,13 @@ class RedirectIfAuthenticated
      *
      * @return mixed
      */
-    public function handle($request, Closure $next, $guard = null)
+    public function handle($request, Closure $next)
     {
-        if (Auth::guard($guard)->check()) {
-            return redirect('/home');
+        // $role = Auth::user()->role;
+        if (Auth::check()) {
+            // if (Auth::user()->role == "Mitra")
+            // dd(Auth::user()->role);
+            return redirect('/cok');
         }
 
         return $next($request);
