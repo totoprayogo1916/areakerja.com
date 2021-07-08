@@ -7,13 +7,14 @@
   <meta content="width=device-width, initial-scale=1,minimum-scale=1.0, maximum-scale=3.0, shrink-to-fit=no" name="viewport">
   <title>Admin - OXT Design</title>
   <!-- General CSS Files -->
+
   <link rel="stylesheet" href="{{url('otika/assets/css/app.min.css')}}">
   <!-- Template CSS -->
   <link rel="stylesheet" href="{{url('otika/assets/css/style.css')}}">
   <link rel="stylesheet" href="{{url('otika/assets/css/components.css')}}">
   <!-- Custom style CSS -->
   <link rel="stylesheet" href="{{url('otika/assets/css/custom.css')}}">
-  <link rel='shortcut icon' type='image/x-icon' href="{{url('otika/assets/img/logo.png')}}" />
+  <link rel="shortcut icon" href="{{ asset('img/img-01.png') }}">
 
   <link rel="stylesheet" href="{{url('otika/assets/bundles/datatables/datatables.min.css')}}">
   <link rel="stylesheet" href="{{url('otika/assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css')}}">

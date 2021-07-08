@@ -8,11 +8,16 @@ class AdminCompanyController extends Controller
 {
     public function index()
     {
-        return view('admin2.dashboard.index');
+        return view('mitra.dashboard.index');
+    }
+
+    public function login()
+    {
+        return view('mitra.auth.login');
     }
 
     public function profil()
     {
-        return view('admin2.profil.profil');
+        return view('mitra.profil.profil');
     }
 }
