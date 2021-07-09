@@ -77,6 +77,7 @@ Route::get(
 Route::group(['prefix' => 'mitra', 'as' => 'mitra.', 'namespace' => 'Mitra', 'middleware' => ['auth']], static function () {
     Route::get('/', 'AdminCompanyController@index')->name('home');
     Route::resource('profil', 'ProfilController');
+    Route::resource('lowongan', 'DaftarLowonganController');
     // Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
     // Route::resource('categories', 'CategoriesController');
     // // Permissions
