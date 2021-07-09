@@ -19,6 +19,6 @@ class ProfilController extends Controller
 {
     public function index()
     {
-        return view('mitra.profil.profil');
+        return view('mitra.profil.index');
     }
 }

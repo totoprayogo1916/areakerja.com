@@ -8,6 +8,6 @@ class AdminCompanyController
 {
     public function index()
     {
-        return view('mitra.homemitra');
+        return view('mitra.home');
     }
 }

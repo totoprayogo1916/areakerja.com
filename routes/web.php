@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 Route::redirect('/home', '/mitra');
 // Route::redirect('/homeadmin', '/admin');
@@ -38,8 +40,7 @@ Route::get('payments/completed', 'PaymentController@completed');
 Route::get('payments/failed', 'PaymentController@failed');
 Route::get('payments/unfinish', 'PaymentController@unfinish');
 
-Route::get('/mitra/dashboard', 'AdminCompanyController@index')->name('mitra.dashboard');
-Route::get('/mitra/profil', 'AdminCompanyController@profil')->name('mitra.profil');
+// Route::get('/mitra/dashboard', 'AdminCompanyController@index')->name('mitra.dashboard');
 Route::get('/mitra/login', 'AdminCompanyController@login')->name('mitra.login');
 
 Route::post('/formMitra', 'MitraController@index')->name('formMitra');
