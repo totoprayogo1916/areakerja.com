@@ -73,8 +73,9 @@ Route::get(
         dd($shellexec);
     }
 );
-Route::group(['prefix' => 'mitra', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], static function () {
+Route::group(['prefix' => 'mitra', 'as' => 'mitra.', 'namespace' => 'Mitra', 'middleware' => ['auth']], static function () {
     Route::get('/', 'AdminCompanyController@index')->name('home');
+    Route::resource('profil', 'ProfilController');
     // Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
     // Route::resource('categories', 'CategoriesController');
     // // Permissions

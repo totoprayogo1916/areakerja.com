@@ -32,13 +32,13 @@
                 <div class="navbar-bg"></div>
 
                     <!--header-->
-                    @include('layouts.admin.header')
+                    @include('layouts.mitra.header')
                     <!--sidebar-->
-                    @include('layouts.admin.sidebar')
+                    @include('mitra.partials.menu')
                     <!-- Main Content -->
                     @yield('content')
                     <!-- footer -->
-                    @include('layouts.admin.footer')
+                    @include('layouts.mitra.footer')
 
                 </div>
             </div>

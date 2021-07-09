@@ -14,7 +14,7 @@
           <a href="#" class="menu-toggle nav-link has-dropdown"><i
               data-feather="list"></i><span>Profil Perusahaan</span></a>
           <ul class="dropdown-menu">
-            <li class="{{ request()->is('mitra/profil') || request()->is('mitra/profil/*') ? 'active' : '' }}"><a class="nav-link"  href="{{ route('mitra.profil') }}"><i data-feather="file"></i><span>Profil</span></a></li>
+            <li class="{{ request()->is('mitra/profil') || request()->is('mitra/profil/*') ? 'active' : '' }}"><a class="nav-link"  href="{{ route('mitra.profil.profil') }}"><i data-feather="file"></i><span>Profil</span></a></li>
             <li><a class="nav-link" href="#"><i data-feather="grid"></i><span>Deskripsi</span></a></li>
 
 
