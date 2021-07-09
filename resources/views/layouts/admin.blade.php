@@ -47,66 +47,85 @@
 </head>
 
 <body class="app header-fixed sidebar-fixed aside-menu-fixed pace-done sidebar-lg-show">
-    <header class="app-header navbar" style="background-color: #272e41">
-        <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a href="{{ route('home') }}"><img src="{{ asset('img/logo3.svg') }}" alt="" title="" style="margin-top: 3px"/>
-        </a>
-        <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <ul class="nav navbar-nav ml-auto">
-            @if(count(config('panel.available_languages', [])) > 1)
-                <li class="nav-item dropdown d-md-down-none">
-                    <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        {{ strtoupper(app()->getLocale()) }}
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        @foreach(config('panel.available_languages') as $langLocale => $langName)
-                            <a class="dropdown-item" href="{{ url()->current() }}?change_language={{ $langLocale }}">{{ strtoupper($langLocale) }} ({{ $langName }})</a>
-                        @endforeach
-                    </div>
-                </li>
+    @foreach ( App\Role_User::all('user_id') as $id)
+        @if ( $id->user_id == auth()->user()->id)
+            @if (App\Role_User::where('user_id', $id->user_id)->first()->role_id == 3)
+                <div class="container text-center my-auto">
+                    <H1><b>SADARO KOWE UDUK ADMIN</b></H1>
+                </div>
             @endif
+         @endif
+    @endforeach
+
+    @foreach ( App\Role_User::all('user_id') as $id)
+        @if ( $id->user_id == auth()->user()->id)
+            @if (App\Role_User::where('user_id', $id->user_id)->first()->role_id == 1 || App\Role_User::where('user_id', $id->user_id)->first()->role_id == 2)
+                <header class="app-header navbar" style="background-color: #272e41">
+                    <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a href="{{ route('home') }}"><img src="{{ asset('img/logo3.svg') }}" alt="" title="" style="margin-top: 3px"/>
+                    </a>
+                    <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        @if(count(config('panel.available_languages', [])) > 1)
+                            <li class="nav-item dropdown d-md-down-none">
+                                <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    {{ strtoupper(app()->getLocale()) }}
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    @foreach(config('panel.available_languages') as $langLocale => $langName)
+                                        <a class="dropdown-item" href="{{ url()->current() }}?change_language={{ $langLocale }}">{{ strtoupper($langLocale) }} ({{ $langName }})</a>
+                                    @endforeach
+                                </div>
+                            </li>
+                        @endif
 
 
-        </ul>
-    </header>
+                    </ul>
+                </header>
 
-    <div id="admin">
-        @include('admin.partials.menu')
-        <main class="main">
+                <div id="admin">
+                    @include('admin.partials.menu')
+                    <main class="main">
 
 
-            <div style="padding-top: 20px" class="container-fluid">
-                @if(session('message'))
-                    <div class="row mb-2">
-                        <div class="col-lg-12">
-                            <div class="alert alert-success" role="alert">{{ session('message') }}</div>
+                        <div style="padding-top: 20px" class="container-fluid">
+                            @if(session('message'))
+                                <div class="row mb-2">
+                                    <div class="col-lg-12">
+                                        <div class="alert alert-success" role="alert">{{ session('message') }}</div>
+                                    </div>
+                                </div>
+                            @endif
+                            @if($errors->count() > 0)
+                                <div class="alert alert-danger">
+                                    <ul class="list-unstyled">
+                                        @foreach($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            @yield('content')
+
                         </div>
-                    </div>
-                @endif
-                @if($errors->count() > 0)
-                    <div class="alert alert-danger">
-                        <ul class="list-unstyled">
-                            @foreach($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-                @yield('content')
-
-            </div>
 
 
-        </main>
-        <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
-            {{ csrf_field() }}
-        </form>
-    </div>
+                    </main>
+                    <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                </div>
+            @endif
+         @endif
+    @endforeach
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
