@@ -23,7 +23,7 @@
                             <i class="fas fa-user"></i>
                           </div>
                         </div>
-                        <input type="text" class="form-control phone-number">
+                        <input type="text" class="form-control phone-number" value="{{ $mitra->email}}">
                       </div>
                     </div>
                     <div class="form-group">
@@ -52,13 +52,13 @@
                         <input type="text" class="form-control currency">
                       </div>
                     </div>
-                    
+
                   </div>
                 </div>
-          
-            
+
+
           </div>
-        
+
     </section>
   </div>
 

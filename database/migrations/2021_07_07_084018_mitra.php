@@ -16,14 +16,14 @@ class Mitra extends Migration
         Schema::create('mitra', static function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
-            $table->string('username')->nullable();
-            $table->string('password')->nullable();
             $table->string('email');
             $table->string('deskripsi');
             $table->string('alamat');
             $table->string('no')->nullable();
             $table->string('logo');
             $table->integer('koin')->nullable();
+            $table->unsignedInteger('idUser')->nullable();
+            $table->foreign('idUser', 'user_id_fk_2021071')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
