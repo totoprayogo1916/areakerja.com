@@ -33,9 +33,11 @@ class UsersController extends Controller
     {
         $mitra = Mitra::where('email', $request['email'])->first();
         if ($mitra != null) {
-            $mitra->update();
             $user = User::create($request->all());
             $user->roles()->sync($request->input('roles', []));
+            $cek = User::where('email', $request['email'])->first();
+            $mitra->idUser = $cek->id;
+            $mitra->update();
 
             return redirect()->route('admin.users.index');
         } else {

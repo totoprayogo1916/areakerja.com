@@ -107,14 +107,14 @@
                 <img alt="image" src="#" class="rounded-circle author-box-picture">
                 <div class="clearfix"></div>
                 <div class="author-box-name">
-                    <a><br>Nama Perusahaan</a>
+                    <a><br>{{$mitra->nama}}</a>
                 </div>
                 <div class="author-box-job">Graphic Designer</div>
                 </div>
                 <div class="text-center">
                 <div class="author-box-description">
                     <p>
-                        "Almost Creative, Barely Luck"
+                        {{$mitra->deskripsi}}
                     </p>
                 </div>
                 <div class="w-100 d-sm-none"></div>
@@ -150,7 +150,7 @@
                         Mail
                     </span>
                     <span class="float-right text-muted">
-                        oxtdesign@gmail.com
+                        {{$mitra->email}}
                     </span>
                     </p>
                     <p class="clearfix">
