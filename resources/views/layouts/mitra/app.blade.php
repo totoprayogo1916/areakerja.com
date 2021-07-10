@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1,minimum-scale=1.0, maximum-scale=3.0, shrink-to-fit=no" name="viewport">
-  <title>Admin - OXT Design</title>
+  <title>Admin - Area Kerja</title>
   <!-- General CSS Files -->
 
   <link rel="stylesheet" href="{{url('otika/assets/css/app.min.css')}}">
@@ -108,7 +108,7 @@
             });
         } );
     </script>
-    
+
     @section('js')
     @show
 @stack('after-script')
