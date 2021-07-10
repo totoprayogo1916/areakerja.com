@@ -23,7 +23,7 @@ class ProfilController extends Controller
         $user_id = auth()->user()->id;
 
         $mitra = Mitra::where('idUser', $user_id)->first();
-        dd($mitra);
-        return view('mitra.profil.index');
+        // dd($mitra);
+        return view('mitra.profil.index', compact('mitra'));
     }
 }
