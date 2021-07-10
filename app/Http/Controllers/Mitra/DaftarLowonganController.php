@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Mitra;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Http\Requests\StoreMitraRequest;
 use App\Mitra;
 use App\User;
 use App\Lowonganmitra;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 class DaftarLowonganController extends Controller
@@ -21,7 +21,8 @@ class DaftarLowonganController extends Controller
 
     public function edit($id)
     {
-        $mitra = Mitra::where('id',$id)->first();
+        $mitra = Mitra::where('id', $id)->first();
+
         return view('mitra.lowongan.edit', compact('mitra'));
     }
 
