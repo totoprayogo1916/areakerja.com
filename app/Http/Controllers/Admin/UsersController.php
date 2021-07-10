@@ -31,20 +31,16 @@ class UsersController extends Controller
 
     public function store(StoreUserRequest $request)
     {
-        $user = User::create($request->all());
-        $user->roles()->sync($request->input('roles', []));
-
-        $cek = User::where('email', $request['email'])->first();
         $mitra = Mitra::where('email', $request['email'])->first();
         if ($mitra != null) {
-            $mitra = Mitra::where('email', $request['email'])->first();
-            $mitra->idUser = $cek->id;
             $mitra->update();
+            $user = User::create($request->all());
+            $user->roles()->sync($request->input('roles', []));
+
             return redirect()->route('admin.users.index');
         } else {
             return redirect()->route('admin.users.index');
         }
-
     }
 
     public function edit(User $user)
