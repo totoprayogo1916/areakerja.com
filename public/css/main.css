@@ -2619,6 +2619,13 @@ hr {
   font-size: 14px;
 }
 
+.banner-content .form-wrap .form-control3 {
+  /* height: 40px; */
+  box-sizing: border-box;
+  border-radius: 20;
+  font-size: 14px;
+}
+
 .banner-content .form-wrap .btn-info {
   background-color: #49e4fa;
   width: 100%;
@@ -4593,6 +4600,25 @@ input.invalid {
 }
 
 
+.form-control3{
+	display:block;
+	width:100%;
+	height:calc(1.5em + .75rem + 2px);
+	padding:.375rem .75rem;
+	font-size:1rem;
+	font-weight:400;
+	line-height:1.5;
+	color:#495057;
+	background-color:#fff;
+	background-clip:padding-box;
+	border:1px solid #ced4da;
+	border-radius:.25rem;
+	-webkit-transition:border-color .15s ease-in-out,
+	-webkit-box-shadow .15s ease-in-out;
+	transition:border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+	transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out}
+
 .popup {
   position: relative;
   display: inline-block;
@@ -4658,6 +4684,8 @@ input.invalid {
     -ms-user-select: none;
     user-select: none;
   }
+
+
 
   /* The actual popup */
   .popup1 .popuptext {
