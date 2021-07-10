@@ -24,6 +24,6 @@ class Lowonganmitra extends Model
         'email',
         'notelp',
         'web',
-        'idUser'
+        'idUser',
     ];
 }

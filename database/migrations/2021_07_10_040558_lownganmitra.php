@@ -45,11 +45,10 @@ class Lownganmitra extends Migration
             $table->timestamps();
 
             $table->unsignedInteger('idUser')->nullable();
-            
+
             $table->foreign('idUser', 'user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->softDeletes();
-           
         });
     }
 

@@ -142,7 +142,7 @@
                         Phone
                     </span>
                     <span class="float-right text-muted">
-                        +62 822-4486-8476
+                        {{ $mitra->no }}
                     </span>
                     </p>
                     <p class="clearfix">

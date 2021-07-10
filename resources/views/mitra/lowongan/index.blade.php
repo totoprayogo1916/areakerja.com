@@ -27,7 +27,7 @@
                           </tr>
                         </thead>
                         <tbody>
-                          @foreach($mitra as $min)
+                          @foreach($mitra1 as $min)
                           <tr>
                             <td>{{$min->id}}</td>
                             <td>{{$min->email}}</td>
@@ -37,7 +37,7 @@
                             <td>
                             <a href="#" class="btn btn-primary mr-1">Detail</a>
                             <a href="{{ route('mitra.lowongan.edit', $min->id) }}" class="btn btn-success">Edit</a>
-                            
+
                             </td>
 
                           </tr>
