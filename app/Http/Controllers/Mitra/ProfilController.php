@@ -10,6 +10,7 @@ use App\Http\Requests\StoreJobRequest;
 use App\Http\Requests\UpdateJobRequest;
 use App\Job;
 use App\Location;
+use App\Mitra;
 use Gate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -19,6 +20,10 @@ class ProfilController extends Controller
 {
     public function index()
     {
+        $user_id = auth()->user()->id;
+
+        $mitra = Mitra::where('idUser', $user_id)->first();
+        dd($mitra);
         return view('mitra.profil.index');
     }
 }

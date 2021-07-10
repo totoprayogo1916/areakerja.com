@@ -31,6 +31,7 @@ class UsersController extends Controller
 
     public function store(StoreUserRequest $request)
     {
+        dd($request->input('roles')[0] == 3);
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));
 
