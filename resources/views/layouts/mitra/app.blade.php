@@ -16,10 +16,37 @@
   <link rel="stylesheet" href="{{url('otika/assets/css/custom.css')}}">
   <link rel="shortcut icon" href="{{ asset('img/img-01.png') }}">
 
+  <link rel="stylesheet" href="{{url('otika/assets/bundles/select2/dist/css/select2.min.css')}}">
   <link rel="stylesheet" href="{{url('otika/assets/bundles/datatables/datatables.min.css')}}">
   <link rel="stylesheet" href="{{url('otika/assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css')}}">
   <link rel="stylesheet" href="{{url('otika/assets/bundles/fullcalendar/fullcalendar.min.css')}}">
-
+  <style>
+      .form-control3{
+        display:block;
+        width:100%;
+        height:100px;
+        padding:.375rem .75rem;
+        font-size:1rem;
+        font-weight:400;
+        line-height:1.5;
+        color:#495057;
+        background-color:#fff;
+        background-clip:padding-box;
+        border:1px solid #ced4da;
+        border-radius:.25rem;
+        -webkit-transition:border-color .15s ease-in-out,
+        -webkit-box-shadow .15s ease-in-out;
+        transition:border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+        transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out}
+    .form-control3:focus{
+        color:#495057;
+        background-color:#fff;
+        border-color:#c2c8f8;
+        outline:0;}
+    .form-control3::-webkit-input-placeholder{
+        color:#6c757d;opacity:1}
+  </style>
   @section('css')
   @show
   @yield('css')
@@ -75,13 +102,13 @@
   <!-- Page Specific JS File -->
   <script src="{{url('otika/assets/js/page/toastr.js')}}"></script>
   <script>
-    $(document).ready( function () {
-        $('#myTable').DataTable({
-            "scrollX": false,
-        });
-    } );
-</script>
-
+        $(document).ready( function () {
+            $('#myTable').DataTable({
+                "scrollX": false,
+            });
+        } );
+    </script>
+    
     @section('js')
     @show
 @stack('after-script')

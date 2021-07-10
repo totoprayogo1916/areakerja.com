@@ -7,8 +7,9 @@
             <div class="row">
               <div class="col-12">
                 <div class="card">
-                  <div class="card-header">
+                  <div class="card-header justify-content-between ">
                     <h4>Export Table</h4>
+                    <a href="{{ route('mitra.lowongan.create')}}" class="btn btn-warning"> Add </a>
                   </div>
                   <div class="card-body">
                     <div class="table-responsive">
@@ -36,7 +37,7 @@
                             <td>
                             <a href="#" class="btn btn-primary mr-1">Detail</a>
                             <a href="{{ route('mitra.lowongan.edit', $min->id) }}" class="btn btn-success">Edit</a>
-                            <a href="{{ route('mitra.lowongan.create')}}" class="btn btn-warning"> Add </a>
+                            
                             </td>
 
                           </tr>
