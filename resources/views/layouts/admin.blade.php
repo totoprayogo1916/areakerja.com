@@ -51,7 +51,7 @@
         @if ( $id->user_id == auth()->user()->id)
             @if (App\Role_User::where('user_id', $id->user_id)->first()->role_id == 3)
                 <div class="container text-center my-auto">
-                    <H1><b>SADARO KOWE UDUK ADMIN</b></H1>
+                    <H1><b>SADARO KOWE DUDU SOPO SOPO NE DEE</b></H1>
                 </div>
             @endif
          @endif

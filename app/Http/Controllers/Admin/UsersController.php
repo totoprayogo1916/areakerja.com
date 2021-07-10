@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyUserRequest;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
+use App\Mitra;
 use App\Role;
 use App\User;
 use Gate;
@@ -33,7 +34,17 @@ class UsersController extends Controller
         $user = User::create($request->all());
         $user->roles()->sync($request->input('roles', []));
 
-        return redirect()->route('admin.users.index');
+        $cek = User::where('email', $request['email'])->first();
+        $mitra = Mitra::where('email', $request['email'])->first();
+        if ($mitra != null) {
+            $mitra = Mitra::where('email', $request['email'])->first();
+            $mitra->idUser = $cek->id;
+            $mitra->update();
+            return redirect()->route('admin.users.index');
+        } else {
+            return redirect()->route('admin.users.index');
+        }
+
     }
 
     public function edit(User $user)
