@@ -403,11 +403,17 @@
     <script type="text/javascript">
         
         var select = document.getElementById('roles');
-        var option = select.options[select.selectedIndex];
-        $('select').on('change', function() {
-            alert( option.value );
-        });
+        // var option = select.options[select.selectedIndex];
+        
         var text = document.getElementById("nama2");
+        text.style.display = "none";
+        $('select').on('change', function() {
+            if (this.value == "3") {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        });
         // text.style.display = "none";
         // document.getElementById('name').value = option.value;
         // function mitra(){

@@ -48,8 +48,9 @@
             <div class="form-group {{ $errors->has('roles') ? 'has-error' : '' }}">
                 <label for="roles">{{ trans('cruds.user.fields.roles') }}*</label>
                 <select name="roles" id="roles" class="form-control " onchange="mitra()">
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
+                    @foreach($roles as $id => $roles)
+                        <option value="{{ $id }}" >{{ $roles }}</option>
+                    @endforeach
                 </select>
                 @if($errors->has('roles'))
                     <em class="invalid-feedback">
