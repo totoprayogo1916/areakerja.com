@@ -10,6 +10,7 @@ use App\Http\Requests\StoreJobRequest;
 use App\Http\Requests\UpdateJobRequest;
 use App\Job;
 use App\Location;
+use App\Lowongan;
 use App\Lowonganmitra;
 use App\Mitra;
 use App\User;
@@ -29,9 +30,12 @@ class LowonganMitraController extends Controller
     {
         $mitra = Lowonganmitra::where('id', $id)->first();
 
+        $mitraAsli = Mitra::where('idUser', $mitra->idUser)->first();
+        $company   = Company::where('deskripsi', $mitraAsli->deskripsi)->first();
+        // dd($company->id);
         // $mitra1 = Lowonganmitra::all();
         // dd($mitra);
-        $mitra1 = Mitra::where('idUser', $mitra->idUser)->first();
+        // $mitra1 = Company::where('email', $mitra->idUser)->first();
         // dd($mitra1);
         $companies = Company::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
@@ -41,6 +45,6 @@ class LowonganMitraController extends Controller
 
         $job->load('company', 'location', 'categories');
 
-        return view('admin.lowonganmitra.create', compact('companies', 'locations', 'categories', 'job', 'mitra', 'mitra1'));
+        return view('admin.lowonganmitra.create', compact('companies', 'locations', 'categories', 'job', 'mitra', 'company'));
     }
 }

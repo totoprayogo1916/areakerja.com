@@ -23,10 +23,10 @@
             </div>
             <div class="form-group {{ $errors->has('company_id') ? 'has-error' : '' }}">
                 <label for="company">Nama Perusahaan</label>
-                <select name="company_id" id="company" class="form-control select2" required>
-                    
-                    <option value="{{ $mitra1->id }}" >{{ $mitra1->nama }}</option>
-                    
+                <select name="company_id" id="company" class="form-control select2" required disabled>
+
+                    <option value="{{ $company->id }}">{{ $company->name }}</option>
+
                 </select>
                 @if($errors->has('company_id'))
                     <em class="invalid-feedback">
@@ -37,7 +37,7 @@
 
             <div class="form-group {{ $errors->has('lokasikerja') ? 'has-error' : '' }}">
                 <label for="lokasikerja">Alamat Kantor</label>
-                <input type="text" id="lokasikerja" name="lokasikerja" class="form-control" value="{{ $mitra1->alamat }}">
+                <input type="text" id="lokasikerja" name="lokasikerja" class="form-control" value="{{ $company->alamat }}" readonly>
                 @if($errors->has('lokasikerja'))
                     <em class="invalid-feedback">
                         {{ $errors->first('lokasikerja') }}
