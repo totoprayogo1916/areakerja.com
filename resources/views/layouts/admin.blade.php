@@ -400,6 +400,30 @@
         }
     </script>
 
+    <script type="text/javascript">
+        
+        var select = document.getElementById('roles');
+        var option = select.options[select.selectedIndex];
+        $('select').on('change', function() {
+            alert( option.value );
+        });
+        var text = document.getElementById("nama2");
+        // text.style.display = "none";
+        // document.getElementById('name').value = option.value;
+        // function mitra(){
+        //     alert( option.value );
+        //     // if (option.value == "3") {
+        //     //     text.style.display = "block";
+        //     // } else {
+        //     //     text.style.display = "none";
+        //     // }
+        // }
+        
+        // mitra();
+        
+
+    </script>
+
     @include('sweetalert::alert')
 
     @yield('scripts')

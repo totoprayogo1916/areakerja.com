@@ -36,6 +36,8 @@ class Lownganmitra extends Migration
 
             $table->string('gaji')->nullable();
 
+            $table->string('status_pemasangan')->default('Belum Terpasang');
+
             $table->string('email')->nullable();
 
             $table->string('notelp')->nullable();

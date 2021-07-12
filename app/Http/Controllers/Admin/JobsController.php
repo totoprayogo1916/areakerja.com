@@ -11,6 +11,9 @@ use App\Http\Requests\UpdateJobRequest;
 use App\Job;
 use App\Location;
 use Gate;
+use App\Mitra;
+use App\User;
+use App\Lowonganmitra;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\Response;
@@ -69,6 +72,16 @@ class JobsController extends Controller
             'slug'             => $slug,
         ]);
         $job->categories()->sync($request->input('categories', []));
+
+        // $mitra = Lowonganmitra::where('id', $request['id'])->first();
+        // if ($mitra != null) {
+        //     $cek = Lowonganmitra::where('status_pemasangan', "Terpasang")->first();
+        //     $mitra->status_pemasangan = $cek->status_pemasangan;
+        //     $mitra->update();
+        //     dd($mitra);
+        // } else {
+        //     echo 'gagal';
+        // }
         // return request('requirements');
         return redirect()->route('admin.jobs.index');
     }

@@ -1,6 +1,6 @@
 @extends('layouts.mitra.app')
 @section('content')
-
+<div class="loader"></div>
 <div class="main-content">
     <section class="section">
       <div class="row ">

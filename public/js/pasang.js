@@ -92,3 +92,11 @@ function myFunction() {
     text2.style.display = "none";
   }
 }
+
+function update() {
+  var select = document.getElementById('roles');
+  var option = select.options[select.selectedIndex];
+
+  document.getElementById('value').value = option.value;
+  document.getElementById('text').value = option.text;
+}

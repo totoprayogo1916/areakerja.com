@@ -10,6 +10,7 @@ use App\Mitra;
 use App\Role;
 use App\User;
 use Gate;
+use App\Company;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -26,7 +27,9 @@ class UsersController extends Controller
     {
         $roles = Role::all()->pluck('title', 'id');
 
-        return view('admin.users.create', compact('roles'));
+        $mitra = Mitra::all()->pluck('nama');
+
+        return view('admin.users.create', compact('roles','mitra'));
     }
 
     public function store(StoreUserRequest $request)

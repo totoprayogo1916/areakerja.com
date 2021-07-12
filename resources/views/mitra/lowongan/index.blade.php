@@ -9,7 +9,7 @@
                 <div class="card">
                   <div class="card-header justify-content-between ">
                     <h4>Export Table</h4>
-                    <a href="{{ route('mitra.lowongan.create')}}" class="btn btn-warning"> Add </a>
+                    <a href="{{ route('mitra.lowongan.create')}}" class="btn btn-primary"><span class="fa fa-plus mr-2"></span>Tambah Lowongan </a>
                   </div>
                   <div class="card-body">
                     <div class="table-responsive">
@@ -19,21 +19,23 @@
                             <th class="text-center">
                                 #
                             </th>
-                            <th>Email</th>
-                            <th>Password</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
+                            <th>Posisi</th>
+                            <th>Status Kerja</th>
+                            <th>Lokasi Kantor</th>
+                            <th>Batas Pengiriman Lamaran</th>
+                            <th>Status Pemasangan</th>
+                            <th>Aksi</th>
                           </tr>
                         </thead>
                         <tbody>
                           @foreach($mitra as $min)
                           <tr>
                             <td>{{$min->id}}</td>
-                            <td>{{$min->email}}</td>
-                            <td>{{$min->password}}</td>
-                            <td>33</td>
-                            <td><div class="badge badge-success badge-shadow">Completed</div></td>
+                            <td>{{$min->posisi}}</td>
+                            <td>{{$min->status_pekerjaan}}</td>
+                            <td>{{$min->alamat_kantor}}</td>
+                            <td>{{$min->bataslamaran}}</td>
+                            <td><div class="badge badge-shadow {{ request()->is($min->status_pemasangan == "Terpasang") ? 'badge-success' : 'badge-warning' }}">{{$min->status_pemasangan}}</div></td>
                             <td>
                             <a href="#" class="btn btn-primary mr-1">Detail</a>
                             <a href="{{ route('mitra.lowongan.edit', $min->id) }}" class="btn btn-success">Edit</a>

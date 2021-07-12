@@ -46,12 +46,25 @@
                 </p>
             </div>
             <div class="form-group {{ $errors->has('roles') ? 'has-error' : '' }}">
-                <label for="roles">{{ trans('cruds.user.fields.roles') }}*
-                    <span class="btn btn-info btn-xs select-all">{{ trans('global.select_all') }}</span>
-                    <span class="btn btn-info btn-xs deselect-all">{{ trans('global.deselect_all') }}</span></label>
-                <select name="roles[]" id="roles" class="form-control select2" multiple="multiple" required>
-                    @foreach($roles as $id => $roles)
-                        <option value="{{ $id }}" {{ (in_array($id, old('roles', [])) || isset($user) && $user->roles->contains($id)) ? 'selected' : '' }}>{{ $roles }}</option>
+                <label for="roles">{{ trans('cruds.user.fields.roles') }}*</label>
+                <select name="roles" id="roles" class="form-control " onchange="mitra()">
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                </select>
+                @if($errors->has('roles'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('roles') }}
+                    </em>
+                @endif
+                <p class="helper-block">
+                    {{ trans('cruds.user.fields.roles_helper') }}
+                </p>
+            </div>
+            <div class="form-group" id="nama2">
+                <label for="roles">Nama Mitra</label>
+                <select name="nama" id="nama" class="form-control "  required>
+                    @foreach($mitra as $min)
+                        <option value="{{ $min }}" >{{ $min }}</option>
                     @endforeach
                 </select>
                 @if($errors->has('roles'))

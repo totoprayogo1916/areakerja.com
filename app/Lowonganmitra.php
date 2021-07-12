@@ -22,8 +22,7 @@ class Lowonganmitra extends Model
         'bataslamaran',
         'gaji',
         'email',
-        'notelp',
-        'web',
+        'status_pemasangan',
         'idUser'
     ];
 }

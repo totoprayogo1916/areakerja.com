@@ -14,8 +14,10 @@ class DaftarLowonganController extends Controller
 {
     public function index()
     {
+        $a = auth()->user()->id;
+        // dd($a);
         // $akunmitra = Mitra::where('id',$id)->first();
-        $mitra = Lowonganmitra::all();
+        $mitra = Lowonganmitra::where('idUser',$a)->get();
         return view('mitra.lowongan.index', compact('mitra'));
     }
 
@@ -47,8 +49,10 @@ class DaftarLowonganController extends Controller
             'bataslamaran'=> $request['bataslamaran'],
             'gaji'=> $request['gaji'],
             'email'=> $request['email'],
+            'status_pemasangan'=> "Belum Terpasang",
             'idUser'=> $a
         ]);
-        return view('mitra.home');
+        $mitra = Lowonganmitra::where('idUser',$a)->get();
+        return view('mitra.lowongan.index', compact('mitra'));
     }
 }

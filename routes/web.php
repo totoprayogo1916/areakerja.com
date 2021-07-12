@@ -165,4 +165,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::delete('article/destroy', 'ArticleController@massDestroy')->name('article.massDestroy');
     Route::resource('article', 'ArticleController');
+
+    Route::resource('lowonganmitra', 'LowonganMitraController');
+
 });

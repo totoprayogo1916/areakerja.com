@@ -86,6 +86,14 @@
                     Lowongan
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route("admin.lowonganmitra.index") }}" class="nav-link {{ request()->is('admin/lowonganmitra') || request()->is('admin/lowonganmitra/*') ? 'active' : '' }}">
+                    <i class="fa fa-address-book nav-icon">
+
+                    </i>
+                    Lowongan Mitra
+                </a>
+            </li>
 
             <li class="nav-item">
                 <a href="{{ route("admin.article.index") }}" class="nav-link {{ request()->is('admin/article') || request()->is('admin/article/*') ? 'active' : '' }}">
