@@ -41,7 +41,9 @@ class DaftarLowonganController extends Controller
 
     public function store(Request $request)
     {
-        $a = auth()->user()->id;
+        $user_id = auth()->user()->id;
+        $mitra   = Mitra::where('idUser', $user_id)->first();
+        $a       = auth()->user()->id;
         Lowonganmitra::create([
             'posisi'              => $request['posisi'],
             'status_pekerjaan'    => $request['status_pekerjaan'],
@@ -57,6 +59,6 @@ class DaftarLowonganController extends Controller
             'idUser'              => $a,
         ]);
 
-        return view('mitra.home');
+        return view('mitra.home', compact('mitra'));
     }
 }

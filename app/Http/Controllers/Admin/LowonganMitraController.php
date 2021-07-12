@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Lowonganmitra;
-use App\Mitra;
 use App\Category;
 use App\Company;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyJobRequest;
 use App\Http\Requests\StoreJobRequest;
 use App\Http\Requests\UpdateJobRequest;
 use App\Job;
 use App\Location;
+use App\Lowonganmitra;
+use App\Mitra;
 use App\User;
 use Gate;
 use Illuminate\Http\Request;
@@ -28,7 +28,7 @@ class LowonganMitraController extends Controller
     public function edit($id, Job $job)
     {
         $mitra = Lowonganmitra::where('id', $id)->first();
-        
+
         // $mitra1 = Lowonganmitra::all();
         // dd($mitra);
         $mitra1 = Mitra::where('idUser', $mitra->idUser)->first();
@@ -41,6 +41,6 @@ class LowonganMitraController extends Controller
 
         $job->load('company', 'location', 'categories');
 
-        return view('admin.lowonganmitra.create', compact('companies', 'locations', 'categories', 'job','mitra','mitra1'));
+        return view('admin.lowonganmitra.create', compact('companies', 'locations', 'categories', 'job', 'mitra', 'mitra1'));
     }
 }
