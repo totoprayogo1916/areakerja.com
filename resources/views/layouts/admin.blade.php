@@ -401,13 +401,13 @@
     </script>
 
     <script type="text/javascript">
-        
+
         var select = document.getElementById('roles');
         // var option = select.options[select.selectedIndex];
-        
+
         var text = document.getElementById("nama2");
         text.style.display = "none";
-        $('select').on('change', function() {
+        $('#roles').on('change', function() {
             if (this.value == "3") {
                 text.style.display = "block";
             } else {
@@ -424,9 +424,9 @@
         //     //     text.style.display = "none";
         //     // }
         // }
-        
+
         // mitra();
-        
+
 
     </script>
 

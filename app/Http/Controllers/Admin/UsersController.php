@@ -42,6 +42,14 @@ class UsersController extends Controller
             $mitra->idUser = $cek->id;
             $mitra->update();
 
+            Company::create([
+                'name'              => $request->name,
+                'deskripsi'    => $mitra->deskripsi,
+                'alamat'    => $mitra->alamat,
+                'gambar' => $mitra->logo,
+                'slug'       => $request->name,
+            ]);
+
             return redirect()->route('admin.users.index');
         } else {
             return redirect()->route('admin.users.index');

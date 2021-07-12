@@ -31,7 +31,7 @@ class MitraController extends Controller
 
         $gambar = time() . '.' . $request->gambar->extension();
         // dd($gambar);
-        $request->gambar->move(public_path('img/mitralogo'), $gambar);
+        $request->gambar->move(public_path('img/companylogo/'), $gambar);
         Mitra::create([
             'nama'      => $request->nama,
             'email'     => $request->email,

@@ -46,21 +46,6 @@ class DaftarLowonganController extends Controller
             'posisi'              => $request['posisi'],
             'status_pekerjaan'    => $request['status_pekerjaan'],
             'syarat_pekerjaan'    => $request->syarat_pekerjaan,
-<<<<<<< HEAD
-            'deskripsi_pekerjaan'    => $request->deskripsi_pekerjaan,
-            'alamat_kantor'=> $request['alamat_kantor'],
-            'min_pendidikan'=> $request['min_pendidikan'],
-            'gender'=> $request['gender'],
-            'min_umur'=> $request['min_umur'],
-            'bataslamaran'=> $request['bataslamaran'],
-            'gaji'=> $request['gaji'],
-            'email'=> $request['email'],
-            'status_pemasangan'=> "Belum Terpasang",
-            'idUser'=> $a
-        ]);
-        $mitra = Lowonganmitra::where('idUser',$a)->get();
-        return view('mitra.lowongan.index', compact('mitra'));
-=======
             'deskripsi_pekerjaan' => $request->deskripsi_pekerjaan,
             'alamat_kantor'       => $request['alamat_kantor'],
             'min_pendidikan'      => $request['min_pendidikan'],
@@ -73,6 +58,5 @@ class DaftarLowonganController extends Controller
         ]);
 
         return view('mitra.home');
->>>>>>> f6284a42a61ae8adbd04a0c939f9e4baeded4d9b
     }
 }
