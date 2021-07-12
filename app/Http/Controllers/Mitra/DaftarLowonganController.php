@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Mitra;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreMitraRequest;
+use App\Lowonganmitra;
 use App\Mitra;
 use App\User;
-use App\Lowonganmitra;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -14,33 +14,39 @@ class DaftarLowonganController extends Controller
 {
     public function index()
     {
-        $a = auth()->user()->id;
-        // dd($a);
+        $user_id = auth()->user()->id;
+        $mitra   = Mitra::where('idUser', $user_id)->first();
         // $akunmitra = Mitra::where('id',$id)->first();
-        $mitra = Lowonganmitra::where('idUser',$a)->get();
-        return view('mitra.lowongan.index', compact('mitra'));
+        $mitra1 = Lowonganmitra::all();
+
+        return view('mitra.lowongan.index', compact('mitra', 'mitra1'));
     }
 
     public function edit($id)
     {
-        $mitra = Mitra::where('id', $id)->first();
+        $user_id = auth()->user()->id;
+        $mitra   = Mitra::where('idUser', $user_id)->first();
+        $mitra1  = Mitra::where('id', $id)->first();
 
-        return view('mitra.lowongan.edit', compact('mitra'));
+        return view('mitra.lowongan.edit', compact('mitra', 'mitra1'));
     }
 
     public function create()
     {
-        
-        return view('mitra.lowongan.create');
+        $user_id = auth()->user()->id;
+        $mitra   = Mitra::where('idUser', $user_id)->first();
+
+        return view('mitra.lowongan.create', compact('mitra'));
     }
 
     public function store(Request $request)
     {
         $a = auth()->user()->id;
         Lowonganmitra::create([
-            'posisi'     => $request['posisi'],
+            'posisi'              => $request['posisi'],
             'status_pekerjaan'    => $request['status_pekerjaan'],
             'syarat_pekerjaan'    => $request->syarat_pekerjaan,
+<<<<<<< HEAD
             'deskripsi_pekerjaan'    => $request->deskripsi_pekerjaan,
             'alamat_kantor'=> $request['alamat_kantor'],
             'min_pendidikan'=> $request['min_pendidikan'],
@@ -54,5 +60,19 @@ class DaftarLowonganController extends Controller
         ]);
         $mitra = Lowonganmitra::where('idUser',$a)->get();
         return view('mitra.lowongan.index', compact('mitra'));
+=======
+            'deskripsi_pekerjaan' => $request->deskripsi_pekerjaan,
+            'alamat_kantor'       => $request['alamat_kantor'],
+            'min_pendidikan'      => $request['min_pendidikan'],
+            'gender'              => $request['gender'],
+            'min_umur'            => $request['min_umur'],
+            'bataslamaran'        => $request['bataslamaran'],
+            'gaji'                => $request['gaji'],
+            'email'               => $request['email'],
+            'idUser'              => $a,
+        ]);
+
+        return view('mitra.home');
+>>>>>>> f6284a42a61ae8adbd04a0c939f9e4baeded4d9b
     }
 }

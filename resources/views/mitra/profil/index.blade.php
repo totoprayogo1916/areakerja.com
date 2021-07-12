@@ -104,7 +104,7 @@
             <div class="card author-box">
             <div class="card-body">
                 <div class="author-box-center">
-                <img alt="image" src="#" class="rounded-circle author-box-picture">
+                <img alt="image" src="{{ url('img/mitralogo') }}/{{ $mitra->logo }}" class="rounded-circle author-box-picture">
                 <div class="clearfix"></div>
                 <div class="author-box-name">
                     <a><br>{{$mitra->nama}}</a>
@@ -142,7 +142,7 @@
                         Phone
                     </span>
                     <span class="float-right text-muted">
-                        +62 822-4486-8476
+                        {{ $mitra->no }}
                     </span>
                     </p>
                     <p class="clearfix">

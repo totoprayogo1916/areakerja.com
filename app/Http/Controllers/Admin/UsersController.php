@@ -38,7 +38,7 @@ class UsersController extends Controller
         if ($mitra != null) {
             $user = User::create($request->all());
             $user->roles()->sync($request->input('roles', []));
-            $cek = User::where('email', $request['email'])->first();
+            $cek           = User::where('email', $request['email'])->first();
             $mitra->idUser = $cek->id;
             $mitra->update();
 
