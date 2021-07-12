@@ -47,6 +47,14 @@
                 </li>
             @endcan
             <li class="nav-item">
+                <a href="{{ route("admin.mitra.index") }}" class="nav-link {{ request()->is('admin/mitra') || request()->is('admin/mitra/*') ? 'active' : '' }}">
+                    <i class="fa-fw fas fa-building nav-icon">
+
+                    </i>
+                    Mitra
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="{{ route("admin.companies.index") }}" class="nav-link {{ request()->is('admin/companies') || request()->is('admin/companies/*') ? 'active' : '' }}">
                     <i class="fa-fw fas fa-building nav-icon">
 

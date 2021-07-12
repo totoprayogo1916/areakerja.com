@@ -154,7 +154,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('companies/media', 'CompaniesController@storeMedia')->name('companies.storeMedia');
     Route::resource('companies', 'CompaniesController');
 
+    //Mitra
+    Route::delete('mitra/destroy', 'MitraController@massDestroy')->name('mitra.massDestroy');
+    Route::resource('mitra', 'MitraController');
 
+    //Lowongan
     Route::delete('lowongan/destroy', 'LowongannController@massDestroy')->name('lowongan.massDestroy');
     // Route::get('/pembayaran/{id}', 'LowongannController@pembayaran')->name('pembayaran');
     Route::resource('lowongan', 'LowongannController');
