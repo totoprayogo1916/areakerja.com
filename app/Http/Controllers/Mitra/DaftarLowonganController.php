@@ -33,7 +33,10 @@ class DaftarLowonganController extends Controller
 
     public function create()
     {
-        return view('mitra.lowongan.create');
+        $user_id = auth()->user()->id;
+        $mitra   = Mitra::where('idUser', $user_id)->first();
+
+        return view('mitra.lowongan.create', compact('mitra'));
     }
 
     public function store(Request $request)
