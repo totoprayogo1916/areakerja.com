@@ -24,9 +24,9 @@
             <div class="form-group {{ $errors->has('company_id') ? 'has-error' : '' }}">
                 <label for="company">Nama Perusahaan</label>
                 <select name="company_id" id="company" class="form-control select2" required>
-                    
+
                     <option value="{{ $mitra1->id }}" >{{ $mitra1->nama }}</option>
-                    
+
                 </select>
                 @if($errors->has('company_id'))
                     <em class="invalid-feedback">
@@ -77,6 +77,7 @@
 
             <div class="form-group {{ $errors->has('full_description') ? 'has-error' : '' }}">
                 <label for="full_description">Deskripsi Pekerjaan</label>
+                <div class="card-body">{{ $mitra->deskripsi_pekerjaan }}</div>
                 <div class="alert alert-danger print-error-msg" style="display:none">
                     <ul></ul>
                     </div>
@@ -98,6 +99,7 @@
             </div>
             <div class="form-group {{ $errors->has('requirements') ? 'has-error' : '' }}">
                 <label for="requirements">Syarat Pekerjaan</label>
+                <div class="card-body">{{ $mitra->syarat_pekerjaan }}</div>
                 <div class="alert alert-danger print-error-msg" style="display:none">
                     <ul></ul>
                     </div>
