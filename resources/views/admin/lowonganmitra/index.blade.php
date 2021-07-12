@@ -137,7 +137,7 @@
                                     <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}" style="width: 60px">
                                 </form>
 
-                                <a class="btn btn-xs btn-success" href="#" style="width: auto">
+                                <a class="btn btn-xs btn-success" href="{{ route('admin.lowonganmitra.edit', $min->id) }}" style="width: auto">
                                     Pasang Lowongan
                                 </a>
 

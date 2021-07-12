@@ -55,6 +55,7 @@ class CompaniesController extends Controller
 
     public function edit(Company $company)
     {
+        // dd($company);
         return view('admin.companies.edit', compact('company'));
     }
 

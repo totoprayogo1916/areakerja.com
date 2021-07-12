@@ -47,7 +47,7 @@
             </div>
             <div class="form-group {{ $errors->has('roles') ? 'has-error' : '' }}">
                 <label for="roles">{{ trans('cruds.user.fields.roles') }}*</label>
-                <select name="roles" id="roles" class="form-control " onchange="mitra()">
+                <select name="roles" id="roles" class="form-control " >
                     @foreach($roles as $id => $roles)
                         <option value="{{ $id }}" >{{ $roles }}</option>
                     @endforeach

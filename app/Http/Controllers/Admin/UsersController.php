@@ -35,6 +35,7 @@ class UsersController extends Controller
     public function store(StoreUserRequest $request)
     {
         $mitra = Mitra::where('email', $request['email'])->first();
+        // dd($mitra);
         if ($mitra != null) {
             $user = User::create($request->all());
             $user->roles()->sync($request->input('roles', []));
