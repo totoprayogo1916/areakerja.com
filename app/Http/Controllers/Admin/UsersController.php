@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Company;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyUserRequest;
 use App\Http\Requests\StoreUserRequest;
@@ -10,7 +11,6 @@ use App\Mitra;
 use App\Role;
 use App\User;
 use Gate;
-use App\Company;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -29,7 +29,7 @@ class UsersController extends Controller
 
         $mitra = Mitra::all()->pluck('nama');
 
-        return view('admin.users.create', compact('roles','mitra'));
+        return view('admin.users.create', compact('roles', 'mitra'));
     }
 
     public function store(StoreUserRequest $request)
@@ -43,11 +43,11 @@ class UsersController extends Controller
             $mitra->update();
 
             Company::create([
-                'name'              => $request->name,
-                'deskripsi'    => $mitra->deskripsi,
+                'name'      => $request->name,
+                'deskripsi' => $mitra->deskripsi,
                 'alamat'    => $mitra->alamat,
-                'gambar' => $mitra->logo,
-                'slug'       => $request->name,
+                'gambar'    => $mitra->logo,
+                'slug'      => $request->name,
             ]);
 
             return redirect()->route('admin.users.index');

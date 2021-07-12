@@ -23,6 +23,6 @@ class Lowonganmitra extends Model
         'gaji',
         'email',
         'status_pemasangan',
-        'idUser'
+        'idUser',
     ];
 }
