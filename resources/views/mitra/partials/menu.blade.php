@@ -31,6 +31,7 @@
 
         <li class="menu-header">Dashboard Client</li>
         <li class="dropdown"><a href="#" class="nav-link"><i data-feather="users"></i><span>User Account</span></a></li>
+        <li class="dropdown {{ request()->is('mitra/topup') || request()->is('mitra/topup/*') ? 'active' : '' }}"><a href="{{ route('mitra.topup.index') }}" class="nav-link"><i class="fas fa-coins" style="margin: 0px 10px 0px -4px;"></i><span>Top Up Coin</span></a></li>
         <li class="dropdown"><a href="#" class="nav-link"><i data-feather="circle"></i><span>Logo Perusahaan</span></a></li>
 
       </ul>
