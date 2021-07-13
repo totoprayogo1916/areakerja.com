@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Mitra;
 
+use App\Http\Controllers\Controller;
 use App\Lowonganmitra;
 use App\Mitra;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
@@ -18,14 +18,13 @@ class TopupController extends Controller
         return view('mitra.topop.index', compact('mitra'));
     }
 
-
     public function topup($id, $harga)
     {
-        $mitra1   = Mitra::where('idUser', $id)->first();
-        $number           = mt_rand(000, 999);
-        $total            = $harga+$number;
-        $tgl = Carbon::now();
-        $code = 'AK'.$tgl->year.$tgl->month.$tgl->day.$total;
+        $mitra1 = Mitra::where('idUser', $id)->first();
+        $number = mt_rand(000, 999);
+        $total  = $harga + $number;
+        $tgl    = Carbon::now();
+        $code   = 'AK' . $tgl->year . $tgl->month . $tgl->day . $total;
 
         $this->_generatePaymentToken($mitra1, $total, $code);
         $url = $mitra1->payment_url;
@@ -33,6 +32,7 @@ class TopupController extends Controller
 
         $user_id = auth()->user()->id;
         $mitra   = Mitra::where('idUser', $user_id)->first();
+
         return view('mitra.topop.bayar', compact('url', 'mitra'));
     }
 
