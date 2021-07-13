@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers\Mitra;
 
-use App\Lowonganmitra;
 use App\Mitra;
-use Illuminate\Http\Request;
 
 class AdminCompanyController
 {

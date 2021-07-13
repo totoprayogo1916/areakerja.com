@@ -9,11 +9,11 @@
                 <div class="overlay overlay-bg container" >
                     <h5 class="mt-3" style="color: #00000062; ">
                         Areakerja.com >
-                            <a style="color: #00000062; " href="{{ route('artikel') }}">Artikel</a>  
+                            <a style="color: #00000062; " href="{{ route('artikel') }}">Artikel</a>
                             > {{ $art->judul}}
-                    </h5>       
+                    </h5>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@
         </div>
 
         <div >
-            
+
             <div class="section-row">
                 {!! $art->content !!}
             </div>

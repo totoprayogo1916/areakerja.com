@@ -3,16 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Article;
-use App\Category;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdateArticleRequest;
-use App\Job;
-use App\Location;
-use App\Riwayat;
-use App\Wish;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use RealRashid\SweetAlert\Facades\Alert;
 
 class ArticleController extends Controller
 {
@@ -71,14 +65,13 @@ class ArticleController extends Controller
         // $namaFile = time().'.'.$request->gambar->extension();
         // $request->gambar->move(public_path('img/artikel'), $namaFile);
 
-
         // return redirect()->route('admin.article.index', compact('post'));
 
         // $article->update($request->all());
         // $post = Article::all();
         $article = Article::find($id);
 
-        if ($request->gambar != '') {
+        if ($request->gambar !== '') {
             $path     = public_path() . '/img/artikel';
             $namaFile = time() . '.' . $request->gambar->extension();
             $file     = $request->gambar;

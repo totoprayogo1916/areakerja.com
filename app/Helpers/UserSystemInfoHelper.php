@@ -1,9 +1,5 @@
 <?php
 
-/**
- *
- */
-
 namespace App\Helpers;
 
 class UserSystemInfoHelper
@@ -38,7 +34,7 @@ class UserSystemInfoHelper
     public static function get_os()
     {
         $user_agent  = self::get_user_agent();
-        $os_platform = "Unknown OS Platform";
+        $os_platform = 'Unknown OS Platform';
         $os_array    = [
             '/windows nt 10/i'      => 'Windows 10',
             '/windows nt 6.3/i'     => 'Windows 8.1',
@@ -78,7 +74,7 @@ class UserSystemInfoHelper
     {
         $user_agent = self::get_user_agent();
 
-        $browser = "Unknown Browser";
+        $browser = 'Unknown Browser';
 
         $browser_array = [
             '/msie/i'      => 'Internet Explorer',
@@ -134,7 +130,7 @@ class UserSystemInfoHelper
             'sie-', 'siem', 'smal', 'smar', 'sony', 'sph-', 'symb', 't-mo', 'teli', 'tim-', 'tosh', 'tsm-', 'upg1', 'upsi', 'vk-v', 'voda', 'wap-', 'wapa', 'wapi', 'wapp',
             'wapr', 'webc', 'winw', 'winw', 'xda', 'xda-', ];
 
-        if (in_array($mobile_ua, $mobile_agents)) {
+        if (in_array($mobile_ua, $mobile_agents, true)) {
             $mobile_browser++;
         }
 
@@ -155,13 +151,13 @@ class UserSystemInfoHelper
             //do something for tablet devices
 
             return 'Tablet';
-        } elseif ($mobile_browser > 0) {
+        }
+        if ($mobile_browser > 0) {
             //do something for mobile devices
 
             return 'Mobile';
-        } else {
-            //do something for everything else
-            return 'Computer';
         }
+        //do something for everything else
+        return 'Computer';
     }
 }

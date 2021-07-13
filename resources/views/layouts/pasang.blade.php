@@ -47,7 +47,7 @@
             display:inline-block;
             width:auto; height: auto; margin: 0 2px;
             padding:  10px 10px 8px 10px;
-            text-align: center; 
+            text-align: center;
             border-radius: 10px 10px 0 0 ;
             background: rgb(254,244, 227); cursor: pointer;
         }
@@ -82,17 +82,17 @@
     </style>
     </head>
     <body>
-        
+
         <wrapper class="d-flex flex-column">
             <nav>
                 @include('partials.header')
             </nav>
             <main class="flex-fill">
                 @yield('home')
-                
-                
+
+
                 <div class="container">
-                    
+
                     @yield('content')
                 </div>
                 @yield('awanatas')
@@ -100,11 +100,11 @@
                     @yield('slick')
                 </div>
                 @yield('awanbawah')
-                    
+
                     @yield('slick2')
 
-                    
-                
+
+
             </main>
             @include('user.footer')
         </wrapper>

@@ -5,7 +5,7 @@
     <div class="card-header">
         <div class="row align-items-center justify-content-between d-flex" style="margin-left: 2px; margin-right:2px">
             {{ trans('cruds.category.title_singular') }} {{ trans('global.list') }}
-            
+
         </div>
     </div>
 
@@ -32,7 +32,7 @@
                 <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
             </div>
 
-        
+
         </form>
 
     </div>

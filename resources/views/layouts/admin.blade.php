@@ -151,7 +151,7 @@
     <script src="{{ asset('js/app2admin.js') }}"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-          var postURL = "<?php echo url('addmore'); ?>";
+          var postURL = "<?= url('addmore'); ?>";
           var i=1;
 
           var i2=1;

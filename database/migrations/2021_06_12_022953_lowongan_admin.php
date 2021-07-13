@@ -18,7 +18,6 @@ class LowonganAdmin extends Migration
 
             $table->unsignedInteger('idPembayaran');
 
-
             $table->string('namaperusahaan');
 
             $table->string('deskripsiperusahaan');
@@ -67,6 +66,5 @@ class LowonganAdmin extends Migration
      */
     public function down()
     {
-        //
     }
 }

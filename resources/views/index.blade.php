@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 text-center "  >
-                    <div class="col-12 col-sm-3 form-cols" style="margin:auto; padding: 0;"> 
+                    <div class="col-12 col-sm-3 form-cols" style="margin:auto; padding: 0;">
                     <button type="submit" class="btn btn-area " style="margin: 10px 0; width: 100%;">
                     <span class="lnr lnr-magnifier"></span> Search
                     </button>

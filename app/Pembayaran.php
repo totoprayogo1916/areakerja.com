@@ -44,9 +44,7 @@ class Pembayaran extends Model
     public const EXPIRE     = 'expire';
     public const CANCEL     = 'cancel';
 
-
     public const PAYMENTCODE = 'PAY';
-
 
     public const CREATED   = 'created';
     public const CONFIRMED = 'confirmed';

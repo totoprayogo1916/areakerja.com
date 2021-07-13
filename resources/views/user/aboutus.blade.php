@@ -7,7 +7,7 @@
                 Areakerja.com > Tentang Kami
                 </h4>
         </div>
-    </div>   
+    </div>
 </section>
 @endsection
 @section('aboutus')
@@ -29,7 +29,7 @@
             </p>
         </div>
     </div>
-    
+
 </section>
 @endsection
 

@@ -6,9 +6,6 @@ use App\Company;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Requests\MassDestroyCompanyRequest;
-use App\Http\Requests\StoreCompanyRequest;
-use App\Http\Requests\UpdateCompanyRequest;
-use Gate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\Response;
@@ -73,11 +70,11 @@ class CompaniesController extends Controller
         // }
         $companies = Company::find($id);
 
-        if ($request->gambar != '') {
+        if ($request->gambar !== '') {
             $path = public_path() . '/img/companylogo/';
 
             //code for remove old file
-            if ($companies->gambar != '' && $companies->gambar != null) {
+            if ($companies->gambar !== '' && $companies->gambar !== null) {
                 $file_old = $path . $companies->gambar;
                 unlink($file_old);
             }

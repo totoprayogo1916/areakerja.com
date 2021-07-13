@@ -3,12 +3,9 @@
 namespace App\Http\Controllers\Mitra;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreMitraRequest;
 use App\Lowonganmitra;
 use App\Mitra;
-use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 
 class DaftarLowonganController extends Controller
 {

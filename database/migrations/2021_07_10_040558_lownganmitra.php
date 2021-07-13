@@ -61,6 +61,5 @@ class Lownganmitra extends Migration
      */
     public function down()
     {
-        //
     }
 }

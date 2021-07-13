@@ -3,9 +3,7 @@
 namespace App\Http\Controllers\Mitra;
 
 use App\Http\Controllers\Controller;
-use App\Lowonganmitra;
 use App\Mitra;
-use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
 class TopupController extends Controller
@@ -28,7 +26,6 @@ class TopupController extends Controller
 
         $this->_generatePaymentToken($mitra1, $total, $code);
         $url = $mitra1->payment_url;
-
 
         $user_id = auth()->user()->id;
         $mitra   = Mitra::where('idUser', $user_id)->first();
@@ -60,7 +57,6 @@ class TopupController extends Controller
                 'duration'   => \App\pembayaran::EXPIRY_DURATION,
             ],
         ];
-
 
         $snap = \Midtrans\Snap::createTransaction($params);
         // dd($snap);exit;

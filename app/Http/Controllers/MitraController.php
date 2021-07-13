@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Alert;
 use App\Mitra;
 use Illuminate\Http\Request;
 
@@ -25,9 +24,6 @@ class MitraController extends Controller
         // $code   = "" . $search->id . "";
         // $this->_generatePaymentToken($request, $total_pembayaran, $code);
         // dd($request->payment_url);
-
-
-
 
         $gambar = time() . '.' . $request->gambar->extension();
         // dd($gambar);

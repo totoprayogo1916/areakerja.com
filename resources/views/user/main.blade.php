@@ -25,11 +25,11 @@
         @include('partials.header')
         @yield('home')
         <section class="post-area section-gap">
-            
+
             <div class="container">
                 <div class="row justify-content-center d-flex "  >
                     @yield('aboutus')
-                    
+
                 </div>
             </div>
         </section>

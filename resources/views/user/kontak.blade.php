@@ -9,7 +9,7 @@
                 Areakerja.com > Kontak Kami
                 </h4>
         </div>
-    </div>   
+    </div>
 </section>
 @endsection
 @section('aboutus')
@@ -62,7 +62,7 @@
                     <button type="submit" class="btn btn-area text-left mb-3 mt-3">
                         <span ></span> Kirim
                     </button>
-                    
+
                 </div>
             </form>
 
