@@ -84,8 +84,8 @@ Route::group(['prefix' => 'mitra', 'as' => 'mitra.', 'namespace' => 'Mitra', 'mi
     Route::resource('lowongan', 'DaftarLowonganController');
 
     //============== Topup ======================
+    Route::get('/topup/{id}/{harga}', 'TopupController@topup')->name('mitra.topup');
     Route::resource('topup', 'TopupController');
-
     // Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
     // Route::resource('categories', 'CategoriesController');
     // // Permissions

@@ -6,7 +6,7 @@
           <div class="section-body">
             <div class="row">
               <div class="col-12 col-md-6 col-lg-3">
-                <a href="{{ route('mitra.lowongan.index') }}" style="color: #fe7b54">
+                <a href="{{ route('mitra.mitra.topup', [auth()->user()->id, 25000] ) }}" style="color: #fe7b54">
                 <div class="card card-primary">
                   <div class="card-header">
                     <i class="fas fa-coins" style="margin: 0px 10px 0px -4px;"></i>
