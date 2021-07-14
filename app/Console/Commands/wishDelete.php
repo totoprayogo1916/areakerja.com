@@ -39,6 +39,6 @@ class wishDelete extends Command
     public function handle()
     {
         DB::table('wish')->delete();
-        echo "Operation done";
+        echo 'Operation done';
     }
 }

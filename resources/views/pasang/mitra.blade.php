@@ -70,9 +70,11 @@
             </div>
 
             <div class="form-group" id="hpform" style="display:none">
-                <h4>No. Telp/Whatsapp</h4>
+                <h4>No. Telp/Whatsapp
+                    <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
+                </h4>
                 <div >
-                    <input id="notelp" name="notelp" type="text" value="" data-type="text" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;" >
+                    <input id="notelp" name="notelp" type="text" required="" value="" data-type="text" aria-required="true" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;" >
                 </div>
             </div>
             <div class="mt-2 mb-1">

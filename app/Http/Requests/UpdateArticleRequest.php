@@ -2,10 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\Article;
-use Gate;
 use Illuminate\Foundation\Http\FormRequest;
-use Symfony\Component\HttpFoundation\Response;
 
 class UpdateArticleRequest extends FormRequest
 {

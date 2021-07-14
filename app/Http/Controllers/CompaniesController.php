@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Company;
-use App\Http\Controllers\Controller;
 use App\Job;
 use App\Location;
 use App\Riwayat;

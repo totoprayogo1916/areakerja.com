@@ -6,7 +6,6 @@ use App\Job;
 use App\Riwayat;
 use App\Wish;
 use Carbon\Carbon;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -45,7 +44,7 @@ class CacheController extends Controller
         // alert()->warning($name,$title);
 
         echo Cache::get('title');
-        echo('<br>');
+        echo '<br>';
         echo Cache::get('name');
         // return redirect('pasang');
     }
@@ -74,16 +73,16 @@ class CacheController extends Controller
             $wish->delete();
 
             return back();
-        } else {
-            Wish::insert([
-                'ip'    => $ipaddress,
-                'idJob' => $id,
-
-            ]);
-            // return redirect()->back()->with('message','Lowongan Telah Disimpan');
-            // Alert::success('Lowongan Berhasil Disimpan');
-            return back();
         }
+        Wish::insert([
+            'ip'    => $ipaddress,
+            'idJob' => $id,
+
+        ]);
+        // return redirect()->back()->with('message','Lowongan Telah Disimpan');
+        // Alert::success('Lowongan Berhasil Disimpan');
+        return back();
+
         // echo ($ipaddress);
         // echo ('<br>');
         // echo ($id);
@@ -117,14 +116,13 @@ class CacheController extends Controller
         if (isset($riwayat)) {
             // return redirect()->route('jobs.show', ['job' => $idJob->id]);
             return redirect()->route('jobs.show', ['slug' => $slug]);
-        } else {
-            Riwayat::insert([
-                'ip'         => $ipaddress,
-                'idJob'      => $idJob->id,
-                'created_at' => Carbon::now(),
-            ]);
-
-            return redirect()->route('jobs.show', ['slug' => $slug]);
         }
+        Riwayat::insert([
+            'ip'         => $ipaddress,
+            'idJob'      => $idJob->id,
+            'created_at' => Carbon::now(),
+        ]);
+
+        return redirect()->route('jobs.show', ['slug' => $slug]);
     }
 }

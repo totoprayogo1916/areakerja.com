@@ -34,7 +34,7 @@
     <img src="{{ url('img/up.png') }}" onclick="topFunction()" id="myBtn" title="Go to top" class="myBtn"></img>
 
         {{-- @nclude('partials.banner') --}}
-        
+
           @yield('home')
 
           @yield('jobss')
@@ -52,7 +52,7 @@
                   </div>
               </div>
           </section>
-        
+
         @include('partials.footer')
         <div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -102,11 +102,11 @@
             </div>
         </div>
         </div>
-        
-        
 
-        
-        
+
+
+
+
         <script src="{{ asset('js/vendor/jquery-2.2.4.min.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>

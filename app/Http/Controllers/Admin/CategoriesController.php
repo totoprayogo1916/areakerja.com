@@ -11,7 +11,6 @@ use App\Http\Requests\UpdateCategoryRequest;
 use Gate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use RealRashid\SweetAlert\Facades\Alert as FacadesAlert;
 use Symfony\Component\HttpFoundation\Response;
 
 class CategoriesController extends Controller

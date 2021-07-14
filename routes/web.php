@@ -34,7 +34,6 @@ Route::post('/formpasang', 'LowonganController@formpasang')->name('formpasang');
 Route::post('/pembayaran/{id}', 'LowonganController@pembayaran')->name('pembayaran');
 // Route::get('/backkontak', 'HomeController@backkontak')->name('backkontak');
 
-
 Route::post('payments/notification', 'PaymentController@notification');
 Route::get('payments/completed', 'PaymentController@completed');
 Route::get('payments/failed', 'PaymentController@failed');
@@ -44,10 +43,6 @@ Route::get('payments/unfinish', 'PaymentController@unfinish');
 Route::get('/mitra/login', 'AdminCompanyController@login')->name('mitra.login');
 
 Route::post('/formMitra', 'MitraController@index')->name('formMitra');
-
-
-
-
 
 Route::get('search', 'HomeController@search')->name('search');
 Route::resource('jobs', 'JobController')->only(['index']);
@@ -84,6 +79,7 @@ Route::group(['prefix' => 'mitra', 'as' => 'mitra.', 'namespace' => 'Mitra', 'mi
     Route::resource('lowongan', 'DaftarLowonganController');
 
     //============== Topup ======================
+    Route::get('/topup/{id}/{harga}', 'TopupController@topup')->name('mitra.topup');
     Route::resource('topup', 'TopupController');
 
     Route::resource('kandidat', 'KandidatController');
@@ -117,7 +113,6 @@ Route::group(['prefix' => 'mitra', 'as' => 'mitra.', 'namespace' => 'Mitra', 'mi
     // Route::post('companies/media', 'CompaniesController@storeMedia')->name('companies.storeMedia');
     // Route::resource('companies', 'CompaniesController');
 
-
     // Route::delete('lowongan/destroy', 'LowongannController@massDestroy')->name('lowongan.massDestroy');
     // // Route::get('/pembayaran/{id}', 'LowongannController@pembayaran')->name('pembayaran');
     // Route::resource('lowongan', 'LowongannController');
@@ -129,7 +124,6 @@ Route::group(['prefix' => 'mitra', 'as' => 'mitra.', 'namespace' => 'Mitra', 'mi
     // Route::delete('article/destroy', 'ArticleController@massDestroy')->name('article.massDestroy');
     // Route::resource('article', 'ArticleController');
 });
-
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], static function () {
     Route::get('/', 'HomeController@index')->name('home');

@@ -2,21 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Category;
-use App\Company;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\MassDestroyJobRequest;
 use App\Http\Requests\MassDestroyPriceRequest;
-use App\Http\Requests\StoreJobRequest;
 use App\Http\Requests\StorePriceRequest;
-use App\Http\Requests\UpdateJobRequest;
 use App\Http\Requests\UpdatePriceRequest;
 use App\Job;
-use App\Location;
 use App\Price;
-use Gate;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\Response;
 
 class PriceController extends Controller

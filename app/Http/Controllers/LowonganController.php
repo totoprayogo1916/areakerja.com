@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
 use App\Job;
-use App\Location;
 use App\Lowongan;
 use App\Pembayaran;
 use App\Price;
@@ -30,18 +28,15 @@ class LowonganController extends Controller
             'status' => 'NDANGDIBAYAR',
         ]);
         $search = Pembayaran::where('harga', $total_pembayaran)->first();
-        $code   = "" . $search->id . "";
+        $code   = '' . $search->id . '';
         $this->_generatePaymentToken($request, $total_pembayaran, $code);
         // dd($request->payment_url);
-
-
-
 
         $gambar = time() . '.' . $request->gambar->extension();
         // dd("".$search->id."");
         $request->gambar->move(public_path('storage/tmpcompanylogo'), $gambar);
         Lowongan::create([
-            'idPembayaran'        => "" . $search->id . "",
+            'idPembayaran'        => '' . $search->id . '',
             'namaperusahaan'      => $request->namaperusahaan,
             'deskripsiperusahaan' => $request->deskripsiperusahaan,
             'alamatperusahaan'    => $request->alamatperusahaan,
@@ -127,7 +122,6 @@ class LowonganController extends Controller
                 'duration'   => \App\pembayaran::EXPIRY_DURATION,
             ],
         ];
-
 
         $snap = \Midtrans\Snap::createTransaction($params);
         // dd($snap);exit;

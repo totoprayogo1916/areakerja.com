@@ -13,9 +13,9 @@ class PermissionRoleTableSeeder extends Seeder
             ->permissions()
             ->sync($admin_permissions->pluck('id'));
         $user_permissions = $admin_permissions->filter(static function ($permission) {
-            return substr($permission->title, 0, 5) != 'user_' &&
-                substr($permission->title, 0, 5) != 'role_' &&
-                substr($permission->title, 0, 11) != 'permission_';
+            return substr($permission->title, 0, 5) !== 'user_'
+                && substr($permission->title, 0, 5) !== 'role_'
+                && substr($permission->title, 0, 11) !== 'permission_';
         });
         Role::findOrFail(2)
             ->permissions()

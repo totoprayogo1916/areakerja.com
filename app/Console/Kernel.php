@@ -2,13 +2,11 @@
 
 namespace App\Console;
 
-use App\Console\Commands\wishDelete;
 use App\Job;
 use App\Riwayat;
 use Carbon\Carbon;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-use Illuminate\Support\Facades\DB;
 
 class Kernel extends ConsoleKernel
 {

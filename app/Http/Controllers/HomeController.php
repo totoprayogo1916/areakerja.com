@@ -52,7 +52,6 @@ class HomeController extends Controller
             ->orderBy('id', 'desc')
             ->get();
 
-
         $title = 'Lowongan Kerja di Yogyakarta';
 
         return view('index', compact(['title', 'riwayatlist', 'wishlist', 'ipaddress', 'searchLocations', 'searchCategories', 'searchByCategory', 'jobs', 'sidbarJobs', 'wishh']));
@@ -131,11 +130,11 @@ class HomeController extends Controller
         $nomor  = $request->nomor;
         $email1 = $request->email;
         $saran  = $request->saran;
-        $email  = "ti.fadelirsyad04@gmail.com";
+        $email  = 'ti.fadelirsyad04@gmail.com';
         $kirim  = Mail::to($email)->send(new SendMail($nama, $nomor, $email1, $saran));
 
         if ($kirim) {
-            echo "Email telah dikirim";
+            echo 'Email telah dikirim';
         }
 
         $title = 'AreaKerja.com';
@@ -151,11 +150,11 @@ class HomeController extends Controller
         // $nomor = $request->nomor;
         // $email1 = $request->email;
         // $saran = $request->saran;
-        $email = "ti.fadelirsyad04@gmail.com";
+        $email = 'ti.fadelirsyad04@gmail.com';
         $kirim = Mail::to($email)->send(new SendMail2($umur));
 
         if ($kirim) {
-            echo "Email telah dikirim";
+            echo 'Email telah dikirim';
         }
 
         return view('user.kontak');
@@ -189,7 +188,6 @@ class HomeController extends Controller
     //     echo getMAcAddressExec();
     //         return substr(exec('getmac'), 0, 17);
     // }
-
 
     // function getMAcAddressShellExec()
     // {

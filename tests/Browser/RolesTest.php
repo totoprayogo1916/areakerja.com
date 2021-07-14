@@ -2,11 +2,13 @@
 
 namespace Tests\Browser;
 
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
-class RolesTest extends DuskTestCase
+/**
+ * @internal
+ */
+final class RolesTest extends DuskTestCase
 {
     public function testIndex()
     {

@@ -2,10 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\Mitra;
-use Gate;
 use Illuminate\Foundation\Http\FormRequest;
-use Symfony\Component\HttpFoundation\Response;
 
 class MassDestroyMitraRequest extends FormRequest
 {

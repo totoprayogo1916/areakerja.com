@@ -31,6 +31,5 @@ class ArtikelField extends Migration
      */
     public function down()
     {
-        //
     }
 }

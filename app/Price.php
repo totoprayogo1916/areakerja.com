@@ -17,7 +17,6 @@ class Price extends Model
         'deleted_at',
     ];
 
-
     public $casts = [
         'list' => 'array',
     ];

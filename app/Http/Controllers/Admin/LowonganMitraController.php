@@ -5,17 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Category;
 use App\Company;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\MassDestroyJobRequest;
-use App\Http\Requests\StoreJobRequest;
-use App\Http\Requests\UpdateJobRequest;
 use App\Job;
 use App\Location;
-use App\Lowongan;
 use App\Lowonganmitra;
 use App\Mitra;
-use App\User;
-use Gate;
-use Illuminate\Http\Request;
 
 class LowonganMitraController extends Controller
 {

@@ -10,7 +10,6 @@ use App\Http\Requests\UpdateUserRequest;
 use App\Mitra;
 use App\Role;
 use App\User;
-use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -36,7 +35,7 @@ class UsersController extends Controller
     {
         $mitra = Mitra::where('email', $request['email'])->first();
         // dd($mitra);
-        if ($mitra != null) {
+        if ($mitra !== null) {
             $user = User::create($request->all());
             $user->roles()->sync($request->input('roles', []));
             $cek           = User::where('email', $request['email'])->first();
@@ -52,9 +51,9 @@ class UsersController extends Controller
             ]);
 
             return redirect()->route('admin.users.index');
-        } else {
-            return redirect()->route('admin.users.index');
         }
+
+        return redirect()->route('admin.users.index');
     }
 
     public function edit(User $user)
