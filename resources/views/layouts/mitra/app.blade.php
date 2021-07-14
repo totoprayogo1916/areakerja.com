@@ -96,7 +96,7 @@
                     @include('mitra.partials.menu')
                     <!-- Main Content -->
                     @yield('content')
-                    
+
                     <!-- footer -->
                     @include('layouts.mitra.footer')
 

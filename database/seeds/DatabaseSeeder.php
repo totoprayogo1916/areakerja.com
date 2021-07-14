@@ -1,7 +1,10 @@
 <?php
 
+use Database\Seeders\OrganisasiSeeder;
+use Database\Seeders\KandidatSeeder;
 use Database\Seeders\ArticleSeeder;
 use Database\Seeders\PriceSeeder;
+use Database\Seeders\MitraSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,6 +23,9 @@ class DatabaseSeeder extends Seeder
             CompaniesTableSeeder::class,
             JobsTableSeeder::class,
             PriceSeeder::class,
+            MitraSeeder::class,
+            KandidatSeeder::class,
+            OrganisasiSeeder::class,
         ]);
     }
 }

@@ -5,17 +5,17 @@
     <section class="section">
       <div class="section-body">
         <div class="row">
-          <div class="col-2">
+          {{-- <div class="col-3 pr-4">
             <div class="card">
               <div class="body">
                 <div class="cari p-2 mt-2 mx-2 text-left border-bottom">
                   <h6>Cari Berdasarkan :</h6>
                   <ul class="p-0 m-0" style="list-style-type: none">
                     <li>
-                      <input type="radio" class="mr-2">Pengalaman 
+                      <input type="radio" class="mr-2">Pengalaman
                     </li>
                     <li>
-                      <input type="radio" class="mr-2">Rating 
+                      <input type="radio" class="mr-2">Rating
                     </li>
                   </ul>
                 </div>
@@ -23,10 +23,10 @@
                   <h6>Urut Berdasarkan :</h6>
                   <ul class="p-0 m-0" style="list-style-type: none">
                     <li>
-                      <input type="radio" class="mr-2">Pengalaman 
+                      <input type="radio" class="mr-2">Pengalaman
                     </li>
                     <li>
-                      <input type="radio" class="mr-2">Rating 
+                      <input type="radio" class="mr-2">Rating
                     </li>
                   </ul>
                 </div>
@@ -35,15 +35,15 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-6 col-lg-10">
+          </div> --}}
+          <div class="col-12">
             <div class="card">
               <div class="body container">
                 <div class="cari p-2 mt-2 mx-3 border-bottom">
                     <h5>Daftar Kandidat</h5>
-                </div>          
+                </div>
                 <div class="row mt-3 px-3">
-                  
+
                   <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                     <div class="card" style="overflow: hidden">
                       <div class="body">
@@ -56,12 +56,12 @@
                           </h6>
                           <span>Frontend Developer at Mamikos.com</span>
                         </div>
-                        <div class="nama text-center mt-4">
+                        <div class="nama text-center">
                           <h6>
                           </h6>
                           <span>6 Tahun Pengalaman</span>
                         </div>
-                        
+
                         <div class="container text-center my-3">
                           <a href="{{ route('mitra.kandidat.show', "krisna-sandi-saputra") }}" class="btn btn-primary">Read More</a>
                         </div>
@@ -80,12 +80,12 @@
                           </h6>
                           <span>Frontend Developer at Mamikos.com</span>
                         </div>
-                        <div class="nama text-center mt-4">
+                        <div class="nama text-center">
                           <h6>
                           </h6>
                           <span>6 Tahun Pengalaman</span>
                         </div>
-                        
+
                         <div class="container text-center my-3">
                           <a href="#" class="btn btn-primary">Read More</a>
                         </div>
@@ -104,12 +104,12 @@
                           </h6>
                           <span>Frontend Developer at Mamikos.com</span>
                         </div>
-                        <div class="nama text-center mt-4">
+                        <div class="nama text-center">
                           <h6>
                           </h6>
                           <span>6 Tahun Pengalaman</span>
                         </div>
-                        
+
                         <div class="container text-center my-3">
                           <a href="#" class="btn btn-primary">Read More</a>
                         </div>
@@ -128,12 +128,12 @@
                           </h6>
                           <span>Frontend Developer at Mamikos.com</span>
                         </div>
-                        <div class="nama text-center mt-4">
+                        <div class="nama text-center">
                           <h6>
                           </h6>
                           <span>6 Tahun Pengalaman</span>
                         </div>
-                        
+
                         <div class="container text-center my-3">
                           <a href="#" class="btn btn-primary">Read More</a>
                         </div>
@@ -152,25 +152,25 @@
                           </h6>
                           <span>Frontend Developer at Mamikos.com</span>
                         </div>
-                        <div class="nama text-center mt-4">
+                        <div class="nama text-center">
                           <h6>
                           </h6>
                           <span>6 Tahun Pengalaman</span>
                         </div>
-                        
+
                         <div class="container text-center my-3">
                           <a href="#" class="btn btn-primary">Read More</a>
                         </div>
                       </div>
                     </div>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
           </div>
-          
-        </div>          
+
+        </div>
     </div>
         </section>
         <div class="settingSidebar">

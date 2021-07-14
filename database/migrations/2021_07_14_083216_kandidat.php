@@ -21,16 +21,8 @@ class Kandidat extends Migration
             $table->string('skillUtama')->nullable();
 
             $table->string('domisili')->nullable();
+            $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        //
-    }
 }

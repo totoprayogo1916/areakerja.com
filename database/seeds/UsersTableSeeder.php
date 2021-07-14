@@ -22,6 +22,14 @@ class UsersTableSeeder extends Seeder
                 'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
                 'remember_token' => null,
             ],
+
+            [
+                'id'             => 3,
+                'name'           => 'Mitra',
+                'email'          => 'fadelirsyad04@gmail.com',
+                'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
+                'remember_token' => null,
+            ],
         ];
 
         User::insert($users);

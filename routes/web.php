@@ -174,6 +174,4 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('article', 'ArticleController');
 
     Route::resource('lowonganmitra', 'LowonganMitraController');
-
-    
 });
