@@ -86,6 +86,7 @@ Route::group(['prefix' => 'mitra', 'as' => 'mitra.', 'namespace' => 'Mitra', 'mi
     //============== Topup ======================
     Route::resource('topup', 'TopupController');
 
+    Route::resource('kandidat', 'KandidatController');
     // Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
     // Route::resource('categories', 'CategoriesController');
     // // Permissions
@@ -179,4 +180,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('article', 'ArticleController');
 
     Route::resource('lowonganmitra', 'LowonganMitraController');
+
+    
 });

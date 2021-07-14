@@ -15,7 +15,8 @@
   <!-- Custom style CSS -->
   <link rel="stylesheet" href="{{url('otika/assets/css/custom.css')}}">
   <link rel="shortcut icon" href="{{ asset('img/img-01.png') }}">
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="{{url('otika/assets/bundles/select2/dist/css/select2.min.css')}}">
   <link rel="stylesheet" href="{{url('otika/assets/bundles/datatables/datatables.min.css')}}">
   <link rel="stylesheet" href="{{url('otika/assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css')}}">
@@ -46,6 +47,37 @@
         outline:0;}
     .form-control3::-webkit-input-placeholder{
         color:#6c757d;opacity:1}
+    .rating {
+        display: flex;
+        flex-direction: row-reverse ;
+        justify-content: left
+    }
+
+    .rating>input {
+        display: none
+    }
+
+    .rating>label {
+        position: relative;
+        width: 1em;
+        font-size: 2.2rem;
+        color: #FFD600;
+        cursor: pointer
+    }
+
+    .rating>label::before {
+        content: "\2605";
+        position: absolute;
+        opacity: 0
+    }
+
+    .rating>input:checked~label:before {
+        opacity: 1
+    }
+
+    .rating:hover>input:checked~label:before {
+        opacity: 0.4
+    }
   </style>
   @section('css')
   @show
@@ -64,6 +96,7 @@
                     @include('mitra.partials.menu')
                     <!-- Main Content -->
                     @yield('content')
+                    
                     <!-- footer -->
                     @include('layouts.mitra.footer')
 
