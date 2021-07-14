@@ -4,12 +4,14 @@
 <div class="main-content">
         <section class="section">
           <div class="section-body">
+            <a href="#" class="btn btn-icon icon-left btn-warning" style="margin-bottom: 20px">SALDO : 1000 AKC<i class="fas fa-coins"></i></a>
             <div class="row">
             <div class="col-12">
             <div class="card">
                 <div class="card-header justify-content-between ">
                     <h4>Top Up</h4>
-                    <a href="#" class="btn btn-icon icon-left btn-info"><i class="fas fa-info-circle"></i> Info AKC</a>
+                    <a href="#" class="btn btn-icon icon-left btn-info"  data-toggle="modal"
+                    data-target=".bd-example-modal-lg"><i class="fas fa-info-circle"> </i> Info AKC</a>
                   </div>
                 <div class="row mt-3 px-3">
 
@@ -122,5 +124,22 @@
 
           </div>
         </section>
+        <!-- Large modal -->
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="myLargeModalLabel">Area Kerja Coin</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Area Kerja Coin adalah Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, aspernatur modi ipsam omnis quasi voluptatibus ratione eius repellendus fugiat eos eum obcaecati. Ullam reprehenderit, reiciendis voluptas ducimus obcaecati beatae quam!
+              </div>
+            </div>
+          </div>
+        </div>
 </div>
   @endsection
