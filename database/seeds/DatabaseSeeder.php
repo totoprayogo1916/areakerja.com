@@ -1,10 +1,10 @@
 <?php
 
-use Database\Seeders\OrganisasiSeeder;
-use Database\Seeders\KandidatSeeder;
 use Database\Seeders\ArticleSeeder;
-use Database\Seeders\PriceSeeder;
+use Database\Seeders\KandidatSeeder;
 use Database\Seeders\MitraSeeder;
+use Database\Seeders\OrganisasiSeeder;
+use Database\Seeders\PriceSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder

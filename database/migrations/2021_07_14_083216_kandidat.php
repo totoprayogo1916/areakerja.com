@@ -21,8 +21,9 @@ class Kandidat extends Migration
             $table->string('skillUtama')->nullable();
 
             $table->string('domisili')->nullable();
+
+            $table->string('slug')->nullable();
             $table->timestamps();
         });
     }
-
 }

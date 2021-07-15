@@ -20,11 +20,11 @@
 
         </ul>
         </li>
-        <li class="dropdown {{ request()->is('mitra/lowongan') || request()->is('mitra/lowongan/*') ? 'active' : '' }}">
+        <li class="dropdown {{ request()->is('mitra/lowongan') || request()->is('mitra/lowongan/*') ? 'active' : '' }} {{ request()->is('mitra/kandidat') || request()->is('mitra/kandidat/*') ? 'active' : '' }}">
             <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="shopping-cart"></i><span>Lowongan</span></a>
             <ul class="dropdown-menu">
-              <li class="{{ request()->is('mitra/kandidat') || request()->is('mitra/kandidat/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('mitra.lowongan.index') }}"><i data-feather="file"></i><span>Daftar Lowongan</span></a></li>
-              <li><a class="nav-link" href="{{ route('mitra.kandidat.index') }}"><i data-feather="grid"></i><span>Daftar Kandidat</span></a></li>
+              <li class="{{ request()->is('mitra/lowongan') || request()->is('mitra/lowongan/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('mitra.lowongan.index') }}"><i data-feather="file"></i><span>Daftar Lowongan</span></a></li>
+              <li class="{{ request()->is('mitra/kandidat') || request()->is('mitra/kandidat/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('mitra.kandidat.index') }}"><i data-feather="grid"></i><span>Daftar Kandidat</span></a></li>
             </ul>
         </li>
           <li><a class="nav-link" href="#"><i data-feather="mail"></i><span>Inbox</span></a></li>
