@@ -29,13 +29,8 @@ class DatabaseSeeder extends Seeder
             KandidatSeeder::class,
             OrganisasiSeeder::class,
             PengalamanSeeder::class,
-<<<<<<< HEAD
             RiwayatPendidikanSeeder::class,
             SertifikasiSeeder::class,
-=======
-            SkillSeeder::class,
-            MitraSeeder::class,
->>>>>>> 05f3b9a0fc2f0a7681ebc99e43fa754285991be1
         ]);
     }
 }

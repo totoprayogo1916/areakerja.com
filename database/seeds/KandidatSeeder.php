@@ -16,6 +16,7 @@ class KandidatSeeder extends Seeder
             'username'   => 'Rere Anggraini',
             'skillUtama' => 'Front-End Developer',
             'domisili'   => 'Yogyakarta',
+            'biografi'   => 'Hai nama saya Rere Anggraini, saya berasal dari Yogyakarta',
             'slug'       => 'Rere-Anggraini',
         ]);
         $kandidat->save();
@@ -24,6 +25,7 @@ class KandidatSeeder extends Seeder
             'username'   => 'Putra Arjuna',
             'skillUtama' => 'Back-End Developer',
             'domisili'   => 'Bandung',
+            'biografi'   => 'Hai nama saya Putra Arjuna, saya berasal dari Bandung',
             'slug'       => 'Putra-Arjuna',
 
         ]);
@@ -33,6 +35,7 @@ class KandidatSeeder extends Seeder
             'username'   => 'Ervalina Arisanto',
             'skillUtama' => 'Full Stack Developer',
             'domisili'   => 'Surabaya',
+            'biografi'   => 'Hai nama saya Ervalina Arisanto, saya berasal dari Surabaya',
             'slug'       => 'Ervalina-Arisanto',
         ]);
         $kandidat->save();
@@ -41,6 +44,7 @@ class KandidatSeeder extends Seeder
             'username'   => 'Rivan Sanjaya Arisanto',
             'skillUtama' => 'Android Developer',
             'domisili'   => 'Semarang',
+            'biografi'   => 'Hai nama saya Rivan Sanjaya Arisanto, saya berasal dari Semarang',
             'slug'       => 'Rivan-Sanjaya-Arisanto',
         ]);
         $kandidat->save();
