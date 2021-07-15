@@ -11,6 +11,5 @@ class skill extends Seeder
      */
     public function run()
     {
-
     }
 }

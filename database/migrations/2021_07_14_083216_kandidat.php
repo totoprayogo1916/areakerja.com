@@ -22,6 +22,8 @@ class Kandidat extends Migration
 
             $table->string('domisili')->nullable();
 
+            $table->string('biografi')->nullable();
+
             $table->string('slug')->nullable();
             $table->timestamps();
         });

@@ -13,6 +13,5 @@ class SkillSeeder extends Seeder
      */
     public function run()
     {
-
     }
 }
