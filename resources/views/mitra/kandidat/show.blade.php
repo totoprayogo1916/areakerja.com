@@ -156,35 +156,33 @@
               <h4 style="color: #000">Skill</h4>
 
             </div>
-            <div class="isi-biografi">
-              <div class="container">
-                <div class="scroll">
-                  <div class="d-flex border-bottom flex-center" >
-                    <img class="border border-white border-5 my-1" style="height: 65px;width: 65px;border-width: 4px!important; " src="https://asset.kompas.com/crops/DAT0bF9Dp21QqlgqXD-UcsBpxY4=/20x0:992x648/750x500/data/photo/2018/01/14/2342554562.jpg" alt="">
-                    <div class="d-flex mx-2 flex-column">
-                      <h6 class="mt-2 my-0" style="color: #000">Diponegoro University</h6>
-                      <span class="font-weight-normal my-0" style="color: #000">Bachelor's Degree, Information Technology</span>
-                      <span class="font-weight-normal " style="color: #000">2016-2020</span>
-                    </div>
-                  </div>
-                  <div class="d-flex border-bottom flex-center">
-                    <img class="border border-white border-5 my-1" style="height: 65px;width: 65px;border-width: 4px!important; " src="https://asset.kompas.com/crops/DAT0bF9Dp21QqlgqXD-UcsBpxY4=/20x0:992x648/750x500/data/photo/2018/01/14/2342554562.jpg" alt="">
-                    <div class="d-flex mx-2 flex-column my-auto">
-                      <h6 class="my-0" style="color: #000">SMA Negeri 2 Madiun</h6>
-                      <span class="font-weight-normal my-0" style="color: #000"> </span>
-                      <span class="font-weight-normal " style="color: #000">2016-2020</span>
-                    </div>
-                  </div>
-                  <div class="d-flex border-bottom flex-center">
-                    <img class="border border-white border-5 my-1" style="height: 65px;width: 65px;border-width: 4px!important; " src="https://asset.kompas.com/crops/DAT0bF9Dp21QqlgqXD-UcsBpxY4=/20x0:992x648/750x500/data/photo/2018/01/14/2342554562.jpg" alt="">
-                    <div class="d-flex mx-2 flex-column my-auto">
-                      <h6 class="my-0" style="color: #000">SMP Negeri 4 Madiun</h6>
-                      <span class="font-weight-normal my-0" style="color: #000"> </span>
-                      <span class="font-weight-normal " style="color: #000">2013-2016</span>
-                    </div>
-                  </div>
+            <div class="isi-biografi mt-2">
+              <div class="container my-1">
+                <h6 class="mb-1">Coding</h6>
+                <div class="progress" data-height="25">
+                  <div class="progress-bar" role="progressbar" data-width="40%" aria-valuenow="40"
+                    aria-valuemin="0" aria-valuemax="40">40%</div>
                 </div>
+                <hr class="mt-2">
               </div>
+              <div class="container my-1">
+                <h6 class="mb-1">Editing</h6>
+                <div class="progress " data-height="25">
+                  <div class="progress-bar" role="progressbar" data-width="50%" aria-valuenow="50"
+                    aria-valuemin="0" aria-valuemax="50">50%</div>
+                </div>
+                <hr class="mt-2">
+              </div>
+              <div class="container my-1">
+                <h6 class="mb-1">Office</h6>
+                <div class="progress" data-height="25">
+                  <div class="progress-bar" role="progressbar" data-width="100%" aria-valuenow="100"
+                    aria-valuemin="0" aria-valuemax="100">100%</div>
+                </div>
+                <hr class="mt-2">
+              </div>
+
+              
             </div>
 
         </div>
