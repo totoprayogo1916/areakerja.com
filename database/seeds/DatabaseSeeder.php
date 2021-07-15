@@ -5,6 +5,8 @@ use Database\Seeders\KandidatSeeder;
 use Database\Seeders\MitraSeeder;
 use Database\Seeders\OrganisasiSeeder;
 use Database\Seeders\PengalamanSeeder;
+use Database\Seeders\SertifikasiSeeder;
+use Database\Seeders\RiwayatPendidikanSeeder;
 use Database\Seeders\PriceSeeder;
 use Illuminate\Database\Seeder;
 
@@ -28,6 +30,8 @@ class DatabaseSeeder extends Seeder
             KandidatSeeder::class,
             OrganisasiSeeder::class,
             PengalamanSeeder::class,
+            RiwayatPendidikanSeeder::class,
+            SertifikasiSeeder::class,
         ]);
     }
 }
