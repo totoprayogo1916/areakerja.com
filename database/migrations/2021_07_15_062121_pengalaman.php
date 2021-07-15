@@ -24,7 +24,7 @@ class Pengalaman extends Migration
 
             $table->unsignedInteger('idKandidat')->nullable();
 
-            $table->foreign('idKandidat', 'kandidat_id_fk_20210714')->references('id')->on('kandidat')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('idKandidat', 'kandidat_id_fk_20210715')->references('id')->on('kandidat')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -36,6 +36,5 @@ class Pengalaman extends Migration
      */
     public function down()
     {
-
     }
 }

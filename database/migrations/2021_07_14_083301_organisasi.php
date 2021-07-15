@@ -36,6 +36,5 @@ class Organisasi extends Migration
      */
     public function down()
     {
-
     }
 }

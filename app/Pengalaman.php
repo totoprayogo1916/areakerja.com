@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Pengalaman extends Model
 {
     use HasFactory;
-    
+
     public $table = 'pengalaman';
 
     protected $dates = [

@@ -4,6 +4,7 @@ use Database\Seeders\ArticleSeeder;
 use Database\Seeders\KandidatSeeder;
 use Database\Seeders\MitraSeeder;
 use Database\Seeders\OrganisasiSeeder;
+use Database\Seeders\PengalamanSeeder;
 use Database\Seeders\PriceSeeder;
 use Illuminate\Database\Seeder;
 
@@ -26,6 +27,7 @@ class DatabaseSeeder extends Seeder
             MitraSeeder::class,
             KandidatSeeder::class,
             OrganisasiSeeder::class,
+            PengalamanSeeder::class,
         ]);
     }
 }
