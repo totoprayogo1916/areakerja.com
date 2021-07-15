@@ -44,7 +44,8 @@
                 </div>
                 <div class="row mt-3 px-3">
 
-                  <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            @foreach ($kandidat as $kan )
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                     <div class="card" style="overflow: hidden">
                       <div class="body">
                         <div class="img text-center" style="height: 80%;background-image: url('http://i.imgur.com/9HMnxKs.png');background-repeat: no-repeat;background-size: 100% 50%; ">
@@ -52,9 +53,9 @@
                         </div>
                         <div class="nama text-center">
                           <h6>
-                            Krisna Sandi Saputra
+                            {{ $kan->username }}
                           </h6>
-                          <span>Frontend Developer at Mamikos.com</span>
+                          <span>{{ $kan->skillUtama }}</span>
                         </div>
                         <div class="nama text-center">
                           <h6>
@@ -63,107 +64,12 @@
                         </div>
 
                         <div class="container text-center my-3">
-                          <a href="{{ route('mitra.kandidat.show', "krisna-sandi-saputra") }}" class="btn btn-primary">Read More</a>
+                          <a href="{{ route('mitra.kandidat.show', $kan->slug) }}" class="btn btn-primary">Read More</a>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                    <div class="card"  style="overflow: hidden">
-                      <div class="body">
-                        <div class="img text-center" style="height: 80%;background-image: url('http://i.imgur.com/9HMnxKs.png');background-repeat: no-repeat;background-size: 100% 50%">
-                          <img class="rounded-circle my-3" style="height: 100px;width: 100px;" src="https://asset.kompas.com/crops/DAT0bF9Dp21QqlgqXD-UcsBpxY4=/20x0:992x648/750x500/data/photo/2018/01/14/2342554562.jpg" alt="">
-                        </div>
-                        <div class="nama text-center">
-                          <h6>
-                            Krisna Sandi Saputra
-                          </h6>
-                          <span>Frontend Developer at Mamikos.com</span>
-                        </div>
-                        <div class="nama text-center">
-                          <h6>
-                          </h6>
-                          <span>6 Tahun Pengalaman</span>
-                        </div>
-
-                        <div class="container text-center my-3">
-                          <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                    <div class="card" style="overflow: hidden">
-                      <div class="body">
-                        <div class="img text-center" style="height: 80%;background-image: url('http://i.imgur.com/9HMnxKs.png');background-repeat: no-repeat;background-size: 100% 50%">
-                          <img class="rounded-circle my-3" style="height: 100px;width: 100px;" src="https://asset.kompas.com/crops/DAT0bF9Dp21QqlgqXD-UcsBpxY4=/20x0:992x648/750x500/data/photo/2018/01/14/2342554562.jpg" alt="">
-                        </div>
-                        <div class="nama text-center">
-                          <h6>
-                            Krisna Sandi Saputra
-                          </h6>
-                          <span>Frontend Developer at Mamikos.com</span>
-                        </div>
-                        <div class="nama text-center">
-                          <h6>
-                          </h6>
-                          <span>6 Tahun Pengalaman</span>
-                        </div>
-
-                        <div class="container text-center my-3">
-                          <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                    <div class="card" style="overflow: hidden">
-                      <div class="body">
-                        <div class="img text-center" style="height: 80%;background-image: url('http://i.imgur.com/9HMnxKs.png');background-repeat: no-repeat;background-size: 100% 50%">
-                          <img class="rounded-circle my-3" style="height: 100px;width: 100px;" src="https://asset.kompas.com/crops/DAT0bF9Dp21QqlgqXD-UcsBpxY4=/20x0:992x648/750x500/data/photo/2018/01/14/2342554562.jpg" alt="">
-                        </div>
-                        <div class="nama text-center">
-                          <h6>
-                            Krisna Sandi Saputra
-                          </h6>
-                          <span>Frontend Developer at Mamikos.com</span>
-                        </div>
-                        <div class="nama text-center">
-                          <h6>
-                          </h6>
-                          <span>6 Tahun Pengalaman</span>
-                        </div>
-
-                        <div class="container text-center my-3">
-                          <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                    <div class="card" style="overflow: hidden">
-                      <div class="body">
-                        <div class="img text-center" style="height: 80%;background-image: url('http://i.imgur.com/9HMnxKs.png');background-repeat: no-repeat;background-size: 100% 50%">
-                          <img class="rounded-circle my-3" style="height: 100px;width: 100px;" src="https://asset.kompas.com/crops/DAT0bF9Dp21QqlgqXD-UcsBpxY4=/20x0:992x648/750x500/data/photo/2018/01/14/2342554562.jpg" alt="">
-                        </div>
-                        <div class="nama text-center">
-                          <h6>
-                            Krisna Sandi Saputra
-                          </h6>
-                          <span>Frontend Developer at Mamikos.com</span>
-                        </div>
-                        <div class="nama text-center">
-                          <h6>
-                          </h6>
-                          <span>6 Tahun Pengalaman</span>
-                        </div>
-
-                        <div class="container text-center my-3">
-                          <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            @endforeach
 
                 </div>
               </div>

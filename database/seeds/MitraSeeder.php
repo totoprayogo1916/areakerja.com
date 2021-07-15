@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Mitra;
+use Illuminate\Database\Seeder;
+
 class MitraSeeder extends Seeder
 {
     /**
@@ -14,14 +15,26 @@ class MitraSeeder extends Seeder
     public function run()
     {
         $mitra = Mitra::create([
-            'nama' => 'Seven Inc',
-            'email' => 'fadelirsyad04@gmail.com',
+            'nama'      => 'Seven Inc',
+            'email'     => 'fadelirsyad04@gmail.com',
             'deskripsi' => 'Perusahaan gg',
             'alamat'    => 'Banguntapan',
-            'no'       => '0895329990656',
-            'logo'     => 'seven.jpg',
-            'koin' => '100',
-            'idUser' => '3'
+            'no'        => '0895329990656',
+            'logo'      => 'seven.jpg',
+            'koin'      => '100',
+            'idUser'    => '3',
+        ]);
+        $mitra->save();
+
+        $mitra = Mitra::create([
+            'nama'      => 'ADAM JAYA',
+            'email'     => 'mitra@mitra.com',
+            'deskripsi' => 'Perusahaan gg',
+            'alamat'    => 'Banguntapan',
+            'no'        => '081234357779',
+            'logo'      => 'logo.png',
+            'koin'      => '100',
+            'idUser'    => '2',
         ]);
         $mitra->save();
     }

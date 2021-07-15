@@ -14,11 +14,11 @@
               <div class="body">
                 <div class="container mt-3">
                     <div class="nama container">
-                      <h3 style="color: #000">Krisna Sandi Saputra</h3>
+                      <h3 style="color: #000">{{ $kandidat->username }}</h3>
 
-                      <h5 class="font-weight-normal" style="color: #000">Front End Developer</h5>
+                      <h5 class="font-weight-normal" style="color: #000">{{ $kandidat->skillUtama }}</h5>
 
-                      <h6 class="font-weight-normal" style="color: #000">Yogyakarta dan Sekitarnya</h6>
+                      <h6 class="font-weight-normal" style="color: #000">{{ $kandidat->domisili }}</h6>
 
                       <div class="container">
                         <div class="row justify-content-between">
@@ -231,30 +231,17 @@
         <div class="isi-biografi">
           <div class="container">
             <div class="scroll">
-              <div class="d-flex border-bottom flex-center" >
+
+            @foreach ($organisasi as $org )
+            <div class="d-flex border-bottom flex-center" >
                 <img class="border border-white border-5 my-1" style="height: 65px;width: 65px;border-width: 4px!important; " src="https://asset.kompas.com/crops/DAT0bF9Dp21QqlgqXD-UcsBpxY4=/20x0:992x648/750x500/data/photo/2018/01/14/2342554562.jpg" alt="">
                 <div class="d-flex mx-2 flex-column">
-                  <h6 class="mt-2 my-0" style="color: #000">Diponegoro University</h6>
-                  <span class="font-weight-normal my-0" style="color: #000">Bachelor's Degree, Information Technology</span>
-                  <span class="font-weight-normal " style="color: #000">2016-2020</span>
+                  <h6 class="mt-2 my-0" style="color: #000">{{ $org->judul }}</h6>
+                  <span class="font-weight-normal my-0" style="color: #000">{{ $org->jabatan }}</span>
+                  <span class="font-weight-normal " style="color: #000">{{ $org->tahun }}</span>
                 </div>
               </div>
-              <div class="d-flex border-bottom flex-center">
-                <img class="border border-white border-5 my-1" style="height: 65px;width: 65px;border-width: 4px!important; " src="https://asset.kompas.com/crops/DAT0bF9Dp21QqlgqXD-UcsBpxY4=/20x0:992x648/750x500/data/photo/2018/01/14/2342554562.jpg" alt="">
-                <div class="d-flex mx-2 flex-column my-auto">
-                  <h6 class="my-0" style="color: #000">SMA Negeri 2 Madiun</h6>
-                  <span class="font-weight-normal my-0" style="color: #000"> </span>
-                  <span class="font-weight-normal " style="color: #000">2016-2020</span>
-                </div>
-              </div>
-              <div class="d-flex border-bottom flex-center">
-                <img class="border border-white border-5 my-1" style="height: 65px;width: 65px;border-width: 4px!important; " src="https://asset.kompas.com/crops/DAT0bF9Dp21QqlgqXD-UcsBpxY4=/20x0:992x648/750x500/data/photo/2018/01/14/2342554562.jpg" alt="">
-                <div class="d-flex mx-2 flex-column my-auto">
-                  <h6 class="my-0" style="color: #000">SMP Negeri 4 Madiun</h6>
-                  <span class="font-weight-normal my-0" style="color: #000"> </span>
-                  <span class="font-weight-normal " style="color: #000">2013-2016</span>
-                </div>
-              </div>
+            @endforeach
             </div>
           </div>
         </div>

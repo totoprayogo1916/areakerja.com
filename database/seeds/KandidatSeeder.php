@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Kandidat;
+use Illuminate\Database\Seeder;
 
 class KandidatSeeder extends Seeder
 {
@@ -15,30 +15,35 @@ class KandidatSeeder extends Seeder
     public function run()
     {
         $kandidat = Kandidat::create([
-            'username' => 'Rere Anggraini',
+            'username'   => 'Rere Anggraini',
             'skillUtama' => 'Front-End Developer',
-            'domisili' => 'Yogyakarta',
+            'domisili'   => 'Yogyakarta',
+            'slug'       => 'Rere-Anggraini',
         ]);
         $kandidat->save();
 
         $kandidat = Kandidat::create([
-            'username' => 'Putra Arjuna',
+            'username'   => 'Putra Arjuna',
             'skillUtama' => 'Back-End Developer',
-            'domisili' => 'Bandung',
+            'domisili'   => 'Bandung',
+            'slug'       => 'Putra-Arjuna',
+
         ]);
         $kandidat->save();
 
         $kandidat = Kandidat::create([
-            'username' => 'Putra Arjuna',
-            'skillUtama' => 'Back-End Developer',
-            'domisili' => 'Bandung',
+            'username'   => 'Ervalina Arisanto',
+            'skillUtama' => 'Full Stack Developer',
+            'domisili'   => 'Surabaya',
+            'slug'       => 'Ervalina-Arisanto',
         ]);
         $kandidat->save();
 
         $kandidat = Kandidat::create([
-            'username' => 'Putra Arjuna',
-            'skillUtama' => 'Back-End Developer',
-            'domisili' => 'Bandung',
+            'username'   => 'Rivan Sanjaya Arisanto',
+            'skillUtama' => 'Android Developer',
+            'domisili'   => 'Semarang',
+            'slug'       => 'Rivan-Sanjaya-Arisanto',
         ]);
         $kandidat->save();
     }
