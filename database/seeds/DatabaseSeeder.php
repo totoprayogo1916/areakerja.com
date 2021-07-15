@@ -4,10 +4,9 @@ use Database\Seeders\ArticleSeeder;
 use Database\Seeders\MitraSeeder;
 use Database\Seeders\OrganisasiSeeder;
 use Database\Seeders\PengalamanSeeder;
-use Database\Seeders\SertifikasiSeeder;
-use Database\Seeders\RiwayatPendidikanSeeder;
 use Database\Seeders\PriceSeeder;
-use Database\Seeders\SkillSeeder;
+use Database\Seeders\RiwayatPendidikanSeeder;
+use Database\Seeders\SertifikasiSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -26,6 +25,7 @@ class DatabaseSeeder extends Seeder
             CompaniesTableSeeder::class,
             JobsTableSeeder::class,
             PriceSeeder::class,
+            MitraSeeder::class,
             KandidatSeeder::class,
             OrganisasiSeeder::class,
             PengalamanSeeder::class,
