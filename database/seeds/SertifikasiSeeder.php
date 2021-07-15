@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Sertifikasi;
+use Illuminate\Database\Seeder;
 
 class SertifikasiSeeder extends Seeder
 {
@@ -15,34 +15,34 @@ class SertifikasiSeeder extends Seeder
     public function run()
     {
         $sertifikasi = Sertifikasi::create([
-            'nama_sertifikasi'  => 'Bootcamp Python',
-            'penyelenggara'     => 'Universitas Indonesia',
-            'tahun'             => '2019',
-            'idKandidat'        => '1',
+            'nama_sertifikasi' => 'Bootcamp Python',
+            'penyelenggara'    => 'Universitas Indonesia',
+            'tahun'            => '2019',
+            'idKandidat'       => '1',
         ]);
         $sertifikasi->save();
 
         $sertifikasi = Sertifikasi::create([
-            'nama_sertifikasi'  => 'Junior Web Developer',
-            'penyelenggara'     => 'Pemerintah hehe',
-            'tahun'             => '2020',
-            'idKandidat'        => '2',
+            'nama_sertifikasi' => 'Junior Web Developer',
+            'penyelenggara'    => 'Pemerintah hehe',
+            'tahun'            => '2020',
+            'idKandidat'       => '2',
         ]);
         $sertifikasi->save();
 
         $sertifikasi = Sertifikasi::create([
-            'nama_sertifikasi'  => 'VSGA',
-            'penyelenggara'     => 'Pemerintah hehe',
-            'tahun'             => '2020',
-            'idKandidat'        => '3',
+            'nama_sertifikasi' => 'VSGA',
+            'penyelenggara'    => 'Pemerintah hehe',
+            'tahun'            => '2020',
+            'idKandidat'       => '3',
         ]);
         $sertifikasi->save();
 
         $sertifikasi = Sertifikasi::create([
-            'nama_sertifikasi'  => 'Bootcamp Python',
-            'penyelenggara'     => 'Pemerintah hehe',
-            'tahun'             => '2020',
-            'idKandidat'        => '4',
+            'nama_sertifikasi' => 'Bootcamp Python',
+            'penyelenggara'    => 'Pemerintah hehe',
+            'tahun'            => '2020',
+            'idKandidat'       => '4',
         ]);
         $sertifikasi->save();
     }

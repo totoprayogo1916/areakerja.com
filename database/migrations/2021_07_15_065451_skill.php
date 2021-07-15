@@ -26,5 +26,4 @@ class Skill extends Migration
             $table->timestamps();
         });
     }
-
 }

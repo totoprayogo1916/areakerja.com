@@ -36,6 +36,6 @@ class Sertifikasi extends Migration
      */
     public function down()
     {
-        //
+
     }
 }

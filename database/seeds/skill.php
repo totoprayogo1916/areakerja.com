@@ -1,6 +1,5 @@
 <?php
 
-
 use Illuminate\Database\Seeder;
 
 class skill extends Seeder
@@ -12,6 +11,6 @@ class skill extends Seeder
      */
     public function run()
     {
-        //
+
     }
 }

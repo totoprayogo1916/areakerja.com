@@ -1,6 +1,5 @@
 <?php
 
-
 use App\Kandidat;
 use Illuminate\Database\Seeder;
 

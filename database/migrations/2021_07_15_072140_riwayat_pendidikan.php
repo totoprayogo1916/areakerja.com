@@ -36,6 +36,6 @@ class RiwayatPendidikan extends Migration
      */
     public function down()
     {
-        //
+
     }
 }
