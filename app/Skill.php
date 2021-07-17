@@ -9,7 +9,7 @@ class Skill extends Model
 {
     use HasFactory;
 
-    public $table = 'organisasi';
+    public $table = 'skill';
 
     protected $dates = [
         'created_at',

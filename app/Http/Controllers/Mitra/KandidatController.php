@@ -10,6 +10,7 @@ use App\Organisasi;
 use App\Pengalaman;
 use App\Riwayatpendidikan;
 use App\Sertifikasi;
+use App\Skill;
 
 class KandidatController extends Controller
 {
@@ -35,6 +36,7 @@ class KandidatController extends Controller
         $pendidikan  = Riwayatpendidikan::where('idKandidat', $idkandidat)->get();
         $pengalaman  = Pengalaman::where('idKandidat', $idkandidat)->get();
         $sertifikasi = Sertifikasi::where('idKandidat', $idkandidat)->get();
+        $skill       = Skill::where('idKandidat', $idkandidat)->get();
 
         return view('mitra.kandidat.show', compact(
             'lowongan',
@@ -45,6 +47,7 @@ class KandidatController extends Controller
             'pendidikan',
             'pengalaman',
             'sertifikasi',
+            'skill',
         ));
     }
 }

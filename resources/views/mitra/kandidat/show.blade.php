@@ -123,31 +123,16 @@
 
             </div>
             <div class="isi-biografi mt-2">
-              <div class="container my-1">
-                <h6 class="mb-1">Coding</h6>
-                <div class="progress" data-height="25">
-                  <div class="progress-bar" role="progressbar" data-width="40%" aria-valuenow="40"
-                    aria-valuemin="0" aria-valuemax="40">40%</div>
-                </div>
-                <hr class="mt-2">
-              </div>
-              <div class="container my-1">
-                <h6 class="mb-1">Editing</h6>
-                <div class="progress " data-height="25">
-                  <div class="progress-bar" role="progressbar" data-width="50%" aria-valuenow="50"
-                    aria-valuemin="0" aria-valuemax="50">50%</div>
-                </div>
-                <hr class="mt-2">
-              </div>
-              <div class="container my-1">
-                <h6 class="mb-1">Office</h6>
-                <div class="progress" data-height="25">
-                  <div class="progress-bar" role="progressbar" data-width="100%" aria-valuenow="100"
-                    aria-valuemin="0" aria-valuemax="100">100%</div>
-                </div>
-                <hr class="mt-2">
-              </div>
-
+                @foreach ( $skill as $ski )
+                <div class="container my-1">
+                    <h6 class="mb-1">{{ $ski->nama }}</h6>
+                    <div class="progress" data-height="25">
+                      <div class="progress-bar" role="progressbar" data-width="{{ $ski->tingkat }}%" aria-valuenow="{{ $ski->tingkat }}"
+                        aria-valuemin="0" aria-valuemax="{{ $ski->tingkat }}">{{ $ski->tingkat }}%</div>
+                    </div>
+                    <hr class="mt-2">
+                  </div>
+                @endforeach
 
             </div>
 

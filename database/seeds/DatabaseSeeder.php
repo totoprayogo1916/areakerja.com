@@ -7,6 +7,7 @@ use Database\Seeders\PengalamanSeeder;
 use Database\Seeders\PriceSeeder;
 use Database\Seeders\RiwayatPendidikanSeeder;
 use Database\Seeders\SertifikasiSeeder;
+use Database\Seeders\SkillSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -31,6 +32,7 @@ class DatabaseSeeder extends Seeder
             PengalamanSeeder::class,
             RiwayatPendidikanSeeder::class,
             SertifikasiSeeder::class,
+            SkillSeeder::class,
         ]);
     }
 }
