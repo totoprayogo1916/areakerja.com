@@ -49,7 +49,7 @@
 <body class="app header-fixed sidebar-fixed aside-menu-fixed pace-done sidebar-lg-show">
     @foreach ( App\Role_User::all('user_id') as $id)
         @if ( $id->user_id == auth()->user()->id)
-            @if (App\Role_User::where('user_id', $id->user_id)->first()->role_id == 3)
+            @if (App\Role_User::where('user_id', $id->user_id)->first()->role_id == 3 || App\Role_User::where('user_id', $id->user_id)->first()->role_id == 4 )
                 <div class="container text-center my-auto">
                     <H1><b>SADARO KOWE DUDU SOPO SOPO NE DEE</b></H1>
                 </div>
