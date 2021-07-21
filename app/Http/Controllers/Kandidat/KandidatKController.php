@@ -4,9 +4,8 @@ namespace App\Http\Controllers\Kandidat;
 
 use App\Http\Controllers\Controller;
 use App\Kandidat;
-use App\Mitra;
 
-class KandidatController extends Controller
+class KandidatKController extends Controller
 {
     public function index()
     {

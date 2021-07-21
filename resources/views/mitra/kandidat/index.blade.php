@@ -53,7 +53,7 @@
                         </div>
                         <div class="nama text-center">
                           <h6>
-                            {{ $kan->username }}
+                            {{ $kan->nama }}
                           </h6>
                           <span>{{ $kan->skillUtama }}</span>
                         </div>

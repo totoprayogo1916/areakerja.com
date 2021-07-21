@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Kandidat;
 use App\Lowonganmitra;
 use App\Mitra;
+use App\Mitra_Kandidat;
 use App\Organisasi;
 use App\Pengalaman;
 use App\Riwayatpendidikan;
@@ -49,5 +50,18 @@ class KandidatController extends Controller
             'sertifikasi',
             'skill',
         ));
+    }
+
+    public function hire($id)
+    {
+        $user_id = auth()->user()->id;
+        $mitra   = Mitra::where('idUser', $user_id)->first();
+
+        Mitra_Kandidat::create([
+            'idMitra'    => $mitra->id,
+            'idKandidat' => $id,
+        ]);
+
+        return redirect('mitra');
     }
 }

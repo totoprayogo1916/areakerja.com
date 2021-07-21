@@ -14,7 +14,7 @@
               <div class="body">
                 <div class="container mt-3">
                     <div class="nama container">
-                      <h3 style="color: #000">{{ $kandidat->username }}</h3>
+                      <h3 style="color: #000">{{ $kandidat->nama }}</h3>
 
                       <h5 class="font-weight-normal" style="color: #000">{{ $kandidat->skillUtama }}</h5>
 
@@ -187,7 +187,7 @@
     </div>
 
     <div class="text-center my-4">
-        <a href="#" class="btn btn-primary" style="font-size:16px">Hire Candidat</a>
+        <a href="{{ route('mitra.kandidat.hire', $kandidat->id) }}" class="btn btn-primary" style="font-size:16px">Hire Candidat</a>
     </div>
 
     </div>

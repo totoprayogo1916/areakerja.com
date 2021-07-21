@@ -84,6 +84,7 @@ Route::group(['prefix' => 'mitra', 'as' => 'mitra.', 'namespace' => 'Mitra', 'mi
 
     //============== Kandidat ======================
     Route::resource('kandidat', 'KandidatController');
+    Route::get('/kandidat/hire/{id}', 'KandidatController@hire')->name('kandidat.hire');
 
     // Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
     // Route::resource('categories', 'CategoriesController');
@@ -128,21 +129,13 @@ Route::group(['prefix' => 'mitra', 'as' => 'mitra.', 'namespace' => 'Mitra', 'mi
 });
 
 Route::group(['prefix' => 'kandidat', 'as' => 'kandidat.', 'namespace' => 'Kandidat', 'middleware' => ['auth']], static function () {
-    Route::get('/', 'KandidatController@index')->name('awal');
+    Route::get('/', 'KandidatKController@index')->name('awal');
 
     //============== Profil ======================
-    Route::get('/lowongan', 'KandidatController@lowongan')->name('kandidat.lowongan');
-    // Route::resource('lowongan', 'KandidatController');
-
-    //============== Lowongan ======================
-    // Route::resource('lowongan', 'DaftarLowonganController');
-
-    //============== Topup ======================
-    Route::get('/topup/{id}/{harga}', 'TopupController@topup')->name('mitra.topup');
-    Route::resource('topup', 'TopupController');
+    Route::get('/lowongan', 'KandidatKController@lowongan')->name('kandidat.lowongan');
 
     //============== Kandidat ======================
-    Route::resource('kandidat', 'KandidatController');
+    Route::resource('kandidat', 'KandidatKController');
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], static function () {

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Mitra;
 
-use App\Kandidat;
 use App\Mitra;
 
 class AdminCompanyController

@@ -15,65 +15,65 @@ class SkillSeeder extends Seeder
     public function run()
     {
         $skill = Skill::create([
-            'nama'            => 'Bahasa Pemrograman Java',
-            'tingkat'         => '70',
-            'idKandidat'      => '1',
+            'nama'       => 'Bahasa Pemrograman Java',
+            'tingkat'    => '70',
+            'idKandidat' => '1',
         ]);
         $skill->save();
 
         $skill = Skill::create([
-            'nama'            => 'Bahasa Pemrograman PHP',
-            'tingkat'         => '90',
-            'idKandidat'      => '1',
+            'nama'       => 'Bahasa Pemrograman PHP',
+            'tingkat'    => '90',
+            'idKandidat' => '1',
         ]);
         $skill->save();
 
         $skill = Skill::create([
-            'nama'            => 'Programming',
-            'tingkat'         => '70',
-            'idKandidat'      => '2',
+            'nama'       => 'Programming',
+            'tingkat'    => '70',
+            'idKandidat' => '2',
         ]);
         $skill->save();
 
         $skill = Skill::create([
-            'nama'            => 'Database Management System',
-            'tingkat'         => '70',
-            'idKandidat'      => '2',
+            'nama'       => 'Database Management System',
+            'tingkat'    => '70',
+            'idKandidat' => '2',
         ]);
         $skill->save();
 
         $skill = Skill::create([
-            'nama'            => 'Public Speaking',
-            'tingkat'         => '90',
-            'idKandidat'      => '3',
+            'nama'       => 'Public Speaking',
+            'tingkat'    => '90',
+            'idKandidat' => '3',
         ]);
         $skill->save();
 
         $skill = Skill::create([
-            'nama'            => 'Multitasking',
-            'tingkat'         => '90',
-            'idKandidat'      => '3',
+            'nama'       => 'Multitasking',
+            'tingkat'    => '90',
+            'idKandidat' => '3',
         ]);
         $skill->save();
 
         $skill = Skill::create([
-            'nama'            => 'Perangkat Lunak Pengolahan Kata',
-            'tingkat'         => '100',
-            'idKandidat'      => '3',
+            'nama'       => 'Perangkat Lunak Pengolahan Kata',
+            'tingkat'    => '100',
+            'idKandidat' => '3',
         ]);
         $skill->save();
 
         $skill = Skill::create([
-            'nama'            => 'Bahasa Pemograman Java',
-            'tingkat'         => '90',
-            'idKandidat'      => '4',
+            'nama'       => 'Bahasa Pemograman Java',
+            'tingkat'    => '90',
+            'idKandidat' => '4',
         ]);
         $skill->save();
 
         $skill = Skill::create([
-            'nama'            => 'Flutter',
-            'tingkat'         => '70',
-            'idKandidat'      => '4',
+            'nama'       => 'Flutter',
+            'tingkat'    => '70',
+            'idKandidat' => '4',
         ]);
         $skill->save();
     }
