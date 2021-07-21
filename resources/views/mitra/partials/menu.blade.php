@@ -14,7 +14,7 @@
         </li>
 
         <li class="dropdown {{ request()->is('mitra') ? 'active' : '' }}">
-          <a href="{{ route('mitra.home') }}" class="nav-link"><i data-feather="grid"></i><span>Kandidat</span></a>
+          <a href="{{ route('kandidat.kandidat.lowongan') }}" class="nav-link"><i data-feather="grid"></i><span>Kandidat</span></a>
         </li>
     @endif
 

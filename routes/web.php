@@ -127,14 +127,15 @@ Route::group(['prefix' => 'mitra', 'as' => 'mitra.', 'namespace' => 'Mitra', 'mi
     // Route::resource('article', 'ArticleController');
 });
 
-Route::group(['prefix' => 'kandidat', 'as' => 'mitra.', 'namespace' => 'Mitra', 'middleware' => ['auth']], static function () {
-    Route::get('/', 'AdminCompanyController@kandidat')->name('awal');
+Route::group(['prefix' => 'kandidat', 'as' => 'kandidat.', 'namespace' => 'Kandidat', 'middleware' => ['auth']], static function () {
+    Route::get('/', 'KandidatController@index')->name('awal');
 
     //============== Profil ======================
-    Route::resource('profil', 'ProfilController');
+    Route::get('/lowongan', 'KandidatController@lowongan')->name('kandidat.lowongan');
+    // Route::resource('lowongan', 'KandidatController');
 
     //============== Lowongan ======================
-    Route::resource('lowongan', 'DaftarLowonganController');
+    // Route::resource('lowongan', 'DaftarLowonganController');
 
     //============== Topup ======================
     Route::get('/topup/{id}/{harga}', 'TopupController@topup')->name('mitra.topup');

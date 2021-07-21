@@ -14,12 +14,4 @@ class AdminCompanyController
 
         return view('mitra.home', compact('mitra'));
     }
-
-    public function kandidat()
-    {
-        $user_id = auth()->user()->id;
-        $mitra   = Kandidat::where('idUser', $user_id)->first();
-
-        return view('mitra.home', compact('mitra'));
-    }
 }
