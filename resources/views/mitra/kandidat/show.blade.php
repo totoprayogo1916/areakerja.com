@@ -184,15 +184,15 @@
             </div>
           </div>
         </div>
+    </div>
+
+    <div class="text-center my-4">
+        <a href="#" class="btn btn-primary" style="font-size:16px">Hire Candidat</a>
+    </div>
 
     </div>
-      </div>
-        </div>
-      </div>
-
-
-
-
     </div>
+    </div>
+</div>
         </section>
   @endsection
