@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::redirect('/home', '/mitra');
-// Route::redirect('/homeadmin', '/admin');
+Route::redirect('/awal', '/kandidat');
 Route::redirect('/cok', '/admin');
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
@@ -125,6 +125,23 @@ Route::group(['prefix' => 'mitra', 'as' => 'mitra.', 'namespace' => 'Mitra', 'mi
 
     // Route::delete('article/destroy', 'ArticleController@massDestroy')->name('article.massDestroy');
     // Route::resource('article', 'ArticleController');
+});
+
+Route::group(['prefix' => 'kandidat', 'as' => 'mitra.', 'namespace' => 'Mitra', 'middleware' => ['auth']], static function () {
+    Route::get('/', 'AdminCompanyController@kandidat')->name('awal');
+
+    //============== Profil ======================
+    Route::resource('profil', 'ProfilController');
+
+    //============== Lowongan ======================
+    Route::resource('lowongan', 'DaftarLowonganController');
+
+    //============== Topup ======================
+    Route::get('/topup/{id}/{harga}', 'TopupController@topup')->name('mitra.topup');
+    Route::resource('topup', 'TopupController');
+
+    //============== Kandidat ======================
+    Route::resource('kandidat', 'KandidatController');
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], static function () {

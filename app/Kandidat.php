@@ -12,9 +12,10 @@ class Kandidat extends Model
     public $table = 'kandidat';
 
     protected $fillable = [
-        'username',
+        'nama',
         'skillUtama',
         'domisili',
+        'idUser',
         'updated_at',
         'deleted_at',
     ];

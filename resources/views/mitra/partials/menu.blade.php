@@ -5,11 +5,28 @@
             class="logo-name">Mitra</span>
         </a>
       </div>
+
+    @if (App\Role_User::where('user_id', auth()->user()->id)->first()->role_id == 4)
       <ul class="sidebar-menu">
         <li class="menu-header">Main</li>
         <li class="dropdown {{ request()->is('mitra') ? 'active' : '' }}">
           <a href="{{ route('mitra.home') }}" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
         </li>
+
+        <li class="dropdown {{ request()->is('mitra') ? 'active' : '' }}">
+          <a href="{{ route('mitra.home') }}" class="nav-link"><i data-feather="grid"></i><span>Kandidat</span></a>
+        </li>
+    @endif
+
+
+    @if (App\Role_User::where('user_id', auth()->user()->id)->first()->role_id == 3)
+      <ul class="sidebar-menu">
+        <li class="menu-header">Main</li>
+        <li class="dropdown {{ request()->is('mitra') ? 'active' : '' }}">
+          <a href="{{ route('mitra.home') }}" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
+        </li>
+
+
         <li class="dropdown {{ request()->is('mitra/profil') || request()->is('mitra/profil/*') ? 'active' : '' }}">
           <a href="#" class="menu-toggle nav-link has-dropdown"><i
               data-feather="list"></i><span>Profil Perusahaan</span></a>
@@ -35,6 +52,7 @@
         <li class="dropdown"><a href="#" class="nav-link"><i data-feather="circle"></i><span>Logo Perusahaan</span></a></li>
 
       </ul>
+    @endif
     </aside>
 </div>
 

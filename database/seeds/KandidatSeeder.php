@@ -13,16 +13,17 @@ class KandidatSeeder extends Seeder
     public function run()
     {
         $kandidat = Kandidat::create([
-            'username'   => 'Rere Anggraini',
+            'nama'   => 'Rere Anggraini',
             'skillUtama' => 'Front-End Developer',
             'domisili'   => 'Yogyakarta',
             'biografi'   => 'Hai nama saya Rere Anggraini, saya berasal dari Yogyakarta',
             'slug'       => 'Rere-Anggraini',
+            'idUser'       => '4',
         ]);
         $kandidat->save();
 
         $kandidat = Kandidat::create([
-            'username'   => 'Putra Arjuna',
+            'nama'   => 'Putra Arjuna',
             'skillUtama' => 'Back-End Developer',
             'domisili'   => 'Bandung',
             'biografi'   => 'Hai nama saya Putra Arjuna, saya berasal dari Bandung',
@@ -32,7 +33,7 @@ class KandidatSeeder extends Seeder
         $kandidat->save();
 
         $kandidat = Kandidat::create([
-            'username'   => 'Ervalina Arisanto',
+            'nama'   => 'Ervalina Arisanto',
             'skillUtama' => 'Full Stack Developer',
             'domisili'   => 'Surabaya',
             'biografi'   => 'Hai nama saya Ervalina Arisanto, saya berasal dari Surabaya',
@@ -41,7 +42,7 @@ class KandidatSeeder extends Seeder
         $kandidat->save();
 
         $kandidat = Kandidat::create([
-            'username'   => 'Rivan Sanjaya Arisanto',
+            'nama'   => 'Rivan Sanjaya Arisanto',
             'skillUtama' => 'Android Developer',
             'domisili'   => 'Semarang',
             'biografi'   => 'Hai nama saya Rivan Sanjaya Arisanto, saya berasal dari Semarang',

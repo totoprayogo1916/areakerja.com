@@ -16,7 +16,7 @@ class Kandidat extends Migration
         Schema::create('kandidat', static function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string('username');
+            $table->string('nama');
 
             $table->string('skillUtama')->nullable();
 
@@ -25,6 +25,9 @@ class Kandidat extends Migration
             $table->string('biografi')->nullable();
 
             $table->string('slug')->nullable();
+
+            $table->unsignedInteger('idUser')->nullable();
+            $table->foreign('idUser', 'user_id_fk_202107211')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
