@@ -10,11 +10,11 @@
       <ul class="sidebar-menu">
         <li class="menu-header">Main</li>
         <li class="dropdown {{ request()->is('mitra') ? 'active' : '' }}">
-          <a href="{{ route('mitra.home') }}" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
+          <a href="{{ route('kandidat.awal') }}" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
         </li>
 
         <li class="dropdown {{ request()->is('mitra') ? 'active' : '' }}">
-          <a href="{{ route('kandidat.kandidat.lowongan') }}" class="nav-link"><i data-feather="grid"></i><span>Kandidat</span></a>
+          <a href="{{ route('kandidat.kandidat.lowongan') }}" class="nav-link"><i data-feather="grid"></i><span>Perusahaan</span></a>
         </li>
     @endif
 

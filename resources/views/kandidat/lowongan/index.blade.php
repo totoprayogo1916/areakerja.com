@@ -9,11 +9,11 @@
             <div class="card">
               <div class="body container">
                 <div class="cari p-2 mt-2 mx-3 border-bottom">
-                    <h5>Daftar Kandidat</h5>
+                    <h5>Daftar Perusahaan</h5>
                 </div>
                 <div class="row mt-3 px-3">
 
-            {{-- @foreach ($kandidat as $kandidat ) --}}
+            @foreach ($kandidat as $kandidat )
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                     <div class="card" style="overflow: hidden">
                       <div class="body">
@@ -22,14 +22,9 @@
                         </div>
                         <div class="nama text-center">
                           <h6>
-                            username
+                            {{$kandidat->mitra->nama}}
                           </h6>
-                          skillutama
-                        </div>
-                        <div class="nama text-center">
-                          <h6>
-                          </h6>
-                          <span>6 Tahun Pengalaman</span>
+                          {{$kandidat->mitra->email}}
                         </div>
 
                         <div class="container text-center my-3">
@@ -38,7 +33,7 @@
                       </div>
                     </div>
                   </div>
-            {{-- @endforeach --}}
+            @endforeach
 
                 </div>
               </div>

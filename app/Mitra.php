@@ -27,4 +27,9 @@ class Mitra extends Model
         'koin',
         'idUser',
     ];
+
+    public function mitrakandidat()
+    {
+        return $this->hasMany(Mitra_Kandidat::class, 'idMitra');
+    }
 }
