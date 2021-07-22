@@ -6,38 +6,38 @@
     height: 100%;
     top: 0%;
     z-index: 99;
-  }
+}
 
-  .firsta {
+.firsta {
     background: #74e7ef;
-  }
+}
 
-  .seconda {
+.seconda {
     background: #74e7ef;
     left: 33.3%;
-  }
+}
 
-  .thirda {
+.thirda {
     background: #74e7ef;
     left: 66.6%;
-  }
+}
 
 /* SLICK
 =========================== */
 
 .for_slick_slider {
-  display: flex;
+    display: flex;
 }
 
 .for_slick_slider .items {
-  width: 350px;
-  height: auto;
-  margin-bottom: 30px;
-  margin-top: 25px;
-  margin-left: 6px;
-  margin-right: 6px;
-  transition: margin-top 0.5s;
-  /* margin: 50px; */
+    width: 350px;
+    height: auto;
+    margin-bottom: 30px;
+    margin-top: 25px;
+    margin-left: 6px;
+    margin-right: 6px;
+    transition: margin-top 0.5s;
+    /* margin: 50px; */
 }
 
 .for_slick_slider:hover .items:hover {
@@ -50,59 +50,63 @@
     /* margin: 50px; */
     /* -webkit-animation: bounce 2s; */
     /* animation-duration: 5s; */
-  }
+}
 
 
 .for_slick_slider2 {
-  display: flex;
-  
+    display: flex;
+
 }
 
 .for_slick_slider2 .items {
-  width: auto;
-  height: auto;
-  margin: 20px 20px;
-  
-  transition: margin-top 0.5s;
-  /* margin: 50px; */
+    width: auto;
+    height: auto;
+    margin: 20px 20px;
+
+    transition: margin-top 0.5s;
+    /* margin: 50px; */
 }
+
 .for_slick_slider3 {
-  display: flex;
+    display: flex;
 }
 
 .for_slick_slider3 .items {
-  width: auto;
-  height: auto;
-  margin: 20px 20px;
+    width: auto;
+    height: auto;
+    margin: 20px 20px;
 
-  transition: margin-top 0.5s;
-  position: relative;
-  box-sizing: border-box;
-  background: #fff;
-  border: 1px solid #6e7d91;
-  box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 14%);
-  border-radius: 20px;
-  white-space: normal;
-  display: inline-block;
-  vertical-align: top;
+    transition: margin-top 0.5s;
+    position: relative;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #6e7d91;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 14%);
+    border-radius: 20px;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: top;
 }
-  /* margin: 50px; */
+
+/* margin: 50px; */
 
 
-.slick-prev, .slick-next {
-  width: 50px;
-  height: 50px;
-  z-index: 1;
+.slick-prev,
+.slick-next {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
 }
 
 .slick-prev {
-  left: 5px;
-  margin-top: 150px;
+    left: 5px;
+    margin-top: 150px;
 }
+
 .slick-next {
-  margin-left: 15px;
-  right: 5px;
-  margin-top: 150px;
+    margin-left: 15px;
+    right: 5px;
+    margin-top: 150px;
 }
 
 .slick-prev:before,
@@ -111,47 +115,49 @@
     /* text-shadow: 0 0 10px rgba(0,0,0,0.5); */
 }
 
-.prev{
-  display: block;
-  border: none;
-  height: 50px;
-  width: 210px;
-  cursor: pointer;
-  background: url('../img/kiri.png') no-repeat;
+.prev {
+    display: block;
+    border: none;
+    height: 50px;
+    width: 210px;
+    cursor: pointer;
+    background: url('../img/kiri.png') no-repeat;
 }
 
-.next{
-  display: block;
-  border: none;
-  cursor: pointer;
-  height: 50px;
-  width: 210px;
-  background: url('../img/kanan.png') no-repeat;
+.next {
+    display: block;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    width: 210px;
+    background: url('../img/kanan.png') no-repeat;
 }
+
 @media screen and (min-width: 601px) {
-  /* div.for_slick_slider.multiple_items{
+    /* div.for_slick_slider.multiple_items{
     margin-bottom: -2000px;
   } */
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
-  /* div.for_slick_slider{
+    /* div.for_slick_slider{
 
 
     margin-top: 10px;
   } */
 
-  div.items.card.mb-4.form-wrap-main {
-    width: auto;
-    height: auto;
-    margin: 20px 15px;
+    div.items.card.mb-4.form-wrap-main {
+        width: auto;
+        height: auto;
+        margin: 20px 15px;
 
-    transition: margin-top 0.5s;
-    /* margin: 50px; */
-  }
-  div.items.gg{
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
+        transition: margin-top 0.5s;
+        /* margin: 50px; */
+    }
+
+    div.items.gg {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
 }
