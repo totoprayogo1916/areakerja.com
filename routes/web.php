@@ -131,7 +131,7 @@ Route::group(['prefix' => 'mitra', 'as' => 'mitra.', 'namespace' => 'Mitra', 'mi
 Route::group(['prefix' => 'kandidat', 'as' => 'kandidat.', 'namespace' => 'Kandidat', 'middleware' => ['auth']], static function () {
     Route::get('/', 'KandidatKController@index')->name('awal');
 
-    //============== Profil ======================
+    //============== Perusahaan ======================
     Route::get('/lowongan', 'KandidatKController@lowongan')->name('kandidat.lowongan');
 
     //============== Kandidat ======================

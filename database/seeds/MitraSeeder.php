@@ -22,6 +22,7 @@ class MitraSeeder extends Seeder
             'no'        => '0895329990656',
             'logo'      => 'seven.jpg',
             'koin'      => '100',
+            'slug'      => 'seven-inc',
             'idUser'    => '3',
         ]);
         $mitra->save();
@@ -34,6 +35,7 @@ class MitraSeeder extends Seeder
             'no'        => '081234357779',
             'logo'      => 'logo.png',
             'koin'      => '100',
+            'slug'      => 'adam-jaya',
             'idUser'    => '2',
         ]);
         $mitra->save();
