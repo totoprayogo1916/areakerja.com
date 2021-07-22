@@ -10,10 +10,10 @@
                             <a href= #>Artikel</a>
                         </li> --}}
                         <li>
-                            <a href= "{{ route('aboutus') }}">Tentang Kami</a>
+                            <a href="{{ route('aboutus') }}">Tentang Kami</a>
                         </li>
                         <li>
-                            <a href= "{{ route('kontak') }}">Kontak Kami</a>
+                            <a href="{{ route('kontak') }}">Kontak Kami</a>
                         </li>
                         <li>
                             <a href="#">Pasang Lowongan</a>
@@ -24,7 +24,9 @@
                 <div>
                     <p class="col-lg-8 footer-text m-0" style="color: white">
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Areakerja.com</a>
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> Areakerja.com</a>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                 </div>
@@ -38,16 +40,20 @@
                     <ul class="col row">
 
                         <li>
-                            <a href="https://www.instagram.com/areakerjacom/"><i class="fa fa-instagram" style="font-size:36px"></i></a>
+                            <a href="https://www.instagram.com/areakerjacom/"><i class="fa fa-instagram"
+                                    style="font-size:36px"></i></a>
                         </li>
                         <li>
-                            <a href="{{ route('home') }}"><i class="fa fa-facebook-square" style="font-size:36px"></i></a>
+                            <a href="{{ route('home') }}"><i class="fa fa-facebook-square"
+                                    style="font-size:36px"></i></a>
                         </li>
                         <li>
-                            <a href="{{ route('home') }}"><i class="fa fa-twitter-square" style="font-size:36px"></i></a>
+                            <a href="{{ route('home') }}"><i class="fa fa-twitter-square"
+                                    style="font-size:36px"></i></a>
                         </li>
                         <li>
-                            <a href="{{ route('home') }}"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+                            <a href="{{ route('home') }}"><i class="fa fa-linkedin-square"
+                                    style="font-size:36px"></i></a>
                         </li>
                         <li>
                             <a href="{{ route('home') }}"><i class="fa fa-telegram" style="font-size:36px"></i></a>
@@ -55,7 +61,7 @@
                     </ul>
                 </div>
             </div>
-    </div>
+        </div>
     </div>
 </footer>
 
@@ -68,19 +74,19 @@
         </div>
     </div>
 
-      <!-- Social buttons -->
-      <ul class="row" style="width: max-content;margin-left: auto;margin-right: auto">
+    <!-- Social buttons -->
+    <ul class="row" style="width: max-content;margin-left: auto;margin-right: auto">
         <li class="mr-2" style="font-size:13px; color: aliceblue">
             Tentang Kami
         </li>
         <li class="mr-2" style="font-size:13px; color: aliceblue">
             Kontak Kami
         </li>
-        <li  style="font-size:13px; color: aliceblue">
+        <li style="font-size:13px; color: aliceblue">
             Pasang Lowongan
         </li>
     </ul>
-      <!-- Social buttons -->
+    <!-- Social buttons -->
 
     </div>
     <!-- Footer Elements -->
@@ -88,7 +94,7 @@
     <div class="container">
         <div class="footer-copyright text-center py-3" style="font-size:14px; color: aliceblue">© 2020 Copyright:
             <a href="https://mdbootstrap.com/" style="font-size:14px; color: aliceblue"> Areakerja.com</a>
-    </div>
-    <!-- Copyright -->
+        </div>
+        <!-- Copyright -->
 
-  </footer>
+</footer>
