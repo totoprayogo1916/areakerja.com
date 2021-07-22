@@ -28,7 +28,7 @@
                         </div>
 
                         <div class="container text-center my-3">
-                          <a href="#" class="btn btn-primary">Read More</a>
+                          <a href="{{ route('kandidat.kandidat.show', $kandidat->mitra->slug) }}" class="btn btn-primary">Read More</a>
                         </div>
                       </div>
                     </div>
