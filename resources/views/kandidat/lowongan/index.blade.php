@@ -18,7 +18,7 @@
                     <div class="card" style="overflow: hidden">
                       <div class="body">
                         <div class="img text-center" style="height: 80%;background-image: url('http://i.imgur.com/9HMnxKs.png');background-repeat: no-repeat;background-size: 100% 50%; ">
-                          <img class="rounded-circle my-3" style="height: 100px;width: 100px;" src="https://asset.kompas.com/crops/DAT0bF9Dp21QqlgqXD-UcsBpxY4=/20x0:992x648/750x500/data/photo/2018/01/14/2342554562.jpg" alt="">
+                          <img class="rounded-circle my-3" style="height: 100px;width: 100px;" src= "{{ url('img/mitralogo') }}/{{ $kandidat->mitra->logo }}" alt="">
                         </div>
                         <div class="nama text-center">
                           <h6>
