@@ -1,9 +1,18 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
+            @if (App\Role_User::where('user_id', auth()->user()->id)->first()->role_id == 3)
             <a href="{{ route('mitra.home') }}"> <img alt="image" src="{{ url('otika/assets/img/logo.png') }}"
                     class="header-logo" /> <span class="logo-name">Mitra</span>
             </a>
+            @endif
+
+            @if (App\Role_User::where('user_id', auth()->user()->id)->first()->role_id == 4)
+            <a href="{{ route('kandidat.awal') }}"> <img alt="image" src="{{ url('otika/assets/img/logo.png') }}"
+                class="header-logo" /> <span class="logo-name">Kandidat</span>
+        </a>
+            @endif
+
         </div>
 
         @if (App\Role_User::where('user_id', auth()->user()->id)->first()->role_id == 4)
