@@ -12,10 +12,12 @@
     <ul class="navbar-nav navbar-right">
 
 
-        <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
-                class="nav-link notification-toggle nav-link-lg">
-                <span style="color: #fe7b54">
-                    1000 AKC</span> <i class="fas fa-coins" style="color: #fe7b54"></i>
+        <li class="dropdown dropdown-list-toggle">
+            <a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg">
+                @if (App\Role_User::where('user_id', auth()->user()->id)->first()->role_id == 3)
+                    <span style="color: #fe7b54">{{ $mitra->koin }} AKC</span>
+                @endif
+                <i class="fas fa-coins" style="color: #fe7b54"></i>
             </a>
             <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
                 <div class="dropdown-header">
@@ -25,9 +27,9 @@
                     </div>
                 </div>
                 <div class="dropdown-list-content dropdown-list-icons">
-                    <a href="#" class="dropdown-item dropdown-item-unread"> <span
-                            class="dropdown-item-icon bg-primary text-white"> <i class="fas
-                                              fa-code"></i>
+                    <a href="#" class="dropdown-item dropdown-item-unread">
+                        <span class="dropdown-item-icon bg-primary text-white">
+                            <i class="fas fa-code"></i>
                         </span> <span class="dropdown-item-desc"> Template update is
                             available now! <span class="time">2 Min
                                 Ago</span>

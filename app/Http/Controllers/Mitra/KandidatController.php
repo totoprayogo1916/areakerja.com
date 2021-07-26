@@ -56,6 +56,8 @@ class KandidatController extends Controller
     {
         $user_id = auth()->user()->id;
         $mitra   = Mitra::where('idUser', $user_id)->first();
+        $newKoin = $mitra->koin - 2;
+        $mitra->update(['koin' => $newKoin]);
 
         Mitra_Kandidat::create([
             'idMitra'    => $mitra->id,
