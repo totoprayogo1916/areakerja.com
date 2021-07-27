@@ -85,7 +85,7 @@ Route::group(['prefix' => 'mitra', 'as' => 'mitra.', 'namespace' => 'Mitra', 'mi
     //============== Kandidat ======================
     // Route::resource('kandidat', 'KandidatController');
     Route::get('/kandidat', 'KandidatController@index')->name('kandidat.index');
-    Route::get('/kandidat/buka', 'KandidatController@open')->name('kandidat.buka');
+    Route::post('/kandidat/buka', 'KandidatController@open')->name('kandidat.buka');
     Route::get('/kandidat/show/{slug}', 'KandidatController@show')->name('kandidat.show');
     Route::get('/kandidat/hire/{id}', 'KandidatController@hire')->name('kandidat.hire');
 

@@ -13,7 +13,7 @@ class Kandidat extends Model
 
     protected $fillable = [
         'nama',
-        'skillUtama',
+        'idSkill',
         'domisili',
         'idUser',
         'updated_at',
@@ -23,5 +23,10 @@ class Kandidat extends Model
     public function rekomendasi()
     {
         return $this->hasMany(Rekomendasi::class, 'idKandidat');
+    }
+
+    public function mainSkill()
+    {
+        return $this->belongsTo(MainSkill::class, 'idSkill');
     }
 }

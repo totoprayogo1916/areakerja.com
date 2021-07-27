@@ -47,6 +47,7 @@
                                     </div>
                                 </div>
 
+
                                 <div class="row mt-3 px-3">
 
                                     @foreach ($kandidat as $kan)
@@ -63,7 +64,7 @@
                                                         <h6>
                                                             {{ $kan->kandidat->nama }}
                                                         </h6>
-                                                        <span>{{ $kan->kandidat->skillUtama }}</span>
+                                                        <span>{{ $kan->kandidat->mainSkill->nama }}</span>
                                                     </div>
                                                     <div class="nama text-center">
                                                         <h6>
@@ -179,6 +180,54 @@
                             <i class="fas fa-undo"></i> Restore Default
                         </a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="formModal">Buka Kandidat</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="" action={{ route('mitra.kandidat.buka') }} method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <div class="form-group">
+                            <label>Skill / Keahlian</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                </div>
+                                <select id="idSkill" name="idSkill" class="form-control">
+                                    @foreach ($mainSkill as $skill)
+                                        <option value={{ $skill->id }}>{{ $skill->nama }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Jumlah Kandidat</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fas fa-address-card"></i>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Jumlah" name="jumlah" id="jumlah">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary m-t-15 waves-effect">Buka
+                            Kandidat</button>
+                    </form>
                 </div>
             </div>
         </div>

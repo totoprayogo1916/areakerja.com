@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Mitra;
 use App\Http\Controllers\Controller;
 use App\Kandidat;
 use App\Lowonganmitra;
+use App\MainSkill;
 use App\Mitra;
 use App\Mitra_Kandidat;
 use App\Organisasi;
@@ -13,6 +14,7 @@ use App\Rekomendasi;
 use App\Riwayatpendidikan;
 use App\Sertifikasi;
 use App\Skill;
+use Illuminate\Http\Request;
 
 class KandidatController extends Controller
 {
@@ -20,29 +22,28 @@ class KandidatController extends Controller
     {
         $user_id  = auth()->user()->id;
         $lowongan = Lowonganmitra::all();
+        $mainSkill = MainSkill::all();
         // $kandidat = Kandidat::all();
         $kandidat = Rekomendasi::where('idMitra', $user_id)->get();
         $mitra    = Mitra::where('idUser', $user_id)->first();
 
-        return view('mitra.kandidat.index', compact('lowongan', 'mitra', 'kandidat'));
+        return view('mitra.kandidat.index', compact('lowongan', 'mitra', 'kandidat', 'mainSkill'));
     }
 
-    public function open()
+    public function open(Request $request)
     {
         $user_id      = auth()->user()->id;
         $mitra        = Mitra::where('idUser', $user_id)->first();
         $mainKandidat = Kandidat::all();
         $kandidat     = Rekomendasi::where('idMitra', $user_id)->get();
-        $b            = 2;
-        // dd($mainKandidat[0]->skillUtama);
+        $b            = $request->jumlah + 1;
+        // dd($mainKandidat[0]->idSkill);
         for ($i = 1; $i < $b; $i++) {
             $a = $i - 1;
             if (empty($kandidat[$a]->idKandidat)) {
                 if (empty(Kandidat::where('id', $i)->first()->id)) {
                     return redirect()->route('mitra.kandidat.index');
-                }
-                // dd(empty(Rekomendasi::where('idKandidat', $i)->first()));
-                if (! empty($mainKandidat[$a]->skillUtama === 'Front-End Developer') && empty(Rekomendasi::where('idKandidat', $i)->first())) {
+                } else if (!empty("" . $mainKandidat[$a]->idSkill . "" === $request->idSkill) && empty(Rekomendasi::where('idKandidat', $i)->first())) {
                     $newKoin = $mitra->koin - 2;
                     $mitra->update(['koin' => $newKoin]);
                     Rekomendasi::create([

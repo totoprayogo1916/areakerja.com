@@ -1,6 +1,7 @@
 <?php
 
 use Database\Seeders\ArticleSeeder;
+use Database\Seeders\MainSkillSeeder;
 use Database\Seeders\MitraSeeder;
 use Database\Seeders\OrganisasiSeeder;
 use Database\Seeders\PengalamanSeeder;
@@ -27,6 +28,7 @@ class DatabaseSeeder extends Seeder
             JobsTableSeeder::class,
             PriceSeeder::class,
             MitraSeeder::class,
+            MainSkillSeeder::class,
             KandidatSeeder::class,
             OrganisasiSeeder::class,
             PengalamanSeeder::class,

@@ -20,7 +20,8 @@
                                     <div class="nama container">
                                         <h3 style="color: #000">{{ $kandidat->nama }}</h3>
 
-                                        <h5 class="font-weight-normal" style="color: #000">{{ $kandidat->skillUtama }}
+                                        <h5 class="font-weight-normal" style="color: #000">
+                                            {{ $kandidat->mainSkill->nama }}
                                         </h5>
 
                                         <h6 class="font-weight-normal" style="color: #000">{{ $kandidat->domisili }}</h6>

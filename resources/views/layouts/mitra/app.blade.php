@@ -115,51 +115,7 @@
     </div>
     </div>
     </div>
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="formModal">Buka Kandidat</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form class="">
-                <div class="form-group">
-                  <label>Skill / Keahlian</label>
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="fas fa-briefcase"></i>
-                      </div>
-                    </div>
-                    <select id="gender" name="gender" class="form-control">
-                        <option value="front">Front End Developer</option>
-                        <option value="back">Back End Developer</option>
-                        <option value="fullstack">Full Stack Developer</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Jumlah Kandidat</label>
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="fas fa-address-card"></i>
-                      </div>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Jumlah" name="password">
-                  </div>
-                </div>
 
-                <button type="button" class="btn btn-primary m-t-15 waves-effect">Buka Kandidat</button>
-              </form>
-            </div>
-          </div>
-    </div>
-    </div>
     @include('sweetalert::alert')
 
     @stack('before-script')
@@ -176,7 +132,8 @@
     <script src="{{ url('otika/assets/js/custom.js') }}"></script>
 
     <script src="{{ url('otika/assets/bundles/datatables/datatables.min.js') }}"></script>
-    <script src="{{ url('otika/assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ url('otika/assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js') }}">
+    </script>
     <script src="{{ url('otika/assets/bundles/jquery-ui/jquery-ui.min.js') }}"></script>
     <script src="{{ url('otika/assets/js/page/datatables.js') }}"></script>
     <script src="{{ url('otika/assets/js/page/advance-table.js') }}"></script>

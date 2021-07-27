@@ -14,7 +14,7 @@ class KandidatSeeder extends Seeder
     {
         $kandidat = Kandidat::create([
             'nama'       => 'Rere Anggraini',
-            'skillUtama' => 'Front-End Developer',
+            'idSkill' => '1',
             'domisili'   => 'Yogyakarta',
             'biografi'   => 'Hai nama saya Rere Anggraini, saya berasal dari Yogyakarta',
             'slug'       => 'Rere-Anggraini',
@@ -24,7 +24,7 @@ class KandidatSeeder extends Seeder
 
         $kandidat = Kandidat::create([
             'nama'       => 'Putra Arjuna',
-            'skillUtama' => 'Back-End Developer',
+            'idSkill' => '2',
             'domisili'   => 'Bandung',
             'biografi'   => 'Hai nama saya Putra Arjuna, saya berasal dari Bandung',
             'slug'       => 'Putra-Arjuna',
@@ -35,7 +35,7 @@ class KandidatSeeder extends Seeder
 
         $kandidat = Kandidat::create([
             'nama'       => 'Ervalina Arisanto',
-            'skillUtama' => 'Full Stack Developer',
+            'idSkill' => '3',
             'domisili'   => 'Surabaya',
             'biografi'   => 'Hai nama saya Ervalina Arisanto, saya berasal dari Surabaya',
             'slug'       => 'Ervalina-Arisanto',
@@ -45,7 +45,7 @@ class KandidatSeeder extends Seeder
 
         $kandidat = Kandidat::create([
             'nama'       => 'Rivan Sanjaya Arisanto',
-            'skillUtama' => 'Android Developer',
+            'idSkill' => '4',
             'domisili'   => 'Semarang',
             'biografi'   => 'Hai nama saya Rivan Sanjaya Arisanto, saya berasal dari Semarang',
             'slug'       => 'Rivan-Sanjaya-Arisanto',
@@ -55,7 +55,7 @@ class KandidatSeeder extends Seeder
 
         $kandidat = Kandidat::create([
             'nama'       => 'Atmanda Putri',
-            'skillUtama' => 'Android Developer',
+            'idSkill' => '4',
             'domisili'   => 'Klaten',
             'biografi'   => 'Hai nama saya Atmanda Putri, saya berasal dari KLaten',
             'slug'       => 'Atmanda-Putri',
@@ -65,7 +65,7 @@ class KandidatSeeder extends Seeder
 
         $kandidat = Kandidat::create([
             'nama'       => 'Rizaldi Azhar',
-            'skillUtama' => 'Back-End Developer',
+            'idSkill' => '2',
             'domisili'   => 'Surabaya',
             'biografi'   => 'Hai nama saya Rizaldi Azhar, saya berasal dari Surabaya',
             'slug'       => 'Rizaldi-Azhar',
@@ -75,7 +75,7 @@ class KandidatSeeder extends Seeder
 
         $kandidat = Kandidat::create([
             'nama'       => 'Killa Anggraini',
-            'skillUtama' => 'Back-End Developer',
+            'idSkill' => '2',
             'domisili'   => 'Semarang',
             'biografi'   => 'Hai nama saya Killa Anggraini, saya berasal dari Semarang',
             'slug'       => 'Killa-Anggraini',
@@ -85,7 +85,7 @@ class KandidatSeeder extends Seeder
 
         $kandidat = Kandidat::create([
             'nama'       => 'Nimas Ayu',
-            'skillUtama' => 'Front-End Developer',
+            'idSkill' => '1',
             'domisili'   => 'Yogyakarta',
             'biografi'   => 'Hai nama saya Nimas Ayu, saya berasal dari Yogyakarta',
             'slug'       => 'Nimas-Ayu',
@@ -95,7 +95,7 @@ class KandidatSeeder extends Seeder
 
         $kandidat = Kandidat::create([
             'nama'       => 'Bagas Pradita',
-            'skillUtama' => 'Full Stack Developer',
+            'idSkill' => '3',
             'domisili'   => 'Yogyakarta',
             'biografi'   => 'Hai nama saya Bagas Pradita, saya berasal dari Yogyakarta',
             'slug'       => 'Bagas-Pradita',
@@ -105,7 +105,7 @@ class KandidatSeeder extends Seeder
 
         $kandidat = Kandidat::create([
             'nama'       => 'Unggul Putra',
-            'skillUtama' => 'Full Stack Developer',
+            'idSkill' => '3',
             'domisili'   => 'Yogyakarta',
             'biografi'   => 'Hai nama saya Unggul Putra, saya berasal dari Yogyakarta',
             'slug'       => 'Unggul-Putra',
@@ -115,7 +115,7 @@ class KandidatSeeder extends Seeder
 
         $kandidat = Kandidat::create([
             'nama'       => 'Valeno Aksara',
-            'skillUtama' => 'Full Stack Developer',
+            'idSkill' => '3',
             'domisili'   => 'Surakarta',
             'biografi'   => 'Hai nama saya Valeno Aksara, saya berasal dari Surakarta',
             'slug'       => 'Valeno-Aksara',
@@ -125,7 +125,7 @@ class KandidatSeeder extends Seeder
 
         $kandidat = Kandidat::create([
             'nama'       => 'Nila Cahyani',
-            'skillUtama' => 'Android Developer',
+            'idSkill' => '4',
             'domisili'   => 'Madiun',
             'biografi'   => 'Hai nama saya Nila Cahyani, saya berasal dari Madiun',
             'slug'       => 'Nila-Cahyani',
@@ -135,7 +135,7 @@ class KandidatSeeder extends Seeder
 
         $kandidat = Kandidat::create([
             'nama'       => 'Aditya Laksana',
-            'skillUtama' => 'Jaringan',
+            'idSkill' => '5',
             'domisili'   => 'Surakarta',
             'biografi'   => 'Hai nama saya Aditya Laksana, saya berasal dari Surakarta',
             'slug'       => 'Aditya-Laksana',
@@ -145,7 +145,7 @@ class KandidatSeeder extends Seeder
 
         $kandidat = Kandidat::create([
             'nama'       => 'Rinjani Sekar',
-            'skillUtama' => 'Front-End Developer',
+            'idSkill' => '1',
             'domisili'   => 'Malang',
             'biografi'   => 'Hai nama saya Rinjani Sekar, saya berasal dari Malang',
             'slug'       => 'Rinjani-Sekar',
@@ -155,7 +155,7 @@ class KandidatSeeder extends Seeder
 
         $kandidat = Kandidat::create([
             'nama'       => 'Yoga Ardyansyah',
-            'skillUtama' => 'Jaringan',
+            'idSkill' => '5',
             'domisili'   => 'Malang',
             'biografi'   => 'Hai nama saya Yoga Ardyansyah, saya berasal dari Malang',
             'slug'       => 'Yoga-Ardyansyah',
@@ -165,7 +165,7 @@ class KandidatSeeder extends Seeder
 
         $kandidat = Kandidat::create([
             'nama'       => 'Aldiva Putri',
-            'skillUtama' => 'Full Stack Developer',
+            'idSkill' => '3',
             'domisili'   => 'Yogyakarta',
             'biografi'   => 'Hai nama saya Aldiva Putri, saya berasal dari Yogyakarta',
             'slug'       => 'Aldiva-Putri',
@@ -175,7 +175,7 @@ class KandidatSeeder extends Seeder
 
         $kandidat = Kandidat::create([
             'nama'       => 'Yusuf Eka',
-            'skillUtama' => 'Jaringan',
+            'idSkill' => '5',
             'domisili'   => 'Purworejo',
             'biografi'   => 'Hai nama saya Yusuf Eka, saya berasal dari Purworejo',
             'slug'       => 'Yusuf-Eka',
