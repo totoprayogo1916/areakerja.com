@@ -40,7 +40,7 @@ class KandidatController extends Controller
         // dd($mainKandidat[0]->idSkill);
         for ($i = 1; $i < $b; $i++) {
             $a = $i - 1;
-            if (empty($kandidat[$a]->idKandidat)) {
+            if (empty($kandidat[$a]->idKandidat) || empty(Rekomendasi::where('idKandidat', $i)->first())) {
                 if (empty(Kandidat::where('id', $i)->first()->id)) {
                     return redirect()->route('mitra.kandidat.index');
                 } else if (!empty("" . $mainKandidat[$a]->idSkill . "" === $request->idSkill) && empty(Rekomendasi::where('idKandidat', $i)->first())) {
