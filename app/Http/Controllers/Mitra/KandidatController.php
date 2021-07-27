@@ -31,21 +31,26 @@ class KandidatController extends Controller
     {
         $user_id  = auth()->user()->id;
         $mitra   = Mitra::where('idUser', $user_id)->first();
-        // $kandidat = Kandidat::all();
+        $mainKandidat = Kandidat::all();
         $kandidat = Rekomendasi::where('idMitra', $user_id)->get();
         $b = 2;
+        // dd($mainKandidat[0]->skillUtama);
         for ($i = 1; $i < $b; $i++) {
             $a = $i - 1;
             if (empty($kandidat[$a]->idKandidat)) {
                 if (empty(Kandidat::where('id', $i)->first()->id)) {
                     return redirect()->route('mitra.kandidat.index');
                 } else {
-                    $newKoin = $mitra->koin - 2;
-                    $mitra->update(['koin' => $newKoin]);
-                    Rekomendasi::create([
-                        'idMitra'    => $mitra->id,
-                        'idKandidat' => $i,
-                    ]);
+                    if (!empty($mainKandidat[$a]->skillUtama == "Full Stack Developer")) {
+                        $newKoin = $mitra->koin - 2;
+                        $mitra->update(['koin' => $newKoin]);
+                        Rekomendasi::create([
+                            'idMitra'    => $mitra->id,
+                            'idKandidat' => $i,
+                        ]);
+                    } else {
+                        $b++;
+                    }
                 }
             } else {
                 $b++;
@@ -86,8 +91,6 @@ class KandidatController extends Controller
     {
         $user_id = auth()->user()->id;
         $mitra   = Mitra::where('idUser', $user_id)->first();
-        $newKoin = $mitra->koin - 2;
-        $mitra->update(['koin' => $newKoin]);
 
         Mitra_Kandidat::create([
             'idMitra'    => $mitra->id,
