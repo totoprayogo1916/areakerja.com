@@ -15,6 +15,7 @@ class UsersTableSeeder extends Seeder
                 'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
                 'remember_token' => null,
             ],
+
             [
                 'id'             => 2,
                 'name'           => 'Mitra',
@@ -59,6 +60,70 @@ class UsersTableSeeder extends Seeder
                 'id'             => 7,
                 'name'           => 'Rivan Sanjaya Arisanto',
                 'email'          => 'rivan@rivan.com',
+                'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
+                'remember_token' => null,
+            ],
+
+            [
+                'id'             => 8,
+                'name'           => 'Atmanda Putri',
+                'email'          => 'atmanda@atmanda.com',
+                'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
+                'remember_token' => null,
+            ],
+
+            [
+                'id'             => 9,
+                'name'           => 'Rizaldi Azhar',
+                'email'          => 'rizaldi@rizaldi.com',
+                'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
+                'remember_token' => null,
+            ],
+
+            [
+                'id'             => 10,
+                'name'           => 'Killa Anggraini',
+                'email'          => 'killa@killa.com',
+                'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
+                'remember_token' => null,
+            ],
+
+            [
+                'id'             => 11,
+                'name'           => 'Nimas Ayu',
+                'email'          => 'nimas@nimas.com',
+                'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
+                'remember_token' => null,
+            ],
+
+            [
+                'id'             => 12,
+                'name'           => 'Bagas Pradita',
+                'email'          => 'bagas@bagas.com',
+                'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
+                'remember_token' => null,
+            ],
+
+            [
+                'id'             => 13,
+                'name'           => 'Unggul Putra',
+                'email'          => 'unggul@unggul.com',
+                'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
+                'remember_token' => null,
+            ],
+
+            [
+                'id'             => 14,
+                'name'           => 'Valeno Aksara',
+                'email'          => 'valeno@valeno.com',
+                'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
+                'remember_token' => null,
+            ],
+
+            [
+                'id'             => 15,
+                'name'           => 'Nila Cahyani',
+                'email'          => 'nila@nila.com',
                 'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
                 'remember_token' => null,
             ],
