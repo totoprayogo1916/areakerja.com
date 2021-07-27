@@ -41,7 +41,8 @@ class KandidatController extends Controller
                 if (empty(Kandidat::where('id', $i)->first()->id)) {
                     return redirect()->route('mitra.kandidat.index');
                 } else {
-                    if (!empty($mainKandidat[$a]->skillUtama == "Full Stack Developer")) {
+                    // dd(empty(Rekomendasi::where('idKandidat', $i)->first()));
+                    if (!empty($mainKandidat[$a]->skillUtama == "Front-End Developer") && empty(Rekomendasi::where('idKandidat', $i)->first())) {
                         $newKoin = $mitra->koin - 2;
                         $mitra->update(['koin' => $newKoin]);
                         Rekomendasi::create([
