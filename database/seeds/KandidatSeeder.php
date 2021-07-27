@@ -132,5 +132,55 @@ class KandidatSeeder extends Seeder
             'idUser'     => '15',
         ]);
         $kandidat->save();
+
+        $kandidat = Kandidat::create([
+            'nama'       => 'Aditya Laksana',
+            'skillUtama' => 'Jaringan',
+            'domisili'   => 'Surakarta',
+            'biografi'   => 'Hai nama saya Aditya Laksana, saya berasal dari Surakarta',
+            'slug'       => 'Aditya-Laksana',
+            'idUser'     => '16',
+        ]);
+        $kandidat->save();
+
+        $kandidat = Kandidat::create([
+            'nama'       => 'Rinjani Sekar',
+            'skillUtama' => 'Front-End Developer',
+            'domisili'   => 'Malang',
+            'biografi'   => 'Hai nama saya Rinjani Sekar, saya berasal dari Malang',
+            'slug'       => 'Rinjani-Sekar',
+            'idUser'     => '17',
+        ]);
+        $kandidat->save();
+
+        $kandidat = Kandidat::create([
+            'nama'       => 'Yoga Ardyansyah',
+            'skillUtama' => 'Jaringan',
+            'domisili'   => 'Malang',
+            'biografi'   => 'Hai nama saya Yoga Ardyansyah, saya berasal dari Malang',
+            'slug'       => 'Yoga-Ardyansyah',
+            'idUser'     => '18',
+        ]);
+        $kandidat->save();
+
+        $kandidat = Kandidat::create([
+            'nama'       => 'Aldiva Putri',
+            'skillUtama' => 'Full Stack Developer',
+            'domisili'   => 'Yogyakarta',
+            'biografi'   => 'Hai nama saya Aldiva Putri, saya berasal dari Yogyakarta',
+            'slug'       => 'Aldiva-Putri',
+            'idUser'     => '19',
+        ]);
+        $kandidat->save();
+
+        $kandidat = Kandidat::create([
+            'nama'       => 'Yusuf Eka',
+            'skillUtama' => 'Jaringan',
+            'domisili'   => 'Purworejo',
+            'biografi'   => 'Hai nama saya Yusuf Eka, saya berasal dari Purworejo',
+            'slug'       => 'Yusuf-Eka',
+            'idUser'     => '20',
+        ]);
+        $kandidat->save();
     }
 }

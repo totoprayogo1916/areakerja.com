@@ -127,6 +127,46 @@ class UsersTableSeeder extends Seeder
                 'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
                 'remember_token' => null,
             ],
+
+            [
+                'id'             => 16,
+                'name'           => 'Aditya Laksana',
+                'email'          => 'aditya@aditya.com',
+                'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
+                'remember_token' => null,
+            ],
+
+            [
+                'id'             => 17,
+                'name'           => 'Rinjani Sekar',
+                'email'          => 'rinjani@rinjani.com',
+                'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
+                'remember_token' => null,
+            ],
+
+            [
+                'id'             => 18,
+                'name'           => 'Yoga Ardyansyah',
+                'email'          => 'yoga@yoga.com',
+                'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
+                'remember_token' => null,
+            ],
+
+            [
+                'id'             => 19,
+                'name'           => 'Aldiva Putri',
+                'email'          => 'aldiva@aldiva.com',
+                'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
+                'remember_token' => null,
+            ],
+
+            [
+                'id'             => 20,
+                'name'           => 'Yusuf Eka',
+                'email'          => 'yusuf@yusuf.com',
+                'password'       => '$2y$10$p2lAE/PWMuS6r/5BWo/uDOE/6ju0WeKff9J7AqHmzSLnd4yRSTljy',
+                'remember_token' => null,
+            ],
         ];
 
         User::insert($users);
