@@ -9,10 +9,10 @@ use App\Mitra;
 use App\Mitra_Kandidat;
 use App\Organisasi;
 use App\Pengalaman;
+use App\Rekomendasi;
 use App\Riwayatpendidikan;
 use App\Sertifikasi;
 use App\Skill;
-use App\Rekomendasi;
 
 class KandidatController extends Controller
 {
@@ -29,34 +29,33 @@ class KandidatController extends Controller
 
     public function open()
     {
-        $user_id  = auth()->user()->id;
-        $mitra   = Mitra::where('idUser', $user_id)->first();
+        $user_id      = auth()->user()->id;
+        $mitra        = Mitra::where('idUser', $user_id)->first();
         $mainKandidat = Kandidat::all();
-        $kandidat = Rekomendasi::where('idMitra', $user_id)->get();
-        $b = 2;
+        $kandidat     = Rekomendasi::where('idMitra', $user_id)->get();
+        $b            = 2;
         // dd($mainKandidat[0]->skillUtama);
         for ($i = 1; $i < $b; $i++) {
             $a = $i - 1;
             if (empty($kandidat[$a]->idKandidat)) {
                 if (empty(Kandidat::where('id', $i)->first()->id)) {
                     return redirect()->route('mitra.kandidat.index');
+                }
+                // dd(empty(Rekomendasi::where('idKandidat', $i)->first()));
+                if (! empty($mainKandidat[$a]->skillUtama === 'Front-End Developer') && empty(Rekomendasi::where('idKandidat', $i)->first())) {
+                    $newKoin = $mitra->koin - 2;
+                    $mitra->update(['koin' => $newKoin]);
+                    Rekomendasi::create([
+                        'idMitra'    => $mitra->id,
+                        'idKandidat' => $i,
+                    ]);
                 } else {
-                    // dd(empty(Rekomendasi::where('idKandidat', $i)->first()));
-                    if (!empty($mainKandidat[$a]->skillUtama == "Front-End Developer") && empty(Rekomendasi::where('idKandidat', $i)->first())) {
-                        $newKoin = $mitra->koin - 2;
-                        $mitra->update(['koin' => $newKoin]);
-                        Rekomendasi::create([
-                            'idMitra'    => $mitra->id,
-                            'idKandidat' => $i,
-                        ]);
-                    } else {
-                        $b++;
-                    }
+                    $b++;
                 }
             } else {
                 $b++;
             }
-        };
+        }
 
         return redirect()->route('mitra.kandidat.index');
     }

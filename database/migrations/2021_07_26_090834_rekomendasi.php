@@ -30,6 +30,6 @@ class Rekomendasi extends Migration
      */
     public function down()
     {
-        //
+
     }
 }

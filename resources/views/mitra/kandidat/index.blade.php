@@ -42,10 +42,11 @@
                                 <div class="cari p-2 mt-2 mx-3 border-bottom">
                                     <div class="d-flex justify-content-between">
                                         <h5>Daftar Kandidat</h5>
-                                        <a href="{{ route('mitra.kandidat.buka') }}" class="btn btn-primary">Buka
-                                            Kandidat</a>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#exampleModalCenter">Buka Kandidat</button>
                                     </div>
                                 </div>
+
                                 <div class="row mt-3 px-3">
 
                                     @foreach ($kandidat as $kan)
@@ -86,6 +87,7 @@
 
                 </div>
             </div>
+
         </section>
         <div class="settingSidebar">
             <a href="javascript:void(0)" class="settingPanelToggle"> <i class="fa fa-spin fa-cog"></i>

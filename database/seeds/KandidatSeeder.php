@@ -62,7 +62,7 @@ class KandidatSeeder extends Seeder
             'idUser'     => '8',
         ]);
         $kandidat->save();
-        
+
         $kandidat = Kandidat::create([
             'nama'       => 'Rizaldi Azhar',
             'skillUtama' => 'Back-End Developer',
