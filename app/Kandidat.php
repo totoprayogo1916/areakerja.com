@@ -19,4 +19,10 @@ class Kandidat extends Model
         'updated_at',
         'deleted_at',
     ];
+
+
+    public function rekomendasi()
+    {
+        return $this->hasMany(Rekomendasi::class, 'idKandidat');
+    }
 }

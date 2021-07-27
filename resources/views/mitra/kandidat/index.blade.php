@@ -40,7 +40,11 @@
                         <div class="card">
                             <div class="body container">
                                 <div class="cari p-2 mt-2 mx-3 border-bottom">
-                                    <h5>Daftar Kandidat</h5>
+                                    <div class="d-flex justify-content-between">
+                                        <h5>Daftar Kandidat</h5>
+                                        <a href="{{ route('mitra.kandidat.buka') }}" class="btn btn-primary">Buka
+                                            Kandidat</a>
+                                    </div>
                                 </div>
                                 <div class="row mt-3 px-3">
 
@@ -56,9 +60,9 @@
                                                     </div>
                                                     <div class="nama text-center">
                                                         <h6>
-                                                            {{ $kan->nama }}
+                                                            {{ $kan->kandidat->nama }}
                                                         </h6>
-                                                        <span>{{ $kan->skillUtama }}</span>
+                                                        <span>{{ $kan->kandidat->skillUtama }}</span>
                                                     </div>
                                                     <div class="nama text-center">
                                                         <h6>
@@ -67,7 +71,7 @@
                                                     </div>
 
                                                     <div class="container text-center my-3">
-                                                        <a href="{{ route('mitra.kandidat.show', $kan->slug) }}"
+                                                        <a href="{{ route('mitra.kandidat.show', $kan->kandidat->slug) }}"
                                                             class="btn btn-primary">Read More</a>
                                                     </div>
                                                 </div>

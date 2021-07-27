@@ -12,6 +12,7 @@ use App\Pengalaman;
 use App\Riwayatpendidikan;
 use App\Sertifikasi;
 use App\Skill;
+use App\Rekomendasi;
 
 class KandidatController extends Controller
 {
@@ -19,10 +20,39 @@ class KandidatController extends Controller
     {
         $user_id  = auth()->user()->id;
         $lowongan = Lowonganmitra::all();
-        $kandidat = Kandidat::all();
+        // $kandidat = Kandidat::all();
+        $kandidat = Rekomendasi::where('idMitra', $user_id)->get();
         $mitra    = Mitra::where('idUser', $user_id)->first();
 
         return view('mitra.kandidat.index', compact('lowongan', 'mitra', 'kandidat'));
+    }
+
+    public function open()
+    {
+        $user_id  = auth()->user()->id;
+        $mitra   = Mitra::where('idUser', $user_id)->first();
+        // $kandidat = Kandidat::all();
+        $kandidat = Rekomendasi::where('idMitra', $user_id)->get();
+        $b = 2;
+        for ($i = 1; $i < $b; $i++) {
+            $a = $i - 1;
+            if (empty($kandidat[$a]->idKandidat)) {
+                if (empty(Kandidat::where('id', $i)->first()->id)) {
+                    return redirect()->route('mitra.kandidat.index');
+                } else {
+                    $newKoin = $mitra->koin - 2;
+                    $mitra->update(['koin' => $newKoin]);
+                    Rekomendasi::create([
+                        'idMitra'    => $mitra->id,
+                        'idKandidat' => $i,
+                    ]);
+                }
+            } else {
+                $b++;
+            }
+        };
+
+        return redirect()->route('mitra.kandidat.index');
     }
 
     public function show($slug)
