@@ -16,6 +16,7 @@ class Kandidat extends Model
         'idSkill',
         'domisili',
         'idUser',
+        'status',
         'updated_at',
         'deleted_at',
     ];

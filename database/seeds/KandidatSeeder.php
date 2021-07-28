@@ -18,6 +18,7 @@ class KandidatSeeder extends Seeder
             'domisili'   => 'Yogyakarta',
             'biografi'   => 'Hai nama saya Rere Anggraini, saya berasal dari Yogyakarta',
             'slug'       => 'Rere-Anggraini',
+            'status' => 'hire',
             'idUser'     => '4',
         ]);
         $kandidat->save();
@@ -28,6 +29,8 @@ class KandidatSeeder extends Seeder
             'domisili'   => 'Bandung',
             'biografi'   => 'Hai nama saya Putra Arjuna, saya berasal dari Bandung',
             'slug'       => 'Putra-Arjuna',
+            'status' => 'unhire',
+            'status' => 'unhire',
             'idUser'     => '5',
 
         ]);
@@ -39,6 +42,7 @@ class KandidatSeeder extends Seeder
             'domisili'   => 'Surabaya',
             'biografi'   => 'Hai nama saya Ervalina Arisanto, saya berasal dari Surabaya',
             'slug'       => 'Ervalina-Arisanto',
+            'status' => 'unhire',
             'idUser'     => '6',
         ]);
         $kandidat->save();
@@ -49,6 +53,7 @@ class KandidatSeeder extends Seeder
             'domisili'   => 'Semarang',
             'biografi'   => 'Hai nama saya Rivan Sanjaya Arisanto, saya berasal dari Semarang',
             'slug'       => 'Rivan-Sanjaya-Arisanto',
+            'status' => 'unhire',
             'idUser'     => '7',
         ]);
         $kandidat->save();
@@ -59,6 +64,7 @@ class KandidatSeeder extends Seeder
             'domisili'   => 'Klaten',
             'biografi'   => 'Hai nama saya Atmanda Putri, saya berasal dari KLaten',
             'slug'       => 'Atmanda-Putri',
+            'status' => 'unhire',
             'idUser'     => '8',
         ]);
         $kandidat->save();
@@ -69,6 +75,7 @@ class KandidatSeeder extends Seeder
             'domisili'   => 'Surabaya',
             'biografi'   => 'Hai nama saya Rizaldi Azhar, saya berasal dari Surabaya',
             'slug'       => 'Rizaldi-Azhar',
+            'status' => 'unhire',
             'idUser'     => '9',
         ]);
         $kandidat->save();
@@ -79,6 +86,7 @@ class KandidatSeeder extends Seeder
             'domisili'   => 'Semarang',
             'biografi'   => 'Hai nama saya Killa Anggraini, saya berasal dari Semarang',
             'slug'       => 'Killa-Anggraini',
+            'status' => 'unhire',
             'idUser'     => '10',
         ]);
         $kandidat->save();
@@ -89,6 +97,7 @@ class KandidatSeeder extends Seeder
             'domisili'   => 'Yogyakarta',
             'biografi'   => 'Hai nama saya Nimas Ayu, saya berasal dari Yogyakarta',
             'slug'       => 'Nimas-Ayu',
+            'status' => 'unhire',
             'idUser'     => '11',
         ]);
         $kandidat->save();
@@ -99,6 +108,7 @@ class KandidatSeeder extends Seeder
             'domisili'   => 'Yogyakarta',
             'biografi'   => 'Hai nama saya Bagas Pradita, saya berasal dari Yogyakarta',
             'slug'       => 'Bagas-Pradita',
+            'status' => 'unhire',
             'idUser'     => '12',
         ]);
         $kandidat->save();
@@ -109,6 +119,7 @@ class KandidatSeeder extends Seeder
             'domisili'   => 'Yogyakarta',
             'biografi'   => 'Hai nama saya Unggul Putra, saya berasal dari Yogyakarta',
             'slug'       => 'Unggul-Putra',
+            'status' => 'unhire',
             'idUser'     => '13',
         ]);
         $kandidat->save();
@@ -119,6 +130,7 @@ class KandidatSeeder extends Seeder
             'domisili'   => 'Surakarta',
             'biografi'   => 'Hai nama saya Valeno Aksara, saya berasal dari Surakarta',
             'slug'       => 'Valeno-Aksara',
+            'status' => 'unhire',
             'idUser'     => '14',
         ]);
         $kandidat->save();
@@ -129,6 +141,7 @@ class KandidatSeeder extends Seeder
             'domisili'   => 'Madiun',
             'biografi'   => 'Hai nama saya Nila Cahyani, saya berasal dari Madiun',
             'slug'       => 'Nila-Cahyani',
+            'status' => 'unhire',
             'idUser'     => '15',
         ]);
         $kandidat->save();
@@ -139,6 +152,7 @@ class KandidatSeeder extends Seeder
             'domisili'   => 'Surakarta',
             'biografi'   => 'Hai nama saya Aditya Laksana, saya berasal dari Surakarta',
             'slug'       => 'Aditya-Laksana',
+            'status' => 'unhire',
             'idUser'     => '16',
         ]);
         $kandidat->save();
@@ -149,6 +163,7 @@ class KandidatSeeder extends Seeder
             'domisili'   => 'Malang',
             'biografi'   => 'Hai nama saya Rinjani Sekar, saya berasal dari Malang',
             'slug'       => 'Rinjani-Sekar',
+            'status' => 'unhire',
             'idUser'     => '17',
         ]);
         $kandidat->save();
@@ -159,6 +174,7 @@ class KandidatSeeder extends Seeder
             'domisili'   => 'Malang',
             'biografi'   => 'Hai nama saya Yoga Ardyansyah, saya berasal dari Malang',
             'slug'       => 'Yoga-Ardyansyah',
+            'status' => 'unhire',
             'idUser'     => '18',
         ]);
         $kandidat->save();
@@ -169,6 +185,7 @@ class KandidatSeeder extends Seeder
             'domisili'   => 'Yogyakarta',
             'biografi'   => 'Hai nama saya Aldiva Putri, saya berasal dari Yogyakarta',
             'slug'       => 'Aldiva-Putri',
+            'status' => 'unhire',
             'idUser'     => '19',
         ]);
         $kandidat->save();
@@ -179,6 +196,7 @@ class KandidatSeeder extends Seeder
             'domisili'   => 'Purworejo',
             'biografi'   => 'Hai nama saya Yusuf Eka, saya berasal dari Purworejo',
             'slug'       => 'Yusuf-Eka',
+            'status' => 'unhire',
             'idUser'     => '20',
         ]);
         $kandidat->save();

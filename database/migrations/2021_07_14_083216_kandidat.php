@@ -27,6 +27,8 @@ class Kandidat extends Migration
 
             $table->string('slug')->nullable();
 
+            $table->string('status')->nullable();
+
             $table->unsignedInteger('idUser')->nullable();
             $table->foreign('idUser', 'user_id_fk_202107211')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

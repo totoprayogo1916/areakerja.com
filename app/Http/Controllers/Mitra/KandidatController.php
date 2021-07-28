@@ -37,19 +37,28 @@ class KandidatController extends Controller
         $mainKandidat = Kandidat::all();
         $kandidat     = Rekomendasi::where('idMitra', $user_id)->get();
         $b            = $request->jumlah + 1;
-        // dd($mainKandidat[0]->idSkill);
         for ($i = 1; $i < $b; $i++) {
             $a = $i - 1;
             if (empty($kandidat[$a]->idKandidat) || empty(Rekomendasi::where('idKandidat', $i)->first())) {
                 if (empty(Kandidat::where('id', $i)->first()->id)) {
                     return redirect()->route('mitra.kandidat.index');
-                } else if (!empty("" . $mainKandidat[$a]->idSkill . "" === $request->idSkill) && empty(Rekomendasi::where('idKandidat', $i)->first())) {
-                    $newKoin = $mitra->koin - 2;
-                    $mitra->update(['koin' => $newKoin]);
-                    Rekomendasi::create([
-                        'idMitra'    => $mitra->id,
-                        'idKandidat' => $i,
-                    ]);
+                } else if (
+                    "" . $mainKandidat[$a]->idSkill . "" === $request->idSkill
+                    &&
+                    empty(Rekomendasi::where('idKandidat', $i)->first())
+                    &&
+                    $mainKandidat[$a]->status === "unhire"
+                ) {
+                    if ($mitra->koin === 0) {
+                        return redirect()->route('mitra.kandidat.index');
+                    } else {
+                        $newKoin = $mitra->koin - 2;
+                        $mitra->update(['koin' => $newKoin]);
+                        Rekomendasi::create([
+                            'idMitra'    => $mitra->id,
+                            'idKandidat' => $i,
+                        ]);
+                    }
                 } else {
                     $b++;
                 }
