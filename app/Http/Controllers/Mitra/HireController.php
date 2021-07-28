@@ -16,7 +16,7 @@ use App\Sertifikasi;
 use App\Skill;
 use Illuminate\Http\Request;
 
-class KandidatController extends Controller
+class HireController extends Controller
 {
     public function index()
     {
@@ -27,7 +27,7 @@ class KandidatController extends Controller
         $kandidat = Rekomendasi::where('idMitra', $user_id)->get();
         $mitra    = Mitra::where('idUser', $user_id)->first();
 
-        return view('mitra.kandidat.index', compact('lowongan', 'mitra', 'kandidat', 'mainSkill'));
+        return view('mitra.hire.index', compact('lowongan', 'mitra', 'kandidat', 'mainSkill'));
     }
 
     public function open(Request $request)
@@ -42,7 +42,7 @@ class KandidatController extends Controller
             $a = $i - 1;
             if (empty($kandidat[$a]->idKandidat) || empty(Rekomendasi::where('idKandidat', $i)->first())) {
                 if (empty(Kandidat::where('id', $i)->first()->id)) {
-                    return redirect()->route('mitra.kandidat.index');
+                    return redirect()->route('mitra.hire.index');
                 }
                 if (
                     '' . $mainKandidat[$a]->idSkill . '' === $request->idSkill
@@ -50,7 +50,7 @@ class KandidatController extends Controller
                     && $mainKandidat[$a]->status === 'unhire'
                 ) {
                     if ($mitra->koin === 0) {
-                        return redirect()->route('mitra.kandidat.index');
+                        return redirect()->route('mitra.hire.index');
                     }
                     $newKoin = $mitra->koin - 2;
                     $mitra->update(['koin' => $newKoin]);
@@ -66,7 +66,7 @@ class KandidatController extends Controller
             }
         }
 
-        return redirect()->route('mitra.kandidat.index');
+        return redirect()->route('mitra.hire.index');
     }
 
     public function show($slug)
@@ -83,7 +83,7 @@ class KandidatController extends Controller
         $sertifikasi = Sertifikasi::where('idKandidat', $idkandidat)->get();
         $skill       = Skill::where('idKandidat', $idkandidat)->get();
 
-        return view('mitra.kandidat.show', compact(
+        return view('mitra.hire.show', compact(
             'lowongan',
             'mitra',
             'kandidat',

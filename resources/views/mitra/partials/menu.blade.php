@@ -55,7 +55,7 @@
                     </ul>
                 </li>
                 <li
-                    class="dropdown {{ request()->is('mitra/lowongan') || request()->is('mitra/lowongan/*') ? 'active' : '' }} {{ request()->is('mitra/kandidat') || request()->is('mitra/kandidat/*') ? 'active' : '' }}">
+                    class="dropdown {{ request()->is('mitra/lowongan') || request()->is('mitra/lowongan/*') ? 'active' : '' }} {{ request()->is('mitra/kandidat') || request()->is('mitra/kandidat/*') ? 'active' : '' }} {{ request()->is('mitra/hire') || request()->is('mitra/hire/*') ? 'active' : '' }}">
                     <a href="#" class="menu-toggle nav-link has-dropdown"><i
                             data-feather="shopping-cart"></i><span>Lowongan</span></a>
                     <ul class="dropdown-menu">
@@ -67,6 +67,10 @@
                             class="{{ request()->is('mitra/kandidat') || request()->is('mitra/kandidat/*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('mitra.kandidat.index') }}"><i
                                     data-feather="grid"></i><span>Daftar Kandidat</span></a></li>
+                        <li
+                            class="{{ request()->is('mitra/hire') || request()->is('mitra/hire/*') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('mitra.hire.index') }}"><i
+                                    data-feather="grid"></i><span>Already Hired</span></a></li>
                     </ul>
                 </li>
                 <li><a class="nav-link" href="#"><i data-feather="mail"></i><span>Inbox</span></a></li>

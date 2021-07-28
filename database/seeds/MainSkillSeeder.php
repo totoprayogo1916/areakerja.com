@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\MainSkill;
+use Illuminate\Database\Seeder;
 
 class MainSkillSeeder extends Seeder
 {
@@ -15,27 +15,27 @@ class MainSkillSeeder extends Seeder
     public function run()
     {
         $MainSkill = MainSkill::create([
-            'nama'      => 'Front-End Developer'
+            'nama' => 'Front-End Developer',
         ]);
         $MainSkill->save();
 
         $MainSkill = MainSkill::create([
-            'nama'      => 'Back-End Developer'
+            'nama' => 'Back-End Developer',
         ]);
         $MainSkill->save();
 
         $MainSkill = MainSkill::create([
-            'nama'      => 'Full Stack Developer'
+            'nama' => 'Full Stack Developer',
         ]);
         $MainSkill->save();
 
         $MainSkill = MainSkill::create([
-            'nama'      => 'Android Developer'
+            'nama' => 'Android Developer',
         ]);
         $MainSkill->save();
 
         $MainSkill = MainSkill::create([
-            'nama'      => 'Jaringan'
+            'nama' => 'Jaringan',
         ]);
         $MainSkill->save();
     }

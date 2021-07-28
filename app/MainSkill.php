@@ -21,7 +21,6 @@ class MainSkill extends Model
         'nama',
     ];
 
-
     public function kandidat()
     {
         return $this->hasMany(Kandidat::class, 'idSkill');

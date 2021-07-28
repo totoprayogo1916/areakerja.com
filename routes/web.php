@@ -89,6 +89,9 @@ Route::group(['prefix' => 'mitra', 'as' => 'mitra.', 'namespace' => 'Mitra', 'mi
     Route::get('/kandidat/show/{slug}', 'KandidatController@show')->name('kandidat.show');
     Route::get('/kandidat/hire/{id}', 'KandidatController@hire')->name('kandidat.hire');
 
+    //============== Hire ======================
+    Route::resource('hire', 'HireController');
+
     // Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
     // Route::resource('categories', 'CategoriesController');
     // // Permissions
