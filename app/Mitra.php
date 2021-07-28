@@ -32,4 +32,9 @@ class Mitra extends Model
     {
         return $this->hasMany(Mitra_Kandidat::class, 'idMitra');
     }
+
+    public function hire()
+    {
+        return $this->hasMany(Hire::class, 'idMitra');
+    }
 }

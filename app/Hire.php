@@ -26,4 +26,9 @@ class Hire extends Model
     {
         return $this->belongsTo(Kandidat::class, 'idKandidat');
     }
+
+    public function mitra()
+    {
+        return $this->belongsTo(Mitra::class, 'idMitra');
+    }
 }

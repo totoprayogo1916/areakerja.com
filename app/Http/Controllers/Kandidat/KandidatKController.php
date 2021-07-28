@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Kandidat;
 
+use App\Hire;
 use App\Http\Controllers\Controller;
 use App\Kandidat;
 use App\Mitra;
@@ -21,8 +22,7 @@ class KandidatKController extends Controller
     {
         $user_id  = auth()->user()->id;
         $mitra    = Kandidat::where('idUser', $user_id)->first();
-        $kandidat = Mitra_Kandidat::where('idKandidat', $mitra->id)->get();
-
+        $kandidat = Hire::where('idKandidat', $mitra->id)->get();
         return view('kandidat.lowongan.index', compact(['mitra', 'kandidat']));
     }
 

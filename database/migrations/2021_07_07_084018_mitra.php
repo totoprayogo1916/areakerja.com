@@ -23,6 +23,8 @@ class Mitra extends Migration
             $table->string('logo');
             $table->integer('koin')->nullable();
             $table->string('slug')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('facebook')->nullable();
             $table->unsignedInteger('idUser')->nullable();
             $table->foreign('idUser', 'user_id_fk_2021071')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

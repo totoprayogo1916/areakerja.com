@@ -2,15 +2,16 @@
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
             @if (App\Role_User::where('user_id', auth()->user()->id)->first()->role_id == 3)
-            <a href="{{ route('mitra.home') }}"> <img alt="image" src="{{ url('otika/assets/img/logo.png') }}"
-                    class="header-logo" /> <span class="logo-name">Mitra</span>
-            </a>
+                <a href="{{ route('mitra.home') }}"> <img alt="image" src="{{ url('otika/assets/img/logo.png') }}"
+                        class="header-logo" /> <span class="logo-name">Mitra</span>
+                </a>
             @endif
 
             @if (App\Role_User::where('user_id', auth()->user()->id)->first()->role_id == 4)
-            <a href="{{ route('kandidat.awal') }}"> <img alt="image" src="{{ url('otika/assets/img/logo.png') }}"
-                class="header-logo" /> <span class="logo-name">Kandidat</span>
-        </a>
+                <a href="{{ route('kandidat.awal') }}"> <img alt="image"
+                        src="{{ url('otika/assets/img/logo.png') }}" class="header-logo" /> <span
+                        class="logo-name">Kandidat</span>
+                </a>
             @endif
 
         </div>
@@ -48,7 +49,8 @@
                         <li
                             class="{{ request()->is('mitra/profil') || request()->is('mitra/profil/*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('mitra.profil.index') }}"><i
-                                    data-feather="file"></i><span>Profil</span></a></li>
+                                    data-feather="file"></i><span>Profil</span></a>
+                        </li>
                         <li><a class="nav-link" href="#"><i data-feather="grid"></i><span>Deskripsi</span></a></li>
 
 
@@ -62,26 +64,31 @@
                         <li
                             class="{{ request()->is('mitra/lowongan') || request()->is('mitra/lowongan/*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('mitra.lowongan.index') }}"><i
-                                    data-feather="file"></i><span>Daftar Lowongan</span></a></li>
+                                    data-feather="file"></i><span>Daftar Lowongan</span></a>
+                        </li>
                         <li
                             class="{{ request()->is('mitra/kandidat') || request()->is('mitra/kandidat/*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('mitra.kandidat.index') }}"><i
-                                    data-feather="grid"></i><span>Daftar Kandidat</span></a></li>
+                                    data-feather="grid"></i><span>Daftar Kandidat</span></a>
+                        </li>
                         <li
                             class="{{ request()->is('mitra/hire') || request()->is('mitra/hire/*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('mitra.hire.index') }}"><i
-                                    data-feather="grid"></i><span>Already Hired</span></a></li>
+                                    data-feather="grid"></i><span>Already Hired</span></a>
+                        </li>
                     </ul>
                 </li>
                 <li><a class="nav-link" href="#"><i data-feather="mail"></i><span>Inbox</span></a></li>
 
                 <li class="menu-header">Dashboard Client</li>
-                <li class="dropdown"><a href="#" class="nav-link"><i data-feather="users"></i><span>User
+                <li class="dropdown"><a href="{{ route('mitra.user.index') }}" class="nav-link"><i
+                            data-feather="users"></i><span>User
                             Account</span></a></li>
                 <li
                     class="dropdown {{ request()->is('mitra/topup') || request()->is('mitra/topup/*') ? 'active' : '' }}">
                     <a href="{{ route('mitra.topup.index') }}" class="nav-link"><i class="fas fa-coins"
-                            style="margin: 0px 10px 0px -4px;"></i><span>Top Up Coin</span></a></li>
+                            style="margin: 0px 10px 0px -4px;"></i><span>Top Up Coin</span></a>
+                </li>
                 <li class="dropdown"><a href="#" class="nav-link"><i data-feather="circle"></i><span>Logo
                             Perusahaan</span></a></li>
 

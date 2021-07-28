@@ -30,8 +30,8 @@ class MitraSeeder extends Seeder
         $mitra = Mitra::create([
             'nama'      => 'ADAM JAYA',
             'email'     => 'mitra@mitra.com',
-            'deskripsi' => 'Perusahaan gg',
-            'alamat'    => 'Banguntapan',
+            'deskripsi' => 'PT. ADAM JAYA merupakan perusahaan IT yang berfokus pada pengembangan teknologi cloud solution, applikasi perusahaan, e-commerce serta startup digital.',
+            'alamat'    => 'Jl. Pintu Selatan UPN No. 2A, Ngropoh, Condongcatur, Sleman, DIY - 55281',
             'no'        => '081234357779',
             'logo'      => 'logo.png',
             'koin'      => '100',

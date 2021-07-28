@@ -136,6 +136,14 @@
                         <div class="py-4">
                             <p class="clearfix">
                                 <span class="float-left">
+                                    Address
+                                </span>
+                                <span class="float-right text-muted">
+                                    {{ $mitra->alamat }}
+                                </span>
+                            </p>
+                            <p class="clearfix">
+                                <span class="float-left">
                                     Since
                                 </span>
                                 <span class="float-right text-muted">
@@ -163,7 +171,7 @@
                                     Instagram
                                 </span>
                                 <span class="float-right text-muted">
-                                    <a href="https://www.instagram.com/oxt.design/?hl=id">oxt.design</a>
+                                    <a href="https://www.instagram.com/oxt.design/?hl=id">{{ $mitra->instagram }}</a>
                                 </span>
                             </p>
                             <p class="clearfix">
@@ -171,7 +179,8 @@
                                     Facebook
                                 </span>
                                 <span class="float-right text-muted">
-                                    <a href="https://www.facebook.com/OXT-Design-105053717732529/">OXT Design</a>
+                                    <a
+                                        href="https://www.facebook.com/OXT-Design-105053717732529/">{{ $mitra->facebook }}</a>
                                 </span>
                             </p>
                         </div>
