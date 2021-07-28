@@ -5,11 +5,11 @@ namespace App;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Mitra_Kandidat extends Model
+class Hire extends Model
 {
     use HasFactory;
 
-    public $table = 'mitraToKandidat';
+    public $table = 'hires';
 
     protected $dates = [
         'created_at',
@@ -22,8 +22,8 @@ class Mitra_Kandidat extends Model
         'idKandidat',
     ];
 
-    public function mitra()
+    public function kandidat()
     {
-        return $this->belongsTo(Mitra::class, 'idMitra');
+        return $this->belongsTo(Kandidat::class, 'idKandidat');
     }
 }

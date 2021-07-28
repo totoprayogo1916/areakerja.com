@@ -48,7 +48,7 @@
 
                                 <div class="row mt-3 px-3">
 
-                                    {{-- @foreach ($kandidat as $kan) --}}
+                                    @foreach ($kandidat as $kan)
                                         <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                                             <div class="card" style="overflow: hidden">
                                                 <div class="body">
@@ -60,9 +60,9 @@
                                                     </div>
                                                     <div class="nama text-center">
                                                         <h6>
-                                                            Nama
+                                                            {{ $kan->kandidat->nama }}
                                                         </h6>
-                                                        <span>Main Skil</span>
+                                                        <span>{{ $kan->kandidat->mainSkill->nama }}</span>
                                                     </div>
                                                     <div class="nama text-center">
                                                         <h6>
@@ -71,13 +71,13 @@
                                                     </div>
 
                                                     <div class="container text-center my-3">
-                                                        <a href="#"
+                                                        <a href="{{ route('mitra.hire.show', $kan->kandidat->slug) }}"
                                                             class="btn btn-primary">Read More</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    {{-- @endforeach --}}
+                                    @endforeach
 
                                 </div>
                             </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Mitra;
 
+use App\Hire;
 use App\Http\Controllers\Controller;
 use App\Kandidat;
 use App\Lowonganmitra;
@@ -24,49 +25,10 @@ class HireController extends Controller
         $lowongan  = Lowonganmitra::all();
         $mainSkill = MainSkill::all();
         // $kandidat = Kandidat::all();
-        $kandidat = Rekomendasi::where('idMitra', $user_id)->get();
         $mitra    = Mitra::where('idUser', $user_id)->first();
+        $kandidat = Hire::where('idMitra', $mitra->id)->get();
 
         return view('mitra.hire.index', compact('lowongan', 'mitra', 'kandidat', 'mainSkill'));
-    }
-
-    public function open(Request $request)
-    {
-        $user_id      = auth()->user()->id;
-        $mitra        = Mitra::where('idUser', $user_id)->first();
-        $mainKandidat = Kandidat::all();
-        $kandidat     = Rekomendasi::where('idMitra', $user_id)->get();
-        $b            = $request->jumlah + 1;
-
-        for ($i = 1; $i < $b; $i++) {
-            $a = $i - 1;
-            if (empty($kandidat[$a]->idKandidat) || empty(Rekomendasi::where('idKandidat', $i)->first())) {
-                if (empty(Kandidat::where('id', $i)->first()->id)) {
-                    return redirect()->route('mitra.hire.index');
-                }
-                if (
-                    '' . $mainKandidat[$a]->idSkill . '' === $request->idSkill
-                    && empty(Rekomendasi::where('idKandidat', $i)->first())
-                    && $mainKandidat[$a]->status === 'unhire'
-                ) {
-                    if ($mitra->koin === 0) {
-                        return redirect()->route('mitra.hire.index');
-                    }
-                    $newKoin = $mitra->koin - 2;
-                    $mitra->update(['koin' => $newKoin]);
-                    Rekomendasi::create([
-                        'idMitra'    => $mitra->id,
-                        'idKandidat' => $i,
-                    ]);
-                } else {
-                    $b++;
-                }
-            } else {
-                $b++;
-            }
-        }
-
-        return redirect()->route('mitra.hire.index');
     }
 
     public function show($slug)
@@ -94,18 +56,5 @@ class HireController extends Controller
             'sertifikasi',
             'skill',
         ));
-    }
-
-    public function hire($id)
-    {
-        $user_id = auth()->user()->id;
-        $mitra   = Mitra::where('idUser', $user_id)->first();
-
-        Mitra_Kandidat::create([
-            'idMitra'    => $mitra->id,
-            'idKandidat' => $id,
-        ]);
-
-        return redirect('mitra');
     }
 }

@@ -30,4 +30,9 @@ class Kandidat extends Model
     {
         return $this->belongsTo(MainSkill::class, 'idSkill');
     }
+
+    public function hire()
+    {
+        return $this->hasMany(Hire::class, 'idKandidat');
+    }
 }

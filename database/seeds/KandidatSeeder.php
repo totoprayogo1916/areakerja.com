@@ -18,7 +18,7 @@ class KandidatSeeder extends Seeder
             'domisili' => 'Yogyakarta',
             'biografi' => 'Hai nama saya Rere Anggraini, saya berasal dari Yogyakarta',
             'slug'     => 'Rere-Anggraini',
-            'status'   => 'hire',
+            'status'   => 'unhire',
             'idUser'   => '4',
         ]);
         $kandidat->save();

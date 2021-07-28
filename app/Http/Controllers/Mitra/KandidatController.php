@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Mitra;
 
+use App\Hire;
 use App\Http\Controllers\Controller;
 use App\Kandidat;
 use App\Lowonganmitra;
@@ -20,12 +21,12 @@ class KandidatController extends Controller
 {
     public function index()
     {
-        $user_id   = auth()->user()->id;
+        $id   = auth()->user()->id;
+        $mitra    = Mitra::where('idUser', $id)->first();
         $lowongan  = Lowonganmitra::all();
         $mainSkill = MainSkill::all();
-        // $kandidat = Kandidat::all();
-        $kandidat = Rekomendasi::where('idMitra', $user_id)->get();
-        $mitra    = Mitra::where('idUser', $user_id)->first();
+        $kandidat = Kandidat::all();
+        $kandidat = Rekomendasi::where('idMitra', $mitra->id)->get();
 
         return view('mitra.kandidat.index', compact('lowongan', 'mitra', 'kandidat', 'mainSkill'));
     }
@@ -40,13 +41,13 @@ class KandidatController extends Controller
 
         for ($i = 1; $i < $b; $i++) {
             $a = $i - 1;
-            if (empty($kandidat[$a]->idKandidat) || empty(Rekomendasi::where('idKandidat', $i)->first())) {
+            if (empty($kandidat[$a]->idKandidat) || empty(Rekomendasi::where([['idMitra', $mitra->id], ['idKandidat', $i]])->first())) {
                 if (empty(Kandidat::where('id', $i)->first()->id)) {
                     return redirect()->route('mitra.kandidat.index');
                 }
                 if (
                     '' . $mainKandidat[$a]->idSkill . '' === $request->idSkill
-                    && empty(Rekomendasi::where('idKandidat', $i)->first())
+                    && empty(Rekomendasi::where([['idMitra', $mitra->id], ['idKandidat', $i]])->first())
                     && $mainKandidat[$a]->status === 'unhire'
                 ) {
                     if ($mitra->koin === 0) {
@@ -101,7 +102,16 @@ class KandidatController extends Controller
         $user_id = auth()->user()->id;
         $mitra   = Mitra::where('idUser', $user_id)->first();
 
-        Mitra_Kandidat::create([
+
+        $kandidat   = Kandidat::where('id', $id)->first();
+        $kandidat->update(['status' => "hire"]);
+
+        $rekomendasi = Rekomendasi::where('idKandidat', $id)->get();
+        foreach ($rekomendasi as $rekomendasi) {
+            $rekomendasi->delete();
+        }
+
+        Hire::create([
             'idMitra'    => $mitra->id,
             'idKandidat' => $id,
         ]);
