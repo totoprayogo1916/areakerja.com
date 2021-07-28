@@ -56,7 +56,7 @@
                                                         <i class="fas fa-lock"></i>
                                                     </div>
                                                 </div>
-                                                <input type="text" class="form-control" id="password" name="password">
+                                                <input type="password" class="form-control" id="password" name="password">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6 form-group">
@@ -67,13 +67,15 @@
                                                         <i class="fa fa-lock"></i>
                                                     </div>
                                                 </div>
-                                                <input type="text" class="form-control" id="confirm" name="confirm">
+                                                <input type="password" class="form-control" id="confirm" name="confirm">
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="container">
+                                    <div class="row container">
+                                        <div class="col-12 col-sm-6 form-group">
                                         <button type="submit" class="btn btn-primary">Tambah</button>
+                                        </div>
                                     </div>
 
                                 </div>

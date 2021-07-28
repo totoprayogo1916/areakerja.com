@@ -8,7 +8,6 @@ use App\Kandidat;
 use App\Lowonganmitra;
 use App\MainSkill;
 use App\Mitra;
-use App\Mitra_Kandidat;
 use App\Organisasi;
 use App\Pengalaman;
 use App\Rekomendasi;
@@ -21,12 +20,12 @@ class KandidatController extends Controller
 {
     public function index()
     {
-        $id   = auth()->user()->id;
-        $mitra    = Mitra::where('idUser', $id)->first();
+        $id        = auth()->user()->id;
+        $mitra     = Mitra::where('idUser', $id)->first();
         $lowongan  = Lowonganmitra::all();
         $mainSkill = MainSkill::all();
-        $kandidat = Kandidat::all();
-        $kandidat = Rekomendasi::where('idMitra', $mitra->id)->get();
+        $kandidat  = Kandidat::all();
+        $kandidat  = Rekomendasi::where('idMitra', $mitra->id)->get();
 
         return view('mitra.kandidat.index', compact('lowongan', 'mitra', 'kandidat', 'mainSkill'));
     }
@@ -102,11 +101,11 @@ class KandidatController extends Controller
         $user_id = auth()->user()->id;
         $mitra   = Mitra::where('idUser', $user_id)->first();
 
-
-        $kandidat   = Kandidat::where('id', $id)->first();
-        $kandidat->update(['status' => "hire"]);
+        $kandidat = Kandidat::where('id', $id)->first();
+        $kandidat->update(['status' => 'hire']);
 
         $rekomendasi = Rekomendasi::where('idKandidat', $id)->get();
+
         foreach ($rekomendasi as $rekomendasi) {
             $rekomendasi->delete();
         }

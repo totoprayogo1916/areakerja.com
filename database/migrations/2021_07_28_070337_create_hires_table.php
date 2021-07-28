@@ -13,7 +13,7 @@ class CreateHiresTable extends Migration
      */
     public function up()
     {
-        Schema::create('hires', function (Blueprint $table) {
+        Schema::create('hires', static function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('idMitra')->nullable();
             $table->foreign('idMitra', 'mitra_id_fk_202107281')->references('id')->on('mitra');

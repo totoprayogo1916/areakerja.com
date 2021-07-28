@@ -229,8 +229,8 @@
                         </div>
 
                         <div class="text-center my-4">
-                            <a href="{{ route('mitra.kandidat.hire', $kandidat->id) }}" class="btn btn-primary"
-                                style="font-size:16px">Hire Candidat</a>
+                            <a href="#" class="btn btn-primary"
+                                style="font-size:16px">Cancel</a>
                         </div>
 
                     </div>
