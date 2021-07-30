@@ -24,6 +24,9 @@
     <link rel="stylesheet"
         href="{{ url('otika/assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ url('otika/assets/bundles/fullcalendar/fullcalendar.min.css') }}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <style>
         .form-control3 {
             display: block;
@@ -154,10 +157,76 @@
             });
         });
     </script>
+    <script type="text/javascript">
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $("#submitform").click(function(e) {
+
+            e.preventDefault();
+
+            var text = $("input[name=text]").val();
+            var id = $("input[name=id]").val();
+
+            $.ajax({
+                type: 'POST',
+                url: "{{ route('mitra.chat.send') }}",
+                data: {
+                    text: text,
+                    id: id
+                },
+                success: function(response) {
+                    $("#sendform")[0].reset();
+                },
+                error: function(response) {
+                    console.log(response);
+                }
+            });
+
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $("#submitformk").click(function(e) {
+
+            e.preventDefault();
+
+            var text = $("input[name=text]").val();
+            var id = $("input[name=id]").val();
+
+            $.ajax({
+                type: 'POST',
+                url: "{{ route('mitra.chat.send') }}",
+                data: {
+                    text: text,
+                    id: id
+                },
+                success: function(response) {
+                    $("#sendformk")[0].reset();
+                },
+                error: function(response) {
+                    console.log(response);
+                }
+            });
+
+        });
+    </script>
+
+
 
     @section('js')
     @show
     @stack('after-script')
+
 </body>
 
 

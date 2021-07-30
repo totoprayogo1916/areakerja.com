@@ -29,6 +29,10 @@
                     <a href="{{ route('kandidat.kandidat.lowongan') }}" class="nav-link"><i
                             data-feather="grid"></i><span>Perusahaan</span></a>
                 </li>
+
+
+                <li><a class="nav-link" href="{{ route('kandidat.chat.index') }}"><i
+                            data-feather="mail"></i><span>Inbox</span></a></li>
         @endif
 
 
@@ -78,7 +82,8 @@
                         </li>
                     </ul>
                 </li>
-                <li><a class="nav-link" href="#"><i data-feather="mail"></i><span>Inbox</span></a></li>
+                <li><a class="nav-link" href="{{ route('mitra.chat.index') }}"><i
+                            data-feather="mail"></i><span>Inbox</span></a></li>
 
                 <li class="menu-header">Dashboard Client</li>
                 <li class="dropdown"><a href="{{ route('mitra.user.index') }}" class="nav-link"><i

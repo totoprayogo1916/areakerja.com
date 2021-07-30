@@ -35,4 +35,9 @@ class Kandidat extends Model
     {
         return $this->hasMany(Hire::class, 'idKandidat');
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'idUser');
+    }
 }
