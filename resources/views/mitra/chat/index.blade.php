@@ -51,17 +51,17 @@
                         @endif --}}
                                 </div>
                                 <div class="card-body message-box">
-                                    @if (!$messages)
+                                    No messages to show
+                                    {{-- @if (!$messages)
                                         No messages to show
                                     @else
                                         @if (isset($messages))
                                             @foreach ($messages as $message)
-                                                <div class="single-message @if ($message->sent !==
-                                                auth()->id()) received @else sent @endif">
+                                                <div class="single-message @if ($message->sent !== auth()->id()) received @else sent @endif">
                                                     <p class="font-weight-bolder my-0">
                                                         {{ $message->user->name }}</p>
-                                                    <p class="my-0">{{ $message->text }}</p>
-                                                    {{-- @if (isPhoto($message->file))
+                                                    <p class="my-0">{{ $message->text }}</p> --}}
+                                    {{-- @if (isPhoto($message->file))
                                                         <div class="w-100 my-2">
                                                             <img class="img-fluid rounded" loading="lazy"
                                                                 style="height: 250px" src="{{ $message->file }}">
@@ -81,17 +81,17 @@
                                                             </a>
                                                         </div>
                                                     @endif --}}
-                                                    <small class="text-muted w-100">Sent
-                                                        <em>{{ $message->created_at }}</em></small>
-                                                </div>
-                                            @endforeach
-                                        @else
-                                            No messages to show
-                                        @endif
-                                        {{-- @if (!isset($clicked_user) and auth()->user()->is_admin == true)
+                                    {{-- <small class="text-muted w-100">Sent
+                                        <em>{{ $message->created_at }}</em></small>
+                                </div>
+                                @endforeach
+                            @else
+                                No messages to show
+                                @endif --}}
+                                    {{-- @if (!isset($clicked_user) and auth()->user()->is_admin == true)
                                             Click on a user to see the messages
                                         @endif --}}
-                                    @endif
+                                    {{-- @endif --}}
                                 </div>
                                 {{-- @if (auth()->user()->is_admin == false) --}}
                                 <div class="card-footer">
