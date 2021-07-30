@@ -62,66 +62,6 @@ if ($(".chat-content").length) {
   });
   $('.chat-content').getNiceScroll(0).doScrollTop($('.chat-content').height());
 }
-var chats = [
-  {
-    text: 'Hi, How R U?!',
-    position: 'left'
-  },
-  {
-    text: 'I am Fine',
-    position: 'right'
-  },
-  {
-    text: 'You?',
-    position: 'right'
-  },
-  {
-    text: 'I am fine too!!',
-    position: 'left'
-  },
-  {
-    text: 'Have you look at current task?',
-    position: 'right'
-  },
-  {
-    text: 'Yes I am.',
-    position: 'left'
-  },
-  {
-    text: 'Its going good.',
-    position: 'left'
-  },
-  {
-    text: 'Very Good',
-    position: 'right'
-  },
-  {
-    text: 'Delevered me when complete',
-    position: 'right'
-  },
-  {
-    text: 'Okay Sure',
-    position: 'left'
-  },
-  {
-    text: 'Thank You...',
-    position: 'right'
-  },
-  {
-    typing: true,
-    position: 'left'
-  }
-];
-for (var i = 0; i < chats.length; i++) {
-  var type = 'text';
-  if (chats[i].typing != undefined) type = 'typing';
-  $.chatCtrl('#mychatbox', {
-    text: (chats[i].text != undefined ? chats[i].text : ''),
-    picture: (chats[i].position == 'left' ? 'assets/img/users/user-5.png' : 'assets/img/users/user-1.png'),
-    position: 'chat-' + chats[i].position,
-    type: type
-  });
-}
 
 $("#chat-form").submit(function () {
   var me = $(this);

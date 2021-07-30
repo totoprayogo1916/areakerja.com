@@ -128,6 +128,7 @@
     <script src="{{ url('otika/assets/bundles/apexcharts/apexcharts.min.js') }}"></script>
     <!-- Page Specific JS File -->
     <script src="{{ url('otika/assets/js/page/index.js') }}"></script>
+    <script src="{{ url('otika/assets/js/page/chat.js') }}"></script>
     @stack('page-script')
     <!-- Template JS File -->
     <script src="{{ url('otika/assets/js/scripts.js') }}"></script>
@@ -147,7 +148,7 @@
     <script src="{{ url('otika/assets/bundles/datatables/export-tables/vfs_fonts.js') }}"></script>
     <script src="{{ url('otika/assets/bundles/datatables/export-tables/buttons.print.min.js') }}"></script>
     <!-- JS Libraies -->
-    <script src="{{ url('otika/assets/bundles/izitoast/js/iziToast.min.js') }}""></script>
+    <script src="{{ url('otika/assets/bundles/izitoast/js/iziToast.min.js') }}"></script>
     <!-- Page Specific JS File -->
     <script src="{{ url('otika/assets/js/page/toastr.js') }}"></script>
     <script>
