@@ -5,22 +5,20 @@ namespace App\Http\Controllers\Mitra;
 use App\Chat;
 use App\Hire;
 use App\Http\Controllers\Controller;
-use App\Lowonganmitra;
 use App\Mitra;
 use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 
 class ChatController extends Controller
 {
     public function index()
     {
-        $user_id = auth()->user()->id;
-        $mitra   = Mitra::where('idUser', $user_id)->first();
+        $user_id  = auth()->user()->id;
+        $mitra    = Mitra::where('idUser', $user_id)->first();
         $messages = Chat::where('sent', $user_id)->orWhere('receive', $user_id)->orderBy('id', 'ASC')->get();
         // $users = Chat::where('receive', $user_id)->orderBy('id', 'ASC')->get()->unique('sent');
         $users = Hire::where('idMitra', $mitra->id)->get();
-        $user = User::where('id', $user_id)->first();
+        $user  = User::where('id', $user_id)->first();
 
         return view('mitra.chat.index', compact('mitra', 'user', 'messages', 'users'));
     }
@@ -41,14 +39,14 @@ class ChatController extends Controller
         //     $messages = Message::where('user_id', $sender)->orWhere('receiver', $sender)->orderBy('id', 'DESC')->get();
         // }
 
-
-        $user_id = auth()->user()->id;
-        $sender = User::findOrFail($id);
-        $mitra   = Mitra::where('idUser', $user_id)->first();
-        $messages = Chat::where([['sent', $sender->id], ['receive', $user_id]])->orWhere([['sent', $user_id], ['receive', $sender->id]])->orderBy('id', 'ASC')->get();
-        $users = Chat::where('receive', $user_id)->orderBy('id', 'ASC')->get()->unique('sent');
-        $user = User::where('id', $user_id)->first();
+        $user_id   = auth()->user()->id;
+        $sender    = User::findOrFail($id);
+        $mitra     = Mitra::where('idUser', $user_id)->first();
+        $messages  = Chat::where([['sent', $sender->id], ['receive', $user_id]])->orWhere([['sent', $user_id], ['receive', $sender->id]])->orderBy('id', 'ASC')->get();
+        $users     = Chat::where('receive', $user_id)->orderBy('id', 'ASC')->get()->unique('sent');
+        $user      = User::where('id', $user_id)->first();
         $idrefresh = $id;
+
         return view('mitra.chat.show', compact('mitra', 'user', 'messages', 'users', 'idrefresh'));
 
         // return view('show', [
@@ -74,14 +72,14 @@ class ChatController extends Controller
         //     $messages = Message::where('user_id', $sender)->orWhere('receiver', $sender)->orderBy('id', 'DESC')->get();
         // }
 
-
-        $user_id = auth()->user()->id;
-        $sender = User::findOrFail($id);
-        $mitra   = Mitra::where('idUser', $user_id)->first();
-        $messages = Chat::where([['sent', $sender->id], ['receive', $user_id]])->orWhere([['sent', $user_id], ['receive', $sender->id]])->orderBy('id', 'ASC')->get();
-        $users = Chat::where('receive', $user_id)->orderBy('id', 'ASC')->get()->unique('sent');
-        $user = User::where('id', $user_id)->first();
+        $user_id   = auth()->user()->id;
+        $sender    = User::findOrFail($id);
+        $mitra     = Mitra::where('idUser', $user_id)->first();
+        $messages  = Chat::where([['sent', $sender->id], ['receive', $user_id]])->orWhere([['sent', $user_id], ['receive', $sender->id]])->orderBy('id', 'ASC')->get();
+        $users     = Chat::where('receive', $user_id)->orderBy('id', 'ASC')->get()->unique('sent');
+        $user      = User::where('id', $user_id)->first();
         $idrefresh = $id;
+
         return view('mitra.chat.chatbox', compact('mitra', 'user', 'messages', 'users', 'idrefresh'));
 
         // return view('show', [
@@ -107,19 +105,14 @@ class ChatController extends Controller
         //     $messages = Message::where('user_id', $sender)->orWhere('receiver', $sender)->orderBy('id', 'DESC')->get();
         // }
 
-
-
         $user_id = auth()->user()->id;
-        $sender = User::findOrFail($request->id);
+        $sender  = User::findOrFail($request->id);
         $mitra   = Mitra::where('idUser', $user_id)->first();
         Chat::create([
-            'text'              => $request['text'],
-            'sent' => $user_id,
-            'receive' => $request->id
+            'text'    => $request['text'],
+            'sent'    => $user_id,
+            'receive' => $request->id,
         ]);
-
-
-
 
         // return view('show', [
         //     'users' => $users,

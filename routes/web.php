@@ -95,12 +95,10 @@ Route::group(['prefix' => 'mitra', 'as' => 'mitra.', 'namespace' => 'Mitra', 'mi
     //============== User ======================
     Route::resource('user', 'UserController');
 
-
     //============== Chat ======================
     Route::post('/chat/send', 'ChatController@send')->name('chat.send');
     Route::get('/chat/seger/{id}', 'ChatController@seger')->name('chat.seger');
     Route::resource('chat', 'ChatController');
-
 
     // Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
     // Route::resource('categories', 'CategoriesController');
@@ -152,7 +150,6 @@ Route::group(['prefix' => 'kandidat', 'as' => 'kandidat.', 'namespace' => 'Kandi
 
     //============== Kandidat ======================
     Route::resource('kandidat', 'KandidatKController');
-
 
     //============== Chat ======================
     Route::post('/chat/send', 'ChatController@send')->name('chat.send');

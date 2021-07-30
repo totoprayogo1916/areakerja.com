@@ -13,7 +13,7 @@ class CreateChatsTable extends Migration
      */
     public function up()
     {
-        Schema::create('chats', function (Blueprint $table) {
+        Schema::create('chats', static function (Blueprint $table) {
             $table->id();
             $table->string('text');
             $table->unsignedInteger('sent')->nullable();
