@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Mitra;
 
 use App\Http\Controllers\Controller;
-use App\Lowonganmitra;
 use App\Mitra;
 use App\User;
 use Illuminate\Http\Request;
@@ -24,10 +23,10 @@ class UserController extends Controller
     {
         $user_id = auth()->user()->id;
         $mitra   = Mitra::where('idUser', $user_id)->first();
-        $user = User::where('id', $user_id)->first();
+        $user    = User::where('id', $user_id)->first();
         $user->update([
-            'name' => $request->name,
-            'email' => $request->email,
+            'name'     => $request->name,
+            'email'    => $request->email,
             'password' => bcrypt($request->password),
         ]);
 

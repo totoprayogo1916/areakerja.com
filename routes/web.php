@@ -92,7 +92,6 @@ Route::group(['prefix' => 'mitra', 'as' => 'mitra.', 'namespace' => 'Mitra', 'mi
     //============== Hire ======================
     Route::resource('hire', 'HireController');
 
-
     //============== User ======================
     Route::resource('user', 'UserController');
 

@@ -8,14 +8,11 @@ use App\Kandidat;
 use App\Lowonganmitra;
 use App\MainSkill;
 use App\Mitra;
-use App\Mitra_Kandidat;
 use App\Organisasi;
 use App\Pengalaman;
-use App\Rekomendasi;
 use App\Riwayatpendidikan;
 use App\Sertifikasi;
 use App\Skill;
-use Illuminate\Http\Request;
 
 class HireController extends Controller
 {
