@@ -43,7 +43,7 @@ class ChatController extends Controller
         $sender    = User::findOrFail($id);
         $mitra     = Mitra::where('idUser', $user_id)->first();
         $messages  = Chat::where([['sent', $sender->id], ['receive', $user_id]])->orWhere([['sent', $user_id], ['receive', $sender->id]])->orderBy('id', 'ASC')->get();
-        $users     = Chat::where('receive', $user_id)->orderBy('id', 'ASC')->get()->unique('sent');
+        $users     = Hire::where('idMitra', $mitra->id)->get();
         $user      = User::where('id', $user_id)->first();
         $idrefresh = $id;
 

@@ -21,13 +21,14 @@
                                 <div class="card-body chatbox p-0">
                                     <ul class="list-group list-group-flush" wire:poll="render">
                                         @foreach ($users as $user)
-                                            <a href="{{ route('mitra.chat.show', $user->user->id) }}"
+                                            <a href="{{ route('mitra.chat.show', $user->kandidat->user->id) }}"
                                                 class="text-dark link">
-                                                <li class="list-group-item" wire:click="getUser({{ $user->user->id }})"
-                                                    id="user_{{ $user->user->id }}">
+                                                <li class="list-group-item"
+                                                    wire:click="getUser({{ $user->kandidat->user->id }})"
+                                                    id="user_{{ $user->kandidat->user->id }}">
                                                     <img class="img-fluid avatar"
                                                         src="https://cdn.pixabay.com/photo/2017/06/13/12/53/profile-2398782_1280.png">
-                                                    {{ $user->user->name }}
+                                                    {{ $user->kandidat->user->name }}
                                                     {{-- @if ($user->is_online) <i
                                                             class="fa fa-circle text-success online-icon"></i> @endif
                                                     @if (filled($not_seen))
