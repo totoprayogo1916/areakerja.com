@@ -3,16 +3,19 @@
 namespace App\Http\Middleware;
 
 use App\Role;
+use App\User;
 use Closure;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Gate;
 
 class AuthGates
 {
     public function handle($request, Closure $next)
     {
-        $user = \Auth::user();
-
-        if (! app()->runningInConsole() && $user) {
+        $user = Auth::user();
+        if (!app()->runningInConsole() && $user) {
+            User::where('id', Auth::user()->id)->update(['status' => 'online']);
             $roles            = Role::with('permissions')->get();
             $permissionsArray = [];
 

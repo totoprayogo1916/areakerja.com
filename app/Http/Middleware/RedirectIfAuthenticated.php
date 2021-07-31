@@ -2,8 +2,10 @@
 
 namespace App\Http\Middleware;
 
+use App\User;
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 
 class RedirectIfAuthenticated
 {
@@ -19,10 +21,13 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next)
     {
         // $role = Auth::user()->role;
+
         if (Auth::check()) {
-            // if (Auth::user()->role == "Mitra")
-            // dd(Auth::user()->role);
-            return redirect('/cok');
+            $expiresAt = now()->addMinutes(2); /* keep online for 2 min */
+            Cache::put('user-is-online-' . Auth::user()->id, true, $expiresAt);
+
+            /* last seen */
+            User::where('id', Auth::user()->id)->update(['status' => 'online']);
         }
 
         return $next($request);

@@ -72,6 +72,8 @@ Route::get(
 Route::group(['prefix' => 'mitra', 'as' => 'mitra.', 'namespace' => 'Mitra', 'middleware' => ['auth']], static function () {
     Route::get('/', 'AdminCompanyController@index')->name('home');
 
+    Route::get('/out', 'AdminCompanyController@out')->name('out');
+
     //============== Profil ======================
     Route::resource('profil', 'ProfilController');
 

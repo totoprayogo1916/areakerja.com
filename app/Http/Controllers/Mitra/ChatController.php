@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 use App\Mitra;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 
 class ChatController extends Controller
 {

@@ -1,109 +1,80 @@
 @extends('layouts.mitra.app')
 @section('content')
-
     <script type="text/javascript">
         var otomatis = setInterval(
             function() {
-                $('#chatAreak').load('{{ route('kandidat.chat.seger', $idrefresh) }}').fadeIn("slow");
+                $('#chatAreaK').load('{{ route('kandidat.chat.seger', $idrefresh) }}').fadeIn("slow");
             }, 1000);
     </script>
     <div class="main-content">
         <section class="section">
             <div class="section-body">
-                <div>
-                    <div class="row justify-content-center min-vh-75" wire:poll="mount">
-                        {{-- @if (auth()->user()->is_admin == true) --}}
-                        <div class="col-md-3" wire:init>
-                            <div class="card" style="height: 100%">
-                                <div class="card-header">
-                                    Users
-                                </div>
-                                <div class="card-body chatbox p-0">
-                                    <ul class="list-group list-group-flush" wire:poll="render">
-                                        @foreach ($users as $user)
-                                            <a href="{{ route('kandidat.chat.show', $user->user->id) }}"
-                                                class="text-dark link">
-                                                <li class="list-group-item" wire:click="getUser({{ $user->user->id }})"
-                                                    id="user_{{ $user->user->id }}">
-                                                    <img class="img-fluid avatar"
-                                                        src="https://cdn.pixabay.com/photo/2017/06/13/12/53/profile-2398782_1280.png">
-                                                    {{ $user->user->name }}
-                                                    {{-- @if ($user->is_online) <i
-                                                            class="fa fa-circle text-success online-icon"></i> @endif
-                                                    @if (filled($not_seen))
-                                                        <div class="badge badge-success rounded">{{ $not_seen->count() }}
-                                                        </div>
-                                                    @endif --}}
-                                                </li>
-                                            </a>
-                                        @endforeach
-                                    </ul>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div class="card">
+                            <div class="body">
+                                <div id="plist" class="people-list">
+                                    <div class="chat-search">
+                                        <input type="text" class="form-control" placeholder="Search..." />
+                                    </div>
+                                    <div class="m-b-20">
+                                        <div id="chat-scroll">
+                                            <ul class="chat-list list-unstyled m-b-0" wire:poll="render">
+                                                @foreach ($users as $user)
+                                                    <a href="{{ route('kandidat.chat.show', $user->user->id) }}">
+                                                        <li class="clearfix {{ request()->is($user->user->id) ? 'active' : '' }}"
+                                                            wire:click="getUser({{ $user->user->id }})"
+                                                            id="user_{{ $user->user->id }}">
+                                                            <img src="https://cdn.pixabay.com/photo/2017/06/13/12/53/profile-2398782_1280.png"
+                                                                alt="avatar">
+                                                            <div class="about">
+                                                                <div class="name">{{ $user->user->name }}</div>
+                                                                @if ($user->user->status == 'online')
+                                                                    <div class="status"><i
+                                                                            class="fa fa-circle text-success online-icon"></i>
+                                                                        Online
+                                                                    </div>
+                                                                @else<div class="status"><i
+                                                                            class="fa fa-circle online-icon"></i>
+                                                                        Offline </div>
+                                                                @endif
+                                                            </div>
+                                                        </li>
+                                                    </a>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        {{-- @endif --}}
-                        <div class="col-md-8">
-                            <div class="card" style="height: 100%">
-                                <div class="card-header">
-                                    Chat
-                                    {{-- @if (isset($clicked_user)) {{ $clicked_user->name }}
-
-                        @elseif(auth()->user()->is_admin == true)
-                            Select a user to see the chat
-                        @elseif($admin->is_online)
-                            <i class="fa fa-circle text-success"></i> We are online
-                        @else
-                            Messages
-                        @endif --}}
-                                </div>
-                                <div class="card-body message-box" id="chatAreak">
-                                    @include('kandidat.chat.chatbox')
-
-                                </div>
-                                {{-- @if (auth()->user()->is_admin == false) --}}
-                                <div class="card-footer">
-                                    <form id="sendformk">
-                                        {{-- <div wire:loading wire:target='SendMessage'>
-                                            Sending message . . .
-                                        </div>
-                                        <div wire:loading wire:target="file">
-                                            Uploading file . . .
-                                        </div> --}}
-                                        {{-- @if ($file)
-                                    <div class="mb-2">
-                                        You have an uploaded file <button type="button" wire:click="resetFile"
-                                            class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Remove
-                                            {{ $file->getClientOriginalName() }}</button>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                        <div class="card">
+                            <div class="chat">
+                                <div class="chat-header clearfix">
+                                    <img src="https://cdn.pixabay.com/photo/2017/06/13/12/53/profile-2398782_1280.png"
+                                        alt="avatar">
+                                    <div class="chat-about">
+                                        <div class="chat-with" wire:poll="render">{{ $user->user->name }}</div>
+                                        <div class="chat-num-messages">2 new messages</div>
                                     </div>
-                                @else
-                                    No file is uploaded.
-                                @endif --}}
-                                        <div class="row">
-                                            <div class="col-md-7">
-                                                <input wire:model="message"
-                                                    class="form-control input shadow-none w-100 d-inline-block"
-                                                    placeholder="Type a message" id="text" name="text">
-                                                <input type="hidden" value="{{ $idrefresh }}" name="id">
-                                            </div>
-                                            {{-- @if (empty($file))
-                                        <div class="col-md-1">
-                                            <button type="button" class="border" id="file-area">
-                                                <label>
-                                                    <i class="fa fa-file-upload"></i>
-                                                    <input type="file" wire:model="file">
-                                                </label>
-                                            </button>
-                                        </div>
-                                    @endif --}}
-                                            <div class="col-md-4">
-                                                <button class="btn btn-primary d-inline-block w-100" id="submitformk"><i
-                                                        class="far fa-paper-plane"></i>
-                                                    Send</button>
-                                            </div>
-                                        </div>
+                                </div>
+                            </div>
+                            <div class="chat-box" id="mychatbox">
+                                <div class="card-body chat-content" id="chatAreaK">
+                                    @include('kandidat.chat.chatbox')
+                                </div>
+                                <div class="card-footer chat-form">
+                                    <form id="sendform">
+                                        <input wire:model="message" type="text" class="form-control"
+                                            placeholder="Type a message" id="text" name="text">
+                                        <input type="hidden" value="{{ $idrefresh }}" name="id">
+                                        <button class="btn btn-primary" id="submitform">
+                                            <i class="far fa-paper-plane"></i>
+                                        </button>
                                     </form>
                                 </div>
-                                {{-- @endif --}}
                             </div>
                         </div>
                     </div>
