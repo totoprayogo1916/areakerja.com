@@ -21,7 +21,7 @@
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text">
-                                                        <i class="fas fa-user"></i>
+                                                        <i class="far fa-building"></i>
                                                     </div>
                                                 </div>
                                                 <input type="text" class="form-control" id="nama" name="nama"
@@ -52,7 +52,7 @@
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text">
-                                                        <i class="fas fa-map-marker-alt"></i>
+                                                        <i class="fas fa-phone"></i>
                                                     </div>
                                                 </div>
                                                 <input type="text" class="form-control" id="no"
@@ -64,7 +64,7 @@
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text">
-                                                        <i class="fa fa-graduation-cap"></i>
+                                                        <i class="fa fa-instagram"></i>
                                                     </div>
                                                 </div>
                                                 <input type="text" class="form-control" id="instagram"
@@ -78,7 +78,7 @@
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text">
-                                                        <i class="fa fa-graduation-cap"></i>
+                                                        <i class="fa fa-facebook"></i>
                                                     </div>
                                                 </div>
                                                 <input type="text" class="form-control" id="facebook"
