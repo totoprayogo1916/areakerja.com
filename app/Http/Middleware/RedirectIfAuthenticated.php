@@ -23,10 +23,10 @@ class RedirectIfAuthenticated
         // $role = Auth::user()->role;
 
         if (Auth::check()) {
-            $expiresAt = now()->addMinutes(2); /* keep online for 2 min */
+            $expiresAt = now()->addMinutes(2); // keep online for 2 min
             Cache::put('user-is-online-' . Auth::user()->id, true, $expiresAt);
 
-            /* last seen */
+            // last seen
             User::where('id', Auth::user()->id)->update(['status' => 'online']);
         }
 

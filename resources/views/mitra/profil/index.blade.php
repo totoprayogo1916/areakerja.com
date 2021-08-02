@@ -183,8 +183,14 @@
                                         href="https://www.facebook.com/OXT-Design-105053717732529/">{{ $mitra->facebook }}</a>
                                 </span>
                             </p>
+                            <div class="clearfix float-right">
+                                <a href="{{ route('mitra.profil.edit', $mitra->slug) }}" class="btn btn-primary">Edit Details</a>
+                            </div>
                         </div>
                     </div>
+                    {{-- <div class="card-footer">
+                        <button class="btn btn-primary">Edit Details</button>
+                      </div> --}}
                 </div>
             </div>
         </div>

@@ -86,9 +86,9 @@
                             data-feather="mail"></i><span>Inbox</span></a></li>
 
                 <li class="menu-header">Dashboard Client</li>
-                <li class="dropdown"><a href="{{ route('mitra.user.index') }}" class="nav-link"><i
-                            data-feather="users"></i><span>User
-                            Account</span></a></li>
+                <li class="dropdown {{ request()->is('mitra/user') || request()->is('mitra/user/*') ? 'active' : '' }}">
+                    <a href="{{ route('mitra.user.index') }}" class="nav-link"><i
+                            data-feather="users"></i><span>User Account</span></a></li>
                 <li
                     class="dropdown {{ request()->is('mitra/topup') || request()->is('mitra/topup/*') ? 'active' : '' }}">
                     <a href="{{ route('mitra.topup.index') }}" class="nav-link"><i class="fas fa-coins"

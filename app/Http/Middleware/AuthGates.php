@@ -6,7 +6,6 @@ use App\Role;
 use App\User;
 use Closure;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Gate;
 
 class AuthGates
@@ -14,7 +13,7 @@ class AuthGates
     public function handle($request, Closure $next)
     {
         $user = Auth::user();
-        if (!app()->runningInConsole() && $user) {
+        if (! app()->runningInConsole() && $user) {
             User::where('id', Auth::user()->id)->update(['status' => 'online']);
             $roles            = Role::with('permissions')->get();
             $permissionsArray = [];
@@ -26,7 +25,7 @@ class AuthGates
             }
 
             foreach ($permissionsArray as $title => $roles) {
-                Gate::define($title, static function (\App\User $user) use ($roles) {
+                Gate::define($title, static function (User $user) use ($roles) {
                     return count(array_intersect($user->roles->pluck('id')->toArray(), $roles)) > 0;
                 });
             }
