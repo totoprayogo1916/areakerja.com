@@ -22,6 +22,12 @@
                         <span class="fa fa-newspaper-o mr-1"></span> Tips Kerja
                     </a>
                 </li>
+                <li class="nav-item mr-10">
+                    <a type="button" class="nav-link form-pasang" href="{{ route('daftarkandidat') }}"
+                        style="color: #fee5ba">
+                        <span class="fas fa-user-tie"></span> Daftar Sebagai Kandidat
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a type="button" class="nav-link form-pasang" href="{{ route('pilihpaket') }}"
                         style="color: #fee5ba">

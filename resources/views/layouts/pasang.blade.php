@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/linearicons.css') }}">
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
@@ -184,6 +185,110 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
+
+    <script>
+        document.getElementById("costum-slider").addEventListener("input", function(event){
+            let value = event.target.value;
+            document.getElementById("current-value").innerText = value;
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var postURL = "<?= url('addmore') ?>";
+            var i = 1;
+
+            var i2 = 1;
+
+            var i3 = 1;
+
+
+            $('#add').click(function() {
+                i++;
+                $('#dynamic_field').append('<tr id="row' + i +
+                    '" class="dynamic-added"><td><input type="text" name="requirements[]" placeholder="Masukkan Syarat Pekerjaan" class="form-control name_list" /></td><td><button type="button" name="remove" id="' +
+                    i + '" class="btn btn-danger btn_remove">X</button></td></tr>');
+            });
+
+            $('#add2').click(function() {
+                i2++;
+                $('#dynamic_field2').append('<tr id="row' + i2 +
+                    '" class="dynamic-added"><td><input id="title" name="title" required="" type="text" class="form-control2 " value=""''
+                                    data-type="text" aria-required="true" placeholder="Nama Skill" style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;"></td>''
+                                <td><div class="box input-group mb-2 mr-sm-2">''
+                                    <div class="value" id="current-value">50 </div><span style="color:#f77f10;">%</span>''
+                                    <div class="slider">''
+                                    <input type="range" min="0" max="100" value="50" id="costum-slider">''
+                                    </div>''
+                                </div></td><td><button type="button" name="remove" id="' +
+                    i2 + '" class="btn btn-danger btn_remove">X</button></td></tr>');
+            });
+
+            $('#add3').click(function() {
+                i3++;
+                $('#dynamic_field3').append('<tr id="row' + i3 +
+                    '" class="dynamic-added"><td><input type="text" name="list[]" placeholder="Masukkan list" class="form-control name_list" /></td><td><button type="button" name="remove" id="' +
+                    i3 + '" class="btn btn-danger btn_remove">X</button></td></tr>');
+            });
+
+
+            $(document).on('click', '.btn_remove', function() {
+                var button_id = $(this).attr("id");
+                $('#row' + button_id + '').remove();
+            });
+
+            $(document).on('click', '.btn_remove', function() {
+                var button_id = $(this).attr("id");
+                $('#row' + button_id + '').remove();
+            });
+
+            $(document).on('click', '.btn_remove', function() {
+                var button_id = $(this).attr("id");
+                $('#row' + button_id + '').remove();
+            });
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+
+            $('#submit').click(function() {
+                $.ajax({
+                    url: postURL,
+                    method: "POST",
+                    data: $('#add_name').serialize(),
+                    type: 'json',
+                    success: function(data) {
+                        if (data.error) {
+                            printErrorMsg(data.error);
+                        } else {
+                            i = 1;
+                            $('.dynamic-added').remove();
+                            $('#add_name')[0].reset();
+                            $(".print-success-msg").find("ul").html('');
+                            $(".print-success-msg").css('display', 'block');
+                            $(".print-error-msg").css('display', 'none');
+                            $(".print-success-msg").find("ul").append(
+                                '<li>Record Inserted Successfully.</li>');
+                        }
+                    }
+                });
+            });
+
+
+            function printErrorMsg(msg) {
+                $(".print-error-msg").find("ul").html('');
+                $(".print-error-msg").css('display', 'block');
+                $(".print-success-msg").css('display', 'none');
+                $.each(msg, function(key, value) {
+                    $(".print-error-msg").find("ul").append('<li>' + value + '</li>');
+                });
+            }
+        });
+    </script>
+
     <script>
         $('.slider').slick({
             arrows: false,

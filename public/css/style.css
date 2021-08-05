@@ -161,3 +161,51 @@
         margin-bottom: 15px;
     }
 }
+
+/* RANGE
+=========================== */
+
+.box{
+    background: white;
+    padding: 5px 5px 10px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgb(0,0,0,0,5);
+    display: flex;
+    align-items: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.box .slider input{
+    height: 10px;
+    width: 200px;
+    -webkit-appearance: none;
+    outline: none;
+    background: #f2f2f2;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.box .value{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Poppins',sans-serif;
+    color: #f59f1e;
+    text-align: center;
+    margin-left: 30%;
+}
+
+.lingkaran{
+	width: 30px;
+	height: 30px;
+	background: #fe7b54;
+	border-radius: 100%;
+    outline: none;
+}
