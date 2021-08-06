@@ -29,7 +29,7 @@
                 </a>
               </div>
               <div class="col-12 col-md-6 col-lg-3 px-3">
-                <a href="{{ route('mitra.lowongan.index') }}" style="color: #fe7b54">
+                <a href="{{ route('mitra.mitra.topup', [auth()->user()->id, 50000] ) }}" style="color: #fe7b54">
                 <div class="card card-secondary">
                   <div class="card-header">
                     <i class="fas fa-coins" style="margin: 0px 10px 0px -4px;"></i>
@@ -42,7 +42,7 @@
                 </a>
               </div>
               <div class="col-12 col-md-6 col-lg-3 px-3">
-                <a href="{{ route('mitra.lowongan.index') }}" style="color: #fe7b54">
+                <a href="{{ route('mitra.mitra.topup', [auth()->user()->id, 75000] ) }}" style="color: #fe7b54">
                 <div class="card card-danger">
                   <div class="card-header">
                     <i class="fas fa-coins" style="margin: 0px 10px 0px -4px;"></i>
@@ -55,7 +55,7 @@
                 </a>
               </div>
               <div class="col-12 col-md-6 col-lg-3 px-3">
-                <a href="{{ route('mitra.lowongan.index') }}" style="color: #fe7b54">
+                <a href="{{ route('mitra.mitra.topup', [auth()->user()->id, 100000] ) }}" style="color: #fe7b54">
                 <div class="card card-warning">
                   <div class="card-header">
                     <i class="fas fa-coins" style="margin: 0px 10px 0px -4px;"></i>
@@ -68,7 +68,7 @@
                 </a>
               </div>
               <div class="col-12 col-md-6 col-lg-3 px-3">
-                <a href="{{ route('mitra.lowongan.index') }}" style="color: #fe7b54">
+                <a href="{{ route('mitra.mitra.topup', [auth()->user()->id, 125000] ) }}" style="color: #fe7b54">
                 <div class="card card-info">
                   <div class="card-header">
                     <i class="fas fa-coins" style="margin: 0px 10px 0px -4px;"></i>
@@ -81,7 +81,7 @@
                 </a>
               </div>
               <div class="col-12 col-md-6 col-lg-3 px-3">
-                <a href="{{ route('mitra.lowongan.index') }}" style="color: #fe7b54">
+                <a href="{{ route('mitra.mitra.topup', [auth()->user()->id, 150000] ) }}" style="color: #fe7b54">
                 <div class="card card-success">
                   <div class="card-header">
                     <i class="fas fa-coins" style="margin: 0px 10px 0px -4px;"></i>
@@ -94,7 +94,7 @@
                 </a>
               </div>
               <div class="col-12 col-md-6 col-lg-3 px-3">
-                <a href="{{ route('mitra.lowongan.index') }}" style="color: #fe7b54">
+                <a href="{{ route('mitra.mitra.topup', [auth()->user()->id, 175000] ) }}" style="color: #fe7b54">
                 <div class="card card-light">
                   <div class="card-header">
                     <i class="fas fa-coins" style="margin: 0px 10px 0px -4px;"></i>
@@ -107,7 +107,7 @@
                 </a>
               </div>
               <div class="col-12 col-md-6 col-lg-3 px-3">
-                <a href="{{ route('mitra.lowongan.index') }}" style="color: #fe7b54">
+                <a href="{{ route('mitra.mitra.topup', [auth()->user()->id, 200000] ) }}" style="color: #fe7b54">
                 <div class="card card-dark">
                   <div class="card-header">
                     <i class="fas fa-coins" style="margin: 0px 10px 0px -4px;"></i>
