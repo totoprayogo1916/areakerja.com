@@ -22,6 +22,44 @@
         <form id="regForm" enctype="multipart/form-data" action="#" method="#">
             @csrf
             <div class="tab">
+                <h4>Nama Lengkap</h4>
+                <p><input id="nama" name="nama" placeholder="" oninput="this.className = ''"
+                        style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;">
+                </p>
+                <h4>Alamat Tempat Tinggal</h4>
+                <div>
+                    <textarea id="alamat" name="alamat"  style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;width: 100%;"
+                        oninput="this.className = ''" type="text" class="form-control2 " value="" data-type="text"
+                        aria-required="true" ></textarea>
+                </div>
+                <h4>Biografi</h4>
+                    <textarea id="deskripsiperusahaan" name="deskripsiperusahaan"  style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;width: 100%;"
+                        oninput="this.className = ''" type="text" class="form-control2 " value="" data-type="text"
+                        aria-required="true"></textarea>
+                <h4>Skill Utama</h4>
+                <p><input id="alamat" name="alamat" placeholder="" oninput="this.className = ''"
+                    type="text" class="form-control2 " value="" data-type="text"
+                    aria-required="true" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;">
+                </p>
+                <h4>Upload CV</h4>
+                <div>
+                    <input type="file" id="gambar" name="gambar"
+                        style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;">
+                </div>
+                {{-- <p><input placeholder="" oninput="this.className = ''" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;  "></p> --}}
+
+                <div class="mt-4 mb-0">
+                    <div class="row justify-content-center">
+                        <div class="col-6 col-sm-3">
+                            <button type="submit" class="btn btn-area" onclick="nextPrev(1)">
+                                <span>Selanjutnya</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab">
                 <div class="form-group">
                     <h4>Skill
                         <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
@@ -77,43 +115,7 @@
                 </div>
             </div>
 
-            <div class="tab">
-                <h4>Nama Lengkap</h4>
-                <p><input id="nama" name="nama" placeholder="" oninput="this.className = ''"
-                        style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;">
-                </p>
-                <h4>Alamat Tempat Tinggal</h4>
-                <div>
-                    <textarea id="alamat" name="alamat"  style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;width: 100%;"
-                        oninput="this.className = ''" type="text" class="form-control2 " value="" data-type="text"
-                        aria-required="true" ></textarea>
-                </div>
-                <h4>Biografi</h4>
-                    <textarea id="deskripsiperusahaan" name="deskripsiperusahaan"  style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;width: 100%;"
-                        oninput="this.className = ''" type="text" class="form-control2 " value="" data-type="text"
-                        aria-required="true"></textarea>
-                <h4>Skill Utama</h4>
-                <p><input id="alamat" name="alamat" placeholder="" oninput="this.className = ''"
-                    type="text" class="form-control2 " value="" data-type="text"
-                    aria-required="true" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;">
-                </p>
-                <h4>Upload CV</h4>
-                <div>
-                    <input type="file" id="gambar" name="gambar"
-                        style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;">
-                </div>
-                {{-- <p><input placeholder="" oninput="this.className = ''" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;  "></p> --}}
 
-                <div class="mt-4 mb-0">
-                    <div class="row justify-content-center">
-                        <div class="col-6 col-sm-3">
-                            <button type="submit" class="btn btn-area" onclick="nextPrev(1)">
-                                <span>Selanjutnya</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
         </form>
