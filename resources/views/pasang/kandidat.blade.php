@@ -61,18 +61,18 @@
 
             <div class="tab">
                 <div class="form-group">
-                    <h4>Skill
+                    <h3>Skill
                         <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
-                    </h4>
+                    </h3>
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dynamic_field2">
                             <tr>
-                                <td><input id="title" name="title" required="" type="text" class="form-control2 " value=""
+                                <td><input id="namaskill" name="namaskill" type="text" class="form-control2 " value=""
                                     data-type="text" aria-required="true" placeholder="Nama Skill" style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;"></td>
                                 <td><div class="box input-group mb-2 mr-sm-2">
-                                    <div class="value" id="current-value">50 </div><span style="color:#f77f10;">%</span>
+                                    <div class="value" id="current-value1">50 </div><span style="color:#f77f10;">%</span>
                                     <div class="slider">
-                                    <input type="range" min="0" max="100" value="50" id="costum-slider">
+                                    <input type="range" min="0" max="100" value="50" id="costum-slider1">
                                     </div>
                                 </div></td>
                                 <td><button type="button" name="add2" id="add2" class="btn btn-area">Add More</button></td>

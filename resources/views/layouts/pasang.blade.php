@@ -187,10 +187,14 @@
     </script>
 
     <script>
-        document.getElementById("costum-slider").addEventListener("input", function(event){
+        var r = 1;
+        var r2 = 1;
+        for(r = 1; r < 100; r++){
+            for(r2 = 1; r2 < 100; r2++){
+        document.getElementById("costum-slider"+r+"").addEventListener("input", function(event){
             let value = event.target.value;
-            document.getElementById("current-value").innerText = value;
-        });
+            document.getElementById("current-value"+r2+"").innerText = value;
+        });}}
     </script>
 
     <script type="text/javascript">
@@ -199,6 +203,8 @@
             var i = 1;
 
             var i2 = 1;
+            var r  = 1;
+            var r2 = 1;
 
             var i3 = 1;
 
@@ -212,22 +218,16 @@
 
             $('#add2').click(function() {
                 i2++;
+                r++;
                 $('#dynamic_field2').append('<tr id="row' + i2 +
-                    '" class="dynamic-added"><td><input id="title" name="title" required="" type="text" class="form-control2 " value=""''
-                                    data-type="text" aria-required="true" placeholder="Nama Skill" style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;"></td>''
-                                <td><div class="box input-group mb-2 mr-sm-2">''
-                                    <div class="value" id="current-value">50 </div><span style="color:#f77f10;">%</span>''
-                                    <div class="slider">''
-                                    <input type="range" min="0" max="100" value="50" id="costum-slider">''
-                                    </div>''
-                                </div></td><td><button type="button" name="remove" id="' +
-                    i2 + '" class="btn btn-danger btn_remove">X</button></td></tr>');
+                    '" class="dynamic-added"><td><input type="text" name="namaskill" placeholder="Nama Skill" class="form-control2" data-type="text" aria-required="true" style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: Poppins;" /></td><td><div class="box input-group mb-2 mr-sm-2"><div class="value" id="current-value'+r+'">50 </div><span style="color:#f77f10;">%</span><div class="slider"><input type="range" min="0" max="100" value="50" id="costum-slider'+r+'"></div></div></td><td><button type="button" name="remove" id="' +
+                    i2 + '" class="btn btn-area btn_remove">X</button></td></tr>');
             });
 
             $('#add3').click(function() {
                 i3++;
                 $('#dynamic_field3').append('<tr id="row' + i3 +
-                    '" class="dynamic-added"><td><input type="text" name="list[]" placeholder="Masukkan list" class="form-control name_list" /></td><td><button type="button" name="remove" id="' +
+                    '" class="dynamic-added"><td><input type="text" name="namaskill" placeholder="Nama Skill" class="form-control2" data-type="text" aria-r /></td><td><button type="button" name="remove" id="' +
                     i3 + '" class="btn btn-danger btn_remove">X</button></td></tr>');
             });
 
