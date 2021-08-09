@@ -299,7 +299,6 @@
     <script>
         var r = 1;
         var r2 = 1;
-        console.log(r2);
         for (r = 1; r < 100; r++) {
             for (r2 = 1; r2 < 100; r2++) {
                 document.getElementById("costum-slider" + r + "").addEventListener("input", function(event) {
