@@ -186,16 +186,6 @@
         }
     </script>
 
-    <script>
-        var r = 1;
-        var r2 = 1;
-        for(r = 1; r < 100; r++){
-            for(r2 = 1; r2 < 100; r2++){
-        document.getElementById("costum-slider"+r+"").addEventListener("input", function(event){
-            let value = event.target.value;
-            document.getElementById("current-value"+r2+"").innerText = value;
-        });}}
-    </script>
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -203,7 +193,7 @@
             var i = 1;
 
             var i2 = 1;
-            var r  = 1;
+            var r = 1;
             var r2 = 1;
 
             var i3 = 1;
@@ -220,8 +210,17 @@
                 i2++;
                 r++;
                 $('#dynamic_field2').append('<tr id="row' + i2 +
-                    '" class="dynamic-added"><td><input type="text" name="namaskill" placeholder="Nama Skill" class="form-control2" data-type="text" aria-required="true" style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: Poppins;" /></td><td><div class="box input-group mb-2 mr-sm-2"><div class="value" id="current-value'+r+'">50 </div><span style="color:#f77f10;">%</span><div class="slider"><input type="range" min="0" max="100" value="50" id="costum-slider'+r+'"></div></div></td><td><button type="button" name="remove" id="' +
+                    '" class="dynamic-added"><td><input type="text" name="namaskill" placeholder="Nama Skill" class="form-control2" data-type="text" aria-required="true" style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: Poppins;" /></td><td><div class="box input-group mb-2 mr-sm-2"><div class="value" id="current-value' +
+                    r +
+                    '">50 </div><span style="color:#f77f10;">%</span><div class="slider"><input type="range" min="0" max="100" value="50" id="costum-slider' +
+                    r + '"></div></div></td><td><button type="button" name="remove" id="' +
                     i2 + '" class="btn btn-area btn_remove">X</button></td></tr>');
+                document.getElementById("costum-slider" + r + "").addEventListener("input", function(
+                    event) {
+                    let value = event.target.value;
+                    document.getElementById("current-value" + r + "").innerText = value;
+                });
+
             });
 
             $('#add3').click(function() {
@@ -288,6 +287,21 @@
             }
         });
     </script>
+
+    <script>
+        var r = 1;
+        var r2 = 1;
+        console.log(r2);
+        for (r = 1; r < 100; r++) {
+            for (r2 = 1; r2 < 100; r2++) {
+                document.getElementById("costum-slider" + r + "").addEventListener("input", function(event) {
+                    let value = event.target.value;
+                    document.getElementById("current-value" + r2 + "").innerText = value;
+                });
+            }
+        }
+    </script>
+
 
     <script>
         $('.slider').slick({
