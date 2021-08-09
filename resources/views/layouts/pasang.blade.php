@@ -160,6 +160,7 @@
     <script src="{{ asset('js/slick.min.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
     <script src="{{ asset('js/pasang.js') }}"></script>
+
     <script>
         AOS.init({
             once: true,
@@ -214,12 +215,19 @@
                     r +
                     '">50 </div><span style="color:#f77f10;">%</span><div class="slider"><input type="range" min="0" max="100" value="50" id="costum-slider' +
                     r + '"></div></div></td><td><button type="button" name="remove" id="' +
-                    i2 + '" class="btn btn-area btn_remove">X</button></td></tr>');
-                document.getElementById("costum-slider" + r + "").addEventListener("input", function(
-                    event) {
-                    let value = event.target.value;
-                    document.getElementById("current-value" + r + "").innerText = value;
-                });
+                    i2 +
+                    '" class="btn btn-area btn_remove">X</button></td></tr><script src="{{ asset('js/slider.js') }}" />'
+                );
+                // window['pre_' + r] = 'a';
+                // console.log('pre' + r);
+                // var slider = document.getElementById("costum-slider" + r + "").addEventListener("input",
+                //     function(
+                //         event) {
+                //         console.log("costum-slider" + r + "");
+                //         let value = event.target.value;
+                //         document.getElementById(
+                //             "current-value" + r + "").innerText = value;
+                //     });
 
             });
 
