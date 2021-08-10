@@ -203,15 +203,15 @@
             $('#add').click(function() {
                 i++;
                 $('#dynamic_field').append('<tr id="row' + i +
-                    '" class="dynamic-added"><td><input type="text" name="requirements[]" placeholder="Masukkan Syarat Pekerjaan" class="form-control name_list" /></td><td><button type="button" name="remove" id="' +
-                    i + '" class="btn btn-danger btn_remove">X</button></td></tr>');
+                    '" class="dynamic-added"><td><input id="namasekolah" name="namasekolah" type="text" class="form-control2 " value="" required="" data-type="text" aria-required="true" placeholder="Nama Sekolah" style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: Poppins, sans-serif;"></td><td><input id="tahun" name="tahun" type="text" class="form-control2 " value="" required="" data-type="text" aria-required="true" placeholder="Tahun Belajar (2016-2019)" style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: Poppins, sans-serif;"><td><button type="button" name="remove" id="' +
+                    i +'" class="btn btn-area btn_remove">X</button></td></tr>');
             });
 
             $('#add2').click(function() {
                 i2++;
                 r++;
                 $('#dynamic_field2').append('<tr id="row' + i2 +
-                    '" class="dynamic-added"><td><input type="text" name="namaskill" placeholder="Nama Skill" class="form-control2" data-type="text" aria-required="true" style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: Poppins;" /></td><td><div class="box input-group mb-2 mr-sm-2"><div class="value" id="current-value' +
+                    '" class="dynamic-added"><td><input type="text" name="namaskill" required="" placeholder="Nama Skill" class="form-control2" data-type="text" aria-required="true" style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: Poppins;" /></td><td><div class="box input-group mb-2 mr-sm-2"><div class="value" id="current-value' +
                     r +
                     '">50 </div><span style="color:#f77f10;">%</span><div class="slider"><input type="range" min="0" max="100" value="50" id="costum-slider' +
                     r + '"></div></div></td><td><button type="button" name="remove" id="' +
