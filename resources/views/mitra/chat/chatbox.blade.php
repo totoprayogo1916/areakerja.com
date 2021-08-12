@@ -28,7 +28,7 @@
                 </div>
             @endif --}}
                 <small class="text-muted w-100">Sent
-                    <em>{{ $message->created_at }}</em></small>
+                    <em>{{ $message->created_at->diffForHumans() }}</em></small>
             </div>
         @endforeach
     @else
