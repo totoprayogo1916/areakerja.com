@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{ asset('css/style2.css') }}">
     <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style3.css') }}">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
@@ -134,37 +135,59 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-body">
-                    <form id="regForm" enctype="multipart/form-data" action="#" method="#">
-                        <h4 class="mb-2">Nama Lengkap</h4>
-                        <p><input id="nama" name="nama" placeholder="" oninput="this.className = ''"
-                                style="border-radius: 10px; padding:10px; border: 2px solid ;font-family: 'Poppins', sans-serif;">
-                        </p>
-                        <h4 class="mb-2">Alamat Tempat Tinggal</h4>
-                        <div>
-                            <textarea id="alamat" name="alamat"  style="border-radius: 10px; padding:10px; border: 2px solid;font-family: 'Poppins', sans-serif;width: 100%;"
-                                oninput="this.className = ''" type="text" class="form-control2 mb-3" value="" data-type="text"
-                                aria-required="true" ></textarea>
-                        </div>
-                        <h4 class="mb-2">Biografi</h4>
-                            <textarea id="deskripsiperusahaan" name="deskripsiperusahaan"  style="border-radius: 10px; padding:10px; border: 2px solid ;font-family: 'Poppins', sans-serif;width: 100%;"
-                                oninput="this.className = ''" type="text" class="form-control2 mb-3" value="" data-type="text"
-                                aria-required="true"></textarea>
-                        <h4 class="mb-2">Skill Utama</h4>
-                        <p><input id="alamat" name="alamat" placeholder="" oninput="this.className = ''"
-                            type="text" class="form-control2 mb-3" value="" data-type="text"
-                            aria-required="true" style="border-radius: 10px; padding:10px; border: 2px solid ;font-family: 'Poppins', sans-serif;">
-                        </p>
-                        <h4 class="mb-2">Upload CV</h4>
-                        <div>
-                            <input type="file" id="gambar" name="gambar"
-                                style="border-radius: 10px; padding:10px; border: 2px solid ;">
-                        </div>
-                    </form>
+                    <div class="login-sec-bg">
+                        <h2 class="text-center">Account Information</h2>
+                        <form id="example-advanced-form" action="#" style="display: none;">
+                            <h3>Account</h3>
+                            <fieldset class="form-input">
+                                <h4>Account Information</h4>
+    
+                                <label for="userName">User name *</label>
+                                <input id="userName" name="userName" type="text" class="form-control required">
+                                <label for="password">Password *</label>
+                                <input id="password" name="password" type="text" class="form-control required">
+                                <label for="confirm">Confirm Password *</label>
+                                <input id="confirm" name="confirm" type="text" class="form-control required">
+                                <p>(*) Mandatory</p>
+                            </fieldset>
+    
+                            <h3>Profile</h3>
+                            <fieldset class="form-input">
+                                <h4>Profile Information</h4>
+    
+                                <label for="name">First name *</label>
+                                <input id="name" name="name" type="text" class="form-control required">
+                                <label for="surname">Last name *</label>
+                                <input id="surname" name="surname" type="text" class="form-control required">
+                                <label for="email">Email *</label>
+                                <input id="email" name="email" type="text" class="form-control form-controlrequired email">
+                                <label for="address">Address</label>
+                                <input id="address" name="address" type="text" class="form-control">
+                                <label for="age">Age (The warning step will show up if age is less than 18) *</label>
+                                <input id="age" name="age" type="text" class="form-control required number">
+                                <p>(*) Mandatory</p>
+                            </fieldset>
+    
+                            <h3>Warning</h3>
+                            <fieldset class="form-input">
+                                <h4>You are to young</h4>
+    
+                                <p>Please go away ;-)</p>
+                            </fieldset>
+    
+                            <h3>Finish</h3>
+                            <fieldset class="form-input">
+                                <h4>Terms and Conditions</h4>
+    
+                                <input id="acceptTerms-2" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
+                            </fieldset>
+                        </form>			
+                    </div>
                 </div>
-                <div class="modal-footer">
+                {{-- <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   <button type="button" class="btn btn-danger">Save changes</button>
-                </div>
+                </div> --}}
               </div>
             </div>
           </div>
@@ -197,7 +220,10 @@
     <script src="{{ asset('js/app2pasang.js') }}"></script>
     <script src="{{ asset('js/slick.min.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
-    <script src="{{ asset('js/pasang.js') }}"></script>
+    <script src="{{ asset('js/jquery.cookie-1.3.1.js') }}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.steps.js') }}"></script>
+    <script src='https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js'></script>
 
     <script>
         AOS.init({
@@ -366,7 +392,66 @@
         })
     </script>
     @include('sweetalert::alert')
-
+    <script>
+        var form = $("#example-advanced-form").show();
+    
+        form.steps({
+            headerTag: "h3",
+            bodyTag: "fieldset",
+            transitionEffect: "slideLeft",
+            onStepChanging: function (event, currentIndex, newIndex)
+            {
+                // Allways allow previous action even if the current form is not valid!
+                if (currentIndex > newIndex)
+                {
+                    return true;
+                }
+                // Forbid next action on "Warning" step if the user is to young
+                if (newIndex === 3 && Number($("#age").val()) < 18)
+                {
+                    return false;
+                }
+                // Needed in some cases if the user went back (clean up)
+                if (currentIndex < newIndex)
+                {
+                    // To remove error styles
+                    form.find(".body:eq(" + newIndex + ") label.error").remove();
+                    form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
+                }
+                form.validate().settings.ignore = ":disabled,:hidden";
+                return form.valid();
+            },
+            onStepChanged: function (event, currentIndex, priorIndex)
+            {
+                // Used to skip the "Warning" step if the user is old enough.
+                if (currentIndex === 2 && Number($("#age").val()) >= 18)
+                {
+                    form.steps("next");
+                }
+                // Used to skip the "Warning" step if the user is old enough and wants to the previous step.
+                if (currentIndex === 2 && priorIndex === 3)
+                {
+                    form.steps("previous");
+                }
+            },
+            onFinishing: function (event, currentIndex)
+            {
+                form.validate().settings.ignore = ":disabled";
+                return form.valid();
+            },
+            onFinished: function (event, currentIndex)
+            {
+                alert("Submitted!");
+            }
+        }).validate({
+            errorPlacement: function errorPlacement(error, element) { element.before(error); },
+            rules: {
+                confirm: {
+                    equalTo: "#password"
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

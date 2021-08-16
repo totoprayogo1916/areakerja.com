@@ -7,7 +7,7 @@
                 <div class="col-12 col-md-5">
                     <h1 class="display-3 fw-bold" style="font-weight: 500">Get your dream job</h1>
                     <h4 class="my-3" style="font-weight: 400; line-height:1.6!important">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non nunc id lacus sagittis lobortis id nec nulla.   </h4>
-                    <button class="btn btn-lg mt-3" style="background:#fe7b54; color:white;" type="button">Daftar</button>
+                    <button class="btn btn-lg mt-3" style="background:#fe7b54; color:white;" type="button" data-toggle="modal" data-target="#modalDaftar">Daftar</button>
                 </div>
                 <div class="col-7 col-md-7">
                     <img class="img-fluid" src="{{ asset('img/jumbo.png') }}">
@@ -139,6 +139,7 @@
             </div>
 
         </div>
+        
 
     @endsection
 {{-- @section('content')
