@@ -132,7 +132,7 @@
         </main>
         @include('user.footer')
         <div class="modal fade" id="modalDaftar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-body">
                     <div class="login-sec-bg">
@@ -141,21 +141,40 @@
                             <h3>Account</h3>
                             <fieldset class="form-input">
                                 <h4>Account Information</h4>
-    
-                                <label for="userName">User name *</label>
-                                <input id="userName" name="userName" type="text" class="form-control required">
-                                <label for="password">Password *</label>
-                                <input id="password" name="password" type="text" class="form-control required">
-                                <label for="confirm">Confirm Password *</label>
-                                <input id="confirm" name="confirm" type="text" class="form-control required">
+
+                                <label for="namalengkap">Nama Lengkap</label>
+                                <input id="namalengkap" name="namalengkap" type="text" class="form-control2">
+                                <label for="alamat">Alamat Tempat Tinggal</label>
+                                <textarea id="alamat" name="alamat" type="text" class="form-control2"> </textarea>
+                                <label for="biografi">Biografi</label>
+                                <textarea id="biografi" name="biografi" type="text" class="form-control2"> </textarea>
+                                <label for="skillutama">Skill Utama</label>
+                                <input id="skillutama" name="skillutama" type="text" class="form-control2">
+                                <label for="cv">Upload CV</label>
+                                <input id="cv" name="cv" type="file" class="form-control2">
                                 <p>(*) Mandatory</p>
                             </fieldset>
-    
-                            <h3>Profile</h3>
+
+                            <h3>Skill</h3>
                             <fieldset class="form-input">
-                                <h4>Profile Information</h4>
-    
-                                <label for="name">First name *</label>
+                                <h4>Skill</h4>
+
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dynamic_field2">
+                                        <tr>
+                                            <td><input id="namaskill" name="namaskill" type="text" class="form-control2 " value="" required=""
+                                                data-type="text" aria-required="true" placeholder="Nama Skill" style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;"></td>
+                                            <td><div class="box input-group mb-2 mr-sm-2">
+                                                <div class="value" id="current-value1">50 </div><span style="color:#f77f10;">%</span>
+                                                <div class="slider">
+                                                <input type="range" min="0" max="100" value="50" id="costum-slider1">
+                                                </div>
+                                            </div></td>
+                                            <td><button type="button" name="add2" id="add2" class="btn btn-area">Add More</button></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                {{-- <label for="name">First name *</label>
                                 <input id="name" name="name" type="text" class="form-control required">
                                 <label for="surname">Last name *</label>
                                 <input id="surname" name="surname" type="text" class="form-control required">
@@ -165,23 +184,23 @@
                                 <input id="address" name="address" type="text" class="form-control">
                                 <label for="age">Age (The warning step will show up if age is less than 18) *</label>
                                 <input id="age" name="age" type="text" class="form-control required number">
-                                <p>(*) Mandatory</p>
+                                <p>(*) Mandatory</p> --}}
                             </fieldset>
-    
+
                             <h3>Warning</h3>
                             <fieldset class="form-input">
                                 <h4>You are to young</h4>
-    
+
                                 <p>Please go away ;-)</p>
                             </fieldset>
-    
+
                             <h3>Finish</h3>
                             <fieldset class="form-input">
                                 <h4>Terms and Conditions</h4>
-    
+
                                 <input id="acceptTerms-2" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
                             </fieldset>
-                        </form>			
+                        </form>
                     </div>
                 </div>
                 {{-- <div class="modal-footer">
@@ -394,7 +413,7 @@
     @include('sweetalert::alert')
     <script>
         var form = $("#example-advanced-form").show();
-    
+
         form.steps({
             headerTag: "h3",
             bodyTag: "fieldset",

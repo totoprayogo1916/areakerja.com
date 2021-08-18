@@ -25,19 +25,20 @@
 }
 
 .login-sec{
-	padding: 30px 30px; 
-	background:#FFFFFF; 
+	padding: 30px 30px;
+	background:#FFFFFF;
 	border-radius: 0px 10px 10px 0px;
 	}
 .login-sec-bg{
+    font-family: 'Poppins', sans-serif;
 	position:relative;
-	background:#FFFFFF; 
+	background:#FFFFFF;
 }
 .login-sec .copy-text{
-	position:absolute; 
-	width:80%; 
-	bottom:20px; 
-	font-size:13px; 
+	position:absolute;
+	width:80%;
+	bottom:20px;
+	font-size:13px;
 	text-align:center;
 	}
 .login-sec .copy-text i{
@@ -47,45 +48,45 @@
 	color:#E36262;
 	}
 .login-sec h2{
-	margin-bottom:30px; 
+	margin-bottom:30px;
 	font-weight: 600;
 	font-size: 24px;
 	color: #DE6262;
 	}
 .login-sec h2:after{
-	content:" "; 
-	width:100px; 
-	height:5px; 
-	background:#FEB58A; 
-	display:block; 
-	margin-top:5px; 
-	border-radius:3px; 
+	content:" ";
+	width:100px;
+	height:5px;
+	background:#FEB58A;
+	display:block;
+	margin-top:5px;
+	border-radius:3px;
 	margin-left:auto;
 	margin-right:auto;
 	}
 .btn-login{
-	background: #DE6262; 
-	color:#fff; 
+	background: #DE6262;
+	color:#fff;
 	font-weight:600;
 	}
 .banner-text{
-	width:70%; 
-	position:absolute; 
-	bottom:40px; 
+	width:70%;
+	position:absolute;
+	bottom:40px;
 	padding-left:20px;
 	}
 .banner-text h2{
-	color:#fff; 
+	color:#fff;
 	font-weight:600;
 	font-size: 32px;
 	}
 .banner-text h2:after{
-	content:" "; 
-	width:100px; 
-	height:5px; 
-	background:#FFFFFF; 
-	display:block; 
-	margin-top:20px; 
+	content:" ";
+	width:100px;
+	height:5px;
+	background:#FFFFFF;
+	display:block;
+	margin-top:20px;
 	border-radius:3px;
 	}
 .banner-text p{
@@ -98,15 +99,16 @@
 	font-weight: 400;
 }
 .form-input .form-control{
+    font-family: 'Poppins', sans-serif;
 	border-color: #fff;
 	border-radius: 0;
 	box-shadow: 0 0 24px rgba(91, 94, 222, 0.16);
 	font-size: 13px;
 	padding: 5px 20px;
 }
-	
-	
-	
+
+
+
 .wizard,.tabcontrol{
     display:block;
     width:100%;
@@ -172,12 +174,12 @@
     cursor:default
 }
 .wizard>.steps .current a,.wizard>.steps .current a:hover,.wizard>.steps .current a:active{
-    background:#240661;
+    background:#fe7b54;
     color:#fff;
     cursor:default
 }
 .wizard>.steps .done a,.wizard>.steps .done a:hover,.wizard>.steps .done a:active{
-    background:#9dc8e2;
+    background:#ffa58a;
     color:#fff
 }
 .wizard>.steps .error a,.wizard>.steps .error a:hover,.wizard>.steps .error a:active{
@@ -377,9 +379,9 @@
         width:100%
     }
 }
-	
-	
-	
+
+
+
 
 .copyright.text-center{
 	margin-top: 30px;
