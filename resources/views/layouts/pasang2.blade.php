@@ -131,50 +131,60 @@
 
         </main>
         @include('user.footer')
-        <div class="modal fade" id="modalDaftar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="modalDaftar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-              <div class="modal-content">
-                <div class="modal-body">
-                    <div class="login-sec-bg">
-                        <h2 class="text-center">Account Information</h2>
-                        <form id="example-advanced-form" action="#" style="display: none;">
-                            <h3>Account</h3>
-                            <fieldset class="form-input">
-                                <h4>Account Information</h4>
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="login-sec-bg">
+                            <h2 class="text-center">Account Information</h2>
+                            <form id="example-advanced-form" action="#" style="display: none;">
+                                <h3>Account</h3>
+                                <fieldset class="form-input">
+                                    <h4>Account Information</h4>
 
-                                <label for="namalengkap">Nama Lengkap</label>
-                                <input id="namalengkap" name="namalengkap" type="text" class="form-control2">
-                                <label for="alamat">Alamat Tempat Tinggal</label>
-                                <textarea id="alamat" name="alamat" type="text" class="form-control2"> </textarea>
-                                <label for="biografi">Biografi</label>
-                                <textarea id="biografi" name="biografi" type="text" class="form-control2"> </textarea>
-                                <label for="skillutama">Skill Utama</label>
-                                <input id="skillutama" name="skillutama" type="text" class="form-control2">
-                                <label for="cv">Upload CV</label>
-                                <input id="cv" name="cv" type="file" class="form-control2">
-                                <p>(*) Mandatory</p>
-                            </fieldset>
+                                    <label for="namalengkap">Nama Lengkap</label>
+                                    <input id="namalengkap" name="namalengkap" type="text" class="form-control2">
+                                    <label for="alamat">Alamat Tempat Tinggal</label>
+                                    <textarea id="alamat" name="alamat" type="text" class="form-control2"> </textarea>
+                                    <label for="biografi">Biografi</label>
+                                    <textarea id="biografi" name="biografi" type="text"
+                                        class="form-control2"> </textarea>
+                                    <label for="skillutama">Skill Utama</label>
+                                    <input id="skillutama" name="skillutama" type="text" class="form-control2">
+                                    <label for="cv">Upload CV</label>
+                                    <input id="cv" name="cv" type="file" class="form-control2">
+                                    <p>(*) Mandatory</p>
+                                </fieldset>
 
-                            <h3>Skill</h3>
-                            <fieldset class="form-input">
-                                <h4>Skill</h4>
+                                <h3>Skill</h3>
+                                <fieldset class="form-input">
+                                    <h4>Skill</h4>
 
-                                <div class="table-responsive">
-                                    <table class="table table-bordered" id="dynamic_field2">
-                                        <tr>
-                                            <td><input id="namaskill" name="namaskill" type="text" class="form-control2 " value="" required=""
-                                                data-type="text" aria-required="true" placeholder="Nama Skill" style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;"></td>
-                                            <td><div class="box input-group mb-2 mr-sm-2">
-                                                <div class="value" id="current-value1">50 </div><span style="color:#f77f10;">%</span>
-                                                <div class="slider">
-                                                <input type="range" min="0" max="100" value="50" id="costum-slider1">
-                                                </div>
-                                            </div></td>
-                                            <td><button type="button" name="add2" id="add2" class="btn btn-area">Add More</button></td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                {{-- <label for="name">First name *</label>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dynamic_field2">
+                                            <tr>
+                                                <td><input id="namaskill" name="namaskill" type="text"
+                                                        class="form-control2 " value="" required="" data-type="text"
+                                                        aria-required="true" placeholder="Nama Skill"
+                                                        style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;">
+                                                </td>
+                                                <td>
+                                                    <div class="box input-group mb-2 mr-sm-2">
+                                                        <div class="value" id="current-value1">50 </div><span
+                                                            style="color:#f77f10;">%</span>
+                                                        <div class="slider">
+                                                            <input type="range" min="0" max="100" value="50"
+                                                                id="costum-slider1">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><button type="button" name="add2" id="add2" class="btn btn-area">Add
+                                                        More</button></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    {{-- <label for="name">First name *</label>
                                 <input id="name" name="name" type="text" class="form-control required">
                                 <label for="surname">Last name *</label>
                                 <input id="surname" name="surname" type="text" class="form-control required">
@@ -185,31 +195,32 @@
                                 <label for="age">Age (The warning step will show up if age is less than 18) *</label>
                                 <input id="age" name="age" type="text" class="form-control required number">
                                 <p>(*) Mandatory</p> --}}
-                            </fieldset>
+                                </fieldset>
 
-                            <h3>Warning</h3>
-                            <fieldset class="form-input">
-                                <h4>You are to young</h4>
+                                <h3>Warning</h3>
+                                <fieldset class="form-input">
+                                    <h4>You are to young</h4>
 
-                                <p>Please go away ;-)</p>
-                            </fieldset>
+                                    <p>Please go away ;-)</p>
+                                </fieldset>
 
-                            <h3>Finish</h3>
-                            <fieldset class="form-input">
-                                <h4>Terms and Conditions</h4>
+                                <h3>Finish</h3>
+                                <fieldset class="form-input">
+                                    <h4>Terms and Conditions</h4>
 
-                                <input id="acceptTerms-2" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
-                            </fieldset>
-                        </form>
+                                    <input id="acceptTerms-2" name="acceptTerms" type="checkbox" class="required">
+                                    <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
-                </div>
-                {{-- <div class="modal-footer">
+                    {{-- <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   <button type="button" class="btn btn-danger">Save changes</button>
                 </div> --}}
-              </div>
+                </div>
             </div>
-          </div>
+        </div>
     </wrapper>
 
     </div>
@@ -287,7 +298,7 @@
                 i++;
                 $('#dynamic_field').append('<tr id="row' + i +
                     '" class="dynamic-added"><td><input id="namasekolah" name="namasekolah" type="text" class="form-control2 " value="" required="" data-type="text" aria-required="true" placeholder="Nama Sekolah" style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: Poppins, sans-serif;"></td><td><input id="tahun" name="tahun" type="text" class="form-control2 " value="" required="" data-type="text" aria-required="true" placeholder="Tahun Belajar (2016-2019)" style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: Poppins, sans-serif;"><td><button type="button" name="remove" id="' +
-                    i +'" class="btn btn-area btn_remove">X</button></td></tr>');
+                    i + '" class="btn btn-area btn_remove">X</button></td></tr>');
             });
 
             $('#add2').click(function() {
@@ -418,21 +429,17 @@
             headerTag: "h3",
             bodyTag: "fieldset",
             transitionEffect: "slideLeft",
-            onStepChanging: function (event, currentIndex, newIndex)
-            {
+            onStepChanging: function(event, currentIndex, newIndex) {
                 // Allways allow previous action even if the current form is not valid!
-                if (currentIndex > newIndex)
-                {
+                if (currentIndex > newIndex) {
                     return true;
                 }
                 // Forbid next action on "Warning" step if the user is to young
-                if (newIndex === 3 && Number($("#age").val()) < 18)
-                {
+                if (newIndex === 3 && Number($("#age").val()) < 18) {
                     return false;
                 }
                 // Needed in some cases if the user went back (clean up)
-                if (currentIndex < newIndex)
-                {
+                if (currentIndex < newIndex) {
                     // To remove error styles
                     form.find(".body:eq(" + newIndex + ") label.error").remove();
                     form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
@@ -440,30 +447,27 @@
                 form.validate().settings.ignore = ":disabled,:hidden";
                 return form.valid();
             },
-            onStepChanged: function (event, currentIndex, priorIndex)
-            {
+            onStepChanged: function(event, currentIndex, priorIndex) {
                 // Used to skip the "Warning" step if the user is old enough.
-                if (currentIndex === 2 && Number($("#age").val()) >= 18)
-                {
+                if (currentIndex === 2 && Number($("#age").val()) >= 18) {
                     form.steps("next");
                 }
                 // Used to skip the "Warning" step if the user is old enough and wants to the previous step.
-                if (currentIndex === 2 && priorIndex === 3)
-                {
+                if (currentIndex === 2 && priorIndex === 3) {
                     form.steps("previous");
                 }
             },
-            onFinishing: function (event, currentIndex)
-            {
+            onFinishing: function(event, currentIndex) {
                 form.validate().settings.ignore = ":disabled";
                 return form.valid();
             },
-            onFinished: function (event, currentIndex)
-            {
+            onFinished: function(event, currentIndex) {
                 alert("Submitted!");
             }
         }).validate({
-            errorPlacement: function errorPlacement(error, element) { element.before(error); },
+            errorPlacement: function errorPlacement(error, element) {
+                element.before(error);
+            },
             rules: {
                 confirm: {
                     equalTo: "#password"
