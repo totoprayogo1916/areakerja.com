@@ -55,7 +55,8 @@ class DaftarLowonganController extends Controller
             'email'               => $request['email'],
             'idUser'              => $a,
         ]);
+        $mitra1 = Lowonganmitra::all();
 
-        return view('mitra.home', compact('mitra'));
+        return view('mitra.lowongan.index', compact('mitra', 'mitra1'));
     }
 }

@@ -104,6 +104,14 @@
             </li>
 
             <li class="nav-item">
+                <a href="{{ route("admin.calonkandidat.index") }}" class="nav-link {{ request()->is('admin/calonkandidat') || request()->is('admin/calonkandidat/*') ? 'active' : '' }}">
+                    <i class="fa-fw fas fa-users nav-icon">
+                    </i>
+                    Calon Kandidat
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a href="{{ route("admin.article.index") }}" class="nav-link {{ request()->is('admin/article') || request()->is('admin/article/*') ? 'active' : '' }}">
                     <i class="fa fa-book nav-icon">
 

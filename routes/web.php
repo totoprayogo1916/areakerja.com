@@ -203,6 +203,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Route::get('/pembayaran/{id}', 'LowongannController@pembayaran')->name('pembayaran');
     Route::resource('lowongan', 'LowongannController');
 
+    //Calon Kandidat
+    Route::resource('calonkandidat', 'CalonController');
+
     //Price
     Route::delete('price/destroy', 'PriceController@massDestroy')->name('price.massDestroy');
     Route::resource('price', 'PriceController');
