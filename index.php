@@ -1,3 +1,2 @@
-<?php
-
-require_once __DIR__ . '/public/index.php';
+<?php 
+    header('Location: public/');

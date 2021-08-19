@@ -33,18 +33,18 @@
 
     <section class="relative" id="home">
         <div class='slider-nav'>
-            <div><img alt="" class="img-social" src="img/img-01.png" /></div>
-            <div><img alt="" class="img-social"
+            <div class="sl 1 active"><img alt="" class="img-social" src="img/img-01.png" /></div>
+            <div class="sl 2"><img alt="" class="img-social"
                     src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/google.png" /></div>
-            <div><img alt="" class="img-social"
+            <div class="sl 3"><img alt="" class="img-social"
                     src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/instagram.png" /></div>
-            <div><img alt="" class="img-social"
+            <div class="sl 4"><img alt="" class="img-social"
                     src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/facebook.png" /></div>
-            <div><img alt="" class="img-social"
+            <div class="sl 5"><img alt="" class="img-social"
                     src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" /></div>
-            <div><img alt="" class="img-social"
+            <div class="sl 6"><img alt="" class="img-social"
                     src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" /></div>
-            <div><img alt="" class="img-social"
+            <div class="sl 7"><img alt="" class="img-social"
                     src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/telegram.png" /></div>
         </div>
 

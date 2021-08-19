@@ -50,7 +50,7 @@
             text-align: center;
         }
 
-        .slider-nav>div {
+        .slider-nav .sl {
             display: inline-block;
             width: auto;
             height: auto;
@@ -61,6 +61,18 @@
             background: rgb(254, 244, 227);
             cursor: pointer;
         }
+
+        .slider-nav .sl.active {
+            display: inline-block;
+            width: auto;
+            height: auto;
+            margin: 0 2px;
+            padding: 10px 10px 8px 10px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+            background: rgb(80, 73, 62);
+            cursor: pointer;
+        } 
 
         #container3 {
             float: left;
@@ -315,17 +327,100 @@
             arrows: false,
             dots: false,
             infinite: false,
-            speed: 500,
+            speed: 250,
             autoplay: false,
-            autoplaySpeed: 3000,
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            accessibility: false,
+            draggable: false 
         });
         //On click of slider-nav childern,
-        //Slick slider navigate to the respective index.
-        $('.slider-nav > div').click(function() {
-            $('.slider').slick('slickGoTo', $(this).index());
-        })
+        //Slick slider naviga
+        $('.slider-nav .sl.1').click(function() {
+            $('.slider').slick('slickGoTo', 0);
+            $(this).addClass('active');
+            $('.slider-nav .sl.2').removeClass('active');
+            $('.slider-nav .sl.3').removeClass('active');
+            $('.slider-nav .sl.4').removeClass('active');
+            $('.slider-nav .sl.5').removeClass('active');
+            $('.slider-nav .sl.6').removeClass('active');
+            $('.slider-nav .sl.7').removeClass('active');
+            // console.log($(this).index());
+        });
+        $('.slider-nav .sl.2').click(function() {
+            $('.slider').slick('slickGoTo', 1);
+            $(this).addClass('active');
+            $('.slider-nav .sl.1').removeClass('active');
+            $('.slider-nav .sl.3').removeClass('active');
+            $('.slider-nav .sl.4').removeClass('active');
+            $('.slider-nav .sl.5').removeClass('active');
+            $('.slider-nav .sl.6').removeClass('active');
+            $('.slider-nav .sl.7').removeClass('active');
+            // console.log($(this).index());
+        });
+        $('.slider-nav .sl.3').click(function() {
+            $('.slider').slick('slickGoTo', 2);
+            $(this).addClass('active');
+            $('.slider-nav .sl.1').removeClass('active');
+            $('.slider-nav .sl.2').removeClass('active');
+            $('.slider-nav .sl.4').removeClass('active');
+            $('.slider-nav .sl.5').removeClass('active');
+            $('.slider-nav .sl.6').removeClass('active');
+            $('.slider-nav .sl.7').removeClass('active');
+            // console.log($(this).index());
+        });
+        $('.slider-nav .sl.4').click(function() {
+            $('.slider').slick('slickGoTo', 3);
+            $(this).addClass('active');
+            $('.slider-nav .sl.1').removeClass('active');
+            $('.slider-nav .sl.2').removeClass('active');
+            $('.slider-nav .sl.3').removeClass('active');
+            $('.slider-nav .sl.5').removeClass('active');
+            $('.slider-nav .sl.6').removeClass('active');
+            $('.slider-nav .sl.7').removeClass('active');
+            // console.log($(this).index());
+        });
+        $('.slider-nav .sl.5').click(function() {
+            $('.slider').slick('slickGoTo', 4);
+            $(this).addClass('active');
+            $('.slider-nav .sl.1').removeClass('active');
+            $('.slider-nav .sl.3').removeClass('active');
+            $('.slider-nav .sl.2').removeClass('active');
+            $('.slider-nav .sl.4').removeClass('active');
+            $('.slider-nav .sl.6').removeClass('active');
+            $('.slider-nav .sl.7').removeClass('active');
+            // console.log($(this).index());
+        });
+        $('.slider-nav .sl.6').click(function() {
+            $('.slider').slick('slickGoTo', 5);
+            $(this).addClass('active');
+            $('.slider-nav .sl.1').removeClass('active');
+            $('.slider-nav .sl.2').removeClass('active');
+            $('.slider-nav .sl.3').removeClass('active');
+            $('.slider-nav .sl.4').removeClass('active');
+            $('.slider-nav .sl.7').removeClass('active');
+            $('.slider-nav .sl.5').removeClass('active');
+            // console.log($(this).index());
+        });
+        $('.slider-nav .sl.7').click(function() {
+            $('.slider').slick('slickGoTo', 6);
+            $(this).addClass('active');
+            $('.slider-nav .sl.1').removeClass('active');
+            $('.slider-nav .sl.2').removeClass('active');
+            $('.slider-nav .sl.3').removeClass('active');
+            $('.slider-nav .sl.4').removeClass('active');
+            $('.slider-nav .sl.6').removeClass('active');
+            $('.slider-nav .sl.5').removeClass('active');
+            // console.log($(this).index());
+        });
+
+        $('slider').on('afterChange', function (event, slick, currentSlide) {
+            $('.slider-nav').slick('slickGoTo', currentSlide);
+            var currrentNavSlideElem = '.slider-nav .sl[data-slick-index="' + currentSlide + '"]';
+            $('.slider-nav .sl.1.active').removeClass('active');
+            $(currrentNavSlideElem).addClass('active');
+        });
+
     </script>
     @include('sweetalert::alert')
 
