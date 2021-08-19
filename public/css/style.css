@@ -202,13 +202,13 @@
     margin-left: 30%;
 }
 
-.lingkaran{
-	width: 30px;
-	height: 30px;
-	background: #fe7b54;
-	border-radius: 100%;
-    outline: none;
+/* Form  Wizard
+=========================== */
+
+.form-conwiz{
+    width: 100%;
+    border-radius: 10px;
+    padding:10px;
+    border: 2px solid #fe7b54;
+    font-family: 'Poppins', sans-serif;
 }
-
-
-    

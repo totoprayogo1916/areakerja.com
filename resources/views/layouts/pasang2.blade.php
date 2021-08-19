@@ -197,11 +197,67 @@
                                 <p>(*) Mandatory</p> --}}
                                 </fieldset>
 
-                                <h3>Warning</h3>
+                                <h3>Pendidikan</h3>
                                 <fieldset class="form-input">
-                                    <h4>You are to young</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dynamic_field3">
+                                            <tr>
+                                                <td><input id="instansi" name="instansi[]" type="text"
+                                                        class="form-control2 form-conwiz" value="" required="" data-type="text"
+                                                        aria-required="true" placeholder="Nama Instansi(exp.SMAN 1 GG)">
+                                                </td>
+                                                <td>
+                                                    <input id="tahun" name="tahun[]" type="text"
+                                                        class="form-control2 form-conwiz" value="" required="" data-type="text"
+                                                        aria-required="true" placeholder="Tahun exp. 2016-2019">
+                                                </td>
+                                                <td><button type="button" name="add3" id="add3" class="btn btn-area">Add
+                                                        More</button></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </fieldset>
 
-                                    <p>Please go away ;-)</p>
+                                <h3>Organisasi</h3>
+                                <fieldset class="form-input">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dynamic_field4">
+                                            <tr>
+                                                <td><input id="organisasi" name="organisasi[]" type="text"
+                                                        class="form-control2 form-conwiz" value="" required="" data-type="text"
+                                                        aria-required="true" placeholder="Nama Organisasi"/>
+                                                </td>
+                                                <td>
+                                                    <input id="jabatan" name="jabatan[]" type="text"
+                                                        class="form-control2 form-conwiz" value="" required="" data-type="text"
+                                                        aria-required="true" placeholder="Jabatan"/>
+                                                </td>
+                                                <td><button type="button" name="add4" id="add4" class="btn btn-area">Add
+                                                        More</button></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </fieldset>
+
+                                <h3>Pengalaman</h3>
+                                <fieldset class="form-input">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dynamic_field5">
+                                            <tr>
+                                                <td><input id="kantor" name="kantor[]" type="text"
+                                                        class="form-control2 form-conwiz" value="" required="" data-type="text"
+                                                        aria-required="true" placeholder="Nama Kantor"/>
+                                                </td>
+                                                <td>
+                                                    <input id="pekerjaan" name="pekerjaan[]" type="text"
+                                                        class="form-control2 form-conwiz" value="" required="" data-type="text"
+                                                        aria-required="true" placeholder="Pekerjaan"/>
+                                                </td>
+                                                <td><button type="button" name="add5" id="add5" class="btn btn-area">Add
+                                                        More</button></td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                 </fieldset>
 
                                 <h3>Finish</h3>
@@ -281,6 +337,13 @@
         }
     </script>
 
+    <script type="text/javascript">
+
+    document.getElementById("costum-slider1").addEventListener("input",function(event) {
+    let value1 = event.target.value;
+    document.getElementById("current-value1").innerText = value1;});
+
+    </script>
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -292,6 +355,8 @@
             var r2 = 1;
 
             var i3 = 1;
+            var i4 = 1;
+            var i5 = 1;
 
 
             $('#add').click(function() {
@@ -312,26 +377,41 @@
                     i2 +
                     '" class="btn btn-area btn_remove">X</button></td></tr><script src="{{ asset('js/slider.js') }}" />'
                 );
-                // window['pre_' + r] = 'a';
-                // console.log('pre' + r);
-                // var slider = document.getElementById("costum-slider" + r + "").addEventListener("input",
-                //     function(
-                //         event) {
-                //         console.log("costum-slider" + r + "");
-                //         let value = event.target.value;
-                //         document.getElementById(
-                //             "current-value" + r + "").innerText = value;
-                //     });
 
             });
 
             $('#add3').click(function() {
                 i3++;
                 $('#dynamic_field3').append('<tr id="row' + i3 +
-                    '" class="dynamic-added"><td><input type="text" name="namaskill" placeholder="Nama Skill" class="form-control2" data-type="text" aria-r /></td><td><button type="button" name="remove" id="' +
+                    '" class="dynamic-added"><td><input type="text" name="instansi[]" placeholder="Nama Instansi(exp.SMAN 1 GG)" class="form-control2 form-conwiz name_list" /></td><td><input type="text" name="tahun[]" placeholder="Tahun (exp. 2016-2019)" class="form-control2 form-conwiz name_list" /></td><td><button type="button" name="remove" id="' +
                     i3 + '" class="btn btn-danger btn_remove">X</button></td></tr>');
             });
 
+            $('#add4').click(function() {
+                i4++;
+                $('#dynamic_field4').append('<tr id="row' + i4 +
+                    '" class="dynamic-added"><td><input type="text" name="organisasi[]" placeholder="Nama Organisasi" class="form-control2 form-conwiz name_list" /></td><td><input type="text" name="jabatan[]" placeholder="Jabatan" class="form-control2 form-conwiz name_list" /></td><td><button type="button" name="remove" id="' +
+                    i4 + '" class="btn btn-danger btn_remove">X</button></td></tr>');
+            });
+
+            $('#add5').click(function() {
+                i5++;
+                $('#dynamic_field5').append('<tr id="row' + i5 +
+                    '" class="dynamic-added"><td><input type="text" name="kantor[]" placeholder="Nama Kantor" class="form-control2 form-conwiz name_list" /></td><td><input type="text" name="pekerjaan[]" placeholder="Pekerjaan" class="form-control2 form-conwiz name_list" /></td><td><button type="button" name="remove" id="' +
+                    i5 + '" class="btn btn-danger btn_remove">X</button></td></tr>');
+            });
+
+
+
+            $(document).on('click', '.btn_remove', function() {
+                var button_id = $(this).attr("id");
+                $('#row' + button_id + '').remove();
+            });
+
+            $(document).on('click', '.btn_remove', function() {
+                var button_id = $(this).attr("id");
+                $('#row' + button_id + '').remove();
+            });
 
             $(document).on('click', '.btn_remove', function() {
                 var button_id = $(this).attr("id");
@@ -390,7 +470,9 @@
         });
     </script>
 
-    <script>
+
+
+    <script  type="text/javascript">
         var r = 1;
         var r2 = 1;
         for (r = 1; r < 100; r++) {
@@ -449,13 +531,13 @@
             },
             onStepChanged: function(event, currentIndex, priorIndex) {
                 // Used to skip the "Warning" step if the user is old enough.
-                if (currentIndex === 2 && Number($("#age").val()) >= 18) {
-                    form.steps("next");
-                }
+                // if (currentIndex === 2 && Number($("#age").val()) >= 18) {
+                //     form.steps("next");
+                // }
                 // Used to skip the "Warning" step if the user is old enough and wants to the previous step.
-                if (currentIndex === 2 && priorIndex === 3) {
-                    form.steps("previous");
-                }
+                // if (currentIndex === 2 && priorIndex === 3) {
+                //     form.steps("previous");
+                // }
             },
             onFinishing: function(event, currentIndex) {
                 form.validate().settings.ignore = ":disabled";
