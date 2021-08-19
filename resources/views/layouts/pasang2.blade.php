@@ -138,7 +138,9 @@
                     <div class="modal-body">
                         <div class="login-sec-bg">
                             <h2 class="text-center">Account Information</h2>
-                            <form id="example-advanced-form" action="#" style="display: none;">
+                            <form id="example-advanced-form" enctype="multipart/form-data"
+                                action="{{ url('formkandidat') }}" method="POST" style="display: none;">
+                                @csrf
                                 <h3>Account</h3>
                                 <fieldset class="form-input">
                                     <h4>Account Information</h4>
@@ -174,8 +176,8 @@
                                                         <div class="value" id="current-value1">50 </div><span
                                                             style="color:#f77f10;">%</span>
                                                         <div class="slider">
-                                                            <input type="range" min="0" max="100" value="50"
-                                                                id="costum-slider1">
+                                                            <input type="range" name="rangeskill" min="0" max="100"
+                                                                value="50" id="costum-slider1">
                                                         </div>
                                                     </div>
                                                 </td>
@@ -202,14 +204,16 @@
                                     <div class="table-responsive">
                                         <table class="table table-bordered" id="dynamic_field3">
                                             <tr>
-                                                <td><input id="instansi" name="instansi[]" type="text"
-                                                        class="form-control2 form-conwiz" value="" required="" data-type="text"
-                                                        aria-required="true" placeholder="Nama Instansi(exp.SMAN 1 GG)">
+                                                <td><input id="school" name="school[]" type="text"
+                                                        class="form-control2 form-conwiz" value="" required=""
+                                                        data-type="text" aria-required="true"
+                                                        placeholder="Nama Instansi(exp.SMAN 1 GG)">
                                                 </td>
                                                 <td>
                                                     <input id="tahun" name="tahun[]" type="text"
-                                                        class="form-control2 form-conwiz" value="" required="" data-type="text"
-                                                        aria-required="true" placeholder="Tahun exp. 2016-2019">
+                                                        class="form-control2 form-conwiz" value="" required=""
+                                                        data-type="text" aria-required="true"
+                                                        placeholder="Tahun exp. 2016-2019">
                                                 </td>
                                                 <td><button type="button" name="add3" id="add3" class="btn btn-area">Add
                                                         More</button></td>
@@ -224,13 +228,14 @@
                                         <table class="table table-bordered" id="dynamic_field4">
                                             <tr>
                                                 <td><input id="organisasi" name="organisasi[]" type="text"
-                                                        class="form-control2 form-conwiz" value="" required="" data-type="text"
-                                                        aria-required="true" placeholder="Nama Organisasi"/>
+                                                        class="form-control2 form-conwiz" value="" required=""
+                                                        data-type="text" aria-required="true"
+                                                        placeholder="Nama Organisasi" />
                                                 </td>
                                                 <td>
                                                     <input id="jabatan" name="jabatan[]" type="text"
-                                                        class="form-control2 form-conwiz" value="" required="" data-type="text"
-                                                        aria-required="true" placeholder="Jabatan"/>
+                                                        class="form-control2 form-conwiz" value="" required=""
+                                                        data-type="text" aria-required="true" placeholder="Jabatan" />
                                                 </td>
                                                 <td><button type="button" name="add4" id="add4" class="btn btn-area">Add
                                                         More</button></td>
@@ -245,13 +250,14 @@
                                         <table class="table table-bordered" id="dynamic_field5">
                                             <tr>
                                                 <td><input id="kantor" name="kantor[]" type="text"
-                                                        class="form-control2 form-conwiz" value="" required="" data-type="text"
-                                                        aria-required="true" placeholder="Nama Kantor"/>
+                                                        class="form-control2 form-conwiz" value="" required=""
+                                                        data-type="text" aria-required="true"
+                                                        placeholder="Nama Kantor" />
                                                 </td>
                                                 <td>
                                                     <input id="pekerjaan" name="pekerjaan[]" type="text"
-                                                        class="form-control2 form-conwiz" value="" required="" data-type="text"
-                                                        aria-required="true" placeholder="Pekerjaan"/>
+                                                        class="form-control2 form-conwiz" value="" required=""
+                                                        data-type="text" aria-required="true" placeholder="Pekerjaan" />
                                                 </td>
                                                 <td><button type="button" name="add5" id="add5" class="btn btn-area">Add
                                                         More</button></td>
@@ -338,11 +344,10 @@
     </script>
 
     <script type="text/javascript">
-
-    document.getElementById("costum-slider1").addEventListener("input",function(event) {
-    let value1 = event.target.value;
-    document.getElementById("current-value1").innerText = value1;});
-
+        document.getElementById("costum-slider1").addEventListener("input", function(event) {
+            let value1 = event.target.value;
+            document.getElementById("current-value1").innerText = value1;
+        });
     </script>
 
     <script type="text/javascript">
@@ -472,7 +477,7 @@
 
 
 
-    <script  type="text/javascript">
+    <script type="text/javascript">
         var r = 1;
         var r2 = 1;
         for (r = 1; r < 100; r++) {
@@ -544,7 +549,7 @@
                 return form.valid();
             },
             onFinished: function(event, currentIndex) {
-                alert("Submitted!");
+                return form.submit();
             }
         }).validate({
             errorPlacement: function errorPlacement(error, element) {
