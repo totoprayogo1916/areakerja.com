@@ -19,8 +19,8 @@ class CreateCalonkandidatsTable extends Migration
             $table->string('alamat');
             $table->string('biografi');
             $table->string('skillutama');
-            $table->longText('namaskill')->nullable();
-            $table->longText('rangeskill')->nullable();
+            $table->json('namaskill')->nullable();
+            $table->json('rangeskill')->nullable();
             $table->longText('school')->nullable();
             $table->longText('tahun')->nullable();
             $table->longText('organisasi')->nullable();

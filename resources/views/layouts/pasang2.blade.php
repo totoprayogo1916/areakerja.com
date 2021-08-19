@@ -166,7 +166,7 @@
                                     <div class="table-responsive">
                                         <table class="table table-bordered" id="dynamic_field2">
                                             <tr>
-                                                <td><input id="namaskill" name="namaskill" type="text"
+                                                <td><input id="namaskill" name="namaskill[]" type="text"
                                                         class="form-control2 " value="" required="" data-type="text"
                                                         aria-required="true" placeholder="Nama Skill"
                                                         style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;">
@@ -176,7 +176,7 @@
                                                         <div class="value" id="current-value1">50 </div><span
                                                             style="color:#f77f10;">%</span>
                                                         <div class="slider">
-                                                            <input type="range" name="rangeskill" min="0" max="100"
+                                                            <input type="range" name="rangeskill[]" min="0" max="100"
                                                                 value="50" id="costum-slider1">
                                                         </div>
                                                     </div>
@@ -375,20 +375,19 @@
                 i2++;
                 r++;
                 $('#dynamic_field2').append('<tr id="row' + i2 +
-                    '" class="dynamic-added"><td><input type="text" name="namaskill" required="" placeholder="Nama Skill" class="form-control2" data-type="text" aria-required="true" style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: Poppins;" /></td><td><div class="box input-group mb-2 mr-sm-2"><div class="value" id="current-value' +
+                    '" class="dynamic-added"><td><input type="text" name="namaskill[]" required="" placeholder="Nama Skill" class="form-control2" data-type="text" aria-required="true" style="width: 100%;border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: Poppins;" /></td><td><div class="box input-group mb-2 mr-sm-2"><div class="value" id="current-value' +
                     r +
-                    '">50 </div><span style="color:#f77f10;">%</span><div class="slider"><input type="range" min="0" max="100" value="50" id="costum-slider' +
+                    '">50 </div><span style="color:#f77f10;">%</span><div class="slider"><input type="range" min="0" max="100" name="rangeskill[]" value="50" id="costum-slider' +
                     r + '"></div></div></td><td><button type="button" name="remove" id="' +
                     i2 +
                     '" class="btn btn-area btn_remove">X</button></td></tr><script src="{{ asset('js/slider.js') }}" />'
                 );
-
             });
 
             $('#add3').click(function() {
                 i3++;
                 $('#dynamic_field3').append('<tr id="row' + i3 +
-                    '" class="dynamic-added"><td><input type="text" name="instansi[]" placeholder="Nama Instansi(exp.SMAN 1 GG)" class="form-control2 form-conwiz name_list" /></td><td><input type="text" name="tahun[]" placeholder="Tahun (exp. 2016-2019)" class="form-control2 form-conwiz name_list" /></td><td><button type="button" name="remove" id="' +
+                    '" class="dynamic-added"><td><input type="text" name="school[]" placeholder="Nama Instansi(exp.SMAN 1 GG)" class="form-control2 form-conwiz name_list" /></td><td><input type="text" name="tahun[]" placeholder="Tahun (exp. 2016-2019)" class="form-control2 form-conwiz name_list" /></td><td><button type="button" name="remove" id="' +
                     i3 + '" class="btn btn-danger btn_remove">X</button></td></tr>');
             });
 
