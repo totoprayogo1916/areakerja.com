@@ -58,7 +58,7 @@
             padding: 10px 10px 8px 10px;
             text-align: center;
             border-radius: 10px 10px 0 0;
-            background: rgb(254, 244, 227);
+            background: rgb(254, 240, 215);
             cursor: pointer;
         }
 
@@ -70,9 +70,9 @@
             padding: 10px 10px 8px 10px;
             text-align: center;
             border-radius: 10px 10px 0 0;
-            background: rgb(80, 73, 62);
+            background: rgb(255, 255, 255);
             cursor: pointer;
-        } 
+        }
 
         #container3 {
             float: left;
@@ -332,7 +332,7 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             accessibility: false,
-            draggable: false 
+            draggable: false
         });
         //On click of slider-nav childern,
         //Slick slider naviga

@@ -41,7 +41,7 @@
             <div class="sl 4"><img alt="" class="img-social"
                     src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/facebook.png" /></div>
             <div class="sl 5"><img alt="" class="img-social"
-                    src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/twitter.png" /></div>
+                    src="https://www.freeiconspng.com/uploads/twitter-icon-download-18.png"/></div>
             <div class="sl 6"><img alt="" class="img-social"
                     src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" /></div>
             <div class="sl 7"><img alt="" class="img-social"
