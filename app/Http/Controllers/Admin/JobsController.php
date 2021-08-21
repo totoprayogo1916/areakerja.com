@@ -85,16 +85,16 @@ class JobsController extends Controller
 
     public function edit(Job $job)
     {
-        dd($job);
-        // $companies = Company::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+        // dd($job);
+        $companies = Company::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        // $locations = Location::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $locations = Location::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        // $categories = Category::all()->pluck('name', 'id');
+        $categories = Category::all()->pluck('name', 'id');
 
-        // $job->load('company', 'location', 'categories');
+        $job->load('company', 'location', 'categories');
 
-        // return view('admin.jobs.edit', compact('companies', 'locations', 'categories', 'job'));
+        return view('admin.jobs.edit', compact('companies', 'locations', 'categories', 'job'));
     }
 
     public function update(UpdateJobRequest $request, Job $job)

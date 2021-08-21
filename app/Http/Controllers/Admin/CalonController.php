@@ -13,4 +13,16 @@ class CalonController extends Controller
 
         return view('admin.calonkandidat.index', compact('lowongan'));
     }
+
+    public function show(Calonkandidat $calonkandidat)
+    {
+        return view('admin.calonkandidat.show', compact('calonkandidat'));
+    }
+
+    public function edit($id)
+    {
+        $kandidat = Calonkandidat::where('id', $id)->first();
+
+        return view('admin.calonkandidat.edit', compact('kandidat'));
+    }
 }

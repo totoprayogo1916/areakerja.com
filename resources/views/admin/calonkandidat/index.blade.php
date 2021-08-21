@@ -127,7 +127,7 @@
                                 {{ $low->web ?? '' }}
                             </td> --}}
                             <td>
-                                <a class="btn btn-xs btn-primary" href="#" style="width: 60px">
+                                <a class="btn btn-xs btn-primary" href="{{ route('admin.calonkandidat.show', $min->id) }}" style="width: 60px">
                                     {{ trans('global.view') }}
                                 </a>
 
@@ -137,7 +137,7 @@
                                     <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}" style="width: 60px">
                                 </form>
 
-                                <a class="btn btn-xs btn-success" href="{{ route('admin.lowonganmitra.edit', $min->id) }}" style="width: auto">
+                                <a class="btn btn-xs btn-success" href="{{ route('admin.calonkandidat.edit', $min->id) }}" style="width: auto">
                                     Terima Kandidat
                                 </a>
 

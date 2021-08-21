@@ -316,6 +316,30 @@
     </script>
 
     <script type="text/javascript">
+        // add row
+        $("#addRow4").click(function() {
+            var html = '';
+            html += '<div id="inputFormRow4">';
+            html += '<div class="input-group mb-3">';
+            html +=
+                '<input type="text" name="full_description[]" class="form-control m-input" placeholder="Masukkan Nama Skill" autocomplete="off">';
+            html +=
+                '<input type="text" name="full_description[]" class="form-control m-input" placeholder="Masukkan Presetase Skill" autocomplete="off">';
+            html += '<div class="input-group-append">';
+            html += '<button id="removeRow4" type="button" class="btn btn-danger">Remove</button>';
+            html += '</div>';
+            html += '</div>';
+
+            $('#newRow4').append(html);
+        });
+
+        // remove row
+        $(document).on('click', '#removeRow4', function() {
+            $(this).closest('#inputFormRow4').remove();
+        });
+    </script>
+
+    <script type="text/javascript">
         $('.colorpicker').colorpicker({});
     </script>
 

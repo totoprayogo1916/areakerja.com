@@ -72,7 +72,7 @@
             border-radius: 10px 10px 0 0;
             background: rgb(80, 73, 62);
             cursor: pointer;
-        } 
+        }
 
         #container3 {
             float: left;
@@ -332,7 +332,7 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             accessibility: false,
-            draggable: false 
+            draggable: false
         });
         //On click of slider-nav childern,
         //Slick slider naviga
