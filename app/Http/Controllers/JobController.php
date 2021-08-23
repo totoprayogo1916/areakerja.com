@@ -377,7 +377,7 @@ class JobController extends Controller
         } else {
             $ipaddress = 'UNKNOWN';
         }
-
+        $mainSkill1       = MainSkill::all();
         $searchLocations  = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
         $searchByCategory = Category::withCount('jobs')
@@ -419,6 +419,7 @@ class JobController extends Controller
                 'sidebarCategories',
                 'riwayatlist',
                 'skill',
+                'mainSkill1'
             ])
         );
     }

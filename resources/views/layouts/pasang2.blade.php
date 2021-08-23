@@ -155,8 +155,11 @@
                                     <textarea id="biografi" name="biografi" type="text"
                                         class="form-control2"> </textarea>
                                     <label for="skillutama">Skill Utama</label>
-
-                                    <input id="skillutama" name="skillutama" type="text" class="form-control2">
+                                    <select name="skillutama" id="skillutama" class="form-control2">
+                                        @foreach($mainSkill1 as $skill)
+                                        <option value="{{$skill->nama}}" class="nama">{{$skill->nama}}</option>
+                                        @endforeach
+                                    </select>
                                     <label for="cv">Upload CV</label>
                                     <input id="cv" name="cv" type="file" class="form-control2">
                                 </fieldset>
