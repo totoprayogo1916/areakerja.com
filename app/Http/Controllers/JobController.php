@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Job;
 use App\Location;
+use App\MainSkill;
 use App\Price;
 use App\Riwayat;
 use App\Wish;
@@ -403,6 +404,7 @@ class JobController extends Controller
             ->get();
         $riwayatlist = Riwayat::where('ip', $ipaddress)->get();
         $title       = 'Pasang Lowongan Kerja';
+        $skill       = MainSkill::get();
 
         return view(
             'pasang.kandidat',
@@ -416,6 +418,7 @@ class JobController extends Controller
                 'sidebarLocations',
                 'sidebarCategories',
                 'riwayatlist',
+                'skill'
             ])
         );
     }

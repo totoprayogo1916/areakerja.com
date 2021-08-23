@@ -28,6 +28,7 @@ class Calonkandidat extends Model
 
     protected $fillable = [
         'namalengkap',
+        'email',
         'alamat',
         'biografi',
         'skillutama',

@@ -16,6 +16,7 @@ class CreateCalonkandidatsTable extends Migration
         Schema::create('calonkandidats', static function (Blueprint $table) {
             $table->increments('id');
             $table->string('namalengkap');
+            $table->string('email');
             $table->string('alamat');
             $table->string('biografi');
             $table->string('skillutama');
