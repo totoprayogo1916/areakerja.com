@@ -251,6 +251,18 @@
             }
         });
     </script>
+
+    <script type="text/javascript">
+    function myFunction() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+        x.type = "text";
+        } else {
+        x.type = "password";
+        }
+    }
+    </script>
+
     <script type="text/javascript">
         // add row
         $("#addRow").click(function() {
@@ -322,9 +334,9 @@
             html += '<div id="inputFormRow4">';
             html += '<div class="input-group mb-3">';
             html +=
-                '<input type="text" name="full_description[]" class="form-control m-input" placeholder="Masukkan Nama Skill" autocomplete="off">';
+                '<input type="text" name="namaskill" class="form-control m-input" placeholder="Masukkan Nama Skill" autocomplete="off">';
             html +=
-                '<input type="text" name="full_description[]" class="form-control m-input" placeholder="Masukkan Presetase Skill" autocomplete="off">';
+                '<input type="text" name="rangeskill" class="form-control m-input" placeholder="Masukkan Presetase Skill" autocomplete="off">';
             html += '<div class="input-group-append">';
             html += '<button id="removeRow4" type="button" class="btn btn-danger">Remove</button>';
             html += '</div>';
@@ -338,6 +350,78 @@
             $(this).closest('#inputFormRow4').remove();
         });
     </script>
+
+<script type="text/javascript">
+    // add row
+    $("#addRow5").click(function() {
+        var html = '';
+        html += '<div id="inputFormRow5">';
+        html += '<div class="input-group mb-3">';
+        html +=
+            '<input type="text" name="school" class="form-control m-input" placeholder="Masukkan Nama Sekolah" autocomplete="off">';
+        html +=
+            '<input type="text" name="tahun" class="form-control m-input" placeholder="Masukkan Tahun" autocomplete="off">';
+        html += '<div class="input-group-append">';
+        html += '<button id="removeRow5" type="button" class="btn btn-danger">Remove</button>';
+        html += '</div>';
+        html += '</div>';
+
+        $('#newRow5').append(html);
+    });
+
+    // remove row
+    $(document).on('click', '#removeRow5', function() {
+        $(this).closest('#inputFormRow5').remove();
+    });
+</script>
+
+<script type="text/javascript">
+    // add row
+    $("#addRow6").click(function() {
+        var html = '';
+        html += '<div id="inputFormRow6">';
+        html += '<div class="input-group mb-3">';
+        html +=
+            '<input type="text" name="organisasi" class="form-control m-input" placeholder="Masukkan Nama Organisasi" autocomplete="off" >';
+        html +=
+            '<input type="text" name="jabatan" class="form-control m-input" placeholder="Masukkan Jabatan" autocomplete="off" >';
+        html += '<div class="input-group-append">';
+        html += '<button id="removeRow6" type="button" class="btn btn-danger">Remove</button>';
+        html += '</div>';
+        html += '</div>';
+
+        $('#newRow6').append(html);
+    });
+
+    // remove row
+    $(document).on('click', '#removeRow6', function() {
+        $(this).closest('#inputFormRow6').remove();
+    });
+</script>
+
+<script type="text/javascript">
+    // add row
+    $("#addRow7").click(function() {
+        var html = '';
+        html += '<div id="inputFormRow7">';
+        html += '<div class="input-group mb-3">';
+        html +=
+            '<input type="text" name="kantor" class="form-control m-input" placeholder="Masukkan Nama Kantor" autocomplete="off" >';
+        html +=
+            '<input type="text" name="pekerjaan" class="form-control m-input" placeholder="Masukkan Pekerjaan" autocomplete="off" >';
+        html += '<div class="input-group-append">';
+        html += '<button id="removeRow7" type="button" class="btn btn-danger">Remove</button>';
+        html += '</div>';
+        html += '</div>';
+
+        $('#newRow7').append(html);
+    });
+
+    // remove row
+    $(document).on('click', '#removeRow7', function() {
+        $(this).closest('#inputFormRow7').remove();
+    });
+</script>
 
     <script type="text/javascript">
         $('.colorpicker').colorpicker({});

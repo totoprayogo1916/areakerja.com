@@ -9,12 +9,41 @@
     <div class="card-body">
         <form action="{{ route("admin.jobs.store") }}" method="POST" enctype="multipart/form-data" id="form-name">
             @csrf
-            <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
-                <label for="namalengkap">Nama Pekerjaan</label>
+            <div class="form-group {{ $errors->has('namalengkap') ? 'has-error' : '' }}">
+                <label for="namalengkap">Nama Kandidat</label>
                 <input type="text" id="namalengkap" name="namalengkap" class="form-control" value="{{ old('namalengkap', isset($kandidat) ? $kandidat->namalengkap : '') }}" required>
                 @if($errors->has('namalengkap'))
                     <em class="invalid-feedback">
                         {{ $errors->first('namalengkap') }}
+                    </em>
+                @endif
+                <p class="helper-block">
+                    {{ trans('cruds.job.fields.title_helper') }}
+                </p>
+            </div>
+            <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+                @if($errors->has('email'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('email') }}
+                    </em>
+                @endif
+                <p class="helper-block">
+                    {{ trans('cruds.job.fields.title_helper') }}
+                </p>
+            </div>
+            <div class="form-group {{ $errors->has('password') ? 'has-error' : '' }}">
+                <label for="password">Password</label>
+                <div class="input-group mb-3">
+                <input type="password" id="password" name="password" class="form-control" required>
+                <div class="input-group-append">
+                    <button  type="button" class="btn btn-info" onclick="myFunction()" >Show</button>
+                </div>
+                </div>
+                @if($errors->has('email'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('email') }}
                     </em>
                 @endif
                 <p class="helper-block">
@@ -56,7 +85,7 @@
             </div>
 
             <div class="form-group ">
-                <label for="full_description">Deskripsi Pekerjaan</label>
+                <label for="skill">Skill</label>
                 <div class="alert alert-success print-success-msg" style="display:none">
                     <ul></ul>
                     </div>
@@ -65,8 +94,8 @@
                         <div class="col-lg-12">
                             <div id="inputFormRow4">
                                 <div class="input-group mb-3">
-                                    <input type="text" name="namaskill" class="form-control m-input" placeholder="Masukkan Deskripsi Pekerjaan" autocomplete="off" value="{{ $kandidat->namaskill[$i] }}">
-                                    <input type="text" name="rangeskill" class="form-control m-input" placeholder="Masukkan Deskripsi Pekerjaan" autocomplete="off" value="{{ $kandidat->rangeskill[$i] }}">
+                                    <input type="text" name="namaskill" class="form-control m-input" placeholder="Masukkan Nama Skill" autocomplete="off" value="{{ $kandidat->namaskill[$i] }}">
+                                    <input type="text" name="rangeskill" class="form-control m-input" placeholder="Masukkan Presentase Skill" autocomplete="off" value="{{ $kandidat->rangeskill[$i] }}">
                                     <div class="input-group-append">
                                         <button id="removeRow4" type="button" class="btn btn-danger">Remove</button>
                                     </div>
@@ -79,6 +108,84 @@
                     </div>
                     @endfor
                 <button id="addRow4" type="button" class="btn btn-success">Add More</button>
+            </div>
+
+            <div class="form-group ">
+                <label for="pendidikan">Riwayat Pendidikan</label>
+                <div class="alert alert-success print-success-msg" style="display:none">
+                    <ul></ul>
+                    </div>
+                    @for ($i = 0; $i < count($kandidat->school); $i++)
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="inputFormRow5">
+                                <div class="input-group mb-3">
+                                    <input type="text" name="school" class="form-control m-input" placeholder="Masukkan Nama Sekolah" autocomplete="off" value="{{ $kandidat->school[$i] }}">
+                                    <input type="text" name="tahun" class="form-control m-input" placeholder="Masukkan Tahun" autocomplete="off" value="{{ $kandidat->tahun[$i] }}">
+                                    <div class="input-group-append">
+                                        <button id="removeRow5" type="button" class="btn btn-danger">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="newRow5"></div>
+
+                        </div>
+                    </div>
+                    @endfor
+                <button id="addRow5" type="button" class="btn btn-success">Add More</button>
+            </div>
+
+            <div class="form-group ">
+                <label for="organisasi">Organisasi</label>
+                <div class="alert alert-success print-success-msg" style="display:none">
+                    <ul></ul>
+                    </div>
+                    @for ($i = 0; $i < count($kandidat->organisasi); $i++)
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="inputFormRow6">
+                                <div class="input-group mb-3">
+                                    <input type="text" name="organisasi" class="form-control m-input" placeholder="Masukkan Nama Organisasi" autocomplete="off" value="{{ $kandidat->organisasi[$i] }}">
+                                    <input type="text" name="jabatan" class="form-control m-input" placeholder="Masukkan Jabatan" autocomplete="off" value="{{ $kandidat->jabatan[$i] }}">
+                                    <div class="input-group-append">
+                                        <button id="removeRow6" type="button" class="btn btn-danger">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="newRow6"></div>
+
+                        </div>
+                    </div>
+                    @endfor
+                <button id="addRow6" type="button" class="btn btn-success">Add More</button>
+            </div>
+
+            <div class="form-group ">
+                <label for="pengalaman">Pengalaman Kerja</label>
+                <div class="alert alert-success print-success-msg" style="display:none">
+                    <ul></ul>
+                    </div>
+                    @for ($i = 0; $i < count($kandidat->kantor); $i++)
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="inputFormRow7">
+                                <div class="input-group mb-3">
+                                    <input type="text" name="kantor" class="form-control m-input" placeholder="Masukkan Nama Kantor" autocomplete="off" value="{{ $kandidat->kantor[$i] }}">
+                                    <input type="text" name="pekerjaan" class="form-control m-input" placeholder="Masukkan Pekerjaan" autocomplete="off" value="{{ $kandidat->pekerjaan[$i] }}">
+                                    <div class="input-group-append">
+                                        <button id="removeRow7" type="button" class="btn btn-danger">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="newRow7"></div>
+
+                        </div>
+                    </div>
+                    @endfor
+                <button id="addRow7" type="button" class="btn btn-success">Add More</button>
             </div>
 
             {{-- <div class="form-group {{ $errors->has('location_id') ? 'has-error' : '' }}">
