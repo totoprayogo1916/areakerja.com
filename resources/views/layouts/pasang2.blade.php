@@ -147,12 +147,15 @@
 
                                     <label for="namalengkap">Nama Lengkap</label>
                                     <input id="namalengkap" name="namalengkap" type="text" class="form-control2">
+                                    <label for="email">Email</label>
+                                    <input id="email" name="email" type="email" class="form-control2">
                                     <label for="alamat">Alamat Tempat Tinggal</label>
                                     <textarea id="alamat" name="alamat" type="text" class="form-control2"> </textarea>
                                     <label for="biografi">Biografi</label>
                                     <textarea id="biografi" name="biografi" type="text"
                                         class="form-control2"> </textarea>
                                     <label for="skillutama">Skill Utama</label>
+                                    
                                     <input id="skillutama" name="skillutama" type="text" class="form-control2">
                                     <label for="cv">Upload CV</label>
                                     <input id="cv" name="cv" type="file" class="form-control2">
