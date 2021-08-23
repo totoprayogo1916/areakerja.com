@@ -94,8 +94,8 @@
                         <div class="col-lg-12">
                             <div id="inputFormRow4">
                                 <div class="input-group mb-3">
-                                    <input type="text" name="namaskill" class="form-control m-input" placeholder="Masukkan Nama Skill" autocomplete="off" value="{{ $kandidat->namaskill[$i] }}">
-                                    <input type="text" name="rangeskill" class="form-control m-input" placeholder="Masukkan Presentase Skill" autocomplete="off" value="{{ $kandidat->rangeskill[$i] }}">
+                                    <input type="text" name="namaskill[]" class="form-control m-input" placeholder="Masukkan Nama Skill" autocomplete="off" value="{{ $kandidat->namaskill[$i] }}">
+                                    <input type="text" name="rangeskill[]" class="form-control m-input" placeholder="Masukkan Presentase Skill" autocomplete="off" value="{{ $kandidat->rangeskill[$i] }}">
                                     <div class="input-group-append">
                                         <button id="removeRow4" type="button" class="btn btn-danger">Remove</button>
                                     </div>
@@ -120,8 +120,8 @@
                         <div class="col-lg-12">
                             <div id="inputFormRow5">
                                 <div class="input-group mb-3">
-                                    <input type="text" name="school" class="form-control m-input" placeholder="Masukkan Nama Sekolah" autocomplete="off" value="{{ $kandidat->school[$i] }}">
-                                    <input type="text" name="tahun" class="form-control m-input" placeholder="Masukkan Tahun" autocomplete="off" value="{{ $kandidat->tahun[$i] }}">
+                                    <input type="text" name="school[]" class="form-control m-input" placeholder="Masukkan Nama Sekolah" autocomplete="off" value="{{ $kandidat->school[$i] }}">
+                                    <input type="text" name="tahun[]" class="form-control m-input" placeholder="Masukkan Tahun" autocomplete="off" value="{{ $kandidat->tahun[$i] }}">
                                     <div class="input-group-append">
                                         <button id="removeRow5" type="button" class="btn btn-danger">Remove</button>
                                     </div>
@@ -146,8 +146,8 @@
                         <div class="col-lg-12">
                             <div id="inputFormRow6">
                                 <div class="input-group mb-3">
-                                    <input type="text" name="organisasi" class="form-control m-input" placeholder="Masukkan Nama Organisasi" autocomplete="off" value="{{ $kandidat->organisasi[$i] }}">
-                                    <input type="text" name="jabatan" class="form-control m-input" placeholder="Masukkan Jabatan" autocomplete="off" value="{{ $kandidat->jabatan[$i] }}">
+                                    <input type="text" name="organisasi[]" class="form-control m-input" placeholder="Masukkan Nama Organisasi" autocomplete="off" value="{{ $kandidat->organisasi[$i] }}">
+                                    <input type="text" name="jabatan[]" class="form-control m-input" placeholder="Masukkan Jabatan" autocomplete="off" value="{{ $kandidat->jabatan[$i] }}">
                                     <div class="input-group-append">
                                         <button id="removeRow6" type="button" class="btn btn-danger">Remove</button>
                                     </div>
@@ -172,8 +172,8 @@
                         <div class="col-lg-12">
                             <div id="inputFormRow7">
                                 <div class="input-group mb-3">
-                                    <input type="text" name="kantor" class="form-control m-input" placeholder="Masukkan Nama Kantor" autocomplete="off" value="{{ $kandidat->kantor[$i] }}">
-                                    <input type="text" name="pekerjaan" class="form-control m-input" placeholder="Masukkan Pekerjaan" autocomplete="off" value="{{ $kandidat->pekerjaan[$i] }}">
+                                    <input type="text" name="kantor[]" class="form-control m-input" placeholder="Masukkan Nama Kantor" autocomplete="off" value="{{ $kandidat->kantor[$i] }}">
+                                    <input type="text" name="pekerjaan[]" class="form-control m-input" placeholder="Masukkan Pekerjaan" autocomplete="off" value="{{ $kandidat->pekerjaan[$i] }}">
                                     <div class="input-group-append">
                                         <button id="removeRow7" type="button" class="btn btn-danger">Remove</button>
                                     </div>
