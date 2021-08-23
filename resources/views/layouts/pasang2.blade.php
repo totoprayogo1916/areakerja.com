@@ -155,7 +155,7 @@
                                     <textarea id="biografi" name="biografi" type="text"
                                         class="form-control2"> </textarea>
                                     <label for="skillutama">Skill Utama</label>
-                                    
+
                                     <input id="skillutama" name="skillutama" type="text" class="form-control2">
                                     <label for="cv">Upload CV</label>
                                     <input id="cv" name="cv" type="file" class="form-control2">
@@ -273,7 +273,7 @@
                 </div> --}}
                 </div>
               </div>
-        </div>  
+        </div>
     </wrapper>
 
     </div>

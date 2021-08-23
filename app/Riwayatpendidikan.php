@@ -21,5 +21,6 @@ class Riwayatpendidikan extends Model
         'nama_instansi',
         'gelar',
         'tahun',
+        'idKandidat',
     ];
 }

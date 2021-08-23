@@ -418,7 +418,7 @@ class JobController extends Controller
                 'sidebarLocations',
                 'sidebarCategories',
                 'riwayatlist',
-                'skill'
+                'skill',
             ])
         );
     }

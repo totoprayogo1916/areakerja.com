@@ -21,5 +21,6 @@ class Organisasi extends Model
         'judul',
         'tahun',
         'jabatan',
+        'idKandidat',
     ];
 }

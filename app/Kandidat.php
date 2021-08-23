@@ -15,6 +15,8 @@ class Kandidat extends Model
         'nama',
         'idSkill',
         'domisili',
+        'biografi',
+        'slug',
         'idUser',
         'status',
         'updated_at',

@@ -21,5 +21,6 @@ class Pengalaman extends Model
         'nama_pengalaman',
         'posisi',
         'tahun',
+        'idKandidat',
     ];
 }

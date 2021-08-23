@@ -20,5 +20,6 @@ class Skill extends Model
     protected $fillable = [
         'nama',
         'tingkat',
+        'idKandidat',
     ];
 }
