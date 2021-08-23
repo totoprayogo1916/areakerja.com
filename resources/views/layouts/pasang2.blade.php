@@ -132,17 +132,17 @@
         </main>
         @include('user.footer')
         <div class="modal fade" id="modalDaftar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
+            aria-hidden="true" >
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document" >
+                <div class="modal-content" >
+                    <div class="modal-body" >
                         <div class="login-sec-bg">
-                            <h2 class="text-center">Account Information</h2>
+                            <h2 class="text-center mb-3">Account Information</h2>
                             <form id="example-advanced-form" enctype="multipart/form-data"
                                 action="{{ url('formkandidat') }}" method="POST" style="display: none;">
                                 @csrf
-                                <h3>Account</h3>
-                                <fieldset class="form-input">
+                                <h3 >Account</h3>
+                                <fieldset class="form-input"  style="overflow-y: scroll; box-sizing: border-box;width: 100%;">
                                     <h4>Account Information</h4>
 
                                     <label for="namalengkap">Nama Lengkap</label>
@@ -156,7 +156,6 @@
                                     <input id="skillutama" name="skillutama" type="text" class="form-control2">
                                     <label for="cv">Upload CV</label>
                                     <input id="cv" name="cv" type="file" class="form-control2">
-                                    <p>(*) Mandatory</p>
                                 </fieldset>
 
                                 <h3>Skill</h3>
@@ -186,17 +185,6 @@
                                             </tr>
                                         </table>
                                     </div>
-                                    {{-- <label for="name">First name *</label>
-                                <input id="name" name="name" type="text" class="form-control required">
-                                <label for="surname">Last name *</label>
-                                <input id="surname" name="surname" type="text" class="form-control required">
-                                <label for="email">Email *</label>
-                                <input id="email" name="email" type="text" class="form-control form-controlrequired email">
-                                <label for="address">Address</label>
-                                <input id="address" name="address" type="text" class="form-control">
-                                <label for="age">Age (The warning step will show up if age is less than 18) *</label>
-                                <input id="age" name="age" type="text" class="form-control required number">
-                                <p>(*) Mandatory</p> --}}
                                 </fieldset>
 
                                 <h3>Pendidikan</h3>
@@ -281,8 +269,8 @@
                   <button type="button" class="btn btn-danger">Save changes</button>
                 </div> --}}
                 </div>
-            </div>
-        </div>
+              </div>
+        </div>  
     </wrapper>
 
     </div>
