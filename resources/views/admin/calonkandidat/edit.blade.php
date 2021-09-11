@@ -25,7 +25,8 @@
                 </div>
                 <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
+                    <input type="email" id="email" name="email" class="form-control"
+                        value="{{ old('namalengkap', isset($kandidat) ? $kandidat->email : '') }}" required>
                     @if ($errors->has('email'))
                         <em class="invalid-feedback">
                             {{ $errors->first('email') }}

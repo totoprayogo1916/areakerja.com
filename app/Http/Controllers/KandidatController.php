@@ -18,6 +18,7 @@ class KandidatController extends Controller
     {
         Calonkandidat::create([
             'namalengkap' => $request->namalengkap,
+            'email'       => $request->email,
             'alamat'      => $request->alamat,
             'biografi'    => $request->biografi,
             'skillutama'  => $request->skillutama,

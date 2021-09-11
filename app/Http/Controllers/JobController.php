@@ -419,7 +419,7 @@ class JobController extends Controller
                 'sidebarCategories',
                 'riwayatlist',
                 'skill',
-                'mainSkill1'
+                'mainSkill1',
             ])
         );
     }
