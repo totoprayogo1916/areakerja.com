@@ -8,7 +8,6 @@ use App\Kandidat;
 use App\Organisasi;
 use App\Pengalaman;
 use App\Riwayatpendidikan;
-use App\Role_User;
 use App\Skill;
 use App\User;
 use Illuminate\Http\Request;
@@ -27,10 +26,7 @@ class KandidatController extends Controller
 
         $idUser = User::where('name', $request->namalengkap)->first();
 
-        Role_User::create([
-            'user_id' => $idUser->id,
-            'role_id' => '4',
-        ]);
+        $idUser->roles()->sync('4');
 
         Kandidat::create([
             'nama'     => $request->namalengkap,
@@ -82,5 +78,9 @@ class KandidatController extends Controller
                 'idKandidat'      => $idKandidat->id,
             ]);
         }
+
+        $lowongan = Calonkandidat::all();
+
+        return view('admin.calonkandidat.index', compact('lowongan'));
     }
 }
