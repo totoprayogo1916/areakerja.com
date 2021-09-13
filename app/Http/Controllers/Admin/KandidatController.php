@@ -80,6 +80,7 @@ class KandidatController extends Controller
         }
 
         $lowongan = Calonkandidat::all();
+        $calon->delete();
 
         return view('admin.calonkandidat.index', compact('lowongan'));
     }

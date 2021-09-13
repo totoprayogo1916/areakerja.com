@@ -20,7 +20,8 @@ class LowonganController extends Controller
 
         $paket            = Price::where('nama', $request->paket)->get()->first();
         $number           = mt_rand(000, 999);
-        $total_pembayaran = $paket->harga + $number;
+        $number2          = mt_rand(0000, 9999);
+        $total_pembayaran = $paket->harga + $number2;
         $total            = number_format($total_pembayaran, 0, '.', '.');
         Pembayaran::create([
             'paket'  => $paket->nama,
@@ -28,7 +29,7 @@ class LowonganController extends Controller
             'status' => 'NDANGDIBAYAR',
         ]);
         $search = Pembayaran::where('harga', $total_pembayaran)->first();
-        $code   = '' . $search->id . '';
+        $code   = '' . $search->id . '' . $total_pembayaran . '' . $number . '';
         $this->_generatePaymentToken($request, $total_pembayaran, $code);
         // dd($request->payment_url);
 

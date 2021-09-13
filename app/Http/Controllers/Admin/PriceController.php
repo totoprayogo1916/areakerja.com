@@ -8,7 +8,6 @@ use App\Http\Requests\StorePriceRequest;
 use App\Http\Requests\UpdatePriceRequest;
 use App\Job;
 use App\Price;
-use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class PriceController extends Controller

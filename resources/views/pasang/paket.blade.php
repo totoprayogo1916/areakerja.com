@@ -1,7 +1,8 @@
 @extends('layouts.pasang')
 @section('home')
     <section class="relative">
-        <img src="{{ url('img/chat_me.png') }}" onclick="topFunction()" id="myBtn2" title="Go to top" class="myBtn2">
+        <img src="{{ url('img/chat_me.png') }}" onclick="topFunction()" id="myBtn2" title="Go to top"
+            class="myBtn2">
         <div class="banner-area3">
             <div class="row align-items-center justify-content-center" style="margin-right: 15px; margin-left: 15px">
                 <div class="banner-content col-lg-12">
@@ -41,7 +42,7 @@
             <div class="sl 4"><img alt="" class="img-social"
                     src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/facebook.png" /></div>
             <div class="sl 5"><img alt="" class="img-social"
-                    src="https://www.freeiconspng.com/uploads/twitter-icon-download-18.png"/></div>
+                    src="https://www.freeiconspng.com/uploads/twitter-icon-download-18.png" /></div>
             <div class="sl 6"><img alt="" class="img-social"
                     src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/linkedin.png" /></div>
             <div class="sl 7"><img alt="" class="img-social"
@@ -57,7 +58,8 @@
                         </div>
                         <div class="col-8 col-sm-9 no-padding my-3 pr-1">
                             <h3 class="mb-2 paket" style="font-weight: 400">Website Area Kerja</h3>
-                            <h5 class="paket2" style="line-height: 1.6!important;font-weight: normal;">Ribuan pencari kerja
+                            <h5 class="paket2" style="line-height: 1.6!important;font-weight: normal;">Ribuan
+                                pencari kerja
                                 mengunjungi
                                 <a href="{{ route('home') }}">website</a>
                                 & aplikasi kami setiap hari untuk melihat lowongan terbaru di Yogyakarta
@@ -76,7 +78,8 @@
                         <div class="col-8 col-sm-9 no-padding my-3">
                             <div class="container">
                                 <h3 class="mb-2 paket">Google Jobs & Bisnis</h3>
-                                <h5 class="paket2 " style="line-height: 1.6!important;font-weight: normal;">Listing di
+                                <h5 class="paket2 " style="line-height: 1.6!important;font-weight: normal;">Listing
+                                    di
                                     Google Jobs & Bisnis <a>(klik untuk contoh)</a> membuat lowongan anda semakin banyak
                                     dilihat dan lebih efektif</h5>
                             </div>
@@ -94,7 +97,8 @@
                         <div class="col-8 col-sm-9 no-padding my-3">
                             <div class="container">
                                 <h3 class="mb-2 paket">Instagram</h3>
-                                <h5 class="paket2 " style="line-height: 1.6!important;font-weight: normal;">Kami mempunyai
+                                <h5 class="paket2 " style="line-height: 1.6!important;font-weight: normal;">Kami
+                                    mempunyai
                                     ratusan ribu pengikut di akun instagram kami <a href="#">@instagrammm</a> yang terus
                                     tumbuh, sehingga efektif</h5>
                             </div>
@@ -129,9 +133,11 @@
                         <div class="col-8 col-sm-9 no-padding my-3">
                             <div class="container">
                                 <h3 class="mb-2 paket">Twitter</h3>
-                                <h5 class="paket2 " style="line-height: 1.6!important;font-weight: normal;">Melalui Twitter
+                                <h5 class="paket2 " style="line-height: 1.6!important;font-weight: normal;">Melalui
+                                    Twitter
                                     <a href="#">@twitteerrr</a> kami siap mengabarkan loker anda ke ribuan pengikut dan
-                                    jaringan luas Twitter</h5>
+                                    jaringan luas Twitter
+                                </h5>
                             </div>
                         </div>
                     </div>
@@ -146,8 +152,8 @@
                         <div class="col-8 col-sm-9 no-padding my-3">
                             <div class="container">
                                 <h3 class="mb-2 paket">Linkedin</h3>
-                                <h5 class="paket2 " style="line-height: 1.6!important;font-weight: normal;">Linkedin <a
-                                        href="#">@linkedinnn</a> juga menjadi sarana tepat menjaring para pencari kerja
+                                <h5 class="paket2 " style="line-height: 1.6!important;font-weight: normal;">Linkedin
+                                    <a href="#">@linkedinnn</a> juga menjadi sarana tepat menjaring para pencari kerja
                                     profesional di Yogyakarta</h5>
                             </div>
                         </div>
@@ -191,7 +197,8 @@
                                 <div class="col-11 col-sm-10 mx-auto no-padding">
                                     <ul class="text-left mb-4">
                                         @foreach ($pak->list as $fitur)
-                                            <h5 class="mb-3" style="font-weight: normal;">{!! $fitur !!}</h5>
+                                            <h5 class="mb-3" style="font-weight: normal;">{!! $fitur !!}
+                                            </h5>
                                         @endforeach
                                     </ul>
                                 </div>
@@ -200,7 +207,8 @@
                             <div class="card-footer pt-4 pb-3"
                                 style="border-radius:  200px 200px 25px 25px/45px 45px 25px 25px; height: auto;background-color: {{ $pak->warna }}">
 
-                                <h3 class="my-0 fw-normal mb-1 text-white">Rp {{ number_format($pak->harga, 0, '.', '.') }}
+                                <h3 class="my-0 fw-normal mb-1 text-white">Rp
+                                    {{ number_format($pak->harga, 0, '.', '.') }}
                                 </h3>
                                 <p class="my-0 fw-normal text-white">Gabung Mitra Sekarang</h6>
                             </div>
@@ -225,7 +233,8 @@
                                 <div class="col-11 col-sm-10 mx-auto no-padding">
                                     <ul class="text-left mb-4">
                                         @foreach ($pak->list as $fitur)
-                                            <h5 class="mb-3" style="font-weight: normal;">{!! $fitur !!}</h5>
+                                            <h5 class="mb-3" style="font-weight: normal;">{!! $fitur !!}
+                                            </h5>
                                         @endforeach
                                     </ul>
                                 </div>
@@ -234,7 +243,8 @@
                             <div class="card-footer pt-4 pb-3"
                                 style="border-radius:  200px 200px 25px 25px/45px 45px 25px 25px; height: auto;background-color: {{ $pak->warna }}">
 
-                                <h3 class="my-0 fw-normal mb-1 text-white">Rp {{ number_format($pak->harga, 0, '.', '.') }}
+                                <h3 class="my-0 fw-normal mb-1 text-white">Rp
+                                    {{ number_format($pak->harga, 0, '.', '.') }}
                                 </h3>
                                 <p class="my-0 fw-normal text-white">Pasang Lowongan Sekarang</h6>
                             </div>
@@ -266,7 +276,8 @@
                             src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-gambar-1.png"
                             style="width: 100px; height:80px; margin-top: -10px">
                     </div>
-                    <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Pilih paket pemasangan
+                    <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Pilih paket
+                        pemasangan
                         lowongan sesuai yang anda inginkan</h5>
                 </div>
                 <div class="items card py-3 form-wrap-main"
@@ -278,7 +289,8 @@
                             src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-gambar-2.png"
                             style="width: 100px; height:80px; margin-top: -10px">
                     </div>
-                    <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Kirim materi lowongan via
+                    <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Kirim materi
+                        lowongan via
                         formulir website atau whatsapp kami</h5>
                 </div>
                 <div class="items card py-3 form-wrap-main"
@@ -290,7 +302,8 @@
                             src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-gambar-3.png"
                             style="width: 100px; height:80px; margin-top: -10px">
                     </div>
-                    <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Setelah materi dikirim, anda
+                    <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Setelah materi
+                        dikirim, anda
                         akan diberikan intruksi pembayaran </h5>
                 </div>
                 <div class="items card py-3 form-wrap-main"
@@ -302,7 +315,8 @@
                             src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/cara-gambar-4.png"
                             style="width: 100px; height:80px;margin-top: -10px ">
                     </div>
-                    <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Apabila sudah membayar ,
+                    <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Apabila sudah
+                        membayar ,
                         lowongan akan dipublikasikan</h5>
                 </div>
 

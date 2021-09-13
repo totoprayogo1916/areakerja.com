@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Requests\MassDestroyMitraRequest;
 use App\Mitra;
-use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class MitraController extends Controller

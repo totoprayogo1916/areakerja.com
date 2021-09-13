@@ -8,7 +8,6 @@ use App\Job;
 use App\Location;
 use App\Riwayat;
 use App\Wish;
-use Artikel;
 
 class ArtikelController extends Controller
 {

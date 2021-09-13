@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyLowonganRequest;
 use App\Lowongan;
-use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class LowongannController extends Controller

@@ -10,7 +10,6 @@ use App\Http\Requests\UpdateUserRequest;
 use App\Mitra;
 use App\Role;
 use App\User;
-use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class UsersController extends Controller
