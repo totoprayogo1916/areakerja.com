@@ -40,6 +40,11 @@ Route::get('payments/completed', 'PaymentController@completed');
 Route::get('payments/failed', 'PaymentController@failed');
 Route::get('payments/unfinish', 'PaymentController@unfinish');
 
+Route::post('topup/notification', 'TopupController@notification');
+Route::get('topup/completed', 'TopupController@completed');
+Route::get('topup/failed', 'TopupController@failed');
+Route::get('topup/unfinish', 'TopupController@unfinish');
+
 // Route::get('/mitra/dashboard', 'AdminCompanyController@index')->name('mitra.dashboard');
 Route::get('/mitra/login', 'AdminCompanyController@login')->name('mitra.login');
 

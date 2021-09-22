@@ -35,7 +35,7 @@ class TopupController extends Controller
 
     private function _generatePaymentToken($order, $total, $code)
     {
-        $this->initPaymentGateway();
+        $this->initPaymentGateway2();
 
         // $code = "INV/202107006/VII/XXI/00003";
         $customerDetails = [
@@ -45,7 +45,7 @@ class TopupController extends Controller
         ];
 
         $params = [
-            'enable_payments'     => \App\pembayaran::PAYMENT_CHANNELS,
+            'enable_payments'     => \App\Topup::PAYMENT_CHANNELS,
             'transaction_details' => [
                 'order_id'     => $code,
                 'gross_amount' => $total,
@@ -53,8 +53,8 @@ class TopupController extends Controller
             'customer_details' => $customerDetails,
             'expiry'           => [
                 'start_time' => date('Y-m-d H:i:s T'),
-                'unit'       => \App\pembayaran::EXPIRY_UNIT,
-                'duration'   => \App\pembayaran::EXPIRY_DURATION,
+                'unit'       => \App\Topup::EXPIRY_UNIT,
+                'duration'   => \App\Topup::EXPIRY_DURATION,
             ],
         ];
 
