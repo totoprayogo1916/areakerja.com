@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Lowongan;
 use Illuminate\Http\Request;
 
 use Midtrans\notification;
@@ -33,7 +32,7 @@ class TopupController extends Controller
 
         $vaNumber   = null;
         $vendorName = null;
-        if (!empty($paymentNotification->va_numbers[0])) {
+        if (! empty($paymentNotification->va_numbers[0])) {
             $vaNumber   = $paymentNotification->va_numbers[0]->va_number;
             $vendorName = $paymentNotification->va_numbers[0]->bank;
         }

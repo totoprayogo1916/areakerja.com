@@ -15,6 +15,13 @@ use Illuminate\Support\Str;
 
 class KandidatController extends Controller
 {
+    public function index()
+    {
+        $kandidat = Kandidat::all();
+
+        return view('admin.kandidat.index', compact('kandidat'));
+    }
+
     public function acc($id, Request $request)
     {
         $calon = Calonkandidat::where('id', $id)->first();

@@ -212,6 +212,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('calonkandidat', 'CalonController');
     Route::post('/kandidat/acc/{id}', 'KandidatController@acc')->name('kandidat.acc');
 
+    //Kandidat
+    Route::resource('kandidat', 'Admin/KandidatController');
+
     //Price
     Route::delete('price/destroy', 'PriceController@massDestroy')->name('price.massDestroy');
     Route::resource('price', 'PriceController');

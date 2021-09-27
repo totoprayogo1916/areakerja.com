@@ -1,28 +1,27 @@
-<div class="sidebar">
+<div class="sidebar" style="overflow: hidden">
     <nav class="sidebar-nav" >
 
         <ul class="nav">
             <li class="nav-item">
                 <a href="{{ route("admin.home") }}" class="nav-link">
-                    <i class="nav-icon fas fa-fw fa-tachometer-alt" style="hove">
+                    <i class="nav-icon fas fa-fw fa-tachometer-alt">
 
                     </i>
                     {{ trans('global.dashboard') }}
                 </a>
             </li>
             @can('user_management_access')
-                <li class="nav-item nav-dropdown">
+                <li class="nav-item nav-dropdown {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'open' : '' }} {{ request()->is('admin/roles') || request()->is('admin/roles/*') ? 'open' : '' }} {{ request()->is('admin/users') || request()->is('admin/users/*') ? 'open' : '' }}">
                     <a class="nav-link  nav-dropdown-toggle" href="#">
                         <i class="fa-fw fas fa-users nav-icon">
 
                         </i>
-                        {{ trans('cruds.userManagement.title') }}
+                        User Management
                     </a>
                     <ul class="nav-dropdown-items">
                             <li class="nav-item">
                                 <a href="{{ route("admin.permissions.index") }}" class="nav-link {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}">
                                     <i class="fa-fw fas fa-unlock-alt nav-icon">
-
                                     </i>
                                     {{ trans('cruds.permission.title') }}
                                 </a>
@@ -46,14 +45,62 @@
                     </ul>
                 </li>
             @endcan
-            <li class="nav-item">
-                <a href="{{ route("admin.mitra.index") }}" class="nav-link {{ request()->is('admin/mitra') || request()->is('admin/mitra/*') ? 'active' : '' }}">
+
+            <li class="nav-item nav-dropdown {{ request()->is('admin/mitra') || request()->is('admin/mitra/*') ? 'open' : '' }} {{ request()->is('admin/lowonganmitra') || request()->is('admin/lowonganmitra/*') ? 'open' : '' }}">
+                <a class="nav-link  nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-building nav-icon">
 
                     </i>
-                    Mitra
+                    Mitra Management
                 </a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a href="{{ route("admin.mitra.index") }}" class="nav-link {{ request()->is('admin/mitra') || request()->is('admin/mitra/*') ? 'active' : '' }}">
+                            <i class="fa-fw fas fa-building nav-icon">
+
+                            </i>
+                            Mitra
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route("admin.lowonganmitra.index") }}" class="nav-link {{ request()->is('admin/lowonganmitra') || request()->is('admin/lowonganmitra/*') ? 'active' : '' }}">
+                            <i class="fa fa-address-book nav-icon">
+
+                            </i>
+                            Lowongan Mitra
+                        </a>
+                    </li>
+                </ul>
             </li>
+
+            <li class="nav-item nav-dropdown ">
+                <a class="nav-link  nav-dropdown-toggle" href="#">
+                    <i class="fa-fw fas fa-building nav-icon">
+
+                    </i>
+                    Kandidat Management
+                </a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link {{ request()->is('admin/kandidat') || request()->is('admin/kandidat/*') ? 'active' : '' }}">
+                            <i class="fa-fw fas fa-users nav-icon">
+                            </i>
+                            Kandidat
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a href="{{ route("admin.calonkandidat.index") }}" class="nav-link {{ request()->is('admin/calonkandidat') || request()->is('admin/calonkandidat/*') ? 'active' : '' }}">
+                            <i class="fa-fw fas fa-users nav-icon">
+                            </i>
+                            Calon Kandidat
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
             <li class="nav-item">
                 <a href="{{ route("admin.companies.index") }}" class="nav-link {{ request()->is('admin/companies') || request()->is('admin/companies/*') ? 'active' : '' }}">
                     <i class="fa-fw fas fa-building nav-icon">
@@ -94,22 +141,9 @@
                     Lowongan
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="{{ route("admin.lowonganmitra.index") }}" class="nav-link {{ request()->is('admin/lowonganmitra') || request()->is('admin/lowonganmitra/*') ? 'active' : '' }}">
-                    <i class="fa fa-address-book nav-icon">
 
-                    </i>
-                    Lowongan Mitra
-                </a>
-            </li>
 
-            <li class="nav-item">
-                <a href="{{ route("admin.calonkandidat.index") }}" class="nav-link {{ request()->is('admin/calonkandidat') || request()->is('admin/calonkandidat/*') ? 'active' : '' }}">
-                    <i class="fa-fw fas fa-users nav-icon">
-                    </i>
-                    Calon Kandidat
-                </a>
-            </li>
+
 
             <li class="nav-item">
                 <a href="{{ route("admin.article.index") }}" class="nav-link {{ request()->is('admin/article') || request()->is('admin/article/*') ? 'active' : '' }}">
