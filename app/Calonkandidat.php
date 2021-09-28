@@ -9,6 +9,8 @@ class Calonkandidat extends Model
 {
     use HasFactory;
 
+    public $table = 'calonkandidats';
+
     protected $dates = [
         'created_at',
         'updated_at',
