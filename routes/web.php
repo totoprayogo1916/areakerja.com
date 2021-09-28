@@ -213,7 +213,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('/kandidat/acc/{id}', 'KandidatController@acc')->name('kandidat.acc');
 
     //Kandidat
-    Route::resource('kandidat', 'Admin/KandidatController');
+    Route::resource('kandidat', 'KandidatController');
 
     //Price
     Route::delete('price/destroy', 'PriceController@massDestroy')->name('price.massDestroy');
