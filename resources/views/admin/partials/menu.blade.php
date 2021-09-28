@@ -82,7 +82,7 @@
                 </a>
                 <ul class="nav-dropdown-items">
                     <li class="nav-item">
-                        <a href="#" class="nav-link {{ request()->is('admin/kandidat') || request()->is('admin/kandidat/*') ? 'active' : '' }}">
+                        <a href="{{ route('admin.kandidat.index') }}" class="nav-link {{ request()->is('admin/kandidat') || request()->is('admin/kandidat/*') ? 'active' : '' }}">
                             <i class="fa-fw fas fa-users nav-icon">
                             </i>
                             Kandidat
