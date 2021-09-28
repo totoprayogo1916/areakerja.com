@@ -40,7 +40,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($companies as $key => $company)
+                    {{-- @foreach($companies as $key => $company)
                         <tr data-entry-id="{{ $company->id }}">
                             <td style="vertical-align: middle; text-align: center;">
 
@@ -77,7 +77,7 @@
                             </td>
 
                         </tr>
-                    @endforeach
+                    @endforeach --}}
                 </tbody>
             </table>
         </div>
