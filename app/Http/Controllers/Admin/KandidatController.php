@@ -17,9 +17,16 @@ class KandidatController extends Controller
 {
     public function index()
     {
-        $kandidat = Kandidat::all();
+        $kandidats = Kandidat::all();
 
-        return view('admin.kandidat.index', compact('kandidat'));
+        return view('admin.kandidat.index', compact('kandidats'));
+    }
+
+    public function show(Kandidat $kandidat)
+    {
+        $kandidat->load('mainskill');
+
+        return view('admin.kandidat.show', compact('kandidat'));
     }
 
     public function acc($id, Request $request)

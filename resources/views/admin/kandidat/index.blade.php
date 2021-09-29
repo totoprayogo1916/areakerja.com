@@ -7,11 +7,7 @@
 <div class="card">
     <div class="card-header">
         <div class="row align-items-center justify-content-between d-flex" style="margin-left: 2px; margin-right:2px">
-            {{ trans('cruds.company.title_singular') }} {{ trans('global.list') }}
-            <a class="btn btn-success ml-2" href="#">
-                <i class="fa fa-plus mr-2" aria-hidden="true"></i>
-                {{ trans('global.add') }} {{ trans('cruds.company.title_singular') }}
-            </a>
+            List Kandidat
         </div>
     </div>
 
@@ -29,10 +25,10 @@
                             Domisili
                         </th>
                         <th>
-                            Deskripsi
+                            Skill
                         </th>
                         <th>
-                            Skill
+                            Status
                         </th>
                         <th>
                             &nbsp;
@@ -40,44 +36,41 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{-- @foreach($companies as $key => $company)
-                        <tr data-entry-id="{{ $company->id }}">
-                            <td style="vertical-align: middle; text-align: center;">
+                    @foreach($kandidats as $key => $kan)
+                        <tr data-entry-id="{{ $kan->id }}">
+                            <td>
 
                             </td>
-                            <td style="width: 50px; vertical-align: middle; text-align: center;">
-                                {{ $company->id ?? '' }}
-                            </td>
-                            <td>
-                                {{ $company->name ?? '' }}
-                            </td>
-                            <td>
-                                {{ $company->deskripsi ?? '' }}
-                            </td>
-                            <td>
-                                {{ $company->alamat ?? '' }}
-                            </td>
                             <td >
-                                {{ $company->dsasd ?? '' }}
+                                {{ $kan->nama ?? '' }}
+                            </td>
+                            <td>
+                                {{ $kan->domisili ?? '' }}
+                            </td>
+                            <td>
+                                {{ $kan->mainskill->nama ?? '' }}
+                            </td>
+                            <td>
+                                {{ $kan->status ?? '' }}
                             </td>
                             <td align="center">
-                                <a class="btn btn-xs btn-primary" href="{{ route('admin.companies.show', $company->id) }}">
+                                <a class="btn btn-xs btn-primary" href="{{ route('admin.kandidat.show', $kan->id) }}">
                                     {{ trans('global.view') }}
                                 </a>
 
-                                <a class="btn btn-xs btn-info" href="{{ route('admin.companies.edit', $company->id) }}">
+                                {{-- <a class="btn btn-xs btn-info" href="{{ route('admin.companies.edit', $company->id) }}">
                                     {{ trans('global.edit') }}
                                 </a>
                                 <form action="{{ route('admin.companies.destroy', $company->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
                                     <input type="hidden" name="_method" value="DELETE">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
-                                </form>
+                                </form> --}}
 
                             </td>
 
                         </tr>
-                    @endforeach --}}
+                    @endforeach
                 </tbody>
             </table>
         </div>
