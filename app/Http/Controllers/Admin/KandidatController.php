@@ -10,6 +10,7 @@ use App\Pengalaman;
 use App\Riwayatpendidikan;
 use App\Skill;
 use App\User;
+use App\Sertifikasi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -25,8 +26,14 @@ class KandidatController extends Controller
     public function show(Kandidat $kandidat)
     {
         $kandidat->load('mainskill');
+        $idkandidat  = $kandidat->id;
+        $organisasi  = Organisasi::where('idKandidat', $idkandidat)->get();
+        $pendidikan  = Riwayatpendidikan::where('idKandidat', $idkandidat)->get();
+        $pengalaman  = Pengalaman::where('idKandidat', $idkandidat)->get();
+        $sertifikasi = Sertifikasi::where('idKandidat', $idkandidat)->get();
+        $skill       = Skill::where('idKandidat', $idkandidat)->get();
 
-        return view('admin.kandidat.show', compact('kandidat'));
+        return view('admin.kandidat.show', compact('kandidat','organisasi','pendidikan','pengalaman','sertifikasi','skill',));
     }
 
     public function acc($id, Request $request)

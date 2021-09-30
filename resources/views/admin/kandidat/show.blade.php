@@ -52,6 +52,84 @@
                     </tr>
                     <tr>
                         <th>
+                            Skill
+                        </th>
+                        <td>
+                            <ul>
+                            @foreach ($skill as $ski)
+                                <li><h6 class="mt-2 my-0" style="color: #000">{{ $ski->nama }}</h6>
+                                <span class="font-weight-normal my-0"
+                                    style="color: #000">{{ $ski->tingkat }}%</span></li>
+                            @endforeach
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Riwayat Pendidikan
+                        </th>
+                        <td>
+                            <ul>
+                            @foreach ($pendidikan as $pend)
+                                <li><h6 class="mt-2 my-0" style="color: #000">{{ $pend->nama_instansi }}</h6>
+                                <span class="font-weight-normal my-0"
+                                    style="color: #000">{{ $pend->gelar }}</span>
+                                <span class="font-weight-normal "
+                                        style="color: #000">{{ $pend->tahun }}</span></li>
+                            @endforeach
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Pengalaman Kerja
+                        </th>
+                        <td>
+                            <ul>
+                            @foreach ($pengalaman as $peng)
+                                <li><h6 class="mt-2 my-0" style="color: #000">{{ $peng->nama_pengalaman }}</h6>
+                                <span class="font-weight-normal my-0"
+                                    style="color: #000">{{ $peng->posisi }}</span>
+                                <span class="font-weight-normal "
+                                        style="color: #000">{{ $peng->tahun }}</span></li>
+                            @endforeach
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Sertifikat
+                        </th>
+                        <td>
+                            <ul>
+                            @foreach ($sertifikasi as $sertif)
+                                <li><h6 class="mt-2 my-0" style="color: #000">{{ $sertif->nama_sertifikasi }}</h6>
+                                <span class="font-weight-normal my-0"
+                                    style="color: #000">{{ $sertif->penyelenggara }}</span>
+                                <span class="font-weight-normal "
+                                        style="color: #000">{{ $sertif->tahun }}</span></li>
+                            @endforeach
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Organisasi
+                        </th>
+                        <td>
+                            <ul>
+                            @foreach ($organisasi as $org)
+                                <li><h6 class="mt-2 my-0" style="color: #000">{{ $org->judul }}</h6>
+                                <span class="font-weight-normal my-0"
+                                    style="color: #000">{{ $org->jabatan }}</span>
+                                <span class="font-weight-normal "
+                                        style="color: #000">{{ $org->tahun }}</span></li>
+                            @endforeach
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             Status
                         </th>
                         <td>
