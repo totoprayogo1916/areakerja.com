@@ -101,7 +101,9 @@
             float: left;
             width: 30%;
         }
-
+        .input-pertanyaan:focus{
+            outline: none;
+        }
     </style>
 </head>
 
@@ -270,10 +272,6 @@
                             </form>
                         </div>
                     </div>
-                    {{-- <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-danger">Save changes</button>
-                </div> --}}
                 </div>
               </div>
         </div>
