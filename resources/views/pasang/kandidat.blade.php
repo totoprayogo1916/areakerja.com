@@ -18,7 +18,7 @@
         </div>
     </section>
 @endsection
-@section('awanatas') 
+@section('awanatas')
     <div class="awan">
         <div class="awandalam"></div>
     </div>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="items py-3 col-md-3 form-wrap-main"
                     style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);margin-left:45px;">
-                    <h4 class="sng-dtl" >Memiliki banyak mitra 
+                    <h4 class="sng-dtl" >Memiliki banyak mitra
                         perusahaan</h4>
                     <div class="header text-center">
                         <img class="mx-auto my-2 img-fluid"
@@ -52,7 +52,7 @@
                 </div>
                 <div class="items col-md-3 py-3 form-wrap-main"
                     style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);margin-left:45px;">
-                    <h4 class="sng-dtl" >Terpercaya dan berbadan 
+                    <h4 class="sng-dtl" >Terpercaya dan berbadan
                         hukum</h4>
                     <div class="header text-center">
                         <img class="mx-auto my-2 img-fluid"
@@ -124,8 +124,8 @@
                     </li>
                </ul>
            </div>
-        </div> 
-        
+        </div>
+
 
     </div>
     <div style="background-color: #ffe6bb;display:flex;align-items:center" class="mb-5">
@@ -145,13 +145,22 @@
                 <ul>
                     <li>
                         <div class="row mb-3">
-                            <div class="col-md-6">
-                                <div class="box w-100 px-3 py-3 d-flex justify-content-between" style="border-radius:15px; background-color: #ffffff">
+                            <div class="accordion col-md-6">
+                                <div class="accordion-header box w-100 px-3 py-3 d-flex justify-content-between rounded-top" role="button" data-toggle="collapse" data-target="#panel-body-1" style="border-radius:0px; background-color: #ffffff">
                                     <h5>
                                         Pertanyaan
                                     </h5>
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </div>
+                                <div id="panel-body-1" class="accordion-header w-100 px-3 py-3  justify-content-between rounded-bottom" style="" >
+                                    <h6 class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h6>
+                                </div>
+
                             </div>
                             <div class="col-md-6">
                                 <div class="box w-100 px-3 py-3 d-flex justify-content-between" style="border-radius:15px; background-color: #ffffff">
@@ -185,15 +194,15 @@
                     </li>
                 </ul>
             </div>
-            
+
         </div>
     </div>
-    <div class="container px-5 text-center pb-5" style="margin-bottom: 3rem;"> 
+    <div class="container px-5 text-center pb-5" style="margin-bottom: 3rem;">
         <div class="my-3">
             <h2 style="font-weight: normal" class="mb-3">Memiliki <strong>Pertanyaan </strong>Lain?</h2>
             <h3 style="font-weight: normal">Hubungi Kami</h3>
         </div>
-        
+
         <div class="box-pertanyaan d-flex px-3 py-3 w-50 mx-auto mb-3" style="border-radius:20px;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 5px 2px;border: solid 1px #f5f5f5">
             <input type="text" style="border: none; font-family: inherit;" class="input-pertanyaan" placeholder="Tulis Pertanyaan">
             <div class="btn px-4 d-flex align-items-center" style="border-radius:20px;background-color:#FFAD4D">
@@ -203,5 +212,5 @@
             </div>
         </div>
     </div>
-    
+
 @endsection
