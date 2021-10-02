@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Lowongan extends Model
 {
-    use SoftDeletes;
 
     public $table = 'lowongan';
 

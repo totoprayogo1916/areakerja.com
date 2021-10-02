@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kandidat extends Model
 {
-    use HasFactory;
 
     public $table = 'kandidat';
 
