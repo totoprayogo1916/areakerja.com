@@ -9,7 +9,7 @@ class MainSkill extends Model
 {
     use HasFactory;
 
-    public $table = 'mainSkill';
+    public $table = 'mainskill';
 
     protected $dates = [
         'created_at',

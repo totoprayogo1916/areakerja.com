@@ -34,7 +34,7 @@
                     <div class="header text-center">
                         <h4 class="sng-dtl" style="line-height: 1.65!important">Prioritas calon pekerja</h4>
                         <img class="mx-auto my-2 img-fluid"
-                            src="https://areakerja.com/public/img/aset_online/priority.png"
+                            src="https://areakerja.com/img/aset_online/priority.png"
                             style="height: 100px; ">
                     </div>
                         <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Menjadi prioritas pilihan dari perusahaan mitra areakerja</h5>
@@ -45,7 +45,7 @@
                         perusahaan</h4>
                     <div class="header text-center">
                         <img class="mx-auto my-2 img-fluid"
-                            src="https://areakerja.com/public/img/aset_online/cooperation.png"
+                            src="https://areakerja.com/img/aset_online/cooperation.png"
                             style="height: 100px; ">
                     </div>
                     <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Areakerja memiliki banyak mitra perusahaan yang sedang membuka lowongan  </h5>
@@ -56,7 +56,7 @@
                         hukum</h4>
                     <div class="header text-center">
                         <img class="mx-auto my-2 img-fluid"
-                            src="https://areakerja.com/public/img/aset_online/compliant.png"
+                            src="https://areakerja.com/img/aset_online/compliant.png"
                             style="height: 100px; ">
                     </div>
                     <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Perusahaan areakerja merupakan perusahaan yang terpercaya dan berbadan hukum </h5>
@@ -79,7 +79,7 @@
         <h2 style="font-weight: normal" class=" text-center mb-4">How to <strong>Apply</strong></h2>
         <div class="row">
             <div class="col-md-6" style="overflow:hidden">
-                <img src="https://areakerja.com/public/img/aset_online/20945204.jpg" alt="" class="img-fluid pl-5" style="margin-top:-0px">
+                <img src="https://areakerja.com/img/aset_online/20945204.jpg" alt="" class="img-fluid pl-5" style="margin-top:-0px">
             </div>
             <div class="col-md-6">
                <ul class="h-100" style="list-style:none; display:flex; flex-direction: column; justify-content: center;margin-top:-30px">
@@ -138,7 +138,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 d-flex justify-content-end" style="height:max-content">
-                    <img src="https://areakerja.com/public/img/aset_online/preview.png" alt="" class="img-fluid h-75 m-0">
+                    <img src="https://areakerja.com/img/aset_online/preview.png" alt="" class="img-fluid h-75 m-0">
                 </div>
             </div>
             <div class="accordion">
