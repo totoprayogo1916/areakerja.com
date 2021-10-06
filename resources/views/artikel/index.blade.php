@@ -27,7 +27,7 @@
             @if($art->gambar)
                 <img class="card-img-top" src="{{ url('img/artikel') }}/{{ $art->gambar }}" alt="Card image cap" style="width: inherit;height: 30vh;object-fit: cover;border-radius:15px">
             @endif
-            <div class="card-body ">
+            <div class="card-body">
               <h5 class="card-title ">{{ $art->judul }}</h5>
               <p class="card-text">{{ $art->ringkasan }}</p><p class="card-text"></p>
             </div>

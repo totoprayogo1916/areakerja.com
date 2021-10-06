@@ -1,150 +1,177 @@
 @extends('layouts.pasang2')
 @section('home')
-    <section class="relative" id="home" style="margin-bottom: 50px">
-        <div class="mb-4 rounded-3">
+    <section id="home" >
         <div class="container py-5">
-            <div class="row">
-                <div class="col-12 col-md-5">
-                    <h1 class="display-3 fw-bold" style="font-weight: 500">Daftarkan Diri Anda</h1>
-                    <h4 class="my-3" style="font-weight: 400; line-height:1.6!important">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non nunc id lacus sagittis lobortis id nec nulla.   </h4>
-                    <button class="btn btn-lg mt-3" style="background:#fe7b54; color:white;" type="button" data-toggle="modal" data-target="#modalDaftar">Daftar</button>
-                </div>
-                <div class="col-7 col-md-7">
-                    <img class="img-fluid" src="{{ asset('img/kandidat/banner.jpg') }}">
-                </div>
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold">Rekrut Karyawan Terbaik Anda</h1>
+                <h4 class="my-3" style="font-weight: 400; line-height:1.6!important">menjadi bagian dari kami di Mitra Areakerja.com </h4>
+                <button class="btn btn-lg mt-3" style="background:#fe7b54; color:white;" type="button" data-toggle="modal" data-target="#modalDaftar">Daftar</button>
             </div>
-
-        </div>
+            <div class="col-md-9 mx-auto">
+                <img class="img-fluid" src="https://areakerja.com/img/aset_online/5222.jpg">
+            </div>
         </div>
     </section>
 @endsection
-@section('awanatas')
-    <div class="awan">
-        <div class="awandalam"></div>
-    </div>
-@endsection
-@section('slick')
-    <div class="container px-0">
-        <h2 style="font-weight: normal" class=" text-center mb-3"><strong>Cara</strong> Daftar <strong>Kandidat</strong>
-        </h2>
-        <div class="col-12 col-sm-11 no-gutters no-padding mt-4 mx-auto">
-            <div class="row for_slick_slider2 multiple-items2 mx-auto">
-                <div class="items col-md-3 py-3 form-wrap-main"
-                    style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);margin-left:45px;">
-                    <div class="header text-center">
-                        <h4 class="sng-dtl" style="line-height: 1.65!important">Prioritas calon pekerja</h4>
-                        <img class="mx-auto my-2 img-fluid"
-                            src="https://areakerja.com/img/aset_online/priority.png"
-                            style="height: 100px; ">
-                    </div>
-                        <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Menjadi prioritas pilihan dari perusahaan mitra areakerja</h5>
-                </div>
-                <div class="items py-3 col-md-3 form-wrap-main"
-                    style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);margin-left:45px;">
-                    <h4 class="sng-dtl" >Memiliki banyak mitra
-                        perusahaan</h4>
-                    <div class="header text-center">
-                        <img class="mx-auto my-2 img-fluid"
-                            src="https://areakerja.com/img/aset_online/cooperation.png"
-                            style="height: 100px; ">
-                    </div>
-                    <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Areakerja memiliki banyak mitra perusahaan yang sedang membuka lowongan  </h5>
-                </div>
-                <div class="items col-md-3 py-3 form-wrap-main"
-                    style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);margin-left:45px;">
-                    <h4 class="sng-dtl" >Terpercaya dan berbadan
-                        hukum</h4>
-                    <div class="header text-center">
-                        <img class="mx-auto my-2 img-fluid"
-                            src="https://areakerja.com/img/aset_online/compliant.png"
-                            style="height: 100px; ">
-                    </div>
-                    <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Perusahaan areakerja merupakan perusahaan yang terpercaya dan berbadan hukum </h5>
-                </div>
 
-
-            </div>
-        </div>
-
-    </div>
-@endsection
-@section('awanbawah')
-    <div class="awan2">
-        <div class="awandalam2"></div>
-    </div>
-@endsection
 @section('slick2')
 
-    <div class="container px-0 mb-5">
-        <h2 style="font-weight: normal" class=" text-center mb-4">How to <strong>Apply</strong></h2>
-        <div class="row">
-            <div class="col-md-6" style="overflow:hidden">
-                <img src="https://areakerja.com/img/aset_online/20945204.jpg" alt="" class="img-fluid pl-5" style="margin-top:-0px">
-            </div>
-            <div class="col-md-6">
-               <ul class="h-100" style="list-style:none; display:flex; flex-direction: column; justify-content: center;margin-top:-30px">
-                   <li>
-                       <div class="d-flex align-items-center mb-3" >
-                        <h2 class="m-0 mr-2 my-auto" style="color: #fe7b54; width:45px">
-                            01
+    <div class="container text-center">
+        
+        <div class="row justify-content-center text-left align-items-center"  style="min-height: 100vh;flex-direction: column">
+            <h1 style="font-weight: 500">
+                Kelebihan menjadi Mitra Areakerja
+            </h1>
+            <div class="row">
+                <div class="col-md-6" style="overflow:hidden">
+                    <img src="https://areakerja.com/img/aset_online/Job hunt-pana.png" alt="" class="img-fluid" style="margin-top:-40px;margin-bottom:-40px">
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="">
+                        <h2 class="m-0 mb-3" style="color: #fe7b54; ">
+                            Kemudahan Merekrut Karyawan
                         </h2>
-                        <h4 class="m-0">
-                            Pilih Daftar untuk melakukan registrasi kandidat
+                        <h4 class="m-0" style="line-height:1.6!important">
+                            Mitra diberikan kemudahan mencari dan merekrut karyawan sebab areakerja memiliki fitur hiring kandidat untuk para pencari kerja yang memiliki skill dan kompeten 
                         </h4>
-                       </div>
-                   </li>
-                   <li>
-                        <div class="d-flex align-items-center mb-3" >
-                            <h2 class="m-0 mr-2 my-auto" style="color: #fe7b54; width:45px">
-                                02
-                            </h2>
-                            <h4 class="m-0">Lengkapi Data yang Diperlukan pada Proses Registrasi
-                            </h4>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="d-flex align-items-center mb-3" >
-                            <h2 class="m-0 mr-2 my-auto" style="color: #fe7b54; width:45px">
-                                03
-                            </h2>
-                            <h4 class="m-0">
-                                Tunggu Pemberitahuan Setelah Melakukan Registrasi
-                            </h4>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="d-flex align-items-center mb-3" >
-                            <h2 class="m-0 mr-2 my-auto" style="color: #fe7b54; width:45px">
-                                04
-                            </h2>
-                            <h4 class="m-0">
-                                Anda telah menjadi kandidat Areakerja.com
-                            </h4>
-                        </div>
-                    </li>
-               </ul>
-           </div>
+                    </div>
+                    
+               </div>
+            </div>
+            
         </div>
 
 
     </div>
-    <div style="background-color: #ffe6bb;display:flex;align-items:center" class="mb-5">
-    </div>
-
-    <div class="container px-5 text-center pb-5" style="margin-bottom: 3rem;">
-        <div class="my-3">
-            <h2 style="font-weight: normal" class="mb-3">Memiliki <strong>Pertanyaan </strong>Lain?</h2>
-            <h3 style="font-weight: normal">Hubungi Kami</h3>
-        </div>
-
-        <div class="box-pertanyaan d-flex px-3 py-3 w-50 mx-auto mb-3" style="border-radius:20px;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 5px 2px;border: solid 1px #ffffff">
-            <input type="text" style="border: none; font-family: inherit;" class="input-pertanyaan" placeholder="Tulis Pertanyaan">
-            <div class="btn px-4 d-flex align-items-center" style="border-radius:20px;background-color:#FFAD4D">
-                <h5 class="m-0 "  style="color:white">
-                    Kirim
-                </h5>
+    <div>
+        <div class="container " >
+            <div class="row justify-content-center   align-items-center" style="min-height: 100vh">
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="">
+                        <h2 class="m-0 mb-3" style="color: #fe7b54; ">
+                            Menjadi Prioritas
+                        </h2>
+                        <h4 class="m-0" style="line-height:1.6!important">
+                            Pasang Lowongan Kerja Mitra akan menjadi rekomendasi pada halaman loker sehingga pencari kerja langsung tertuju pada perusahaan tersebut
+                        </h4>
+                    </div>
+                    
+               </div>
+               <div class="col-md-6" style="overflow:hidden">
+                <img src="https://areakerja.com/img/aset_online/ISO Certification-pana.png" alt="" class="img-fluid">
+            </div>
             </div>
         </div>
     </div>
+    
+    <div class="container mb-3 min-vh-100">
+        <div class="row justify-content-center align-items-center " style="min-height: 100vh">
+            <div class="col-md-6" style="overflow:hidden">
+                <img src="https://areakerja.com/img/aset_online/Mobile Marketing-pana.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <div class="">
+                    <h2 class="m-0 mb-3" style="color: #fe7b54; ">
+                        Publikasi 
+                    </h2>
+                    <h4 class="m-0" style="line-height:1.6!important">
+                        Mitra akan di publikasi pada semua jaringan aerakerja.com setelah menjadi mitra areakerja.com
+                    </h4>
+                </div>
+                
+           </div>
+           
+        </div>
 
+
+    </div>
+    <div class="timeline_area mb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-8 col-lg-6">
+                    <!-- Section Heading-->
+                    <div class="section_heading text-center">
+                        <h2 style="color: #fe7b54;" class="my-3">Cara Mendaftar Mitra </h2>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-7 mx-auto">
+                    <div class="absolute-center">
+                        <div class="apland-timeline-area ">
+                            <div class="single-timeline-area mx-auto ">
+                                <div class="timeline-date wow fadeInLeft"  style="visibility: visible; ">
+                                    <h2>
+                                        01
+                                    </h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-11">
+                                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; ">
+                                            <img src="https://areakerja.com/img/aset_online/Mobile Marketing-pana.png" alt="" class="img-fluid w-25  mr-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="timeline-text">
+                                                    <h3>Daftar</h3>
+                                                    <p>Klik button daftar pada halaman pasang mitra</p>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- Single Timeline Content-->
+                            <div class="single-timeline-area">
+                                <div class="timeline-date wow fadeInLeft"  style="visibility: visible; animation-delay: ">
+                                    <h2>
+                                        02
+                                    </h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-11">
+                                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible;">
+                                            <img src="https://areakerja.com/img/aset_online/Mobile Marketing-pana.png" alt="" class="img-fluid w-25 mr-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="timeline-text">
+                                                    <h3>Mengisi Form</h3>
+                                                    <p>Mengisi dan melengkapi data untuk mendaftar menjadi mitra areakerja.com</p>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single Timeline Content-->
+                            <div class="single-timeline-area">
+                                <div class="timeline-date2 wow fadeInLeft"  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                    <h2>
+                                        03
+                                    </h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-11">
+                                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                            
+                                                <img src="https://areakerja.com/img/aset_online/Mobile Marketing-pana.png" alt="" class="img-fluid w-25 mr-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="timeline-text">
+                                                    <h3>Tunggu proses</h3>
+                                                    <p>Tunggu proses validasi data dari admin.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
