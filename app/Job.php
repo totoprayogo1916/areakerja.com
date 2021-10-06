@@ -3,7 +3,6 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Job extends Model
 {
@@ -71,17 +70,17 @@ class Job extends Model
 
     public function scopeSearchResults($query)
     {
-        return $query->when(!empty(request()->input('location', 0)), static function ($query) {
+        return $query->when(! empty(request()->input('location', 0)), static function ($query) {
             $query->whereHas('location', static function ($query) {
                 $query->whereId(request()->input('location'));
             });
         })
-            ->when(!empty(request()->input('category', 0)), static function ($query) {
+            ->when(! empty(request()->input('category', 0)), static function ($query) {
                 $query->whereHas('categories', static function ($query) {
                     $query->whereId(request()->input('category'));
                 });
             })
-            ->when(!empty(request()->input('search', '')), static function ($query) {
+            ->when(! empty(request()->input('search', '')), static function ($query) {
                 $query->where(static function ($query) {
                     $search = request()->input('search');
                     $query->where('title', 'LIKE', "%{$search}%")

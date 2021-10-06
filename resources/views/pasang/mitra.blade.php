@@ -1,111 +1,150 @@
-@extends('layouts.pasang')
+@extends('layouts.pasang2')
 @section('home')
     <section class="relative" id="home" style="margin-bottom: 50px">
-        <div class="banner-area2 ">
-            <div class="row align-items-center justify-content-center" style="margin-right: 15px; margin-left: 15px">
-                <div class="banner-content col-lg-12">
-                    <div class="overlay overlay-bg container">
-                        <h1 style="color: #fe7b54; margin-bottom:5px; text-shadow: 2px 2px 3px #353535b0;">
-                            Daftar Mitra
-                        </h1>
-                        <h6 style="color: #fe7b54; text-shadow: 1px 1px 2px #353535b0;">
-                            {{-- Pelajari Tips-Tips Kerja Yang Telah Kami Buat Untuk Anda --}}
-                        </h6>
-                    </div>
+        <div class="mb-4 rounded-3">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12 col-md-5">
+                    <h1 class="display-3 fw-bold" style="font-weight: 500">Daftarkan Diri Anda</h1>
+                    <h4 class="my-3" style="font-weight: 400; line-height:1.6!important">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non nunc id lacus sagittis lobortis id nec nulla.   </h4>
+                    <button class="btn btn-lg mt-3" style="background:#fe7b54; color:white;" type="button" data-toggle="modal" data-target="#modalDaftar">Daftar</button>
+                </div>
+                <div class="col-7 col-md-7">
+                    <img class="img-fluid" src="{{ asset('img/kandidat/banner.jpg') }}">
                 </div>
             </div>
+
+        </div>
         </div>
     </section>
 @endsection
-@section('content')
-    <div class="col-12 col-sm-10 col-md-7 mx-auto">
-        <form id="regForm" enctype="multipart/form-data" action="{{ url('formMitra') }}" method="POST">
-            @csrf
-            <div class="tab">
-                <h4>Nama Perusahan</h4>
-                <p><input id="nama" name="nama" placeholder="" oninput="this.className = ''"
-                        style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;">
-                </p>
-                <h4>Deskripsi Perusahan</h4>
-                <p><input id="deskripsi" name="deskripsi" placeholder="" oninput="this.className = ''"
-                        style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;">
-                </p>
-                <h4>Alamat Perusahan</h4>
-                <p><input id="alamat" name="alamat" placeholder="" oninput="this.className = ''"
-                        style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;">
-                </p>
-                <h4>Logo Perusahan</h4>
-                <div>
-                    <input type="file" id="gambar" name="gambar"
-                        style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;">
-                </div>
-                {{-- <p><input placeholder="" oninput="this.className = ''" style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;  "></p> --}}
-
-                <div class="mt-4 mb-0">
-                    <div class="row justify-content-center">
-                        <div class="col-6 col-sm-3">
-                            <button type="submit" class="btn btn-area" onclick="nextPrev(1)">
-                                <span>Selanjutnya</span>
-                            </button>
-                        </div>
+@section('awanatas')
+    <div class="awan">
+        <div class="awandalam"></div>
+    </div>
+@endsection
+@section('slick')
+    <div class="container px-0">
+        <h2 style="font-weight: normal" class=" text-center mb-3"><strong>Cara</strong> Daftar <strong>Kandidat</strong>
+        </h2>
+        <div class="col-12 col-sm-11 no-gutters no-padding mt-4 mx-auto">
+            <div class="row for_slick_slider2 multiple-items2 mx-auto">
+                <div class="items col-md-3 py-3 form-wrap-main"
+                    style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);margin-left:45px;">
+                    <div class="header text-center">
+                        <h4 class="sng-dtl" style="line-height: 1.65!important">Prioritas calon pekerja</h4>
+                        <img class="mx-auto my-2 img-fluid"
+                            src="https://areakerja.com/img/aset_online/priority.png"
+                            style="height: 100px; ">
                     </div>
+                        <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Menjadi prioritas pilihan dari perusahaan mitra areakerja</h5>
                 </div>
+                <div class="items py-3 col-md-3 form-wrap-main"
+                    style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);margin-left:45px;">
+                    <h4 class="sng-dtl" >Memiliki banyak mitra
+                        perusahaan</h4>
+                    <div class="header text-center">
+                        <img class="mx-auto my-2 img-fluid"
+                            src="https://areakerja.com/img/aset_online/cooperation.png"
+                            style="height: 100px; ">
+                    </div>
+                    <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Areakerja memiliki banyak mitra perusahaan yang sedang membuka lowongan  </h5>
+                </div>
+                <div class="items col-md-3 py-3 form-wrap-main"
+                    style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);margin-left:45px;">
+                    <h4 class="sng-dtl" >Terpercaya dan berbadan
+                        hukum</h4>
+                    <div class="header text-center">
+                        <img class="mx-auto my-2 img-fluid"
+                            src="https://areakerja.com/img/aset_online/compliant.png"
+                            style="height: 100px; ">
+                    </div>
+                    <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Perusahaan areakerja merupakan perusahaan yang terpercaya dan berbadan hukum </h5>
+                </div>
+
+
             </div>
+        </div>
 
-            <div class="tab">
-                <h4>Info Kontak Perusahaan</h4>
-                <div class="form-group text-center m-0">
-                    <div class="form-check form-check-inline">
-                        <label for="defaultCheck1">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked='true'
-                                disabled="disabled">
-                            Email</label>
-                        <label for="hp">
-                            <input class="form-check-input" type="checkbox" value="" id="hp" onclick="myFunction()">
-                            No. Telp</label>
-                    </div>
-                </div>
+    </div>
+@endsection
+@section('awanbawah')
+    <div class="awan2">
+        <div class="awandalam2"></div>
+    </div>
+@endsection
+@section('slick2')
 
-                <div class="form-group">
-                    <h4>Email
-                        <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
-                    </h4>
-                    <div>
-                        <input class="mb-2" id="email" name="email" required="" type="text" value="" data-type="text"
-                            aria-required="true"
-                            style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;">
-                        <label> Email wajib diisi untuk konfirmasi pembayaran, hanya ditampilkan publik jika merupakan cara
-                            untuk mengirimkan lamaran
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-group" id="hpform" style="display:none">
-                    <h4>No. Telp/Whatsapp
-                        <span aria-hidden="true" role="presentation" style="color:#ee0000;">*</span>
-                    </h4>
-                    <div>
-                        <input id="notelp" name="notelp" type="text" required="" value="" data-type="text"
-                            aria-required="true"
-                            style="border-radius: 10px; padding:10px; border: 2px solid #fe7b54;font-family: 'Poppins', sans-serif;">
-                    </div>
-                </div>
-                <div class="mt-2 mb-1">
-                    <div class="row justify-content-center">
-                        <div class="col-6 col-sm-3 ">
-                            <button type="submit" class="btn btn-area" onclick="nextPrev(-1)">
-                                <span>Sebelumnya</span>
-                            </button>
-                        </div>
-                        <div class="col-6 col-sm-3">
-                            <button type="submit" class="btn btn-area" onclick="nextPrev(1)">
-                                <span>Selanjutnya</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+    <div class="container px-0 mb-5">
+        <h2 style="font-weight: normal" class=" text-center mb-4">How to <strong>Apply</strong></h2>
+        <div class="row">
+            <div class="col-md-6" style="overflow:hidden">
+                <img src="https://areakerja.com/img/aset_online/20945204.jpg" alt="" class="img-fluid pl-5" style="margin-top:-0px">
             </div>
-        </form>
+            <div class="col-md-6">
+               <ul class="h-100" style="list-style:none; display:flex; flex-direction: column; justify-content: center;margin-top:-30px">
+                   <li>
+                       <div class="d-flex align-items-center mb-3" >
+                        <h2 class="m-0 mr-2 my-auto" style="color: #fe7b54; width:45px">
+                            01
+                        </h2>
+                        <h4 class="m-0">
+                            Pilih Daftar untuk melakukan registrasi kandidat
+                        </h4>
+                       </div>
+                   </li>
+                   <li>
+                        <div class="d-flex align-items-center mb-3" >
+                            <h2 class="m-0 mr-2 my-auto" style="color: #fe7b54; width:45px">
+                                02
+                            </h2>
+                            <h4 class="m-0">Lengkapi Data yang Diperlukan pada Proses Registrasi
+                            </h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex align-items-center mb-3" >
+                            <h2 class="m-0 mr-2 my-auto" style="color: #fe7b54; width:45px">
+                                03
+                            </h2>
+                            <h4 class="m-0">
+                                Tunggu Pemberitahuan Setelah Melakukan Registrasi
+                            </h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex align-items-center mb-3" >
+                            <h2 class="m-0 mr-2 my-auto" style="color: #fe7b54; width:45px">
+                                04
+                            </h2>
+                            <h4 class="m-0">
+                                Anda telah menjadi kandidat Areakerja.com
+                            </h4>
+                        </div>
+                    </li>
+               </ul>
+           </div>
+        </div>
+
+
+    </div>
+    <div style="background-color: #ffe6bb;display:flex;align-items:center" class="mb-5">
+    </div>
+
+    <div class="container px-5 text-center pb-5" style="margin-bottom: 3rem;">
+        <div class="my-3">
+            <h2 style="font-weight: normal" class="mb-3">Memiliki <strong>Pertanyaan </strong>Lain?</h2>
+            <h3 style="font-weight: normal">Hubungi Kami</h3>
+        </div>
+
+        <div class="box-pertanyaan d-flex px-3 py-3 w-50 mx-auto mb-3" style="border-radius:20px;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 5px 2px;border: solid 1px #ffffff">
+            <input type="text" style="border: none; font-family: inherit;" class="input-pertanyaan" placeholder="Tulis Pertanyaan">
+            <div class="btn px-4 d-flex align-items-center" style="border-radius:20px;background-color:#FFAD4D">
+                <h5 class="m-0 "  style="color:white">
+                    Kirim
+                </h5>
+            </div>
+        </div>
     </div>
 
 @endsection

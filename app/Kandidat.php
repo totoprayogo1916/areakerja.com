@@ -2,12 +2,10 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Kandidat extends Model
 {
-
     public $table = 'kandidat';
 
     protected $fillable = [

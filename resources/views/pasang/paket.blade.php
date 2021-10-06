@@ -183,9 +183,7 @@
         <div class="row mb-3 justify-content-around text-center mt-5">
             @foreach ($paket2 as $pak)
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 px-4 ">
-
-                    {{-- <a href="{{ route('daftarmitra') }}"> --}}
-                    <a href="{{ route('pasang', $pak->nama) }}">
+                    <a href="{{ route('daftarmitra') }}">
                         <div class="card mb-4 form-wrap-main2"
                             style="border-radius: 25px; border:5px solid {{ $pak->warna }} ">
                             <div class="card-header pt-3 pb-4"
