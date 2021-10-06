@@ -23,6 +23,7 @@
 <div class="card-deck">
     @foreach($article as $art)
     <div class="col-sm-4 my-2">
+        <a href="{{ route('artikel.show', [Str::slug($art->judul)])}}" style="color: black">
         <div class="card post-list2 ml-auto mr-auto" style="height: 100%;">
             @if($art->gambar)
                 <img class="card-img-top" src="{{ url('img/artikel') }}/{{ $art->gambar }}" alt="Card image cap" style="width: inherit;height: 30vh;object-fit: cover;border-radius:15px">
@@ -32,6 +33,7 @@
               <p class="card-text">{{ $art->ringkasan }}</p><p class="card-text"></p>
             </div>
         </div>
+        </a>
     </div>
     @endforeach
 @endsection

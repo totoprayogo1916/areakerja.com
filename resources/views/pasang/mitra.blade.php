@@ -17,7 +17,7 @@
 @section('slick2')
 
     <div class="container text-center">
-        
+
         <div class="row justify-content-center text-left align-items-center"  style="min-height: 100vh;flex-direction: column">
             <h1 style="font-weight: 500">
                 Kelebihan menjadi Mitra Areakerja
@@ -32,13 +32,13 @@
                             Kemudahan Merekrut Karyawan
                         </h2>
                         <h4 class="m-0" style="line-height:1.6!important">
-                            Mitra diberikan kemudahan mencari dan merekrut karyawan sebab areakerja memiliki fitur hiring kandidat untuk para pencari kerja yang memiliki skill dan kompeten 
+                            Mitra diberikan kemudahan mencari dan merekrut karyawan sebab areakerja memiliki fitur hiring kandidat untuk para pencari kerja yang memiliki skill dan kompeten
                         </h4>
                     </div>
-                    
+
                </div>
             </div>
-            
+
         </div>
 
 
@@ -55,7 +55,7 @@
                             Pasang Lowongan Kerja Mitra akan menjadi rekomendasi pada halaman loker sehingga pencari kerja langsung tertuju pada perusahaan tersebut
                         </h4>
                     </div>
-                    
+
                </div>
                <div class="col-md-6" style="overflow:hidden">
                 <img src="https://areakerja.com/img/aset_online/ISO Certification-pana.png" alt="" class="img-fluid">
@@ -63,7 +63,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="container mb-3 min-vh-100">
         <div class="row justify-content-center align-items-center " style="min-height: 100vh">
             <div class="col-md-6" style="overflow:hidden">
@@ -72,15 +72,15 @@
             <div class="col-md-6 d-flex align-items-center">
                 <div class="">
                     <h2 class="m-0 mb-3" style="color: #fe7b54; ">
-                        Publikasi 
+                        Publikasi
                     </h2>
                     <h4 class="m-0" style="line-height:1.6!important">
                         Mitra akan di publikasi pada semua jaringan aerakerja.com setelah menjadi mitra areakerja.com
                     </h4>
                 </div>
-                
+
            </div>
-           
+
         </div>
 
 
@@ -116,10 +116,10 @@
                                                     <p>Klik button daftar pada halaman pasang mitra</p>
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             <!-- Single Timeline Content-->
@@ -139,7 +139,7 @@
                                                     <p>Mengisi dan melengkapi data untuk mendaftar menjadi mitra areakerja.com</p>
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -154,7 +154,7 @@
                                 <div class="row">
                                     <div class="col-11">
                                         <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                            
+
                                                 <img src="https://areakerja.com/img/aset_online/Mobile Marketing-pana.png" alt="" class="img-fluid w-25 mr-3">
                                             <div class="d-flex align-items-center">
                                                 <div class="timeline-text">
@@ -164,12 +164,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>

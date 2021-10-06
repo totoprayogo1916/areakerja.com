@@ -246,7 +246,7 @@
             margin-bottom:.4rem;
         }
 
-        
+
         .single-timeline-area .single-timeline-content .timeline-text p {
             font-weight: 500;
             color: black;

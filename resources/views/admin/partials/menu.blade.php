@@ -100,7 +100,14 @@
                 </ul>
             </li>
 
+            <li class="nav-item">
+                <a href="{{ route("admin.jobs.index") }}" class="nav-link {{ request()->is('admin/jobs') || request()->is('admin/jobs/*') ? 'active' : '' }}">
+                    <i class="fa-fw fas fa-briefcase nav-icon">
 
+                    </i>
+                    {{ trans('cruds.job.title') }}
+                </a>
+            </li>
             <li class="nav-item">
                 <a href="{{ route("admin.companies.index") }}" class="nav-link {{ request()->is('admin/companies') || request()->is('admin/companies/*') ? 'active' : '' }}">
                     <i class="fa-fw fas fa-building nav-icon">
@@ -123,14 +130,6 @@
 
                     </i>
                     {{ trans('cruds.category.title') }}
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route("admin.jobs.index") }}" class="nav-link {{ request()->is('admin/jobs') || request()->is('admin/jobs/*') ? 'active' : '' }}">
-                    <i class="fa-fw fas fa-briefcase nav-icon">
-
-                    </i>
-                    {{ trans('cruds.job.title') }}
                 </a>
             </li>
             <li class="nav-item">
