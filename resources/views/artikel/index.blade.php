@@ -23,12 +23,12 @@
 <div class="card-deck">
     @foreach($article as $art)
     <div class="col-sm-4 my-2">
-        <div class="card post-list2 ml-auto mr-auto">
+        <div class="card post-list2 ml-auto mr-auto" style="height: 100%;">
             @if($art->gambar)
-                <img class="card-img-top" src="{{ url('img/artikel') }}/{{ $art->gambar }}" alt="Card image cap" style="width: inherit;height: auto;">
+                <img class="card-img-top" src="{{ url('img/artikel') }}/{{ $art->gambar }}" alt="Card image cap" style="width: inherit;height: 30vh;object-fit: cover;border-radius:15px">
             @endif
-            <div class="card-body">
-              <h5 class="card-title">{{ $art->judul }}</h5>
+            <div class="card-body ">
+              <h5 class="card-title ">{{ $art->judul }}</h5>
               <p class="card-text">{{ $art->ringkasan }}</p><p class="card-text"></p>
             </div>
         </div>
