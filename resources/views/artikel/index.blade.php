@@ -20,29 +20,18 @@
 @endsection
 
 @section('content')
-<div class="col-11 col-sm-10 col-md-9 post-list2 ml-auto mr-auto" >
-
+<div class="card-deck">
     @foreach($article as $art)
-    <a href="{{ route('artikel.show', [Str::slug($art->judul)])}}">
-    <div data-aos="fade-up" class="single-post2 align-items-center d-flex border-bottom" style=" margin-left: auto;margin-right: auto">
-        <div class="col-3 no-gutters no-padding thumb3" style="margin: auto;" >
+    <div class="col-sm-4 my-2">
+        <div class="card post-list2 ml-auto mr-auto">
             @if($art->gambar)
-                <img class="thumb3" src="{{ url('img/artikel') }}/{{ $art->gambar }}" style="width: inherit;height: auto;">
+                <img class="card-img-top" src="{{ url('img/artikel') }}/{{ $art->gambar }}" alt="Card image cap" style="width: inherit;height: auto;">
             @endif
-        </div>
-        <div class="col-12 col-sm-9">
-            <div class="details" >
-                <div class="title d-flex flex-row "  >
-                    <div class="titles">
-                        <h4 style="margin-bottom: 8px;font-weight: 500; ">{{ $art->judul }}</h4>
-                        <p class="pg-1" style="font-weight: 400;line-height: 1.75; margin-bottom: 0px">{{ $art->ringkasan }}</p>
-                    </div>
-                </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ $art->judul }}</h5>
+              <p class="card-text">{{ $art->ringkasan }}</p><p class="card-text"></p>
             </div>
         </div>
-
     </div>
-    </a>
     @endforeach
 @endsection
-
