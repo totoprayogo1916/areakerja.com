@@ -7,9 +7,11 @@ use App\Job;
 use App\Location;
 use App\MainSkill;
 use App\Mitra;
+use App\Pembayaran;
 use App\Price;
 use App\Riwayat;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class MitraController extends Controller
 {
@@ -30,20 +32,84 @@ class MitraController extends Controller
         // $code   = "" . $search->id . "";
         // $this->_generatePaymentToken($request, $total_pembayaran, $code);
         // dd($request->payment_url);
+        $number           = mt_rand(000, 999);
+        $number2          = mt_rand(0000, 9999);
+        $total_pembayaran = 200000 + $number2;
+        $total            = number_format($total_pembayaran, 0, '.', '.');
+        Pembayaran::create([
+            'paket'  => 'Mitra',
+            'harga'  => $total_pembayaran,
+            'status' => 'NDANGDIBAYAR',
+        ]);
+        $search = Pembayaran::where('harga', $total_pembayaran)->first();
+        $code   = '' . $search->id . '' . $total_pembayaran . '' . $number . '';
+        $this->_generatePaymentToken($request, $total_pembayaran, $code);
 
-        $gambar = time() . '.' . $request->gambar->extension();
-        // dd($gambar);
-        $request->gambar->move(public_path('img/companylogo/'), $gambar);
+        $this->validate($request, [
+            'nama'      => 'required',
+            'email'     => 'required',
+            'deskripsi' => 'required',
+            'alamat'    => 'required',
+            'no'        => 'required',
+            'logo'      => 'required',
+        ]);
+
+        $logo = time() . '.' . $request->logo->extension();
+        $request->logo->move(public_path('img/companylogo/'), $logo);
         Mitra::create([
             'nama'      => $request->nama,
             'email'     => $request->email,
             'deskripsi' => $request->deskripsi,
             'alamat'    => $request->alamat,
-            'no'        => $request->notelp,
-            'logo'      => $gambar,
+            'no'        => $request->no,
+            'logo'      => $logo,
         ]);
 
-        return redirect('pilihpaket');
+        $nama  = $request->nama;
+        $url   = $request->payment_url;
+        $title = 'Pasang Lowongan Kerja';
+        Alert::success('Berhasil Mengirim Lowongan', 'Admin sedang memproses lowongan anda');
+
+        return view('pasang.pembayaran', compact(['title', 'nama', 'total', 'url']));
+    }
+
+    private function _generatePaymentToken($order, $total, $code)
+    {
+        $this->initPaymentGateway();
+
+        // dd($total);
+        // $code = "INV/202107006/VII/XXI/00003";
+        $customerDetails = [
+            'first_name' => $order->nama,
+            'email'      => $order->email,
+            'phone'      => $order->no,
+        ];
+
+        $params = [
+            'enable_payments'     => \App\pembayaran::PAYMENT_CHANNELS,
+            'transaction_details' => [
+                'order_id'     => $code,
+                'gross_amount' => $total,
+            ],
+            'customer_details' => $customerDetails,
+            'expiry'           => [
+                'start_time' => date('Y-m-d H:i:s T'),
+                'unit'       => \App\pembayaran::EXPIRY_UNIT,
+                'duration'   => \App\pembayaran::EXPIRY_DURATION,
+            ],
+        ];
+
+        $snap = \Midtrans\Snap::createTransaction($params);
+        // dd($snap);exit;
+
+        if ($snap->token) {
+            // dd($snap->redirect_url);
+            $order->payment_token = $snap->token;
+            $order->payment_url   = $snap->redirect_url;
+            // $order->save();
+            // dd($snap->redirect_url);
+            // return redirect()->to($snap->redirect_url);
+        }
     }
 
     public function daftarmitra()

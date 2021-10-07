@@ -62,6 +62,7 @@ Route::get('/getid', 'HomeController@addcart')->name('addcart');
 Route::get('/get_client_ip', 'CacheController@get_client_ip')->name('get_client_ip');
 
 Route::post('/formkandidat', 'KandidatController@formkandidat')->name('formkandidat');
+Route::post('/formmitra', 'MitraController@index')->name('formmitra');
 
 Route::get(
     '/getmacshellexec',

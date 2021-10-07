@@ -290,13 +290,14 @@
 
         </main>
         @include('user.footer')
+        {{-- Modal Daftar Kandidat   --}}
         <div class="modal fade" id="modalDaftar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
             aria-hidden="true" >
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document" >
                 <div class="modal-content" >
                     <div class="modal-body" >
                         <div class="login-sec-bg">
-                            <h2 class="text-center mb-3">Account Information</h2>
+                            <h2 class="text-center mb-3">Daftar Kandidat</h2>
                             <form id="example-advanced-form" enctype="multipart/form-data"
                                 action="{{ url('formkandidat') }}" method="POST" style="display: none;">
                                 @csrf
@@ -417,6 +418,51 @@
                                             </tr>
                                         </table>
                                     </div>
+                                </fieldset>
+
+                                <h3>Finish</h3>
+                                <fieldset class="form-input">
+                                    <h4>Terms and Conditions</h4>
+
+                                    <input id="acceptTerms-2" name="acceptTerms" type="checkbox" class="required">
+                                    <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+
+        {{-- Modal Daftar Mitra --}}
+
+        <div class="modal fade" id="modalDaftarMitra" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true" >
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document" >
+                <div class="modal-content" >
+                    <div class="modal-body" >
+                        <div class="login-sec-bg">
+                            <h2 class="text-center mb-3">Account Information</h2>
+                            <form id="example-advanced-form1" enctype="multipart/form-data"
+                                action="{{ url('formmitra') }}" method="POST" style="display: none;">
+                                @csrf
+                                <h3 >Account</h3>
+                                <fieldset class="form-input"  style="overflow-y: scroll; box-sizing: border-box;width: 100%;">
+                                    <h4>Account Information</h4>
+
+                                    <label for="nama">Nama Perusahaan</label>
+                                    <input id="nama" name="nama" type="text" class="form-control2">
+                                    <label for="email">Email Perusahaan</label>
+                                    <input id="email" name="email" type="email" class="form-control2">
+                                    <label for="alamat">Alamat Perusahaan</label>
+                                    <textarea id="alamat" name="alamat" type="text" class="form-control2"> </textarea>
+                                    <label for="deskripsi">Deskripsi Perusahaan</label>
+                                    <textarea id="deskripsi" name="deskripsi" type="text"
+                                        class="form-control2"> </textarea>
+                                    <label for="no">Nomor Telepon Perusahaan</label>
+                                    <input id="no" name="no" type="text" class="form-control2">
+                                    <label for="logo">Logo Perusahaan</label>
+                                    <input id="logo" name="logo" type="file" class="form-control2">
                                 </fieldset>
 
                                 <h3>Finish</h3>
@@ -659,6 +705,59 @@
     @include('sweetalert::alert')
     <script>
         var form = $("#example-advanced-form").show();
+
+        form.steps({
+            headerTag: "h3",
+            bodyTag: "fieldset",
+            transitionEffect: "slideLeft",
+            onStepChanging: function(event, currentIndex, newIndex) {
+                // Allways allow previous action even if the current form is not valid!
+                if (currentIndex > newIndex) {
+                    return true;
+                }
+                // Forbid next action on "Warning" step if the user is to young
+                if (newIndex === 3 && Number($("#age").val()) < 18) {
+                    return false;
+                }
+                // Needed in some cases if the user went back (clean up)
+                if (currentIndex < newIndex) {
+                    // To remove error styles
+                    form.find(".body:eq(" + newIndex + ") label.error").remove();
+                    form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
+                }
+                form.validate().settings.ignore = ":disabled,:hidden";
+                return form.valid();
+            },
+            onStepChanged: function(event, currentIndex, priorIndex) {
+                // Used to skip the "Warning" step if the user is old enough.
+                // if (currentIndex === 2 && Number($("#age").val()) >= 18) {
+                //     form.steps("next");
+                // }
+                // Used to skip the "Warning" step if the user is old enough and wants to the previous step.
+                // if (currentIndex === 2 && priorIndex === 3) {
+                //     form.steps("previous");
+                // }
+            },
+            onFinishing: function(event, currentIndex) {
+                form.validate().settings.ignore = ":disabled";
+                return form.valid();
+            },
+            onFinished: function(event, currentIndex) {
+                return form.submit();
+            }
+        }).validate({
+            errorPlacement: function errorPlacement(error, element) {
+                element.before(error);
+            },
+            rules: {
+                confirm: {
+                    equalTo: "#password"
+                }
+            }
+        });
+    </script>
+    <script>
+        var form = $("#example-advanced-form1").show();
 
         form.steps({
             headerTag: "h3",
