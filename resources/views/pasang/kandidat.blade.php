@@ -79,7 +79,7 @@
         <h2 style="font-weight: normal" class=" text-center mb-4">How to <strong>Apply</strong></h2>
         <div class="row">
             <div class="col-md-6" style="overflow:hidden">
-                <img src="https://areakerja.com/img/aset_online/20945204.jpg" alt="" class="img-fluid pl-5" style="margin-top:-0px">
+                <img src="https://areakerja.com/img/aset_online/Forms-pana.png" alt="" class="img-fluid pl-5" style="margin-top:-0px">
             </div>
             <div class="col-md-6">
                <ul class="h-100" style="list-style:none; display:flex; flex-direction: column; justify-content: center;margin-top:-30px">
@@ -138,7 +138,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 d-flex justify-content-end" style="height:max-content">
-                    <img src="https://areakerja.com/img/aset_online/preview.png" alt="" class="img-fluid h-75 m-0">
+                    <img src="https://areakerja.com/img/aset_online/ask.png" alt="" class="img-fluid h-75 m-0">
                 </div>
             </div>
             <div class="accordion">
