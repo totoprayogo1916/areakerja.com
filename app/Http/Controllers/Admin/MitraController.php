@@ -43,7 +43,6 @@ class MitraController extends Controller
         return response(null, Response::HTTP_NO_CONTENT);
     }
 
-
     public function acc($id)
     {
         $random = Str::random(8);
