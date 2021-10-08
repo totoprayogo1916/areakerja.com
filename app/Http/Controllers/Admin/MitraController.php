@@ -5,7 +5,12 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Requests\MassDestroyMitraRequest;
+use App\Mail\MitraUser;
 use App\Mitra;
+use App\User;
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\Response;
 
 class MitraController extends Controller
@@ -41,6 +46,23 @@ class MitraController extends Controller
 
     public function acc($id)
     {
+        $random = Str::random(8);
+        $mitra = Mitra::where('id', $id)->first();
+        $user = new User;
+        $user->name = $mitra->nama;
+        $user->email = $mitra->email;
+        $user->password = Crypt::encryptString($random);
+        $user->save();
+        $mitra->id_user = $user->id;
+        $mitra->save();
+        $details = [
+            'email' => $mitra->email,
+            'password' => $random
+        ];
+
+        Mail::to($mitra->email)->send(new MitraUser($details));
+
+        dd("Email sudah terkirim.");
         return back();
     }
 }
