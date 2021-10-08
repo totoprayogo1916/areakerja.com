@@ -6,8 +6,8 @@
 </head>
 
 <body>
-    <p>Nama : {{ $data['email'] }}</p>
-    <p>password : {{ $data['password'] }}</p>
+    <p>email : {{ $details['email'] }}</p>
+    <p>password : {{ $details['password'] }}</p>
 
     <p>Thank you</p>
 </body>

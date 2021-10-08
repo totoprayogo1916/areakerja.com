@@ -29,6 +29,11 @@ class MitraUser extends Mailable
     public function build()
     {
         return $this->subject('User Dan Password Mitra')
-            ->view('email');
+            ->view('mitraemail')
+            ->with(
+                [
+                    'details'   => $this->details,
+                ]
+            );
     }
 }
