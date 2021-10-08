@@ -1,5 +1,7 @@
 @extends('layouts.pasang2')
 @section('home')
+<img  style="position: absolute" src="{{ asset('img/kandidat/Vector 2.svg') }}" alt="">
+
     <section class="relative" id="home" style="margin-bottom: 50px">
         <div class="mb-4 rounded-3">
         <div class="container py-5">
@@ -18,11 +20,11 @@
         </div>
     </section>
 @endsection
-@section('awanatas')
+{{-- @section('awanatas')
     <div class="awan">
         <div class="awandalam"></div>
     </div>
-@endsection
+@endsection --}}
 @section('slick')
     <div class="container px-0">
         <h2 style="font-weight: normal" class=" text-center mb-3"><strong>Cara</strong> Daftar <strong>Kandidat</strong>
@@ -68,11 +70,11 @@
 
     </div>
 @endsection
-@section('awanbawah')
+{{-- @section('awanbawah')
     <div class="awan2">
         <div class="awandalam2"></div>
     </div>
-@endsection
+@endsection --}}
 @section('slick2')
 
     <div class="container px-0 mb-5">
@@ -128,7 +130,8 @@
 
 
     </div>
-    <div style="background-color: #ffe6bb;display:flex;align-items:center" class="mb-5">
+    <div style="display:flex;align-items:center" class="mb-5">
+        <img style="position: absolute; right: 0" src="{{ asset('img/kandidat/vector3.svg') }}" alt="">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-5 d-flex align-items-center" >

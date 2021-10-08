@@ -279,7 +279,7 @@
                 @yield('content')
             </div>
             @yield('awanatas')
-            <div style="background-color: #fee5ba">
+            <div  style="background-color: #ffffff">
                 @yield('slick')
             </div>
             @yield('awanbawah')
