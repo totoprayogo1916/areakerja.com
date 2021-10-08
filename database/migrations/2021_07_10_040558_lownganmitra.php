@@ -13,7 +13,7 @@ class Lownganmitra extends Migration
      */
     public function up()
     {
-        Schema::create('lowonganMitra', static function (Blueprint $table) {
+        Schema::create('lowongan_mitra', static function (Blueprint $table) {
             $table->increments('id');
 
             $table->string('posisi');

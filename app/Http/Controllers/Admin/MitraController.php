@@ -5,7 +5,13 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Requests\MassDestroyMitraRequest;
+use App\Mail\MitraUser;
 use App\Mitra;
+use App\Role_User;
+use App\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\Response;
 
 class MitraController extends Controller
@@ -36,5 +42,30 @@ class MitraController extends Controller
         Mitra::whereIn('id', request('ids'))->delete();
 
         return response(null, Response::HTTP_NO_CONTENT);
+    }
+
+    public function acc($id)
+    {
+        $random         = Str::random(8);
+        $mitra          = Mitra::where('id', $id)->first();
+        $user           = new User();
+        $user->name     = $mitra->nama;
+        $user->email    = $mitra->email;
+        $user->password = Hash::make($random);
+        $user->save();
+        $mitra->idUser = $user->id;
+        $mitra->save();
+        $details = [
+            'email'    => $mitra->email,
+            'password' => $random,
+        ];
+        $role          = new Role_User();
+        $role->user_id = $user->id;
+        $role->role_id = 3;
+        $role->save();
+
+        Mail::to($mitra->email)->send(new MitraUser($details));
+
+        return back();
     }
 }

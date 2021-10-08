@@ -13,7 +13,7 @@ class MainSkill extends Migration
      */
     public function up()
     {
-        Schema::create('mainSkill', static function (Blueprint $table) {
+        Schema::create('main_skill', static function (Blueprint $table) {
             $table->increments('id');
 
             $table->string('nama');
