@@ -13,7 +13,7 @@ class RiwayatPendidikan extends Migration
      */
     public function up()
     {
-        Schema::create('riwayatpendidikan', static function (Blueprint $table) {
+        Schema::create('riwayat_pendidikan', static function (Blueprint $table) {
             $table->increments('id');
 
             $table->string('nama_instansi');

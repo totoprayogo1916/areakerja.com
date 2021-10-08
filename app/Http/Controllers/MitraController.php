@@ -55,7 +55,7 @@ class MitraController extends Controller
         ]);
 
         $logo = time() . '.' . $request->logo->extension();
-        $request->logo->move(public_path('img/companylogo/'), $logo);
+        $request->logo->move(public_path('img/mitralogo/'), $logo);
         Mitra::create([
             'nama'      => $request->nama,
             'email'     => $request->email,

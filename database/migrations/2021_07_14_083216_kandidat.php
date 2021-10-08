@@ -19,7 +19,7 @@ class Kandidat extends Migration
             $table->string('nama');
 
             $table->unsignedInteger('idSkill')->nullable();
-            $table->foreign('idSkill', 'skill_id_fk_202107271')->references('id')->on('mainSkill');
+            $table->foreign('idSkill', 'skill_id_fk_202107271')->references('id')->on('main_skill');
 
             $table->string('domisili')->nullable();
 

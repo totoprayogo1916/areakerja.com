@@ -9,7 +9,7 @@ class RiwayatPendidikan extends Model
 {
     use HasFactory;
 
-    public $table = 'riwayatpendidikan';
+    public $table = 'riwayat_pendidikan';
 
     protected $dates = [
         'created_at',
