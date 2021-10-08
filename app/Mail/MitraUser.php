@@ -3,13 +3,13 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
 class MitraUser extends Mailable
 {
-    use Queueable, SerializesModels;
+    use Queueable;
+    use SerializesModels;
 
     /**
      * Create a new message instance.
@@ -32,7 +32,7 @@ class MitraUser extends Mailable
             ->view('mitraemail')
             ->with(
                 [
-                    'details'   => $this->details,
+                    'details' => $this->details,
                 ]
             );
     }

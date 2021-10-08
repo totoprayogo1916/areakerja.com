@@ -9,7 +9,6 @@ use App\Mail\MitraUser;
 use App\Mitra;
 use App\Role_User;
 use App\User;
-use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
@@ -47,22 +46,22 @@ class MitraController extends Controller
 
     public function acc($id)
     {
-        $random = Str::random(8);
-        $mitra = Mitra::where('id', $id)->first();
-        $user = new User;
-        $user->name = $mitra->nama;
-        $user->email = $mitra->email;
+        $random         = Str::random(8);
+        $mitra          = Mitra::where('id', $id)->first();
+        $user           = new User();
+        $user->name     = $mitra->nama;
+        $user->email    = $mitra->email;
         $user->password = Hash::make($random);
         $user->save();
         $mitra->idUser = $user->id;
         $mitra->save();
         $details = [
-            'email' => $mitra->email,
-            'password' => $random
+            'email'    => $mitra->email,
+            'password' => $random,
         ];
-        $role = new Role_User();
+        $role          = new Role_User();
         $role->user_id = $user->id;
-        $role->role->id = 3;
+        $role->role_id = 3;
         $role->save();
 
         Mail::to($mitra->email)->send(new MitraUser($details));
