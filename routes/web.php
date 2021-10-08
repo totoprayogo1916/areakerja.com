@@ -203,6 +203,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     //Mitra
     Route::delete('mitra/destroy', 'MitraController@massDestroy')->name('mitra.massDestroy');
+    Route::get('mitra/acc={id}', 'MitraController@acc')->name('mitra.acc');
     Route::resource('mitra', 'MitraController');
 
     //Lowongan
