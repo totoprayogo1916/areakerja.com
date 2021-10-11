@@ -12,7 +12,7 @@
                     <button class="btn btn-lg mt-3" style="background:#fe7b54; color:white;" type="button" data-toggle="modal" data-target="#modalDaftar">Daftar</button>
                 </div>
                 <div class="col-7 col-md-7">
-                    <img class="img-fluid" src="{{ asset('img/kandidat/banner.jpg') }}">
+                    <img class="img-fluid" src="{{ asset('img/kandidat/Hiring.png') }}">
                 </div>
             </div>
 
@@ -27,7 +27,7 @@
 @endsection --}}
 @section('slick')
     <div class="container px-0">
-        <h2 style="font-weight: normal" class=" text-center mb-3"><strong>Cara</strong> Daftar <strong>Kandidat</strong>
+        <h2 style="font-weight: normal" class=" text-center mb-3"><strong>Benefit</strong> Menjadi <strong>Kandidat</strong>
         </h2>
         <div class="col-12 col-sm-11 no-gutters no-padding mt-4 mx-auto">
             <div class="row for_slick_slider2 multiple-items2 mx-auto">
@@ -78,7 +78,7 @@
 @section('slick2')
 
     <div class="container px-0 mb-5">
-        <h2 style="font-weight: normal" class=" text-center mb-4">How to <strong>Apply</strong></h2>
+        <h2 style="font-weight: normal" class=" text-center mt-4">Cara <strong>Daftar</strong></h2>
         <div class="row">
             <div class="col-md-6" style="overflow:hidden">
                 <img src="https://areakerja.com/img/aset_online/Forms-pana.png" alt="" class="img-fluid pl-5" style="margin-top:-0px">
