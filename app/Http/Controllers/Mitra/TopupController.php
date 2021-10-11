@@ -16,13 +16,13 @@ class TopupController extends Controller
         return view('mitra.topop.index', compact('mitra'));
     }
 
-    public function topup($id, $harga)
+    public function topup($id, $harga, $jumlah)
     {
         $mitra1 = Mitra::where('idUser', $id)->first();
         $number = mt_rand(000, 999);
         $total  = $harga + $number;
         $tgl    = Carbon::now();
-        $code   = 'AK' . $tgl->year . $tgl->month . $tgl->day . $total;
+        $code   = 'AK' . $tgl->year . $tgl->month . $tgl->day . $total . 00 . $jumlah;
 
         $this->_generatePaymentToken($mitra1, $total, $code);
         $url = $mitra1->payment_url;
@@ -30,7 +30,7 @@ class TopupController extends Controller
         $user_id = auth()->user()->id;
         $mitra   = Mitra::where('idUser', $user_id)->first();
 
-        return view('mitra.topop.bayar', compact('url', 'mitra'));
+        return redirect($url);
     }
 
     private function _generatePaymentToken($order, $total, $code)

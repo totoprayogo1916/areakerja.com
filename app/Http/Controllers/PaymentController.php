@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Lowongan;
+use App\Pembayaran;
 use Illuminate\Http\Request;
 
 use Midtrans\notification;
@@ -38,7 +39,7 @@ class PaymentController extends Controller
 
         $vaNumber   = null;
         $vendorName = null;
-        if (! empty($paymentNotification->va_numbers[0])) {
+        if (!empty($paymentNotification->va_numbers[0])) {
             $vaNumber   = $paymentNotification->va_numbers[0]->va_number;
             $vendorName = $paymentNotification->va_numbers[0]->bank;
         }
@@ -50,42 +51,42 @@ class PaymentController extends Controller
                 if ($fraud === 'challenge') {
                     // TODO set payment status in merchant's database to 'Challenge by FDS'
                     // TODO merchant should decide whether this transaction is authorized or not in MAP
-                    $paymentStatus = \App\pembayaran::CHALLENGE;
+                    $paymentStatus = Pembayaran::CHALLENGE;
                 } else {
                     // TODO set payment status in merchant's database to 'Success'
-                    $paymentStatus = \App\pembayaran::SUCCESS;
+                    $paymentStatus = Pembayaran::SUCCESS;
                 }
             }
         } elseif ($transaction === 'settlement') {
             // TODO set payment status in merchant's database to 'Settlement'
-            $paymentStatus = \App\pembayaran::SETTLEMENT;
+            $paymentStatus = Pembayaran::SETTLEMENT;
         } elseif ($transaction === 'pending') {
             // TODO set payment status in merchant's database to 'Pending'
-            $paymentStatus = \App\pembayaran::PENDING;
+            $paymentStatus = Pembayaran::PENDING;
         } elseif ($transaction === 'deny') {
             // TODO set payment status in merchant's database to 'Denied'
-            $paymentStatus = \App\pembayaran::DENY;
+            $paymentStatus = Pembayaran::DENY;
         } elseif ($transaction === 'expire') {
             // TODO set payment status in merchant's database to 'expire'
-            $paymentStatus = \App\pembayaran::EXPIRE;
+            $paymentStatus = Pembayaran::EXPIRE;
         } elseif ($transaction === 'cancel') {
             // TODO set payment status in merchant's database to 'Denied'
-            $paymentStatus = \App\pembayaran::CANCEL;
+            $paymentStatus = Pembayaran::CANCEL;
         }
 
         $paymentParams = [
             'status' => 'gagal',
         ];
-        $companies = \App\pembayaran::where('id', $order->id);
+        $companies = Pembayaran::where('id', $order->id);
         // echo $companies;
         $companies->update($paymentParams);
 
         // if ($paymentStatus && $payment) {
         // 	\DB::transaction(
         // 		function () use ($order, $payment) {
-        // 			if (in_array($payment->status, [\App\pembayaran::SUCCESS, \App\pembayaran::SETTLEMENT])) {
-        // 				$order->payment_status = \App\pembayaran::PAID;
-        // 				$order->status = \App\pembayaran::CONFIRMED;
+        // 			if (in_array($payment->status, [Pembayaran::SUCCESS, Pembayaran::SETTLEMENT])) {
+        // 				$order->payment_status = Pembayaran::PAID;
+        // 				$order->status = Pembayaran::CONFIRMED;
         // 				$order->save();
         // 			}
         // 		}
@@ -104,22 +105,23 @@ class PaymentController extends Controller
 
     public function completed(Request $request)
     {
-        $companies = \App\pembayaran::where('id', $request->order_id);
+        $companies = Pembayaran::where('id', $request->order_id);
         // echo $companies;
         $paymentParams = [
             'status' => 'berhasil',
         ];
         $companies->update($paymentParams);
-        dd($request);
+        // dd($request);
+        return redirect(route('home'));
     }
 
     public function unfinish(Request $request)
     {
-        dd($request);
+        return redirect(route('home'));
     }
 
     public function failed(Request $request)
     {
-        dd($request);
+        return redirect(route('home'));
     }
 }

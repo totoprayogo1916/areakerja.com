@@ -61,8 +61,8 @@ class LowonganController extends Controller
         $url   = $request->payment_url;
         $title = 'Pasang Lowongan Kerja';
         Alert::success('Berhasil Mengirim Lowongan', 'Admin sedang memproses lowongan anda');
-
-        return view('pasang.pembayaran', compact(['title', 'nama', 'total', 'url']));
+        return redirect($url);
+        // return view('pasang.pembayaran', compact(['title', 'nama', 'total', 'url']));
     }
 
     // public function doCheckout(OrderRequest $request)
