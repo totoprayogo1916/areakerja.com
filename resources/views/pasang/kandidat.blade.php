@@ -234,7 +234,7 @@
 
         <div class="box-pertanyaan d-flex px-3 py-3 w-50 mx-auto mb-3" style="border-radius:20px;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 5px 2px;border: solid 1px #ffffff">
             <input id="pertanyaan" type="text" style="border: none; font-family: inherit;" class="input-pertanyaan" placeholder="Tulis Pertanyaan">
-            <a id="kirim" class="btn px-4 d-flex align-items-center" style="border-radius:20px;background-color:#FFAD4D;color: white">
+            <a id="kirim" target="_blank" class="btn px-4 d-flex align-items-center" style="border-radius:20px;background-color:#FFAD4D;color: white">
                 Kirim
             </a>
         </div>
@@ -247,7 +247,7 @@
         function kirimpertanyaan() {
             var pertanyaan=document.getElementById("pertanyaan").value;
             var a = document.getElementById("kirim");
-            a.href = "mailto:areakerja@gmail.com?subject=Pertanyaan&body="+ pertanyaan
+            a.href = "https://mail.google.com/mail/u/0/?to=areakerja@gmail.com&su=Pertanyaan&body="+ pertanyaan+"&fs=1&tf=cm"
         }
 
     </script>
