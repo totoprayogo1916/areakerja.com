@@ -1,10 +1,11 @@
 @extends('layouts.pasang2')
 @section('home')
     <section id="home" >
+        <img  style="position: absolute" src="{{ asset('img/kandidat/Vector 1.svg') }}" alt="">
         <div class="container py-5">
             <div class="col-12 text-center">
                 <h1 class="display-4 fw-bold">Rekrut Karyawan Terbaik Anda</h1>
-                <h4 class="my-3" style="font-weight: 400; line-height:1.6!important">menjadi bagian dari kami di Mitra Areakerja.com </h4>
+                <h4 class="my-3" style="font-weight: 400; line-height:1.6!important">Menjadi bagian dari kami di Mitra Areakerja.com </h4>
                 <button class="btn btn-lg mt-3" style="background:#fe7b54; color:white;" type="button" data-toggle="modal" data-target="#modalDaftarMitra">Daftar</button>
             </div>
             <div class="col-md-9 mx-auto">
@@ -17,7 +18,6 @@
 @section('slick2')
 
     <div class="container text-center">
-
         <div class="row justify-content-center text-left align-items-center"  style="min-height: 100vh;flex-direction: column">
             <h1 style="font-weight: 500">
                 Kelebihan menjadi Mitra Areakerja
@@ -34,6 +34,7 @@
                         <h4 class="m-0" style="line-height:1.6!important">
                             Mitra diberikan kemudahan mencari dan merekrut karyawan sebab areakerja memiliki fitur hiring kandidat untuk para pencari kerja yang memiliki skill dan kompeten
                         </h4>
+
                     </div>
 
                </div>
@@ -41,8 +42,8 @@
 
         </div>
 
-
     </div>
+
     <div>
         <div class="container " >
             <div class="row justify-content-center   align-items-center" style="min-height: 100vh">
@@ -62,6 +63,7 @@
             </div>
             </div>
         </div>
+
     </div>
 
     <div class="container mb-3 min-vh-100">
@@ -109,7 +111,7 @@
                                 <div class="row">
                                     <div class="col-11">
                                         <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; ">
-                                            <img src="https://areakerja.com/img/aset_online/Mobile Marketing-pana.png" alt="" class="img-fluid w-25  mr-3">
+                                            <img src="https://areakerja.com/img/aset_online/startup life-pana.png" alt="" class="img-fluid w-25  mr-3">
                                             <div class="d-flex align-items-center">
                                                 <div class="timeline-text">
                                                     <h3>Daftar</h3>
@@ -132,7 +134,7 @@
                                 <div class="row">
                                     <div class="col-11">
                                         <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible;">
-                                            <img src="https://areakerja.com/img/aset_online/Mobile Marketing-pana.png" alt="" class="img-fluid w-25 mr-3">
+                                            <img src="https://areakerja.com/img/aset_online/blogging-pana.png" alt="" class="img-fluid w-25 mr-3">
                                             <div class="d-flex align-items-center">
                                                 <div class="timeline-text">
                                                     <h3>Mengisi Form</h3>
@@ -155,11 +157,11 @@
                                     <div class="col-11">
                                         <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
 
-                                                <img src="https://areakerja.com/img/aset_online/Mobile Marketing-pana.png" alt="" class="img-fluid w-25 mr-3">
+                                                <img src="https://areakerja.com/img/aset_online/Business deal-pana.png" alt="" class="img-fluid w-25 mr-3">
                                             <div class="d-flex align-items-center">
                                                 <div class="timeline-text">
-                                                    <h3>Tunggu proses</h3>
-                                                    <p>Tunggu proses validasi data dari admin.</p>
+                                                    <h3>Terdaftar Menjadi Mitra</h3>
+                                                    <p>Menerima email dari admin apabila diterima menjadi mitra areakerja.com</p>
                                                 </div>
                                             </div>
                                         </div>
