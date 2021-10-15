@@ -20,7 +20,7 @@
 @endsection
 
 @section('content')
-<div class="card-deck">
+<div class="card-deck mb-4">
     @foreach($article as $art)
     <div class="col-sm-4 my-2">
         <a href="{{ route('artikel.show', [Str::slug($art->judul)])}}" style="color: black">

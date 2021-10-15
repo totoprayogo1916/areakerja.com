@@ -12,7 +12,7 @@
                     <button class="btn btn-lg mt-3" style="background:#fe7b54; color:white;" type="button" data-toggle="modal" data-target="#modalDaftar">Daftar</button>
                 </div>
                 <div class="col-7 col-md-7">
-                    <img class="img-fluid" src="{{ asset('img/kandidat/banner.jpg') }}">
+                    <img class="img-fluid" src="{{ asset('img/kandidat/Hiring.png') }}">
                 </div>
             </div>
 
@@ -27,7 +27,7 @@
 @endsection --}}
 @section('slick')
     <div class="container px-0">
-        <h2 style="font-weight: normal" class=" text-center mb-3"><strong>Cara</strong> Daftar <strong>Kandidat</strong>
+        <h2 style="font-weight: normal" class=" text-center mb-3"><strong>Benefit</strong> Menjadi <strong>Kandidat</strong>
         </h2>
         <div class="col-12 col-sm-11 no-gutters no-padding mt-4 mx-auto">
             <div class="row for_slick_slider2 multiple-items2 mx-auto">
@@ -78,7 +78,7 @@
 @section('slick2')
 
     <div class="container px-0 mb-5">
-        <h2 style="font-weight: normal" class=" text-center mb-4">How to <strong>Apply</strong></h2>
+        <h2 style="font-weight: normal" class=" text-center mt-4">Cara <strong>Daftar</strong></h2>
         <div class="row">
             <div class="col-md-6" style="overflow:hidden">
                 <img src="https://areakerja.com/img/aset_online/Forms-pana.png" alt="" class="img-fluid pl-5" style="margin-top:-0px">
@@ -233,14 +233,24 @@
         </div>
 
         <div class="box-pertanyaan d-flex px-3 py-3 w-50 mx-auto mb-3" style="border-radius:20px;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 5px 2px;border: solid 1px #ffffff">
-            <input type="text" style="border: none; font-family: inherit;" class="input-pertanyaan" placeholder="Tulis Pertanyaan">
-            <div class="btn px-4 d-flex align-items-center" style="border-radius:20px;background-color:#FFAD4D">
-                <h5 class="m-0 "  style="color:white">
-                    Kirim
-                </h5>
-            </div>
+            <input id="pertanyaan" type="text" style="border: none; font-family: inherit;" class="input-pertanyaan" placeholder="Tulis Pertanyaan">
+            <a id="kirim" target="_blank" class="btn px-4 d-flex align-items-center" style="border-radius:20px;background-color:#FFAD4D;color: white">
+                Kirim
+            </a>
         </div>
     </div>
+
+    <script>
+        document.getElementById("kirim").
+        addEventListener("click", kirimpertanyaan);
+
+        function kirimpertanyaan() {
+            var pertanyaan=document.getElementById("pertanyaan").value;
+            var a = document.getElementById("kirim");
+            a.href = "https://mail.google.com/mail/u/0/?to=areakerja@gmail.com&su=Pertanyaan&body="+ pertanyaan+"&fs=1&tf=cm"
+        }
+
+    </script>
 
     <script>
         const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");

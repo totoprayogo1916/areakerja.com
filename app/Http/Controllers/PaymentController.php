@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use App\Lowongan;
 use App\Pembayaran;
 use Illuminate\Http\Request;
-
 use Midtrans\notification;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PaymentController extends Controller
 {
@@ -39,7 +39,7 @@ class PaymentController extends Controller
 
         $vaNumber   = null;
         $vendorName = null;
-        if (!empty($paymentNotification->va_numbers[0])) {
+        if (! empty($paymentNotification->va_numbers[0])) {
             $vaNumber   = $paymentNotification->va_numbers[0]->va_number;
             $vendorName = $paymentNotification->va_numbers[0]->bank;
         }
@@ -110,6 +110,8 @@ class PaymentController extends Controller
         $companies->status = 'LUNAS';
         $companies->save();
         // dd($request);
+        Alert::success('Berhasil Melakukan Pembayaran', 'Lowongan akan segera kami pasang');
+
         return redirect(route('home'));
     }
 

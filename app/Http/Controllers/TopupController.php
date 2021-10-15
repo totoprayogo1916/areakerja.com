@@ -33,7 +33,7 @@ class TopupController extends Controller
 
         $vaNumber   = null;
         $vendorName = null;
-        if (!empty($paymentNotification->va_numbers[0])) {
+        if (! empty($paymentNotification->va_numbers[0])) {
             $vaNumber   = $paymentNotification->va_numbers[0]->va_number;
             $vendorName = $paymentNotification->va_numbers[0]->bank;
         }
@@ -106,10 +106,11 @@ class TopupController extends Controller
         ];
         $user_id = auth()->user()->id;
 
-        $mitra = Mitra::where('idUser', $user_id)->first();
-        $mitra->koin = $mitra->koin + (int)substr($request->order_id, -3);
+        $mitra       = Mitra::where('idUser', $user_id)->first();
+        $mitra->koin = $mitra->koin + (int) substr($request->order_id, -3);
         $mitra->save();
         $companies->update($paymentParams);
+
         return redirect(route('mitra.home'));
     }
 
