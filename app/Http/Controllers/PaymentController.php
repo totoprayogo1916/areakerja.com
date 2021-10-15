@@ -105,12 +105,10 @@ class PaymentController extends Controller
 
     public function completed(Request $request)
     {
-        $companies = Pembayaran::where('id', $request->order_id);
-        // echo $companies;
-        $paymentParams = [
-            'status' => 'berhasil',
-        ];
-        $companies->update($paymentParams);
+        $id = (int)substr($request->order_id, -5);
+        $companies = Pembayaran::where('id', $id)->first();
+        $companies->status = 'LUNAS';
+        $companies->save();
         // dd($request);
         return redirect(route('home'));
     }
