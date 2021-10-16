@@ -26,11 +26,11 @@ class LowonganAdmin extends Migration
 
             $table->string('gambar');
 
-            $table->string('title');
+            $table->string('posisi');
 
-            $table->string('short_description')->nullable();
+            $table->string('deskripsi_pekerjaan')->nullable();
 
-            $table->longText('full_description')->nullable();
+            $table->longText('syarat_pekerjaan')->nullable();
 
             $table->string('job_nature')->nullable();
 
@@ -44,7 +44,7 @@ class LowonganAdmin extends Migration
 
             $table->string('bataslamaran')->nullable();
 
-            $table->string('salary');
+            $table->string('gaji');
 
             $table->string('email')->nullable();
 

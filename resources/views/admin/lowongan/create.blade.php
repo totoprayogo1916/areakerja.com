@@ -11,7 +11,7 @@
             @csrf
             <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
                 <label for="title">Nama Pekerjaan</label>
-                <input type="text" id="title" name="title" class="form-control" value="{{ $mitra->posisi}} " required>
+                <input type="text" id="title" name="title" class="form-control" value="{{ $mitra->posisi }}" required>
                 @if($errors->has('title'))
                     <em class="invalid-feedback">
                         {{ $errors->first('title') }}

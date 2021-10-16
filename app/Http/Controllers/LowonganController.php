@@ -16,24 +16,20 @@ class LowonganController extends Controller
 {
     public function formpasang(Request $request)
     {
-        // $params = $request->except('_token');
-
         $paket            = Price::where('nama', $request->paket)->get()->first();
         $number           = mt_rand(000, 999);
         $number2          = mt_rand(0000, 9999);
         $total_pembayaran = $paket->harga + $number2;
         $total            = number_format($total_pembayaran, 0, '.', '.');
-        $search = Pembayaran::create([
+        $search           = Pembayaran::create([
             'paket'  => $paket->nama,
             'harga'  => $total_pembayaran,
             'status' => 'NDANGDIBAYAR',
         ]);
-        $code   = '' . $search->id . '' . $total_pembayaran . '' . $number . '' .  ($search->id + 100000) . '';
+        $code = '' . $search->id . '' . $total_pembayaran . '' . $number . '' . ($search->id + 100000) . '';
         $this->_generatePaymentToken($request, $total_pembayaran, $code);
-        // dd($request->payment_url);
 
         $gambar = time() . '.' . $request->gambar->extension();
-        // dd("".$search->id."");
         $request->gambar->move(public_path('storage/tmpcompanylogo'), $gambar);
         Lowongan::create([
             'idPembayaran'        => '' . $search->id . '',
@@ -41,16 +37,16 @@ class LowonganController extends Controller
             'deskripsiperusahaan' => $request->deskripsiperusahaan,
             'alamatperusahaan'    => $request->alamatperusahaan,
             'gambar'              => $gambar,
-            'title'               => $request->title,
-            'salary'              => $request->salary,
+            'posisi'              => $request->title,
+            'gaji'                => $request->salary,
             'job_nature'          => $request->job_nature,
             'alamat_kantor'       => $request->alamat_kantor,
             'min_pendidikan'      => $request->min_pendidikan,
             'gender'              => $request->gender,
             'min_umur'            => $request->min_umur,
             'bataslamaran'        => $request->bataslamaran,
-            'full_description'    => $request->full_description,
-            'short_description'   => $request->short_description,
+            'syarat_pekerjaan'    => $request->full_description,
+            'deskripsi_pekerjaan' => $request->short_description,
             'email'               => $request->email,
             'notelp'              => $request->notelp,
             'web'                 => $request->web,
@@ -62,7 +58,6 @@ class LowonganController extends Controller
         Alert::success('Berhasil Mengirim Lowongan', 'Admin sedang memproses lowongan anda');
 
         return redirect($url);
-        // return view('pasang.pembayaran', compact(['title', 'nama', 'total', 'url']));
     }
 
     // public function doCheckout(OrderRequest $request)

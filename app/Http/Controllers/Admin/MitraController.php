@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Company;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Requests\MassDestroyMitraRequest;
@@ -46,8 +47,17 @@ class MitraController extends Controller
 
     public function acc($id)
     {
-        $random         = Str::random(8);
-        $mitra          = Mitra::where('id', $id)->first();
+        $random     = Str::random(8);
+        $mitra      = Mitra::where('id', $id)->first();
+        $slug_judul = Str::slug($mitra->nama);
+        Company::create([
+            'name'      => $mitra->nama,
+            'deskripsi' => $mitra->deskripsi,
+            'alamat'    => $mitra->alamat,
+            'gambar'    => $mitra->logo,
+            'alamat'    => $mitra->alamat,
+            'slug'      => $slug_judul,
+        ]);
         $user           = new User();
         $user->name     = $mitra->nama;
         $user->email    = $mitra->email;

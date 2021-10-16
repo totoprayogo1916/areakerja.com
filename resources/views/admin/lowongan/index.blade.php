@@ -103,16 +103,16 @@
                                 </a>
                             </td>
                             <td>
-                                {{ $low->title ?? '' }}
+                                {{ $low->posisi ?? '' }}
                             </td>
                             <td>
                                 {{ $low->alamat_kantor ?? '' }}
                             </td>
                             <td>
-                                {{ $low->short_description ?? '' }}
+                                {{ $low->deskripsi_pekerjaan ?? '' }}
                             </td>
                             <td>
-                                {{ $low->full_description ?? '' }}
+                                {{ $low->syarat_pekerjaan ?? '' }}
                             </td>
                             <td>
                                 {{ $low->gender ?? '' }}
@@ -130,7 +130,7 @@
                                 {{ $low->bataslamaran ?? '' }}
                             </td>
                             <td>
-                                {{ $low->salary ?? '' }}
+                                {{ $low->gaji ?? '' }}
                             </td>
                             <td>
                                 {{ $low->email ?? '' }}
@@ -156,6 +156,11 @@
                                     Detail Pembayaran
                                 </a>
 
+                                @if ($low->pembayaran->status == "LUNAS")
+                                <a class="btn btn-xs btn-success" href="{{ route('admin.addjob', $low->id) }}" style="width: auto">
+                                    Terima Lowongan
+                                </a>
+                                @endif
                             </td>
 
                         </tr>

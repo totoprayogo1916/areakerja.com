@@ -105,8 +105,8 @@ class PaymentController extends Controller
 
     public function completed(Request $request)
     {
-        $id = (int)substr($request->order_id, -5);
-        $companies = Pembayaran::where('id', $id)->first();
+        $id                = (int) substr($request->order_id, -5);
+        $companies         = Pembayaran::where('id', $id)->first();
         $companies->status = 'LUNAS';
         $companies->save();
         // dd($request);

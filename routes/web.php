@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\LowongannController as AdminLowongannController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -209,6 +210,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     //Lowongan
     Route::delete('lowongan/destroy', 'LowongannController@massDestroy')->name('lowongan.massDestroy');
     // Route::get('/pembayaran/{id}', 'LowongannController@pembayaran')->name('pembayaran');
+    // Route::get('/addjob/{id}', 'LowongannController@addjob')->name('addjob');
+    Route::get('/addjob/{id}', [AdminLowongannController::class, 'addjob'])->name('addjob');
     Route::resource('lowongan', 'LowongannController');
 
     //Calon Kandidat

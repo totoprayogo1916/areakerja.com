@@ -25,7 +25,6 @@ class LowonganMitraController extends Controller
 
         $mitraAsli = Mitra::where('idUser', $mitra->idUser)->first();
         $company   = Company::where('deskripsi', $mitraAsli->deskripsi)->first();
-        // dd($company->id);
         // $mitra1 = Lowonganmitra::all();
         // dd($mitra);
         // $mitra1 = Company::where('email', $mitra->idUser)->first();
