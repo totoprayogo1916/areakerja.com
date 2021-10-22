@@ -29,10 +29,10 @@
                 <div class="col-md-6 d-flex align-items-center">
                     <div class="">
                         <h2 class="m-0 mb-3" style="color: #fe7b54; ">
-                            Kemudahan Merekrut Karyawan
+                            Mendapat Karyawan Profesional
                         </h2>
                         <h4 class="m-0" style="line-height:1.6!important">
-                            Mitra diberikan kemudahan mencari dan merekrut karyawan sebab areakerja memiliki fitur hiring kandidat untuk para pencari kerja yang memiliki skill dan kompeten
+                            Mitra dapat merekrut karyawan yang telah terseleksi tim Areakerja serta mendapatkan garansi apabila karyawan yang telah direkrut tidak kompeten
                         </h4>
 
                     </div>

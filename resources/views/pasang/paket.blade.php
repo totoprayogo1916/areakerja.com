@@ -1,7 +1,7 @@
 @extends('layouts.pasang')
 @section('home')
     <section class="relative">
-        <img src="{{ url('img/chat_me.png') }}" onclick="topFunction()" id="myBtn2" title="Go to top"
+        <img src="{{ url('img/chat_me.png') }}" onclick="location.href='https://wa.me/6287719999132'" id="myBtn2" title="Go to top"
             class="myBtn2">
         <div class="banner-area3">
             <div class="row align-items-center justify-content-center" style="margin-right: 15px; margin-left: 15px">
