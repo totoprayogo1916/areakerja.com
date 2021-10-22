@@ -7,8 +7,24 @@
     </div>
 
     <div class="card-body">
-        <form action="{{ route("admin.jobs.store") }}" method="POST" enctype="multipart/form-data" id="form-name">
+        <form action="{{ route("admin.lowonganmitra.storejob") }}" method="POST" enctype="multipart/form-data" id="form-name">
             @csrf
+            <div class="form-group {{ $errors->has('id') ? 'has-error' : '' }}">
+                <label for="id">ID</label>
+                <select name="id" id="id" class="form-control select2" required>
+
+                    <option value="{{ $mitra->id }}" selected>{{ $mitra->id }}</option>
+
+                </select>
+                @if($errors->has('id'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('id') }}
+                    </em>
+                @endif
+                <p class="helper-block">
+                    {{-- {{ trans('cruds.job.fields.id_helper') }} --}}
+                </p>
+            </div>
             <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
                 <label for="title">Nama Pekerjaan</label>
                 <input type="text" id="title" name="title" class="form-control" value="{{ $mitra->posisi}} " required>
@@ -266,7 +282,7 @@
             <div class="form-group {{ $errors->has('top_rated') ? 'has-error' : '' }}">
                 <label for="top_rated">{{ trans('cruds.job.fields.top_rated') }}</label>
                 <input name="top_rated" type="hidden" value="0">
-                <input value="1" type="checkbox" id="top_rated" name="top_rated" {{ old('top_rated', 0) == 1 ? 'checked' : '' }}>
+                <input value="1" type="checkbox" id="top_rated" name="top_rated" {{ old('top_rated', 0) == 1 ? 'checked' : '' }} checked>
                 @if($errors->has('top_rated'))
                     <em class="invalid-feedback">
                         {{ $errors->first('top_rated') }}

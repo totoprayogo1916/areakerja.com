@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\LowonganMitraController as AdminLowonganMitraController;
 use App\Http\Controllers\Admin\LowongannController as AdminLowongannController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -229,4 +230,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('article', 'ArticleController');
 
     Route::resource('lowonganmitra', 'LowonganMitraController');
+    Route::get('/addjob/{id}', [AdminLowonganMitraController::class, 'addjob'])->name('addjobmitra');
+    Route::post('/addjob', [AdminLowonganMitraController::class, 'storejob'])->name('lowonganmitra.storejob');
 });

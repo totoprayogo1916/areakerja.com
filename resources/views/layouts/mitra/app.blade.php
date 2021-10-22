@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1,minimum-scale=1.0, maximum-scale=3.0, shrink-to-fit=no"
         name="viewport">
-    <title>Admin - Area Kerja</title>
+    <title>Mitra - Area Kerja</title>
     <!-- General CSS Files -->
 
     <link rel="stylesheet" href="{{ url('otika/assets/css/app.min.css') }}">
@@ -122,13 +122,22 @@
     @include('sweetalert::alert')
 
     @stack('before-script')
+  {{-- <!-- JS Libraies -->
+  <script src="assets/bundles/jqvmap/dist/jquery.vmap.min.js"></script>
+  <script src="assets/bundles/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+  <script src="assets/bundles/jqvmap/dist/maps/jquery.vmap.indonesia.js"></script> --}}
+
     <!-- General JS Scripts -->
     <script src="{{ url('otika/assets/js/app.min.js') }}"></script>
     <!-- JS Libraies -->
+    <script src="{{ url('otika/assets/bundles/chartjs/chart.min.js') }}"></script>
+    <script src="{{ url('otika/assets/bundles/jquery.sparkline.min.js') }}"></script>
     <script src="{{ url('otika/assets/bundles/apexcharts/apexcharts.min.js') }}"></script>
+
     <!-- Page Specific JS File -->
     <script src="{{ url('otika/assets/js/page/index.js') }}"></script>
     <script src="{{ url('otika/assets/js/page/chat.js') }}"></script>
+    <script src="{{ url('otika/assets/js/page/widget-chart.js') }}"></script>
     @stack('page-script')
     <!-- Template JS File -->
     <script src="{{ url('otika/assets/js/scripts.js') }}"></script>
@@ -221,8 +230,6 @@
 
         });
     </script>
-
-
 
     @section('js')
     @show

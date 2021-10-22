@@ -5,10 +5,13 @@ namespace App\Http\Controllers\Admin;
 use App\Category;
 use App\Company;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreJobRequest;
 use App\Job;
 use App\Location;
 use App\Lowonganmitra;
 use App\Mitra;
+use Illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class LowonganMitraController extends Controller
 {
@@ -21,14 +24,10 @@ class LowonganMitraController extends Controller
 
     public function edit($id, Job $job)
     {
-        $mitra = Lowonganmitra::where('id', $id)->first();
-
+        $mitra     = Lowonganmitra::where('id', $id)->first();
         $mitraAsli = Mitra::where('idUser', $mitra->idUser)->first();
-        $company   = Company::where('deskripsi', $mitraAsli->deskripsi)->first();
-        // $mitra1 = Lowonganmitra::all();
-        // dd($mitra);
-        // $mitra1 = Company::where('email', $mitra->idUser)->first();
-        // dd($mitra1);
+        $company   = Company::where('name', $mitraAsli->nama)->first();
+
         $companies = Company::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $locations = Location::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
@@ -38,5 +37,72 @@ class LowonganMitraController extends Controller
         $job->load('company', 'location', 'categories');
 
         return view('admin.lowonganmitra.create', compact('companies', 'locations', 'categories', 'job', 'mitra', 'company'));
+    }
+
+    public function addjob($id, Job $job)
+    {
+        $mitra = Lowonganmitra::where('id', $id)->first();
+
+        $mitraAsli  = Mitra::where('idUser', $mitra->idUser)->first();
+        $cekcompany = Company::where('name', $mitraAsli->nama)->first();
+        $companies  = Company::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $locations  = Location::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $categories = Category::all()->pluck('name', 'id');
+        $job->load('company', 'location', 'categories');
+
+        if ($cekcompany === null) {
+            $slug_judul = Str::slug($mitraAsli->nama);
+            Company::create([
+                'name'      => $mitraAsli->nama,
+                'deskripsi' => $mitraAsli->deskripsi,
+                'alamat'    => $mitraAsli->alamat,
+                'gambar'    => $mitraAsli->logo,
+                'slug'      => $slug_judul,
+            ]);
+            $company = Company::where('name', $mitraAsli->nama)->first();
+
+            return view('admin.lowonganmitra.create', compact('companies', 'locations', 'categories', 'job', 'mitra', 'cekcompany', 'company'));
+        }
+        $company = Company::where('name', $mitraAsli->nama)->first();
+
+        return view('admin.lowonganmitra.create', compact('companies', 'locations', 'categories', 'job', 'mitra', 'cekcompany', 'company'));
+    }
+
+    public function storejob(StoreJobRequest $request)
+    {
+        $companyName      = Company::where('id', $request->company_id)->first('name');
+        $slug_title       = Str::slug($request->get('title'));
+        $slug_companyname = Str::slug($companyName->name);
+        $slug             = $slug_title . '-di-' . $slug_companyname;
+
+        $job = Job::create([
+            'title'            => $request->title,
+            'salary'           => $request->salary,
+            'address'          => $request->address,
+            'top_rated'        => $request->top_rated,
+            'company_id'       => $request->company_id,
+            'job_nature'       => $request->job_nature,
+            'pendidikan'       => $request->pendidikan,
+            'umur'             => $request->umur,
+            'gender'           => $request->gender,
+            'lokasikerja'      => $request->lokasikerja,
+            'requirements'     => $request->requirements,
+            'bataslamaran'     => $request->bataslamaran,
+            'location_id'      => $request->location_id,
+            'email'            => $request->email,
+            'notelp'           => $request->notelp,
+            'website'          => $request->website,
+            'full_description' => $request->full_description,
+            'slug'             => $slug,
+        ]);
+        $job->categories()->sync($request->input('categories', []));
+
+        $mitra                    = Lowonganmitra::where('id', $request->id)->first();
+        $mitra->status_pemasangan = 'Terpasang';
+        $mitra->update();
+
+        Alert::success('Berhasil Menambah Lowongan', ' ');
+
+        return redirect()->route('admin.jobs.index');
     }
 }

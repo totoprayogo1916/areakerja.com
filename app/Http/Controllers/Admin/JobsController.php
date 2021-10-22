@@ -13,6 +13,7 @@ use App\Location;
 use App\Lowonganmitra;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 use Symfony\Component\HttpFoundation\Response;
 
 class JobsController extends Controller
@@ -37,17 +38,11 @@ class JobsController extends Controller
 
     public function store(StoreJobRequest $request)
     {
-        // $job->categories()->sync($request->input('categories', []));
-        // $casts = ['jobs' => '    ']
-        // $data = json_encode($request->requirements);
-        // $arr = $request->all();
-        // $arr = serialize($data);
-        // $create = Job::create(['session'=>$arr]);
         $companyName      = Company::where('id', $request->company_id)->first('name');
         $slug_title       = Str::slug($request->get('title'));
         $slug_companyname = Str::slug($companyName->name);
         $slug             = $slug_title . '-di-' . $slug_companyname;
-        // dd($request);
+
         $job = Job::create([
             'title'            => $request->title,
             'salary'           => $request->salary,
@@ -80,6 +75,8 @@ class JobsController extends Controller
         //     echo 'gagal';
         // }
         // return request('requirements');
+        Alert::success('Berhasil Menambah Lowongan', ' ');
+
         return redirect()->route('admin.jobs.index');
     }
 

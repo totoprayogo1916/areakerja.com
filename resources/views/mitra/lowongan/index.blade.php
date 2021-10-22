@@ -38,7 +38,7 @@
                                                     <td>{{ $min->bataslamaran }}</td>
                                                     <td>
                                                         <div
-                                                            class="badge badge-shadow {{ request()->is($min->status_pemasangan == 'Terpasang') ? 'badge-success' : 'badge-warning' }}">
+                                                            class="badge badge-shadow {{ $min->status_pemasangan == "Terpasang" ? 'badge-success' : 'badge-warning' }}">
                                                             {{ $min->status_pemasangan }}</div>
                                                     </td>
                                                     <td>
