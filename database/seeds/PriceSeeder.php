@@ -10,8 +10,8 @@ class PriceSeeder extends Seeder
     public function run()
     {
         $price = Price::create([
-            'nama'              => 'Gold',
-            'deskripsi_singkat' => 'Paket Super Efektif',
+            'nama'              => 'Gabung Mitra',
+            'deskripsi_singkat' => 'Dapatkan Lebih banyak benefit',
             'deskripsi_full'    => '<p><strong>5 Kali Publikasi </strong>di semua jaringan AreaKerja.id</p>',
             'list'              => [
                 '<img alt="" src="img/img-01.png" style="height:10%; width:10%;margin-right: 10px;" /> Website & Aplikasi',
