@@ -10,8 +10,10 @@ use App\Http\Requests\StoreJobRequest;
 use App\Http\Requests\UpdateJobRequest;
 use App\Job;
 use App\Location;
+use App\Lowongan;
 use App\Lowonganmitra;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 use Symfony\Component\HttpFoundation\Response;
@@ -38,33 +40,67 @@ class JobsController extends Controller
 
     public function store(StoreJobRequest $request)
     {
+        $imglowongan = Lowongan::where('id', $request->id)->first('gambar');
+        File::copy(public_path("storage/tmpcompanylogo/$imglowongan"), public_path("img/companyLogo/$imglowongan"));
         $companyName      = Company::where('id', $request->company_id)->first('name');
         $slug_title       = Str::slug($request->get('title'));
         $slug_companyname = Str::slug($companyName->name);
         $slug             = $slug_title . '-di-' . $slug_companyname;
+        if ($request->location_id == 1) {
+            $sluglocation = Str::slug($request->new_location);
 
-        $job = Job::create([
-            'title'            => $request->title,
-            'salary'           => $request->salary,
-            'address'          => $request->address,
-            'top_rated'        => $request->top_rated,
-            'company_id'       => $request->company_id,
-            'job_nature'       => $request->job_nature,
-            'pendidikan'       => $request->pendidikan,
-            'umur'             => $request->umur,
-            'gender'           => $request->gender,
-            'lokasikerja'      => $request->lokasikerja,
-            'requirements'     => $request->requirements,
-            'bataslamaran'     => $request->bataslamaran,
-            'location_id'      => $request->location_id,
-            'email'            => $request->email,
-            'notelp'           => $request->notelp,
-            'website'          => $request->website,
-            'full_description' => $request->full_description,
-            'slug'             => $slug,
-        ]);
-        $job->categories()->sync($request->input('categories', []));
+            $location = new Location;
+            $location->name = $request->new_location;
+            $location->slug = $sluglocation;
+            $location->save();
 
+            $job = Job::create([
+                'title'            => $request->title,
+                'salary'           => $request->salary,
+                'address'          => $request->address,
+                'top_rated'        => $request->top_rated,
+                'company_id'       => $request->company_id,
+                'job_nature'       => $request->job_nature,
+                'pendidikan'       => $request->pendidikan,
+                'umur'             => $request->umur,
+                'gender'           => $request->gender,
+                'lokasikerja'      => $request->lokasikerja,
+                'requirements'     => $request->requirements,
+                'bataslamaran'     => $request->bataslamaran,
+                'location_id'      => $location->id,
+                'email'            => $request->email,
+                'notelp'           => $request->notelp,
+                'website'          => $request->website,
+                'full_description' => $request->full_description,
+                'slug'             => $slug,
+            ]);
+            $job->categories()->sync($request->input('categories', []));
+        } else {
+            $job = Job::create([
+                'title'            => $request->title,
+                'salary'           => $request->salary,
+                'address'          => $request->address,
+                'top_rated'        => $request->top_rated,
+                'company_id'       => $request->company_id,
+                'job_nature'       => $request->job_nature,
+                'pendidikan'       => $request->pendidikan,
+                'umur'             => $request->umur,
+                'gender'           => $request->gender,
+                'lokasikerja'      => $request->lokasikerja,
+                'requirements'     => $request->requirements,
+                'bataslamaran'     => $request->bataslamaran,
+                'location_id'      => $request->location_id,
+                'email'            => $request->email,
+                'notelp'           => $request->notelp,
+                'website'          => $request->website,
+                'full_description' => $request->full_description,
+                'slug'             => $slug,
+            ]);
+            $job->categories()->sync($request->input('categories', []));
+        }
+
+        $lowongan = Lowongan::where('id', $request->id)->first();
+        $lowongan->delete();
         // $mitra = Lowonganmitra::where('id', $request['id'])->first();
         // if ($mitra != null) {
         //     $cek = Lowonganmitra::where('status_pemasangan', "Terpasang")->first();

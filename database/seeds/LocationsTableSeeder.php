@@ -13,6 +13,12 @@ class LocationsTableSeeder extends Seeder
     public function run()
     {
         $location = Location::create([
+            'name' => 'Lainnya',
+            'slug' => 'lainnya',
+        ]);
+        $location->save();
+
+        $location = Location::create([
             'name' => 'Kota Yogyakarta',
             'slug' => 'kota-yogyakarta',
         ]);
@@ -39,12 +45,6 @@ class LocationsTableSeeder extends Seeder
         $location = Location::create([
             'name' => 'Gunungkidul',
             'slug' => 'gunungkidul',
-        ]);
-        $location->save();
-
-        $location = Location::create([
-            'name' => 'Luar Yogyakarta',
-            'slug' => 'luar-yogyakarta',
         ]);
         $location->save();
     }

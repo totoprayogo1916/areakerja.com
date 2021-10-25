@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\StoreJobRequest;
+use RealRashid\SweetAlert\Facades\Alert;
 use App\Category;
 use App\Company;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreJobRequest;
 use App\Job;
 use App\Location;
 use App\Lowonganmitra;
 use App\Mitra;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use RealRashid\SweetAlert\Facades\Alert;
 
 class LowonganMitraController extends Controller
 {
@@ -24,7 +25,7 @@ class LowonganMitraController extends Controller
 
     public function edit($id, Job $job)
     {
-        $mitra     = Lowonganmitra::where('id', $id)->first();
+        $mitra = Lowonganmitra::where('id', $id)->first();
         $mitraAsli = Mitra::where('idUser', $mitra->idUser)->first();
         $company   = Company::where('name', $mitraAsli->nama)->first();
 
@@ -43,15 +44,16 @@ class LowonganMitraController extends Controller
     {
         $mitra = Lowonganmitra::where('id', $id)->first();
 
-        $mitraAsli  = Mitra::where('idUser', $mitra->idUser)->first();
+        $mitraAsli = Mitra::where('idUser', $mitra->idUser)->first();
         $cekcompany = Company::where('name', $mitraAsli->nama)->first();
-        $companies  = Company::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
-        $locations  = Location::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $companies = Company::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $locations = Location::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
         $categories = Category::all()->pluck('name', 'id');
         $job->load('company', 'location', 'categories');
 
         if ($cekcompany === null) {
             $slug_judul = Str::slug($mitraAsli->nama);
+            File::copy(public_path("storage/tmpcompanylogo/$mitraAsli->logo"), public_path("img/companyLogo/$mitraAsli->logo"));
             Company::create([
                 'name'      => $mitraAsli->nama,
                 'deskripsi' => $mitraAsli->deskripsi,
@@ -97,12 +99,11 @@ class LowonganMitraController extends Controller
         ]);
         $job->categories()->sync($request->input('categories', []));
 
-        $mitra                    = Lowonganmitra::where('id', $request->id)->first();
-        $mitra->status_pemasangan = 'Terpasang';
+        $mitra = Lowonganmitra::where('id', $request->id)->first();
+        $mitra->status_pemasangan = "Terpasang";
         $mitra->update();
 
         Alert::success('Berhasil Menambah Lowongan', ' ');
-
         return redirect()->route('admin.jobs.index');
     }
 }
