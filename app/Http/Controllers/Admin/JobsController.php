@@ -41,7 +41,7 @@ class JobsController extends Controller
     public function store(StoreJobRequest $request)
     {
         $imglowongan = Lowongan::where('id', $request->id)->first('gambar');
-        File::copy(public_path("storage/tmpcompanylogo/$imglowongan"), public_path("img/companyLogo/$imglowongan"));
+        File::copy(public_path("storage/tmpcompanylogo/$imglowongan->gambar"), public_path("img/companylogo/$imglowongan->gambar"));
         $companyName      = Company::where('id', $request->company_id)->first('name');
         $slug_title       = Str::slug($request->get('title'));
         $slug_companyname = Str::slug($companyName->name);

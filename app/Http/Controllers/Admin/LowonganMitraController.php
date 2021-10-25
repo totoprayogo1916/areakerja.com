@@ -50,10 +50,13 @@ class LowonganMitraController extends Controller
         $locations = Location::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
         $categories = Category::all()->pluck('name', 'id');
         $job->load('company', 'location', 'categories');
+        $mitra->status_pemasangan = "Terpasang";
+        $mitra->save();
+
 
         if ($cekcompany === null) {
             $slug_judul = Str::slug($mitraAsli->nama);
-            File::copy(public_path("storage/tmpcompanylogo/$mitraAsli->logo"), public_path("img/companyLogo/$mitraAsli->logo"));
+            File::copy(public_path("storage/tmpcompanylogo/$mitraAsli->logo"), public_path("img/companylogo/$mitraAsli->logo"));
             Company::create([
                 'name'      => $mitraAsli->nama,
                 'deskripsi' => $mitraAsli->deskripsi,
