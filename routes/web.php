@@ -212,7 +212,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('lowongan/destroy', 'LowongannController@massDestroy')->name('lowongan.massDestroy');
     // Route::get('/pembayaran/{id}', 'LowongannController@pembayaran')->name('pembayaran');
     // Route::get('/addjob/{id}', 'LowongannController@addjob')->name('addjob');
-    Route::get('/addjob/{id}', [AdminLowongannController::class, 'addjob'])->name('addjob');
+    Route::get('/addjob/lowongan/{id}', [AdminLowongannController::class, 'addjob'])->name('addjoblowongan');
     Route::resource('lowongan', 'LowongannController');
 
     //Calon Kandidat
@@ -230,6 +230,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('article', 'ArticleController');
 
     Route::resource('lowonganmitra', 'LowonganMitraController');
-    Route::get('/addjob/{id}', [AdminLowonganMitraController::class, 'addjob'])->name('addjobmitra');
+    Route::get('/addjob/mitra/{id}', [AdminLowonganMitraController::class, 'addjob'])->name('addjobmitra');
     Route::post('/addjob', [AdminLowonganMitraController::class, 'storejob'])->name('lowonganmitra.storejob');
 });

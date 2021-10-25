@@ -50,13 +50,9 @@ class LowonganMitraController extends Controller
         $locations = Location::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
         $categories = Category::all()->pluck('name', 'id');
         $job->load('company', 'location', 'categories');
-        $mitra->status_pemasangan = "Terpasang";
-        $mitra->save();
-
 
         if ($cekcompany === null) {
             $slug_judul = Str::slug($mitraAsli->nama);
-            File::copy(public_path("storage/tmpcompanylogo/$mitraAsli->logo"), public_path("img/companylogo/$mitraAsli->logo"));
             Company::create([
                 'name'      => $mitraAsli->nama,
                 'deskripsi' => $mitraAsli->deskripsi,
@@ -79,7 +75,8 @@ class LowonganMitraController extends Controller
         $slug_title       = Str::slug($request->get('title'));
         $slug_companyname = Str::slug($companyName->name);
         $slug             = $slug_title . '-di-' . $slug_companyname;
-
+        $gambar = Mitra::where('nama', $companyName->name)->first();
+        File::copy(public_path("img/mitralogo/$gambar->logo"), public_path("img/companylogo/$gambar->logo"));
         $job = Job::create([
             'title'            => $request->title,
             'salary'           => $request->salary,
