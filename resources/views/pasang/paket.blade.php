@@ -15,7 +15,7 @@
                             Pasang <strong>Lowongan</strong> di <strong>Areakerja.com</strong>
                         </h2>
                         <h4 class="pasang" style="color: #fe7b54;line-height: 2!important;font-weight: 500 ">
-                            Platform lowongan kerja no. 1 <br />di Yogyakarta untuk mendapatkan talenta terbaik bagi
+                            Platform lowongan kerja no. 1 <br />untuk mendapatkan talenta terbaik bagi
                             perusahaan anda
                         </h4>
 
@@ -34,7 +34,7 @@
 
     <section class="relative" id="home">
         <div class='slider-nav'>
-            <div class="sl 1 active"><img alt="" class="img-social" src="img/img-01.png" /></div>
+            <div class="sl 1 active"><img alt="" class="img-social" src="img/img-01.png" style="width: 30px" /></div>
             <div class="sl 2"><img alt="" class="img-social"
                     src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1/img/pasang/google.png" /></div>
             <div class="sl 3"><img alt="" class="img-social"
@@ -62,7 +62,7 @@
                                 pencari kerja
                                 mengunjungi
                                 <a href="{{ route('home') }}">website</a>
-                                & aplikasi kami setiap hari untuk melihat lowongan terbaru di Yogyakarta
+                                & aplikasi kami setiap hari untuk melihat lowongan terbaru
                             </h5>
 
                         </div>
@@ -343,7 +343,7 @@
                                 src="https://www.lokerjogja.id/wp-content/themes/lokerjogjav1-m/img/pasang/kelebihan-1-2.png">
                         </div>
                         <div style="float:none; text-align:left;">
-                            <h5 style="font-weight: normal;line-height: 1.65!important">Website dan aplikasi Loker Jogja
+                            <h5 style="font-weight: normal;line-height: 1.65!important">Website dan aplikasi Areakerja
                                 dikunjungi ribuan pencari kerja setiap harinya dengan posisi tinggi untuk kata kunci lokal
                                 di mesin pencari seperti Google</h5>
                         </div>
@@ -358,7 +358,7 @@
                         </div>
                         <div style="float:none; text-align:left;">
                             <h5 style="font-weight: normal;line-height: 1.65!important">Akun media sosial kami diikuti
-                                ratusan ribu pencari kerja, serta memiliki jaringan media sosial terlengkap di Jogja</h5>
+                                ratusan ribu pencari kerja, serta memiliki jaringan media sosial terlengkap</h5>
                         </div>
                     </div>
                 </div>
