@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\LowonganMitraController as AdminLowonganMitraController;
 use App\Http\Controllers\Admin\LowongannController as AdminLowongannController;
+use App\Http\Controllers\KandidatController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -63,7 +64,7 @@ Route::get('/getid', 'HomeController@addcart')->name('addcart');
 
 Route::get('/get_client_ip', 'CacheController@get_client_ip')->name('get_client_ip');
 
-Route::post('/formkandidat', 'KandidatController@formkandidat')->name('formkandidat');
+Route::post('/formkandidat', [KandidatController::class, 'formkandidat'])->name('formkandidat');
 Route::post('/formmitra', 'MitraController@index')->name('formmitra');
 
 Route::get(
