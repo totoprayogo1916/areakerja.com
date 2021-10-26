@@ -704,9 +704,9 @@
     </script>
     @include('sweetalert::alert')
     <script>
-        var form = $("#example-advanced-form").show();
+        var form1 = $("#example-advanced-form").show();
 
-        form.steps({
+        form1.steps({
             headerTag: "h3",
             bodyTag: "fieldset",
             transitionEffect: "slideLeft",
@@ -722,11 +722,11 @@
                 // Needed in some cases if the user went back (clean up)
                 if (currentIndex < newIndex) {
                     // To remove error styles
-                    form.find(".body:eq(" + newIndex + ") label.error").remove();
-                    form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
+                    form1.find(".body:eq(" + newIndex + ") label.error").remove();
+                    form1.find(".body:eq(" + newIndex + ") .error").removeClass("error");
                 }
-                form.validate().settings.ignore = ":disabled,:hidden";
-                return form.valid();
+                form1.validate().settings.ignore = ":disabled,:hidden";
+                return form1.valid();
             },
             onStepChanged: function(event, currentIndex, priorIndex) {
                 // Used to skip the "Warning" step if the user is old enough.
@@ -739,11 +739,11 @@
                 // }
             },
             onFinishing: function(event, currentIndex) {
-                form.validate().settings.ignore = ":disabled";
-                return form.valid();
+                form1.validate().settings.ignore = ":disabled";
+                return form1.valid();
             },
             onFinished: function(event, currentIndex) {
-                return form.submit();
+                return form1.submit();
             }
         }).validate({
             errorPlacement: function errorPlacement(error, element) {
