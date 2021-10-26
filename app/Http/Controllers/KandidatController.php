@@ -35,7 +35,7 @@ class KandidatController extends Controller
             'jabatan'     => $request->jabatan,
             'kantor'      => $request->kantor,
             'pekerjaan'   => $request->pekerjaan,
-            'cv'          => $name
+            'cv'          => $name,
         ]);
 
         Alert::success('Berhasil Mendaftar Kandidat', 'Admin sedang memproses akun anda');

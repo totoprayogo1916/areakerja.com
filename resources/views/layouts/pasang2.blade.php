@@ -320,6 +320,8 @@
                                         <option value="{{$skill->nama}}" class="nama">{{$skill->nama}}</option>
                                         @endforeach
                                     </select>
+                                    <label for="image">Upload Pas Foto</label>
+                                    <input id="image" name="image" type="file" class="form-control2">
                                     <label for="cv">Upload CV</label>
                                     <input id="cv" name="cv" type="file" class="form-control2">
                                 </fieldset>
