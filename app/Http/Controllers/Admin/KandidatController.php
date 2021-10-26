@@ -33,7 +33,7 @@ class KandidatController extends Controller
         $sertifikasi = Sertifikasi::where('idKandidat', $idkandidat)->get();
         $skill       = Skill::where('idKandidat', $idkandidat)->get();
 
-        return view('admin.kandidat.show', compact('kandidat', 'organisasi', 'pendidikan', 'pengalaman', 'sertifikasi', 'skill', ));
+        return view('admin.kandidat.show', compact('kandidat', 'organisasi', 'pendidikan', 'pengalaman', 'sertifikasi', 'skill',));
     }
 
     public function acc($id, Request $request)
@@ -57,6 +57,8 @@ class KandidatController extends Controller
             'slug'     => Str::slug($request->namalengkap),
             'status'   => 'unhire',
             'idUser'   => $idUser->id,
+            'cv'       => $calon->cv,
+            'image'    => $calon->image
         ]);
 
         $idKandidat    = Kandidat::where('nama', $request->namalengkap)->first();
