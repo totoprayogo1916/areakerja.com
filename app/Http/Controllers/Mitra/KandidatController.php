@@ -11,7 +11,7 @@ use App\Mitra;
 use App\Organisasi;
 use App\Pengalaman;
 use App\Rekomendasi;
-use App\Riwayatpendidikan;
+use App\RiwayatPendidikan;
 use App\Sertifikasi;
 use App\Skill;
 use Illuminate\Http\Request;
@@ -78,7 +78,7 @@ class KandidatController extends Controller
         $kandidat    = Kandidat::where('slug', $slug)->first();
         $idkandidat  = $kandidat->id;
         $organisasi  = Organisasi::where('idKandidat', $idkandidat)->get();
-        $pendidikan  = Riwayatpendidikan::where('idKandidat', $idkandidat)->get();
+        $pendidikan  = RiwayatPendidikan::where('idKandidat', $idkandidat)->get();
         $pengalaman  = Pengalaman::where('idKandidat', $idkandidat)->get();
         $sertifikasi = Sertifikasi::where('idKandidat', $idkandidat)->get();
         $skill       = Skill::where('idKandidat', $idkandidat)->get();

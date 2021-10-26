@@ -4,8 +4,6 @@
     <div class="main-content">
         <section class="section">
             <div class="section-body">
-                <a href="#" class="btn btn-icon icon-left btn-warning" style="margin-bottom: 20px">SALDO : 1000 AKC<i
-                        class="fas fa-coins"></i></a>
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
@@ -145,9 +143,9 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        Area Kerja Coin adalah Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, aspernatur
-                        modi ipsam omnis quasi voluptatibus ratione eius repellendus fugiat eos eum obcaecati. Ullam
-                        reprehenderit, reiciendis voluptas ducimus obcaecati beatae quam!
+                        Area Kerja Coin merupakan alat pembayaran yang digunakan pada saat buka lowongan atau buka kandidat,
+                        Coin akan berkurang pada saat Anda buka lowongan atau buka kandidat. Top Up Coin digunakan untuk membeli Coin sehingga Coin bertambah,
+                        terdapat beberapa pilihan Top Up Coin dan media pembayaran yang dapat digunakan.
                     </div>
                 </div>
             </div>

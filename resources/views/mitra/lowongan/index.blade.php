@@ -8,7 +8,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header justify-content-between ">
-                                <h4>Export Table</h4>
+                                <h4>Lowongan</h4>
                                 <a href="{{ route('mitra.lowongan.create') }}" class="btn btn-primary"><span
                                         class="fa fa-plus mr-2"></span>Tambah Lowongan </a>
                             </div>
@@ -25,7 +25,6 @@
                                                 <th>Lokasi Kantor</th>
                                                 <th>Batas Pengiriman Lamaran</th>
                                                 <th>Status Pemasangan</th>
-                                                <th>Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -41,13 +40,6 @@
                                                             class="badge badge-shadow {{ $min->status_pemasangan == "Terpasang" ? 'badge-success' : 'badge-warning' }}">
                                                             {{ $min->status_pemasangan }}</div>
                                                     </td>
-                                                    <td>
-                                                        <a href="#" class="btn btn-primary mr-1">Detail</a>
-                                                        <a href="{{ route('mitra.lowongan.edit', $min->id) }}"
-                                                            class="btn btn-success">Edit</a>
-
-                                                    </td>
-
                                                 </tr>
                                             @endforeach
 

@@ -4,7 +4,7 @@
 
             <div class="col-lg-8">
                 <div class="container footer-nav">
-                    <a href="{{ route('home') }}"><img src="{{ asset('img/img-01.png') }}" style="width:50px;" alt="" title="" /></a>
+                    <a href="{{ route('home') }}"><img src="{{ asset('img/logo putih.png') }}" style="width:50px;" alt="" title="" /></a>
                     <ul class="col row">
                         {{-- <li>
                             <a href= #>Artikel</a>

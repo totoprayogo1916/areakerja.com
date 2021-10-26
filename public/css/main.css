@@ -1996,14 +1996,13 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-    background: #fe7b54;
+    background: url(../img/bg.png) center;
+    background-size: cover;
     padding: 10000spx 0;
     position: relative;
     left: 0;
     top: 0;
     right: 0;
-    transition: all 0.5s;
-    z-index: 997;
 }
 
 .navbar {
@@ -2662,12 +2661,10 @@ hr {
 }
 
 .form-pasang {
-    color: #fee5ba;
+    background-color: #fe7b54;
     font-size: 14px;
     /* opacity: .40; */
-    background-color: #fe7c5400;
     border-radius: 8px;
-    border: 2px solid #fee5ba;
 }
 
 .nav-link .form-pasang5 {
@@ -2714,7 +2711,7 @@ hr {
 
 .form-pasang:hover {
     color: #fff;
-    background-color: #eb5e0b;
+    background-color: #fc6234;
     border-color: #fee5ba;
 }
 
