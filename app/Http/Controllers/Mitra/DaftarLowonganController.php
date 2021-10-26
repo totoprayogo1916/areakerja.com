@@ -55,7 +55,7 @@ class DaftarLowonganController extends Controller
             'email'               => $request['email'],
             'idUser'              => $a,
         ]);
-        $mitra1 = Lowonganmitra::all();
+        $mitra1      = Lowonganmitra::all();
         $mitra->koin = $mitra->koin - 2;
         $mitra->save();
 

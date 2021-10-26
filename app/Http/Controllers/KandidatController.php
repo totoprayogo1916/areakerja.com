@@ -9,8 +9,9 @@ use App\Job;
 use App\Location;
 use App\Lowonganmitra;
 use App\Mitra;
-
 use Illuminate\Http\Request;
+
+use RealRashid\SweetAlert\Facades\Alert;
 
 class KandidatController extends Controller
 {
@@ -31,6 +32,8 @@ class KandidatController extends Controller
             'kantor'      => $request->kantor,
             'pekerjaan'   => $request->pekerjaan,
         ]);
+
+        Alert::success('Berhasil Mendaftar Kandidat', 'Admin sedang memproses akun anda');
 
         return redirect()->route('home');
     }
