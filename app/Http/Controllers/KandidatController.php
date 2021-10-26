@@ -18,7 +18,6 @@ class KandidatController extends Controller
 {
     public function formkandidat(Request $request)
     {
-        dd($request);
         $file = $request->cv;
         $name = Carbon::now()->format('dmYHis');
         $file->move(public_path('cv'), $name . '.' . $file->getClientOriginalExtension());
