@@ -1,7 +1,7 @@
-@extends('layouts.pasang2')
+@extends('layouts.pasang3')
+
 @section('home')
     <section id="home" >
-        <img  style="position: absolute" src="{{ asset('img/kandidat/Vector 1.svg') }}" alt="">
         <div class="container py-5">
             <div class="col-12 text-center">
                 <h1 class="display-4 fw-bold">Rekrut Karyawan Terbaik Anda</h1>

@@ -269,7 +269,7 @@
     <wrapper class="d-flex flex-column">
         <nav>
             <img  style="position: absolute" src="{{ asset('img/kandidat/Vector 1.svg') }}" alt="">
-            @include('partials.header')
+            @include('partials.header2')
         </nav>
         <main class="flex-fill">
             @yield('home')
