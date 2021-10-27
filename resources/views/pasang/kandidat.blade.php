@@ -75,14 +75,14 @@
 @endsection --}}
 @section('slick2')
 
-    <div class="container px-0 mb-5">
+    <div class="container px-0" style="margin-top: 55px">
         <h2 style="font-weight: normal" class=" text-center mt-4">Cara <strong>Daftar</strong></h2>
         <div class="row">
             <div class="col-md-6" style="overflow:hidden">
-                <img src="https://areakerja.com/img/aset_online/Forms-pana.png" alt="" class="img-fluid pl-5" style="margin-top:-0px">
+                <img src="https://areakerja.com/img/aset_online/forms-pana.png" alt="" class="img-fluid pl-5" style="margin-top:-0px">
             </div>
             <div class="col-md-6">
-               <ul class="h-100" style="list-style:none; display:flex; flex-direction: column; justify-content: center;margin-top:-30px">
+               <ul class="h-100" style="list-style:none; display:flex; flex-direction: column; justify-content: center;">
                    <li>
                        <div class="d-flex align-items-center mb-3" >
                         <h2 class="m-0 mr-2 my-auto" style="color: #fe7b54; width:45px">
@@ -129,7 +129,7 @@
 
     </div>
     <div style="display:flex;align-items:center" class="mb-5">
-        <img style="position: absolute; right: 0" src="{{ asset('img/kandidat/vector 2.svg') }}" alt="">
+        <img style="position: absolute; top: 53%; right: 0" src="{{ asset('img/kandidat/vector 2.svg') }}" alt="">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-5 d-flex align-items-center" >
@@ -181,6 +181,40 @@
                                         </div>
                                         </div>
                                     </div>
+                                    <div class="accordion-item">
+                                        <div div class="accordion-item-header box w-100 px-3 py-3 d-flex justify-content-between rounded-top">
+                                            <h5>
+                                                Pertanyaan
+                                            </h5>
+                                        </div>
+                                        <div class="accordion-item-body">
+                                        <div id="panel-body-3" class="accordion-item-body-content w-100 px-3 py-3  justify-content-between rounded-bottom " data-parent="#accordion">
+                                            <h6 class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h6>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <div div class="accordion-item-header box w-100 px-3 py-3 d-flex justify-content-between rounded-top">
+                                            <h5>
+                                                Pertanyaan
+                                            </h5>
+                                        </div>
+                                        <div class="accordion-item-body">
+                                        <div id="panel-body-4" class="accordion-item-body-content w-100 px-3 py-3  justify-content-between rounded-bottom " data-parent="#accordion">
+                                            <h6 class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h6>
+                                        </div>
+                                        </div>
+                                    </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="accordion-item">
@@ -190,7 +224,7 @@
                                         </h5>
                                     </div>
                                 <div class="accordion-item-body">
-                                    <div id="panel-body-3" class="accordion-item-body-content w-100 px-3 py-3  justify-content-between rounded-bottom " data-parent="#accordion">
+                                    <div id="panel-body-5" class="accordion-item-body-content w-100 px-3 py-3  justify-content-between rounded-bottom " data-parent="#accordion">
                                         <h6 class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -207,7 +241,41 @@
                                         </h5>
                                     </div>
                                     <div class="accordion-item-body">
-                                        <div id="panel-body-4" class="accordion-item-body-content w-100 px-3 py-3  justify-content-between rounded-bottom " data-parent="#accordion">
+                                        <div id="panel-body-6" class="accordion-item-body-content w-100 px-3 py-3  justify-content-between rounded-bottom " data-parent="#accordion">
+                                            <h6 class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div div class="accordion-item-header box w-100 px-3 py-3 d-flex justify-content-between rounded-top">
+                                        <h5>
+                                            Pertanyaan
+                                        </h5>
+                                    </div>
+                                    <div class="accordion-item-body">
+                                        <div id="panel-body-7" class="accordion-item-body-content w-100 px-3 py-3  justify-content-between rounded-bottom " data-parent="#accordion">
+                                            <h6 class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div div class="accordion-item-header box w-100 px-3 py-3 d-flex justify-content-between rounded-top">
+                                        <h5>
+                                            Pertanyaan
+                                        </h5>
+                                    </div>
+                                    <div class="accordion-item-body">
+                                        <div id="panel-body-8" class="accordion-item-body-content w-100 px-3 py-3  justify-content-between rounded-bottom " data-parent="#accordion">
                                             <h6 class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
