@@ -28,6 +28,8 @@ class CreateCalonkandidatsTable extends Migration
             $table->longText('jabatan')->nullable();
             $table->longText('kantor')->nullable();
             $table->longText('pekerjaan')->nullable();
+            $table->string('cv')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

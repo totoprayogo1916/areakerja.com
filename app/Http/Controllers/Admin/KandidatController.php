@@ -57,6 +57,8 @@ class KandidatController extends Controller
             'slug'     => Str::slug($request->namalengkap),
             'status'   => 'unhire',
             'idUser'   => $idUser->id,
+            'cv'       => $calon->cv,
+            'image'    => $calon->image,
         ]);
 
         $idKandidat    = Kandidat::where('nama', $request->namalengkap)->first();

@@ -42,5 +42,6 @@ class Calonkandidat extends Model
         'jabatan',
         'kantor',
         'pekerjaan',
+        'cv',
     ];
 }

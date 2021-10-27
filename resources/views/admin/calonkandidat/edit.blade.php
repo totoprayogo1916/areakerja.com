@@ -79,8 +79,15 @@
                 </div>
                 <div class="form-group {{ $errors->has('skillutama') ? 'has-error' : '' }}">
                     <label for="skillutama">Keahlian</label>
-                    <input type="text" id="skillutama" name="skillutama" class="form-control"
-                        value="{{ isset($kandidat) ? $kandidat->skillutama : '' }}" required>
+                        <select name="skillutama" id="skillutama" class="form-control select2" required>
+                            @foreach ($main_skill as $data )
+                                @if ($kandidat->skillutama == $data->nama)
+                                    <option value="{{ $data->id }}" selected>{{ $data->nama }}</option>
+                                @else
+                                    <option value="{{ $data->id }}" >{{ $data->nama }}</option>
+                                @endif
+                            @endforeach
+                        </select>
                     @if ($errors->has('skillutama'))
                         <em class="invalid-feedback">
                             {{ $errors->first('skillutama') }}
