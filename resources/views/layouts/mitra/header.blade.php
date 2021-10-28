@@ -69,10 +69,17 @@
         </li>
 
 
-        <li class="dropdown"><a href="#" data-toggle="dropdown" {{-- {{ url('img/mitralogo') }}/{{ $mitra->logo }} --}}
-                class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image"
-                    src="{{ url('image') }}/{{ $mitra->logo }}" class="user-img-radious-style"> <span
-                    class="d-sm-none d-lg-inline-block"></span></a>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user"> 
+            @if (App\Role_User::where('user_id', auth()->user()->id)->first()->role_id == 3)
+                <img alt="image" src="{{ url('img/mitralogo') }}/{{ $mitra->logo }}" class="user-img-radious-style">
+            @endif
+
+            @if (App\Role_User::where('user_id', auth()->user()->id)->first()->role_id == 4)
+                <img alt="image" src="{{ url('image') }}/{{ $mitra->logo }}" class="user-img-radious-style">
+            @endif
+                
+                <span class="d-sm-none d-lg-inline-block"></span></a>
             <div class="dropdown-menu dropdown-menu-right pullDown">
                 <div class="dropdown-title">Hello {{ $mitra->nama }}</div>
                 <div class="dropdown-divider"></div>
@@ -80,6 +87,10 @@
                         class="fas fa-sign-out-alt"></i>
                     Logout
                 </a>
+
+                {{-- <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form> --}}
 
             </div>
         </li>
