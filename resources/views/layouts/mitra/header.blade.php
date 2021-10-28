@@ -1,8 +1,10 @@
 <nav class="navbar navbar-expand-lg main-navbar sticky">
     <div class="form-inline mr-auto">
         <ul class="navbar-nav mr-3">
-            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
-                                collapse-btn"> <i data-feather="align-justify"></i></a></li>
+            <li><a href="#" data-toggle="sidebar"
+                    class="nav-link nav-link-lg
+                                collapse-btn"> <i
+                        data-feather="align-justify"></i></a></li>
             <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
                     <i data-feather="maximize"></i>
                 </a></li>
@@ -70,16 +72,18 @@
 
 
         <li class="dropdown">
-            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user"> 
-            @if (App\Role_User::where('user_id', auth()->user()->id)->first()->role_id == 3)
-                <img alt="image" src="{{ url('img/mitralogo') }}/{{ $mitra->logo }}" class="user-img-radious-style">
-            @endif
+            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                @if (App\Role_User::where('user_id', auth()->user()->id)->first()->role_id == 3)
+                    <img alt="image" src="{{ url('img/mitralogo') }}/{{ $mitra->logo }}"
+                        class="user-img-radious-style">
+                @endif
 
-            @if (App\Role_User::where('user_id', auth()->user()->id)->first()->role_id == 4)
-                <img alt="image" src="{{ url('image') }}/{{ $mitra->logo }}" class="user-img-radious-style">
-            @endif
-                
-                <span class="d-sm-none d-lg-inline-block"></span></a>
+                @if (App\Role_User::where('user_id', auth()->user()->id)->first()->role_id == 4)
+                    <img alt="image" src="{{ url('image') }}/{{ $mitra->image }}" class="user-img-radious-style">
+                @endif
+
+                <span class="d-sm-none d-lg-inline-block"></span>
+            </a>
             <div class="dropdown-menu dropdown-menu-right pullDown">
                 <div class="dropdown-title">Hello {{ $mitra->nama }}</div>
                 <div class="dropdown-divider"></div>
