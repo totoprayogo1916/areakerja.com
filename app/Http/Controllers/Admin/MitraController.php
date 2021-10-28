@@ -11,6 +11,7 @@ use App\Mitra;
 use App\Role_User;
 use App\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\Response;
@@ -49,6 +50,8 @@ class MitraController extends Controller
     {
         $random     = Str::random(8);
         $mitra      = Mitra::where('id', $id)->first();
+        File::copy(public_path("img/mitralogo/{$mitra->logo}"), public_path("image/{$mitra->logo}"));
+        File::copy(public_path("img/mitralogo/{$mitra->logo}"), public_path("img/companylogo/{$mitra->logo}"));
         $slug_judul = Str::slug($mitra->nama);
         Company::create([
             'name'      => $mitra->nama,
@@ -73,8 +76,6 @@ class MitraController extends Controller
         $role->user_id = $user->id;
         $role->role_id = 3;
         $role->save();
-
-        Mail::to($mitra->email)->send(new MitraUser($details));
 
         return back();
     }

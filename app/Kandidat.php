@@ -15,6 +15,8 @@ class Kandidat extends Model
         'biografi',
         'slug',
         'idUser',
+        'image',
+        'cv',
         'status',
         'updated_at',
         'deleted_at',
