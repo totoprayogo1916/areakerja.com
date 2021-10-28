@@ -257,7 +257,7 @@
                 </div>
 
                 <div class="form-group {{ $errors->has('notelp') ? 'has-error' : '' }}">
-                    <label for="notelp">Nomor Handphone*</label>
+                    <label for="notelp">Nomor Handphone</label>
                     <input type="text" id="notelp" name="notelp" class="form-control"
                         value="{{ old('notelp', isset($job) ? $job->notelp : '') }}">
                     @if ($errors->has('notelp'))
@@ -271,7 +271,7 @@
                 </div>
 
                 <div class="form-group {{ $errors->has('website') ? 'has-error' : '' }}">
-                    <label for="website">Website*</label>
+                    <label for="website">Website</label>
                     <input type="text" id="website" name="website" class="form-control"
                         value="{{ old('website', isset($job) ? $job->website : '') }}">
                     @if ($errors->has('website'))
