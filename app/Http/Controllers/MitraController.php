@@ -9,23 +9,16 @@ use App\MainSkill;
 use App\Mitra;
 use App\Riwayat;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class MitraController extends Controller
 {
     public function index(Request $request)
     {
-        $this->validate($request, [
-            'nama'      => 'required',
-            'email'     => 'required',
-            'deskripsi' => 'required',
-            'alamat'    => 'required',
-            'no'        => 'required',
-            'logo'      => 'required',
-        ]);
-
         $logo = time() . '.' . $request->logo->extension();
         $request->logo->move(public_path('img/mitralogo/'), $logo);
+        $slug_judul = Str::slug($request->nama);
         Mitra::create([
             'nama'      => $request->nama,
             'email'     => $request->email,
@@ -33,9 +26,10 @@ class MitraController extends Controller
             'alamat'    => $request->alamat,
             'no'        => $request->no,
             'logo'      => $logo,
+            'slug'      => $slug_judul,
         ]);
 
-        Alert::success('Berhasil Mendaftar Mitra', 'Admin sedang memproses akun anda');
+        Alert::success('Berhasil Mendaftar Mitra(Cek Email Untuk Akun Login)', 'Admin sedang memproses akun anda');
 
         return redirect(route('home'));
     }

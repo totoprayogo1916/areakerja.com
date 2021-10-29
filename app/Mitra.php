@@ -24,6 +24,7 @@ class Mitra extends Model
         'alamat',
         'no',
         'logo',
+        'slug',
         'koin',
         'idUser',
     ];

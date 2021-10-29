@@ -6,13 +6,11 @@ use App\Company;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Requests\MassDestroyMitraRequest;
-use App\Mail\MitraUser;
 use App\Mitra;
 use App\Role_User;
 use App\User;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -46,10 +44,18 @@ class MitraController extends Controller
         return response(null, Response::HTTP_NO_CONTENT);
     }
 
-    public function acc($id)
+    public function addmitra($id)
     {
-        $random     = Str::random(8);
-        $mitra      = Mitra::where('id', $id)->first();
+        $mitra  = mitra::where('id', $id)->first();
+        $random = Str::random(8);
+
+        return view('admin.mitra.create', compact('mitra', 'random'));
+    }
+
+    public function acc($id, Request $request)
+    {
+        $random = Str::random(8);
+        $mitra  = Mitra::where('id', $id)->first();
         File::copy(public_path("img/mitralogo/{$mitra->logo}"), public_path("image/{$mitra->logo}"));
         File::copy(public_path("img/mitralogo/{$mitra->logo}"), public_path("img/companylogo/{$mitra->logo}"));
         $slug_judul = Str::slug($mitra->nama);
@@ -64,19 +70,19 @@ class MitraController extends Controller
         $user           = new User();
         $user->name     = $mitra->nama;
         $user->email    = $mitra->email;
-        $user->password = Hash::make($random);
+        $user->password = $request->password;
         $user->save();
         $mitra->idUser = $user->id;
         $mitra->save();
         $details = [
             'email'    => $mitra->email,
-            'password' => $random,
+            'password' => $request->password,
         ];
         $role          = new Role_User();
         $role->user_id = $user->id;
         $role->role_id = 3;
         $role->save();
 
-        return back();
+        return redirect(route('admin.mitra.index'));
     }
 }

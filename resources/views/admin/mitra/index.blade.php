@@ -78,9 +78,11 @@
                                     <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
                                 </form>
 
-                                <a class="btn btn-xs btn-success" href="{{ route('admin.mitra.acc', $mitra->id) }}" style="width: auto">
-                                    Terima Mitra
-                                </a>
+                                @if (App\User::where('email', $mitra->email)->first() == null)
+                                    <a class="btn btn-xs btn-success" href="{{ route('admin.addmitra', $mitra->id) }}" style="width: auto">
+                                        Terima Mitra
+                                    </a>
+                                @endif
 
                             </td>
 

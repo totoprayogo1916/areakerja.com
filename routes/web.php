@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\LowonganMitraController as AdminLowonganMitraController;
 use App\Http\Controllers\Admin\LowongannController as AdminLowongannController;
+use App\Http\Controllers\Admin\MitraController as AdminMitraController;
 use App\Http\Controllers\KandidatController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -208,6 +209,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('mitra/destroy', 'MitraController@massDestroy')->name('mitra.massDestroy');
     Route::get('mitra/acc={id}', 'MitraController@acc')->name('mitra.acc');
     Route::resource('mitra', 'MitraController');
+    Route::get('/addmitra/{id}', [AdminMitraController::class, 'addmitra'])->name('addmitra');
+    Route::post('/addmitra/acc/{id}', [AdminMitraController::class, 'acc'])->name('accmitra');
 
     //Lowongan
     Route::delete('lowongan/destroy', 'LowongannController@massDestroy')->name('lowongan.massDestroy');
