@@ -172,6 +172,29 @@
 
                </div>
 
+               <div class="row no-gutters">
+                <ul class="col-4" style="overflow: unset; white-space: nowrap;">
+                    <li id="telepon1"><h4 class="gg" style="margin-top: 10px; font-weight: normal" ><span style="display:inline-block; width: 15px;" class="fa fa-globe"></span><span style="display:inline-block; width: 15px;"></span>Website</h4></li>
+                </ul>
+                <ul style="overflow: unset; white-space: nowrap;">
+                    <li><h4 class="gg" style="margin-top: 10px; font-weight: normal"> <span>:</span></h4></li>
+                </ul>
+                <ul class="col-auto" style="overflow: unset; white-space: nowrap;">
+
+                    <li><h4 class="gg6" style="margin-top: 10px; font-weight: normal"  id="sample3">{{ $job->website }}</h4></li>
+                </ul>
+                <ul class="col-auto" style="overflow: unset; white-space: nowrap;">
+                    <h4 class="gg8" style="margin-top: 5px; font-weight: normal">
+                        <button onclick="CopyToClipboard('sample3'); myFunction5()" class="fas fa-copy ui-button-icons-only buttonb" >
+                            <div class="row justify-content-center popuptext" id="myPopup5" style="padding-right: 0px;margin-right: 0px; color: #000000; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+                                Disalin
+                            </div>
+                        </button>
+                    </h4>
+                </ul>
+
+               </div>
+
             <hr class="d-flex flex-row" style="width: 100%; margin-left: 0%;"/>
             <div class="row" style="margin-top: 15px">
                 <div class="col-2" style="margin-right: 10%;">

@@ -53,7 +53,7 @@ class TopupController extends Controller
             }
         } elseif ($transaction === 'settlement') {
             // TODO set payment status in merchant's database to 'Settlement'
-            $id = (int) substr($request->order_id, 3, 5);
+            $id          = (int) substr($request->order_id, 3, 5);
             $mitra       = Mitra::where('idUser', $id)->first();
             $mitra->koin = $mitra->koin + (int) substr($request->order_id, -3);
             $mitra->save();

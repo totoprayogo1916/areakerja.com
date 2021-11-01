@@ -172,6 +172,15 @@
                 }, 2000);
 
             }
+
+            function myFunction5() {
+                var popup = document.getElementById("myPopup5");
+                popup.classList.toggle("show");
+                setTimeout(function() {
+                    popup.classList.toggle("show");
+                }, 2000);
+
+            }
         </script>
         <script>
             function CopyToClipboard(id) {

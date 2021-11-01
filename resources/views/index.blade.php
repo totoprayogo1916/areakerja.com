@@ -162,7 +162,7 @@
                             </div>
                             <div class="col-auto">
                                 <h5 class="sng-dtl"> <span class="fa fa-map-marker" aria-hidden="true"></span>
-                                    {{ $job->address }}</h5>
+                                    {{ $job->location->name }}</h5>
                             </div>
                         </div>
                     </div>

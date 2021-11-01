@@ -229,7 +229,7 @@
                     </p>
                 </div>
                 <div class="form-group {{ $errors->has('salary') ? 'has-error' : '' }}">
-                    <label for="salary">Gaji*</label>
+                    <label for="salary">Gaji</label>
                     <input type="text" id="salary" name="salary" class="form-control" value="{{ $mitra->gaji }}"
                         required>
                     @if ($errors->has('salary'))

@@ -58,7 +58,7 @@
                             Nama Pekerjaan
                         </th>
                         <td>
-                            {{ $lowongan->title }}
+                            {{ $lowongan->posisi }}
                         </td>
                     </tr>
                     <tr>
@@ -74,7 +74,7 @@
                             Deskripsi Pekerjaan
                         </th>
                         <td>
-                            {{ $lowongan->short_description }}
+                            {{ $lowongan->deskripsi_pekerjaan }}
                         </td>
                     </tr>
                     <tr>
@@ -82,7 +82,7 @@
                             Syarat Pekerjaan
                         </th>
                         <td>
-                            {{ $lowongan->full_description}}
+                            {{ $lowongan->syarat_pekerjaan}}
                         </td>
                     </tr>
                     <tr>
@@ -130,7 +130,7 @@
                             Gaji
                         </th>
                         <td>
-                            {{ $lowongan->salary }}
+                            {{ $lowongan->gaji }}
                         </td>
                     </tr>
                     <tr>

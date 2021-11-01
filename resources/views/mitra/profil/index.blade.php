@@ -200,6 +200,7 @@
                     <div class="card-header">
                         <h4>Personal Details</h4>
                     </div>
+                    <div class="author-box">
                     <div class="card-body">
                         <div class="author-box-center">
                             <img alt="image" src="{{ url('img/mitralogo') }}/{{ $mitra->logo }}"
@@ -264,6 +265,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                     {{-- <div class="card-footer">
                         <button class="btn btn-primary">Edit Details</button>
                       </div> --}}
