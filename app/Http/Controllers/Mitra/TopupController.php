@@ -22,7 +22,7 @@ class TopupController extends Controller
         $number = mt_rand(000, 999);
         $total  = $harga + $number;
         $tgl    = Carbon::now();
-        $code   = 'AK' . $tgl->year . $tgl->month . $tgl->day . $total . 00 . $jumlah;
+        $code   = 'AK' . ($id + 100000) . $tgl->year . $tgl->month . $tgl->day . $total . 00 . $jumlah;
 
         $this->_generatePaymentToken($mitra1, $total, $code);
         $url = $mitra1->payment_url;

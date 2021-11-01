@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\LowonganMitraController as AdminLowonganMitraCont
 use App\Http\Controllers\Admin\LowongannController as AdminLowongannController;
 use App\Http\Controllers\Admin\MitraController as AdminMitraController;
 use App\Http\Controllers\KandidatController;
+use App\Http\Controllers\TopupController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -45,10 +46,10 @@ Route::get('payments/completed', 'PaymentController@completed');
 Route::get('payments/failed', 'PaymentController@failed');
 Route::get('payments/unfinish', 'PaymentController@unfinish');
 
-Route::post('topup/notification', 'TopupController@notification');
-Route::get('topup/completed', 'TopupController@completed');
-Route::get('topup/failed', 'TopupController@failed');
-Route::get('topup/unfinish', 'TopupController@unfinish');
+Route::post('topup/notification', [TopupController::class, 'notification'])->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
+Route::get('topup/completed', [TopupController::class, 'completed']);
+Route::get('topup/failed', [TopupController::class, 'failed']);
+Route::get('topup/unfinish', [TopupController::class, 'unfinish']);
 
 // Route::get('/mitra/dashboard', 'AdminCompanyController@index')->name('mitra.dashboard');
 Route::get('/mitra/login', 'AdminCompanyController@login')->name('mitra.login');

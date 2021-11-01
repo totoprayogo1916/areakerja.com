@@ -12,31 +12,31 @@ class TopupController extends Controller
     public function notification(Request $request)
     {
         // dd($request);
-        $payload      = $request->getContent();
-        $notification = json_decode($payload);
+        // $payload      = $request->getContent();
+        // $notification = json_decode($payload);
 
-        $validSignatureKey = hash('sha512', $notification->order_id . $notification->status_code . $notification->gross_amount . env('MIDTRANS_SERVER_KEY2'));
+        // $validSignatureKey = hash('sha512', $notification->order_id . $notification->status_code . $notification->gross_amount . env('MIDTRANS_SERVER_KEY2'));
 
-        if ($notification->signature_key !== $validSignatureKey) {
-            return response(['message' => 'Invalid signature'], 403);
-        }
+        // if ($notification->signature_key !== $validSignatureKey) {
+        //     return response(['message' => 'Invalid signature'], 403);
+        // }
 
-        $this->initPaymentGateway();
-        $statusCode = null;
+        // $this->initPaymentGateway();
+        // $statusCode = null;
 
-        $paymentNotification = new Notification();
+        // $paymentNotification = new Notification();
 
-        $transaction = $paymentNotification->transaction_status;
-        $type        = $paymentNotification->payment_type;
-        $orderId     = $paymentNotification->order_id;
-        $fraud       = $paymentNotification->fraud_status;
+        $transaction = $request->transaction_status;
+        $type        = $request->payment_type;
+        $orderId     = $request->order_id;
+        $fraud       = $request->fraud_status;
 
-        $vaNumber   = null;
-        $vendorName = null;
-        if (! empty($paymentNotification->va_numbers[0])) {
-            $vaNumber   = $paymentNotification->va_numbers[0]->va_number;
-            $vendorName = $paymentNotification->va_numbers[0]->bank;
-        }
+        // $vaNumber   = null;
+        // $vendorName = null;
+        // if (!empty($paymentNotification->va_numbers[0])) {
+        //     $vaNumber   = $paymentNotification->va_numbers[0]->va_number;
+        //     $vendorName = $paymentNotification->va_numbers[0]->bank;
+        // }
 
         $paymentStatus = null;
         if ($transaction === 'capture') {
@@ -53,6 +53,10 @@ class TopupController extends Controller
             }
         } elseif ($transaction === 'settlement') {
             // TODO set payment status in merchant's database to 'Settlement'
+            $id = (int) substr($request->order_id, 3, 5);
+            $mitra       = Mitra::where('idUser', $id)->first();
+            $mitra->koin = $mitra->koin + (int) substr($request->order_id, -3);
+            $mitra->save();
             $paymentStatus = \App\Topup::SETTLEMENT;
         } elseif ($transaction === 'pending') {
             // TODO set payment status in merchant's database to 'Pending'
@@ -66,14 +70,16 @@ class TopupController extends Controller
         } elseif ($transaction === 'cancel') {
             // TODO set payment status in merchant's database to 'Denied'
             $paymentStatus = \App\Topup::CANCEL;
+        } else {
+            $paymentStatus = 'error';
         }
 
-        $paymentParams = [
-            'status' => 'gagal',
-        ];
-        $companies = \App\Topup::first();
+        // $paymentParams = [
+        //     'status' => 'gagal',
+        // ];
+        // $companies = \App\Topup::first();
         // echo $companies;
-        $companies->update($paymentParams);
+        // $companies->update($paymentParams);
 
         // if ($paymentStatus && $payment) {
         // 	\DB::transaction(
@@ -99,18 +105,6 @@ class TopupController extends Controller
 
     public function completed(Request $request)
     {
-        $companies = \App\Topup::where('id', $request->order_id);
-        // echo $companies;
-        $paymentParams = [
-            'status' => 'berhasil',
-        ];
-        $user_id = auth()->user()->id;
-
-        $mitra       = Mitra::where('idUser', $user_id)->first();
-        $mitra->koin = $mitra->koin + (int) substr($request->order_id, -3);
-        $mitra->save();
-        $companies->update($paymentParams);
-
         return redirect(route('mitra.home'));
     }
 
