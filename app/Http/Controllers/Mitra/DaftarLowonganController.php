@@ -14,7 +14,7 @@ class DaftarLowonganController extends Controller
         $user_id = auth()->user()->id;
         $mitra   = Mitra::where('idUser', $user_id)->first();
         // $akunmitra = Mitra::where('id',$id)->first();
-        $mitra1 = Lowonganmitra::all();
+        $mitra1 = Lowonganmitra::where('idUser', $user_id)->get();
 
         return view('mitra.lowongan.index', compact('mitra', 'mitra1'));
     }
