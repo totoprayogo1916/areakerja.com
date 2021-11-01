@@ -59,6 +59,6 @@ class DaftarLowonganController extends Controller
         $mitra->koin = $mitra->koin - 2;
         $mitra->save();
 
-        return view('mitra.lowongan.index', compact('mitra', 'mitra1'));
+        return route('mitra.lowongan.index');
     }
 }
