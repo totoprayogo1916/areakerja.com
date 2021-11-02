@@ -124,14 +124,16 @@ class KandidatController extends Controller
             $mail->Port = 465; // TCP port to connect to
 
             //Recipients
-            $mail->setFrom('admin@areakerja.com', 'Mailer');
-            $mail->addAddress('nurhakikiajha@gmail.com');
+            $mail->setFrom('admin@areakerja.com', 'Areakerja');
+            $mail->addAddress($request->email);
 
             // Content
             $mail->isHTML(true); // Set email format to HTML
-            $mail->Subject = 'AreaKerja dot com';
-            $mail->Body = '<b>Selamat, pendaftaran anda telah di terima</b>';
-            $mail->AltBody = "Username anda <b>$request->namalengkap</b>, dan password anda <b>$request->password</b>";
+            $mail->Subject = 'Akun Kandidat Areakerja';
+            $mail->Body = "<h3><b>Selamat, pendaftaran anda telah di terima<b></h3>
+            Email anda <b>$request->email</b>, dan password anda <b>$request->password</b><br>
+            Silahkan login melalui link berikut : <br>
+            https://areakerja.com/kandidat";
 
             $mail->send();
         } catch (Exception $e) {
