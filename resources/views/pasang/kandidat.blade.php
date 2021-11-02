@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-12 col-md-5 text-center text-lg-left">
                     <h1 class="display-4 fw-bold" style="font-weight: bold">Daftarkan Diri Anda</h1>
-                    <h4 class="my-3" style="font-weight: 400; line-height:1.6!important">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non nunc id lacus sagittis lobortis id nec nulla.   </h4>
+                    <h4 class="my-3" style="font-weight: 400; line-height:1.6!important">Menjadi bagian dari kandidat areakerja.com dan dapatkan pekerjaan impian anda</h4>
                     <button class="btn btn-lg mt-3" style="background:#fe7b54; color:white;" type="button" data-toggle="modal" data-target="#modalDaftar">Daftar</button>
                 </div>
                 <div class="col-7 col-md-7 d-none d-md-block">
@@ -27,10 +27,10 @@
     <div class="container">
         <h2 style="font-weight: normal" class=" text-center mb-3"><strong>Benefit</strong> Menjadi <strong>Kandidat</strong>
         </h2>
-        <div class="col-12 col-sm-11 no-gutters no-padding mt-4 mx-auto">
-            <div class="row for_slick_slider2 multiple-items2 mx-auto">
-                <div class="items col-md-3 py-3 form-wrap-main"
-                    style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);margin-left:45px;">
+        <div class="col-12 col-sm-11 mt-4 mx-auto ">
+            <div class="row  mx-auto " >
+                <div class="items col-md-3 py-3 form-wrap-main mb-3"
+                    style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
                     <div class="header text-center">
                         <h4 class="sng-dtl" style="line-height: 1.65!important">Prioritas calon pekerja</h4>
                         <img class="mx-auto my-2 img-fluid"
@@ -39,8 +39,8 @@
                     </div>
                         <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Menjadi prioritas pilihan dari perusahaan mitra areakerja</h5>
                 </div>
-                <div class="items py-3 col-md-3 form-wrap-main"
-                    style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);margin-left:45px;">
+                <div class="items py-3 col-md-3 form-wrap-main mb-3"
+                    style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
                     <h4 class="sng-dtl" >Memiliki banyak mitra
                         perusahaan</h4>
                     <div class="header text-center">
@@ -50,8 +50,8 @@
                     </div>
                     <h5 class="sng-dtl" style="font-weight: normal;line-height: 1.65!important">Areakerja memiliki banyak mitra perusahaan yang sedang membuka lowongan  </h5>
                 </div>
-                <div class="items col-md-3 py-3 form-wrap-main"
-                    style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);margin-left:45px;">
+                <div class="items col-md-3 py-3 form-wrap-main mb-3"
+                    style="background: #ffffff; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0.15, 0.15, 0.15, 0.15);">
                     <h4 class="sng-dtl" >Terpercaya dan berbadan
                         hukum</h4>
                     <div class="header text-center">
