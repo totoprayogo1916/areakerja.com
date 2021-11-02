@@ -268,7 +268,7 @@
 
     <wrapper class="d-flex flex-column">
         <nav>
-            <img  style="position: absolute" src="{{ asset('img/kandidat/Vector 1.svg') }}" alt="">
+            <img  style="position: absolute" src="{{ asset('img/kandidat/Vector 1.svg') }}" alt="" class="d-none d-lg-block">
             @include('partials.header2')
         </nav>
         <main class="flex-fill">
