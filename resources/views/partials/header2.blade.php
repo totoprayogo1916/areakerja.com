@@ -10,28 +10,23 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
 
-                <li class="nav-item">
-                    <a type="button" class="nav-link" href="#"
-                        style="color: #fe7b54;font-size: 14px; background-color: #fe7c5400; font-weight:600">
-                        <span class="fa fa-map-marker mr-1"></span> Kota Lainnya
-                    </a>
-                </li>
-                <li class="nav-item">
+                <li class="nav-item mb-2 mb-md-0 mr-2">
                     <a type="button" class="nav-link form-pasang5" href="{{ route('artikel') }}"
                         style="color: #fe7b54;font-size: 14px; background-color: #fe7c5400; font-weight:600">
                         <span class="fa fa-newspaper-o mr-1"></span> Tips Kerja
                     </a>
                 </li>
-                <li class="nav-item mr-10">
-                    <a type="button" class="nav-link form-pasang" href="{{ route('daftarkandidat') }}"
-                        style="color: #fee5ba">
-                        <span class="fas fa-user-tie"></span> Daftar Sebagai Kandidat
+                <li class="nav-item mb-2 mb-md-0 mr-3">
+                    <a type="button" class="nav-link form-pasang px-2 " href="{{ route('daftarkandidat') }}"
+                        style="color: #fee5ba;width:max-content;font-weight:600">
+                        <span class="fas fa-user-tie mr-2"></span> Daftar Sebagai Kandidat
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a type="button" class="nav-link form-pasang" href="{{ route('pilihpaket') }}"
-                        style="color: #fee5ba">
-                        <span class="lnr lnr-file-add"></span> Pasang Lowongan
+                    <a type="button" class="nav-link form-pasang px-2 " href="{{ route('pilihpaket') }}"
+                        style="color: #fee5ba;width:max-content;font-weight:600">
+                        
+                        <span class="fas fa-briefcase mr-2"></span> Pasang Lowongan
                     </a>
                 </li>
 
