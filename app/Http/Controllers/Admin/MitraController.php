@@ -74,8 +74,6 @@ class MitraController extends Controller
         $user->email    = $mitra->email;
         $user->password = $request->password;
         $user->save();
-        $mitra->idUser = $user->id;
-        $mitra->save();
         $details = [
             'email'    => $mitra->email,
             'password' => $request->password,
@@ -107,7 +105,7 @@ class MitraController extends Controller
 
             // Content
             $mail->isHTML(true); // Set email format to HTML
-            $mail->Subject = 'Akun Kandidat Areakerja';
+            $mail->Subject = 'Akun Mitra Areakerja';
             $mail->Body = "<h3><b>Selamat, pendaftaran anda telah di terima<b></h3>
             Email anda <b>$mitra->email</b>, dan password anda <b>$request->password</b><br>
             Silahkan login melalui link berikut : <br>
@@ -118,6 +116,8 @@ class MitraController extends Controller
             echo "Message could not be sent. Mailer Error: $mail->ErrorInfo";
         }
 
+        $mitra->idUser = $user->id;
+        $mitra->save();
 
         return redirect(route('admin.mitra.index'));
     }
