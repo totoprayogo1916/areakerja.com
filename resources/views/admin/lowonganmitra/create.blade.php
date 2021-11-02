@@ -228,7 +228,7 @@
                 </p>
             </div>
             <div class="form-group {{ $errors->has('salary') ? 'has-error' : '' }}">
-                <label for="salary">Gaji*</label>
+                <label for="salary">Gaji</label>
                 <input type="text" id="salary" name="salary" class="form-control" value="{{ $mitra->gaji }}" required>
                 @if($errors->has('salary'))
                     <em class="invalid-feedback">
@@ -254,8 +254,8 @@
             </div>
 
             <div class="form-group {{ $errors->has('notelp') ? 'has-error' : '' }}">
-                <label for="notelp">Nomor Handphone*</label>
-                <input type="text" id="notelp" name="notelp" class="form-control" value="{{ old('notelp', isset($job) ? $job->notelp : '') }}" required>
+                <label for="notelp">Nomor Handphone</label>
+                <input type="text" id="notelp" name="notelp" class="form-control" value="{{ old('notelp', isset($job) ? $job->notelp : '') }}" >
                 @if($errors->has('notelp'))
                     <em class="invalid-feedback">
                         {{ $errors->first('notelp') }}
@@ -267,8 +267,8 @@
             </div>
 
             <div class="form-group {{ $errors->has('website') ? 'has-error' : '' }}">
-                <label for="website">Website*</label>
-                <input type="text" id="website" name="website" class="form-control" value="{{ old('website', isset($job) ? $job->website : '') }}" required>
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website" class="form-control" value="{{ old('website', isset($job) ? $job->website : '') }}" >
                 @if($errors->has('website'))
                     <em class="invalid-feedback">
                         {{ $errors->first('website') }}

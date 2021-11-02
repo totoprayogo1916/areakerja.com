@@ -137,9 +137,17 @@
                                     <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}" style="width: 60px">
                                 </form>
 
+                            @if ($min->status_pemasangan == 'Belum Terpasang')
                                 <a class="btn btn-xs btn-success" href="{{ route('admin.addjobmitra', $min->id) }}" style="width: auto">
                                     Pasang Lowongan
                                 </a>
+                            @endif
+                            @if ($min->status_pemasangan == 'Terpasang')
+                                <a class="btn btn-xs btn-success" href="#" style="width: auto">
+                                    Terpasang
+                                </a>
+                            @endif
+
 
                             </td>
 

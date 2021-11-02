@@ -30,7 +30,7 @@
                                         <tbody>
                                             @foreach ($mitra1 as $min)
                                                 <tr>
-                                                    <td>{{ $min->id }}</td>
+                                                    <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $min->posisi }}</td>
                                                     <td>{{ $min->status_pekerjaan }}</td>
                                                     <td>{{ $min->alamat_kantor }}</td>

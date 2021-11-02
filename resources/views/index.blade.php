@@ -85,7 +85,7 @@
                     <hr />
                     <h5 class="sng-dtl"
                         style="margin-left: 5%;margin-bottom: 5%; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0));">
-                        <span class="fa fa-map-marker" aria-hidden="true"></span> {{ $job->address }}</h5>
+                        <span class="fa fa-map-marker" aria-hidden="true"></span> {{ $job->location->name }}</h5>
                 </a>
             </div>
         @endforeach

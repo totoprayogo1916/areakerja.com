@@ -25,7 +25,7 @@
                 <li class="nav-item">
                     <a type="button" class="nav-link form-pasang px-2 " href="{{ route('pilihpaket') }}"
                         style="color: #fee5ba;width:max-content;font-weight:600">
-                        
+
                         <span class="fas fa-briefcase mr-2"></span> Pasang Lowongan
                     </a>
                 </li>

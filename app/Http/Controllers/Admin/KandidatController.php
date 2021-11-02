@@ -51,7 +51,7 @@ class KandidatController extends Controller
 
         Kandidat::create([
             'nama'     => $request->namalengkap,
-            'idSkill'  => 1,
+            'idSkill'  => $request->skillutama,
             'domisili' => $request->alamat,
             'biografi' => $request->biografi,
             'slug'     => Str::slug($request->namalengkap),
@@ -105,6 +105,6 @@ class KandidatController extends Controller
         $lowongan = Calonkandidat::all();
         $calon->delete();
 
-        return view('admin.calonkandidat.index', compact('lowongan'));
+        return redirect()->route('admin.calonkandidat.index');
     }
 }
