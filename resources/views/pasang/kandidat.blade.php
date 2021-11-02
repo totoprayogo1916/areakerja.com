@@ -132,7 +132,7 @@
         <img style="position: absolute; top: 53%; right: 0" src="{{ asset('img/kandidat/vector 2.svg') }}" alt="">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-5 d-flex align-items-center text-center" >
+                <div class="col-md-5 d-flex align-items-center text-center text-lg-left" >
                     <div class="w-100">
                         <h1 class="mb-4 " style="font-weight: bold">F A Q</h1>
                         <h3 style="font-weight: 500;line-height: 2">Pertanyaan dan Jawaban tentang Areakerja.com</h3>
