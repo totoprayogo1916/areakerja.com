@@ -110,7 +110,7 @@ class PaymentController extends Controller
     public function completed(Request $request)
     {
         // dd($request);
-        Alert::success('Berhasil Melakukan Pembayaran', 'Lowongan akan segera kami pasang');
+        Alert::success('Berhasil Mengirim Lowongan', 'Admin sedang memproses lowongan anda');
 
         return redirect(route('home'));
     }
