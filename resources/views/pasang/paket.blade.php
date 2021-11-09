@@ -54,7 +54,7 @@
                 <div class="container">
                     <div class="row align-items-center ">
                         <div class="col-4 col-sm-3 align-self-center">
-                            <img class="mx-auto img-r" src="img/img-01.png" alt="">
+                            <img class="mx-auto img-r" src="img/img-01.png" alt="" style="width: 120px">
                         </div>
                         <div class="col-8 col-sm-9 no-padding my-3 pr-1">
                             <h3 class="mb-2 paket" style="font-weight: 400">Website Area Kerja</h3>
