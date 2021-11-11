@@ -150,51 +150,36 @@
                                     <div class="accordion-item">
                                         <div class="accordion-item-header box w-100 px-3 py-3 d-flex justify-content-between rounded-top">
                                             <h5>
-                                                Pertanyaan
+                                                Berapa biaya yang dibutuhkan untuk mendaftar sebagai kandidat Areakerja.com?
                                             </h5>
                                         </div>
                                         <div class="accordion-item-body">
                                         <div id="panel-body-1" class="accordion-item-body-content w-100 px-3 py-3  justify-content-between rounded-bottom " data-parent="#accordion">
-                                            <h6 class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h6>
+                                            <h6 class="mb-0">Untuk mendaftar sebagai kandidat Areakerja.com tidak membutuhkan biaya (Gratis)</h6>
                                         </div>
                                         </div>
                                     </div>
                                     <div class="accordion-item">
                                         <div div class="accordion-item-header box w-100 px-3 py-3 d-flex justify-content-between rounded-top">
                                             <h5>
-                                                Pertanyaan
+                                                Bagaimana cara mengetahui apakah calon kandidat diterima menjadi kandidat areakerja.com atau tidak?
                                             </h5>
                                         </div>
                                         <div class="accordion-item-body">
                                         <div id="panel-body-2" class="accordion-item-body-content w-100 px-3 py-3  justify-content-between rounded-bottom " data-parent="#accordion">
-                                            <h6 class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h6>
+                                            <h6 class="mb-0">Bagi calon kandidat yang diterima menjadi kandidat Areakerja.com akan mendapat email dari Areakerja.com</h6>
                                         </div>
                                         </div>
                                     </div>
                                     <div class="accordion-item">
                                         <div div class="accordion-item-header box w-100 px-3 py-3 d-flex justify-content-between rounded-top">
                                             <h5>
-                                                Pertanyaan
+                                                Berapa lama proses verifikasi setelah pendaftaran hingga mendapat pengumuman lolos menjadi kandidat Areakerja.com?
                                             </h5>
                                         </div>
                                         <div class="accordion-item-body">
                                         <div id="panel-body-2" class="accordion-item-body-content w-100 px-3 py-3  justify-content-between rounded-bottom " data-parent="#accordion">
-                                            <h6 class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h6>
+                                            <h6 class="mb-0">Verifikasi oleh Areakerja.com berkisar 1-2 hari, silahkan tunggu pemberitahuan melalui email dari Areakerja.com</h6>
                                         </div>
                                         </div>
                                     </div>

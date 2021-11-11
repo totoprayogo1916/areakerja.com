@@ -302,3 +302,11 @@
     border-image: linear-gradient(to right, transparent, #FEE5BA, transparent) 1;
   }
 
+  .accordion-item h5{
+      padding-right: 25px;
+  }
+
+  .accordion-item h6{
+    padding-right: 25px;
+}
+
