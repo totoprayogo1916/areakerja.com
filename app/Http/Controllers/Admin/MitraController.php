@@ -83,8 +83,7 @@ class MitraController extends Controller
         $role->role_id = 3;
         $role->save();
 
-
-        require base_path("vendor/autoload.php");
+        require base_path('vendor/autoload.php');
         $mail = new PHPMailer(true);     // Passing `true` enables exceptions
 
         try {
@@ -92,12 +91,12 @@ class MitraController extends Controller
             //Server settings
             $mail->SMTPDebug = 2; // Enable verbose debug output
             $mail->isSMTP(); // Set mailer to use SMTP
-            $mail->Host = 'ssl://mail.areakerja.com '; // Specify main and backup SMTP servers
-            $mail->SMTPAuth = true; // Enable SMTP authentication
-            $mail->Username = 'admin@areakerja.com'; // SMTP username
-            $mail->Password = 'areakerja.com'; // SMTP password
+            $mail->Host       = 'ssl://mail.areakerja.com '; // Specify main and backup SMTP servers
+            $mail->SMTPAuth   = true; // Enable SMTP authentication
+            $mail->Username   = 'admin@areakerja.com'; // SMTP username
+            $mail->Password   = 'areakerja.com'; // SMTP password
             $mail->SMTPSecure = 'tls'; // Enable TLS encryption, [ICODE]ssl[/ICODE] also accepted
-            $mail->Port = 465; // TCP port to connect to
+            $mail->Port       = 465; // TCP port to connect to
 
             //Recipients
             $mail->setFrom('admin@areakerja.com', 'Areakerja');
@@ -106,14 +105,14 @@ class MitraController extends Controller
             // Content
             $mail->isHTML(true); // Set email format to HTML
             $mail->Subject = 'Akun Mitra Areakerja';
-            $mail->Body = "<h3><b>Selamat, pendaftaran anda telah di terima<b></h3>
-            Email anda <b>$mitra->email</b>, dan password anda <b>$request->password</b><br>
+            $mail->Body    = "<h3><b>Selamat, pendaftaran anda telah di terima<b></h3>
+            Email anda <b>{$mitra->email}</b>, dan password anda <b>{$request->password}</b><br>
             Silahkan login melalui link berikut : <br>
             https://areakerja.com/mitra";
 
             $mail->send();
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: $mail->ErrorInfo";
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
 
         $mitra->idUser = $user->id;

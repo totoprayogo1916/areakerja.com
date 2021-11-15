@@ -7,7 +7,12 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1,minimum-scale=1.0, maximum-scale=3.0, shrink-to-fit=no"
         name="viewport">
+    @if (App\Role_User::where('user_id', auth()->user()->id)->first()->role_id == 3)
     <title>Mitra - Area Kerja</title>
+    @endif
+    @if (App\Role_User::where('user_id', auth()->user()->id)->first()->role_id == 4)
+    <title>Kandidat - Area Kerja</title>
+    @endif
     <!-- General CSS Files -->
 
     <link rel="stylesheet" href="{{ url('otika/assets/css/app.min.css') }}">

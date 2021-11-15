@@ -39,27 +39,17 @@
         @if (App\Role_User::where('user_id', auth()->user()->id)->first()->role_id == 3)
             <ul class="sidebar-menu">
                 <li class="menu-header">Main</li>
+
                 <li class="dropdown {{ request()->is('mitra') ? 'active' : '' }}">
                     <a href="{{ route('mitra.home') }}" class="nav-link"><i
                             data-feather="monitor"></i><span>Dashboard</span></a>
                 </li>
 
-
-                <li
-                    class="dropdown {{ request()->is('mitra/profil') || request()->is('mitra/profil/*') ? 'active' : '' }}">
-                    <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="list"></i><span>Profil
-                            Perusahaan</span></a>
-                    <ul class="dropdown-menu">
-                        <li
-                            class="{{ request()->is('mitra/profil') || request()->is('mitra/profil/*') ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ route('mitra.profil.index') }}"><i
-                                    data-feather="file"></i><span>Profil</span></a>
-                        </li>
-                        <li><a class="nav-link" href="#"><i data-feather="grid"></i><span>Deskripsi</span></a></li>
-
-
-                    </ul>
+                <li class="dropdown {{ request()->is('mitra/profil') || request()->is('mitra/profil/*') ? 'active' : '' }}">
+                    <a href="{{ route('mitra.profil.index') }}" class="nav-link"><i
+                            data-feather="file"></i><span>Profil Perusahaan</span></a>
                 </li>
+
                 <li
                     class="dropdown {{ request()->is('mitra/lowongan') || request()->is('mitra/lowongan/*') ? 'active' : '' }} {{ request()->is('mitra/kandidat') || request()->is('mitra/kandidat/*') ? 'active' : '' }} {{ request()->is('mitra/hire') || request()->is('mitra/hire/*') ? 'active' : '' }}">
                     <a href="#" class="menu-toggle nav-link has-dropdown"><i
@@ -82,7 +72,9 @@
                         </li>
                     </ul>
                 </li>
-                <li><a class="nav-link" href="{{ route('mitra.chat.index') }}"><i
+                <li
+                    class="{{ request()->is('mitra/chat') || request()->is('mitra/chat/*') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('mitra.chat.index') }}"><i
                             data-feather="mail"></i><span>Inbox</span></a></li>
 
                 <li class="menu-header">Dashboard Client</li>
@@ -94,8 +86,6 @@
                     <a href="{{ route('mitra.topup.index') }}" class="nav-link"><i class="fas fa-coins"
                             style="margin: 0px 10px 0px -4px;"></i><span>Top Up Coin</span></a>
                 </li>
-                <li class="dropdown"><a href="#" class="nav-link"><i data-feather="circle"></i><span>Logo
-                            Perusahaan</span></a></li>
 
             </ul>
         @endif

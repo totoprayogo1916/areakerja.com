@@ -8,6 +8,7 @@
                     <h1 class="display-4 fw-bold" style="font-weight: bold">Daftarkan Diri Anda</h1>
                     <h4 class="my-3" style="font-weight: 400; line-height:1.6!important">Menjadi bagian dari kandidat areakerja.com dan dapatkan pekerjaan impian anda</h4>
                     <button class="btn btn-lg mt-3" style="background:#fe7b54; color:white;" type="button" data-toggle="modal" data-target="#modalDaftar">Daftar</button>
+                    <a class="btn btn-lg mt-3 ml-3" href="{{ route('kandidat.awal') }}" style="background:#fe7b54; color:white;" type="button">Login</a>
                 </div>
                 <div class="col-7 col-md-7 d-none d-md-block">
                     <img class="img-fluid" src="{{ asset('img/kandidat/Hiring.png') }}">

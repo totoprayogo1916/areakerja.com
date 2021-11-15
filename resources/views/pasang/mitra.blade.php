@@ -7,6 +7,7 @@
                 <h1 class="display-4 fw-bold">Rekrut Karyawan Terbaik Anda</h1>
                 <h4 class="my-3" style="font-weight: 400; line-height:1.6!important">Menjadi bagian dari kami di Mitra Areakerja.com </h4>
                 <button class="btn btn-lg mt-3" style="background:#fe7b54; color:white;" type="button" data-toggle="modal" data-target="#modalDaftarMitra">Daftar</button>
+                <a class="btn btn-lg mt-3 ml-3" href="{{ route('mitra.home') }}" style="background:#fe7b54; color:white;" type="button">Login</a>
             </div>
             <div class="col-md-9 mx-auto">
                 <img class="img-fluid" src="https://areakerja.com/img/aset_online/5222.jpg">
