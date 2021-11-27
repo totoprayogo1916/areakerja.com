@@ -87,7 +87,7 @@
                                 </span>
                             </p>
                             <div class="clearfix float-right">
-                                <a href="{{ route('mitra.profil.edit', $mitra->slug) }}" class="btn btn-primary">Edit Details</a>
+                                <a href="{{ route('mitra.profil.edit', $mitra->slug) }}" class="btn btn-primary">Edit Profil</a>
                             </div>
                         </div>
                     </div>
